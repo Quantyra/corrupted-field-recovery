@@ -1,0 +1,7 @@
+{
+  "status": "uncompiled-development-candidate",
+  "compile_invoked": false,
+  "source_sha256": "231dd34c64891c8c9ff4bdd5d31e00a9ec6cbb8059f0a37775878ec207e290f4",
+  "utf8_no_bom": true,
+  "note": "Six intermediate declarations; not full four-contraction theorem. Await GCP diagnostics."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "superseded-before-compilation",
+  "compile_invoked": false,
+  "source_sha256": "9cd847115fcd4d8d21251b0b901de3e9678cb96da3efdba484438133ac9f6619",
+  "utf8_no_bom": true,
+  "note": "Added other two coordinate radicals; superseded by axis-preservation derivation before compile."
+}

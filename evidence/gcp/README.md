@@ -60,7 +60,7 @@ formal coverage. Both await GCP compilation and diagnostics.
 The non-Lean readiness command was rerun and its accurately false result now
 appears in `artifacts/release-readiness.json`; it reports missing compiled
 evidence for the four draft modules. The prior working-tree result is preserved under
-`cfr-readiness-20261028T214847Z-7878a8` alongside the exact new output, command
+`cfr-readiness-20261028T223233Z-be1679` alongside the exact new output, command
 and exit code. This working-tree change does not alter the separately verified
 first archive or its DOI.
 
@@ -81,7 +81,8 @@ runner also fingerprints the actual cloud Lean/Lake executables, checks the
 pinned Lean commit and rejects uncaptured stale owned source files in the
 persistent workspace. No stale source/cache is silently deleted.
 
-After the user confirms reauthentication, resume with the existing handles:
+Historical initial resume sequence (the baseline now has a partial prelaunch
+submission; follow the newer checkpoint below before any action):
 
 ```text
 python tools/gcp_cfr.py preflight
@@ -103,3 +104,51 @@ other ownership has been excluded, including after failed proof attempts.
 Remaining to-do list: renew GCP login; observe live VM ownership/state; run and
 preserve the baseline; compile the matched draft tuple, route diagnostics and
 capture repairs; continue the selected complete-manuscript milestones.
+
+## Authenticated prelaunch checkpoint
+
+Authentication recovered in `cfr-preflight-20261028T221635Z-5f6958`; account and
+VM queries passed. Inspection `cfr-inspect-20261028T221730Z-0ce8d5` found no active
+Lean/Lake, an existing toolchain and 24GB free disk. Baseline handle
+`cfr-baseline-20261028T211424Z-5ddb91` created its isolated remote directory but
+its first PuTTY SCP failed on the tilde destination. The corrected absolute
+home is `/home/dfredriksen_quantyra_org`, preserved in
+`cfr-transport-diagnosis-20261028T222138Z-f0ac59`. The controller now constructs
+validated absolute destinations, preserves guarded prelaunch resumptions and
+verifies uploaded hashes before the single launch. The saved pure-Python
+`tools/check_gcp_transport.py` regression passes; no Lean runs in that check.
+
+Two subsequent transport interruptions coincided with external VM stops.
+`cfr-shutdown-audit-20261028T223101Z-58be86` records `compute.instances.stop`
+from the expected account and a Windows Codex CLI user agent at 22:25:00Z and
+22:29:15Z, invocation IDs `861ed3b224e64983904d3b227966e50b` and
+`93668108171046a6bd95fd27110a7ae4`. This compiler issued neither stop. It started the existing VM once
+between those stops, recorded separately in
+`cfr-vm-reacquire-20261028T222603Z-6fa338`; the original RUNNING observation is
+unchanged. Do not restart while the other workflow's lifecycle control is unresolved.
+`cfr-final-vm-state-20261028T223246Z-62e976` confirms TERMINATED, with final
+stop timestamp 22:31:27Z.
+
+All five small baseline input/controller files uploaded successfully after the
+path repair. Bootstrap transfer was interrupted near 6.3MB; partial task-owned
+files remain preserved. **No launch request was created, no runner started and
+no Lean compiler ran.** The exact baseline archive remains unchanged. Read
+`prelaunch-transport-checkpoint.json` in the baseline directory. Once lifecycle
+ownership is coordinated and VM state is observed, continue this same handle
+with `resume-prelaunch`; do not repeat `submit`. After launch, only observe and
+collect that handle. Dev05 binary/bridge and later independent candidates have
+not been submitted.
+
+Four-contraction development captures dev03 through dev06 preserve the first
+concrete determinant/contraction radicals and axis-preservation draft, including
+source-level rewrite repairs. The latest is
+`cfr-fourcontractions-dev06-20261028T222223Z-cb0e20`, source SHA-256
+`231dd34c64891c8c9ff4bdd5d31e00a9ec6cbb8059f0a37775878ec207e290f4`.
+Six exported type/axiom audit commands are prepared. These uncompiled
+intermediate sources do not prove the full field-identification theorem or
+change formal coverage. Do not expand a dependent uncompiled stack before
+GCP diagnostics.
+
+Remaining to-do list: coordinate external VM lifecycle control; resume and
+preserve the existing baseline; compile/audit the binary/bridge and independent
+candidates; complete the actual manuscript obligations.

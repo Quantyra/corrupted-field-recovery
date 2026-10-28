@@ -1,0 +1,20 @@
+REMOTE_HOME=/home/dfredriksen_quantyra_org
+drwxrwxr-x 2 dfredriksen_quantyra_org dfredriksen_quantyra_org 4096 Oct 28 22:20 /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-baseline-20261028T211424Z-5ddb91
+    PID COMMAND         COMMAND
+   2363 sshd            sshd: dfredriksen_quantyra_org [priv]
+      1 systemd         /sbin/init
+   2289 systemd         /usr/lib/systemd/systemd --user
+     15 pr/ttyS0        [pr/ttyS0]
+    166 systemd-journal /usr/lib/systemd/systemd-journald
+    651 snapd           /usr/lib/snapd/snapd
+    629 dbus-daemon     @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    236 systemd-udevd   /usr/lib/systemd/systemd-udevd
+    633 google_osconfig /usr/bin/google_osconfig_agent
+   1023 systemd-logind  /usr/lib/systemd/systemd-logind
+    840 google_guest_ag /usr/bin/google_guest_agent
+     12 kworker/u32:0-e [kworker/u32:0-events_power_efficient]
+    828 polkitd         /usr/lib/polkit-1/polkitd --no-debug
+    477 systemd-resolve /usr/lib/systemd/systemd-resolved
+    690 rsyslogd        /usr/sbin/rsyslogd -n -iNONE
+    982 google_metadata /usr/bin/google_metadata_script_runner startup
+    642 networkd-dispat /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers

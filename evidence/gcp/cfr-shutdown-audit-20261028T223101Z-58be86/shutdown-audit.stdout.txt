@@ -1,0 +1,41 @@
+[
+  {
+    "protoPayload": {
+      "authenticationInfo": {
+        "principalEmail": "dfredriksen@quantyra.org"
+      },
+      "methodName": "v1.compute.instances.stop",
+      "requestMetadata": {
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/588.0.0 agent-name/codex_cli command/gcloud.compute.instances.stop invocation-id/93668108171046a6bd95fd27110a7ae4 environment/None environment-version/None client-os/WINDOWS client-os-ver/10.0.26300 client-pltf-arch/x86_64 interactive/False from-script/False python/3.14.7 term/dumb  (Windows NT 10.0.26300),gzip(gfe)"
+      },
+      "status": {}
+    },
+    "timestamp": "2026-10-28T22:29:15.373729Z"
+  },
+  {
+    "protoPayload": {
+      "authenticationInfo": {
+        "principalEmail": "dfredriksen@quantyra.org"
+      },
+      "methodName": "v1.compute.instances.stop",
+      "requestMetadata": {
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/588.0.0 agent-name/codex_cli command/gcloud.compute.instances.stop invocation-id/861ed3b224e64983904d3b227966e50b environment/None environment-version/None client-os/WINDOWS client-os-ver/10.0.26300 client-pltf-arch/x86_64 interactive/False from-script/False python/3.14.7 term/dumb  (Windows NT 10.0.26300),gzip(gfe)"
+      },
+      "status": {}
+    },
+    "timestamp": "2026-10-28T22:25:00.380134Z"
+  },
+  {
+    "protoPayload": {
+      "authenticationInfo": {
+        "principalEmail": "dfredriksen@quantyra.org"
+      },
+      "methodName": "v1.compute.instances.stop",
+      "requestMetadata": {
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/588.0.0 agent-name/codex_cli command/gcloud.compute.instances.stop invocation-id/861ed3b224e64983904d3b227966e50b environment/None environment-version/None client-os/WINDOWS client-os-ver/10.0.26300 client-pltf-arch/x86_64 interactive/False from-script/False python/3.14.7 term/dumb  (Windows NT 10.0.26300),gzip(gfe)"
+      },
+      "status": {}
+    },
+    "timestamp": "2026-10-28T22:22:45.582720Z"
+  }
+]

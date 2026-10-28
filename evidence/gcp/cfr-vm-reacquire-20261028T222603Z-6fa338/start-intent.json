@@ -1,0 +1,7 @@
+{
+  "run": "cfr-baseline-20261028T211424Z-5ddb91",
+  "initial_state": "TERMINATED",
+  "started_for_task": false,
+  "utc": "2026-10-28T22:26:03.128509+00:00",
+  "note": "Observed TERMINATED after prelaunch transport failure; no compiler or launch intent existed. Single authorized existing-builder start."
+}

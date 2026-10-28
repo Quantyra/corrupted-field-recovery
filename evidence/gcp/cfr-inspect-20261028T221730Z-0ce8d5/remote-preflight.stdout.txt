@@ -1,0 +1,9 @@
+quantyra-lean-builder-01
+Python 3.12.3
+ACTIVE_LEAN_AND_LAKE
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       193G  170G   24G  88% /
+tmpfs            32G     0   32G   0% /dev/shm
+EXISTING_TOOLCHAIN
+CFR_WORKSPACE
+PINNED_ARCHIVES

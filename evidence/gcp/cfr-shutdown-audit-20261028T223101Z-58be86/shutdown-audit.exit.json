@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:31:15.758413+00:00",
+  "command": [
+    "gcloud",
+    "logging",
+    "read",
+    "resource.type=\"gce_instance\" AND resource.labels.instance_id=\"8337954477286097405\" AND (protoPayload.methodName:\"stop\" OR protoPayload.methodName:\"shutdown\")",
+    "--freshness=1h",
+    "--limit=10",
+    "--format=json(timestamp,protoPayload.methodName,protoPayload.authenticationInfo.principalEmail,protoPayload.requestMetadata.callerSuppliedUserAgent,protoPayload.status)",
+    "--project=quantyra-lean-cert-20260915",
+    "--account=dfredriksen@quantyra.org"
+  ]
+}

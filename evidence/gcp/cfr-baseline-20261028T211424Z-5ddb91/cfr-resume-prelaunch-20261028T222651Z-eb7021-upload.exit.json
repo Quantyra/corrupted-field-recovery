@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:28:21.816107+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-baseline-20261028T211424Z-5ddb91\\inputs.tar.gz",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-baseline-20261028T211424Z-5ddb91\\capture-manifest.json",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-baseline-20261028T211424Z-5ddb91\\gcp_cfr_runner.py",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-baseline-20261028T211424Z-5ddb91\\run.sh",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-baseline-20261028T211424Z-5ddb91\\bootstrap-assets.json",
+    "quantyra-lean-builder-01:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-baseline-20261028T211424Z-5ddb91/",
+    "--tunnel-through-iap",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

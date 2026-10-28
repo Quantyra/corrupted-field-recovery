@@ -16,6 +16,7 @@ python tools/gcp_cfr.py capture --commit COMMIT --label baseline
 python tools/gcp_cfr.py capture --label development --target CorruptedFieldRecovery.MODULE --no-audit
 python tools/gcp_cfr.py capture --label audit --target CorruptedFieldRecovery.MODULE --audit-export CorruptedFieldRecovery.DECLARATION
 python tools/gcp_cfr.py submit --run RUN
+python tools/gcp_cfr.py resume-prelaunch --run RUN
 python tools/gcp_cfr.py observe --run RUN
 python tools/gcp_cfr.py collect --run RUN
 python tools/gcp_cfr.py stop-owned --run TASK_STARTING_RUN
@@ -27,6 +28,13 @@ hash, validates UTF-8 without BOM, and lists exact dependency revisions.
 The committed baseline capture avoids racing proof authors' successor edits.
 Authors should offer stable hashes and retain those bytes until capture is
 acknowledged. Captured source bytes are never normalized or rewritten.
+`resume-prelaunch` continues a preserved upload failure only before any launch
+intent or runner exists. It rechecks ownership/process guards, uploads to the
+observed absolute remote home (PuTTY SCP does not reliably expand `~`), and
+verifies transferred input/controller/archive hashes before the single launch.
+Failed transport logs keep unique labels. A post-launch transport failure must
+use `observe`, never this prelaunch continuation.
+
 Repeated `--audit-export` options generate a capture-only audit containing
 explicit types and transitive axioms for those declarations. Exact emitted
 type blocks and raw logs are hashed for later semantic inspection; printing
@@ -68,5 +76,11 @@ verified final `TERMINATED` state. Its operator must also assess any unrelated
 active workload before invoking shutdown. No new VM, machine-size change,
 shared-cache cleanup, or historical-evidence replacement is part of this tool.
 
-Remaining to-do list: authenticate the established account, verify live VM
-state, run and preserve the baseline, and continue exact-byte proof captures.
+A separately recorded task reacquisition may authorize shutdown through
+`stop-owned --run RUN --ownership-receipt RECEIPT/ownership.json`, relative to
+`evidence/gcp`. The controller validates its successful exact VM-start command
+and retains the original ownership observation unchanged. Collection, process,
+lock and unrelated-workload guards still apply.
+
+Remaining to-do list: preserve the baseline cloud outcome and continue exact-byte
+proof captures, compilation and audits.

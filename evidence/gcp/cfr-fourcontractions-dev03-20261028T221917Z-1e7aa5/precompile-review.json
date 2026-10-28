@@ -1,0 +1,7 @@
+{
+  "status": "superseded-before-compilation",
+  "compile_invoked": false,
+  "source_sha256": "826cd0802307795c00c7eba143c11393d2da029746cd456c9bd84fe53dbf725d",
+  "utf8_no_bom": true,
+  "note": "Root static review found two mul_assoc rewrite orientation errors; successor reverses both."
+}

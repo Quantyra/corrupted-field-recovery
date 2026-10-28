@@ -1,0 +1,2 @@
+FATAL ERROR: Remote side unexpectedly closed network connection
+ERROR: (gcloud.compute.scp) [C:\Users\dfred\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin\sdk\pscp.exe] exited with return code [1].

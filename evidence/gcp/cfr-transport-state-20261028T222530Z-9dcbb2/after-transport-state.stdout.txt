@@ -1,0 +1,5 @@
+{
+  "lastStartTimestamp": "2026-10-28T15:16:04.260-07:00",
+  "lastStopTimestamp": "2026-10-28T15:25:00.207-07:00",
+  "status": "TERMINATED"
+}

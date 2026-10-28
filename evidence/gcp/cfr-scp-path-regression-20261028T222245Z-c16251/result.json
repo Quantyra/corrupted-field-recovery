@@ -1,0 +1,12 @@
+{
+  "compile_invoked": false,
+  "checks": 5,
+  "passed": true,
+  "cases": [
+    "absolute home",
+    "reject tilde",
+    "reject traversal",
+    "reject shell metacharacter",
+    "reject relative home"
+  ]
+}

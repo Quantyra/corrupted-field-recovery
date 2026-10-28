@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:26:23.223206+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "instances",
+    "start",
+    "quantyra-lean-builder-01",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

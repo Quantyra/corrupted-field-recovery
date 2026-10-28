@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-28T22:32:04.249593+00:00",
+  "status": "prelaunch-blocked-by-external-vm-stop",
+  "launch_requested": false,
+  "compiler_invoked": false,
+  "archive_unchanged": true,
+  "completed": [
+    "immutable-run-directory-created",
+    "absolute-home-observed",
+    "five-input-controller-files-uploaded"
+  ],
+  "incomplete": [
+    "bootstrap-archive-upload",
+    "remote-final-transfer-hash-verification",
+    "sole-runner-launch"
+  ],
+  "partial_upload": "space-pinned-dependencies.tar.gz upload interrupted near 6.3MB; preserve task directory and partial artifact for inspection",
+  "resume": "After lifecycle ownership is coordinated and exact VM state observed, use guarded resume-prelaunch on this same handle. Do not use submit.",
+  "external_stop_audit": "cfr-shutdown-audit-20261028T223101Z-58be86/shutdown-audit.stdout.txt"
+}

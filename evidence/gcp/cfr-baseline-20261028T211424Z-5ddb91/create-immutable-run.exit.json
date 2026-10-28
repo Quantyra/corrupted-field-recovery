@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:20:23.617062+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "ssh",
+    "quantyra-lean-builder-01",
+    "--tunnel-through-iap",
+    "--command=echo c2V0IC1ldQp0ZXN0ICEgLWUgIiRIT01FL3F1YW50eXJhLWNmci1ydW5zL2Nmci1iYXNlbGluZS0yMDI2MTAyOFQyMTE0MjRaLTVkZGI5MSIKbWtkaXIgIiRIT01FL3F1YW50eXJhLWNmci1ydW5zL2Nmci1iYXNlbGluZS0yMDI2MTAyOFQyMTE0MjRaLTVkZGI5MSIK | base64 -d | bash",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

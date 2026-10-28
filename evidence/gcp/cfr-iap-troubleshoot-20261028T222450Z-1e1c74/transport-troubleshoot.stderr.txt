@@ -1,0 +1,26 @@
+
+Starting ssh troubleshooting for instance https://compute.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/instances/quantyra-lean-builder-01 in zone us-central1-a
+Start time: 2026-10-28 12:25:06.842733
+
+---- Checking network connectivity ----
+Source IP address: 35.235.240.123 (a random IP address from the IAP IPv4 range - 35.235.240.0/20)
+
+Destination IP address: 10.128.0.2 (primary internal IPv4 address of the instance)
+
+Connectivity Test forward path result: REACHABLE
+
+Connectivity Test return path result: REACHABLE
+
+To view complete details of this test, see https://console.cloud.google.com/net-intelligence/connectivity/tests/details/ssh-troubleshoot-56644?project=quantyra-lean-cert-20260915
+
+Help for connectivity tests:
+https://cloud.google.com/network-intelligence-center/docs/connectivity-tests/concepts/overview
+
+---- Checking user permissions ----
+User permissions: 0 issue(s) found.
+
+---- Checking VPC settings ----
+VPC settings: 0 issue(s) found.
+
+---- Checking VM status ----
+ERROR: (gcloud.compute.ssh) HTTPError 400: The resource 'projects/quantyra-lean-cert-20260915/zones/us-central1-a/instances/quantyra-lean-builder-01' is not ready

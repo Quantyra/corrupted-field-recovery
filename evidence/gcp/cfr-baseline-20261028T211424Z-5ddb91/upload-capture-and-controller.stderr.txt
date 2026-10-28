@@ -1,0 +1,3 @@
+pscp: remote filespec ~/quantyra-cfr-runs/cfr-baseline-20261028T211424Z-5ddb91/: not a directory
+
+ERROR: (gcloud.compute.scp) [C:\Users\dfred\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin\sdk\pscp.exe] exited with return code [1].

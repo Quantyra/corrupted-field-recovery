@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Users\\dfred\\AppData\\Local\\Google\\Cloud SDK\\google-cloud-sdk\\platform\\bundledpython\\python.exe",
+    "-B",
+    "tools/check_release_readiness.py"
+  ],
+  "exit_code": 1,
+  "compile_invoked": false
+}

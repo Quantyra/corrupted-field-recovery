@@ -1,0 +1,17 @@
+{
+  "exit_code": 1,
+  "utc": "2026-10-28T22:30:03.758584+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\space-pinned-dependencies.tar.gz",
+    "C:\\Users\\dfred\\QuantyraTools\\SpaceProofs\\space-mathlib-cache.tar",
+    "quantyra-lean-builder-01:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-baseline-20261028T211424Z-5ddb91/",
+    "--tunnel-through-iap",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

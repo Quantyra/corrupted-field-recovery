@@ -99,10 +99,11 @@ def submit(args):
     elif state['status'] != 'RUNNING':
         raise RuntimeError('Instance not ready: '+state['status'])
     save(out/'instance-ownership.json', ownership)
-    ssh('set -eu\nif pgrep -x lean || pgrep -x lake; then exit 73; fi\n'
+    preflight = ssh('set -eu\nif pgrep -x lean || pgrep -x lake; then exit 73; fi\n'
         'test -x "$HOME/quantyra-space-tools/lean-4.30.0-linux/bin/lean"\n'
         'mkdir -p "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'"\n'
-        'flock -n "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'/lock" true\n', out, 'submission-preflight')
+        'flock -n "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'/lock" true\n'
+        'printf "CFR_HOME=%s\\n" "$HOME"\n', out, 'submission-preflight')
     remote = '$HOME/quantyra-cfr-runs/'+args.run
     script = '''#!/usr/bin/env bash
 set -euo pipefail
@@ -124,19 +125,68 @@ CFR_GCP_RUN=RUN python3 "$run/gcp_cfr_runner.py" "$run" "$campaign"
          controller_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
          stage_timeout_seconds=1800, ownership_policy='Stop task-started VM only after outcomes retained and no other work.'))
     ssh('set -eu\ntest ! -e "'+remote+'"\nmkdir "'+remote+'"\n', out, 'create-immutable-run')
-    remote_scp = VM+':~/quantyra-cfr-runs/'+args.run+'/'
+    home = next(line.removeprefix('CFR_HOME=') for line in preflight.decode().splitlines() if line.startswith('CFR_HOME='))
+    remote_scp = scp_destination(home, args.run)
     cloud(['compute', 'scp', str(out/'inputs.tar.gz'), str(out/'capture-manifest.json'),
            str(out/'gcp_cfr_runner.py'), str(out/'run.sh'), str(out/'bootstrap-assets.json'),
            remote_scp, '--tunnel-through-iap'], out, 'upload-capture-and-controller')
     # Task-owned copies only; neither source archives nor other campaign caches are mutated.
     have_packages = ssh('if test -d "$HOME/quantyra-cfr-runs/'+CAMPAIGN+
                         '/packages/mathlib/.git"; then echo READY; else echo MISSING; fi\n', out, 'campaign-cache-state')
+    transfer = ['inputs.tar.gz', 'capture-manifest.json', 'gcp_cfr_runner.py', 'run.sh', 'bootstrap-assets.json']
     if have_packages.decode().strip() != 'READY':
         cloud(['compute', 'scp', *[str(ASSETS/name) for name in assets], remote_scp,
                '--tunnel-through-iap'], out, 'upload-bootstrap-assets')
+        transfer += list(assets)
+    hashes = {n:hashlib.sha256((out/n if (out/n).exists() else ASSETS/n).read_bytes()).hexdigest() for n in transfer}
+    checks = '\n'.join(sha+'  '+n for n,sha in hashes.items())
+    ssh('set -eu\ncd "'+remote+'"\nsha256sum -c <<\'CFR_HASHES\'\n'+checks+'\nCFR_HASHES\n', out, 'verify-transferred-inputs')
     save(out/'launch-request.json', dict(utc=utc(), run=args.run, campaign=CAMPAIGN,
          note='An observation/transport timeout must not trigger another launch.'))
     ssh('set -eu\nrun="'+remote+'"\n'
+        'nohup bash "$run/run.sh" > "$run/launch.log" 2>&1 < /dev/null &\n'
+        'echo "$!" > "$run/runner-pid"\nprintf "REMOTE_PID="; cat "$run/runner-pid"\n', out, 'launch-once')
+
+
+def scp_destination(home, run):
+    """PuTTY SCP requires an absolute remote path; do not rely on tilde expansion."""
+    if not re.fullmatch(r'/[A-Za-z0-9_./-]+', home) or '..' in home.split('/'):
+        raise ValueError('Unsafe remote HOME')
+    if not re.fullmatch(r'cfr-[A-Za-z0-9_-]+', run):
+        raise ValueError('Unsafe run identity')
+    return VM+':'+home.rstrip('/')+'/quantyra-cfr-runs/'+run+'/'
+
+
+def resume_prelaunch(args):
+    """Continue a preserved failed upload, never recreate inputs or launch twice."""
+    out = run_directory(args.run)
+    if (out/'launch-request.json').exists():
+        raise RuntimeError('Launch requested already; observe the existing handle')
+    manifest = json.loads((out/'capture-manifest.json').read_text())
+    assert hashlib.sha256((out/'inputs.tar.gz').read_bytes()).hexdigest() == manifest['archive_sha256']
+    label = unique('resume-prelaunch')
+    remote = '$HOME/quantyra-cfr-runs/'+args.run
+    preflight = ssh('set -eu\nrun="'+remote+'"\n'
+        'test -d "$run"\ntest ! -e "$run/runner-pid"\ntest ! -e "$run/started-utc"\n'
+        'if pgrep -x lean || pgrep -x lake; then exit 73; fi\n'
+        'flock -n "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'/lock" true\n'
+        'printf "CFR_HOME=%s\\n" "$HOME"\n', out, label+'-guard')
+    home = next(line.removeprefix('CFR_HOME=') for line in preflight.decode().splitlines() if line.startswith('CFR_HOME='))
+    destination = scp_destination(home, args.run)
+    names = ['inputs.tar.gz', 'capture-manifest.json', 'gcp_cfr_runner.py', 'run.sh', 'bootstrap-assets.json']
+    assets = json.loads((out/'bootstrap-assets.json').read_text())
+    cloud(['compute', 'scp', *[str(out/n) for n in names], destination, '--tunnel-through-iap'], out, label+'-upload')
+    ready = ssh('test ! -d "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'/packages/mathlib/.git" || echo READY\n', out, label+'-cache')
+    if ready.decode().strip() != 'READY':
+        cloud(['compute', 'scp', *[str(ASSETS/n) for n in assets], destination, '--tunnel-through-iap'], out, label+'-assets')
+        names += list(assets)
+    expected = {n:hashlib.sha256((out/n if (out/n).exists() else ASSETS/n).read_bytes()).hexdigest() for n in names}
+    checks = '\n'.join(sha+'  '+n for n,sha in expected.items())
+    ssh('set -eu\ncd "'+remote+'"\nsha256sum -c <<\'CFR_HASHES\'\n'+checks+'\nCFR_HASHES\n', out, label+'-verify')
+    save(out/(label+'-verified-transfer.json'), dict(remote_home=home, sha256=expected, utc=utc()))
+    save(out/'launch-request.json', dict(utc=utc(), run=args.run, campaign=CAMPAIGN, resumed_prelaunch=True))
+    ssh('set -eu\nrun="'+remote+'"\n'
+        'test ! -e "$run/runner-pid"\ntest ! -e "$run/started-utc"\n'
         'nohup bash "$run/run.sh" > "$run/launch.log" 2>&1 < /dev/null &\n'
         'echo "$!" > "$run/runner-pid"\nprintf "REMOTE_PID="; cat "$run/runner-pid"\n', out, 'launch-once')
 
@@ -153,13 +203,14 @@ def observation(args):
             'tail -n 30 "$run/logs/build.stdout.txt" 2>/dev/null || true\n'
             'tail -n 30 "$run/logs/build.stderr.txt" 2>/dev/null || true\n', out, label)
     elif args.mode == 'collect':
-        ssh('set -eu\nrun="'+remote+'"\n'
+        packaged = ssh('set -eu\nrun="'+remote+'"\n'
             'test -f "$run/exit-code"\ncd "$run"\n'
             'tar -czf collected-evidence.tar.gz logs exit-code started-utc finished-utc launch.log runner-pid '
             '$(test ! -e terminal-receipt.json || echo terminal-receipt.json)\n'
-            'sha256sum collected-evidence.tar.gz\n', out, label+'-package')
+            'sha256sum collected-evidence.tar.gz\nprintf "CFR_HOME=%s\\n" "$HOME"\n', out, label+'-package')
         archive = out/(label+'-evidence.tar.gz')
-        cloud(['compute', 'scp', VM+':~/quantyra-cfr-runs/'+args.run+'/collected-evidence.tar.gz',
+        home = next(line.removeprefix('CFR_HOME=') for line in packaged.decode().splitlines() if line.startswith('CFR_HOME='))
+        cloud(['compute', 'scp', scp_destination(home, args.run)+'collected-evidence.tar.gz',
                str(archive), '--tunnel-through-iap'], out, label+'-download')
         with tarfile.open(archive) as tar:
             for member in tar.getmembers():
@@ -188,9 +239,17 @@ def observation(args):
 
 def stop_owned(args):
     out = run_directory(args.run)
-    ownership = json.loads((out/'instance-ownership.json').read_text())
-    if ownership.get('started_for_task') is not True:
+    authority = (EVIDENCE/args.ownership_receipt).resolve() if args.ownership_receipt else out/'instance-ownership.json'
+    if not authority.is_relative_to(EVIDENCE.resolve()):
+        raise ValueError('Ownership receipt must be retained campaign evidence')
+    ownership = json.loads(authority.read_text())
+    if ownership.get('run') != args.run or ownership.get('initial_state') != 'TERMINATED' or ownership.get('started_for_task') is not True:
         raise RuntimeError('This task did not start the instance; no stop authority from this handle')
+    if args.ownership_receipt:
+        assert (authority.parent/'start-intent.json').is_file()
+        result = json.loads((authority.parent/'start-task-instance.exit.json').read_text())
+        assert result['exit_code'] == 0
+        assert ['compute', 'instances', 'start', VM] == result['command'][1:5]
     live = [p.parent for p in EVIDENCE.glob('*/launch-request.json')]
     for directory in live:
         if not (directory/'collected/exit-code').is_file():
@@ -293,14 +352,18 @@ def main():
     cap.add_argument('--audit-export', action='append')
     remote = sub.add_parser('inspect')
     remote.add_argument('--run')
-    for mode in ['submit', 'observe', 'collect', 'stop-owned']:
+    for mode in ['submit', 'resume-prelaunch', 'observe', 'collect', 'stop-owned']:
         handle = sub.add_parser(mode)
         handle.add_argument('--run', required=True)
+        if mode == 'stop-owned':
+            handle.add_argument('--ownership-receipt', help='Relative evidence/gcp path to a separate task reacquisition receipt')
     args = parser.parse_args()
     if args.mode == 'capture':
         capture(args)
     elif args.mode == 'submit':
         submit(args)
+    elif args.mode == 'resume-prelaunch':
+        resume_prelaunch(args)
     elif args.mode in ['observe', 'collect']:
         observation(args)
     elif args.mode == 'stop-owned':
