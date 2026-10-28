@@ -3,13 +3,13 @@
   "toolchain": "leanprover/lean4:v4.30.0",
   "source_sha256": {
     "CorruptedFieldRecovery.lean": "5bb695b100945569e6a9d98bdb8f0c70e01ed890c3c8ac73be4ff736aef4e80c",
-    "CorruptedFieldRecovery/Defect.lean": "94ae326c173130d286bed2c29206c858ebfa667d31db7921468e980cea79bfcd",
+    "CorruptedFieldRecovery/Defect.lean": "12a92e387a360cde83ec27b885103bd65ccb0eb7593c9a57143ea261b09c08c6",
     "CorruptedFieldRecovery/Independent.lean": "1e051f2e7d19c748242db1a091c9aa42c4ec532f69467796e81487f7b53f3baf",
     "checks/Audit.lean": "3b1b3e1737b3621b4e5a401819d10001fcf67f9f440f6a62ffcdddb6c4eb40b3",
     "lakefile.toml": "46ac718eb654678ceea6d9f0a19f6944af19e4e513b01b91f89f0dc94373f8ce",
     "lake-manifest.json": "5e95294fc479a9e41d6fb269dddbb1372127d716e01fa74017656e3c0b6bd4a0",
     "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
-    "tools/check_lean.py": "489abb2e5c0b1e92b68de7626bfba2f0a9b7e46492339f5ce0cf6e4189a1cb86"
+    "tools/check_lean.py": "3eb3f2fa79485a314b49e592b2e117d6372e9d42c3ade31fb3118ecd5e356faa"
   },
   "scope": "Intermediate defect-image lemmas only; not complete certification",
   "commands": [
@@ -32,6 +32,19 @@
       "exit_code": 0,
       "log": "artifacts/lean-audit.log"
     }
+  ],
+  "log_sha256": {
+    "artifacts/lean-build.log": "67c344189f3953199d279d9eb8862ec1dd8d75ee551e1a64e0a3bf4b9672cf5e",
+    "artifacts/lean-audit.log": "e1f12494d478b63375d645d0a002b27c02c244fd5d6a673d552cd5ef311ce0d4"
+  },
+  "audited_declarations": [
+    "CorruptedFieldRecovery.balanced_cancels",
+    "CorruptedFieldRecovery.imbalance_add",
+    "CorruptedFieldRecovery.imbalance_mode_le",
+    "CorruptedFieldRecovery.joint_surjective_of_disjoint_duals",
+    "CorruptedFieldRecovery.recovery_modeImage",
+    "CorruptedFieldRecovery.two_translate_modeImage",
+    "CorruptedFieldRecovery.two_translate_of_disjoint"
   ],
   "reported_axioms": [
     "Classical.choice",

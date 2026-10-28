@@ -18,6 +18,6 @@ The standalone source adapts these elementary routines and reconstructs the cubi
 
 The earlier cubic-only side audit had no saved script or standalone proof. The present manuscript and test suite are newly saved artifacts and have their own source hashes. Their evidence is not retroactively attributed to the earlier conversation.
 
-Author: Daniel Eric Fredriksen, Quantyra Inc, as established in the existing Quantyra publication metadata (`quantyra-null-cone-lean/CITATION.cff` and `.zenodo.json`). No ORCID is inferred. Codex assisted with reconstruction, software, tests, Lean development and writing; no independent review is claimed.
+Author: Daniel Eric Fredriksen, Quantyra Inc, as established in the existing Quantyra publication metadata (`quantyra-null-cone-lean/CITATION.cff` and `.zenodo.json`). No ORCID is inferred. Codex assisted with reconstruction, software, tests, Lean development and writing. Three separate AI-model review passes (GPT-6 Astra, GPT-6.1 Terra, GPT-6.1 Sol), their scope and feedback dispositions are saved in `docs/reviews`; no independent human peer review is claimed.
 
 Software, tests and Lean files: Apache-2.0, see `LICENSE`. Manuscript: CC-BY-4.0, see `LICENSES/CC-BY-4.0.txt`. Third-party Lean dependencies retain their original licenses and pinned revisions. No third-party article PDFs are redistributed.

@@ -15,7 +15,7 @@
 \newcommand{\End}{\operatorname{End}}
 \title{Certified recovery of trace-determinant structure\\under low-dimensional corruption}
 \author{Daniel Eric Fredriksen\\Quantyra Inc}
-\date{28 October 2026 --- working manuscript, not a released version}
+\date{28 October 2026 --- preprint v0.1.0}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -31,7 +31,7 @@ bounds are $\widetilde O(2^{4R}h n^{12})$ time and
 $\widetilde O(n^8+\log(h+1))$ working space, where $n=3s$.
 The result concerns supported algebraic corruption, not arbitrary noise or
 unique identification of a planted field. The companion contains executable
-finite checks. Complete Lean certification is in progress; this draft does
+finite checks. Complete Lean certification is in progress; this preprint does
 not claim that the main theorem or the Python implementation is formally verified.
 \end{abstract}
 
@@ -145,10 +145,12 @@ For a candidate scalar action $T$, define
  D_T C(x,y,z)=C(Tx,y,z)+C(x,Ty,z).
 \end{equation}
 If $T$ is multiplication by $t\in K$, then $D_T C_0=0$.
+The displacement need not be alternating in all three arguments;
+$W(D_T E)$ denotes only its third mode image.
 
 \begin{lemma}[Two-translate image recovery]\label{lem:two}
-If $E$ is supported on $U$ and $U\cap T^*U=0$, with $T$ invertible on
-$U$ in the sense that $\dim T^*U=\dim U$, then
+If $E$ is supported on $U$, $U\cap T^*U=0$, and the restriction of $T^*$
+to $U$ is injective (equivalently $\dim T^*U=\dim U$), then
 $W(D_T E)=W(E)$. Equivalently it suffices that a basis for $U$, followed by
 its $T^*$-translate, is linearly independent. The empty support case also holds.
 \end{lemma}
@@ -273,6 +275,19 @@ annihilate its nonzero quotient class. Greedy choice therefore constructs a
 $K$-basis in three steps when the field tests pass. Direct verification of
 the resulting binary basis is retained.
 
+On a good trial, let $K'=\F_2[X]/(p)$ and let $\sigma:K'\to K$ send $X$
+to the sampled generator of the original field. If $g:V\to(K')^3$ is the
+constructed coordinate map, the original map has the form
+$f(x)=B\sigma(g(x))$ for some $B\in\operatorname{GL}_3(K)$, with $\sigma$
+applied coordinatewise. Field isomorphisms preserve absolute trace, so
+\[
+ \Tr_{K/\F_2}(c\det(fx,fy,fz))
+ =\Tr_{K'/\F_2}(c'\det(gx,gy,gz)),\qquad
+ c'=\sigma^{-1}(c\det B)\ne0.
+\]
+Thus the original compatible component lies in the constructed coefficient
+space, even when the recognized field presentation and basis differ.
+
 The certificate contains $p$, the $n\times n$ binary coordinate map $f$,
 a nonzero $s$-bit $c$, independent support covectors $u_1,\ldots,u_r$ with
 $r\leq R$, and $\binom r3$ binary exterior coefficients. Its size is
@@ -312,8 +327,12 @@ binary matrix arithmetic and elimination.
 The coefficient fit has $d=O(n^3)$ rows and
 $m=s+\binom r3=O(n^3)$ columns, even on failed trials with $r\leq R\leq n$.
 Constructing the compatible columns costs $O(n^7)$ bit operations using
-the trace routine just described. Constructing the exterior columns costs
-$O(n^6)$; elimination costs $O(dm\min(d,m))=O(n^9)$ and stores
+the trace routine just described. Constructing the exterior columns by direct
+writes into mutable bit arrays costs $O(n^6)$. The Python companion instead
+packs immutable integers: shifts and OR operations can copy $O(n^3)$ bits
+per coefficient, giving the conservative $O(n^9)$ construction bound for
+that implementation and $O(n^6)$ stored bits. Elimination costs
+$O(dm\min(d,m))=O(n^9)$ and stores
 $O(dm)=O(n^6)$ bits. Certificate rechecking reconstructs these columns
 and costs no more. All stages can discard one failed candidate before
 starting the next. Polynomial index and interpreter representation overheads
@@ -334,7 +353,9 @@ in the dense input size. The exponential dependence on $R$ remains explicit.
 Hora's ring forms~\cite{hora} include composing a determinant over a
 characteristic-$p$ ring with a linear functional. His results study radicals,
 decomposition and equivalence, including characteristic-two examples. Thus
-the uncorrupted form used here is established mathematical structure. The
+the uncorrupted form used here is established mathematical structure. Hora
+describes ring forms as a generalization of the trace-derived forms introduced
+in his earlier work~\cite{hora2012}. The
 recovery theorem adds an unknown common support and a bounded randomized
 constructor with exact verification; it does not originate ring forms.
 
@@ -388,7 +409,7 @@ as a development failure, not silently reported as a positive test. The
 $s=5$ negative control checks that two three-dimensional subspaces of one
 five-dimensional $K$-line cannot be independent, for all 32 scalars.
 
-Lean sources and a theorem-to-obligation inventory accompany this draft.
+Lean sources and a theorem-to-obligation inventory accompany this preprint.
 Compiling individual lemmas is not complete certification of this manuscript.
 The four-contraction field theorem, finite-field cardinality and sampling
 bridge, complete bounded constructor, verifier equivalence and bit-cost
@@ -407,16 +428,22 @@ or BPP versus BQP follows by replacing that condition with $2R+5$.
 \paragraph{Authorship, assistance, and license.}
 The author and affiliation follow established Quantyra project metadata.
 Codex assisted with proof reconstruction, implementation, tests, formalization,
-literature comparison and manuscript preparation. Only internal review and
-the specifically recorded checks have occurred; no independent peer review
-or journal acceptance is claimed. Manuscript text is licensed CC BY 4.0;
-software and Lean sources are licensed Apache 2.0. No DOI is assigned in this
-working draft. Release remains pending full validation and Lean certification.
+literature comparison and manuscript preparation. Separate review passes by
+GPT-6 Astra, GPT-6.1 Terra, and GPT-6.1 Sol examined mathematics,
+implementation/formalization, and adversarial publication concerns. Their
+reports, limitations, and feedback dispositions are saved in the companion;
+these are AI-assisted internal reviews, not independent human peer review or
+journal acceptance. Manuscript text is licensed CC BY 4.0; software and Lean
+sources are licensed Apache 2.0. This preprint includes partial Lean verification
+of the defect-image argument; complete formal certification remains future work.
 
 \begin{thebibliography}{9}
 \bibitem{hora} J. Hora, Ring forms, \emph{Italian Journal of Pure and Applied
 Mathematics} 41 (2019), 628--636.
 \href{https://ijpam.uniud.it/online_issue/201941/55-Jan\%20Hora.pdf}{Primary article}.
+\bibitem{hora2012} J. Hora, Autotopisms and Isotopisms of Trilinear Alternating
+Forms, \emph{Communications in Algebra} 40(4) (2012), 1438--1455.
+\href{https://doi.org/10.1080/00927872.2011.551899}{doi:10.1080/00927872.2011.551899}.
 \bibitem{magma} Computational Algebra Group, \emph{Magma Handbook:
 Linear Invariants of Tensors}, accessed 28 October 2026.
 \href{https://docs.magma-maths.org/Modules/MultilinearAlgebra/Linear-invariants-of-tensors.html}{Online documentation}.

@@ -4,8 +4,9 @@ import Mathlib.Tactic.Abel
 
 /-! Algebraic defect-image recovery. The explicit split-surjectivity hypothesis
 below is the coordinate consequence of independent covectors U and T*U.
-The derivation of that hypothesis from the manuscript promise is a separate,
-currently unformalized obligation. These exports are not the full theorem. -/
+Independent.lean derives joint surjectivity from disjoint dual images.
+Connecting these abstract hypotheses to the complete manuscript's binary
+model and sampling promise remains open. These exports are not the full theorem. -/
 
 namespace CorruptedFieldRecovery
 

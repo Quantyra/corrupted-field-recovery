@@ -1,0 +1,16 @@
+{
+  "title": "Certified recovery of trace-determinant structure under low-dimensional corruption",
+  "creators": [
+    {"name": "Fredriksen, Daniel Eric", "affiliation": "Quantyra Inc"}
+  ],
+  "description": "<p>First preprint and reproducibility companion for bounded exact recovery of a nonzero trace-determinant tensor over an unknown binary extension field under corruption supported on a small common covector space. Includes the manuscript PDF and source, complete prose proofs, executable recovery and independent certificate checks, pinned partial Lean proofs, validation receipts, and three AI-model review reports with feedback dispositions.</p><p>For s &gt;= 2R+5, at most 8*2^(4R)*h trials return a verified compatible representation with probability at least 1-2^(-h). Accepted outputs are checked exactly; unique identification of a planted field is not claimed. The cubic-only bound does not establish the broader quantum application or a BPP/BQP result.</p><p>Lean verification is partial. The complete recovery theorem, its probability and resource bounds, and the Python implementation are not fully formally verified. The reviews are AI-assisted internal reviews, not independent human peer review.</p><p>Licenses: manuscript text and PDF are CC-BY-4.0; software and Lean sources are Apache-2.0. See LICENSE, LICENSES/CC-BY-4.0.txt and PROVENANCE.md. The package-level Other (Open) designation preserves these per-component licenses.</p>",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-10-28",
+  "version": "0.1.0",
+  "access_right": "open",
+  "license": "other-open",
+  "language": "eng",
+  "keywords": ["finite fields", "alternating tensors", "exact recovery", "supported corruption", "Lean"],
+  "notes": "Partial Lean verification only. Manuscript CC-BY-4.0; software and Lean Apache-2.0. No independent human peer review or complete formal certification is claimed."
+}

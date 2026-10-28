@@ -1,11 +1,11 @@
 {
-  "pdf_sha256": "388afbab2cb2cdb77953d1cf0861e609d274e5411d3dd502b2815e2b5a15962d",
-  "source_sha256": "70a603d9498f7caff661364b75e6644102ecd070e4a0f0f9d649ebd9fbdba400",
+  "pdf_sha256": "9f92cd69b52551087766b1da45b95ba44786bf0b39c079c56befc8d0066ee85a",
+  "source_sha256": "a24c45d2d587060a780e6817c222d572e0fc292b81a4d4ceed69d5918f1b9b47",
   "renderer": "PyMuPDF 1.28.2",
   "pages": [
     {
       "page": 1,
-      "characters": 2881,
+      "characters": 2857,
       "links": 3,
       "fonts": [
         [
@@ -237,7 +237,7 @@
     },
     {
       "page": 3,
-      "characters": 2684,
+      "characters": 2806,
       "links": 0,
       "fonts": [
         [
@@ -385,7 +385,7 @@
     },
     {
       "page": 5,
-      "characters": 3711,
+      "characters": 3542,
       "links": 4,
       "fonts": [
         [
@@ -431,22 +431,34 @@
           "YEUUOC+MSBM10"
         ],
         [
+          20,
+          "cff",
+          "Type1",
+          "DZGKAF+LMMathSymbols8-Regular"
+        ],
+        [
           18,
           "cff",
           "Type1",
           "UTACNV+LMMathItalic8-Regular"
         ],
         [
+          25,
+          "cff",
+          "Type1",
+          "UBBQTN+LMRoman6-Regular"
+        ],
+        [
+          31,
+          "cff",
+          "Type1",
+          "LPOGEQ+LMMathSymbols6-Regular"
+        ],
+        [
           16,
           "cff",
           "Type1",
           "NOMARO+LMMathExtension10-Regular"
-        ],
-        [
-          20,
-          "cff",
-          "Type1",
-          "DZGKAF+LMMathSymbols8-Regular"
         ],
         [
           17,
@@ -459,14 +471,14 @@
     },
     {
       "page": 6,
-      "characters": 3804,
+      "characters": 3901,
       "links": 7,
       "fonts": [
         [
-          16,
+          7,
           "cff",
           "Type1",
-          "NOMARO+LMMathExtension10-Regular"
+          "TQTHRL+LMRoman10-Regular"
         ],
         [
           12,
@@ -487,11 +499,37 @@
           "FZDNHS+LMRoman8-Regular"
         ],
         [
-          7,
+          16,
           "cff",
           "Type1",
-          "TQTHRL+LMRoman10-Regular"
+          "NOMARO+LMMathExtension10-Regular"
         ],
+        [
+          18,
+          "cff",
+          "Type1",
+          "UTACNV+LMMathItalic8-Regular"
+        ],
+        [
+          13,
+          "cff",
+          "Type1",
+          "FKPJSN+LMMathSymbols10-Regular"
+        ],
+        [
+          17,
+          "cff",
+          "Type1",
+          "KPXLOM+LMRoman12-Bold"
+        ]
+      ],
+      "outside_page_blocks": []
+    },
+    {
+      "page": 7,
+      "characters": 3414,
+      "links": 3,
+      "fonts": [
         [
           17,
           "cff",
@@ -499,24 +537,16 @@
           "KPXLOM+LMRoman12-Bold"
         ],
         [
-          56,
-          "cff",
-          "Type1",
-          "WXMALW+LMMono10-Regular"
-        ]
-      ],
-      "outside_page_blocks": []
-    },
-    {
-      "page": 7,
-      "characters": 2649,
-      "links": 5,
-      "fonts": [
-        [
           7,
           "cff",
           "Type1",
           "TQTHRL+LMRoman10-Regular"
+        ],
+        [
+          60,
+          "cff",
+          "Type1",
+          "WXMALW+LMMono10-Regular"
         ],
         [
           12,
@@ -531,12 +561,6 @@
           "PVTTLK+LMRoman10-Regular"
         ],
         [
-          56,
-          "cff",
-          "Type1",
-          "WXMALW+LMMono10-Regular"
-        ],
-        [
           13,
           "cff",
           "Type1",
@@ -549,10 +573,24 @@
           "IXFAWU+LMRoman10-Bold"
         ],
         [
-          17,
+          23,
           "cff",
           "Type1",
-          "KPXLOM+LMRoman12-Bold"
+          "GJMHKB+LMRoman10-Italic"
+        ]
+      ],
+      "outside_page_blocks": []
+    },
+    {
+      "page": 8,
+      "characters": 583,
+      "links": 4,
+      "fonts": [
+        [
+          7,
+          "cff",
+          "Type1",
+          "TQTHRL+LMRoman10-Regular"
         ],
         [
           23,
@@ -565,18 +603,15 @@
     }
   ],
   "visual_inspection": "passed",
-  "inspection": {
-    "pages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "method": "Every rendered page reviewed in the assistant image viewer",
-    "result": "Legible equations, references and links; no visible clipping or overflow. No unresolved-reference markers or out-of-page text blocks.",
-    "review": "AI-assisted internal inspection, not independent peer review"
-  }
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "inspection_scope": "All eight rendered pages visually inspected: equations and coordinate transport, resource-accounting paragraph, theorem/reference links, font rendering, margins, bibliography, and explicit partial-Lean/review disclosures. No clipping or unresolved references observed."
 }

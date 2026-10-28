@@ -1,8 +1,8 @@
 # Certified recovery of trace-determinant structure under low-dimensional corruption
 
-**Working manuscript and reproducibility package. Complete Lean certification and the first release remain unfinished. No DOI has been assigned.**
+**Preprint v0.1.0 and reproducibility package. Lean verification is partial: the complete recovery theorem and Python implementation are not formally certified.**
 
-The [seven-page draft](manuscript/main.pdf) gives the standalone cubic-tensor theorem and proof, the exact compatible-representation certificate, conditional sampling estimates, and charged bit costs. [Editable source and build instructions](manuscript/README.md) are included.
+The [preprint](manuscript/main.pdf) gives the standalone cubic-tensor theorem and proof, the exact compatible-representation certificate, conditional sampling estimates, and charged bit costs. [Editable source and build instructions](manuscript/README.md) are included. Here “certified recovery” means that every returned representation passes an exact certificate checker; it does not mean complete Lean certification.
 
 The input is a dense binary alternating trilinear tensor on dimension `n=3s`. Its promised structure is a nonzero trace-determinant over an unknown field plus a perturbation supported on at most `R` unknown covectors. For `s>=2R+5`, the bounded reader uses at most `8*2^(4R)*h` trials and `(4n+s)` fair bits per trial. It returns a fully checked compatible representation or explicit failure. It does not promise unique recovery of the planted field.
 
@@ -29,21 +29,23 @@ lake update
 lake exe cache get Mathlib.LinearAlgebra.Dual.Lemmas Mathlib.LinearAlgebra.Prod Mathlib.Tactic.Abel
 python tools/check_lean.py
 python tools/check_release_readiness.py
+python tools/check_release_readiness.py --require-complete-lean
 ```
 
-The present Lean library proves the algebraic defect-image lemma and derives joint surjectivity from disjoint original/translated dual spaces. It is not the complete manuscript theorem. [The formal coverage inventory](formal/coverage.json) records the remaining input-model, field-identification, probability, constructor, certificate, and cost obligations. Python source verification is a separate unclaimed extension, not an extra prerequisite for manuscript certification. The readiness command intentionally fails until complete manuscript certification and all package checks are recorded. A successful library build alone cannot satisfy that gate.
+The present Lean library proves the algebraic defect-image lemma and derives joint surjectivity from disjoint original/translated dual spaces. It is not the complete manuscript theorem. [The formal coverage inventory](formal/coverage.json) records the remaining input-model, field-identification, probability, constructor, certificate, and cost obligations. Python source verification is a separate unclaimed extension, not an extra prerequisite for manuscript certification. The default readiness command checks this preprint's package evidence and reports the partial formalization status. The stricter `--require-complete-lean` command intentionally fails until complete manuscript certification is established; a successful library build alone cannot satisfy it.
 
 ## Evidence and scope
 
 - [Provenance and authorship](PROVENANCE.md) preserve the historical R05-08 revision and paths.
 - [Focused primary-source comparison](docs/prior-art.md) attributes determinant forms, adjoint/centroid machinery and perturbation-cancelling directions. Global priority is unestablished.
 - [PDF diagnostics and visual inspection](artifacts/pdf-checks.json) identify the inspected bytes and every reviewed page.
-- Software and Lean: [Apache-2.0](LICENSE). Manuscript: [CC-BY-4.0](LICENSES/CC-BY-4.0.txt). [Citation metadata](CITATION.cff) identify an unreleased development version without inventing a DOI.
+- [Three-model review and dispositions](docs/reviews/2026-10-28-disposition.md) distinguish reviewer judgments and exploratory checks from saved reproducible test artifacts. These are AI-assisted internal reviews, not human peer review.
+- Software and Lean: [Apache-2.0](LICENSE). Manuscript: [CC-BY-4.0](LICENSES/CC-BY-4.0.txt). [Citation metadata](CITATION.cff) identify version 0.1.0. Zenodo metadata uses “Other (Open)” for this mixed-license package and states the per-component licenses.
 
 The cubic-only bound does not replace the separate `s>=7R+5` condition for the broader phase-recovery application. No complete circuit simulation, quantum advantage, external counting-backend implementation, BPP/BQP result, or independent peer review is claimed.
 
 ## Release status
 
-On 28 October 2026 the repository had no GitHub releases and an active Zenodo release-event hook. Publication is already authorized. Complete Lean certification and final readiness remain required before the first versioned release; afterward the actual archive, metadata and version/concept DOIs must be verified.
+Version 0.1.0 is prepared for the first GitHub release and Zenodo archive. The current instruction authorizes this preprint before full Lean certification. Actual release, archive contents, metadata, and version/concept DOIs are recorded separately after verification; this source does not invent a DOI in advance.
 
-Remaining to-do list: complete Lean certification of the manuscript theorem; finish the final consistency audit; publish and verify the first GitHub release and Zenodo archive.
+Remaining to-do list: verify the first archive and DOI after publication; evaluate and complete the planned Lean certification of the manuscript theorem.

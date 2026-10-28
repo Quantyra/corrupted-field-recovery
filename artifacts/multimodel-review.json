@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "date": "2026-10-28",
+  "baseline_commit": "e7fa570ec7190d7a1c1f3a7c08ee91bc476fdc29",
+  "reviews": [
+    {
+      "model": "gpt-6-astra",
+      "report": "docs/reviews/2026-10-28-astra-mathematics.md",
+      "sha256": "d6f8776cb4148a9e74f97a840d27d368c6889b78bb6d18da18b6bd91988b4411"
+    },
+    {
+      "model": "gpt-6.1-terra",
+      "report": "docs/reviews/2026-10-28-terra-implementation-lean.md",
+      "sha256": "bc720abbc04965a2e8b5201c5515fbdb4985c154f76b9737a0f4a90b4396f655"
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "report": "docs/reviews/2026-10-28-sol-adversarial-publication.md",
+      "sha256": "d97aadb72409dcc720f68a6d64cd973f4c545d9018c1e905d1a403623e5e7cd9"
+    }
+  ],
+  "disposition": "docs/reviews/2026-10-28-disposition.md",
+  "disposition_sha256": "0846c3580d3bef927ad55582f8102e9247596aacca554d2d8fe0dbe8fa1a2c5d",
+  "unresolved_blocking_findings": [],
+  "revised_manuscript_sha256": "a24c45d2d587060a780e6817c222d572e0fc292b81a4d4ceed69d5918f1b9b47",
+  "scope": "Three distinct-model AI-assisted internal review passes and scoped revised-manuscript checks; not human peer review or full formal certification. Exploratory review checks remain distinguished from saved reproducible scripts and receipts."
+}

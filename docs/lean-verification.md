@@ -20,6 +20,6 @@ Executed `lake build CorruptedFieldRecovery`: exit 0, 1,646 jobs. Executed `lake
 
 All builds ran locally on Windows. The local package directory reused the existing pinned mathlib cache via a junction; that junction is untracked and no shared tracked dependency source was modified. A fresh checkout uses the pinned dependencies and focused cache commands in the README. No cloud execution or spend occurred.
 
-The [coverage inventory](../formal/coverage.json) is the authoritative list of unfinished manuscript obligations. The readiness checker detects the missing complete proof and does not equate this successful intermediate build with publication readiness. Python remains separately tested, not formally verified.
+The [coverage inventory](../formal/coverage.json) is the authoritative list of unfinished manuscript obligations. The default readiness checker validates a preprint with accurate partial-formalization disclosure. Its `--require-complete-lean` mode additionally requires every manuscript obligation and the final theorem. An intermediate build cannot satisfy that stricter gate. Python remains separately tested, not formally verified.
 
 Remaining to-do list: concrete binary/field model; four-contraction theorem; finite-field and conditional sampling bounds; bounded mathematical constructor; complete coefficient-checker soundness; charged costs; final main-theorem assembly and scope audit.

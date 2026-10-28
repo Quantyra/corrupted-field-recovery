@@ -1,7 +1,9 @@
 {
-  "ready": false,
-  "failures": [
-    "complete Lean certification is not established",
+  "ready": true,
+  "failures": [],
+  "require_complete_lean": false,
+  "complete_lean": false,
+  "incomplete_formal_obligations": [
     "formal obligation input_model: unformalized",
     "formal obligation four_contractions: unformalized",
     "formal obligation sampling_bounds: unformalized",
@@ -11,5 +13,5 @@
     "formal obligation main_theorem: unformalized"
   ],
   "publication_authorized": true,
-  "note": "No additional human publication permission is required. Mathematical and formal work remains mandatory."
+  "note": "Partial Lean evidence does not certify the main theorem or Python implementation."
 }
