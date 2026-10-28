@@ -1,6 +1,9 @@
 {
-  "ready": true,
-  "failures": [],
+  "ready": false,
+  "failures": [
+    "missing Lean source evidence: CorruptedFieldRecovery/Bridge.lean",
+    "missing Lean source evidence: CorruptedFieldRecovery/BinaryTensor.lean"
+  ],
   "require_complete_lean": false,
   "complete_lean": false,
   "incomplete_formal_obligations": [

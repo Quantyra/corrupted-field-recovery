@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/check_release_readiness.py"
+  ],
+  "exit_code": 1,
+  "compile_invoked": false
+}

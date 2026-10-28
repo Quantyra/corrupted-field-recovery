@@ -1,0 +1,18 @@
+{
+  "ready": true,
+  "failures": [],
+  "require_complete_lean": false,
+  "complete_lean": false,
+  "incomplete_formal_obligations": [
+    "formal obligation input_model: unformalized",
+    "formal obligation four_contractions: unformalized",
+    "formal obligation two_translate_bridge: unformalized",
+    "formal obligation sampling_bounds: unformalized",
+    "formal obligation bounded_constructor: unformalized",
+    "formal obligation certificate: unformalized",
+    "formal obligation costs: unformalized",
+    "formal obligation main_theorem: unformalized"
+  ],
+  "publication_authorized": true,
+  "note": "Partial Lean evidence does not certify the main theorem or Python implementation."
+}
