@@ -1,0 +1,16 @@
+{
+  "checked_date": "2026-10-28",
+  "releases": [],
+  "hooks": [
+    {
+      "id": 704384820,
+      "active": true,
+      "events": [
+        "release"
+      ],
+      "host": "zenodo.org"
+    }
+  ],
+  "release_published": false,
+  "doi_verified": false
+}

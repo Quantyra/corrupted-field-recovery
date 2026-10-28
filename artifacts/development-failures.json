@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-28",
+  "entries": [
+    {
+      "kind": "outside-promise fixture failure",
+      "source_sha256": "0c54ec4e33bb02e3eda054a2efb3360b8c537468be28ab09836e360617bf5617",
+      "test_source_sha256": "11ba22ff0726fb3ef3be157257a392894af2d06938ed62a374978ee5b3ea7fc9",
+      "parameters": {
+        "s": 3,
+        "R": 3,
+        "h": 1,
+        "seed": 20261031
+      },
+      "support": "All three binary coordinate covectors in one K-coordinate, pulled back by the fixture coordinate change",
+      "outcome": "bounded_failure",
+      "trials": 32768,
+      "random_bits": 1277952,
+      "rejections": {
+        "balance_dimension": 32245,
+        "field_generator": 523
+      },
+      "interpretation": "The fixture is outside s>=2R+5. Its clean subspace is a K-plane, so no clean triple spans K^3. The failure is not evidence against the sufficient theorem or evidence of absence of alternative representations.",
+      "correction": "The ordinary seeded positive fixture now uses one covector in each of three K-coordinates. The s=5 one-line position obstruction is retained as an exhaustive negative control.",
+      "replay": {
+        "command": "python tests/replay_small_field_failure.py",
+        "exit_code": 0,
+        "outcome": "Same bounded failure and all rejection totals reproduced"
+      }
+    },
+    {
+      "kind": "local build infrastructure",
+      "command": "lake build CorruptedFieldRecovery",
+      "outcome": "Initial process stopped after making no visible progress; not counted as a successful Lean build."
+    },
+    {
+      "kind": "Lean development observations",
+      "reproducibility": "Terminal observations, not immutable archived prototype sources",
+      "corrected_errors": [
+        "nonexistent initial Mathlib.LinearAlgebra.Basic import",
+        "a beta-reduction required before rewriting the contracted covector",
+        "copied manifest root name needed Lean identifier quoting",
+        "Windows cp1252 console could not print a successful build checkmark",
+        "ext tactic split a product before the explicit rcases in the dual bridge"
+      ],
+      "current_status": "See lean-checks.json and its source hashes for final compiled evidence"
+    }
+  ]
+}

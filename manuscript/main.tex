@@ -1,0 +1,433 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\setlength{\emergencystretch}{1em}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\End}{\operatorname{End}}
+\title{Certified recovery of trace-determinant structure\\under low-dimensional corruption}
+\author{Daniel Eric Fredriksen\\Quantyra Inc}
+\date{28 October 2026 --- working manuscript, not a released version}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let an explicitly represented alternating trilinear tensor on $\F_2^{3s}$ be
+the sum of a nonzero trace-determinant tensor over an unknown field
+$\F_{2^s}$ and an arbitrary alternating perturbation supported on at most $R$
+binary covectors. We give a bounded randomized reconstruction using four
+contractions, scalar-field recognition, and a two-translate defect operator.
+When $s\geq2R+5$, at most $8\cdot2^{4R}h$ trials return a verified compatible
+representation with probability at least $1-2^{-h}$. Every accepted result is
+checked exactly, including outside the sufficient promise. Conservative bit
+bounds are $\widetilde O(2^{4R}h n^{12})$ time and
+$\widetilde O(n^8+\log(h+1))$ working space, where $n=3s$.
+The result concerns supported algebraic corruption, not arbitrary noise or
+unique identification of a planted field. The companion contains executable
+finite checks. Complete Lean certification is in progress; this draft does
+not claim that the main theorem or the Python implementation is formally verified.
+\end{abstract}
+
+\section{Problem and contribution}
+Put $V=\F_2^n$, $n=3s$. An alternating trilinear tensor is given by the
+$d=\binom n3$ coefficients $C(e_i,e_j,e_k)$ for $i<j<k$, in lexicographic
+order. Trilinearity and alternation determine all other coefficients. Over
+$\F_2$, alternation implies symmetry, and coefficients with a repeated index
+are zero. This is a dense exact input model, of size $\Theta(n^3)$ bits;
+the input is not an oracle or a succinct circuit.
+
+For a binary subspace $U\subseteq V^*$, write $U^\perp$ for its annihilator.
+We say $E$ is supported on $U$ when it factors through $V/U^\perp$ in every
+argument. Thus $E(x,y,z)=e(u(x),u(y),u(z))$ for a surjective binary linear map
+$u:V\to\F_2^r$ whose coordinate covectors form a basis of $U$, and an
+alternating trilinear form $e$. No distribution is assumed for $U$ or $e$.
+This condition is different from a bound on tensor rank, a sparse set of
+corrupted entries, or independent statistical errors.
+
+The proposed contribution is the specific worst-case supported-corruption
+guarantee below, with a complete certificate and charged search. The
+trace-determinant construction, adjoint equations, and cancellation of internal
+perturbations have substantial precedents; Section~\ref{sec:prior} describes
+the comparison. Neither priority nor a new general denoising principle is claimed.
+
+\begin{theorem}[Bounded compatible recovery]\label{thm:main}
+Let $0\leq R\leq n$, $h\geq1$ be integers. Suppose there exist a field
+$K\cong\F_{2^s}$, a binary linear isomorphism $f:V\to K^3$, $c\in K^\times$,
+and an alternating tensor $E$ supported on $U_*$ with $\dim_{\F_2}U_*\leq R$
+such that
+\begin{equation}\label{eq:model}
+ C(x,y,z)=\Tr_{K/\F_2}\bigl(c\det(fx,fy,fz)\bigr)+E(x,y,z).
+\end{equation}
+If $s\geq2R+5$, the algorithm in Section~\ref{sec:algorithm}, given only
+$(n,C,R,h)$, succeeds with probability at least $1-2^{-h}$ using independent
+fair bits. It returns some verified representation of the form
+\eqref{eq:model}, with nonzero coefficient and support dimension at most $R$.
+It uses at most $N=8\cdot2^{4R}h$ trials and $(4n+s)N$ fair bits.
+On every tape it terminates with a verified representation or explicit failure.
+Every accepted representation is sound even if the sufficient promise fails.
+The conservative bit-time and working-space bounds are
+\begin{equation}\label{eq:cost}
+ \widetilde O(2^{4R}h n^{12}),\qquad
+ \widetilde O(n^8+\log(h+1)),
+\end{equation}
+where the soft notation hides logarithmic factors in $n$ and $h+1$.
+\end{theorem}
+
+The theorem does not assert uniqueness of $K$, $f$, $c$, or $U_*$. In
+particular a valid alternative representation is a successful output.
+Malformed input is rejected before any random draw. Failure on a well-formed
+input is not a certificate that no compatible representation exists.
+
+\section{Four contractions expose the scalar field}
+For this section identify $V$ with $K^3$ through the unknown $f$ and write
+$C_0(x,y,z)=\Tr(c\det(x,y,z))$. A useful elementary fact is that
+$(x,y)\mapsto\Tr(\lambda xy)$ is a nondegenerate binary pairing for every
+$\lambda\ne0$. Indeed the trace polynomial
+$X+X^2+\cdots+X^{2^{s-1}}$ is nonzero of degree less than $2^s$, so the
+trace functional is nonzero; multiplication by any nonzero element is bijective.
+
+\begin{lemma}[Four-contraction identification]\label{lem:four}
+Let $v_1,v_2,v_3$ be a $K$-basis and let
+$v_4=a v_1+b v_2+d v_3$. If at least one of $a,b,d$ generates $K$ as an
+$\F_2$-algebra, then the binary vector space
+\[
+ \mathcal B=\{T\in\End_{\F_2}(V):T^{\mathsf t}B_j=B_jT,\ j=1,2,3,4\},
+ \qquad B_j(x,y)=C_0(x,y,v_j),
+\]
+is exactly the $s$-dimensional space of scalar multiplications by $K$.
+\end{lemma}
+\begin{proof}
+The radical of $B_j$ for $j\leq3$ is $K v_j$: if $x$ is outside that line,
+the map $y\mapsto\det(x,y,v_j)$ is a nonzero $K$-linear functional onto $K$,
+and the trace pairing is nondegenerate. A balanced endomorphism preserves
+each radical, since $B_j(Tx,y)=B_j(x,Ty)=0$ for $x$ in the radical. It is
+therefore diagonal in this three-block decomposition, with binary maps
+$A_1,A_2,A_3:K\to K$.
+
+Use the pairing $\langle x,y\rangle=\Tr(\lambda xy)$, where
+$\lambda=c\det(v_1,v_2,v_3)\ne0$. Balancing the three forms on their
+off-diagonal blocks gives $A_2^*=A_3$, $A_1^*=A_3$, and $A_1^*=A_2$.
+Consequently $A_1=A_2=A_3=A=A^*$. In the fourth form, the three
+off-diagonal pairings are weighted by $a,b,d$. Their balance equations say
+that $A$ commutes with multiplication by each of these coefficients. A map
+commuting with a field generator commutes with all its polynomial expressions,
+so is $K$-linear. On the one-dimensional $K$-space $K$, it is multiplication
+by a scalar. Conversely, scalar multiplication balances all four forms by
+$K$-multilinearity of the determinant. This proves equality.
+\end{proof}
+
+Three contractions alone impose self-adjointness of $A$ but not $K$-linearity.
+The space of self-adjoint maps has binary dimension $s(s+1)/2$, because
+composition with a fixed nondegenerate pairing identifies it with symmetric
+binary matrices. Thus the fourth equation carries necessary additional information
+for this argument.
+
+\section{Recovering the defect with two translates}
+For a tensor $E$ let its third mode image be
+\[
+ W(E)=\Span_{\F_2}\{E(x,y,\cdot):x,y\in V\}\subseteq V^*.
+\]
+For alternating $E$, symmetry makes this the mode image in every argument.
+It is the smallest support space: if $z\in W(E)^\perp$, every $E(x,y,z)$
+vanishes, and symmetry gives the corresponding statements in the other
+arguments. The tensor therefore descends to $V/W(E)^\perp$ in all arguments.
+Conversely every support space contains all contracted covectors.
+
+For a candidate scalar action $T$, define
+\begin{equation}\label{eq:defect}
+ D_T C(x,y,z)=C(Tx,y,z)+C(x,Ty,z).
+\end{equation}
+If $T$ is multiplication by $t\in K$, then $D_T C_0=0$.
+
+\begin{lemma}[Two-translate image recovery]\label{lem:two}
+If $E$ is supported on $U$ and $U\cap T^*U=0$, with $T$ invertible on
+$U$ in the sense that $\dim T^*U=\dim U$, then
+$W(D_T E)=W(E)$. Equivalently it suffices that a basis for $U$, followed by
+its $T^*$-translate, is linearly independent. The empty support case also holds.
+\end{lemma}
+\begin{proof}
+Write $E(x,y,z)=e(u(x),u(y),u(z))$, where $u:V\to\F_2^r$ records a
+basis of $U$. The joint map $x\mapsto(u(x),u(Tx))$ is onto, because its
+$2r$ coordinate covectors are independent. Every contracted covector of
+$D_T E$ is a sum of two contracted covectors of $E$, proving one inclusion.
+For any $x,y$, choose $a$ with $u(a)=0$ and $u(Ta)=u(x)$. Then
+\[
+ D_T E(a,y,z)=e(u(x),u(y),u(z))+e(0,u(Ty),u(z))=E(x,y,z)
+\]
+for all $z$. This proves the reverse inclusion. When $r=0$ both tensors vanish.
+\end{proof}
+
+The algorithm needs only $W(D_T C)$, obtained by binary elimination on
+explicit coefficient slices. It does not test cleanness against a supplied
+$U_*$. Under the good event this recovered space is $W(E)\subseteq U_*$.
+An alternating tensor supported on an $r$-dimensional space is a linear
+combination of its $\binom r3$ exterior basis forms. This follows by choosing
+dual coordinates on the quotient: alternation sets repeated indices to zero,
+and the strictly increasing triples specify all remaining coefficients.
+
+\section{Conditional sampling and amplification}
+Put $q=2^s$, $r=\dim U_*$, and $A=U_*^\perp$. Four independent uniform
+vectors in $V$ all lie in $A$ with probability $2^{-4r}\geq2^{-4R}$.
+Conditional on this event they are independent uniform elements of $A$;
+their field coordinates need not be uniform in $K$.
+
+The first three fail to form a $K$-basis with probability at most
+\[
+ \frac{1+q+q^2}{|A|}=2^r\frac{1+q+q^2}{q^3}.
+\]
+At the successive stages the forbidden sets are the origin, a $K$-line,
+and a $K$-plane. Intersecting with $A$ only decreases their sizes. Conditional
+on any selected basis triple, the first coordinate of $v_4$ has fibers of
+size at most $q^2$ within $A$.
+
+Define
+\[
+ \tau(s)=\sum_{d\mid s,\ d<s}2^d.
+\]
+A non-generator has minimal polynomial degree a proper divisor of $s$ and
+belongs to the corresponding proper subfield. Hence there are at most
+$\tau(s)$ non-generators. Every proper divisor is at most $\lfloor s/2\rfloor$,
+so $\tau(s)\leq\sum_{d=1}^{\lfloor s/2\rfloor}2^d<2^{\lfloor s/2\rfloor+1}$.
+The conditional chance that the first coordinate of $v_4$ is not a generator
+is at most $2^r\tau(s)/q$. Therefore the clean quadruple identifies the
+field with conditional probability at least $1-\beta$, where
+\begin{equation}\label{eq:beta}
+ \beta=2^R\left(\frac{1+q+q^2}{q^3}+\frac{\tau(s)}q\right).
+\end{equation}
+This bound holds for every earlier basis triple; it makes no independence
+assumption about the field coordinate and $A$.
+
+After computing any ordered binary basis of the correct balance space,
+an independent uniform $s$-bit combination is a uniform scalar $t\in K$.
+Identify $V^*$ with $K^3$ using the nondegenerate coordinatewise trace
+pairing. Under this identification $T^*$ multiplies by $t$. Dependence of
+$U_*+tU_*$ yields a nonzero pair $(u_0,u_1)\in U_*^2$ with
+$u_0+t u_1=0$. If $u_1=0$ there is no root. Otherwise one nonzero
+$K$-coordinate of $u_1$ determines at most one $t$. A union bound over
+the $2^{2r}-1$ nonzero pairs thus bounds bad translate position by
+$(2^{2r}-1)/q$. Joint generation and good position have probability at least
+\begin{equation}\label{eq:gamma}
+ \gamma=1-\frac{\tau(s)}q-\frac{2^{2R}-1}q.
+\end{equation}
+
+If $s\geq2R+5$, then
+\[
+ 2^R\frac{1+q+q^2}{q^3}<2^{R+1-s}\leq\frac1{16},\qquad
+ 2^R\frac{\tau(s)}q<2^{R+1-\lceil s/2\rceil}\leq\frac14.
+\]
+Thus $\beta<1/2$. Also $\tau(s)/q<1/4$ and
+$(2^{2R}-1)/q<1/32$, so in particular $\gamma\geq1/4$.
+Each trial succeeds with probability at least
+$2^{-4R}(1-\beta)\gamma\geq2^{-4R-3}$.
+All five draws in each trial are fresh, including the scalar draw in trials
+that will fail field identification. With $N=8\cdot2^{4R}h$, independence gives
+\[
+ \Pr(\text{all trials fail})\leq(1-2^{-4R-3})^N
+ \leq e^{-h}\leq2^{-h}.
+\]
+Earlier acceptance of a different verified representation only helps.
+
+\section{Algorithm and exact certificate}\label{sec:algorithm}
+For each of the prescribed $N$ trials perform the following operations.
+\begin{enumerate}
+\item Draw four $n$-bit vectors and an $s$-bit scalar index. Construct their
+contractions directly from the supplied coefficients.
+\item Solve the simultaneous balance equations on $n^2$ unknown bits.
+Reject unless the solution space has dimension $s$ and contains the identity.
+\item Use the scalar index to select $T$ in this space. Form
+$I,T,\ldots,T^s$. Require $I,\ldots,T^{s-1}$ independent and in the balance
+space, and solve $T^s=\sum_{j<s}p_jT^j$. Test irreducibility of
+$p(X)=X^s+\sum_{j<s}p_jX^j$. Reject on failure.
+\item In $K=\F_2[X]/(p)$, greedily choose three module generators from the
+physical binary basis. For each chosen vector append its first $s$ iterates
+under $T$. Require the resulting $n$ columns to be independent and invert
+this matrix to obtain $f:V\to K^3$.
+\item Compute $U=W(D_TC)$, and reject if its dimension exceeds $R$.
+Construct the $s$ trace-determinant coefficient columns in these coordinates,
+and the $\binom{\dim U}3$ exterior-cube columns on a basis of $U$.
+Solve for the coefficients representing the whole tensor $C$.
+\item Reject if there is no solution or the compatible coefficient is zero.
+Independently verify the complete serialized certificate, and accept only if
+that check passes. After $N$ rejected trials, return failure.
+\end{enumerate}
+
+The irreducibility test can compute successive squares of $X$ modulo $p$,
+requiring $X^{2^s}=X$ and
+$\gcd(p,X^{2^k}-X)=1$ for every $1\leq k\leq\lfloor s/2\rfloor$.
+For completeness of this test, a reducible degree-$s$ polynomial has an
+irreducible factor of degree at most $s/2$; such a factor divides
+$X^{2^k}-X$ for its degree $k$. An irreducible degree-$s$ polynomial satisfies
+all the required tests. No factoring oracle or table of field elements is used.
+
+The relation and independence tests make $\F_2[T]$ a field of degree $s$.
+Each nonzero vector in the quotient by previously selected $K$-lines generates
+another $s$-dimensional binary summand; otherwise a nonzero field scalar would
+annihilate its nonzero quotient class. Greedy choice therefore constructs a
+$K$-basis in three steps when the field tests pass. Direct verification of
+the resulting binary basis is retained.
+
+The certificate contains $p$, the $n\times n$ binary coordinate map $f$,
+a nonzero $s$-bit $c$, independent support covectors $u_1,\ldots,u_r$ with
+$r\leq R$, and $\binom r3$ binary exterior coefficients. Its size is
+$O(n^2+nR+R^3+s)$ bits. The verifier rechecks irreducibility, ranges,
+independence, and all $\binom n3$ coefficients of \eqref{eq:model}. Both
+summands are alternating trilinear by construction, so checking these
+coefficients proves equality on every triple of physical vectors. This is
+exact certificate soundness; the verifier never trusts a claimed clean event.
+
+Under a good trial, Lemmas~\ref{lem:four} and~\ref{lem:two} supply the correct
+field and the minimal error support. The full coefficient system is therefore
+consistent. Moreover its compatible coefficient cannot accidentally be zero:
+a nonzero trace-determinant tensor has mode image all of $V^*$, by the trace
+nondegeneracy argument, whereas a tensor supported on $U$ has mode image
+contained in $U$. Since $\dim U\leq R<n$ under the stated field-size condition,
+the compatible tensor space intersects the supported error space only in zero.
+Thus any solution to the coefficient system has the same nonzero compatible
+component in the recovered coordinates. This completes the correctness and
+probability proof of Theorem~\ref{thm:main}.
+
+\section{Complete resource accounting}
+All field operations use $s$-bit polynomial representatives. Schoolbook
+multiplication and reduction use $O(s^2)$ bit operations; trace evaluation
+uses $s$ squarings and $O(s^3)$ bit operations. Binary vectors and matrices
+are stored explicitly. The following deliberately loose bounds use elementary
+elimination, without assuming unit-cost operations on unbounded integers.
+
+Four contractions require $O(n^3)$ bit operations. The balance solve has
+$O(n^2)$ rows and $n^2$ variables, so uses $O(n^6)$ bit operations and
+$O(n^4)$ bits of storage. Forming matrix powers, checking their spans, and
+constructing and inverting a module basis each fit within $O(n^6)$ bit
+operations and $O(n^4)$ storage. The successive-squaring and gcd
+irreducibility procedure is polynomial and fits within the same envelope.
+Computing the defect slices and their image costs $O(n^4)$ with dense
+binary matrix arithmetic and elimination.
+
+The coefficient fit has $d=O(n^3)$ rows and
+$m=s+\binom r3=O(n^3)$ columns, even on failed trials with $r\leq R\leq n$.
+Constructing the compatible columns costs $O(n^7)$ bit operations using
+the trace routine just described. Constructing the exterior columns costs
+$O(n^6)$; elimination costs $O(dm\min(d,m))=O(n^9)$ and stores
+$O(dm)=O(n^6)$ bits. Certificate rechecking reconstructs these columns
+and costs no more. All stages can discard one failed candidate before
+starting the next. Polynomial index and interpreter representation overheads
+are absorbed conservatively by $\widetilde O(n^{12})$ time and
+$\widetilde O(n^8)$ working space per trial. These are envelopes, not optimized
+or empirically measured scaling laws.
+
+The trial counter uses $O(R+\log(h+1))$ bits; its arithmetic, input validation,
+reading and storage of $C$, and serialization of the certificate are included.
+Incremental counter work is at most $O(N(R+\log(h+1)))$. Storage has no
+factor $N$. The implementation retains a fixed number of rejection counters,
+not all previous candidates. Each trial consumes exactly $4n+s$ bits, even
+if an early algebraic test fails. Multiplying the envelope by $N$ gives
+\eqref{eq:cost}. At $R=O(\log n)$ and polynomial $h$, this is polynomial
+in the dense input size. The exponential dependence on $R$ remains explicit.
+
+\section{Comparison with established methods}\label{sec:prior}
+Hora's ring forms~\cite{hora} include composing a determinant over a
+characteristic-$p$ ring with a linear functional. His results study radicals,
+decomposition and equivalence, including characteristic-two examples. Thus
+the uncorrupted form used here is established mathematical structure. The
+recovery theorem adds an unknown common support and a bounded randomized
+constructor with exact verification; it does not originate ring forms.
+
+Computational tensor invariants already use adjoints, nuclei and centroids
+to expose underlying scalar structure. The Magma documentation~\cite{magma}
+explicitly includes underlying-field recovery and points to
+Brooksbank--Wilson~\cite{bw} for cyclic-algebra machinery. Their module
+isomorphism theorem concerns isomorphisms over rings and includes an efficient
+cyclic-ring case. Our simultaneous balance solve is elementary linear algebra
+within that established approach. The theorem here specifies when four
+corrupted contractions happen to identify the field, then certifies the full
+input identity. We do not assert a general tensor-isomorphism algorithm.
+
+Fouque--Granboulan--Stern~\cite{fgs} exploit differential kernel dimensions
+in multivariate cryptanalysis, including internally perturbed
+Matsumoto--Imai systems. This is a direct precedent for finding directions
+that cancel a hidden perturbation. Their cryptographic input and inversion
+task differ from a scalar-valued alternating cubic tensor and its compatible
+representation certificate.
+
+Dubois--Granboulan--Stern~\cite{dgs}, Theorem~1, analyzes a random instance
+of internally perturbed HFE and relates derivative-kernel distributions to
+random linear maps for a large proportion of instances. Their recovery
+uses a statistical distinguisher for the perturbation kernel. In contrast,
+our randomness belongs to the algorithm and the corruption tensor is
+arbitrary under its support promise. This distinction in quantifiers is
+essential; their theorem is not a stated worst-case guarantee for our tensor
+class. These comparisons delimit the proposed contribution. They are a
+focused primary-source screen, not an exhaustive novelty or priority proof.
+
+\section{Reproducibility, formal status, and limitations}
+The companion at
+\href{https://github.com/Quantyra/corrupted-field-recovery}{Quantyra/corrupted-field-recovery}
+contains \path{src/recovery.py} and \path{tests/check_recovery.py}.
+Run the latter with Python 3.13; it writes an environment and source-hash
+receipt to \path{artifacts/recovery-checks.json}. The tests distinguish
+ordinary seeded tapes from fixture-assisted tapes. They recreate 200 exact
+rational probability-bound checks, nine four-contraction field identifications,
+and 104 two-translate image checks. These counts are saved executable
+evidence, not the unsaved earlier conversation checks.
+
+The suite also exercises coordinate changes, independent pointwise certificate
+evaluation, altered certificates and tensors, malformed inputs, a smaller
+rank-cap refusal, and all 16 trials of an $R=0,h=2$ zero tape. The $s=11,R=3$
+scripted case satisfies the sufficient field-size promise but is not an
+ordinary-random success-frequency measurement. The $s=3,R=3$ ordinary seeded
+positive has covectors in three independent $K$-directions and is outside
+that sufficient condition. A first attempted $s=3,R=3$ fixture instead filled
+one entire $K$-coordinate; its seeded run exhausted the bound and is retained
+as a development failure, not silently reported as a positive test. The
+$s=5$ negative control checks that two three-dimensional subspaces of one
+five-dimensional $K$-line cannot be independent, for all 32 scalars.
+
+Lean sources and a theorem-to-obligation inventory accompany this draft.
+Compiling individual lemmas is not complete certification of this manuscript.
+The four-contraction field theorem, finite-field cardinality and sampling
+bridge, complete bounded constructor, verifier equivalence and bit-cost
+formalization must all be discharged before a complete certification claim.
+The Python receipt alone establishes none of these formal obligations.
+
+The origin is R05-08 at historical revision
+\path{d2ae8c6fc275423c2276ba82644b8993660ec684} in
+\path{Quantyra/quantyra-quantum-complexity}; exact paths are recorded in
+\texttt{PROVENANCE.md}. The present theorem isolates cubic tensors. The
+broader phase-recovery application needs additional quadratic and pairing
+steps and retains its separate $s\geq7R+5$ sufficient condition. No claim
+about complete circuit simulation, quantum advantage, counting backends,
+or BPP versus BQP follows by replacing that condition with $2R+5$.
+
+\paragraph{Authorship, assistance, and license.}
+The author and affiliation follow established Quantyra project metadata.
+Codex assisted with proof reconstruction, implementation, tests, formalization,
+literature comparison and manuscript preparation. Only internal review and
+the specifically recorded checks have occurred; no independent peer review
+or journal acceptance is claimed. Manuscript text is licensed CC BY 4.0;
+software and Lean sources are licensed Apache 2.0. No DOI is assigned in this
+working draft. Release remains pending full validation and Lean certification.
+
+\begin{thebibliography}{9}
+\bibitem{hora} J. Hora, Ring forms, \emph{Italian Journal of Pure and Applied
+Mathematics} 41 (2019), 628--636.
+\href{https://ijpam.uniud.it/online_issue/201941/55-Jan\%20Hora.pdf}{Primary article}.
+\bibitem{magma} Computational Algebra Group, \emph{Magma Handbook:
+Linear Invariants of Tensors}, accessed 28 October 2026.
+\href{https://docs.magma-maths.org/Modules/MultilinearAlgebra/Linear-invariants-of-tensors.html}{Online documentation}.
+\bibitem{bw} P. A. Brooksbank and J. B. Wilson, The module isomorphism
+problem reconsidered, \emph{Journal of Algebra} 421 (2015), 541--559.
+\href{https://doi.org/10.1016/j.jalgebra.2014.09.004}{doi:10.1016/j.jalgebra.2014.09.004}.
+\bibitem{fgs} P.-A. Fouque, L. Granboulan and J. Stern, Differential
+cryptanalysis for multivariate schemes, \emph{EUROCRYPT 2005}, LNCS 3494,
+341--353. \href{https://www.di.ens.fr/~fouque/pub/eurocrypt05.pdf}{Author manuscript}.
+\bibitem{dgs} V. Dubois, L. Granboulan and J. Stern, Cryptanalysis of HFE
+with internal perturbation, \emph{PKC 2007}, LNCS 4450, 249--265.
+\href{https://www.di.ens.fr/~stern/data/St118.pdf}{Author manuscript}.
+\end{thebibliography}
+\end{document}

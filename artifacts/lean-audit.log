@@ -1,0 +1,86 @@
+theorem CorruptedFieldRecovery.two_translate_modeImage.{u_1, u_2, u_3} : ∀ {F : Type u_1} {V : Type u_2} {W : Type u_3}
+  [inst : Field F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W] [inst_4 : Module F W]
+  (E : CorruptedFieldRecovery.Trilinear F W) (u : V →ₗ[F] W) (T : V →ₗ[F] V),
+  (Function.Surjective fun x => (u x, u (T x))) →
+    CorruptedFieldRecovery.modeImage (CorruptedFieldRecovery.imbalance (CorruptedFieldRecovery.pullback E u) T) =
+      CorruptedFieldRecovery.modeImage (CorruptedFieldRecovery.pullback E u) :=
+fun {F} {V} {W} [Field F] [AddCommGroup V] [Module F V] [AddCommGroup W] [Module F W] E u T split =>
+  le_antisymm (CorruptedFieldRecovery.imbalance_mode_le (CorruptedFieldRecovery.pullback E u) T)
+    (Submodule.span_le.mpr fun ⦃a⦄ a_1 =>
+      Exists.casesOn a_1 fun w h =>
+        Prod.casesOn (motive := fun x =>
+          (fun xy => ((CorruptedFieldRecovery.pullback E u) xy.1) xy.2) x = a →
+            a ∈
+              ↑(CorruptedFieldRecovery.modeImage
+                  (CorruptedFieldRecovery.imbalance (CorruptedFieldRecovery.pullback E u) T)))
+          w
+          (fun x y h =>
+            h ▸
+              Exists.casesOn (split (0, u x)) fun a ha =>
+                have ha0 := congrArg Prod.fst ha;
+                have ha1 := congrArg Prod.snd ha;
+                have isolate :=
+                  LinearMap.ext fun z =>
+                    of_eq_true
+                      (Eq.trans
+                        (congrFun'
+                          (congrArg Eq
+                            (Eq.trans
+                              (congr
+                                (congrArg HSub.hSub
+                                  (congrFun'
+                                    (congrArg DFunLike.coe
+                                      (congrFun' (congrArg DFunLike.coe (congrArg (⇑E) ha1)) (u y)))
+                                    (u z)))
+                                (congrFun'
+                                  (congrArg DFunLike.coe
+                                    (congrFun' (congrArg DFunLike.coe (Eq.trans (congrArg (⇑E) ha0) (map_zero E)))
+                                      (u (T y))))
+                                  (u z)))
+                              (sub_zero (((E (u x)) (u y)) (u z)))))
+                          (((E (u x)) (u y)) (u z)))
+                        (eq_self (((E (u x)) (u y)) (u z))));
+                id
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          _a ∈
+                            CorruptedFieldRecovery.modeImage
+                              (CorruptedFieldRecovery.imbalance (CorruptedFieldRecovery.pullback E u) T))
+                        (Eq.symm isolate)))
+                    (Submodule.subset_span (Exists.intro (a, y) rfl))))
+          h)
+theorem CorruptedFieldRecovery.recovery_modeImage.{u_1, u_2, u_3} : ∀ {F : Type u_1} {V : Type u_2} {W : Type u_3}
+  [inst : Field F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W] [inst_4 : Module F W]
+  (C : CorruptedFieldRecovery.Trilinear F V) (E : CorruptedFieldRecovery.Trilinear F W) (u : V →ₗ[F] W) (T : V →ₗ[F] V),
+  (∀ (x y z : V), ((C (T x)) y) z = ((C x) (T y)) z) →
+    (Function.Surjective fun x => (u x, u (T x))) →
+      CorruptedFieldRecovery.modeImage (CorruptedFieldRecovery.imbalance (C + CorruptedFieldRecovery.pullback E u) T) =
+        CorruptedFieldRecovery.modeImage (CorruptedFieldRecovery.pullback E u) :=
+fun {F} {V} {W} [Field F] [AddCommGroup V] [Module F V] [AddCommGroup W] [Module F W] C E u T balanced split =>
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          CorruptedFieldRecovery.modeImage _a = CorruptedFieldRecovery.modeImage (CorruptedFieldRecovery.pullback E u))
+        (CorruptedFieldRecovery.balanced_cancels C (CorruptedFieldRecovery.pullback E u) T balanced)))
+    (CorruptedFieldRecovery.two_translate_modeImage E u T split)
+theorem CorruptedFieldRecovery.two_translate_of_disjoint.{u_1, u_2, u_3} : ∀ {F : Type u_1} {V : Type u_2}
+  {W : Type u_3} [inst : Field F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W]
+  [inst_4 : Module F W] (E : CorruptedFieldRecovery.Trilinear F W) (u : V →ₗ[F] W) (T : V ≃ₗ[F] V),
+  Function.Surjective ⇑u →
+    Disjoint u.dualMap.range (u ∘ₗ ↑T).dualMap.range →
+      CorruptedFieldRecovery.modeImage (CorruptedFieldRecovery.imbalance (CorruptedFieldRecovery.pullback E u) ↑T) =
+        CorruptedFieldRecovery.modeImage (CorruptedFieldRecovery.pullback E u) :=
+fun {F} {V} {W} [Field F] [AddCommGroup V] [Module F V] [AddCommGroup W] [Module F W] E u T hu hd =>
+  CorruptedFieldRecovery.two_translate_modeImage E u (↑T)
+    (CorruptedFieldRecovery.joint_surjective_of_disjoint_duals u (u ∘ₗ ↑T) hu
+      (Function.Surjective.comp hu (LinearEquiv.surjective T)) hd)
+'CorruptedFieldRecovery.imbalance_add' depends on axioms: [propext, Quot.sound]
+'CorruptedFieldRecovery.balanced_cancels' depends on axioms: [propext, Quot.sound]
+'CorruptedFieldRecovery.imbalance_mode_le' depends on axioms: [propext, Quot.sound]
+'CorruptedFieldRecovery.two_translate_modeImage' depends on axioms: [propext, Quot.sound]
+'CorruptedFieldRecovery.recovery_modeImage' depends on axioms: [propext, Quot.sound]
+'CorruptedFieldRecovery.joint_surjective_of_disjoint_duals' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CorruptedFieldRecovery.two_translate_of_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]

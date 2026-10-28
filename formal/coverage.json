@@ -1,0 +1,56 @@
+{
+  "target": "The complete main theorem in manuscript/main.tex, including the mathematical algorithm, certificate and charged bounds",
+  "complete": false,
+  "obligations": [
+    {
+      "id": "input_model",
+      "status": "unformalized",
+      "description": "Concrete binary alternating tensor, unknown finite field and supported corruption promise"
+    },
+    {
+      "id": "four_contractions",
+      "status": "unformalized",
+      "description": "Actual four-contraction balance space equals scalar field"
+    },
+    {
+      "id": "two_translate_image",
+      "status": "proved",
+      "description": "Mode-image recovery for a supported pullback, invertible linear action and disjoint original/translated dual-image support spaces; joint surjectivity is derived",
+      "exports": [
+        "CorruptedFieldRecovery.joint_surjective_of_disjoint_duals",
+        "CorruptedFieldRecovery.two_translate_of_disjoint"
+      ]
+    },
+    {
+      "id": "sampling_bounds",
+      "status": "unformalized",
+      "description": "Finite-field generation, clean conditional sampling, translate union bound and s>=2R+5 estimates"
+    },
+    {
+      "id": "bounded_constructor",
+      "status": "unformalized",
+      "description": "Concrete constructor correctness, termination, random-tape semantics and amplification"
+    },
+    {
+      "id": "certificate",
+      "status": "unformalized",
+      "description": "Complete finite coefficient checker implies all-vector representation identity"
+    },
+    {
+      "id": "implementation_refinement",
+      "status": "not_claimed",
+      "required": false,
+      "description": "The Python companion is tested, not formally verified. An additional source-refinement proof would be needed for that separate claim; it is not a prerequisite to certifying the manuscript theorem."
+    },
+    {
+      "id": "costs",
+      "status": "unformalized",
+      "description": "Bit arithmetic, trial/randomness caps and full time/space envelopes"
+    },
+    {
+      "id": "main_theorem",
+      "status": "unformalized",
+      "description": "Assemble exact manuscript hypotheses and conclusions, with no assumed recovery lemmas"
+    }
+  ]
+}

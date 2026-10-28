@@ -1,0 +1,15 @@
+{
+  "ready": false,
+  "failures": [
+    "complete Lean certification is not established",
+    "formal obligation input_model: unformalized",
+    "formal obligation four_contractions: unformalized",
+    "formal obligation sampling_bounds: unformalized",
+    "formal obligation bounded_constructor: unformalized",
+    "formal obligation certificate: unformalized",
+    "formal obligation costs: unformalized",
+    "formal obligation main_theorem: unformalized"
+  ],
+  "publication_authorized": true,
+  "note": "No additional human publication permission is required. Mathematical and formal work remains mandatory."
+}

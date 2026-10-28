@@ -1,0 +1,87 @@
+{
+  "seed": 20261028,
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "command": "python tests/check_recovery.py",
+  "cases": [
+    {
+      "s": 5,
+      "rank_limit": 0,
+      "mode": "ordinary_seeded",
+      "reason": "verified",
+      "trials": 1,
+      "trial_limit": 8,
+      "random_bits": 65,
+      "random_bit_limit": 520,
+      "sufficient_field_size": true,
+      "rejected": {}
+    },
+    {
+      "s": 3,
+      "rank_limit": 3,
+      "mode": "ordinary_seeded",
+      "reason": "verified",
+      "trials": 1574,
+      "trial_limit": 32768,
+      "random_bits": 61386,
+      "random_bit_limit": 1277952,
+      "sufficient_field_size": false,
+      "rejected": {
+        "balance_dimension": 1548,
+        "field_generator": 25
+      }
+    },
+    {
+      "s": 7,
+      "rank_limit": 3,
+      "mode": "scripted",
+      "reason": "verified",
+      "trials": 1,
+      "trial_limit": 32768,
+      "random_bits": 91,
+      "random_bit_limit": 2981888,
+      "sufficient_field_size": false,
+      "rejected": {}
+    },
+    {
+      "s": 11,
+      "rank_limit": 3,
+      "mode": "scripted",
+      "reason": "verified",
+      "trials": 1,
+      "trial_limit": 32768,
+      "random_bits": 143,
+      "random_bit_limit": 4685824,
+      "sufficient_field_size": true,
+      "rejected": {}
+    }
+  ],
+  "limitations": [
+    "Finite tests do not prove the asymptotic or probability theorem.",
+    "Seeded PRNG tests are not the independent-fair-bit model.",
+    "Scripted large-field tapes use fixture support only in the test harness.",
+    "No formal equivalence between Python and Lean is established."
+  ],
+  "probability_cases": 200,
+  "four_contraction_lemma_cases": 9,
+  "two_translate_lemma_cases": 104,
+  "small_field_negative": "s=5: all 32 scalars fail six-covector independence",
+  "bounded_failure": {
+    "reason": "bounded_failure",
+    "trials": 16,
+    "trial_limit": 16,
+    "random_bits": 1040,
+    "random_bit_limit": 1040,
+    "sufficient_field_size": true,
+    "rejected": {
+      "balance_dimension": 16
+    }
+  },
+  "malformed_cases": 5,
+  "source_sha256": {
+    "src/recovery.py": "0c54ec4e33bb02e3eda054a2efb3360b8c537468be28ab09836e360617bf5617",
+    "tests/check_recovery.py": "e4fd6928d2d3ee7f0f38f13462786480c8c3b0267239f234a9cf15516bd14bd1"
+  },
+  "elapsed_seconds": 52.972,
+  "status": "passed"
+}

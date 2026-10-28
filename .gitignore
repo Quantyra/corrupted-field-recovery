@@ -1,0 +1,10 @@
+__pycache__/
+.lake/
+*.olean
+*.ilean
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/*.bbl
+manuscript/*.blg
+tmp/

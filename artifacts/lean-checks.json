@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "toolchain": "leanprover/lean4:v4.30.0",
+  "source_sha256": {
+    "CorruptedFieldRecovery.lean": "5bb695b100945569e6a9d98bdb8f0c70e01ed890c3c8ac73be4ff736aef4e80c",
+    "CorruptedFieldRecovery/Defect.lean": "94ae326c173130d286bed2c29206c858ebfa667d31db7921468e980cea79bfcd",
+    "CorruptedFieldRecovery/Independent.lean": "1e051f2e7d19c748242db1a091c9aa42c4ec532f69467796e81487f7b53f3baf",
+    "checks/Audit.lean": "3b1b3e1737b3621b4e5a401819d10001fcf67f9f440f6a62ffcdddb6c4eb40b3",
+    "lakefile.toml": "46ac718eb654678ceea6d9f0a19f6944af19e4e513b01b91f89f0dc94373f8ce",
+    "lake-manifest.json": "5e95294fc479a9e41d6fb269dddbb1372127d716e01fa74017656e3c0b6bd4a0",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "tools/check_lean.py": "489abb2e5c0b1e92b68de7626bfba2f0a9b7e46492339f5ce0cf6e4189a1cb86"
+  },
+  "scope": "Intermediate defect-image lemmas only; not complete certification",
+  "commands": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "CorruptedFieldRecovery"
+      ],
+      "exit_code": 0,
+      "log": "artifacts/lean-build.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "checks/Audit.lean"
+      ],
+      "exit_code": 0,
+      "log": "artifacts/lean-audit.log"
+    }
+  ],
+  "reported_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "This is an unreleased working manuscript and companion; consult the verification status before citing certification."
+title: "Certified recovery of trace-determinant structure under low-dimensional corruption"
+type: software
+authors:
+  - family-names: Fredriksen
+    given-names: Daniel Eric
+    affiliation: "Quantyra Inc"
+repository-code: "https://github.com/Quantyra/corrupted-field-recovery"
+url: "https://github.com/Quantyra/corrupted-field-recovery"
+license: Apache-2.0
+version: "0.0.1"
+notes: "Unreleased development version. Manuscript CC-BY-4.0; software and Lean Apache-2.0. No DOI, independent peer review, or complete Lean certification is claimed."
+keywords:
+  - finite fields
+  - alternating tensors
+  - exact recovery
+  - supported corruption
+  - Lean
