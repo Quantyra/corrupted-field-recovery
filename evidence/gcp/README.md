@@ -18,7 +18,9 @@ Prepared immutable captures:
 | `cfr-binarytensor-dev01-20261028T211904Z-17e0fe` | First binary-tensor draft | Captured; superseded before compilation |
 | `cfr-bridge-dev01-20261028T211935Z-7b8ae8` | Bridge draft and then-current binary dependency | Captured; dependency differed from initial author offer; superseded before compilation |
 | `cfr-binary-bridge-dev02-20261028T212009Z-3ce03e` | Matched stable binary/bridge draft tuple | Captured; a source-inspection argument-order typo was later repaired; never compiled |
-| `cfr-binary-bridge-dev03-20261028T212244Z-2ab65e` | Matched successor tuple after that repair | Captured; development build pending |
+| `cfr-binary-bridge-dev03-20261028T212244Z-2ab65e` | Matched successor tuple after that repair | Captured; absent focused import then repaired; never compiled |
+| `cfr-bridge-dev04-20261028T212416Z-4fd5bc` | Increasing-pair slice draft | Captured; misplaced namespace terminator then repaired; never compiled |
+| `cfr-binary-bridge-dev05-20261028T212913Z-8c22b0` | Import/namespace-corrected tuple and explicit declaration audit | Captured; next development build/audit pending |
 
 Every capture preserves exact offered bytes, a SHA-256 archive digest, source
 digests, UTF-8/no-BOM validation and the complete pinned dependency revisions.
@@ -27,9 +29,9 @@ will use its own immutable archive, never a live author worktree.
 
 The current `BinaryTensor.lean` and `Bridge.lean` files are **uncompiled drafts**.
 The latest tuple is binary source SHA-256
-`9bf4fd8a01b74705243bdbe1d15fc28dffb99813720632b37d851a0efb61bc0a`
+`6e2866a02c3b29a47e55c2cf78c662eba27e5e73cae3b7d996774d761bb95d62`
 and bridge SHA-256
-`99c60d832f9d52b9fa5c15a0fd5291c70bd082af92a35b5637325fec314c2db2`.
+`6f55088813114f0062e2c7a57e176504c935c195616c477f64376235e2f92145`.
 The bridge contains valid Lean Unicode; an early author message calling it
 ASCII-only was inaccurate. Neither draft closes a manuscript coverage item.
 
@@ -45,6 +47,36 @@ The isolated cloud controls and cache/ownership policy are documented in
 were performed locally without invoking Lean. The remote runner is prepared
 but not yet cloud-tested. Full type/axiom checks for the new declarations will
 be captured at acceptance, in addition to focused development builds.
+
+The latest capture contains `checks/CaptureAudit.lean` with explicit universe,
+implicit-argument and fully qualified name printing, named type-block markers,
+and fresh transitive-axiom commands. It does not alter the shared root audit.
+The runner will bind emitted type blocks and raw audit log hashes in its
+terminal receipt. Mathematical acceptance remains separate from those hashes.
+Its warning classifier is covered by a saved pure-Python nine-case fixture
+covering both Lake/Lean header orders and excluding dependency paths. The
+runner also fingerprints the actual cloud Lean/Lake executables, checks the
+pinned Lean commit and rejects uncaptured stale owned source files in the
+persistent workspace. No stale source/cache is silently deleted.
+
+After the user confirms reauthentication, resume with the existing handles:
+
+```text
+python tools/gcp_cfr.py preflight
+python tools/gcp_cfr.py submit --run cfr-baseline-20261028T211424Z-5ddb91
+python tools/gcp_cfr.py observe --run cfr-baseline-20261028T211424Z-5ddb91
+python tools/gcp_cfr.py collect --run cfr-baseline-20261028T211424Z-5ddb91
+```
+
+Inspect the preserved successful baseline before submitting the next capture:
+
+```text
+python tools/gcp_cfr.py submit --run cfr-binary-bridge-dev05-20261028T212913Z-8c22b0
+```
+
+An observation timeout retains the same run handle. Do not resubmit or restart
+it. Stop the task-started VM after all launched outcomes are preserved and
+other ownership has been excluded, including after failed proof attempts.
 
 Remaining to-do list: renew GCP login; observe live VM ownership/state; run and
 preserve the baseline; compile the matched draft tuple, route diagnostics and

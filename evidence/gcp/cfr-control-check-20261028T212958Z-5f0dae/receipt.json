@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "compile_invoked": false,
+  "cloud_invoked": false,
+  "command": "python -B tools/gcp_check_controls.py",
+  "warning_fixture_cases": 9,
+  "captures_verified": [
+    "cfr-baseline-20261028T211424Z-5ddb91",
+    "cfr-binary-bridge-dev02-20261028T212009Z-3ce03e",
+    "cfr-binary-bridge-dev03-20261028T212244Z-2ab65e",
+    "cfr-binary-bridge-dev05-20261028T212913Z-8c22b0",
+    "cfr-binarytensor-dev01-20261028T211904Z-17e0fe",
+    "cfr-bridge-dev01-20261028T211935Z-7b8ae8",
+    "cfr-bridge-dev04-20261028T212416Z-4fd5bc"
+  ],
+  "source_members_verified": 62,
+  "explicit_type_audits_verified": [
+    "cfr-binary-bridge-dev05-20261028T212913Z-8c22b0"
+  ],
+  "target_source_hashes_verified": true,
+  "required_conclusion_groups": 11,
+  "source_sha256": {
+    "tools/gcp_cfr.py": "51b9fe5e19b03f45f336dd849d5d32edf497cfaa2a114338c2546d56de185f7f",
+    "tools/gcp_cfr_runner.py": "f20fc045aa359b1b51f46d44cc3ff8558903ce4201a9324163284b5a1b7bf6a2",
+    "tools/gcp_check_controls.py": "3bcce19d909143b40eeb7829fdcfb29a3a82dd9dc11ff6ab4a11052a0d48878d",
+    "formal/target-specification.json": "583d05664ab233dfcd58232f41cdc8aff2a1d12078c0dc98173127f3d89fa0fc"
+  }
+}

@@ -1,7 +1,7 @@
 import CorruptedFieldRecovery.Defect
 import Mathlib.LinearAlgebra.StdBasis
 import Mathlib.Data.ZMod.Basic
-import Mathlib.Tactic.Omega
+import Lean.Elab.Tactic.Omega
 
 /-! Dense binary trilinear input semantics for the manuscript. -/
 

@@ -14,6 +14,7 @@ Cloud SDK's bundled Python for gcloud operations:
 python tools/gcp_cfr.py preflight
 python tools/gcp_cfr.py capture --commit COMMIT --label baseline
 python tools/gcp_cfr.py capture --label development --target CorruptedFieldRecovery.MODULE --no-audit
+python tools/gcp_cfr.py capture --label audit --target CorruptedFieldRecovery.MODULE --audit-export CorruptedFieldRecovery.DECLARATION
 python tools/gcp_cfr.py submit --run RUN
 python tools/gcp_cfr.py observe --run RUN
 python tools/gcp_cfr.py collect --run RUN
@@ -26,6 +27,10 @@ hash, validates UTF-8 without BOM, and lists exact dependency revisions.
 The committed baseline capture avoids racing proof authors' successor edits.
 Authors should offer stable hashes and retain those bytes until capture is
 acknowledged. Captured source bytes are never normalized or rewritten.
+Repeated `--audit-export` options generate a capture-only audit containing
+explicit types and transitive axioms for those declarations. Exact emitted
+type blocks and raw logs are hashed for later semantic inspection; printing
+and hashing a statement do not constitute acceptance of its manuscript scope.
 
 Each submission has a unique immutable run directory and a single launch-intent
 record. An SSH/observation timeout requires observation of the same run; the

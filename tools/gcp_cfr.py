@@ -92,6 +92,8 @@ def submit(args):
     ownership = dict(initial_state=state['status'], started_for_task=False,
                      project=PROJECT, instance=VM, zone=ZONE, run=args.run, utc=utc())
     if state['status'] == 'TERMINATED':
+        save(out/'instance-start-intent.json', dict(initial_state='TERMINATED', run=args.run, utc=utc(),
+             note='If transport fails, observe actual VM state; do not repeat the start blindly.'))
         cloud(['compute', 'instances', 'start', VM], out, 'start-task-instance')
         ownership['started_for_task'] = True
     elif state['status'] != 'RUNNING':
@@ -198,9 +200,12 @@ def stop_owned(args):
     raw = ssh('set -eu\n'
         'if pgrep -x lean || pgrep -x lake; then exit 73; fi\n'
         'campaign="'+remote+'"\nflock -n "$campaign/lock" true\n'
-        'test -f "$campaign/last-success.json"\ncat "$campaign/last-success.json"\n'
+        'if test -f "$campaign/last-success.json"; then cat "$campaign/last-success.json"; '
+        'else echo NO_SUCCESSFUL_CACHE_CHECKPOINT; fi\n'
         'printf "TASK_CACHE_RETAINED\\n"\n'
-        'find "$campaign/source/.lake/build" -type f -name "*.olean" -print0 | sort -z | xargs -0 -r sha256sum\n',
+        'if test -d "$campaign/source/.lake/build"; then '
+        'find "$campaign/source/.lake/build" -type f -name "*.olean" -print0 | sort -z | xargs -0 -r sha256sum; '
+        'else echo NO_BUILD_OUTPUTS; fi\n',
         out, label+'-preservation-preflight')
     save(out/(label+'-preservation.json'), dict(campaign=CAMPAIGN, utc=utc(),
          output_sha256=hashlib.sha256(raw).hexdigest(), all_task_outcomes_collected=True,
@@ -230,6 +235,19 @@ def capture(args):
         names = [p.relative_to(ROOT).as_posix() for p in (ROOT/'CorruptedFieldRecovery').rglob('*.lean')]
         names += ['CorruptedFieldRecovery.lean', 'checks/Audit.lean', 'lakefile.toml', 'lake-manifest.json', 'lean-toolchain']
         files = {n:(ROOT/n).read_bytes() for n in names}
+    audit_path = 'checks/Audit.lean'
+    if args.audit_export:
+        for name in args.audit_export:
+            if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_.\']*', name):
+                raise ValueError('Invalid audited declaration name')
+        imports = sorted(set(['CorruptedFieldRecovery']+(args.target or [])))
+        audit = '\n'.join('import '+name for name in imports)+(
+            '\n\nset_option pp.universes true\nset_option pp.explicit true\nset_option pp.fullNames true\n')
+        for name in args.audit_export:
+            audit += '\n#eval IO.println "CFR_TYPE_BEGIN:'+name+'"\n#check @'+name+'\n'
+            audit += '#eval IO.println "CFR_TYPE_END:'+name+'"\n#print axioms '+name+'\n'
+        audit_path = 'checks/CaptureAudit.lean'
+        files[audit_path] = audit.encode('utf-8')
     errors = []
     for name, content in files.items():
         if content.startswith(b'\xef\xbb\xbf'):
@@ -250,13 +268,15 @@ def capture(args):
                     source_kind='git-commit' if args.commit else 'working-tree-offer',
                     project=PROJECT, instance=VM, zone=ZONE, compile_host='GCP',
                     targets=args.target or ['CorruptedFieldRecovery'], audit=not args.no_audit,
+                    audit_path=audit_path, audited_exports=args.audit_export or [],
                     source_sha256={n:hashlib.sha256(b).hexdigest() for n,b in sorted(files.items())},
                     dependencies=json.loads(files['lake-manifest.json'])['packages'],
                     lean_toolchain=files['lean-toolchain'].decode('utf-8').strip(),
                     archive_sha256=hashlib.sha256((out/'inputs.tar.gz').read_bytes()).hexdigest(),
                     utf8_no_bom_verified=not errors, encoding_errors=errors)
     save(out/'capture-manifest.json', manifest)
-    print(json.dumps(manifest, indent=2))
+    print(json.dumps({k:manifest[k] for k in ['run', 'source_kind', 'targets', 'audit',
+                     'audit_path', 'archive_sha256', 'source_sha256', 'utf8_no_bom_verified', 'encoding_errors']}, indent=2))
     if errors:
         raise RuntimeError('Captured offered bytes, but encoding preflight failed')
 
@@ -270,6 +290,7 @@ def main():
     cap.add_argument('--commit')
     cap.add_argument('--target', action='append')
     cap.add_argument('--no-audit', action='store_true')
+    cap.add_argument('--audit-export', action='append')
     remote = sub.add_parser('inspect')
     remote.add_argument('--run')
     for mode in ['submit', 'observe', 'collect', 'stop-owned']:

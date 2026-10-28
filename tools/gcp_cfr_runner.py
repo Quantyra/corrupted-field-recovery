@@ -30,6 +30,20 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
+def owned_warning_headers(text):
+    """Recognize both Lean and Lake warning orders, excluding package paths."""
+    owned = r'(?:CorruptedFieldRecovery(?:/[^:\s]+\.lean|\.lean)|checks/[^:\s]+\.lean)'
+    prefix = r'(?:\./)*'
+    patterns = [re.compile(r'^warning:\s+'+prefix+owned+r':'),
+                re.compile(r'^'+prefix+owned+r':\d+:\d+:\s*warning:')]
+    found = []
+    for line in text.splitlines():
+        plain = re.sub(r'\x1b\[[0-9;]*m', '', line)
+        if any(pattern.search(plain) for pattern in patterns):
+            found.append(line)
+    return found
+
+
 def extract(archive, destination):
     with tarfile.open(archive) as source:
         for item in source.getmembers():
@@ -86,6 +100,11 @@ def main():
             raise RuntimeError('Stage failed: '+name+' exit='+str(code))
 
     def identities(source, packages):
+        expected_owned = {name for name in manifest['source_sha256']
+                          if name.startswith('CorruptedFieldRecovery/') and name.endswith('.lean')}
+        actual_owned = {p.relative_to(source).as_posix()
+                        for p in (source/'CorruptedFieldRecovery').rglob('*.lean')}
+        assert actual_owned == expected_owned, 'Unexpected or missing owned Lean sources: '+repr(actual_owned ^ expected_owned)
         for name, expected in manifest['source_sha256'].items():
             assert digest(source/name) == expected, name
         for package in manifest['dependencies']:
@@ -137,6 +156,7 @@ def main():
         os.environ['PATH'] = str(tool)+os.pathsep+os.environ['PATH']
         os.environ['MATHLIB_NO_CACHE_ON_UPDATE'] = '1'
         os.environ['MATHLIB_CACHE_DIR'] = str(ltar)
+        receipt['toolchain_binary_sha256'] = {name:digest(tool/name) for name in ['lean', 'lake']}
         identities(source, packages)
         receipt['source_and_dependencies_verified_before'] = True
         receipt['dependency_tree_sha1'] = {
@@ -145,7 +165,13 @@ def main():
             for p in manifest['dependencies']}
         stage('lean-version', ['lean', '--version'], source, 60)
         stage('lake-version', ['lake', '--version'], source, 60)
-        assert '4.30.0' in (logs/'lean-version.stdout.txt').read_text()
+        lean_version = (logs/'lean-version.stdout.txt').read_text()
+        assert '4.30.0' in lean_version
+        reported = re.search(r'commit\s+([0-9a-f]{7,40})', lean_version)
+        expected_commit = 'd024af099ca4bf2c86f649261ebf59565dc8c622'
+        assert reported and expected_commit.startswith(reported.group(1)), lean_version
+        receipt['lean_commit_verified'] = expected_commit
+        receipt['reported_lean_commit'] = reported.group(1)
         imports = set()
         for name in manifest['source_sha256']:
             if name.endswith('.lean'):
@@ -162,13 +188,13 @@ def main():
             stage('dependency-cache-incremental', ['lake', 'exe', 'cache', 'get', *sorted(imports)], source)
         stage('build', ['lake', 'build', *manifest['targets']], source)
         if manifest['audit']:
-            stage('audit', ['lake', 'env', 'lean', 'checks/Audit.lean'], source)
+            stage('audit', ['lake', 'env', 'lean', manifest.get('audit_path', 'checks/Audit.lean')], source)
         identities(source, packages)
         receipt['source_and_dependencies_verified_after'] = True
         texts = {p.name:p.read_text(encoding='utf-8', errors='replace') for p in logs.glob('*.txt')}
         combined = '\n'.join(texts.values())
         assert not re.search(r'error:|unsolved goals|sorryAx', combined)
-        warnings = [line for line in combined.splitlines() if re.search(r'CorruptedFieldRecovery[^\n]*warning:', line)]
+        warnings = owned_warning_headers(combined)
         frozen = campaign/'warning-baseline.json'
         if not frozen.exists():
             write(frozen, dict(source_sha256=manifest['source_sha256'], dependencies=manifest['dependencies'],
@@ -180,13 +206,27 @@ def main():
             text = texts.get('audit.stdout.txt', '')+'\n'+texts.get('audit.stderr.txt', '')
             reports = re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", text)
             empty = re.findall(r"'([^']+)' does not depend on any axioms", text)
-            expected = re.findall(r'^#print axioms\s+(\S+)\s*$', (source/'checks/Audit.lean').read_text(), re.M)
+            audit_file = source/manifest.get('audit_path', 'checks/Audit.lean')
+            expected = re.findall(r'^#print axioms\s+(\S+)\s*$', audit_file.read_text(), re.M)
             names = [name for name,_ in reports]+empty
             assert len(names) == len(set(names)) and set(names) == set(expected)
             axioms = sorted({a.strip() for _,values in reports for a in values.split(',') if a.strip()})
             assert set(axioms) <= {'propext', 'Quot.sound', 'Classical.choice'}, axioms
             receipt['audited_declarations'] = sorted(names)
             receipt['reported_axioms'] = axioms
+            receipt['type_axiom_audit'] = dict(source_sha256=digest(audit_file),
+                stdout_sha256=digest(logs/'audit.stdout.txt'), stderr_sha256=digest(logs/'audit.stderr.txt'),
+                semantic_acceptance='Not inferred; Root must inspect emitted types against the manuscript target.')
+            blocks = {}
+            for name in manifest.get('audited_exports', []):
+                begin, end = 'CFR_TYPE_BEGIN:'+name+'\n', 'CFR_TYPE_END:'+name+'\n'
+                assert text.count(begin) == text.count(end) == 1, name
+                body = text.split(begin, 1)[1].split(end, 1)[0]
+                blocks[name] = dict(emitted_type=body, sha256=hashlib.sha256(body.encode('utf-8')).hexdigest())
+            if blocks:
+                write(logs/'emitted-types.json', blocks)
+                receipt['type_axiom_audit']['emitted_types_sha256'] = digest(logs/'emitted-types.json')
+                receipt['type_axiom_audit']['type_block_sha256'] = {n:b['sha256'] for n,b in blocks.items()}
         receipt['status'] = 'passed'
         write(previous, dict(run=manifest['run'], source_sha256=manifest['source_sha256'],
                              dependencies=manifest['dependencies'], targets=manifest['targets'], utc=now()))

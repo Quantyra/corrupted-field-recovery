@@ -36,6 +36,8 @@ python tools/check_release_readiness.py --require-complete-lean
 
 The present Lean library proves the algebraic defect-image lemma and derives joint surjectivity from disjoint original/translated dual spaces. It is not the complete manuscript theorem. [The formal coverage inventory](formal/coverage.json) records the remaining input-model, field-identification, probability, constructor, certificate, and cost obligations. Python source verification is a separate unclaimed extension, not an extra prerequisite for manuscript certification. The default readiness command checks this preprint's package evidence and reports the partial formalization status. The stricter `--require-complete-lean` command intentionally fails until complete manuscript certification is established; a successful library build alone cannot satisfy it.
 
+The working branch also contains uncompiled drafts for binary coefficient semantics and the restricted-dual/coefficient-slice bridge. They are not included among the accepted formal results. The current working-tree readiness check fails for missing compiler evidence for those drafts; the published release has its own preserved receipts. The [target inventory](formal/target-specification.json) pins the intended input, certificate, randomness and resource contracts, with no new theorem type accepted yet. [Cloud verification tooling](tools/gcp-README.md) preserves immutable source captures and subsequent compiler outcomes for this certification campaign.
+
 ## Evidence and scope
 
 - [Provenance and authorship](PROVENANCE.md) preserve the historical R05-08 revision and paths.
@@ -58,4 +60,4 @@ Version 0.1.0 was [published on 28 October 2026](https://github.com/Quantyra/cor
 
 The tag preserves the reviewed partial-formalization snapshot. DOI citation links and post-publication verification receipts were added to the main branch after archival; they are not retroactively claimed to be in that snapshot.
 
-Remaining to-do list: evaluate and complete the planned Lean certification of the manuscript theorem.
+Remaining to-do list: complete the selected Lean certification of the manuscript theorem and its charged bounds, then update the manuscript with the certified proof.
