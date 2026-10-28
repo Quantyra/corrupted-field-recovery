@@ -8,7 +8,7 @@ Input: `artifacts/cross-provider-review-inputs.json`. Prior reviewer reports wer
 
 # Independent Mathematical and Formalization Review: Certified Recovery of Trace-Determinant Structure Under Low-Dimensional Corruption
 
-**Review Baseline:** Preprint v0.1.0 (`DOI 10.5281/zenodo.23744566`, commit `1de9785ec38d6fa4064b0279e2a444e47a2f2413`)  
+**Review Baseline:** Preprint v0.1.0 (`DOI 10.5281/zenodo.23744566`, commit `1de9785ec38d6fa4064b0279e2a444e47a2f2413`)
 **Scope of Materials Inspected:** Complete review packet containing [manuscript/main.tex](https://github.com/Quantyra/corrupted-field-recovery/blob/v0.1.0/manuscript/main.tex), [src/recovery.py](https://github.com/Quantyra/corrupted-field-recovery/blob/v0.1.0/src/recovery.py), [tests/check_recovery.py](https://github.com/Quantyra/corrupted-field-recovery/blob/v0.1.0/tests/check_recovery.py), [CorruptedFieldRecovery.lean](https://github.com/Quantyra/corrupted-field-recovery/blob/v0.1.0/CorruptedFieldRecovery.lean), [CorruptedFieldRecovery/Defect.lean](https://github.com/Quantyra/corrupted-field-recovery/blob/v0.1.0/CorruptedFieldRecovery/Defect.lean), [CorruptedFieldRecovery/Independent.lean](https://github.com/Quantyra/corrupted-field-recovery/blob/v0.1.0/CorruptedFieldRecovery/Independent.lean), [checks/Audit.lean](https://github.com/Quantyra/corrupted-field-recovery/blob/v0.1.0/checks/Audit.lean), [formal/coverage.json](https://github.com/Quantyra/corrupted-field-recovery/blob/v0.1.0/formal/coverage.json), and the Proposed Lean Completion Plan.
 
 ---
@@ -111,4 +111,3 @@ Input: `artifacts/cross-provider-review-inputs.json`. Prior reviewer reports wer
 
 ### Final Evaluation Summary
 The mathematical proof of Theorem 1 in the preprint v0.1.0 is sound, elegant, and ready for full formalization. The proposed 8-milestone completion plan provides a solid foundation. Adopting the recommendations in Section 3—specifically using a step-cost monad instead of an imperative bit-machine, employing finite counting measures for sampling, and splitting M2 into two focused algebraic stages—will ensure the Lean formalization proceeds to complete certification without blocking bottlenecks.
-

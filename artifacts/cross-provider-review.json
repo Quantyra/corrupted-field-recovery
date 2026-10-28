@@ -25,7 +25,7 @@
       "configured_model": "gemini-3.8-flash-high",
       "returned_usage_models": null,
       "report": "docs/reviews/2026-10-28-agy-gemini.md",
-      "sha256": "f2b134f23f617e666a658e59253f0379ac5f89ee1284b83c58ad03197563c70c",
+      "sha256": "6a66ebb6b8c89a5f642a112a622e87cb524cd05882d234d6652632dca820d718",
       "response_text_sha256": "a24ad93119048827e4fafeea93ba4d1ba57bda1474530330099d55870ae534d8",
       "elapsed_seconds": 369.98,
       "input_mode": "Packet read through file tools; requested high effort. CLI did not enforce requested plan mode with slash expansion disabled.",
