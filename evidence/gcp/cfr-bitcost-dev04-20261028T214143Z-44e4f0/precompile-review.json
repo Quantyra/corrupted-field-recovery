@@ -1,0 +1,15 @@
+{
+  "status": "uncompiled-partial-development-candidate",
+  "compile_invoked": false,
+  "author_offer": {
+    "bytes": 10575,
+    "sha256": "5174288a682f34dab8d313b44938ee582c9c9e799444d96664df8b5b39a60dbb",
+    "utf8_no_bom": true
+  },
+  "scope": [
+    "One-bit explicit stage and separate ripple arithmetic proof draft.",
+    "Declared measure only; PC layout adequacy, actual runtime peak storage, pc-indexed fetch semantics, variable arrays and full k-bit charged refinement remain unproved."
+  ],
+  "review": "Root semantic scope inspection; no compiler result.",
+  "disposition": "Preserve as uncompiled partial candidate. No coverage promotion or certification."
+}

@@ -35,10 +35,22 @@ and bridge SHA-256
 The bridge contains valid Lean Unicode; an early author message calling it
 ASCII-only was inaccurate. Neither draft closes a manuscript coverage item.
 
+A later read-only preflight, `cfr-preflight-20261028T213425Z-5d3fbe`, again
+found the configured account but failed token refresh before observing VM
+state. No VM or compiler was started. An independent uncompiled one-bit
+arithmetic cost prototype was captured as
+`cfr-bitcost-dev04-20261028T214143Z-44e4f0` (source SHA-256
+`5174288a682f34dab8d313b44938ee582c9c9e799444d96664df8b5b39a60dbb`).
+Its dev01-dev03 captures and source-level review notes are preserved: dev01 had a
+false control-charge equality; later revisions clarify address charges,
+ghost counters and the declared storage measure. No version has been compiled
+or accepted. The prototype does not yet prove a bounded PC layout, actual
+runtime peak memory, variable-size array costs or manuscript complexity.
+
 The non-Lean readiness command was rerun and its accurately false result now
 appears in `artifacts/release-readiness.json`; it reports missing compiled
-evidence for the two drafts. The former working-tree result is preserved under
-`cfr-readiness-20261028T212231Z-2539d3` alongside the exact new output, command
+evidence for all three drafts. The prior working-tree result is preserved under
+`cfr-readiness-20261028T213927Z-8d63e3` alongside the exact new output, command
 and exit code. This working-tree change does not alter the separately verified
 first archive or its DOI.
 

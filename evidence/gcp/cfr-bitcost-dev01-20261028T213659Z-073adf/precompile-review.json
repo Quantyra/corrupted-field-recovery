@@ -1,0 +1,17 @@
+{
+  "status": "rejected-before-compilation",
+  "compile_invoked": false,
+  "author_offer": {
+    "path": "CorruptedFieldRecovery/BitCostPrototype.lean",
+    "bytes": 7638,
+    "sha256": "b6b4936046575aa130208693ff475836a49966d24bad129b8dbef967332cf111",
+    "utf8_no_bom": true
+  },
+  "findings": [
+    "run_charge_counts asserts fixed-width charge but run sums shrinking address widths: k=3 has controlBits 28 versus claimed 36.",
+    "The charge is hand-attached rather than derived from executed primitive machine transitions.",
+    "currentLiveBits_le_peak bounds a declared formula, not executed runtime states."
+  ],
+  "disposition": "Preserve exact draft; never submit as a passing candidate. Await narrowed or repaired successor.",
+  "review": "Root semantic source inspection; no Lean compiler result."
+}

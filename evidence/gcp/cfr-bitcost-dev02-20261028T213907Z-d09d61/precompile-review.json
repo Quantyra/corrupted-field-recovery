@@ -1,0 +1,16 @@
+{
+  "status": "unresolved-before-compilation",
+  "compile_invoked": false,
+  "author_offer": {
+    "bytes": 8641,
+    "sha256": "2c2ecc486cc607d4878e51fd38bda3edc7c5c7f2d17226202f1b446ea5d5e253",
+    "utf8_no_bom": true,
+    "glyph_integrity_confirmed_by_author": true
+  },
+  "findings": [
+    "opCharge records 13 reads and 8 writes but charges only 8 access addresses; separately addressed access interpretation requires 21 address-width charges plus 8 fetch/PC charges.",
+    "Clarify ghost cost/peak counters versus charged runtime instrumentation."
+  ],
+  "review": "Root semantic source inspection; no compiler result.",
+  "disposition": "Preserve source and await repaired successor; no acceptance."
+}

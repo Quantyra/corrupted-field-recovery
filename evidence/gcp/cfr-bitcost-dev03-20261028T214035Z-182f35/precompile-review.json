@@ -1,0 +1,16 @@
+{
+  "status": "unresolved-before-compilation",
+  "compile_invoked": false,
+  "author_offer": {
+    "bytes": 10117,
+    "sha256": "358cd832f0cc4f2c9323f9cade510b33c373d752a4ea494bc4a4b20452360b6c",
+    "utf8_no_bom": true,
+    "glyph_integrity_confirmed_by_author": true
+  },
+  "findings": [
+    "execute_peak_exact ranges over arbitrary Nat pc and arbitrary op lists while the declared live measure uses a fixed four-bit PC.",
+    "The constant currentLiveBits measure does not prove PC range or layout adequacy. Clarify modeled-measure scope or prove bounded PC."
+  ],
+  "review": "Root semantic source inspection; no compiler result.",
+  "disposition": "Preserve exact source; await smallest corrected successor; no acceptance."
+}
