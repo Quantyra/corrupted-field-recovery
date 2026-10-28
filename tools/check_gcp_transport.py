@@ -1,5 +1,5 @@
 """Pure-Python regression for PuTTY's absolute remote destinations; no Lean."""
-from gcp_cfr import VM, scp_destination
+from gcp_cfr import VM, scp_destination, submission_guard
 
 
 def main():
@@ -12,7 +12,17 @@ def main():
         except ValueError:
             continue
         raise AssertionError('Accepted invalid remote home: ' + invalid)
-    print('PASS: absolute SCP destination and four invalid-home controls')
+    script = submission_guard(run)
+    checks = ['pgrep -x lean', 'test -x', 'flock -n', 'test ! -e "$run"', 'mkdir "$run"', 'CFR_HOME=', 'CFR_CACHE=']
+    assert [script.index(s) for s in checks] == sorted(script.index(s) for s in checks)
+    assert 'nohup' not in script and 'lake build' not in script
+    try:
+        submission_guard('cfr-x;touch-bad')
+    except ValueError:
+        pass
+    else:
+        raise AssertionError('Accepted shell metacharacter in run identity')
+    print('PASS: absolute destinations, invalid-home/run controls, ordered non-compiling guard')
 
 
 if __name__ == '__main__':

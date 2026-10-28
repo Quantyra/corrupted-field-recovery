@@ -12,10 +12,16 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import sys
 import tarfile
 import uuid
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='backslashreplace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='backslashreplace')
+
 ROOT = Path(__file__).resolve().parents[1]
+CONTROLLER_SHA256 = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 EVIDENCE = ROOT / 'evidence' / 'gcp'
 SDK = Path('C:/Users/dfred/AppData/Local/Google/Cloud SDK/google-cloud-sdk')
 CLOUD = [str(SDK/'platform/bundledpython/python.exe'), str(SDK/'lib/gcloud.py')]
@@ -23,8 +29,10 @@ PROJECT = 'quantyra-lean-cert-20260915'
 ZONE = 'us-central1-a'
 VM = 'quantyra-lean-builder-01'
 ACCOUNT = 'dfredriksen@quantyra.org'
+PROFILE = json.loads((ROOT/'tools/gcp-builder-profile.json').read_text(encoding='utf-8'))
+PROJECT, VM, ZONE, ACCOUNT = (PROFILE[k] for k in ['project', 'instance', 'zone', 'account'])
 FLAGS = ['--project='+PROJECT, '--zone='+ZONE, '--account='+ACCOUNT, '--quiet']
-CAMPAIGN = 'cfr-lean430-c5ea-20261028'
+CAMPAIGN = PROFILE['campaign']
 ASSETS = Path('C:/Users/dfred/QuantyraTools/SpaceProofs')
 
 
@@ -45,6 +53,10 @@ def save(path, value):
 
 def cloud(args, out, label, flags=True):
     out.mkdir(parents=True, exist_ok=True)
+    args = list(args)
+    if args[:2] in [['compute', 'ssh'], ['compute', 'scp']] and PROFILE.get('ssh_host_key_fingerprint'):
+        kind = '--ssh-flag=' if args[1] == 'ssh' else '--scp-flag='
+        args += [kind+'-hostkey', kind+PROFILE['ssh_host_key_fingerprint']]
     result = subprocess.run(CLOUD+args+(FLAGS if flags else []), capture_output=True)
     (out/(label+'.stdout.txt')).write_bytes(result.stdout)
     (out/(label+'.stderr.txt')).write_bytes(result.stderr)
@@ -52,7 +64,14 @@ def cloud(args, out, label, flags=True):
          command=['gcloud']+args+(FLAGS if flags else [])))
     print(label, 'exit', result.returncode, flush=True)
     if result.stdout:
-        print(result.stdout.decode('utf-8', errors='replace')[-7000:], flush=True)
+        display = result.stdout.decode('utf-8', errors='replace')
+        try:
+            structured = json.loads(display)
+            if isinstance(structured, dict) and structured.get('kind') == 'compute#instance':
+                display = json.dumps({k:structured.get(k) for k in ['name', 'id', 'status', 'machineType']})
+        except ValueError:
+            pass
+        print(display[-7000:], flush=True)
     if result.returncode:
         print(result.stderr.decode('utf-8', errors='replace')[-4000:], flush=True)
         raise RuntimeError('Cloud operation failed; preserve evidence and do not duplicate a launch: '+label)
@@ -71,7 +90,25 @@ def run_directory(name):
     out = EVIDENCE/name
     if not (out/'capture-manifest.json').is_file():
         raise ValueError('Missing immutable capture')
+    manifest = json.loads((out/'capture-manifest.json').read_text())
+    if (manifest['project'], manifest['instance'], manifest['zone']) != (PROJECT, VM, ZONE):
+        raise ValueError('Capture belongs to another builder; preserve it and create a fresh capture for this profile')
     return out
+
+
+def submission_guard(run):
+    """One prelaunch SSH, in dependency order; never start a compiler here."""
+    if not re.fullmatch(r'cfr-[A-Za-z0-9_-]+', run):
+        raise ValueError('Unsafe run identity')
+    return ('set -eu\nif pgrep -x lean || pgrep -x lake; then exit 73; fi\n'
+        'test -x "'+PROFILE['toolchain_bin']+'/lean"\n'
+        'mkdir -p "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'"\n'
+        'flock -n "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'/lock" true\n'
+        'run="$HOME/quantyra-cfr-runs/'+run+'"\n'
+        'test ! -e "$run"\nmkdir "$run"\n'
+        'printf "CFR_HOME=%s\\n" "$HOME"\n'
+        'if test -d "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'/packages/mathlib/.git"; '
+        'then echo CFR_CACHE=READY; else echo CFR_CACHE=MISSING; fi\n')
 
 
 def submit(args):
@@ -99,11 +136,7 @@ def submit(args):
     elif state['status'] != 'RUNNING':
         raise RuntimeError('Instance not ready: '+state['status'])
     save(out/'instance-ownership.json', ownership)
-    preflight = ssh('set -eu\nif pgrep -x lean || pgrep -x lake; then exit 73; fi\n'
-        'test -x "$HOME/quantyra-space-tools/lean-4.30.0-linux/bin/lean"\n'
-        'mkdir -p "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'"\n'
-        'flock -n "$HOME/quantyra-cfr-runs/'+CAMPAIGN+'/lock" true\n'
-        'printf "CFR_HOME=%s\\n" "$HOME"\n', out, 'submission-preflight')
+    preflight = ssh(submission_guard(args.run), out, 'submission-preflight')
     remote = '$HOME/quantyra-cfr-runs/'+args.run
     script = '''#!/usr/bin/env bash
 set -euo pipefail
@@ -122,17 +155,15 @@ CFR_GCP_RUN=RUN python3 "$run/gcp_cfr_runner.py" "$run" "$campaign"
     (out/'run.sh').write_text(script, encoding='utf-8', newline='\n')
     save(out/'execution-manifest.json', dict(runner_sha256=hashlib.sha256(runner_bytes).hexdigest(),
          shell_sha256=hashlib.sha256((out/'run.sh').read_bytes()).hexdigest(), campaign=CAMPAIGN,
-         controller_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+         controller_sha256=CONTROLLER_SHA256,
          stage_timeout_seconds=1800, ownership_policy='Stop task-started VM only after outcomes retained and no other work.'))
-    ssh('set -eu\ntest ! -e "'+remote+'"\nmkdir "'+remote+'"\n', out, 'create-immutable-run')
     home = next(line.removeprefix('CFR_HOME=') for line in preflight.decode().splitlines() if line.startswith('CFR_HOME='))
     remote_scp = scp_destination(home, args.run)
     cloud(['compute', 'scp', str(out/'inputs.tar.gz'), str(out/'capture-manifest.json'),
            str(out/'gcp_cfr_runner.py'), str(out/'run.sh'), str(out/'bootstrap-assets.json'),
            remote_scp, '--tunnel-through-iap'], out, 'upload-capture-and-controller')
     # Task-owned copies only; neither source archives nor other campaign caches are mutated.
-    have_packages = ssh('if test -d "$HOME/quantyra-cfr-runs/'+CAMPAIGN+
-                        '/packages/mathlib/.git"; then echo READY; else echo MISSING; fi\n', out, 'campaign-cache-state')
+    have_packages = next(line.removeprefix('CFR_CACHE=') for line in preflight.decode().splitlines() if line.startswith('CFR_CACHE=')).encode()
     transfer = ['inputs.tar.gz', 'capture-manifest.json', 'gcp_cfr_runner.py', 'run.sh', 'bootstrap-assets.json']
     if have_packages.decode().strip() != 'READY':
         cloud(['compute', 'scp', *[str(ASSETS/name) for name in assets], remote_scp,
@@ -243,13 +274,17 @@ def stop_owned(args):
     if not authority.is_relative_to(EVIDENCE.resolve()):
         raise ValueError('Ownership receipt must be retained campaign evidence')
     ownership = json.loads(authority.read_text())
-    if ownership.get('run') != args.run or ownership.get('initial_state') != 'TERMINATED' or ownership.get('started_for_task') is not True:
+    created = ownership.get('created_for_task') is True
+    owned_run = ownership.get('run') == args.run or (created and ownership.get('run') == 'isolated-builder-profile')
+    expected_state = 'ABSENT' if created else 'TERMINATED'
+    if not owned_run or ownership.get('initial_state') != expected_state or ownership.get('started_for_task') is not True:
         raise RuntimeError('This task did not start the instance; no stop authority from this handle')
     if args.ownership_receipt:
-        assert (authority.parent/'start-intent.json').is_file()
-        result = json.loads((authority.parent/'start-task-instance.exit.json').read_text())
+        assert all(ownership.get(k) == v for k,v in [('project',PROJECT),('instance',VM),('zone',ZONE)]) if created else True
+        assert (authority.parent/('create-intent.json' if created else 'start-intent.json')).is_file()
+        result = json.loads((authority.parent/('create-isolated-instance.exit.json' if created else 'start-task-instance.exit.json')).read_text())
         assert result['exit_code'] == 0
-        assert ['compute', 'instances', 'start', VM] == result['command'][1:5]
+        assert ['compute', 'instances', 'create' if created else 'start', VM] == result['command'][1:5]
     live = [p.parent for p in EVIDENCE.glob('*/launch-request.json')]
     for directory in live:
         if not (directory/'collected/exit-code').is_file():
@@ -272,6 +307,9 @@ def stop_owned(args):
     state = cloud(['compute', 'instances', 'describe', VM, '--format=value(status)'], out, label+'-initial-state').decode().strip()
     if state != 'RUNNING':
         raise RuntimeError('Expected running task-owned instance, got '+state)
+    if PROFILE.get('ephemeral_external_ip'):
+        cloud(['compute', 'instances', 'delete-access-config', VM,
+               '--network-interface=nic0', '--access-config-name=external-nat'], out, label+'-remove-task-egress')
     cloud(['compute', 'instances', 'stop', VM], out, label+'-stop-task-instance')
     final = cloud(['compute', 'instances', 'describe', VM, '--format=value(status)'], out, label+'-final-state').decode().strip()
     if final != 'TERMINATED':
@@ -326,6 +364,7 @@ def capture(args):
     manifest = dict(run=run, utc=utc(), parent_commit=commit,
                     source_kind='git-commit' if args.commit else 'working-tree-offer',
                     project=PROJECT, instance=VM, zone=ZONE, compile_host='GCP',
+                    builder_profile=PROFILE,
                     targets=args.target or ['CorruptedFieldRecovery'], audit=not args.no_audit,
                     audit_path=audit_path, audited_exports=args.audit_export or [],
                     source_sha256={n:hashlib.sha256(b).hexdigest() for n,b in sorted(files.items())},
@@ -386,7 +425,7 @@ pgrep -a -x lean || true
 pgrep -a -x lake || true
 df -h "$HOME" /dev/shm
 printf 'EXISTING_TOOLCHAIN\n'
-test -x "$HOME/quantyra-space-tools/lean-4.30.0-linux/bin/lean"
+test -f /var/lib/quantyra-cfr-builder-ready
 printf 'CFR_WORKSPACE\n'
 ls -ld "$HOME/quantyra-cfr-runs" 2>/dev/null || true
 printf 'PINNED_ARCHIVES\n'

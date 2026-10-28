@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:50:57.050883+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "instances",
+    "add-access-config",
+    "quantyra-cfr-lean-builder-20261028a",
+    "--network-interface=nic0",
+    "--format=json",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

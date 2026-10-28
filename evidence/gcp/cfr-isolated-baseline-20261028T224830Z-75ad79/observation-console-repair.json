@@ -1,0 +1,7 @@
+{
+  "cloud_observation_exit": 0,
+  "raw_stdout_preserved": "cfr-observe-20261028T230239Z-838e93.stdout.txt",
+  "local_display_failure": "cp1252 could not render Lean success checkmark; raw bytes had already been saved.",
+  "repair": "Configure local controller stdout/stderr UTF8 with backslash replacement.",
+  "cloud_run_restarted": false
+}

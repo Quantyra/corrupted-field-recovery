@@ -1,9 +1,12 @@
 # CFR cloud verification controller
 
-`gcp_cfr.py` prepares immutable source captures and controls the existing
-`quantyra-lean-builder-01` builder in project `quantyra-lean-cert-20260915`,
+`gcp_cfr.py` prepares immutable source captures and controls the dedicated
+`quantyra-cfr-lean-builder-20261028a` builder in project `quantyra-lean-cert-20260915`,
 zone `us-central1-a`, using the authenticated `dfredriksen@quantyra.org`
 account. It does not import or overwrite historical Space controller state.
+The active identity/toolchain/cache namespace is pinned in
+`tools/gcp-builder-profile.json`. Captures from a different builder are rejected;
+the shared builder's prelaunch failures remain immutable historical evidence.
 No Lean command runs on the workstation. `gcp_cfr_runner.py` executes only
 on Linux with an explicit cloud run identity.
 
@@ -48,7 +51,7 @@ under `evidence/gcp/RUN`. A failed stage remains a failed result; absence of a
 terminal receipt is not success. Failed authentication cannot establish VM
 state or authorize a claim that a compiler ran.
 
-The remote task owns `~/quantyra-cfr-runs/cfr-lean430-c5ea-20261028` as a
+The remote task owns `~/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a` as a
 persistent disk cache. It uses private dependency copies from the established
 Space pinned-source archive, verifies their Git revisions and clean tracked
 sources, and reuses the existing Lean 4.30 Linux installation read-only.
@@ -84,3 +87,19 @@ lock and unrelated-workload guards still apply.
 
 Remaining to-do list: preserve the baseline cloud outcome and continue exact-byte
 proof captures, compilation and audits.
+
+## Dedicated builder lifetime and network
+
+Dan explicitly requested the isolated profile after another workflow stopped the
+shared machine during upload. It has the same e2-highmem-8 capacity, a fresh
+100GB balanced boot disk and pinned Ubuntu24.04 image; no shared disk/cache is
+attached. GCE stops each start after four hours. No idle timer is installed,
+because transfers and pending handles must remain safe. Explicit shutdown still
+follows outcome preservation and workload checks.
+
+The subnet has no Cloud NAT. A task-only ephemeral external IPv4 permits package,
+Lean and mathlib cache downloads. Effective ingress remains existing IAP TCP22
+and internal subnet traffic; no firewall/network policy was changed. The host
+key is explicitly pinned. `stop-owned` removes this access configuration after
+preservation, before stopping the dedicated VM. The creation ownership receipt
+is a separate valid shutdown authority and never rewrites initial run state.

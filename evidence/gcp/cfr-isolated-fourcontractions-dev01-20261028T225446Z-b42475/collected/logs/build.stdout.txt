@@ -1,0 +1,38 @@
+✖ [2006/2006] Building CorruptedFieldRecovery.FourContractions (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/FourContractions.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/FourContractions.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/FourContractions.setup.json --json
+error: CorruptedFieldRecovery/FourContractions.lean:16:5: unexpected token 'λ'; expected '_' or identifier
+error: CorruptedFieldRecovery/FourContractions.lean:36:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'ringChar', which is 'noncomputable'
+error: CorruptedFieldRecovery/FourContractions.lean:42:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'ringChar', which is 'noncomputable'
+error: CorruptedFieldRecovery/FourContractions.lean:48:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'ringChar', which is 'noncomputable'
+error: CorruptedFieldRecovery/FourContractions.lean:63:24: Unknown identifier `tracePairing_nondegenerate`
+error: CorruptedFieldRecovery/FourContractions.lean:63:13: Tactic `rcases` failed: `x✝ : ?m.43` is not an inductive datatype
+error: CorruptedFieldRecovery/FourContractions.lean:70:24: Unknown identifier `tracePairing_nondegenerate`
+error: CorruptedFieldRecovery/FourContractions.lean:70:13: Tactic `rcases` failed: `x✝ : ?m.51` is not an inductive datatype
+error: CorruptedFieldRecovery/FourContractions.lean:88:24: Unknown identifier `tracePairing_nondegenerate`
+error: CorruptedFieldRecovery/FourContractions.lean:88:13: Tactic `rcases` failed: `x✝ : ?m.41` is not an inductive datatype
+error: CorruptedFieldRecovery/FourContractions.lean:95:24: Unknown identifier `tracePairing_nondegenerate`
+error: CorruptedFieldRecovery/FourContractions.lean:95:13: Tactic `rcases` failed: `x✝ : ?m.49` is not an inductive datatype
+error: CorruptedFieldRecovery/FourContractions.lean:113:24: Unknown identifier `tracePairing_nondegenerate`
+error: CorruptedFieldRecovery/FourContractions.lean:113:13: Tactic `rcases` failed: `x✝ : ?m.41` is not an inductive datatype
+error: CorruptedFieldRecovery/FourContractions.lean:120:24: Unknown identifier `tracePairing_nondegenerate`
+error: CorruptedFieldRecovery/FourContractions.lean:120:13: Tactic `rcases` failed: `x✝ : ?m.49` is not an inductive datatype
+error: CorruptedFieldRecovery/FourContractions.lean:173:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?m.77 ∈ @Algebra.adjoin ?m.71 ?m.72 CommRing.toCommSemiring Ring.toSemiring ?m.75 ?m.76
+in the target expression
+  r ∈ F[α]
+
+F : Type u_1
+K : Type u_2
+inst✝² : CommSemiring F
+inst✝¹ : Field K
+inst✝ : Algebra F K
+A : K →ₗ[F] K
+α : K
+hgen : F[α] = ⊤
+hcomm : ∀ (x : K), A (α * x) = α * A x
+r : K
+hr : r ∈ F[α]
+⊢ ∀ (x : K), A (r * x) = r * A x
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.FourContractions

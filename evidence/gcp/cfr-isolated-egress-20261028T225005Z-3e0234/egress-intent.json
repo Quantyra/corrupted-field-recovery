@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-28T22:50:41.023778+00:00",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "reason": "No existing NAT; only effective public-source ingress is existing IAP TCP22. Add ephemeral outbound IPv4 only to dedicated VM; no shared firewall/network changes. Remove after preservation."
+}

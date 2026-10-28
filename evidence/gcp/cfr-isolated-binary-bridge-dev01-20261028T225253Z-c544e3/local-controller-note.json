@@ -1,0 +1,5 @@
+{
+  "note": "During local orchestration, console rendering was repaired to UTF8 and instance JSON display shortened. execution-manifest controller_sha256 identifies the controller file bytes at manifest recording; source/module functions had already been loaded by Python. This local control-plane identity is supplementary. Exact uploaded remote runner/run.sh identities and immutable source/dependency archives are recorded and hash-verified independently.",
+  "remote_compiler_restarted": false,
+  "source_archive_modified": false
+}

@@ -1,0 +1,10 @@
+{
+  "architecture": "X86_64",
+  "licenses": [
+    "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/licenses/ubuntu-2404-lts"
+  ],
+  "sizeGb": "200",
+  "sourceImage": "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-2404-noble-amd64-v20260906",
+  "sourceImageId": "6257327608773510097",
+  "type": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/diskTypes/pd-balanced"
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "22"
+        ]
+      }
+    ],
+    "disabled": false,
+    "name": "allow-iap-ssh-lean-builder",
+    "network": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/global/networks/default",
+    "sourceRanges": [
+      "35.235.240.0/20"
+    ],
+    "targetServiceAccounts": [
+      "1013064480488-compute@developer.gserviceaccount.com"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "0-65535"
+        ]
+      },
+      {
+        "IPProtocol": "udp",
+        "ports": [
+          "0-65535"
+        ]
+      },
+      {
+        "IPProtocol": "icmp"
+      }
+    ],
+    "disabled": false,
+    "name": "default-allow-internal",
+    "network": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/global/networks/default",
+    "sourceRanges": [
+      "10.128.0.0/9"
+    ]
+  }
+]

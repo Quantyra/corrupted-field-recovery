@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:46:45.072749+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "firewall-rules",
+    "list",
+    "--project=quantyra-lean-cert-20260915",
+    "--account=dfredriksen@quantyra.org",
+    "--filter=direction=INGRESS",
+    "--format=json(name,network,sourceRanges,allowed,targetTags,targetServiceAccounts,disabled)"
+  ]
+}

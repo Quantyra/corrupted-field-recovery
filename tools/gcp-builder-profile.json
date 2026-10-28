@@ -1,0 +1,16 @@
+{
+  "profile": "cfr-isolated-20261028a",
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "account": "dfredriksen@quantyra.org",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "toolchain_bin": "/opt/quantyra/lean-4.30.0-linux/bin",
+  "machine_type": "e2-highmem-8",
+  "boot_disk_gb": 100,
+  "max_run_duration_seconds": 14400,
+  "idle_shutdown": false,
+  "ephemeral_external_ip": "Outbound only; effective ingress restricted to IAP SSH and internal subnet. Remove after preserving outcomes.",
+  "ssh_host_key_fingerprint": "SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+  "ownership": "Dedicated CFR builder explicitly requested by Dan; no shared disk or cache"
+}

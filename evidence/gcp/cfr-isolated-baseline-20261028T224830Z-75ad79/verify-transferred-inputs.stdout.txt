@@ -1,0 +1,7 @@
+inputs.tar.gz: OK
+capture-manifest.json: OK
+gcp_cfr_runner.py: OK
+run.sh: OK
+bootstrap-assets.json: OK
+space-pinned-dependencies.tar.gz: OK
+space-mathlib-cache.tar: OK

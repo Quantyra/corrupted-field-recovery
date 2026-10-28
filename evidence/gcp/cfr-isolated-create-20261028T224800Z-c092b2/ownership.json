@@ -1,0 +1,10 @@
+{
+  "run": "isolated-builder-profile",
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "initial_state": "ABSENT",
+  "created_for_task": true,
+  "started_for_task": true,
+  "utc": "2026-10-28T22:49:09.695931+00:00"
+}

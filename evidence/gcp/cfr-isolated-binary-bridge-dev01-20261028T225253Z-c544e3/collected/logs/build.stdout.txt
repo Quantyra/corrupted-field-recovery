@@ -1,0 +1,154 @@
+✖ [1673/1674] Building CorruptedFieldRecovery.BinaryTensor (2.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/BinaryTensor.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/BinaryTensor.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/BinaryTensor.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/BinaryTensor.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/BinaryTensor.setup.json --json
+error: CorruptedFieldRecovery/BinaryTensor.lean:14:31: failed to synthesize instance of type class
+  Field (ZMod 2)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/BinaryTensor.lean:22:2: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  (coordinateVector i)
+error: CorruptedFieldRecovery/BinaryTensor.lean:26:10: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: CorruptedFieldRecovery/BinaryTensor.lean:26:33: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: CorruptedFieldRecovery/BinaryTensor.lean:26:56: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: CorruptedFieldRecovery/BinaryTensor.lean:32:2: Tactic `apply` failed: could not unify the conclusion of `Module.Basis.ext (Pi.basisFun (ZMod 2) (Fin n))`
+  ?m.25 = ?m.26
+with the goal
+  C = D
+
+Note: The full type of `Module.Basis.ext (Pi.basisFun (ZMod 2) (Fin n))` is
+  (∀ (i : Fin n), ?m.25 ((Pi.basisFun (ZMod 2) (Fin n)) i) = ?m.26 ((Pi.basisFun (ZMod 2) (Fin n)) i)) → ?m.25 = ?m.26
+
+n : ℕ
+C D : BinaryTensor n
+h : ∀ (i j k : Fin n), coefficient C i j k = coefficient D i j k
+⊢ C = D
+error: CorruptedFieldRecovery/BinaryTensor.lean:43:4: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  y
+error: CorruptedFieldRecovery/BinaryTensor.lean:43:14: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: CorruptedFieldRecovery/BinaryTensor.lean:43:25: unsolved goals
+n : ℕ
+C : BinaryTensor n
+h : IsAlternating C
+x y z : BinaryVector n
+⊢ sorry = sorry
+error: CorruptedFieldRecovery/BinaryTensor.lean:54:4: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: CorruptedFieldRecovery/BinaryTensor.lean:54:14: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: CorruptedFieldRecovery/BinaryTensor.lean:54:25: unsolved goals
+n : ℕ
+C : BinaryTensor n
+h : IsAlternating C
+x y z : BinaryVector n
+⊢ sorry = sorry
+error: CorruptedFieldRecovery/BinaryTensor.lean:65:4: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  z
+error: CorruptedFieldRecovery/BinaryTensor.lean:65:14: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: CorruptedFieldRecovery/BinaryTensor.lean:67:4: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  z
+error: CorruptedFieldRecovery/BinaryTensor.lean:67:14: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  y
+error: CorruptedFieldRecovery/BinaryTensor.lean:67:25: Unknown identifier `alternating_swap12`
+error: CorruptedFieldRecovery/BinaryTensor.lean:68:8: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  y
+error: CorruptedFieldRecovery/BinaryTensor.lean:69:8: Function expected at
+  C
+but this term has type
+  BinaryTensor n
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: CorruptedFieldRecovery/BinaryTensor.lean:69:19: Unknown identifier `alternating_swap12`
+error: CorruptedFieldRecovery/BinaryTensor.lean:68:20: Unknown identifier `alternating_swap23`
+warning: CorruptedFieldRecovery/BinaryTensor.lean:80:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: CorruptedFieldRecovery/BinaryTensor.lean:84:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: CorruptedFieldRecovery/BinaryTensor.lean:88:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: CorruptedFieldRecovery/BinaryTensor.lean:92:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: CorruptedFieldRecovery/BinaryTensor.lean:80:11: declaration uses `sorry`
+warning: CorruptedFieldRecovery/BinaryTensor.lean:73:8: declaration uses `sorry`
+warning: CorruptedFieldRecovery/BinaryTensor.lean:74:5: unused variable `hC`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/BinaryTensor.lean:74:28: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.BinaryTensor

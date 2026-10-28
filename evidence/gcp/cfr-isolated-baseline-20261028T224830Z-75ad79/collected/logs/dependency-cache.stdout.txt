@@ -1,0 +1,6 @@
+Decompressing 1553 already-cached file(s) (74 already decompressed)
+Current branch: HEAD
+Using cache (Azure) from origin: (some leanprover-community/mathlib4)
+No files to download
+Decompressed 1553 already-cached file(s)
+Completed successfully in 4727 ms!

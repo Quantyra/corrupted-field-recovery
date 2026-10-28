@@ -1,0 +1,7 @@
+{
+  "previous_unlaunched_handle": "cfr-baseline-20261028T211424Z-5ddb91",
+  "new_isolated_handle": "cfr-isolated-baseline-20261028T224830Z-75ad79",
+  "all_source_and_dependency_identities_equal": true,
+  "distinct_builder": true,
+  "new_archive_sha256": "4609dcaf9a8bdfe9b820ad5c8cba83413d61e3598bc7c7eb2e5bbae0114ea5a5"
+}

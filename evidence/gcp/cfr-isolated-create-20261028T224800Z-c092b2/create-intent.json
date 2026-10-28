@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "profile": "cfr-isolated-20261028a",
+    "project": "quantyra-lean-cert-20260915",
+    "instance": "quantyra-cfr-lean-builder-20261028a",
+    "zone": "us-central1-a",
+    "account": "dfredriksen@quantyra.org",
+    "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+    "toolchain_bin": "/opt/quantyra/lean-4.30.0-linux/bin",
+    "machine_type": "e2-highmem-8",
+    "boot_disk_gb": 100,
+    "max_run_duration_seconds": 14400,
+    "idle_shutdown": false,
+    "ownership": "Dedicated CFR builder explicitly requested by Dan; no shared disk or cache"
+  },
+  "startup_sha256": "eccb755b08ebc886ba4dea41a7500514879d324ee406e9c657329eaff6b2793b",
+  "utc": "2026-10-28T22:48:00.619822+00:00",
+  "authority": "Dan explicitly requested new isolated builder; no shared resource modification",
+  "no_idle_shutdown": true
+}

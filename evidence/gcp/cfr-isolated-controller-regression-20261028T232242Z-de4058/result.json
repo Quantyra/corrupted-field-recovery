@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\dfred\\AppData\\Local\\Google\\Cloud SDK\\google-cloud-sdk\\platform\\bundledpython\\python.exe",
+    "-B",
+    "tools/check_gcp_transport.py"
+  ],
+  "exit_code": 0,
+  "compile_invoked": false,
+  "controller_sha256": "850d988a066753a3ef2715ec2519e392843d8299d0b65b45eb99d00b8f4668bd",
+  "profile": "cfr-isolated-20261028a",
+  "checks": [
+    "absolute SCP destination",
+    "four invalid home controls",
+    "ordered prelaunch guard",
+    "no compiler/launch in guard",
+    "invalid run rejection"
+  ]
+}

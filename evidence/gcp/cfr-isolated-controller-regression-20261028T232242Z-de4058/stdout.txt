@@ -1,0 +1,1 @@
+PASS: absolute destinations, invalid-home/run controls, ordered non-compiling guard

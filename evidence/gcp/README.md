@@ -1,8 +1,8 @@
 # CFR GCP campaign checkpoint
 
-Prepared 28 October 2026. **No CFR cloud compiler has run yet.** The existing
-saved local Lean receipts remain historical supplementary evidence, not a new
-GCP certification result. `formal/coverage.json` and the root/audit exports
+Updated 28 October 2026. The isolated GCP baseline has passed and been collected.
+The first binary/bridge and four-contraction development builds failed and their
+diagnostics are preserved. Historical local receipts remain supplementary. `formal/coverage.json` and the root/audit exports
 have not been promoted for the new drafts.
 
 The established account is listed as active, but its token refresh failed with
@@ -152,3 +152,39 @@ GCP diagnostics.
 Remaining to-do list: coordinate external VM lifecycle control; resume and
 preserve the existing baseline; compile/audit the binary/bridge and independent
 candidates; complete the actual manuscript obligations.
+
+## Isolated builder and first compiler outcomes
+
+Dan explicitly requested a dedicated builder to avoid shared lifecycle conflict.
+`tools/gcp-builder-profile.json` pins `quantyra-cfr-lean-builder-20261028a`,
+instance ID `3335066512373302615`, in the established project/zone. It has the
+same e2-highmem-8 capacity, a fresh 100GB disk and pinned Ubuntu24.04 image.
+No shared disk/cache was attached. Creation and ownership are saved in
+`cfr-isolated-create-20261028T224800Z-c092b2`. GCE enforces a four-hour per-start
+STOP limit; there is no idle timer. Existing effective rules allow IAP SSH and
+internal subnet traffic. With no existing Cloud NAT, a dedicated ephemeral
+external IPv4 was added for outbound downloads only; no shared policy changed.
+Shutdown must remove it after preserving all outcomes.
+
+Provisioning fetched official Lean4.30.0 and verified archive SHA-256
+`4dad74141c2c119ca1aa626656be83b8e14238afba97271fd7bf1eb3f081b319`.
+The host key is pinned; full bootstrap/capacity output is preserved. Fresh
+captures replace cloud identity only; old shared prelaunch evidence is unchanged.
+
+| Isolated handle | Outcome |
+|---|---|
+| `cfr-isolated-baseline-20261028T224830Z-75ad79` | Passed, collected and log hashes verified; root build/audit exit0, zero owned warnings, standard three axioms only |
+| `cfr-isolated-binary-bridge-dev01-20261028T225253Z-c544e3` | Failed build, collected; first error missing Field(ZMod2) instance in BinaryTensor; Bridge/audit not reached |
+| `cfr-isolated-binary-bridge-dev02-20261028T231148Z-14cf5a` | Exact import/warning repair captured, pending compiler |
+| `cfr-isolated-fourcontractions-dev01-20261028T225446Z-b42475` | Failed build; full diagnostics being collected and routed for repair |
+| `cfr-isolated-bitcost-dev01-20261028T225447Z-93b03f` | Captured; pending compiler under limited one-bit scope |
+
+The baseline preserves exact old baseline source/dependency identities, verified
+Lean commit `d024af099ca4bf2c86f649261ebf59565dc8c622`, seven audited declarations
+and only `propext`, `Quot.sound`, `Classical.choice`. It does not certify any new
+draft or the full manuscript. Development candidates reuse the task-owned cache;
+failed attempts remain immutable evidence. Formal coverage remains unchanged.
+
+Remaining to-do list: finish the compiler/repair/audit loop, preserve every
+outcome, then remove task egress and stop the dedicated builder; complete all
+remaining manuscript obligations.

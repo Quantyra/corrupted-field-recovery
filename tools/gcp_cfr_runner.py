@@ -151,7 +151,7 @@ def main():
         if not link.exists():
             link.symlink_to(packages, target_is_directory=True)
         assert link.resolve() == packages.resolve()
-        tool = Path.home()/'quantyra-space-tools/lean-4.30.0-linux/bin'
+        tool = Path(manifest['builder_profile']['toolchain_bin']) if manifest.get('builder_profile') else Path.home()/'quantyra-space-tools/lean-4.30.0-linux/bin'
         assert (tool/'lean').is_file() and (tool/'lake').is_file()
         os.environ['PATH'] = str(tool)+os.pathsep+os.environ['PATH']
         os.environ['MATHLIB_NO_CACHE_ON_UPDATE'] = '1'

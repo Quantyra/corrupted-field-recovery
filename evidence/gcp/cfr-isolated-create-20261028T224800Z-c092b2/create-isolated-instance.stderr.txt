@@ -1,0 +1,5 @@
+Created [https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/instances/quantyra-cfr-lean-builder-20261028a].
+WARNING: Some requests generated warnings:
+ - Disk size: '100 GB' is larger than image size: '10 GB'. You might need to resize the root repartition manually if the operating system does not support automatic resizing. See https://cloud.google.com/compute/docs/disks/add-persistent-disk#resize_pd for details.
+ - The resource 'projects/ubuntu-os-cloud/global/images/ubuntu-2404-noble-amd64-v20260906' is deprecated. A suggested replacement is 'projects/ubuntu-os-cloud/global/images/ubuntu-2404-noble-amd64-v20261024'.
+

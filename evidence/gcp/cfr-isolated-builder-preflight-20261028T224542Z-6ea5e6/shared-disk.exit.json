@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:46:12.039197+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "disks",
+    "describe",
+    "quantyra-lean-builder-01",
+    "--format=json(sizeGb,type,sourceImage,sourceImageId,architecture,licenses)",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

@@ -1,4 +1,5 @@
 import CorruptedFieldRecovery.Defect
+import Mathlib.Algebra.Field.ZMod
 import Mathlib.LinearAlgebra.StdBasis
 import Mathlib.Data.ZMod.Basic
 import Lean.Elab.Tactic.Omega
@@ -18,7 +19,7 @@ noncomputable def coordinateVector {n : ℕ} (i : Fin n) : BinaryVector n :=
   Pi.basisFun (ZMod 2) (Fin n) i
 
 /-- The ordered coefficient table of a dense tensor. -/
-def coefficient {n : ℕ} (C : BinaryTensor n) (i j k : Fin n) : ZMod 2 :=
+noncomputable def coefficient {n : ℕ} (C : BinaryTensor n) (i j k : Fin n) : ZMod 2 :=
   C (coordinateVector i) (coordinateVector j) (coordinateVector k)
 
 /-- Vanishing whenever any two arguments agree. -/
@@ -42,31 +43,31 @@ theorem alternating_swap12 {n : ℕ} {C : BinaryTensor n}
     (h : IsAlternating C) (x y z : BinaryVector n) :
     C y x z = C x y z := by
   have hdiag := h.1 (x + y) z
-  have hcross : C x y z + C y x z = 0 := by
+  have hcross : C y x z + C x y z = 0 := by
     simpa only [LinearMap.map_add, LinearMap.add_apply, h.1 x z, h.1 y z,
       zero_add, add_zero] using hdiag
   have heq := eq_neg_of_add_eq_zero_left hcross
-  simpa using heq.symm
+  simpa using heq
 
 /-- Alternation in the last two arguments implies symmetry there over `F₂`. -/
 theorem alternating_swap23 {n : ℕ} {C : BinaryTensor n}
     (h : IsAlternating C) (x y z : BinaryVector n) :
     C x z y = C x y z := by
   have hdiag := h.2.2 x (y + z)
-  have hcross : C x y z + C x z y = 0 := by
+  have hcross : C x z y + C x y z = 0 := by
     simpa only [LinearMap.map_add, LinearMap.add_apply, h.2.2 x y, h.2.2 x z,
       zero_add, add_zero] using hdiag
   have heq := eq_neg_of_add_eq_zero_left hcross
-  simpa using heq.symm
+  simpa using heq
 
 /-- Alternation gives symmetry under exchanging the first and third arguments. -/
 theorem alternating_swap13 {n : ℕ} {C : BinaryTensor n}
     (h : IsAlternating C) (x y z : BinaryVector n) :
     C z y x = C x y z := by
   calc
-    C z y x = C y z x := alternating_swap12 h z y x
+    C z y x = C y z x := (alternating_swap12 h z y x).symm
     _ = C y x z := (alternating_swap23 h y z x).symm
-    _ = C x y z := alternating_swap12 h y x z
+    _ = C x y z := (alternating_swap12 h y x z).symm
 
 /-- Alternating tensors are determined by their strictly increasing triple
 coefficients, matching the manuscript's dense input encoding. -/
@@ -77,21 +78,25 @@ theorem binaryTensor_ext_of_increasing_coefficients {n : ℕ} {C D : BinaryTenso
   apply binaryTensor_ext_of_coefficients
   intro i j k
   have swap12C (a b c : Fin n) : coefficient C a b c = coefficient C b a c := by
-    simpa [coefficient] using
-      (alternating_swap12 hC (coordinateVector a) (coordinateVector b)
-        (coordinateVector c)).symm
+    change C (coordinateVector a) (coordinateVector b) (coordinateVector c) =
+      C (coordinateVector b) (coordinateVector a) (coordinateVector c)
+    exact (alternating_swap12 hC (coordinateVector a) (coordinateVector b)
+      (coordinateVector c)).symm
   have swap23C (a b c : Fin n) : coefficient C a b c = coefficient C a c b := by
-    simpa [coefficient] using
-      (alternating_swap23 hC (coordinateVector a) (coordinateVector b)
-        (coordinateVector c)).symm
+    change C (coordinateVector a) (coordinateVector b) (coordinateVector c) =
+      C (coordinateVector a) (coordinateVector c) (coordinateVector b)
+    exact (alternating_swap23 hC (coordinateVector a) (coordinateVector b)
+      (coordinateVector c)).symm
   have swap12D (a b c : Fin n) : coefficient D a b c = coefficient D b a c := by
-    simpa [coefficient] using
-      (alternating_swap12 hD (coordinateVector a) (coordinateVector b)
-        (coordinateVector c)).symm
+    change D (coordinateVector a) (coordinateVector b) (coordinateVector c) =
+      D (coordinateVector b) (coordinateVector a) (coordinateVector c)
+    exact (alternating_swap12 hD (coordinateVector a) (coordinateVector b)
+      (coordinateVector c)).symm
   have swap23D (a b c : Fin n) : coefficient D a b c = coefficient D a c b := by
-    simpa [coefficient] using
-      (alternating_swap23 hD (coordinateVector a) (coordinateVector b)
-        (coordinateVector c)).symm
+    change D (coordinateVector a) (coordinateVector b) (coordinateVector c) =
+      D (coordinateVector a) (coordinateVector c) (coordinateVector b)
+    exact (alternating_swap23 hD (coordinateVector a) (coordinateVector b)
+      (coordinateVector c)).symm
   by_cases hij : i = j
   · subst j
     have hC0 : coefficient C i i k = 0 := by

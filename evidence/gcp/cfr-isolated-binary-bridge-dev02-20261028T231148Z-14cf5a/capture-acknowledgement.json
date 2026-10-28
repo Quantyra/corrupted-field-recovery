@@ -1,0 +1,7 @@
+{
+  "offer_sha256": "b0ee0bb7cc17017bdc3adef8a20f4ac2498150710721c6e5173242329df8e7a5",
+  "utf8_no_bom_verified": true,
+  "immutable_capture_acknowledged_to_author": true,
+  "scope_note": "Luna repair adds focused ZMod field import and replaces four unnecessarySimpa sites; no new theorem scope.",
+  "acceptance": "Requires exact GCP terminal, emitted types, axioms and warning gate; no acceptance inferred from capture."
+}

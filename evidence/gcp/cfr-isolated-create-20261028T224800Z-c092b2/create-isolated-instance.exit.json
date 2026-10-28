@@ -1,0 +1,32 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:49:09.689799+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "instances",
+    "create",
+    "quantyra-cfr-lean-builder-20261028a",
+    "--machine-type=e2-highmem-8",
+    "--image=ubuntu-2404-noble-amd64-v20260906",
+    "--image-project=ubuntu-os-cloud",
+    "--boot-disk-size=100GB",
+    "--boot-disk-type=pd-balanced",
+    "--no-address",
+    "--subnet=default",
+    "--service-account=1013064480488-compute@developer.gserviceaccount.com",
+    "--scopes=storage-ro,logging-write,monitoring-write",
+    "--metadata=enable-oslogin=TRUE,block-project-ssh-keys=TRUE",
+    "--metadata-from-file=startup-script=C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\tools\\gcp_cfr_startup.sh",
+    "--labels=entity=quantyra,environment=research,workload=cfr-lean,owner=cfr-20261028a",
+    "--max-run-duration=4h",
+    "--instance-termination-action=STOP",
+    "--no-restart-on-failure",
+    "--shielded-secure-boot",
+    "--format=json",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

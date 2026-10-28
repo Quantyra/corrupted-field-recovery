@@ -13,9 +13,9 @@ namespace CorruptedFieldRecovery
 /-- The finite-field trace pairing is nondegenerate in either argument. -/
 theorem tracePairing_nondegenerate
     (K : Type*) [Field K] [Finite K] [Algebra (ZMod (ringChar K)) K]
-    (λ : K) (hλ : λ ≠ 0) (x : K) (hx : x ≠ 0) :
-    ∃ y : K, Algebra.trace (ZMod (ringChar K)) K (λ * x * y) ≠ 0 := by
-  obtain ⟨y, hy⟩ := FiniteField.trace_to_zmod_nondegenerate K (mul_ne_zero hλ hx)
+    (scale : K) (hscale : scale ≠ 0) (x : K) (hx : x ≠ 0) :
+    ∃ y : K, Algebra.trace (ZMod (ringChar K)) K (scale * x * y) ≠ 0 := by
+  obtain ⟨y, hy⟩ := FiniteField.trace_to_zmod_nondegenerate K (mul_ne_zero hscale hx)
   exact ⟨y, by simpa [mul_assoc] using hy⟩
 
 /-- The coordinate model for the clean three-dimensional field space. -/
@@ -33,19 +33,19 @@ def fieldBasis1 {K : Type*} [Zero K] [One K] : FieldTriple K := (0, 1, 0)
 def fieldBasis2 {K : Type*} [Zero K] [One K] : FieldTriple K := (0, 0, 1)
 
 /-- The first clean contraction of the trace-determinant tensor. -/
-def fieldContraction0
+noncomputable def fieldContraction0
     (K : Type*) [Field K] [Finite K] [Algebra (ZMod (ringChar K)) K]
     (c : K) (x y : FieldTriple K) : ZMod (ringChar K) :=
   Algebra.trace (ZMod (ringChar K)) K (c * fieldDet3 x y fieldBasis0)
 
 /-- The second clean contraction of the trace-determinant tensor. -/
-def fieldContraction1
+noncomputable def fieldContraction1
     (K : Type*) [Field K] [Finite K] [Algebra (ZMod (ringChar K)) K]
     (c : K) (x y : FieldTriple K) : ZMod (ringChar K) :=
   Algebra.trace (ZMod (ringChar K)) K (c * fieldDet3 x y fieldBasis1)
 
 /-- The third clean contraction of the trace-determinant tensor. -/
-def fieldContraction2
+noncomputable def fieldContraction2
     (K : Type*) [Field K] [Finite K] [Algebra (ZMod (ringChar K)) K]
     (c : K) (x y : FieldTriple K) : ZMod (ringChar K) :=
   Algebra.trace (ZMod (ringChar K)) K (c * fieldDet3 x y fieldBasis2)
@@ -85,17 +85,19 @@ theorem fieldContraction1_radical
   · intro hx
     constructor
     · by_contra h0
-      obtain ⟨t, ht⟩ := tracePairing_nondegenerate K c hc x.2.2 h0
-      have hz := hx (t, 0, 0)
-      have hdet : fieldDet3 x (t, 0, 0) fieldBasis1 = x.2.2 * t := by
-        simp [fieldDet3, fieldBasis1]
-      rw [fieldContraction1, hdet, ← mul_assoc] at hz
-      exact ht hz
-    · by_contra h2
-      obtain ⟨t, ht⟩ := tracePairing_nondegenerate K c hc (-x.1) (by simpa using h2)
+      obtain ⟨t, ht⟩ := tracePairing_nondegenerate K c hc (-x.1) (by simpa using h0)
       have hz := hx (0, 0, t)
       have hdet : fieldDet3 x (0, 0, t) fieldBasis1 = -x.1 * t := by
         simp [fieldDet3, fieldBasis1]
+        ring
+      rw [fieldContraction1, hdet, ← mul_assoc] at hz
+      exact ht hz
+    · by_contra h2
+      obtain ⟨t, ht⟩ := tracePairing_nondegenerate K c hc x.2.2 h2
+      have hz := hx (t, 0, 0)
+      have hdet : fieldDet3 x (t, 0, 0) fieldBasis1 = x.2.2 * t := by
+        simp [fieldDet3, fieldBasis1]
+        ring
       rw [fieldContraction1, hdet, ← mul_assoc] at hz
       exact ht hz
   · rintro ⟨h0, h2⟩ y
@@ -121,6 +123,7 @@ theorem fieldContraction2_radical
       have hz := hx (t, 0, 0)
       have hdet : fieldDet3 x (t, 0, 0) fieldBasis2 = -x.2.1 * t := by
         simp [fieldDet3, fieldBasis2]
+        ring
       rw [fieldContraction2, hdet, ← mul_assoc] at hz
       exact ht hz
   · rintro ⟨h0, h1⟩ y
@@ -162,7 +165,7 @@ algebra generator is multiplication by its value at one. This is the scalar
 recognition step used after the first three contractions identify one common
 self-adjoint block map. -/
 theorem linearMap_scalar_of_commutes_generator
-    (F K : Type*) [CommSemiring F] [Field K] [Algebra F K]
+    (F K : Type*) [CommRing F] [Field K] [Algebra F K]
     (A : K →ₗ[F] K) (α : K)
     (hgen : Algebra.adjoin F {α} = ⊤)
     (hcomm : ∀ x : K, A (α * x) = α * A x) :
@@ -175,8 +178,10 @@ theorem linearMap_scalar_of_commutes_generator
     | mem r hr =>
         rcases hr with ⟨t, rfl⟩ | hr
         · intro x
-          rw [Algebra.smul_def, map_smul]
-          simp [Algebra.smul_def]
+          calc
+            A ((algebraMap F K t) * x) = A (t • x) := by rw [← Algebra.smul_def]
+            _ = t • A x := map_smul A t x
+            _ = (algebraMap F K t) * A x := Algebra.smul_def t (A x)
         · have hr : r = α := by simpa using hr
           subst r
           exact hcomm

@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-28T22:49:05.177189+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "routers",
+    "list",
+    "--project=quantyra-lean-cert-20260915",
+    "--account=dfredriksen@quantyra.org",
+    "--format=json(name,region,network,nats)"
+  ]
+}

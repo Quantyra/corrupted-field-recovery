@@ -1,0 +1,7 @@
+{
+  "offer_sha256": "983db470834c262cee472ef558752792f87c9b1ab33ab4a634d03ff5646d8b27",
+  "utf8_no_bom_verified": true,
+  "immutable_capture_acknowledged_to_author": true,
+  "scope_note": "Luna dev07 repair of reserved binder, noncomputable ringChar defs and CommRing base required by adjoin API.",
+  "acceptance": "Requires exact GCP terminal, emitted types, axioms and warning gate; no acceptance inferred from capture."
+}

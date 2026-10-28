@@ -1,0 +1,23 @@
+[
+  {
+    "labels": {
+      "entity": "quantyra",
+      "environment": "research",
+      "workload": "lean-certification"
+    },
+    "machineType": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/machineTypes/e2-highmem-8",
+    "name": "quantyra-lean-builder-01",
+    "status": "TERMINATED",
+    "zone": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a"
+  },
+  {
+    "labels": {
+      "managed-by": "codex",
+      "research-thread": "cmmsa-a22-hc46"
+    },
+    "machineType": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/machineTypes/e2-highmem-8",
+    "name": "quantyra-lean-builder-02",
+    "status": "RUNNING",
+    "zone": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a"
+  }
+]
