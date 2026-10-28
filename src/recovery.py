@@ -130,7 +130,7 @@ def multiply(a, b, modulus):
 
 
 def irreducible(modulus):
-    if type(modulus) is not int or modulus < 3:
+    if type(modulus) is not int or modulus < 2:
         return False
     degree = modulus.bit_length()-1
     x = remainder(2, modulus)
@@ -262,7 +262,7 @@ def residual_columns(n, support):
 
 
 def verify(n, coefficients, rank_limit, certificate):
-    """Total Boolean checker for serialized certificates; no discovery state used."""
+    """Check serialized certificate values without trusting discovery state."""
     try:
         validate_input(n, coefficients, rank_limit)
         if not isinstance(certificate, dict) or set(certificate) != {

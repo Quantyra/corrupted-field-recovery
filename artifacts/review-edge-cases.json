@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "command": "python tests/check_review_edge_cases.py",
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Outside-promise degree-one and full-support certificate semantics; no recovery or uniqueness claim.",
+  "n": 3,
+  "s": 1,
+  "rank_limit": 3,
+  "coefficient": 1,
+  "sufficient_promise": false,
+  "pointwise_triples": 512,
+  "checks": [
+    "valid full-support cancellation certificate accepted",
+    "compatible form independently nonzero",
+    "zero compatible coefficient rejected",
+    "insufficient support cap rejected",
+    "altered tensor rejected",
+    "both degree-one irreducible field presentations accepted",
+    "constant and reducible polynomials rejected",
+    "p=X certificates checked for clean and full-support cases"
+  ],
+  "source_sha256": {
+    "src/recovery.py": "6f17faecfdcb31e8073645beb76d49f0586f17b6d42b9ef62c453d6d3f276bfb",
+    "tests/check_review_edge_cases.py": "4675c11a42c97eb455b9a17c5e3e4ebcb5fef12b1e8beb5e3c2bd3b6de075c18"
+  }
+}

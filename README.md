@@ -46,6 +46,12 @@ The present Lean library proves the algebraic defect-image lemma and derives joi
 
 The cubic-only bound does not replace the separate `s>=7R+5` condition for the broader phase-recovery application. No complete circuit simulation, quantum advantage, external counting-backend implementation, BPP/BQP result, or independent peer review is claimed.
 
+## Post-publication cross-provider review
+
+The original three reviews were all OpenAI models. Following the request for Grok, Agy and Claude, all three additional reviews are complete: Claude (returned `claude-opus-5-5`), Agy (configured Gemini 3.8 Flash High), and Grok (returned `grok-4.7-build`). They examined the published source and proposed Lean plan; Grok also inspected current working corrections. The plan contained a summary of prior reviews, so these passes are not fully blind. See the [follow-up dispositions](docs/reviews/2026-10-28-cross-provider-disposition.md).
+
+Working-branch corrections include accepting the degree-one field polynomial `p=X`, explicit [resource-model clarification](docs/resource-model-clarification.md), and a required `two_translate_bridge` obligation distinct from the proved abstract kernel. The full recovery suite and [focused review edge cases](artifacts/review-edge-cases.json) pass. These changes and additional reviews are post-publication material; they are not present in the immutable v0.1.0 archive. The archived manuscript remains explicitly only partially Lean verified.
+
 ## Release status
 
 Version 0.1.0 was [published on 28 October 2026](https://github.com/Quantyra/corrupted-field-recovery/releases/tag/v0.1.0), at commit `1de9785ec38d6fa4064b0279e2a444e47a2f2413`. The [Zenodo record](https://zenodo.org/records/23744566) is published as a preprint. All 44 archived files match the Git tag byte for byte, and the GitHub PDF asset matches the archived manuscript. Metadata, both DOI resolutions, and checksums are verified in [release state](artifacts/release-state.json) and [archive evidence](artifacts/zenodo-archive.json). Reproduce the archive comparison with `python tools/verify_archive.py 23744566 v0.1.0`.

@@ -9,6 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_AXIOMS = {'propext', 'Classical.choice', 'Quot.sound'}
 REQUIRED_OBLIGATIONS = {'input_model', 'four_contractions', 'two_translate_image',
+                        'two_translate_bridge',
                         'sampling_bounds', 'bounded_constructor', 'certificate',
                         'costs', 'main_theorem'}
 MINIMUM_AUDIT = {
@@ -92,6 +93,15 @@ def main():
     for source, expected in recovery_hashes.items():
         check_hash(source, expected, 'stale test evidence')
 
+    edge = read_json('artifacts/review-edge-cases.json')
+    if edge.get('status') != 'passed':
+        failures.append('cross-provider edge-case checks did not pass')
+    edge_hashes = edge.get('source_sha256', {})
+    if not isinstance(edge_hashes, dict):
+        edge_hashes = {}
+    for source in ['src/recovery.py', 'tests/check_review_edge_cases.py']:
+        check_hash(source, edge_hashes.get(source), 'stale review edge-case evidence')
+
     lean = read_json('artifacts/lean-checks.json')
     if lean.get('status') != 'passed':
         failures.append('Lean build and audit did not both pass')
@@ -172,6 +182,22 @@ def main():
         for item in reviews:
             check_hash(item.get('report'), item.get('sha256'), 'review evidence')
     check_hash(review.get('disposition'), review.get('disposition_sha256'), 'review disposition')
+
+    followup = read_json('artifacts/cross-provider-review.json')
+    if followup.get('status') != 'completed' or followup.get('unresolved_blocking_findings') != []:
+        failures.append('cross-provider review incomplete or unresolved')
+    entries = followup.get('reviews', [])
+    if (not isinstance(entries, list) or len(entries) != 3
+            or any(not isinstance(e, dict) for e in entries)
+            or {e.get('reviewer') for e in entries if isinstance(e, dict)} != {'claude', 'agy', 'grok'}):
+        failures.append('Claude, Agy and Grok review records are required')
+    else:
+        for entry in entries:
+            if entry.get('status') != 'completed':
+                failures.append(f'incomplete reviewer: {entry.get("reviewer")}')
+            check_hash(entry.get('report'), entry.get('sha256'), 'cross-provider report')
+    for key in ['input_manifest', 'disposition', 'resource_clarification']:
+        check_hash(followup.get(key), followup.get(key+'_sha256'), 'cross-provider '+key)
 
     result = dict(ready=not failures, failures=failures,
                   require_complete_lean=args.require_complete_lean,

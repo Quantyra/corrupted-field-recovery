@@ -79,9 +79,9 @@
   },
   "malformed_cases": 5,
   "source_sha256": {
-    "src/recovery.py": "0c54ec4e33bb02e3eda054a2efb3360b8c537468be28ab09836e360617bf5617",
+    "src/recovery.py": "6f17faecfdcb31e8073645beb76d49f0586f17b6d42b9ef62c453d6d3f276bfb",
     "tests/check_recovery.py": "e4fd6928d2d3ee7f0f38f13462786480c8c3b0267239f234a9cf15516bd14bd1"
   },
-  "elapsed_seconds": 52.972,
+  "elapsed_seconds": 39.129,
   "status": "passed"
 }

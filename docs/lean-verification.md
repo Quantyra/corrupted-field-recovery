@@ -16,6 +16,8 @@ Lean 4.30.0, commit `d024af099ca4bf2c86f649261ebf59565dc8c622`; mathlib `c5ea003
 
 The last theorem derives the joint-surjectivity requirement through the preceding theorem. It does not assume recovered-image equality. These algebraic statements are proved over arbitrary fields, using a difference operator; in characteristic two that difference equals the manuscript's sum. They do not assume or prove the full main recovery conclusion.
 
+The post-publication cross-provider review prompted an explicit inventory split: `two_translate_image` is marked `abstract_kernel_only`, while the required `two_translate_bridge` remains unformalized. The latter must establish the concrete binary/support/mode-image correspondence, the manuscript's weaker restricted-dual-injectivity hypothesis, and the coefficient-slice bridge. Seven abstract declarations being proved does not mean that exact manuscript lemma is fully covered.
+
 Executed `lake build CorruptedFieldRecovery`: exit 0, 1,646 jobs. Executed `lake env lean checks/Audit.lean`: exit 0. The audit prints full types for the selected image theorems and all seven transitive axiom reports. Source screening found no `sorry`, `admit`, new axiom, `native_decide`, or unsafe declaration in the project proof files. The reports contain only the standard foundations shown above. Exact source hashes and raw successful logs are in `artifacts/lean-checks.json`, `lean-build.log` and `lean-audit.log`.
 
 All builds ran locally on Windows. The local package directory reused the existing pinned mathlib cache via a junction; that junction is untracked and no shared tracked dependency source was modified. A fresh checkout uses the pinned dependencies and focused cache commands in the README. No cloud execution or spend occurred.

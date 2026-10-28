@@ -1,0 +1,66 @@
+{
+  "status": "completed",
+  "date": "2026-10-28",
+  "published_baseline": "1de9785ec38d6fa4064b0279e2a444e47a2f2413",
+  "version_doi": "10.5281/zenodo.23744566",
+  "reviews": [
+    {
+      "reviewer": "claude",
+      "status": "completed",
+      "configured_model": "opus",
+      "returned_usage_models": [
+        "claude-opus-5-5"
+      ],
+      "report": "docs/reviews/2026-10-28-claude.md",
+      "sha256": "9a4b0a3bd7e6f3c6109ed45e8ed399d463ce74fb99b354cbd17c79afe02d7424",
+      "response_text_sha256": "deaa731ab64cc6e6165ef766b63e304e013b67c3680ba4948e2fb8b9ca0f0b91",
+      "elapsed_seconds": 538.97,
+      "input_mode": "Full packet via stdin; tools disabled; safe mode; high effort.",
+      "executed_tests": false,
+      "executed_lean": false
+    },
+    {
+      "reviewer": "agy",
+      "status": "completed",
+      "configured_model": "gemini-3.8-flash-high",
+      "returned_usage_models": null,
+      "report": "docs/reviews/2026-10-28-agy-gemini.md",
+      "sha256": "f2b134f23f617e666a658e59253f0379ac5f89ee1284b83c58ad03197563c70c",
+      "response_text_sha256": "a24ad93119048827e4fafeea93ba4d1ba57bda1474530330099d55870ae534d8",
+      "elapsed_seconds": 369.98,
+      "input_mode": "Packet read through file tools; requested high effort. CLI did not enforce requested plan mode with slash expansion disabled.",
+      "executed_tests": false,
+      "executed_lean": false
+    },
+    {
+      "reviewer": "grok",
+      "status": "completed",
+      "configured_model": "grok-4.7",
+      "returned_usage_models": [
+        "grok-4.7-build"
+      ],
+      "report": "docs/reviews/2026-10-28-grok.md",
+      "sha256": "2280f1870dfa1f52c931fab620edf44d0df4ae17b65f41fdcfc1c6709b8b1b27",
+      "response_text_sha256": "abbad73c423f0633c80cbe85f92d2fbbfe9b35bc3d4daf16ff5db6367900de5f",
+      "elapsed_seconds": 72.37,
+      "input_mode": "Initial high-effort packet request also used directory/search/read tools on live files. Local 1200-second timeout; same session resumed at medium effort and completed in 72.37 seconds.",
+      "executed_tests": false,
+      "executed_lean": false
+    }
+  ],
+  "input_manifest": "artifacts/cross-provider-review-inputs.json",
+  "input_manifest_sha256": "8087c4032472aeb25518297c93c5c9e8e276d14fb278d219eb81820cf255d634",
+  "disposition": "docs/reviews/2026-10-28-cross-provider-disposition.md",
+  "disposition_sha256": "829e792a2b6b267a2cf593c7e9c7c4c4cc1b782b50659cd0db9840de4f6fe16b",
+  "resource_clarification": "docs/resource-model-clarification.md",
+  "resource_clarification_sha256": "4419ba901d0a525d3928b0466e6057f6864f93e3bb26843c095fb9624bdb0603",
+  "unresolved_blocking_findings": [],
+  "complete_lean": false,
+  "scope": "Post-publication cross-provider review. Previous reports were withheld, but the plan included a summary, so not fully blind. Grok read additional live source/clarification/tests, not all version-pinned at read time. No human peer review or full certification claim.",
+  "correction": "Current Python accepts degree-one p=X; archive remains unchanged.",
+  "validation_receipts": [
+    "artifacts/recovery-checks.json",
+    "artifacts/review-edge-cases.json"
+  ],
+  "grok_initial_attempt": "Local timeout without a final report; not counted as completed review. Resumed same session to completion."
+}

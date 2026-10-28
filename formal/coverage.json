@@ -15,11 +15,17 @@
     {
       "id": "two_translate_image",
       "status": "proved",
+      "scope": "abstract_kernel_only",
       "description": "Mode-image recovery for a supported pullback, invertible linear action and disjoint original/translated dual-image support spaces; joint surjectivity is derived",
       "exports": [
         "CorruptedFieldRecovery.joint_surjective_of_disjoint_duals",
         "CorruptedFieldRecovery.two_translate_of_disjoint"
       ]
+    },
+    {
+      "id": "two_translate_bridge",
+      "status": "unformalized",
+      "description": "Specialize the abstract kernel to the manuscript binary tensor, support and mode image; derive the restricted-dual-injectivity version and exact coefficient-slice computation"
     },
     {
       "id": "sampling_bounds",
