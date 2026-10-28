@@ -47,10 +47,20 @@ ghost counters and the declared storage measure. No version has been compiled
 or accepted. The prototype does not yet prove a bounded PC layout, actual
 runtime peak memory, variable-size array costs or manuscript complexity.
 
+A further preflight, `cfr-preflight-20261028T214354Z-6878f2`, again failed
+token refresh before VM state could be observed. An independent uncompiled
+four-contraction source draft was captured as
+`cfr-fourcontractions-dev02-20261028T214827Z-4621fb`, source SHA-256
+`b6b8331aebe70c788e72fbced5ee4f04b6c335c8e83aadf31e98f60e627a8de3`.
+It attempts the trace-pairing and generator-to-scalar steps only. The prior
+capture and the source review of its reversed equality are preserved. Neither
+capture proves the four-contraction field-identification theorem or changes
+formal coverage. Both await GCP compilation and diagnostics.
+
 The non-Lean readiness command was rerun and its accurately false result now
 appears in `artifacts/release-readiness.json`; it reports missing compiled
-evidence for all three drafts. The prior working-tree result is preserved under
-`cfr-readiness-20261028T213927Z-8d63e3` alongside the exact new output, command
+evidence for the four draft modules. The prior working-tree result is preserved under
+`cfr-readiness-20261028T214847Z-7878a8` alongside the exact new output, command
 and exit code. This working-tree change does not alter the separately verified
 first archive or its DOI.
 

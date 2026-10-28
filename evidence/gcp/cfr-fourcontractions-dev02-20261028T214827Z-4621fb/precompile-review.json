@@ -1,0 +1,11 @@
+{
+  "status": "uncompiled-partial-development-candidate",
+  "compile_invoked": false,
+  "author_offer": {
+    "bytes": 2390,
+    "sha256": "b6b8331aebe70c788e72fbced5ee4f04b6c335c8e83aadf31e98f60e627a8de3",
+    "utf8_no_bom": true
+  },
+  "scope": "Two intermediate trace/scalar-generator lemmas only; full four-contraction theorem remains open.",
+  "disposition": "Await exact-source GCP compile and statement/axiom audit. No certification or coverage promotion."
+}

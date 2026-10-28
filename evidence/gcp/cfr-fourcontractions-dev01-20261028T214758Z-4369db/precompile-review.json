@@ -1,0 +1,13 @@
+{
+  "status": "superseded-before-compilation",
+  "compile_invoked": false,
+  "author_offer": {
+    "sha256": "8ad0d201d8cd00a895108be9eeacba1efe75dd5ffe6ef26c522a48d7314b3d07",
+    "utf8_no_bom": true
+  },
+  "findings": [
+    "Root static source review found reversed equality orientation in the last line of the scalar-generator proof."
+  ],
+  "review": "Root semantic source inspection; no compiler result.",
+  "disposition": "Exact failed source preserved; author acknowledged capture before successor edit."
+}
