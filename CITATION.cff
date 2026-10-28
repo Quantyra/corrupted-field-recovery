@@ -10,6 +10,7 @@ repository-code: "https://github.com/Quantyra/corrupted-field-recovery"
 url: "https://github.com/Quantyra/corrupted-field-recovery"
 license: Apache-2.0
 version: "0.1.0"
+doi: "10.5281/zenodo.23744566"
 date-released: "2026-10-28"
 notes: "Preprint and companion. Manuscript CC-BY-4.0; software and Lean Apache-2.0. Three AI-model review reports are included; independent human peer review and complete Lean certification are not claimed."
 keywords:

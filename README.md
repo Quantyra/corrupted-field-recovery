@@ -2,6 +2,8 @@
 
 **Preprint v0.1.0 and reproducibility package. Lean verification is partial: the complete recovery theorem and Python implementation are not formally certified.**
 
+Published version DOI: [10.5281/zenodo.23744566](https://doi.org/10.5281/zenodo.23744566). [Download the PDF](https://github.com/Quantyra/corrupted-field-recovery/releases/download/v0.1.0/main.pdf). Concept DOI for all versions: [10.5281/zenodo.23744565](https://doi.org/10.5281/zenodo.23744565).
+
 The [preprint](manuscript/main.pdf) gives the standalone cubic-tensor theorem and proof, the exact compatible-representation certificate, conditional sampling estimates, and charged bit costs. [Editable source and build instructions](manuscript/README.md) are included. Here “certified recovery” means that every returned representation passes an exact certificate checker; it does not mean complete Lean certification.
 
 The input is a dense binary alternating trilinear tensor on dimension `n=3s`. Its promised structure is a nonzero trace-determinant over an unknown field plus a perturbation supported on at most `R` unknown covectors. For `s>=2R+5`, the bounded reader uses at most `8*2^(4R)*h` trials and `(4n+s)` fair bits per trial. It returns a fully checked compatible representation or explicit failure. It does not promise unique recovery of the planted field.
@@ -46,6 +48,8 @@ The cubic-only bound does not replace the separate `s>=7R+5` condition for the b
 
 ## Release status
 
-Version 0.1.0 is prepared for the first GitHub release and Zenodo archive. The current instruction authorizes this preprint before full Lean certification. Actual release, archive contents, metadata, and version/concept DOIs are recorded separately after verification; this source does not invent a DOI in advance.
+Version 0.1.0 was [published on 28 October 2026](https://github.com/Quantyra/corrupted-field-recovery/releases/tag/v0.1.0), at commit `1de9785ec38d6fa4064b0279e2a444e47a2f2413`. The [Zenodo record](https://zenodo.org/records/23744566) is published as a preprint. All 44 archived files match the Git tag byte for byte, and the GitHub PDF asset matches the archived manuscript. Metadata, both DOI resolutions, and checksums are verified in [release state](artifacts/release-state.json) and [archive evidence](artifacts/zenodo-archive.json). Reproduce the archive comparison with `python tools/verify_archive.py 23744566 v0.1.0`.
 
-Remaining to-do list: verify the first archive and DOI after publication; evaluate and complete the planned Lean certification of the manuscript theorem.
+The tag preserves the reviewed partial-formalization snapshot. DOI citation links and post-publication verification receipts were added to the main branch after archival; they are not retroactively claimed to be in that snapshot.
+
+Remaining to-do list: evaluate and complete the planned Lean certification of the manuscript theorem.

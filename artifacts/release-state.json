@@ -1,6 +1,34 @@
 {
-  "checked_date": "2026-10-28",
-  "releases": [],
+  "checked_at": "2026-10-28T20:27:13.073615+00:00",
+  "release_published": true,
+  "doi_verified": true,
+  "archive_verified": true,
+  "release_url": "https://github.com/Quantyra/corrupted-field-recovery/releases/tag/v0.1.0",
+  "release_id": 427155645,
+  "tag": "v0.1.0",
+  "commit": "1de9785ec38d6fa4064b0279e2a444e47a2f2413",
+  "published_at": "2026-10-28T20:26:07Z",
+  "version_doi": "10.5281/zenodo.23744566",
+  "concept_doi": "10.5281/zenodo.23744565",
+  "doi_resolution": [
+    {
+      "doi": "10.5281/zenodo.23744566",
+      "status": 200,
+      "resolved_url": "https://zenodo.org/records/23744566"
+    },
+    {
+      "doi": "10.5281/zenodo.23744565",
+      "status": 200,
+      "resolved_url": "https://zenodo.org/records/23744566"
+    }
+  ],
+  "metadata_matches_release": true,
+  "archive_matched_files": 44,
+  "pdf_asset": {
+    "url": "https://github.com/Quantyra/corrupted-field-recovery/releases/download/v0.1.0/main.pdf",
+    "bytes": 98914,
+    "sha256": "9f92cd69b52551087766b1da45b95ba44786bf0b39c079c56befc8d0066ee85a"
+  },
   "hooks": [
     {
       "id": 704384820,
@@ -10,7 +38,5 @@
       ],
       "host": "zenodo.org"
     }
-  ],
-  "release_published": false,
-  "doi_verified": false
+  ]
 }

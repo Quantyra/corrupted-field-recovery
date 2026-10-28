@@ -12,4 +12,8 @@ Review feedback clarified field-coordinate transport, dual injectivity and displ
 
 Validation: the saved recovery suite passes; the partial Lean library and seven-declaration axiom audit pass with only standard Lean foundations; every PDF page is rendered and inspected; the preprint readiness gate checks matching evidence. The complete-Lean gate intentionally remains unsatisfied. See artifacts and review reports for exact scope and hashes.
 
-Licenses: manuscript CC-BY-4.0; software and Lean Apache-2.0. Zenodo's package metadata uses Other (Open) and records these per-component licenses. DOI and archive verification will be recorded after Zenodo processes the published release; no identifier is invented in advance.
+Licenses: manuscript CC-BY-4.0; software and Lean Apache-2.0. Zenodo's package metadata uses Other (Open) and records these per-component licenses.
+
+Published version DOI: [10.5281/zenodo.23744566](https://doi.org/10.5281/zenodo.23744566). Concept DOI: [10.5281/zenodo.23744565](https://doi.org/10.5281/zenodo.23744565). Release commit: `1de9785ec38d6fa4064b0279e2a444e47a2f2413`. All 44 files in Zenodo's archive were compared byte for byte with the tag, and the GitHub PDF asset matches the archived PDF. Both DOI links resolve to the published record. The metadata matches the released title, author, date, version, preprint type, description and mixed-license mapping.
+
+This DOI paragraph and the archive verification receipts were added after publication. The immutable v0.1.0 snapshot retains its pre-publication citation text and truthful partial Lean status.
