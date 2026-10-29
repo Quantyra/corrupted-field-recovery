@@ -1,0 +1,25 @@
+✖ [1508/1508] Building CorruptedFieldRecovery.RawPolynomialIrreducibility (3.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawPolynomialIrreducibility.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialIrreducibility.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialIrreducibility.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPolynomialIrreducibility.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPolynomialIrreducibility.setup.json --json
+error: CorruptedFieldRecovery/RawPolynomialIrreducibility.lean:446:60: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression
+  hd
+has type
+  List.Mem d (List.range' 1 (s / 2 + 1 - 1))
+which is not a one-constructor inductive type.
+error: CorruptedFieldRecovery/RawPolynomialIrreducibility.lean:447:64: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression
+  hd
+has type
+  List.Mem d (List.range' 1 (s / 2 + 1 - 1))
+which is not a one-constructor inductive type.
+error: CorruptedFieldRecovery/RawPolynomialIrreducibility.lean:448:65: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression
+  hg
+has type
+  List.Mem g (List.range' (2 ^ d) (2 ^ (d + 1) - 2 ^ d))
+which is not a one-constructor inductive type.
+error: CorruptedFieldRecovery/RawPolynomialIrreducibility.lean:448:70: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression
+  hg
+has type
+  List.Mem g (List.range' (2 ^ d) (2 ^ (d + 1) - 2 ^ d))
+which is not a one-constructor inductive type.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawPolynomialIrreducibility
