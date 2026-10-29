@@ -1,0 +1,3 @@
+pscp: C:\Users\dfred\Desktop\Projects\IGH\corrupted-field-recovery\evidence\gcp\cfr-isolated-bitcost-dev03-20261029T003340Z-d8f6de\run.sh: No such file or directory
+
+ERROR: (gcloud.compute.scp) [C:\Users\dfred\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin\sdk\pscp.exe] exited with return code [1].

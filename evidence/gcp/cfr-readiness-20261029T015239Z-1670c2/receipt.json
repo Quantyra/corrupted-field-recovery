@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Users\\dfred\\AppData\\Local\\Google\\Cloud SDK\\google-cloud-sdk\\platform\\bundledpython\\python.exe",
+    "tools/check_release_readiness.py"
+  ],
+  "exit_code": 1,
+  "utc": "2026-10-29T01:52:42.142605+00:00",
+  "stdout_sha256": "066120e6c52883bea5a34067919a9604e6b811480a85a09e593d8b179b19d403",
+  "source_sha256": {
+    "CorruptedFieldRecovery/BinaryTensor.lean": "a98590adf42e2389358ea56ac4664db5ce5a8ae7fe62db27178daa2791296cc7",
+    "CorruptedFieldRecovery/BitCostPrototype.lean": "840b63401089874dd48979333623a714730e00073be82940946cf4511fd55278",
+    "CorruptedFieldRecovery/Bridge.lean": "b20ef169e4123db1ac6aa61c4f22fb50a0bac6f8d6221e0dff57708614e21a8b",
+    "CorruptedFieldRecovery/Defect.lean": "12a92e387a360cde83ec27b885103bd65ccb0eb7593c9a57143ea261b09c08c6",
+    "CorruptedFieldRecovery/DenseInput.lean": "8f7b424beea9bc14735c9bc3a962c40508e1c50368be3ee5cfd08cd0839545c0",
+    "CorruptedFieldRecovery/FourContractions.lean": "57592dc8a091b056bfaa38b848d53bc7be4f748d019ec5eab99ed1f14222c604",
+    "CorruptedFieldRecovery/Independent.lean": "1e051f2e7d19c748242db1a091c9aa42c4ec532f69467796e81487f7b53f3baf"
+  },
+  "lean_invoked_locally": false
+}

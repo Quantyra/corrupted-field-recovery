@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.BitCostPrototype.fullAdder_correct": {
+    "emitted_type": "CorruptedFieldRecovery.BitCostPrototype.fullAdder_correct : \u2200 (x y carry : Bool),\n  Eq.{1}\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.BitCostPrototype.bitVal x)\n        (CorruptedFieldRecovery.BitCostPrototype.bitVal y))\n      (CorruptedFieldRecovery.BitCostPrototype.bitVal carry))\n    (HAdd.hAdd.{0, 0, 0}\n      (CorruptedFieldRecovery.BitCostPrototype.bitVal (CorruptedFieldRecovery.BitCostPrototype.fullAdder x y carry).1)\n      (HMul.hMul.{0, 0, 0} 2\n        (CorruptedFieldRecovery.BitCostPrototype.bitVal\n          (CorruptedFieldRecovery.BitCostPrototype.fullAdder x y carry).2)))\n",
+    "sha256": "da0b94eaaffb94dcd91fa577b61c031731edbbd425c8e46c9a1dde7c76fd651e"
+  },
+  "CorruptedFieldRecovery.BitCostPrototype.stage_erasure": {
+    "emitted_type": "CorruptedFieldRecovery.BitCostPrototype.stage_erasure : \u2200 (k : Nat) (x y carry : Bool),\n  Eq.{1}\n    (CorruptedFieldRecovery.BitCostPrototype.erasure\n      (CorruptedFieldRecovery.BitCostPrototype.RunReport.final\n        (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry)))\n    (CorruptedFieldRecovery.BitCostPrototype.fullAdder x y carry)\n",
+    "sha256": "cc31afddcd126263ebab7e53389bc371243429b4ef9bf889e2c61727d3583840"
+  },
+  "CorruptedFieldRecovery.BitCostPrototype.stage_charge": {
+    "emitted_type": "CorruptedFieldRecovery.BitCostPrototype.stage_charge : \u2200 (k : Nat) (x y carry : Bool),\n  And\n    (Eq.{1}\n      (CorruptedFieldRecovery.BitCostPrototype.Charge.reads\n        (CorruptedFieldRecovery.BitCostPrototype.State.charge\n          (CorruptedFieldRecovery.BitCostPrototype.RunReport.final\n            (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))\n      13)\n    (And\n      (Eq.{1}\n        (CorruptedFieldRecovery.BitCostPrototype.Charge.writes\n          (CorruptedFieldRecovery.BitCostPrototype.State.charge\n            (CorruptedFieldRecovery.BitCostPrototype.RunReport.final\n              (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))\n        8)\n      (And\n        (Eq.{1}\n          (CorruptedFieldRecovery.BitCostPrototype.Charge.gates\n            (CorruptedFieldRecovery.BitCostPrototype.State.charge\n              (CorruptedFieldRecovery.BitCostPrototype.RunReport.final\n                (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))\n          5)\n        (Eq.{1}\n          (CorruptedFieldRecovery.BitCostPrototype.Charge.controlBits\n            (CorruptedFieldRecovery.BitCostPrototype.State.charge\n              (CorruptedFieldRecovery.BitCostPrototype.RunReport.final\n                (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))\n          (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 (CorruptedFieldRecovery.BitCostPrototype.addressWidth k))\n            (HMul.hMul.{0, 0, 0} 8\n              (HAdd.hAdd.{0, 0, 0} CorruptedFieldRecovery.BitCostPrototype.opcodeBits\n                CorruptedFieldRecovery.BitCostPrototype.pcBits))))))\n",
+    "sha256": "8ece11b733b3e507907eb6266c9a6c8979d7273f39f474649286f9a6e48d97bf"
+  },
+  "CorruptedFieldRecovery.BitCostPrototype.stage_total_charge": {
+    "emitted_type": "CorruptedFieldRecovery.BitCostPrototype.stage_total_charge : \u2200 (k : Nat) (x y carry : Bool),\n  Eq.{1}\n    (CorruptedFieldRecovery.BitCostPrototype.Charge.total\n      (CorruptedFieldRecovery.BitCostPrototype.State.charge\n        (CorruptedFieldRecovery.BitCostPrototype.RunReport.final\n          (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))\n    (HAdd.hAdd.{0, 0, 0} 82 (HMul.hMul.{0, 0, 0} 3 (CorruptedFieldRecovery.BitCostPrototype.addressWidth k)))\n",
+    "sha256": "10ccc1cd89605668131271c054bb99e526d51272b163229eb89136ef54ecad62"
+  },
+  "CorruptedFieldRecovery.BitCostPrototype.execute_declared_measure_exact": {
+    "emitted_type": "CorruptedFieldRecovery.BitCostPrototype.execute_declared_measure_exact : \u2200 (k : Nat)\n  (ops : List.{0} CorruptedFieldRecovery.BitCostPrototype.Op) (s : CorruptedFieldRecovery.BitCostPrototype.State),\n  Eq.{1}\n    (CorruptedFieldRecovery.BitCostPrototype.RunReport.peakDeclaredBits\n      (CorruptedFieldRecovery.BitCostPrototype.execute k ops s))\n    40\n",
+    "sha256": "0e22720b8d2b7ea2d414ec8e04faa9c4d3945db5a2d5158f2bb7a987e81a0b78"
+  },
+  "CorruptedFieldRecovery.BitCostPrototype.stage_declared_measure_exact": {
+    "emitted_type": "CorruptedFieldRecovery.BitCostPrototype.stage_declared_measure_exact : \u2200 (k : Nat) (x y carry : Bool),\n  Eq.{1}\n    (CorruptedFieldRecovery.BitCostPrototype.RunReport.peakDeclaredBits\n      (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))\n    40\n",
+    "sha256": "45276674a80f28425165b6826752baa99ded0ecb2265974a1bfac0db60d8db18"
+  },
+  "CorruptedFieldRecovery.BitCostPrototype.ripple_correct": {
+    "emitted_type": "CorruptedFieldRecovery.BitCostPrototype.ripple_correct : \u2200 (xs ys : CorruptedFieldRecovery.BitCostPrototype.Word)\n  (carry : Bool) (hLen : Eq.{1} (List.length.{0} xs) (List.length.{0} ys)),\n  Eq.{1}\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.BitCostPrototype.value xs)\n        (CorruptedFieldRecovery.BitCostPrototype.value ys))\n      (CorruptedFieldRecovery.BitCostPrototype.bitVal carry))\n    (HAdd.hAdd.{0, 0, 0}\n      (CorruptedFieldRecovery.BitCostPrototype.value (CorruptedFieldRecovery.BitCostPrototype.ripple xs ys carry).1)\n      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (List.length.{0} xs))\n        (CorruptedFieldRecovery.BitCostPrototype.bitVal\n          (CorruptedFieldRecovery.BitCostPrototype.ripple xs ys carry).2)))\n",
+    "sha256": "361a8c9b3958c4413c944c4ead02d50e6233559226f21fbabaf63d9cbb9eced7"
+  }
+}

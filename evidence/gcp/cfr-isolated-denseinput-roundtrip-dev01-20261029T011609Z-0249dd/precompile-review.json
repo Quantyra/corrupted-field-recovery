@@ -1,0 +1,10 @@
+{
+  "reviewer": "root",
+  "status": "rejected-precompile-static-review",
+  "findings": [
+    "t.property.2.1 should be t.property.2",
+    "congrArg result requires simpa"
+  ],
+  "compiled": false,
+  "coverage_promoted": false
+}

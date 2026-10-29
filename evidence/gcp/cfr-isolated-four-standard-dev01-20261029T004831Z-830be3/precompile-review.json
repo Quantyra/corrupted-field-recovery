@@ -1,0 +1,8 @@
+{
+  "source_sha256": "75cd622d5bafd6bf760eb51b31996270c569d9e048410469d90c753dcac71c68",
+  "status": "rejected-precompile-forward-reference",
+  "reviewer": "root",
+  "finding": "linearMap_scalar_of_commutes_generator is declared after its use; preserve exact draft and await reorder successor",
+  "compiled": false,
+  "coverage_promoted": false
+}

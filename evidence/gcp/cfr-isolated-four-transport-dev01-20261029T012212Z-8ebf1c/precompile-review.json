@@ -1,0 +1,6 @@
+{
+  "status": "superseded-precompile-reverse-implication",
+  "finding": "reverse transport proof requires hstd.mpr",
+  "compiled": false,
+  "coverage_promoted": false
+}

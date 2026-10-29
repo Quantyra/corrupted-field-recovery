@@ -1,0 +1,16 @@
+{
+  "reviewer": "root",
+  "status": "accepted-narrow-intermediate-only",
+  "actual_emitted_types_reviewed": true,
+  "findings": [
+    "pair relations derive from concrete balances h0/h1/h2 and nonzero c",
+    "trace right-injectivity assumes exact pairing equality",
+    "common self-adjoint helper assumes three pair relations and concludes equal blocks plus self-adjointness"
+  ],
+  "coverage_promoted": false,
+  "remaining": [
+    "assemble common block from actual balances",
+    "fourth-contraction scalar identification",
+    "basis transport and dimensions"
+  ]
+}

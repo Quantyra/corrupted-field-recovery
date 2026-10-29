@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-29T01:46:10.190720+00:00",
+  "conservative_stop_utc": "2026-10-29T02:48:25.522806+00:00",
+  "minutes_remaining": 62.25553476666666,
+  "stage_timeout_seconds": 1800,
+  "preservation_reserve_seconds": 1500,
+  "sufficient": true,
+  "phase": "remote hash verification complete; single launch SSH pending",
+  "no_new_queued_runs_this_start": true
+}

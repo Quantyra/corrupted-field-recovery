@@ -1,0 +1,13 @@
+{
+  "reviewer": "root",
+  "status": "accepted-narrow-prototype-only",
+  "actual_emitted_types_reviewed": 7,
+  "scope": "full-adder arithmetic; one-step erasure; declared stage charge; declared-measure equations; equal-length ripple value equality",
+  "unproved": [
+    "variable-array execution refinement",
+    "PC adequacy",
+    "actual peak live storage",
+    "manuscript costs"
+  ],
+  "coverage_promoted": false
+}

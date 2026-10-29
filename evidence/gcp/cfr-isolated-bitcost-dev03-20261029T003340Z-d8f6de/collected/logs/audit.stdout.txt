@@ -1,0 +1,101 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BitCostPrototype.fullAdder_correct
+CorruptedFieldRecovery.BitCostPrototype.fullAdder_correct : ∀ (x y carry : Bool),
+  Eq.{1}
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.BitCostPrototype.bitVal x)
+        (CorruptedFieldRecovery.BitCostPrototype.bitVal y))
+      (CorruptedFieldRecovery.BitCostPrototype.bitVal carry))
+    (HAdd.hAdd.{0, 0, 0}
+      (CorruptedFieldRecovery.BitCostPrototype.bitVal (CorruptedFieldRecovery.BitCostPrototype.fullAdder x y carry).1)
+      (HMul.hMul.{0, 0, 0} 2
+        (CorruptedFieldRecovery.BitCostPrototype.bitVal
+          (CorruptedFieldRecovery.BitCostPrototype.fullAdder x y carry).2)))
+CFR_TYPE_END:CorruptedFieldRecovery.BitCostPrototype.fullAdder_correct
+'CorruptedFieldRecovery.BitCostPrototype.fullAdder_correct' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BitCostPrototype.stage_erasure
+CorruptedFieldRecovery.BitCostPrototype.stage_erasure : ∀ (k : Nat) (x y carry : Bool),
+  Eq.{1}
+    (CorruptedFieldRecovery.BitCostPrototype.erasure
+      (CorruptedFieldRecovery.BitCostPrototype.RunReport.final
+        (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry)))
+    (CorruptedFieldRecovery.BitCostPrototype.fullAdder x y carry)
+CFR_TYPE_END:CorruptedFieldRecovery.BitCostPrototype.stage_erasure
+'CorruptedFieldRecovery.BitCostPrototype.stage_erasure' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BitCostPrototype.stage_charge
+CorruptedFieldRecovery.BitCostPrototype.stage_charge : ∀ (k : Nat) (x y carry : Bool),
+  And
+    (Eq.{1}
+      (CorruptedFieldRecovery.BitCostPrototype.Charge.reads
+        (CorruptedFieldRecovery.BitCostPrototype.State.charge
+          (CorruptedFieldRecovery.BitCostPrototype.RunReport.final
+            (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))
+      13)
+    (And
+      (Eq.{1}
+        (CorruptedFieldRecovery.BitCostPrototype.Charge.writes
+          (CorruptedFieldRecovery.BitCostPrototype.State.charge
+            (CorruptedFieldRecovery.BitCostPrototype.RunReport.final
+              (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))
+        8)
+      (And
+        (Eq.{1}
+          (CorruptedFieldRecovery.BitCostPrototype.Charge.gates
+            (CorruptedFieldRecovery.BitCostPrototype.State.charge
+              (CorruptedFieldRecovery.BitCostPrototype.RunReport.final
+                (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))
+          5)
+        (Eq.{1}
+          (CorruptedFieldRecovery.BitCostPrototype.Charge.controlBits
+            (CorruptedFieldRecovery.BitCostPrototype.State.charge
+              (CorruptedFieldRecovery.BitCostPrototype.RunReport.final
+                (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))
+          (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 (CorruptedFieldRecovery.BitCostPrototype.addressWidth k))
+            (HMul.hMul.{0, 0, 0} 8
+              (HAdd.hAdd.{0, 0, 0} CorruptedFieldRecovery.BitCostPrototype.opcodeBits
+                CorruptedFieldRecovery.BitCostPrototype.pcBits))))))
+CFR_TYPE_END:CorruptedFieldRecovery.BitCostPrototype.stage_charge
+'CorruptedFieldRecovery.BitCostPrototype.stage_charge' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BitCostPrototype.stage_total_charge
+CorruptedFieldRecovery.BitCostPrototype.stage_total_charge : ∀ (k : Nat) (x y carry : Bool),
+  Eq.{1}
+    (CorruptedFieldRecovery.BitCostPrototype.Charge.total
+      (CorruptedFieldRecovery.BitCostPrototype.State.charge
+        (CorruptedFieldRecovery.BitCostPrototype.RunReport.final
+          (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))))
+    (HAdd.hAdd.{0, 0, 0} 82 (HMul.hMul.{0, 0, 0} 3 (CorruptedFieldRecovery.BitCostPrototype.addressWidth k)))
+CFR_TYPE_END:CorruptedFieldRecovery.BitCostPrototype.stage_total_charge
+'CorruptedFieldRecovery.BitCostPrototype.stage_total_charge' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BitCostPrototype.execute_declared_measure_exact
+CorruptedFieldRecovery.BitCostPrototype.execute_declared_measure_exact : ∀ (k : Nat)
+  (ops : List.{0} CorruptedFieldRecovery.BitCostPrototype.Op) (s : CorruptedFieldRecovery.BitCostPrototype.State),
+  Eq.{1}
+    (CorruptedFieldRecovery.BitCostPrototype.RunReport.peakDeclaredBits
+      (CorruptedFieldRecovery.BitCostPrototype.execute k ops s))
+    40
+CFR_TYPE_END:CorruptedFieldRecovery.BitCostPrototype.execute_declared_measure_exact
+'CorruptedFieldRecovery.BitCostPrototype.execute_declared_measure_exact' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BitCostPrototype.stage_declared_measure_exact
+CorruptedFieldRecovery.BitCostPrototype.stage_declared_measure_exact : ∀ (k : Nat) (x y carry : Bool),
+  Eq.{1}
+    (CorruptedFieldRecovery.BitCostPrototype.RunReport.peakDeclaredBits
+      (CorruptedFieldRecovery.BitCostPrototype.stage k x y carry))
+    40
+CFR_TYPE_END:CorruptedFieldRecovery.BitCostPrototype.stage_declared_measure_exact
+'CorruptedFieldRecovery.BitCostPrototype.stage_declared_measure_exact' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BitCostPrototype.ripple_correct
+CorruptedFieldRecovery.BitCostPrototype.ripple_correct : ∀ (xs ys : CorruptedFieldRecovery.BitCostPrototype.Word)
+  (carry : Bool) (hLen : Eq.{1} (List.length.{0} xs) (List.length.{0} ys)),
+  Eq.{1}
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.BitCostPrototype.value xs)
+        (CorruptedFieldRecovery.BitCostPrototype.value ys))
+      (CorruptedFieldRecovery.BitCostPrototype.bitVal carry))
+    (HAdd.hAdd.{0, 0, 0}
+      (CorruptedFieldRecovery.BitCostPrototype.value (CorruptedFieldRecovery.BitCostPrototype.ripple xs ys carry).1)
+      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (List.length.{0} xs))
+        (CorruptedFieldRecovery.BitCostPrototype.bitVal
+          (CorruptedFieldRecovery.BitCostPrototype.ripple xs ys carry).2)))
+CFR_TYPE_END:CorruptedFieldRecovery.BitCostPrototype.ripple_correct
+'CorruptedFieldRecovery.BitCostPrototype.ripple_correct' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

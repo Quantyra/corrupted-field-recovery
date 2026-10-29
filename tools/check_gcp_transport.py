@@ -1,5 +1,9 @@
 """Pure-Python regression for PuTTY's absolute remote destinations; no Lean."""
-from gcp_cfr import VM, scp_destination, submission_guard
+import hashlib
+import json
+import tempfile
+from pathlib import Path
+from gcp_cfr import VM, scp_destination, submission_guard, prepare_execution
 
 
 def main():
@@ -22,6 +26,16 @@ def main():
         pass
     else:
         raise AssertionError('Accepted shell metacharacter in run identity')
+    with tempfile.TemporaryDirectory() as directory:
+        out = Path(directory)
+        runner = b'# retained controller bytes\n'
+        prepare_execution(out, run, runner)
+        shell = (out/'run.sh').read_bytes()
+        manifest = json.loads((out/'execution-manifest.json').read_text())
+        assert manifest['shell_sha256'] == hashlib.sha256(shell).hexdigest()
+        assert manifest['runner_sha256'] == hashlib.sha256(runner).hexdigest()
+        assert run.encode() in shell and b'RUNNERHASH' not in shell
+        assert not (out/'launch-request.json').exists()
     print('PASS: absolute destinations, invalid-home/run controls, ordered non-compiling guard')
 
 

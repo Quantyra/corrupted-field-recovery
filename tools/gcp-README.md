@@ -103,3 +103,13 @@ and internal subnet traffic; no firewall/network policy was changed. The host
 key is explicitly pinned. `stop-owned` removes this access configuration after
 preservation, before stopping the dedicated VM. The creation ownership receipt
 is a separate valid shutdown authority and never rewrites initial run state.
+
+### Bounded continuation on the dedicated builder
+
+Preserve every launched handle through terminal collection before a lifecycle change. Check the actual instance `lastStartTimestamp` and `scheduling.maxRunDuration` on each new submission; use the earlier saved effective ceiling if it is more conservative. Allow the full stage timeout plus at least 25 minutes for observation, collection and shutdown. Do not extend the ceiling or change a live runner's timeout.
+
+At a batch checkpoint, use `stop-owned` with the task creation authority `cfr-isolated-create-20261028T224800Z-c092b2/ownership.json`. It refuses uncollected launches, active Lean/Lake processes or an acquired task lock, removes the task-only `external-nat` access configuration, stops this dedicated VM and preserves final state/cache evidence. Retain its boot disk and campaign dependency cache.
+
+For a later authorized continuation, read the preserved stop receipt and inspect this exact VM/profile and effective ingress again. Start the same dedicated VM once, recording a fresh start intent/result and ownership receipt; observe that operation if transport fails instead of issuing a second start. Preserve the new actual start timestamp and four-hour STOP ceiling. If internet is needed for pinned dependency/cache downloads, add only the task-owned ephemeral `external-nat` configuration after confirming it is absent and effective ingress remains restricted; preserve that receipt and remove it again at the next safe stop. Do not change shared networking, the shared builder, disk/cache ownership or the immutable source archives.
+
+A fresh capture/run identity may reuse verified persistent dependencies; it must retain exact source/dependency/controller hashes and the normal no-competing-compiler guard. `submit` can start a stopped VM but does not recreate a removed external IP; provisioning the task-only egress and verifying its exact state is an explicit lifecycle step. After an uncertain start or access-config operation, inspect actual state before any retry. The old run identities and failed transport receipts remain historical evidence.

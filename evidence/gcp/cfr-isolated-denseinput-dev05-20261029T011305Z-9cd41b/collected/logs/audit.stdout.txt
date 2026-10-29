@@ -1,0 +1,86 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.IncreasingTriple
+CorruptedFieldRecovery.IncreasingTriple : (n : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.IncreasingTriple
+'CorruptedFieldRecovery.IncreasingTriple' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.DenseInputPayload
+CorruptedFieldRecovery.DenseInputPayload : (n : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.DenseInputPayload
+'CorruptedFieldRecovery.DenseInputPayload' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.increasingTripleI
+@CorruptedFieldRecovery.increasingTripleI : {n : Nat} → (t : CorruptedFieldRecovery.IncreasingTriple n) → Fin n
+CFR_TYPE_END:CorruptedFieldRecovery.increasingTripleI
+'CorruptedFieldRecovery.increasingTripleI' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.increasingTripleJ
+@CorruptedFieldRecovery.increasingTripleJ : {n : Nat} → (t : CorruptedFieldRecovery.IncreasingTriple n) → Fin n
+CFR_TYPE_END:CorruptedFieldRecovery.increasingTripleJ
+'CorruptedFieldRecovery.increasingTripleJ' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.increasingTripleK
+@CorruptedFieldRecovery.increasingTripleK : {n : Nat} → (t : CorruptedFieldRecovery.IncreasingTriple n) → Fin n
+CFR_TYPE_END:CorruptedFieldRecovery.increasingTripleK
+'CorruptedFieldRecovery.increasingTripleK' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.coordinateVectorCode
+@CorruptedFieldRecovery.coordinateVectorCode : {n : Nat} → (i : Fin n) → CorruptedFieldRecovery.BinaryVector n
+CFR_TYPE_END:CorruptedFieldRecovery.coordinateVectorCode
+'CorruptedFieldRecovery.coordinateVectorCode' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.coordinateVectorCode_eq_coordinateVector
+@CorruptedFieldRecovery.coordinateVectorCode_eq_coordinateVector : ∀ {n : Nat} (i : Fin n),
+  Eq.{1} (CorruptedFieldRecovery.coordinateVectorCode i) (CorruptedFieldRecovery.coordinateVector i)
+CFR_TYPE_END:CorruptedFieldRecovery.coordinateVectorCode_eq_coordinateVector
+'CorruptedFieldRecovery.coordinateVectorCode_eq_coordinateVector' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.coordinateMonomial
+@CorruptedFieldRecovery.coordinateMonomial : {n : Nat} → (i j k : Fin n) → CorruptedFieldRecovery.BinaryTensor n
+CFR_TYPE_END:CorruptedFieldRecovery.coordinateMonomial
+'CorruptedFieldRecovery.coordinateMonomial' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.coordinateMonomial_apply
+@CorruptedFieldRecovery.coordinateMonomial_apply : ∀ {n : Nat} (i j k : Fin n)
+  (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.coordinateMonomial i j k) x) y) z)
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x i) (y j)) (z k))
+CFR_TYPE_END:CorruptedFieldRecovery.coordinateMonomial_apply
+'CorruptedFieldRecovery.coordinateMonomial_apply' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.minorTensor
+@CorruptedFieldRecovery.minorTensor : {n : Nat} → (i j k : Fin n) → CorruptedFieldRecovery.BinaryTensor n
+CFR_TYPE_END:CorruptedFieldRecovery.minorTensor
+'CorruptedFieldRecovery.minorTensor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.minorTensor_apply
+@CorruptedFieldRecovery.minorTensor_apply : ∀ {n : Nat} (i j k : Fin n) (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.minorTensor i j k) x) y) z)
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x i) (y j)) (z k))
+              (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x i) (y k)) (z j)))
+            (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x j) (y i)) (z k)))
+          (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x j) (y k)) (z i)))
+        (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x k) (y i)) (z j)))
+      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x k) (y j)) (z i)))
+CFR_TYPE_END:CorruptedFieldRecovery.minorTensor_apply
+'CorruptedFieldRecovery.minorTensor_apply' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.minorTensor_isAlternating
+@CorruptedFieldRecovery.minorTensor_isAlternating : ∀ {n : Nat} (i j k : Fin n),
+  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.minorTensor i j k)
+CFR_TYPE_END:CorruptedFieldRecovery.minorTensor_isAlternating
+'CorruptedFieldRecovery.minorTensor_isAlternating' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.encodeDenseInput
+@CorruptedFieldRecovery.encodeDenseInput : {n : Nat} →
+  (C : CorruptedFieldRecovery.BinaryTensor n) → CorruptedFieldRecovery.DenseInputPayload n
+CFR_TYPE_END:CorruptedFieldRecovery.encodeDenseInput
+'CorruptedFieldRecovery.encodeDenseInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.encodeDenseInput_eq_semanticCoefficient
+@CorruptedFieldRecovery.encodeDenseInput_eq_semanticCoefficient : ∀ {n : Nat}
+  (C : CorruptedFieldRecovery.BinaryTensor n) (t : CorruptedFieldRecovery.IncreasingTriple n),
+  Eq.{1} (CorruptedFieldRecovery.encodeDenseInput C t)
+    (CorruptedFieldRecovery.coefficient C (CorruptedFieldRecovery.increasingTripleI t)
+      (CorruptedFieldRecovery.increasingTripleJ t) (CorruptedFieldRecovery.increasingTripleK t))
+CFR_TYPE_END:CorruptedFieldRecovery.encodeDenseInput_eq_semanticCoefficient
+'CorruptedFieldRecovery.encodeDenseInput_eq_semanticCoefficient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.decodeDenseInput
+@CorruptedFieldRecovery.decodeDenseInput : {n : Nat} →
+  (payload : CorruptedFieldRecovery.DenseInputPayload n) → CorruptedFieldRecovery.BinaryTensor n
+CFR_TYPE_END:CorruptedFieldRecovery.decodeDenseInput
+'CorruptedFieldRecovery.decodeDenseInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

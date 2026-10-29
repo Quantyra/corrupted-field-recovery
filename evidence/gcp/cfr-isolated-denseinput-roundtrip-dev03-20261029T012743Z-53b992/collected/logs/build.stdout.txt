@@ -1,0 +1,42 @@
+✖ [1347/1347] Building CorruptedFieldRecovery.DenseInput (13s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/DenseInput.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/DenseInput.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/DenseInput.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/DenseInput.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/DenseInput.setup.json --json
+error: CorruptedFieldRecovery/DenseInput.lean:137:34: Type mismatch
+  if_congr hEq
+has type
+  ?m.173 = ?m.175 →
+    ?m.174 = ?m.176 →
+      (if
+            increasingTripleI s = increasingTripleI t ∧
+              increasingTripleJ s = increasingTripleJ t ∧ increasingTripleK s = increasingTripleK t then
+          ?m.173
+        else ?m.174) =
+        if s = t then ?m.175 else ?m.176
+but is expected to have type
+  (if
+        increasingTripleI s = increasingTripleI t ∧
+          increasingTripleJ s = increasingTripleJ t ∧ increasingTripleK s = increasingTripleK t then
+      1
+    else 0) =
+    if s = t then 1 else 0
+error: CorruptedFieldRecovery/DenseInput.lean:192:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (((decodeDenseInput (encodeDenseInput C)) (coordinateVectorCode (increasingTripleI ⟨((i, j), k), ⋯⟩)))
+      (coordinateVectorCode (increasingTripleJ ⟨((i, j), k), ⋯⟩)))
+    (coordinateVectorCode (increasingTripleK ⟨((i, j), k), ⋯⟩))
+in the target expression
+  (((decodeDenseInput (encodeDenseInput C)) (coordinateVectorCode i)) (coordinateVectorCode j))
+      (coordinateVectorCode k) =
+    ((C (coordinateVectorCode i)) (coordinateVectorCode j)) (coordinateVectorCode k)
+
+case h
+n : ℕ
+C : BinaryTensor n
+hC : IsAlternating C
+i j k : Fin n
+hij : i < j
+hjk : j < k
+⊢ (((decodeDenseInput (encodeDenseInput C)) (coordinateVectorCode i)) (coordinateVectorCode j))
+      (coordinateVectorCode k) =
+    ((C (coordinateVectorCode i)) (coordinateVectorCode j)) (coordinateVectorCode k)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.DenseInput

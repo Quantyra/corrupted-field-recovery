@@ -1,0 +1,11 @@
+{
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "instance_id": "3335066512373302615",
+  "last_start": "2026-10-28T15:49:05.791-07:00",
+  "max_run_seconds": 14400,
+  "hard_stop_derived_utc": "2026-10-28T19:49:05.791000-07:00",
+  "checked_utc": "2026-10-29T01:18:01.930567+00:00",
+  "minutes_remaining": 91.06434055,
+  "reserve_minutes": 25,
+  "source": "actual submission-instance-state.stdout.txt"
+}

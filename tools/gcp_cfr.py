@@ -136,27 +136,9 @@ def submit(args):
     elif state['status'] != 'RUNNING':
         raise RuntimeError('Instance not ready: '+state['status'])
     save(out/'instance-ownership.json', ownership)
+    prepare_execution(out, args.run, runner_bytes)
     preflight = ssh(submission_guard(args.run), out, 'submission-preflight')
     remote = '$HOME/quantyra-cfr-runs/'+args.run
-    script = '''#!/usr/bin/env bash
-set -euo pipefail
-run="$HOME/quantyra-cfr-runs/RUN"
-campaign="$HOME/quantyra-cfr-runs/CAMPAIGN"
-mkdir -p "$run/logs"
-exec > >(tee "$run/logs/runner.stdout.txt") 2> >(tee "$run/logs/runner.stderr.txt" >&2)
-trap 'code=$?; echo "$code" > "$run/exit-code"; date -u +%FT%TZ > "$run/finished-utc"' EXIT
-date -u +%FT%TZ > "$run/started-utc"
-exec 9> "$campaign/lock"
-flock -n 9 || exit 75
-echo 'RUNNERHASH  '"$run/gcp_cfr_runner.py" | sha256sum -c -
-CFR_GCP_RUN=RUN python3 "$run/gcp_cfr_runner.py" "$run" "$campaign"
-'''.replace('RUNNERHASH', hashlib.sha256(runner_bytes).hexdigest()).replace('CAMPAIGN', CAMPAIGN).replace(
-        'quantyra-cfr-runs/RUN', 'quantyra-cfr-runs/'+args.run).replace('CFR_GCP_RUN=RUN ', 'CFR_GCP_RUN='+args.run+' ')
-    (out/'run.sh').write_text(script, encoding='utf-8', newline='\n')
-    save(out/'execution-manifest.json', dict(runner_sha256=hashlib.sha256(runner_bytes).hexdigest(),
-         shell_sha256=hashlib.sha256((out/'run.sh').read_bytes()).hexdigest(), campaign=CAMPAIGN,
-         controller_sha256=CONTROLLER_SHA256,
-         stage_timeout_seconds=1800, ownership_policy='Stop task-started VM only after outcomes retained and no other work.'))
     home = next(line.removeprefix('CFR_HOME=') for line in preflight.decode().splitlines() if line.startswith('CFR_HOME='))
     remote_scp = scp_destination(home, args.run)
     cloud(['compute', 'scp', str(out/'inputs.tar.gz'), str(out/'capture-manifest.json'),
@@ -179,6 +161,28 @@ CFR_GCP_RUN=RUN python3 "$run/gcp_cfr_runner.py" "$run" "$campaign"
         'echo "$!" > "$run/runner-pid"\nprintf "REMOTE_PID="; cat "$run/runner-pid"\n', out, 'launch-once')
 
 
+def prepare_execution(out, run, runner_bytes):
+    script = '''#!/usr/bin/env bash
+set -euo pipefail
+run="$HOME/quantyra-cfr-runs/RUN"
+campaign="$HOME/quantyra-cfr-runs/CAMPAIGN"
+mkdir -p "$run/logs"
+exec > >(tee "$run/logs/runner.stdout.txt") 2> >(tee "$run/logs/runner.stderr.txt" >&2)
+trap 'code=$?; echo "$code" > "$run/exit-code"; date -u +%FT%TZ > "$run/finished-utc"' EXIT
+date -u +%FT%TZ > "$run/started-utc"
+exec 9> "$campaign/lock"
+flock -n 9 || exit 75
+echo 'RUNNERHASH  '"$run/gcp_cfr_runner.py" | sha256sum -c -
+CFR_GCP_RUN=RUN python3 "$run/gcp_cfr_runner.py" "$run" "$campaign"
+'''.replace('RUNNERHASH', hashlib.sha256(runner_bytes).hexdigest()).replace('CAMPAIGN', CAMPAIGN).replace(
+        'quantyra-cfr-runs/RUN', 'quantyra-cfr-runs/'+run).replace('CFR_GCP_RUN=RUN ', 'CFR_GCP_RUN='+run+' ')
+    (out/'run.sh').write_text(script, encoding='utf-8', newline='\n')
+    save(out/'execution-manifest.json', dict(runner_sha256=hashlib.sha256(runner_bytes).hexdigest(),
+         shell_sha256=hashlib.sha256((out/'run.sh').read_bytes()).hexdigest(), campaign=CAMPAIGN,
+         controller_sha256=CONTROLLER_SHA256,
+         stage_timeout_seconds=1800, ownership_policy='Stop task-started VM only after outcomes retained and no other work.'))
+
+
 def scp_destination(home, run):
     """PuTTY SCP requires an absolute remote path; do not rely on tilde expansion."""
     if not re.fullmatch(r'/[A-Za-z0-9_./-]+', home) or '..' in home.split('/'):
@@ -195,6 +199,8 @@ def resume_prelaunch(args):
         raise RuntimeError('Launch requested already; observe the existing handle')
     manifest = json.loads((out/'capture-manifest.json').read_text())
     assert hashlib.sha256((out/'inputs.tar.gz').read_bytes()).hexdigest() == manifest['archive_sha256']
+    if not (out/'execution-manifest.json').exists():
+        prepare_execution(out, args.run, (out/'gcp_cfr_runner.py').read_bytes())
     label = unique('resume-prelaunch')
     remote = '$HOME/quantyra-cfr-runs/'+args.run
     preflight = ssh('set -eu\nrun="'+remote+'"\n'
@@ -304,7 +310,12 @@ def stop_owned(args):
     save(out/(label+'-preservation.json'), dict(campaign=CAMPAIGN, utc=utc(),
          output_sha256=hashlib.sha256(raw).hexdigest(), all_task_outcomes_collected=True,
          no_active_lean_or_lake=True, task_lock_free=True, persistent_cache_retained=True))
-    state = cloud(['compute', 'instances', 'describe', VM, '--format=value(status)'], out, label+'-initial-state').decode().strip()
+    current = json.loads(cloud(['compute', 'instances', 'describe', VM, '--format=json'], out, label+'-initial-state'))
+    if created:
+        original = json.loads((authority.parent/'create-isolated-instance.stdout.txt').read_text(encoding='utf-8'))
+        if not isinstance(original, list) or len(original) != 1 or current.get('id') != original[0].get('id'):
+            raise RuntimeError('Instance identity differs from task creation receipt; refusing shutdown')
+    state = current['status']
     if state != 'RUNNING':
         raise RuntimeError('Expected running task-owned instance, got '+state)
     if PROFILE.get('ephemeral_external_ip'):

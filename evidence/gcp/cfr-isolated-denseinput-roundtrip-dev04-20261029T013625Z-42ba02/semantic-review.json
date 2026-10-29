@@ -1,0 +1,19 @@
+{
+  "reviewer": "root",
+  "status": "accepted-finite-function-codec-only",
+  "actual_emitted_types_and_source_reviewed": true,
+  "findings": [
+    "minor basis evaluation assumes both triples strictly increasing and yields exact equality indicator",
+    "decoder alternating for every payload",
+    "encode decode payload equals payload unconditionally",
+    "decode encode C equals C assumes precisely IsAlternating C",
+    "computational encoder and decoder use Pi.single and finite sums"
+  ],
+  "coverage_promoted": false,
+  "remaining": [
+    "physical lex-byte serialization",
+    "cost",
+    "field/support promise",
+    "verifier"
+  ]
+}

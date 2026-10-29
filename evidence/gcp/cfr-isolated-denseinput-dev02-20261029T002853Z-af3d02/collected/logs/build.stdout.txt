@@ -1,0 +1,33 @@
+✖ [1347/1347] Building CorruptedFieldRecovery.DenseInput (4.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/DenseInput.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/DenseInput.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/DenseInput.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/DenseInput.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/DenseInput.setup.json --json
+error: CorruptedFieldRecovery/DenseInput.lean:33:31: Unknown identifier `Pi.proj`
+error: CorruptedFieldRecovery/DenseInput.lean:38:6: No goals to be solved
+error: CorruptedFieldRecovery/DenseInput.lean:43:6: No goals to be solved
+error: CorruptedFieldRecovery/DenseInput.lean:48:6: No goals to be solved
+error: CorruptedFieldRecovery/DenseInput.lean:58:56: unsolved goals
+n : ℕ
+i j k : Fin n
+x y z : BinaryVector n
+⊢ ((sorry ()) z = z k ∨ y j = 0) ∨ x i = 0
+warning: CorruptedFieldRecovery/DenseInput.lean:59:8: declaration uses `sorry`
+error: CorruptedFieldRecovery/DenseInput.lean:80:2: unsolved goals
+case refine_1
+n : ℕ
+i j k : Fin n
+x z : BinaryVector n
+⊢ x i * x j * z k * 2 + x i * x k * z j * 2 + x j * x k * z i * 2 = 0
+error: CorruptedFieldRecovery/DenseInput.lean:83:2: unsolved goals
+case refine_2
+n : ℕ
+i j k : Fin n
+x y : BinaryVector n
+⊢ x i * y j * x k * 2 + x i * y k * x j * 2 + x k * x j * y i * 2 = 0
+error: CorruptedFieldRecovery/DenseInput.lean:86:2: unsolved goals
+case refine_3
+n : ℕ
+i j k : Fin n
+x y : BinaryVector n
+⊢ x i * y j * y k * 2 + y j * y i * x k * 2 + y k * x j * y i * 2 = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.DenseInput

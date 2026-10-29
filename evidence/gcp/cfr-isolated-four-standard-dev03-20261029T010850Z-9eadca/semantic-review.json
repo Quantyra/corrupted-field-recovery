@@ -1,0 +1,19 @@
+{
+  "reviewer": "root",
+  "status": "accepted-standard-coordinate-only",
+  "actual_emitted_types_reviewed": true,
+  "findings": [
+    "fieldFourBalanced iff exists scalar map",
+    "finite K and prime-field algebra, c nonzero, one of a/b/d generating",
+    "no final-equality premise",
+    "fourth weighted pairing coefficients remain inside trace"
+  ],
+  "coverage_promoted": false,
+  "remaining": [
+    "arbitrary sampled-basis transport",
+    "dimension",
+    "input and sampling",
+    "constructor",
+    "cost"
+  ]
+}

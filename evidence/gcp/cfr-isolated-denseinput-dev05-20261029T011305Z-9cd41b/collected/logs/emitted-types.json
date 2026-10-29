@@ -1,0 +1,62 @@
+{
+  "CorruptedFieldRecovery.IncreasingTriple": {
+    "emitted_type": "CorruptedFieldRecovery.IncreasingTriple : (n : Nat) \u2192 Type\n",
+    "sha256": "6b2ecdc38403bb16f0b9691ddbd7f144d5e8ea855c7f67170666a4eb0a420506"
+  },
+  "CorruptedFieldRecovery.DenseInputPayload": {
+    "emitted_type": "CorruptedFieldRecovery.DenseInputPayload : (n : Nat) \u2192 Type\n",
+    "sha256": "414e866733a0c82e5bfb843185db93818d11da4f075c65b926f6e785eeb7e689"
+  },
+  "CorruptedFieldRecovery.increasingTripleI": {
+    "emitted_type": "@CorruptedFieldRecovery.increasingTripleI : {n : Nat} \u2192 (t : CorruptedFieldRecovery.IncreasingTriple n) \u2192 Fin n\n",
+    "sha256": "05a3735f7cee90cc9dc962cd33d3b1209cd779be535b09d86311e32b128f52d9"
+  },
+  "CorruptedFieldRecovery.increasingTripleJ": {
+    "emitted_type": "@CorruptedFieldRecovery.increasingTripleJ : {n : Nat} \u2192 (t : CorruptedFieldRecovery.IncreasingTriple n) \u2192 Fin n\n",
+    "sha256": "551cf7211ca5f7faeee8ebbec59972d197085b1bf3a2c8d7667766db6c775f9a"
+  },
+  "CorruptedFieldRecovery.increasingTripleK": {
+    "emitted_type": "@CorruptedFieldRecovery.increasingTripleK : {n : Nat} \u2192 (t : CorruptedFieldRecovery.IncreasingTriple n) \u2192 Fin n\n",
+    "sha256": "9115398e310edfdd344157956204aaf8098ef7fc7c80648f7378c949c9b2fcfd"
+  },
+  "CorruptedFieldRecovery.coordinateVectorCode": {
+    "emitted_type": "@CorruptedFieldRecovery.coordinateVectorCode : {n : Nat} \u2192 (i : Fin n) \u2192 CorruptedFieldRecovery.BinaryVector n\n",
+    "sha256": "087c433ba0dcf0f28bad7a34feaed9288f4d72b39db4c3e2a24326ab3a2197f0"
+  },
+  "CorruptedFieldRecovery.coordinateVectorCode_eq_coordinateVector": {
+    "emitted_type": "@CorruptedFieldRecovery.coordinateVectorCode_eq_coordinateVector : \u2200 {n : Nat} (i : Fin n),\n  Eq.{1} (CorruptedFieldRecovery.coordinateVectorCode i) (CorruptedFieldRecovery.coordinateVector i)\n",
+    "sha256": "8f8a8ca9231b9cedf104baca319f39fab63a7fed0b1a103788a58c13c6e8025f"
+  },
+  "CorruptedFieldRecovery.coordinateMonomial": {
+    "emitted_type": "@CorruptedFieldRecovery.coordinateMonomial : {n : Nat} \u2192 (i j k : Fin n) \u2192 CorruptedFieldRecovery.BinaryTensor n\n",
+    "sha256": "e9919c4d9d401c178017bccde9405682644c90a2d4c9d120c33e5cfdc6eebdf7"
+  },
+  "CorruptedFieldRecovery.coordinateMonomial_apply": {
+    "emitted_type": "@CorruptedFieldRecovery.coordinateMonomial_apply : \u2200 {n : Nat} (i j k : Fin n)\n  (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} ((((CorruptedFieldRecovery.coordinateMonomial i j k) x) y) z)\n    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x i) (y j)) (z k))\n",
+    "sha256": "e26f15fcc85919b79101ecc7610734e8e725480cafa255402fe91d60c52f5b32"
+  },
+  "CorruptedFieldRecovery.minorTensor": {
+    "emitted_type": "@CorruptedFieldRecovery.minorTensor : {n : Nat} \u2192 (i j k : Fin n) \u2192 CorruptedFieldRecovery.BinaryTensor n\n",
+    "sha256": "7e71f3ffd906375567ffee4003066bc7db72aa9ebafde570114aa591b900c45d"
+  },
+  "CorruptedFieldRecovery.minorTensor_apply": {
+    "emitted_type": "@CorruptedFieldRecovery.minorTensor_apply : \u2200 {n : Nat} (i j k : Fin n) (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} ((((CorruptedFieldRecovery.minorTensor i j k) x) y) z)\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0}\n          (HAdd.hAdd.{0, 0, 0}\n            (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x i) (y j)) (z k))\n              (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x i) (y k)) (z j)))\n            (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x j) (y i)) (z k)))\n          (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x j) (y k)) (z i)))\n        (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x k) (y i)) (z j)))\n      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (x k) (y j)) (z i)))\n",
+    "sha256": "51273fa4b7775ad8e0ff799cc4403da9bedc212cd68372f35823bcaa8be62991"
+  },
+  "CorruptedFieldRecovery.minorTensor_isAlternating": {
+    "emitted_type": "@CorruptedFieldRecovery.minorTensor_isAlternating : \u2200 {n : Nat} (i j k : Fin n),\n  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.minorTensor i j k)\n",
+    "sha256": "b5edd35791f562c671eb6543a21f6d330b4ffa1eaa4bd36bc882156ab59dcf36"
+  },
+  "CorruptedFieldRecovery.encodeDenseInput": {
+    "emitted_type": "@CorruptedFieldRecovery.encodeDenseInput : {n : Nat} \u2192\n  (C : CorruptedFieldRecovery.BinaryTensor n) \u2192 CorruptedFieldRecovery.DenseInputPayload n\n",
+    "sha256": "c786a6c1729587ce601a1c1fd51baeea7a2ac00b087c0bd1130afa1640b382d9"
+  },
+  "CorruptedFieldRecovery.encodeDenseInput_eq_semanticCoefficient": {
+    "emitted_type": "@CorruptedFieldRecovery.encodeDenseInput_eq_semanticCoefficient : \u2200 {n : Nat}\n  (C : CorruptedFieldRecovery.BinaryTensor n) (t : CorruptedFieldRecovery.IncreasingTriple n),\n  Eq.{1} (CorruptedFieldRecovery.encodeDenseInput C t)\n    (CorruptedFieldRecovery.coefficient C (CorruptedFieldRecovery.increasingTripleI t)\n      (CorruptedFieldRecovery.increasingTripleJ t) (CorruptedFieldRecovery.increasingTripleK t))\n",
+    "sha256": "619a9ea1f40a72c67be5ae3f3dbab3c9f39f2e6e32eab6071907b229e5c4bfad"
+  },
+  "CorruptedFieldRecovery.decodeDenseInput": {
+    "emitted_type": "@CorruptedFieldRecovery.decodeDenseInput : {n : Nat} \u2192\n  (payload : CorruptedFieldRecovery.DenseInputPayload n) \u2192 CorruptedFieldRecovery.BinaryTensor n\n",
+    "sha256": "8cd065b7cc76b9f38d3bc80cc71482e7f6d35fd798ce80a19556a8bbb686c298"
+  }
+}

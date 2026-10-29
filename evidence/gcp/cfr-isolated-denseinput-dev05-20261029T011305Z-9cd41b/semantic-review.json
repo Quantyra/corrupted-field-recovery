@@ -1,0 +1,17 @@
+{
+  "reviewer": "root",
+  "status": "accepted-infrastructure-only",
+  "actual_emitted_types_reviewed": true,
+  "findings": [
+    "coordinate monomial and six-term minor match intended F2 polynomial",
+    "minor alternation has no hidden index-order premise",
+    "computable encoder and semantic coefficient bridge have intended types",
+    "finite-sum decoder has intended type"
+  ],
+  "coverage_promoted": false,
+  "remaining": [
+    "both codec roundtrips",
+    "lexicographic serialization",
+    "costs"
+  ]
+}
