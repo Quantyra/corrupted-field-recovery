@@ -1,0 +1,39 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateCheck
+@CorruptedFieldRecovery.rawFieldCandidateCheck : {s : Nat} → (p : CorruptedFieldRecovery.RawFieldCandidate s) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateCheck
+'CorruptedFieldRecovery.rawFieldCandidateCheck' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateValidDecidable
+@CorruptedFieldRecovery.rawFieldCandidateValidDecidable : {s : Nat} →
+  (p : CorruptedFieldRecovery.RawFieldCandidate s) → Decidable (CorruptedFieldRecovery.rawFieldCandidateValid p)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateValidDecidable
+'CorruptedFieldRecovery.rawFieldCandidateValidDecidable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawFieldCandidateCheck
+@CorruptedFieldRecovery.accepted_rawFieldCandidateCheck : ∀ {s : Nat} (p : CorruptedFieldRecovery.RawFieldCandidate s)
+  (h : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck p) Bool.true),
+  CorruptedFieldRecovery.rawFieldCandidateValid p
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawFieldCandidateCheck
+'CorruptedFieldRecovery.accepted_rawFieldCandidateCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneX
+CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneX : Eq.{1}
+  (CorruptedFieldRecovery.rawFieldCandidateCheck
+    { modulus := List.toArray.{0} (List.cons.{0} Bool.false (List.cons.{0} Bool.true List.nil.{0})),
+      scalar := List.toArray.{0} (List.cons.{0} Bool.true List.nil.{0}) })
+  Bool.true
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneX
+'CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneX' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneXAddOne
+CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneXAddOne : Eq.{1}
+  (CorruptedFieldRecovery.rawFieldCandidateCheck
+    { modulus := List.toArray.{0} (List.cons.{0} Bool.true (List.cons.{0} Bool.true List.nil.{0})),
+      scalar := List.toArray.{0} (List.cons.{0} Bool.true List.nil.{0}) })
+  Bool.true
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneXAddOne
+'CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneXAddOne' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

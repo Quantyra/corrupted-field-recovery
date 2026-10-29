@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.sampled_basis_bad_coordinate_count": {
+    "emitted_type": "CorruptedFieldRecovery.sampled_basis_bad_coordinate_count.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (D : Finset.{u_1} K)\n  (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)),\n  LE.le.{0}\n    (Finset.card.{u_1}\n      ({x \u2208 A |\n        Membership.mem.{u_1, u_1} D\n          ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K b \u226a\u226b\u2097\n              CorruptedFieldRecovery.fieldTripleEquivPi.{u_1} K)\n            x 0)}))\n    (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))\n",
+    "sha256": "1c87e9a2ee02e91d5eacfa2c9dee7562a01841c7a1be9b1254c69478245a40ec"
+  },
+  "CorruptedFieldRecovery.card_clean_basis_triples_lower": {
+    "emitted_type": "@CorruptedFieldRecovery.card_clean_basis_triples_lower.{u_1,\n    u_2} : \u2200 {K : Type u_1} {V : Type u_2} [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K]\n  [inst_2 : DecidableEq.{u_2 + 1} V] [inst_3 : AddCommGroup.{u_2} V] [inst_4 : Module.{u_1, u_2} K V]\n  [inst_5 : FiniteDimensional.{u_1, u_2} K V] [inst_6 : Fintype.{u_2} V] (A : Finset.{u_2} V),\n  LE.le.{0}\n    (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_2} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))\n      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_2} A) (Fintype.card.{u_1} K))\n        (HSub.hSub.{0, 0, 0} (Finset.card.{u_2} A) 1)))\n    (Fintype.card.{u_2} (CorruptedFieldRecovery.CleanBasisTriple.{u_1, u_2} A))\n",
+    "sha256": "024e2d1d7df8482b634e42b9f48d59b2f849b3dc325c3d77c3ab165aadaf89e4"
+  },
+  "CorruptedFieldRecovery.clean_basis_triple_linearIndependent": {
+    "emitted_type": "@CorruptedFieldRecovery.clean_basis_triple_linearIndependent.{u_1,\n    u_2} : \u2200 {K : Type u_1} {V : Type u_2} [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K]\n  [inst_2 : DecidableEq.{u_2 + 1} V] [inst_3 : AddCommGroup.{u_2} V] [inst_4 : Module.{u_1, u_2} K V]\n  [inst_5 : FiniteDimensional.{u_1, u_2} K V] [inst_6 : Fintype.{u_2} V] {A : Finset.{u_2} V}\n  (t : CorruptedFieldRecovery.CleanBasisTriple.{u_1, u_2} A),\n  LinearIndependent.{0, u_1, u_2} K (CorruptedFieldRecovery.cleanBasisTripleVectors.{u_1, u_2} t)\n",
+    "sha256": "1331509f440b4106e62fa680344c373a73598d060a06363875b23240b0825448"
+  },
+  "CorruptedFieldRecovery.cleanBasisTripleBasis": {
+    "emitted_type": "@CorruptedFieldRecovery.cleanBasisTripleBasis.{u_1,\n    u_2} : {K : Type u_1} \u2192\n  {V : Type u_2} \u2192\n    [inst : Field.{u_1} K] \u2192\n      [inst_1 : Fintype.{u_1} K] \u2192\n        [inst_2 : DecidableEq.{u_2 + 1} V] \u2192\n          [inst_3 : AddCommGroup.{u_2} V] \u2192\n            [inst_4 : Module.{u_1, u_2} K V] \u2192\n              [inst_5 : FiniteDimensional.{u_1, u_2} K V] \u2192\n                [inst_6 : Fintype.{u_2} V] \u2192\n                  {A : Finset.{u_2} V} \u2192\n                    (t : CorruptedFieldRecovery.CleanBasisTriple.{u_1, u_2} A) \u2192\n                      (hdim : Eq.{1} (Module.finrank.{u_1, u_2} K V) 3) \u2192 Module.Basis.{0, u_1, u_2} (Fin 3) K V\n",
+    "sha256": "65189f28cfc45cd5f83c643a04bde6859ffffcb7c82b078532d8178c4c28ded6"
+  },
+  "CorruptedFieldRecovery.card_good_four_tuples_lower": {
+    "emitted_type": "@CorruptedFieldRecovery.card_good_four_tuples_lower.{u_1,\n    u_2} : \u2200 {I : Type u_1} {O : Type u_2} [inst : Fintype.{u_1} I] [inst : Fintype.{u_2} O]\n  [inst : DecidableEq.{u_1 + 1} I] (B : Finset.{u_1} I) (goodFourth : (a : I) \u2192 Finset.{u_2} O) (m : Nat)\n  (hfiber : \u2200 (i : I) (a : Membership.mem.{u_1, u_1} B i), LE.le.{0} m (Finset.card.{u_2} (goodFourth i))),\n  LE.le.{0} (HMul.hMul.{0, 0, 0} m (Finset.card.{u_1} B)) (Fintype.card.{max u_2 u_1} ((i : \u21a5B) \u00d7 \u21a5(goodFourth \u2191i)))\n",
+    "sha256": "8fc1601a57485b2a27425bbaa3379f78970f3aa73da3d447e722f5d76c179471"
+  },
+  "CorruptedFieldRecovery.bad_fourth_coordinate_count_le": {
+    "emitted_type": "CorruptedFieldRecovery.bad_fourth_coordinate_count_le.{u_1} : \u2200 (K : Type u_1) [inst : Fintype.{u_1} K]\n  [inst_1 : DecidableEq.{u_1 + 1} K] (A : Finset.{u_1} ((a : Fin 3) \u2192 K)) (D : Finset.{u_1} K),\n  LE.le.{0} (Finset.card.{u_1} ({x \u2208 A | Membership.mem.{u_1, u_1} D (x 0)}))\n    (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))\n",
+    "sha256": "7def7979724f28281328ff714ba95e83609b5059fe287018a57e20fa2b1e707b"
+  },
+  "CorruptedFieldRecovery.card_good_five_word_pairs_lower": {
+    "emitted_type": "@CorruptedFieldRecovery.card_good_five_word_pairs_lower.{u_1,\n    u_2} : \u2200 {I : Type u_1} {O : Type u_2} [inst : Fintype.{u_1} I] [inst : Fintype.{u_2} O]\n  [inst : DecidableEq.{u_1 + 1} I] (B : Finset.{u_1} I) (goodFourth : (a : I) \u2192 Finset.{u_2} O) (m g : Nat)\n  (hfiber : \u2200 (i : I) (a : Membership.mem.{u_1, u_1} B i), LE.le.{0} m (Finset.card.{u_2} (goodFourth i))),\n  LE.le.{0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} m (Finset.card.{u_1} B)) g)\n    (Fintype.card.{max u_2 u_1} ((i : \u21a5B) \u00d7 Prod.{u_2, 0} (\u21a5(goodFourth \u2191i)) (Fin g)))\n",
+    "sha256": "93d073a75632795acd17c31fa51f75811e2a9db6758aa4e88a51141c963093f4"
+  }
+}

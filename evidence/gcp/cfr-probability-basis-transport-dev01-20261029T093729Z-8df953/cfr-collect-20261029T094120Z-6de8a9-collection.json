@@ -1,0 +1,19 @@
+{
+  "run": "cfr-probability-basis-transport-dev01-20261029T093729Z-8df953",
+  "utc": "2026-10-29T09:42:41.206899+00:00",
+  "archive_sha256": "9d0b2065c09f23f2f407c79e236decef34594b61019994fa4f1b428499ad69b6",
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "655f9b34a859a8fe0b20400d558f1f61fe0409c4d7840bb4dc922d6e51965634",
+    "launch.log": "5b6725f56b8be7aa7787c1c535ab3f9757fb956a078c7682ea316b544f98a29f",
+    "runner-pid": "1b0de8677f7c3fe4bd45c89ef4613e4a0e29c0cb79532c9067a2ae0138a50774",
+    "started-utc": "655f9b34a859a8fe0b20400d558f1f61fe0409c4d7840bb4dc922d6e51965634",
+    "terminal-receipt.json": "c1d343a067b1e95071d3fc49e8eeed0f2265e24415be361bc48768b534955ed6",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "7152524caabb32c22d0ac1a50a6838b2039057d1c37c0f0e6de1db57ef943435",
+    "logs/runner.stdout.txt": "d673dd6df4144898573f9e528e6a1f92b56e7102afa75a398e1828787c2a20e6"
+  }
+}

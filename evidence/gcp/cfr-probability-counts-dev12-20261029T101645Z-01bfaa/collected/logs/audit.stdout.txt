@@ -1,0 +1,86 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampled_basis_bad_coordinate_count
+CorruptedFieldRecovery.sampled_basis_bad_coordinate_count.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (D : Finset.{u_1} K)
+  (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  LE.le.{0}
+    (Finset.card.{u_1}
+      ({x ∈ A |
+        Membership.mem.{u_1, u_1} D
+          ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K b ≪≫ₗ
+              CorruptedFieldRecovery.fieldTripleEquivPi.{u_1} K)
+            x 0)}))
+    (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+CFR_TYPE_END:CorruptedFieldRecovery.sampled_basis_bad_coordinate_count
+'CorruptedFieldRecovery.sampled_basis_bad_coordinate_count' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_clean_basis_triples_lower
+@CorruptedFieldRecovery.card_clean_basis_triples_lower.{u_1,
+    u_2} : ∀ {K : Type u_1} {V : Type u_2} [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K]
+  [inst_2 : DecidableEq.{u_2 + 1} V] [inst_3 : AddCommGroup.{u_2} V] [inst_4 : Module.{u_1, u_2} K V]
+  [inst_5 : FiniteDimensional.{u_1, u_2} K V] [inst_6 : Fintype.{u_2} V] (A : Finset.{u_2} V),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_2} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_2} A) (Fintype.card.{u_1} K))
+        (HSub.hSub.{0, 0, 0} (Finset.card.{u_2} A) 1)))
+    (Fintype.card.{u_2} (CorruptedFieldRecovery.CleanBasisTriple.{u_1, u_2} A))
+CFR_TYPE_END:CorruptedFieldRecovery.card_clean_basis_triples_lower
+'CorruptedFieldRecovery.card_clean_basis_triples_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.clean_basis_triple_linearIndependent
+@CorruptedFieldRecovery.clean_basis_triple_linearIndependent.{u_1,
+    u_2} : ∀ {K : Type u_1} {V : Type u_2} [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K]
+  [inst_2 : DecidableEq.{u_2 + 1} V] [inst_3 : AddCommGroup.{u_2} V] [inst_4 : Module.{u_1, u_2} K V]
+  [inst_5 : FiniteDimensional.{u_1, u_2} K V] [inst_6 : Fintype.{u_2} V] {A : Finset.{u_2} V}
+  (t : CorruptedFieldRecovery.CleanBasisTriple.{u_1, u_2} A),
+  LinearIndependent.{0, u_1, u_2} K (CorruptedFieldRecovery.cleanBasisTripleVectors.{u_1, u_2} t)
+CFR_TYPE_END:CorruptedFieldRecovery.clean_basis_triple_linearIndependent
+'CorruptedFieldRecovery.clean_basis_triple_linearIndependent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.cleanBasisTripleBasis
+@CorruptedFieldRecovery.cleanBasisTripleBasis.{u_1,
+    u_2} : {K : Type u_1} →
+  {V : Type u_2} →
+    [inst : Field.{u_1} K] →
+      [inst_1 : Fintype.{u_1} K] →
+        [inst_2 : DecidableEq.{u_2 + 1} V] →
+          [inst_3 : AddCommGroup.{u_2} V] →
+            [inst_4 : Module.{u_1, u_2} K V] →
+              [inst_5 : FiniteDimensional.{u_1, u_2} K V] →
+                [inst_6 : Fintype.{u_2} V] →
+                  {A : Finset.{u_2} V} →
+                    (t : CorruptedFieldRecovery.CleanBasisTriple.{u_1, u_2} A) →
+                      (hdim : Eq.{1} (Module.finrank.{u_1, u_2} K V) 3) → Module.Basis.{0, u_1, u_2} (Fin 3) K V
+CFR_TYPE_END:CorruptedFieldRecovery.cleanBasisTripleBasis
+'CorruptedFieldRecovery.cleanBasisTripleBasis' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_good_four_tuples_lower
+@CorruptedFieldRecovery.card_good_four_tuples_lower.{u_1,
+    u_2} : ∀ {I : Type u_1} {O : Type u_2} [inst : Fintype.{u_1} I] [inst : Fintype.{u_2} O]
+  [inst : DecidableEq.{u_1 + 1} I] (B : Finset.{u_1} I) (goodFourth : (a : I) → Finset.{u_2} O) (m : Nat)
+  (hfiber : ∀ (i : I) (a : Membership.mem.{u_1, u_1} B i), LE.le.{0} m (Finset.card.{u_2} (goodFourth i))),
+  LE.le.{0} (HMul.hMul.{0, 0, 0} m (Finset.card.{u_1} B)) (Fintype.card.{max u_2 u_1} ((i : ↥B) × ↥(goodFourth ↑i)))
+CFR_TYPE_END:CorruptedFieldRecovery.card_good_four_tuples_lower
+'CorruptedFieldRecovery.card_good_four_tuples_lower' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.bad_fourth_coordinate_count_le
+CorruptedFieldRecovery.bad_fourth_coordinate_count_le.{u_1} : ∀ (K : Type u_1) [inst : Fintype.{u_1} K]
+  [inst_1 : DecidableEq.{u_1 + 1} K] (A : Finset.{u_1} ((a : Fin 3) → K)) (D : Finset.{u_1} K),
+  LE.le.{0} (Finset.card.{u_1} ({x ∈ A | Membership.mem.{u_1, u_1} D (x 0)}))
+    (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+CFR_TYPE_END:CorruptedFieldRecovery.bad_fourth_coordinate_count_le
+'CorruptedFieldRecovery.bad_fourth_coordinate_count_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_good_five_word_pairs_lower
+@CorruptedFieldRecovery.card_good_five_word_pairs_lower.{u_1,
+    u_2} : ∀ {I : Type u_1} {O : Type u_2} [inst : Fintype.{u_1} I] [inst : Fintype.{u_2} O]
+  [inst : DecidableEq.{u_1 + 1} I] (B : Finset.{u_1} I) (goodFourth : (a : I) → Finset.{u_2} O) (m g : Nat)
+  (hfiber : ∀ (i : I) (a : Membership.mem.{u_1, u_1} B i), LE.le.{0} m (Finset.card.{u_2} (goodFourth i))),
+  LE.le.{0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} m (Finset.card.{u_1} B)) g)
+    (Fintype.card.{max u_2 u_1} ((i : ↥B) × Prod.{u_2, 0} (↥(goodFourth ↑i)) (Fin g)))
+CFR_TYPE_END:CorruptedFieldRecovery.card_good_five_word_pairs_lower
+'CorruptedFieldRecovery.card_good_five_word_pairs_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T09:36:56.354142+00:00",
+  "launched": false,
+  "status": "static-rejected",
+  "reason": "bad_fourth_coordinate_count_le declares D as Finset (Fin 3 -> K), but membership x 0 requires Finset K; author routed successor correction",
+  "claim": "No Lean diagnostic or proof result"
+}

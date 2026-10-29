@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-29T10:06:52.787672+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Executable raw factor-pair exclusion gate; accepted theorem extracts raw finite predicate; checked degree-one X and X+1 examples.",
+  "not_established": [
+    "bitmask encoding and multiplication polynomial semantics",
+    "quotient irreducibility or nonzero residue",
+    "field validity",
+    "runtime bound",
+    "complete certificate checker"
+  ],
+  "basis": "Root inspected exact DB13 source and emitted types after saved GCP build and five-declaration audit."
+}

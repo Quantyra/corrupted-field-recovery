@@ -1,0 +1,34 @@
+✔ [2949/2950] Built CorruptedFieldRecovery.ProbabilityBasisTransport (3.9s)
+✖ [2950/2950] Building CorruptedFieldRecovery.ProbabilityAssembly (4.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityAssembly.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityAssembly.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityAssembly.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityAssembly.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityAssembly.setup.json --json
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:121:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  {x ∈ A | ¬p x}.card
+in the target expression
+  A.card - Fintype.card K ^ s.card ≤ Fintype.card { x // x ∈ A ∧ ¬p x }
+
+K : Type u_1
+V : Type u_2
+inst✝⁶ : Field K
+inst✝⁵ : Fintype K
+inst✝⁴ : DecidableEq V
+inst✝³ : AddCommGroup V
+inst✝² : Module K V
+inst✝¹ : FiniteDimensional K V
+inst✝ : Fintype V
+A s : Finset V
+p : V → Prop := fun x => x ∈ Submodule.span K ↑s
+this✝ : DecidablePred p := Classical.decPred p
+this : DecidablePred fun x => ¬p x := Classical.decPred fun x => ¬p x
+hsplit : (Finset.filter p A).card + {a ∈ A | ¬p a}.card = A.card
+hbad : (Finset.filter p A).card ≤ Fintype.card K ^ s.card
+hgood : Fintype.card { x // x ∈ A ∧ ¬p x } = {x ∈ A | ¬p x}.card
+⊢ A.card - Fintype.card K ^ s.card ≤ Fintype.card { x // x ∈ A ∧ ¬p x }
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:262:4: Type mismatch: After simplification, term
+  t.snd.property.right
+ has type
+  ↑t.snd ∉ Submodule.span K {↑t.fst.fst, ↑t.fst.snd}
+but is expected to have type
+  ↑t.snd ∉ Submodule.span K {↑t.fst.snd, ↑t.fst.fst}
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProbabilityAssembly

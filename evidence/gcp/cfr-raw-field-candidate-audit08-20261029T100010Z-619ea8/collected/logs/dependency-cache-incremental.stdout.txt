@@ -1,0 +1,5 @@
+Current branch: HEAD
+Using cache (Azure) from origin: (some leanprover-community/mathlib4)
+Attempting to download 4 file(s) from leanprover-community/mathlib4 cache
+Decompressed 4 file(s)
+Already decompressed 2931 file(s)

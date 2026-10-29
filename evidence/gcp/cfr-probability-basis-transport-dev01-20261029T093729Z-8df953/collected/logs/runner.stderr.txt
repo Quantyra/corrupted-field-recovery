@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-probability-basis-transport-dev01-20261029T093729Z-8df953/gcp_cfr_runner.py", line 294, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-probability-basis-transport-dev01-20261029T093729Z-8df953/gcp_cfr_runner.py", line 225, in main
+    assert (packages/'mathlib'/Path(*item.split('.'))).with_suffix('.lean').is_file(), item
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Mathlib.Data.Array.Lemmas

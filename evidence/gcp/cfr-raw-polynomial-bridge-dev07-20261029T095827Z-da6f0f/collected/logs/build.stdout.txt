@@ -1,0 +1,90 @@
+✖ [1504/1504] Building CorruptedFieldRecovery.RawFieldPolynomialBridge (4.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawFieldPolynomialBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldPolynomialBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldPolynomialBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldPolynomialBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldPolynomialBridge.setup.json --json
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:25:20: Possibly looping simp theorem: `rawMaskPolynomial.eq_1`
+
+Note: Possibly caused by: `MonoidWithZeroHom.map_ite_one_zero` and `rawMaskPolynomial`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:25:14: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:34:10: Possibly looping simp theorem: `rawMaskPolynomial.eq_1`
+
+Note: Possibly caused by: `Nat.bodd`, `Nat.testBit_zero`, `decide_eq_true_eq`, `MonoidWithZeroHom.map_ite_one_zero`, `Nat.div2`, `rawMaskPolynomial`, `Nat.div_eq_zero_iff`, `OfNat.ofNat_ne_zero`, `Order.lt_two_iff`, and `false_or`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:34:4: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:40:10: Possibly looping simp theorem: `rawMaskPolynomial.eq_1`
+
+Note: Possibly caused by: `MonoidWithZeroHom.map_ite_one_zero` and `rawMaskPolynomial`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:40:4: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:43:10: Possibly looping simp theorem: `rawMaskPolynomial.eq_1`
+
+Note: Possibly caused by: `MonoidWithZeroHom.map_ite_one_zero` and `rawMaskPolynomial`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:43:4: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:44:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Nat.bitwise ?m.43 a b
+in the target expression
+  rawMaskPolynomial (a.xor b) = rawMaskPolynomial a + rawMaskPolynomial b
+
+case neg
+a b : ℕ
+ha : ¬a = 0
+hb : ¬b = 0
+⊢ rawMaskPolynomial (a.xor b) = rawMaskPolynomial a + rawMaskPolynomial b
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:60:12: Possibly looping simp theorem: `rawPolyMul.eq_1`
+
+Note: Possibly caused by: `rawPolyMul`, `Nat.div_eq_zero_iff`, `OfNat.ofNat_ne_zero`, `Order.lt_two_iff`, and `false_or`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:60:24: Possibly looping simp theorem: `rawMaskPolynomial.eq_1`
+
+Note: Possibly caused by: `MonoidWithZeroHom.map_ite_one_zero` and `rawMaskPolynomial`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:60:6: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:68:22: Possibly looping simp theorem: `rawMaskPolynomial.eq_1`
+
+Note: Possibly caused by: `MonoidWithZeroHom.map_ite_one_zero` and `rawMaskPolynomial`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:68:16: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:72:8: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `hbpoly` is a value of type
+  (ZMod 2)[X]
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:71:10: This simp argument is unused:
+  rawMaskPolynomial
+
+Hint: Omit it from the simp argument list.
+  simp [r̵a̵w̵M̵a̵s̵k̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵,̵ ̵hb] at hbpoly
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:71:29: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  simp [rawMaskPolynomial,̵ ̵h̵b̵] at hbpoly
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawFieldPolynomialBridge

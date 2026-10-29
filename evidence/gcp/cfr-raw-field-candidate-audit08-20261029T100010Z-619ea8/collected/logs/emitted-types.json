@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.rawFieldCandidateCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateCheck : {s : Nat} \u2192 (p : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 Bool\n",
+    "sha256": "e314f4cdc6c9f3b52921193e852a0aa6af30c72b06743b1306925e0559a331f7"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateValidDecidable": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateValidDecidable : {s : Nat} \u2192\n  (p : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 Decidable (CorruptedFieldRecovery.rawFieldCandidateValid p)\n",
+    "sha256": "02cca5267b71db4b25afc6ee37a0e35c77cc8f6299d196c97b0a6b9161f433db"
+  },
+  "CorruptedFieldRecovery.accepted_rawFieldCandidateCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawFieldCandidateCheck : \u2200 {s : Nat} (p : CorruptedFieldRecovery.RawFieldCandidate s)\n  (h : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck p) Bool.true),\n  CorruptedFieldRecovery.rawFieldCandidateValid p\n",
+    "sha256": "33dadd44784e5af9dad38f274bed51dfb76413df876d05d39934a21997ed561f"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneX": {
+    "emitted_type": "CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneX : Eq.{1}\n  (CorruptedFieldRecovery.rawFieldCandidateCheck\n    { modulus := List.toArray.{0} (List.cons.{0} Bool.false (List.cons.{0} Bool.true List.nil.{0})),\n      scalar := List.toArray.{0} (List.cons.{0} Bool.true List.nil.{0}) })\n  Bool.true\n",
+    "sha256": "0a7004051643955b9b6d345c26f2da4ed54f8e84e90b6013f625ae6d4a24ec51"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneXAddOne": {
+    "emitted_type": "CorruptedFieldRecovery.rawFieldCandidateCheck_degreeOneXAddOne : Eq.{1}\n  (CorruptedFieldRecovery.rawFieldCandidateCheck\n    { modulus := List.toArray.{0} (List.cons.{0} Bool.true (List.cons.{0} Bool.true List.nil.{0})),\n      scalar := List.toArray.{0} (List.cons.{0} Bool.true List.nil.{0}) })\n  Bool.true\n",
+    "sha256": "5c1d409400ba3bc8276db08623bd7d64dfbae357849f9ce5279376a65706a72a"
+  }
+}

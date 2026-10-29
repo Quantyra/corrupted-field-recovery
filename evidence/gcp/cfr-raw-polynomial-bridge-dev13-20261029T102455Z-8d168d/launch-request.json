@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T10:29:33.536389+00:00",
+  "run": "cfr-raw-polynomial-bridge-dev13-20261029T102455Z-8d168d",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

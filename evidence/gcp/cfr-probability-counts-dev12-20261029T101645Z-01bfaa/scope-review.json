@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-29T10:28:21.925378+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Sampled-basis fiber bound and nested clean-span-avoiding triple count at least truncated (|A|-q^2)(|A|-q)(|A|-1); linear independence and Basis construction given finrank=3. Sigma helper retains explicit fiber assumption.",
+  "not_established": [
+    "actual four/five-word success bound",
+    "random tape semantics or bound",
+    "full trial success",
+    "probability amplification",
+    "runtime/space theorem"
+  ],
+  "basis": "Root inspected exact emitted types after saved GCP build and seven declaration audits."
+}

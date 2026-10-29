@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-29T09:27:13.130058+00:00",
+  "action": "Inspect dedicated VM and ingress before authorized bounded restart",
+  "prior": "cfr-batch-reacquire-20261029T081753Z-a470fa/batch-summary.json"
+}

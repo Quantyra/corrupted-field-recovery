@@ -1,0 +1,75 @@
+✖ [1504/1504] Building CorruptedFieldRecovery.RawFieldPolynomialBridge (2.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawFieldPolynomialBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldPolynomialBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldPolynomialBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldPolynomialBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldPolynomialBridge.setup.json --json
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:35:6: Type mismatch: After simplification, term
+  rawMaskPolynomial_zero
+ has type
+  rawMaskPolynomial 0 = 0
+but is expected to have type
+  rawMaskPolynomial 0 = X * rawMaskPolynomial 0
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:38:12: This simp argument is unused:
+  Nat.bodd_bit
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵b̵o̵d̵d̵_̵b̵i̵t̵,̵ ̵N̵a̵t̵.̵d̵i̵v̵2̵_̵b̵i̵t̵]̵[̲N̲a̲t̲.̲d̲i̲v̲2̲_̲b̲i̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:38:26: This simp argument is unused:
+  Nat.div2_bit
+
+Hint: Omit it from the simp argument list.
+  simp [Nat.bodd_bit,̵ ̵N̵a̵t̵.̵d̵i̵v̵2̵_̵b̵i̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:44:10: This simp argument is unused:
+  Nat.bodd_bit
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵b̵o̵d̵d̵_̵b̵i̵t̵,̵ ̵N̵a̵t̵.̵d̵i̵v̵2̵_̵b̵i̵t̵]̵[̲N̲a̲t̲.̲d̲i̲v̲2̲_̲b̲i̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:44:24: This simp argument is unused:
+  Nat.div2_bit
+
+Hint: Omit it from the simp argument list.
+  simp [Nat.bodd_bit,̵ ̵N̵a̵t̵.̵d̵i̵v̵2̵_̵b̵i̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:54:40: Unknown constant `Bool.bne`
+info: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:89:57: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:89:57: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawFieldPolynomialBridge.lean:73:11: unsolved goals
+case pos
+b : ℕ
+ih : ∀ m < b, ∀ (a : ℕ), rawMaskPolynomial (rawPolyMul a m) = rawMaskPolynomial a * rawMaskPolynomial m
+a : ℕ
+hb : ¬b = 0
+ih' : rawMaskPolynomial (rawPolyMul a (b / 2)) = rawMaskPolynomial a * rawMaskPolynomial (b / 2)
+hbit : rawMaskPolynomial (if b % 2 = 1 then a else 0) = if b % 2 = 1 then rawMaskPolynomial a else 0
+hbodd : b.bodd = decide (b % 2 = 1)
+hodd : b % 2 = 1
+⊢ rawMaskPolynomial a + rawMaskPolynomial a * X * rawMaskPolynomial (b / 2) =
+    rawMaskPolynomial a + rawMaskPolynomial a * X * rawMaskPolynomial b.div2
+
+case neg
+b : ℕ
+ih : ∀ m < b, ∀ (a : ℕ), rawMaskPolynomial (rawPolyMul a m) = rawMaskPolynomial a * rawMaskPolynomial m
+a : ℕ
+hb : ¬b = 0
+ih' : rawMaskPolynomial (rawPolyMul a (b / 2)) = rawMaskPolynomial a * rawMaskPolynomial (b / 2)
+hbit : rawMaskPolynomial (if b % 2 = 1 then a else 0) = if b % 2 = 1 then rawMaskPolynomial a else 0
+hbodd : b.bodd = decide (b % 2 = 1)
+hodd : ¬b % 2 = 1
+⊢ X * rawMaskPolynomial a * rawMaskPolynomial (b / 2) = X * rawMaskPolynomial a * rawMaskPolynomial b.div2
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawFieldPolynomialBridge

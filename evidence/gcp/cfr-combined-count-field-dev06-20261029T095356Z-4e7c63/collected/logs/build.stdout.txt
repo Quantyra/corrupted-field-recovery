@@ -1,0 +1,122 @@
+✔ [2948/2950] Built CorruptedFieldRecovery.RawFieldCandidate (1.0s)
+✖ [2949/2950] Building CorruptedFieldRecovery.ProbabilityBasisTransport (3.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityBasisTransport.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityBasisTransport.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityBasisTransport.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityBasisTransport.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityBasisTransport.setup.json --json
+error: CorruptedFieldRecovery/ProbabilityBasisTransport.lean:36:20: Application type mismatch: The argument
+  x.property
+has type
+  ↑x ∈ S
+but is expected to have type
+  e (↑x) 0 ∈ D
+in the application
+  ⟨?m.177, x.property⟩
+error: Lean exited with code 1
+✖ [2950/2950] Building CorruptedFieldRecovery.ProbabilityAssembly (4.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityAssembly.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityAssembly.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityAssembly.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityAssembly.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityAssembly.setup.json --json
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:70:29: Application type mismatch: The argument
+  Fintype.one_lt_card
+has type
+  1 < Fintype.card ?m.43
+but is expected to have type
+  Fintype.card K > 0
+in the application
+  @Nat.pow_le_pow_right (Fintype.card K) Fintype.one_lt_card
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:79:24: Invalid projection: Type of
+  x
+is not known; cannot resolve projection `1`
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:79:51: Invalid projection: Type of
+  x
+is not known; cannot resolve projection `2`
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:81:25: Invalid projection: Type of
+  x
+is not known; cannot resolve projection `1`
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:81:51: Invalid projection: Type of
+  x
+is not known; cannot resolve projection `2`
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:83:25: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+A : Finset V
+p : V → Prop
+inst✝ : DecidablePred p
+⊢ ?m.15
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:84:26: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+A : Finset V
+p : V → Prop
+inst✝ : DecidablePred p
+⊢ ?m.17
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:76:63: unsolved goals
+case e
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+A : Finset V
+p : V → Prop
+inst✝ : DecidablePred p
+⊢ { x // x ∈ A ∧ p x } ≃ ↥(Finset.filter p A)
+
+V : Type u_1
+inst✝² : Fintype V
+inst✝¹ : DecidableEq V
+A : Finset V
+p : V → Prop
+inst✝ : DecidablePred p
+e : { x // x ∈ A ∧ p x } ≃ ↥(Finset.filter p A) := ?e
+⊢ Fintype.card { x // x ∈ A ∧ p x } = (Finset.filter p A).card
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:73:0: internal exception #3
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:85:2: unexpected identifier; expected command
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:125:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  {x ∈ A | ¬p x}.card
+in the target expression
+  A.card - Fintype.card K ^ s.card ≤ Fintype.card { x // x ∈ A ∧ ¬p x }
+
+K : Type u_1
+V : Type u_2
+inst✝⁶ : Field K
+inst✝⁵ : Fintype K
+inst✝⁴ : DecidableEq V
+inst✝³ : AddCommGroup V
+inst✝² : Module K V
+inst✝¹ : FiniteDimensional K V
+inst✝ : Fintype V
+A s : Finset V
+p : V → Prop := fun x => x ∈ Submodule.span K ↑s
+this✝ : DecidablePred p := Classical.decPred p
+this : DecidablePred fun x => ¬p x := Classical.decPred fun x => ¬p x
+hsplit : (Finset.filter p A).card + {a ∈ A | ¬p a}.card = A.card
+hbad : (Finset.filter p A).card ≤ Fintype.card K ^ s.card
+hgood : Fintype.card { x // x ∈ A ∧ ¬p x } = {x ∈ A | ¬p x}.card
+⊢ A.card - Fintype.card K ^ s.card ≤ Fintype.card { x // x ∈ A ∧ ¬p x }
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:217:51: Application type mismatch: The argument
+  Fintype.one_lt_card
+has type
+  1 < Fintype.card ?m.457
+but is expected to have type
+  Fintype.card K > 0
+in the application
+  @Nat.pow_le_pow_right (Fintype.card K) Fintype.one_lt_card
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:163:8: (kernel) unknown constant '_private.CorruptedFieldRecovery.ProbabilityAssembly.0.CorruptedFieldRecovery.card_clean_predicate'
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:266:4: Type mismatch: After simplification, term
+  t.snd.property
+ has type
+  ↑t.snd ∈ A ∧ ↑t.snd ∉ Submodule.span K {↑t.fst.fst, ↑t.fst.snd}
+but is expected to have type
+  ↑t.snd ∉ Submodule.span K {↑t.fst.snd, ↑t.fst.fst}
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:279:15: Unknown identifier `linearIndependent_iff_card_eq_finrank_span`
+error: CorruptedFieldRecovery/ProbabilityAssembly.lean:285:21: Application type mismatch: The argument
+  htop
+has type
+  Submodule.span K (Set.range v) = ⊤
+but is expected to have type
+  ⊤ ≤ Submodule.span K (Set.range v)
+in the application
+  Basis.mk hli htop
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProbabilityBasisTransport
+- CorruptedFieldRecovery.ProbabilityAssembly

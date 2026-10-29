@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T09:39:54.776128+00:00",
+  "run": "cfr-probability-basis-transport-dev01-20261029T093729Z-8df953",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

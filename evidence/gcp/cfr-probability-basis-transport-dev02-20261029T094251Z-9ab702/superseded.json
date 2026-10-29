@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T09:43:31.666297+00:00",
+  "launched": false,
+  "reason": "RawFieldCandidate author successor bytes changed during capture; no compiler launch",
+  "successor": "cfr-combined-count-field-dev03-20261029T094320Z-cb820a"
+}

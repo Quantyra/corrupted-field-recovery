@@ -1,0 +1,20 @@
+✖ [1499/1499] Building CorruptedFieldRecovery.RawFieldCandidate (31s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawFieldCandidate.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldCandidate.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldCandidate.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldCandidate.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldCandidate.setup.json --json
+error: CorruptedFieldRecovery/RawFieldCandidate.lean:18:32: Unknown identifier `C`
+error: CorruptedFieldRecovery/RawFieldCandidate.lean:18:47: Unknown identifier `X`
+error: CorruptedFieldRecovery/RawFieldCandidate.lean:17:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Polynomial.commRing', which is 'noncomputable'
+error: CorruptedFieldRecovery/RawFieldCandidate.lean:34:42: Invalid field `IsIrreducible`: The environment does not contain `Polynomial.IsIrreducible`, so it is not possible to project the field `IsIrreducible` from an expression
+  rawBinaryPolynomial p.modulus
+of type `Polynomial (ZMod 2)`
+error: CorruptedFieldRecovery/RawFieldCandidate.lean:29:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'rawBinaryPolynomial', which is 'noncomputable'
+error: CorruptedFieldRecovery/RawFieldCandidate.lean:45:36: Invalid field `IsIrreducible`: The environment does not contain `Polynomial.IsIrreducible`, so it is not possible to project the field `IsIrreducible` from an expression
+  rawBinaryPolynomial p.modulus
+of type `Polynomial (ZMod 2)`
+error: CorruptedFieldRecovery/RawFieldCandidate.lean:48:16: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  true = Decidable.rec (fun h => (fun x => false) h) (fun h => (fun x => true) h) Finset.decidableExistsAndFinsetCoe
+at case `Eq.refl`
+warning: CorruptedFieldRecovery/RawFieldCandidate.lean:47:13: declaration uses `sorry`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawFieldCandidate
