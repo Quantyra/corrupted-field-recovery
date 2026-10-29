@@ -1,0 +1,26 @@
+{
+  "run": "cfr-raw-verifier-dev05-20261029T083952Z-d7baa0",
+  "utc": "2026-10-29T08:50:38.805592+00:00",
+  "archive_sha256": "c993d56878674fe933caa93e87e24da82b1ae1929b67543a3715ec1c49c10c3f",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "770399f1d2ce3d9176c1f0ddcfae0142cb4d230868516b51b7fe4d80c23c91ba",
+    "launch.log": "05892ee1c80bfcf8d5556b5ddf638aa05f2d895fd50607c17671bcf49209005c",
+    "runner-pid": "b8c83235b34c3791cc7c3359ac1e41fe6cae9d271f0948f2739bbc69eff3ccad",
+    "started-utc": "e628c9719400c51365ed97dcc7aa9f91834d4c9927a00f84747328987ed3a2b2",
+    "terminal-receipt.json": "48f0f0e6b0c9395190b52ca78bc26d997fb5a839ccf958d149af73f603f5a426",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "f410d8213fe02268664a30e79c2c2a92b9fbbb28b7e81b7c7511b9ebfe7f4a04",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "d9f28906bba2bd599945965fc18cd9c1894fa0188c9f1104d61f77d4dabad6d5",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "e0b1c4b0f5e704407bbedd278d8c5a608235af378e6d1dde5e0650821a47c23e",
+    "logs/emitted-types.json": "a03019b04a6716dbbf30bd0223283e1758fe8957f2c799ae49c60bfbfacc4f02",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "05892ee1c80bfcf8d5556b5ddf638aa05f2d895fd50607c17671bcf49209005c"
+  }
+}

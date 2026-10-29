@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-29T08:26:11.347565+00:00",
+  "reason": "Superseded before launch: dev01 GCP diagnostics also apply to offset, map inference and Boolean conjunction projections. Author preparing repaired dev03.",
+  "launch_requested": false
+}

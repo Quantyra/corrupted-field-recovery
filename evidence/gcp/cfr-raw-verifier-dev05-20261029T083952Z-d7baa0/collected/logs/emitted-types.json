@@ -1,0 +1,46 @@
+{
+  "CorruptedFieldRecovery.rawSupportOffset": {
+    "emitted_type": "@CorruptedFieldRecovery.rawSupportOffset : {n d : Nat} \u2192 (i : Fin n) \u2192 (j : Fin d) \u2192 Nat\n",
+    "sha256": "6135dbd647dc0b253f4488d44b714f7d6747a9410a91dc5a45e85dc31fe3377a"
+  },
+  "CorruptedFieldRecovery.rawSupportMap": {
+    "emitted_type": "@CorruptedFieldRecovery.rawSupportMap : {n d : Nat} \u2192\n  (matrix : CorruptedFieldRecovery.RawBinaryArray) \u2192\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector d)\n",
+    "sha256": "d3952a36efe241fd22072c455804015ff1ddaeeaa1de0722cc59a71285aa5b44"
+  },
+  "CorruptedFieldRecovery.RawDecomposition": {
+    "emitted_type": "CorruptedFieldRecovery.RawDecomposition : (n R : Nat) \u2192 Type\n",
+    "sha256": "ce30bdb6b01302f9904fe0ab9cd5ea465bba2f7a56d35e51d43d43752fd88386"
+  },
+  "CorruptedFieldRecovery.RawDecomposition.represented": {
+    "emitted_type": "@CorruptedFieldRecovery.RawDecomposition.represented : {n R : Nat} \u2192\n  (p : CorruptedFieldRecovery.RawDecomposition n R) \u2192 CorruptedFieldRecovery.BinaryTensor n\n",
+    "sha256": "9475b9548e9250f4ac4b4a6b803acec5deef2dbbe0f434818f004b25772d712c"
+  },
+  "CorruptedFieldRecovery.RawDecomposition.represented_alternating": {
+    "emitted_type": "@CorruptedFieldRecovery.RawDecomposition.represented_alternating : \u2200 {n R : Nat}\n  (p : CorruptedFieldRecovery.RawDecomposition n R),\n  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.RawDecomposition.represented p)\n",
+    "sha256": "4db1911f9787787f79ed7c065a00346988cc0548a28590122848a346dec2d74a"
+  },
+  "CorruptedFieldRecovery.rawIncreasingCoefficientCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawIncreasingCoefficientCheck : {n : Nat} \u2192\n  (input represented : CorruptedFieldRecovery.BinaryTensor n) \u2192 Bool\n",
+    "sha256": "abf8d3ccaf5382c6c8e9326445d4ea60808d2bb5803a05d13278715b7fe75707"
+  },
+  "CorruptedFieldRecovery.rawDecompositionCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawDecompositionCheck : {n R : Nat} \u2192 (p : CorruptedFieldRecovery.RawDecomposition n R) \u2192 Bool\n",
+    "sha256": "96719a32d25f805a69fe2724af7c88d49725701c01ca26a0f6e236ea5716107a"
+  },
+  "CorruptedFieldRecovery.accepted_rawDecompositionCheck_support_bound": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawDecompositionCheck_support_bound : \u2200 {n R : Nat}\n  (p : CorruptedFieldRecovery.RawDecomposition n R)\n  (h : Eq.{1} (CorruptedFieldRecovery.rawDecompositionCheck p) Bool.true),\n  LE.le.{0} (CorruptedFieldRecovery.RawDecomposition.supportDimension p) R\n",
+    "sha256": "52a429cdf94361a4499fdf0049c7d1e7b0e82a7cc40b4e6372bf9283402c1bc6"
+  },
+  "CorruptedFieldRecovery.accepted_rawDecompositionCheck_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawDecompositionCheck_sound : \u2200 {n R : Nat}\n  (p : CorruptedFieldRecovery.RawDecomposition n R)\n  (h : Eq.{1} (CorruptedFieldRecovery.rawDecompositionCheck p) Bool.true)\n  (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.input p)) x) y) z)\n    ((((CorruptedFieldRecovery.RawDecomposition.represented p) x) y) z)\n",
+    "sha256": "896dc087c2dfb9c0dbc85b9cc0fe1b3b5eac433b22921e164ff783b98017bc62"
+  },
+  "CorruptedFieldRecovery.rawDecomposition_residual_factors": {
+    "emitted_type": "@CorruptedFieldRecovery.rawDecomposition_residual_factors : \u2200 {n R : Nat}\n  (p : CorruptedFieldRecovery.RawDecomposition n R) (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1}\n    ((((CorruptedFieldRecovery.pullback.{0, 0, 0}\n            (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))\n            (CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))\n          x)\n        y)\n      z)\n    ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))\n          ((CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)) x))\n        ((CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)) y))\n      ((CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)) z))\n",
+    "sha256": "c467b3bb6942aea71bceafc259d1d6436c0d31a868e9009ff5cfdff3b554aa48"
+  },
+  "CorruptedFieldRecovery.modeImage_pullback_le_dualMap_range": {
+    "emitted_type": "@CorruptedFieldRecovery.modeImage_pullback_le_dualMap_range : \u2200 {n d : Nat} (E : CorruptedFieldRecovery.BinaryTensor d)\n  (u :\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector d)),\n  LE.le.{0} (CorruptedFieldRecovery.modeImage.{0, 0} (CorruptedFieldRecovery.pullback.{0, 0, 0} E u))\n    (LinearMap.range.{0, 0, 0, 0} (LinearMap.dualMap.{0, 0, 0} u))\n",
+    "sha256": "76ee08d0c6bb61f858f5f89ddf6ea2c1de842262ce3f1bc38e207862c171b7d8"
+  }
+}

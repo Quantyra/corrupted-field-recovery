@@ -1,0 +1,9 @@
+⚠ [1676/1676] Built CorruptedFieldRecovery.RawVerifier (4.0s)
+warning: CorruptedFieldRecovery/RawVerifier.lean:35:40: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp [f, Finset.mul_sum, mul_assoc, m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (1676 jobs).

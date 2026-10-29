@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-29T08:59:05.659636+00:00",
+  "reviewer": "Root",
+  "source_sha256": "b10fd068081978e5b2166378cc189bd943402468471336d95c81ffd40d424402",
+  "accepted_scope": [
+    "Raw-array decomposition gate",
+    "Decoded equality on every vector triple",
+    "supportDimension <= R",
+    "Actual residual pullback",
+    "modeImage containment in dual-map range"
+  ],
+  "limitations": [
+    "Compatible tensor not validated as nonzero trace-determinant",
+    "No runtime or implementation refinement claim",
+    "Compiler-executability of underlying instances not independently evaluated"
+  ],
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

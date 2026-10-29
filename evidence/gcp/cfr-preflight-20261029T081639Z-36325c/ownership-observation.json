@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-29T08:17:14.438042+00:00",
+  "initial_state": "TERMINATED",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "policy": "Stop only a task-started instance after preserving outcomes and excluding other ownership."
+}

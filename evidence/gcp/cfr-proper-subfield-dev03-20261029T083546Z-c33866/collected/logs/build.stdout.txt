@@ -1,0 +1,46 @@
+✖ [2942/2942] Building CorruptedFieldRecovery.ProperSubfieldCounts (4.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProperSubfieldCounts.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProperSubfieldCounts.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProperSubfieldCounts.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProperSubfieldCounts.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProperSubfieldCounts.setup.json --json
+error: CorruptedFieldRecovery/ProperSubfieldCounts.lean:40:12: Unknown identifier `X`
+error: CorruptedFieldRecovery/ProperSubfieldCounts.lean:40:10: failed to prove index is valid, possible solutions:
+  - Use `have`-expressions to prove the index is valid
+  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid
+  - Use `a[i]?` notation instead, result is an `Option` type
+  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid
+K : Type u_1
+inst✝⁴ : Field K
+inst✝³ : Finite K
+inst✝² : CharP K 2
+inst✝¹ : Algebra BinaryField K
+inst✝ : FiniteDimensional BinaryField K
+d : ℕ
+hd : 0 < d
+⊢ ?m.29 K sorry
+error: CorruptedFieldRecovery/ProperSubfieldCounts.lean:40:18: Unknown identifier `X`
+error: CorruptedFieldRecovery/ProperSubfieldCounts.lean:40:32: Unknown identifier `X`
+error: CorruptedFieldRecovery/ProperSubfieldCounts.lean:38:43: unsolved goals
+K : Type u_1
+inst✝⁴ : Field K
+inst✝³ : Finite K
+inst✝² : CharP K 2
+inst✝¹ : Algebra BinaryField K
+inst✝ : FiniteDimensional BinaryField K
+d : ℕ
+hd : 0 < d
+⊢ (frobeniusRootSet K d).card ≤ 2 ^ d
+error: CorruptedFieldRecovery/ProperSubfieldCounts.lean:70:79: Application type mismatch: The argument
+  ih
+has type
+  (∀ d ∈ D, 0 < d) → (D.biUnion fun d => frobeniusRootSet K d).card ≤ ∑ d ∈ D, 2 ^ d
+but is expected to have type
+  (D.biUnion fun e => frobeniusRootSet K e).card ≤ ∑ e ∈ D, 2 ^ e
+in the application
+  Nat.add_le_add (card_frobeniusRootSet_le K d (hD d ?m.179)) ih
+warning: CorruptedFieldRecovery/ProperSubfieldCounts.lean:73:0: automatically included section variable(s) unused in theorem `CorruptedFieldRecovery.nonGenerator_mem_degree_root_union`:
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP K 2] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProperSubfieldCounts

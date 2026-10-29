@@ -1,0 +1,114 @@
+{
+  "utc": "2026-10-29T09:23:30.244562+00:00",
+  "runs": [
+    {
+      "run": "cfr-proper-subfield-dev01-20261029T082148Z-9c493c",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-proper-subfield-dev02-20261029T082956Z-afdf15",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-proper-subfield-dev03-20261029T083546Z-c33866",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-proper-subfield-dev04-20261029T084728Z-e7916e",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-proper-subfield-dev05-20261029T085931Z-0cbe5f",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-proper-subfield-dev06-20261029T090609Z-57368e",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-proper-subfield-dev07-20261029T091020Z-19d751",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')"
+    },
+    {
+      "run": "cfr-proper-subfield-dev08-20261029T091436Z-8747e5",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "run": "cfr-raw-verifier-dev01-20261029T081955Z-75b001",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-raw-verifier-dev02-20261029T082451Z-f95e56",
+      "launched": false,
+      "collected": false,
+      "status": null,
+      "failure": null
+    },
+    {
+      "run": "cfr-raw-verifier-dev03-20261029T082635Z-cc5ade",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-raw-verifier-dev04-20261029T083344Z-00d8b4",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')"
+    },
+    {
+      "run": "cfr-raw-verifier-dev05-20261029T083952Z-d7baa0",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null
+    }
+  ],
+  "accepted_runs": [
+    "cfr-raw-verifier-dev05-20261029T083952Z-d7baa0",
+    "cfr-proper-subfield-dev08-20261029T091436Z-8747e5"
+  ],
+  "scope_reviews": "scope-review.json in each accepted run",
+  "shutdown_receipt": "cfr-proper-subfield-dev08-20261029T091436Z-8747e5\\cfr-shutdown-20261029T091940Z-f47430-result.json",
+  "shutdown": {
+    "initial_state": "RUNNING",
+    "final_state": "TERMINATED",
+    "utc": "2026-10-29T09:23:14.424295+00:00",
+    "started_for_task": true,
+    "stop_verified": true,
+    "persistent_cache_retained": true
+  },
+  "external_egress_removed": true,
+  "all_launched_outcomes_collected": true,
+  "no_queued_capture": true,
+  "remaining": "Complete S006 substantive theorem/probability/constructor/cost obligations and final audit; manuscript certification remains incomplete."
+}

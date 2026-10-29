@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.card_frobeniusRootSet_le": {
+    "emitted_type": "CorruptedFieldRecovery.card_frobeniusRootSet_le.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] (d : Nat) (hd : LT.lt.{0} 0 d),\n  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.frobeniusRootSet.{u_1} K d)) (HPow.hPow.{0, 0, 0} 2 d)\n",
+    "sha256": "4abef992cc30a8cca67015d67a798c94ed436affcb08838661b891a6d005734f"
+  },
+  "CorruptedFieldRecovery.card_biUnion_frobeniusRootSet_le": {
+    "emitted_type": "CorruptedFieldRecovery.card_biUnion_frobeniusRootSet_le.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] (D : Finset.{0} Nat) (hD : \u2200 (d : Nat) (a : Membership.mem.{0, 0} D d), LT.lt.{0} 0 d),\n  LE.le.{0} (Finset.card.{u_1} (Finset.biUnion.{0, u_1} D fun d => CorruptedFieldRecovery.frobeniusRootSet.{u_1} K d))\n    (\u2211 d \u2208 D, HPow.hPow.{0, 0, 0} 2 d)\n",
+    "sha256": "c18a33b2b39c87595be56d36cec9d29097548c31d6c7df25fcb4f9cb48b7f028"
+  },
+  "CorruptedFieldRecovery.nonGenerator_mem_degree_root_union": {
+    "emitted_type": "CorruptedFieldRecovery.nonGenerator_mem_degree_root_union.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (x : K)\n  (hx : Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K) x),\n  Membership.mem.{u_1, u_1}\n    (Finset.biUnion.{0, u_1} (CorruptedFieldRecovery.properDegrees.{u_1} K) fun d =>\n      CorruptedFieldRecovery.frobeniusRootSet.{u_1} K d)\n    x\n",
+    "sha256": "10672da8b2ec6044caa86384767a036125f18078037b359fb870249821e70650"
+  },
+  "CorruptedFieldRecovery.nonGenerators_subset_degree_root_union": {
+    "emitted_type": "CorruptedFieldRecovery.nonGenerators_subset_degree_root_union.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K],\n  HasSubset.Subset.{u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K)\n    (Finset.biUnion.{0, u_1} (CorruptedFieldRecovery.properDegrees.{u_1} K) fun d =>\n      CorruptedFieldRecovery.frobeniusRootSet.{u_1} K d)\n",
+    "sha256": "08cb3a695ada555e3a4298659428b7b63afaaa83090817e3a319cb35a2b1e443"
+  },
+  "CorruptedFieldRecovery.card_nonGenerators_le_proper_degree_sum": {
+    "emitted_type": "CorruptedFieldRecovery.card_nonGenerators_le_proper_degree_sum.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K],\n  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K))\n    (\u2211 d \u2208 CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)\n",
+    "sha256": "174465ad2e93c0a79f17cf152010e39d8b7e5cb1ad02f9b29cbee296965f656f"
+  }
+}

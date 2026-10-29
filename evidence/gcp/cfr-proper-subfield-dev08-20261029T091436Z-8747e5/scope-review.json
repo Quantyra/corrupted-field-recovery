@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-29T09:18:57.251341+00:00",
+  "reviewer": "Root",
+  "source_sha256": "c5bfaad9154f1349d3f50132015378e2ce7c30d64fd79ac3594abe9d4cd0916d",
+  "accepted_scope": "For a finite field K with a finite-dimensional F2-algebra structure, the number of nongenerators is at most the sum of 2^d over proper divisors d of its binary extension finrank.",
+  "limitations": [
+    "No beta/gamma inequality",
+    "No sampling-probability theorem",
+    "No numeric bound"
+  ],
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

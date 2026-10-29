@@ -1,0 +1,49 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_frobeniusRootSet_le
+CorruptedFieldRecovery.card_frobeniusRootSet_le.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] (d : Nat) (hd : LT.lt.{0} 0 d),
+  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.frobeniusRootSet.{u_1} K d)) (HPow.hPow.{0, 0, 0} 2 d)
+CFR_TYPE_END:CorruptedFieldRecovery.card_frobeniusRootSet_le
+'CorruptedFieldRecovery.card_frobeniusRootSet_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_biUnion_frobeniusRootSet_le
+CorruptedFieldRecovery.card_biUnion_frobeniusRootSet_le.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] (D : Finset.{0} Nat) (hD : ∀ (d : Nat) (a : Membership.mem.{0, 0} D d), LT.lt.{0} 0 d),
+  LE.le.{0} (Finset.card.{u_1} (Finset.biUnion.{0, u_1} D fun d => CorruptedFieldRecovery.frobeniusRootSet.{u_1} K d))
+    (∑ d ∈ D, HPow.hPow.{0, 0, 0} 2 d)
+CFR_TYPE_END:CorruptedFieldRecovery.card_biUnion_frobeniusRootSet_le
+'CorruptedFieldRecovery.card_biUnion_frobeniusRootSet_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.nonGenerator_mem_degree_root_union
+CorruptedFieldRecovery.nonGenerator_mem_degree_root_union.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (x : K)
+  (hx : Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K) x),
+  Membership.mem.{u_1, u_1}
+    (Finset.biUnion.{0, u_1} (CorruptedFieldRecovery.properDegrees.{u_1} K) fun d =>
+      CorruptedFieldRecovery.frobeniusRootSet.{u_1} K d)
+    x
+CFR_TYPE_END:CorruptedFieldRecovery.nonGenerator_mem_degree_root_union
+'CorruptedFieldRecovery.nonGenerator_mem_degree_root_union' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.nonGenerators_subset_degree_root_union
+CorruptedFieldRecovery.nonGenerators_subset_degree_root_union.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K],
+  HasSubset.Subset.{u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K)
+    (Finset.biUnion.{0, u_1} (CorruptedFieldRecovery.properDegrees.{u_1} K) fun d =>
+      CorruptedFieldRecovery.frobeniusRootSet.{u_1} K d)
+CFR_TYPE_END:CorruptedFieldRecovery.nonGenerators_subset_degree_root_union
+'CorruptedFieldRecovery.nonGenerators_subset_degree_root_union' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_nonGenerators_le_proper_degree_sum
+CorruptedFieldRecovery.card_nonGenerators_le_proper_degree_sum.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K],
+  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K))
+    (∑ d ∈ CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)
+CFR_TYPE_END:CorruptedFieldRecovery.card_nonGenerators_le_proper_degree_sum
+'CorruptedFieldRecovery.card_nonGenerators_le_proper_degree_sum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

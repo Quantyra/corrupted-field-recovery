@@ -1,0 +1,88 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawSupportOffset
+@CorruptedFieldRecovery.rawSupportOffset : {n d : Nat} → (i : Fin n) → (j : Fin d) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawSupportOffset
+'CorruptedFieldRecovery.rawSupportOffset' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawSupportMap
+@CorruptedFieldRecovery.rawSupportMap : {n d : Nat} →
+  (matrix : CorruptedFieldRecovery.RawBinaryArray) →
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector d)
+CFR_TYPE_END:CorruptedFieldRecovery.rawSupportMap
+'CorruptedFieldRecovery.rawSupportMap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawDecomposition
+CorruptedFieldRecovery.RawDecomposition : (n R : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.RawDecomposition
+'CorruptedFieldRecovery.RawDecomposition' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawDecomposition.represented
+@CorruptedFieldRecovery.RawDecomposition.represented : {n R : Nat} →
+  (p : CorruptedFieldRecovery.RawDecomposition n R) → CorruptedFieldRecovery.BinaryTensor n
+CFR_TYPE_END:CorruptedFieldRecovery.RawDecomposition.represented
+'CorruptedFieldRecovery.RawDecomposition.represented' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawDecomposition.represented_alternating
+@CorruptedFieldRecovery.RawDecomposition.represented_alternating : ∀ {n R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition n R),
+  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.RawDecomposition.represented p)
+CFR_TYPE_END:CorruptedFieldRecovery.RawDecomposition.represented_alternating
+'CorruptedFieldRecovery.RawDecomposition.represented_alternating' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawIncreasingCoefficientCheck
+@CorruptedFieldRecovery.rawIncreasingCoefficientCheck : {n : Nat} →
+  (input represented : CorruptedFieldRecovery.BinaryTensor n) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawIncreasingCoefficientCheck
+'CorruptedFieldRecovery.rawIncreasingCoefficientCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawDecompositionCheck
+@CorruptedFieldRecovery.rawDecompositionCheck : {n R : Nat} → (p : CorruptedFieldRecovery.RawDecomposition n R) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawDecompositionCheck
+'CorruptedFieldRecovery.rawDecompositionCheck' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawDecompositionCheck_support_bound
+@CorruptedFieldRecovery.accepted_rawDecompositionCheck_support_bound : ∀ {n R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition n R)
+  (h : Eq.{1} (CorruptedFieldRecovery.rawDecompositionCheck p) Bool.true),
+  LE.le.{0} (CorruptedFieldRecovery.RawDecomposition.supportDimension p) R
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawDecompositionCheck_support_bound
+'CorruptedFieldRecovery.accepted_rawDecompositionCheck_support_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawDecompositionCheck_sound
+@CorruptedFieldRecovery.accepted_rawDecompositionCheck_sound : ∀ {n R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition n R)
+  (h : Eq.{1} (CorruptedFieldRecovery.rawDecompositionCheck p) Bool.true)
+  (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.input p)) x) y) z)
+    ((((CorruptedFieldRecovery.RawDecomposition.represented p) x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawDecompositionCheck_sound
+'CorruptedFieldRecovery.accepted_rawDecompositionCheck_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawDecomposition_residual_factors
+@CorruptedFieldRecovery.rawDecomposition_residual_factors : ∀ {n R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition n R) (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1}
+    ((((CorruptedFieldRecovery.pullback.{0, 0, 0}
+            (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))
+            (CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))
+          x)
+        y)
+      z)
+    ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))
+          ((CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)) x))
+        ((CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)) y))
+      ((CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)) z))
+CFR_TYPE_END:CorruptedFieldRecovery.rawDecomposition_residual_factors
+'CorruptedFieldRecovery.rawDecomposition_residual_factors' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_pullback_le_dualMap_range
+@CorruptedFieldRecovery.modeImage_pullback_le_dualMap_range : ∀ {n d : Nat} (E : CorruptedFieldRecovery.BinaryTensor d)
+  (u :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector d)),
+  LE.le.{0} (CorruptedFieldRecovery.modeImage.{0, 0} (CorruptedFieldRecovery.pullback.{0, 0, 0} E u))
+    (LinearMap.range.{0, 0, 0, 0} (LinearMap.dualMap.{0, 0, 0} u))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_pullback_le_dualMap_range
+'CorruptedFieldRecovery.modeImage_pullback_le_dualMap_range' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

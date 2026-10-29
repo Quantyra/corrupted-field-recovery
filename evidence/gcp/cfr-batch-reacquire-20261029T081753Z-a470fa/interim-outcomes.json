@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-29T09:05:18.653638+00:00",
+  "launches": [
+    {
+      "run": "cfr-proper-subfield-dev01-20261029T082148Z-9c493c",
+      "collected": true,
+      "status": "failed"
+    },
+    {
+      "run": "cfr-proper-subfield-dev02-20261029T082956Z-afdf15",
+      "collected": true,
+      "status": "failed"
+    },
+    {
+      "run": "cfr-proper-subfield-dev03-20261029T083546Z-c33866",
+      "collected": true,
+      "status": "failed"
+    },
+    {
+      "run": "cfr-proper-subfield-dev04-20261029T084728Z-e7916e",
+      "collected": true,
+      "status": "failed"
+    },
+    {
+      "run": "cfr-proper-subfield-dev05-20261029T085931Z-0cbe5f",
+      "collected": true,
+      "status": "failed"
+    },
+    {
+      "run": "cfr-raw-verifier-dev01-20261029T081955Z-75b001",
+      "collected": true,
+      "status": "failed"
+    },
+    {
+      "run": "cfr-raw-verifier-dev03-20261029T082635Z-cc5ade",
+      "collected": true,
+      "status": "failed"
+    },
+    {
+      "run": "cfr-raw-verifier-dev04-20261029T083344Z-00d8b4",
+      "collected": true,
+      "status": "failed"
+    },
+    {
+      "run": "cfr-raw-verifier-dev05-20261029T083952Z-d7baa0",
+      "collected": true,
+      "status": "passed"
+    }
+  ],
+  "remaining": "Proper-subfield root membership repair; final guarded stop and Git preservation."
+}
