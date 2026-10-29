@@ -1,0 +1,296 @@
+{
+  "utc": "2026-10-29T16:20:00.853310+00:00",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "all_launched_outcomes_collected": true,
+  "STOP_ceiling_utc": "2026-10-29T18:22:21.380+00:00",
+  "latest_submission_utc": "2026-10-29T17:27:21.380+00:00",
+  "runs": [
+    {
+      "run": "cfr-candidate-modulus-dev31-20261029T144011Z-1605b7",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-candidate-modulus-dev35-20261029T145307Z-41b4b2",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-candidate-modulus-dev37-20261029T145840Z-15d565",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-factor-converse-dev43-20261029T152453Z-1241f3",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-factor-converse-dev47-20261029T154403Z-14fc69",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-factor-converse-dev48-20261029T155306Z-29d19d",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-hidden-dual-support-dev49-20261029T155501Z-ff0afc",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.HiddenDualSupportTransport"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-hidden-dual-support-dev50-20261029T155924Z-164ce2",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.HiddenDualSupportTransport"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-mask-range-converse-dev39-20261029T150648Z-9b8372",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-mask-range-converse-dev41-20261029T151401Z-e39114",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-raw-factor-irreducible-dev27-20261029T142301Z-de67a8",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-raw-factor-irreducible-dev28-20261029T142745Z-7aaa5c",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.RawPolynomialIrreducibility"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-raw-field-quotient-dev51-20261029T160323Z-ffdd07",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.RawFieldQuotient"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-raw-field-quotient-dev52-20261029T161133Z-fe14f5",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.RawFieldQuotient"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-trace-dual-bridge-dev29-20261029T143531Z-6c3d22",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "AssertionError('Mathlib.LinearAlgebra.Dual')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-bridge-dev30-20261029T143812Z-461b7d",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-bridge-dev33-20261029T144407Z-6186b9",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-bridge-dev34-20261029T145000Z-bb4280",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-bridge-dev36-20261029T145343Z-1d412d",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-bridge-dev38-20261029T150059Z-9f1827",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-bridge-dev40-20261029T151012Z-59d9d1",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-bridge-dev42-20261029T151729Z-09185a",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-trace-dual-equiv-dev44-20261029T153120Z-d3b9ee",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-equiv-dev45-20261029T153809Z-b61181",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')",
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-dual-equiv-dev46-20261029T154225Z-635830",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.TraceDualTranslateBridge"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-translate-overlap-dev26-20261029T140634Z-c115fc",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "targets": [
+        "CorruptedFieldRecovery.TranslateScalarCounts"
+      ],
+      "collected": true,
+      "root_scope_review": true
+    }
+  ],
+  "note": "Active batch checkpoint. No queued capture or active compiler; awaiting selected author increments. VM retained under ongoing task authorization."
+}
