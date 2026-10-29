@@ -1,0 +1,37 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawLog2_lt_of_lt_pow
+@CorruptedFieldRecovery.rawLog2_lt_of_lt_pow : ∀ {n L : Nat} (hL : LT.lt.{0} 0 L)
+  (hn : LT.lt.{0} n (HPow.hPow.{0, 0, 0} 2 L)), LT.lt.{0} (Nat.log2 n) L
+CFR_TYPE_END:CorruptedFieldRecovery.rawLog2_lt_of_lt_pow
+'CorruptedFieldRecovery.rawLog2_lt_of_lt_pow' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStep_lt_pow_of_modulus_band
+CorruptedFieldRecovery.rawReduceStep_lt_pow_of_modulus_band : ∀ (s modulus a : Nat)
+  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1)))
+  (hcurrentLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) a),
+  LT.lt.{0} (CorruptedFieldRecovery.rawReduceStep modulus s a) (HPow.hPow.{0, 0, 0} 2 (Nat.log2 a))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStep_lt_pow_of_modulus_band
+'CorruptedFieldRecovery.rawReduceStep_lt_pow_of_modulus_band' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band_logFuel
+CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band_logFuel : ∀ (s modulus a fuel : Nat)
+  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1))) (hs : LT.lt.{0} 0 s)
+  (hfuel : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Nat.log2 a) s) 1) fuel),
+  LT.lt.{0} (CorruptedFieldRecovery.rawReduceFuel modulus s fuel a) (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band_logFuel
+'CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band_logFuel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted
+@CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (a b : Nat),
+  LT.lt.{0}
+    (CorruptedFieldRecovery.rawFieldMulFuel candidate
+      (HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Nat.log2 (CorruptedFieldRecovery.rawPolyMul a b)) s) 1) a b)
+    (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted
+'CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

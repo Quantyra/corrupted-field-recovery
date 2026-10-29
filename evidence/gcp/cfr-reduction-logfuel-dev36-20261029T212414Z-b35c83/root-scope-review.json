@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T21:34:59.296944+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "For positive s and modulus band, reduction output < 2^s at fuel >= log2(a)-s+1; accepted candidate multiplication output bound at logarithmic fuel.",
+  "remaining": "No primitive-bit cost, product-bit upper bound, trace implementation or full verifier.",
+  "evidence": "collected/logs/emitted-types.json"
+}

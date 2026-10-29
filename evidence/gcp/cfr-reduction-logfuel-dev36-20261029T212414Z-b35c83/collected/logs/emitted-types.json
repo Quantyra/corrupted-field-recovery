@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawLog2_lt_of_lt_pow": {
+    "emitted_type": "@CorruptedFieldRecovery.rawLog2_lt_of_lt_pow : \u2200 {n L : Nat} (hL : LT.lt.{0} 0 L)\n  (hn : LT.lt.{0} n (HPow.hPow.{0, 0, 0} 2 L)), LT.lt.{0} (Nat.log2 n) L\n",
+    "sha256": "4b7bc5ac284975d3b6db4e729482a0f6986d7f0597c686c13120a19a8f1d3fe1"
+  },
+  "CorruptedFieldRecovery.rawReduceStep_lt_pow_of_modulus_band": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStep_lt_pow_of_modulus_band : \u2200 (s modulus a : Nat)\n  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) modulus)\n  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1)))\n  (hcurrentLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) a),\n  LT.lt.{0} (CorruptedFieldRecovery.rawReduceStep modulus s a) (HPow.hPow.{0, 0, 0} 2 (Nat.log2 a))\n",
+    "sha256": "37ac27382a91ee27312186f8c335a6c95deceb21130beec08333cafd82cc054e"
+  },
+  "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band_logFuel": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band_logFuel : \u2200 (s modulus a fuel : Nat)\n  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) modulus)\n  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1))) (hs : LT.lt.{0} 0 s)\n  (hfuel : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Nat.log2 a) s) 1) fuel),\n  LT.lt.{0} (CorruptedFieldRecovery.rawReduceFuel modulus s fuel a) (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "3a4b75df35661aa644a46a3f63dc5ba2f4b0893e68cce89959ee2618484935ad"
+  },
+  "CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (a b : Nat),\n  LT.lt.{0}\n    (CorruptedFieldRecovery.rawFieldMulFuel candidate\n      (HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Nat.log2 (CorruptedFieldRecovery.rawPolyMul a b)) s) 1) a b)\n    (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "d47e6880a3f695af6c13e7fdf97179d4c575afdc7de58f5ccc7bfbf07c090a23"
+  }
+}
