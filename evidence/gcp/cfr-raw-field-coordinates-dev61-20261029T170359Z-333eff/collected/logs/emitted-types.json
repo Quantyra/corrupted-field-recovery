@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawQuotientPowerCoordinates": {
+    "emitted_type": "@CorruptedFieldRecovery.rawQuotientPowerCoordinates : {s : Nat} \u2192\n  (p : Polynomial.{0} (ZMod 2)) \u2192\n    (hmonic : Polynomial.Monic.{0} p) \u2192\n      (hdegree : Eq.{1} (Polynomial.natDegree.{0} p) s) \u2192\n        LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (AdjoinRoot.{0} p) ((a : Fin s) \u2192 ZMod 2)\n",
+    "sha256": "198c90b5d21be46bf5736ed81965ad6f9554d6fddd23598b6e70f475b6c4569d"
+  },
+  "CorruptedFieldRecovery.rawFieldTriplePowerCoordinates": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldTriplePowerCoordinates : {s : Nat} \u2192\n  (p : Polynomial.{0} (ZMod 2)) \u2192\n    (hmonic : Polynomial.Monic.{0} p) \u2192\n      (hdegree : Eq.{1} (Polynomial.natDegree.{0} p) s) \u2192\n        LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.FieldTriple.{0} (AdjoinRoot.{0} p))\n          ((a : Prod.{0, 0} (Fin 3) (Fin s)) \u2192 ZMod 2)\n",
+    "sha256": "93df1196a04bdefb0a75ed114300af1bd880a9125b62d700ea155bfc7bf3c68e"
+  },
+  "CorruptedFieldRecovery.rawFieldTripleToBinaryVector": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldTripleToBinaryVector : {s : Nat} \u2192\n  (p : Polynomial.{0} (ZMod 2)) \u2192\n    (hmonic : Polynomial.Monic.{0} p) \u2192\n      (hdegree : Eq.{1} (Polynomial.natDegree.{0} p) s) \u2192\n        LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.FieldTriple.{0} (AdjoinRoot.{0} p))\n          (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))\n",
+    "sha256": "561331f6e61c548a8c42dfd66ed083c46e8172290a58c703f9ecda401387f976"
+  },
+  "CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192\n      (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192\n        (hmatrix : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) \u2192\n          LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2))\n            (CorruptedFieldRecovery.FieldTriple.{0}\n              (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))\n            (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))\n",
+    "sha256": "aa46d68ad598409a9a2254415a2b90c76975b0e28eec8d623db772aec635d4af"
+  }
+}

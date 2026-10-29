@@ -1,0 +1,42 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawQuotientPowerCoordinates
+@CorruptedFieldRecovery.rawQuotientPowerCoordinates : {s : Nat} →
+  (p : Polynomial.{0} (ZMod 2)) →
+    (hmonic : Polynomial.Monic.{0} p) →
+      (hdegree : Eq.{1} (Polynomial.natDegree.{0} p) s) →
+        LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (AdjoinRoot.{0} p) ((a : Fin s) → ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.rawQuotientPowerCoordinates
+'CorruptedFieldRecovery.rawQuotientPowerCoordinates' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTriplePowerCoordinates
+@CorruptedFieldRecovery.rawFieldTriplePowerCoordinates : {s : Nat} →
+  (p : Polynomial.{0} (ZMod 2)) →
+    (hmonic : Polynomial.Monic.{0} p) →
+      (hdegree : Eq.{1} (Polynomial.natDegree.{0} p) s) →
+        LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.FieldTriple.{0} (AdjoinRoot.{0} p))
+          ((a : Prod.{0, 0} (Fin 3) (Fin s)) → ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTriplePowerCoordinates
+'CorruptedFieldRecovery.rawFieldTriplePowerCoordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTripleToBinaryVector
+@CorruptedFieldRecovery.rawFieldTripleToBinaryVector : {s : Nat} →
+  (p : Polynomial.{0} (ZMod 2)) →
+    (hmonic : Polynomial.Monic.{0} p) →
+      (hdegree : Eq.{1} (Polynomial.natDegree.{0} p) s) →
+        LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.FieldTriple.{0} (AdjoinRoot.{0} p))
+          (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTripleToBinaryVector
+'CorruptedFieldRecovery.rawFieldTripleToBinaryVector' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates
+@CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+      (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) →
+        (hmatrix : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) →
+          LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2))
+            (CorruptedFieldRecovery.FieldTriple.{0}
+              (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))
+            (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates
+'CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

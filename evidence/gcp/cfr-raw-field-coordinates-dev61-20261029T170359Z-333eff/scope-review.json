@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "A monic degree-s quotient has a proof-defined power-basis coordinate equivalence. Its triples identify with BinaryVector (3*s), and accepted raw candidate and matrix gates give the composed coordinate equivalence.",
+  "remaining": "These LinearEquiv constructions are noncomputable proof objects. Trace-determinant coefficient validation, operational refinement, full certificate correctness and costs remain open.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 4,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

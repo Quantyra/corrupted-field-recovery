@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T17:06:11.129899+00:00",
+  "run": "cfr-raw-field-coordinates-dev61-20261029T170359Z-333eff",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
