@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T22:16:50.702907+00:00",
+  "run": "cfr-physical-support-dev41-20261029T214951Z-117daf",
+  "batch": "cfr-batch-reacquire-20261029T221338Z-1cdd08",
+  "order": 2,
+  "reason": "Previously preserved exact uncompiled draft selected for this newly authorized bounded session; historical not-submitted record remains true at its earlier timestamp."
+}

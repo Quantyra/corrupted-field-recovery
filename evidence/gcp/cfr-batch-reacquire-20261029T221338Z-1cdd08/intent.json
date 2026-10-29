@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T22:13:38.257742+00:00",
+  "action": "Inspect stopped dedicated builder and effective ingress before authorized bounded reacquisition",
+  "previous_batch": "cfr-batch-reacquire-20261029T185505Z-52cea1",
+  "expected_instance_id": "3335066512373302615"
+}

@@ -1,0 +1,17 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMul_lt_pow
+CorruptedFieldRecovery.rawPolyMul_lt_pow : ∀ (r s a b : Nat) (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 r))
+  (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 s)),
+  LT.lt.{0} (CorruptedFieldRecovery.rawPolyMul a b) (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} r s))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMul_lt_pow
+'CorruptedFieldRecovery.rawPolyMul_lt_pow' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted_2s
+@CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted_2s : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (a b : Nat)
+  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 s)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 s)),
+  LT.lt.{0} (CorruptedFieldRecovery.rawFieldMulFuel candidate (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 s) 1) a b)
+    (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted_2s
+'CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted_2s' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-29T22:29:03.127551+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Raw carryless product < 2^(r+s) for bounded operands; accepted-candidate 2s+1-fuel reduced output < 2^s for s-bit operands.",
+  "remaining": "No primitive-bit operation cost or trace result.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261029T221338Z-1cdd08"
+}

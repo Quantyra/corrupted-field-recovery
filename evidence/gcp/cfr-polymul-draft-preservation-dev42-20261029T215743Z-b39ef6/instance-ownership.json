@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6",
+  "utc": "2026-10-29T22:20:21.175414+00:00"
+}

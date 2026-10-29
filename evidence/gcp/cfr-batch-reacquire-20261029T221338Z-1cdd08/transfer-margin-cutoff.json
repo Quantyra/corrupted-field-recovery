@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T22:18:19.507671+00:00",
+  "effective_STOP_ceiling": "2026-10-29T19:16:54.023000-07:00",
+  "latest_full_stage_launch": "2026-10-29T18:21:54.023000-07:00",
+  "conservative_last_submission_start": "2026-10-29T18:14:54.023000-07:00",
+  "reason": "Reserve seven-minute guarded transfer margin plus full 1800-second stage and at least25 minutes preservation/shutdown."
+}

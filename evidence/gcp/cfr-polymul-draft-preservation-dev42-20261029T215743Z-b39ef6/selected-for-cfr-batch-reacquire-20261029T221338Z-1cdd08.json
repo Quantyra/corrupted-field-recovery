@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T22:16:50.693537+00:00",
+  "run": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6",
+  "batch": "cfr-batch-reacquire-20261029T221338Z-1cdd08",
+  "order": 1,
+  "reason": "Previously preserved exact uncompiled draft selected for this newly authorized bounded session; historical not-submitted record remains true at its earlier timestamp."
+}

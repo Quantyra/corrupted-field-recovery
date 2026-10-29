@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawPolyMul_lt_pow": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolyMul_lt_pow : \u2200 (r s a b : Nat) (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 r))\n  (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 s)),\n  LT.lt.{0} (CorruptedFieldRecovery.rawPolyMul a b) (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} r s))\n",
+    "sha256": "202d436e19371885580fb0e5a7bb737a991614e7294e3ea534652a9fd32ca122"
+  },
+  "CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted_2s": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted_2s : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (a b : Nat)\n  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 s)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 s)),\n  LT.lt.{0} (CorruptedFieldRecovery.rawFieldMulFuel candidate (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 s) 1) a b)\n    (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "bd01f7966200330e6e1259a78f11ebc5278faf406d80f2bd75f1821a5b2195fe"
+  }
+}

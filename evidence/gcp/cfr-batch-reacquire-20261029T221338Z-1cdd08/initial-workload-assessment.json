@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T22:20:00.364045+00:00",
+  "no_unrelated_workload_observed": true,
+  "no_lean_lake_or_runner": true,
+  "task_lock_free": true,
+  "evidence": "initial-remote-workload.stdout.txt",
+  "assessment": "Full process inventory contains kernel/system/Google guest services and this task SSH inspection only."
+}
