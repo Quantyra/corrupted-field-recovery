@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T17:39:36.248947+00:00",
+  "run": "cfr-trace-literal-decomposition-dev07-20261029T173621Z-2bb618",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

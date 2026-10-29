@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T17:30:38.458254+00:00",
+  "run": "cfr-actual-five-tape-dev05-20261029T172801Z-c342b8",
+  "launched": false,
+  "superseded_by": null,
+  "reason": "Dependency offer superseded before launch; recapture with repaired five-tuple source required"
+}

@@ -1,0 +1,54 @@
+✖ [2955/2955] Building CorruptedFieldRecovery.ProbabilityActualTapeBridge (3.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityActualTapeBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityActualTapeBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityActualTapeBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityActualTapeBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityActualTapeBridge.setup.json --json
+error: CorruptedFieldRecovery/ProbabilityActualTapeBridge.lean:29:6: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (fun event => (fun i => Q.symm (event.fst i), event.snd))
+      ((fun tape => ⟨fun i => Q (tape.1 i), tape.2⟩) (words, index)) =
+    (words, index)
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.1732} {β : α → Sort ?u.1731} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case mk
+s : ℕ
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+words : Fin 4 → BinaryVector (3 * s)
+index : BinaryVector s
+⊢ (fun event => (fun i => Q.symm (event.fst i), event.snd))
+      ((fun tape => ⟨fun i => Q (tape.1 i), tape.2⟩) (words, index)) =
+    (words, index)
+error: CorruptedFieldRecovery/ProbabilityActualTapeBridge.lean:36:6: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (fun tape => ⟨fun i => Q (tape.1 i), tape.2⟩)
+      ((fun event => (fun i => Q.symm (event.fst i), event.snd)) ⟨words, index⟩) =
+    ⟨words, index⟩
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.1954} {β : α → Sort ?u.1953} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case mk
+s : ℕ
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+words : Fin 4 → FieldTriple K
+index : BinaryVector s
+⊢ (fun tape => ⟨fun i => Q (tape.1 i), tape.2⟩)
+      ((fun event => (fun i => Q.symm (event.fst i), event.snd)) ⟨words, index⟩) =
+    ⟨words, index⟩
+error: CorruptedFieldRecovery/ProbabilityActualTapeBridge.lean:75:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (?a ^ ?m) ^ ?n
+in the target expression
+  2 ^ (3 * s * 4) * 2 ^ s = 2 ^ (13 * s)
+
+s : ℕ
+⊢ 2 ^ (3 * s * 4) * 2 ^ s = 2 ^ (13 * s)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProbabilityActualTapeBridge

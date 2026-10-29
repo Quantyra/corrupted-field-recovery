@@ -1,0 +1,406 @@
+✖ [2027/2027] Building CorruptedFieldRecovery.RawTraceDecomposition (28s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawTraceDecomposition.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawTraceDecomposition.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawTraceDecomposition.setup.json --json
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:32:14: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:28:24: unsolved goals
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x y z w : BinaryVector n
+⊢ (Algebra.trace (ZMod 2) K)
+          (c * (coords x).1 * (coords y).2.1 * (coords z).2.2 + c * (coords x).1 * (coords y).2.1 * (coords w).2.2 -
+                      c * (coords x).1 * (coords y).2.2 * (coords z).2.1 -
+                    c * (coords x).1 * (coords y).2.2 * (coords w).2.1 -
+                  c * (coords z).2.2 * (coords y).1 * (coords x).2.1 -
+                c * (coords w).2.2 * (coords y).1 * (coords x).2.1 +
+              c * (coords z).2.1 * (coords y).1 * (coords x).2.2 +
+            c * (coords w).2.1 * (coords y).1 * (coords x).2.2) +
+        (Algebra.trace (ZMod 2) K)
+          (-(c * (coords y).2.1 * (coords x).2.2 * (coords z).1) + c * (coords y).2.2 * (coords x).2.1 * (coords z).1) +
+      (Algebra.trace (ZMod 2) K)
+        (-(c * (coords y).2.1 * (coords x).2.2 * (coords w).1) + c * (coords y).2.2 * (coords x).2.1 * (coords w).1) =
+    (Algebra.trace (ZMod 2) K)
+            (-(c * (coords y).2.1 * (coords x).2.2 * (coords z).1) +
+              c * (coords y).2.2 * (coords x).2.1 * (coords z).1) +
+          (Algebra.trace (ZMod 2) K)
+            (-(c * (coords y).2.1 * (coords x).2.2 * (coords w).1) +
+              c * (coords y).2.2 * (coords x).2.1 * (coords w).1) +
+        (Algebra.trace (ZMod 2) K)
+          (c * (coords x).1 * (coords y).2.1 * (coords z).2.2 - c * (coords x).1 * (coords y).2.2 * (coords z).2.1 -
+              c * (coords z).2.2 * (coords y).1 * (coords x).2.1 +
+            c * (coords z).2.1 * (coords y).1 * (coords x).2.2) +
+      (Algebra.trace (ZMod 2) K)
+        (c * (coords x).1 * (coords y).2.1 * (coords w).2.2 - c * (coords x).1 * (coords y).2.2 * (coords w).2.1 -
+            c * (coords w).2.2 * (coords y).1 * (coords x).2.1 +
+          c * (coords w).2.1 * (coords y).1 * (coords x).2.2)
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:37:14: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:33:25: unsolved goals
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x y : BinaryVector n
+a : ZMod 2
+z : BinaryVector n
+⊢ (Algebra.trace (ZMod 2) K)
+      (c * (coords x).1 * a • ((coords y).2.1 * (coords z).2.2) -
+            c * (coords x).1 * a • ((coords y).2.2 * (coords z).2.1) -
+          c * (coords y).1 * a • ((coords z).2.2 * (coords x).2.1) +
+        c * (coords y).1 * a • ((coords z).2.1 * (coords x).2.2)) =
+    a *
+      (Algebra.trace (ZMod 2) K)
+        (c * (coords x).1 * (coords y).2.1 * (coords z).2.2 - c * (coords x).1 * (coords y).2.2 * (coords z).2.1 -
+            c * (coords z).2.2 * (coords y).1 * (coords x).2.1 +
+          c * (coords z).2.1 * (coords y).1 * (coords x).2.2)
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:43:10: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:38:20: unsolved goals
+case h.h
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x y w : BinaryVector n
+z : Fin n
+⊢ (Algebra.trace (ZMod 2) K)
+        (c * (coords x).1 * (coords y).2.1 * (coords (Pi.single z 1)).2.2 +
+                      c * (coords x).1 * (coords (Pi.single z 1)).2.2 * (coords w).2.1 -
+                    c * (coords x).1 * (coords y).2.2 * (coords (Pi.single z 1)).2.1 -
+                  c * (coords x).1 * (coords (Pi.single z 1)).2.1 * (coords w).2.2 -
+                c * (coords (Pi.single z 1)).2.2 * (coords y).1 * (coords x).2.1 -
+              c * (coords (Pi.single z 1)).2.2 * (coords x).2.1 * (coords w).1 +
+            c * (coords (Pi.single z 1)).2.1 * (coords y).1 * (coords x).2.2 +
+          c * (coords (Pi.single z 1)).2.1 * (coords x).2.2 * (coords w).1) +
+      (Algebra.trace (ZMod 2) K)
+        (-(c * (coords y).2.1 * (coords x).2.2 * (coords (Pi.single z 1)).1) -
+              c * (coords w).2.1 * (coords x).2.2 * (coords (Pi.single z 1)).1 +
+            c * (coords y).2.2 * (coords x).2.1 * (coords (Pi.single z 1)).1 +
+          c * (coords w).2.2 * (coords x).2.1 * (coords (Pi.single z 1)).1) =
+    (Algebra.trace (ZMod 2) K)
+            (c * (coords x).1 * (coords y).2.1 * (coords (Pi.single z 1)).2.2 -
+                  c * (coords x).1 * (coords y).2.2 * (coords (Pi.single z 1)).2.1 -
+                c * (coords (Pi.single z 1)).2.2 * (coords y).1 * (coords x).2.1 +
+              c * (coords (Pi.single z 1)).2.1 * (coords y).1 * (coords x).2.2) +
+          (Algebra.trace (ZMod 2) K)
+            (-(c * (coords y).2.1 * (coords x).2.2 * (coords (Pi.single z 1)).1) +
+              c * (coords y).2.2 * (coords x).2.1 * (coords (Pi.single z 1)).1) +
+        (Algebra.trace (ZMod 2) K)
+          (c * (coords x).1 * (coords (Pi.single z 1)).2.2 * (coords w).2.1 -
+                c * (coords x).1 * (coords (Pi.single z 1)).2.1 * (coords w).2.2 -
+              c * (coords (Pi.single z 1)).2.2 * (coords x).2.1 * (coords w).1 +
+            c * (coords (Pi.single z 1)).2.1 * (coords x).2.2 * (coords w).1) +
+      (Algebra.trace (ZMod 2) K)
+        (-(c * (coords w).2.1 * (coords x).2.2 * (coords (Pi.single z 1)).1) +
+          c * (coords w).2.2 * (coords x).2.1 * (coords (Pi.single z 1)).1)
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:49:10: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:44:21: unsolved goals
+case h.h
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x : BinaryVector n
+a : ZMod 2
+y : BinaryVector n
+z : Fin n
+⊢ (Algebra.trace (ZMod 2) K)
+        (c * (coords x).1 * a • ((coords y).2.1 * (coords (Pi.single z 1)).2.2) -
+            c * (coords x).1 * a • ((coords y).2.2 * (coords (Pi.single z 1)).2.1) -
+          c *
+            a •
+              ((coords (Pi.single z 1)).2.2 * (coords y).1 * (coords x).2.1 -
+                (coords (Pi.single z 1)).2.1 * (coords y).1 * (coords x).2.2)) +
+      (Algebra.trace (ZMod 2) K)
+        (c * (coords (Pi.single z 1)).1 * a • ((coords y).2.2 * (coords x).2.1) -
+          c * (coords (Pi.single z 1)).1 * a • ((coords y).2.1 * (coords x).2.2)) =
+    a *
+        (Algebra.trace (ZMod 2) K)
+          (c * (coords x).1 * (coords y).2.1 * (coords (Pi.single z 1)).2.2 -
+                c * (coords x).1 * (coords y).2.2 * (coords (Pi.single z 1)).2.1 -
+              c * (coords (Pi.single z 1)).2.2 * (coords y).1 * (coords x).2.1 +
+            c * (coords (Pi.single z 1)).2.1 * (coords y).1 * (coords x).2.2) +
+      a *
+        (Algebra.trace (ZMod 2) K)
+          (-(c * (coords y).2.1 * (coords x).2.2 * (coords (Pi.single z 1)).1) +
+            c * (coords y).2.2 * (coords x).2.1 * (coords (Pi.single z 1)).1)
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:55:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:50:16: unsolved goals
+case h.h.h.h
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x y : BinaryVector n
+z w : Fin n
+⊢ (Algebra.trace (ZMod 2) K)
+        (c * (coords x).1 * (coords (Pi.single z 1)).2.1 * (coords (Pi.single w 1)).2.2 -
+                      c * (coords x).1 * (coords (Pi.single z 1)).2.2 * (coords (Pi.single w 1)).2.1 +
+                    c * (coords (Pi.single z 1)).2.1 * (coords (Pi.single w 1)).2.2 * (coords y).1 -
+                  c * (coords (Pi.single w 1)).2.2 * (coords (Pi.single z 1)).1 * (coords x).2.1 -
+                c * (coords (Pi.single w 1)).2.2 * (coords (Pi.single z 1)).1 * (coords y).2.1 -
+              c * (coords (Pi.single z 1)).2.2 * (coords (Pi.single w 1)).2.1 * (coords y).1 +
+            c * (coords (Pi.single w 1)).2.1 * (coords (Pi.single z 1)).1 * (coords x).2.2 +
+          c * (coords (Pi.single w 1)).2.1 * (coords (Pi.single z 1)).1 * (coords y).2.2) +
+      (Algebra.trace (ZMod 2) K)
+        (-(c * (coords (Pi.single z 1)).2.1 * (coords x).2.2 * (coords (Pi.single w 1)).1) -
+              c * (coords (Pi.single z 1)).2.1 * (coords y).2.2 * (coords (Pi.single w 1)).1 +
+            c * (coords (Pi.single z 1)).2.2 * (coords x).2.1 * (coords (Pi.single w 1)).1 +
+          c * (coords (Pi.single z 1)).2.2 * (coords y).2.1 * (coords (Pi.single w 1)).1) =
+    (Algebra.trace (ZMod 2) K)
+            (c * (coords x).1 * (coords (Pi.single z 1)).2.1 * (coords (Pi.single w 1)).2.2 -
+                  c * (coords x).1 * (coords (Pi.single z 1)).2.2 * (coords (Pi.single w 1)).2.1 -
+                c * (coords (Pi.single w 1)).2.2 * (coords (Pi.single z 1)).1 * (coords x).2.1 +
+              c * (coords (Pi.single w 1)).2.1 * (coords (Pi.single z 1)).1 * (coords x).2.2) +
+          (Algebra.trace (ZMod 2) K)
+            (-(c * (coords (Pi.single z 1)).2.1 * (coords x).2.2 * (coords (Pi.single w 1)).1) +
+              c * (coords (Pi.single z 1)).2.2 * (coords x).2.1 * (coords (Pi.single w 1)).1) +
+        (Algebra.trace (ZMod 2) K)
+          (c * (coords (Pi.single z 1)).2.1 * (coords (Pi.single w 1)).2.2 * (coords y).1 -
+                c * (coords (Pi.single w 1)).2.2 * (coords (Pi.single z 1)).1 * (coords y).2.1 -
+              c * (coords (Pi.single z 1)).2.2 * (coords (Pi.single w 1)).2.1 * (coords y).1 +
+            c * (coords (Pi.single w 1)).2.1 * (coords (Pi.single z 1)).1 * (coords y).2.2) +
+      (Algebra.trace (ZMod 2) K)
+        (-(c * (coords (Pi.single z 1)).2.1 * (coords y).2.2 * (coords (Pi.single w 1)).1) +
+          c * (coords (Pi.single z 1)).2.2 * (coords y).2.1 * (coords (Pi.single w 1)).1)
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:61:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:56:17: unsolved goals
+case h.h.h.h
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+a : ZMod 2
+x : BinaryVector n
+z w : Fin n
+⊢ (Algebra.trace (ZMod 2) K)
+        (c *
+              a •
+                ((coords x).1 * (coords (Pi.single z 1)).2.1 * (coords (Pi.single w 1)).2.2 -
+                  (coords x).1 * (coords (Pi.single z 1)).2.2 * (coords (Pi.single w 1)).2.1) -
+            c * (coords (Pi.single z 1)).1 * a • ((coords (Pi.single w 1)).2.2 * (coords x).2.1) +
+          c * (coords (Pi.single z 1)).1 * a • ((coords (Pi.single w 1)).2.1 * (coords x).2.2)) +
+      (Algebra.trace (ZMod 2) K)
+        (c * (coords (Pi.single w 1)).1 * a • ((coords (Pi.single z 1)).2.2 * (coords x).2.1) -
+          c * (coords (Pi.single w 1)).1 * a • ((coords (Pi.single z 1)).2.1 * (coords x).2.2)) =
+    a *
+        (Algebra.trace (ZMod 2) K)
+          (c * (coords x).1 * (coords (Pi.single z 1)).2.1 * (coords (Pi.single w 1)).2.2 -
+                c * (coords x).1 * (coords (Pi.single z 1)).2.2 * (coords (Pi.single w 1)).2.1 -
+              c * (coords (Pi.single w 1)).2.2 * (coords (Pi.single z 1)).1 * (coords x).2.1 +
+            c * (coords (Pi.single w 1)).2.1 * (coords (Pi.single z 1)).1 * (coords x).2.2) +
+      a *
+        (Algebra.trace (ZMod 2) K)
+          (-(c * (coords (Pi.single z 1)).2.1 * (coords x).2.2 * (coords (Pi.single w 1)).1) +
+            c * (coords (Pi.single z 1)).2.2 * (coords x).2.1 * (coords (Pi.single w 1)).1)
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:31:31: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, s̵u̵b̵_̵m̵u̵l̵,̵ ̵mul_add, add_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:36:44: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, smul_eq_mul, s̵u̵b̵_̵mul,̵ ̵m̵u̵l̵_add, add_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:36:62: This simp argument is unused:
+  add_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, smul_eq_mul, sub_mul, mul_add,̵ ̵a̵d̵d̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:42:27: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, s̵u̵b̵_̵m̵u̵l̵,̵ ̵mul_add, add_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:48:40: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, smul_eq_mul, s̵u̵b̵_̵mul,̵ ̵m̵u̵l̵_add, add_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:48:58: This simp argument is unused:
+  add_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, smul_eq_mul, sub_mul, mul_add,̵ ̵a̵d̵d̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:54:23: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, s̵u̵b̵_̵m̵u̵l̵,̵ ̵mul_add, add_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:60:36: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, smul_eq_mul, s̵u̵b̵_̵mul,̵ ̵m̵u̵l̵_add, add_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:60:54: This simp argument is unused:
+  add_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3, smul_eq_mul, sub_mul, mul_add,̵ ̵a̵d̵d̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:74:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:72:66: unsolved goals
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x z : BinaryVector n
+⊢ (coords z).1 = 0 ∨ True
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:88:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:86:66: unsolved goals
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x y : BinaryVector n
+⊢ (coords x).1 = 0 ∨ True
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:128:8: failed to synthesize instance of type class
+  Finite K
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:144:4: failed to synthesize instance of type class
+  Finite K
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:143:9: declaration uses `sorry`
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:154:92: unsolved goals
+case h
+s : ℕ
+candidate : RawFieldCandidate s
+hfield : rawFieldCandidateCheck candidate = true
+forward inverse : RawCoordinateMatrix
+hcoordinates : rawCoordinateMatrixCheck forward inverse = true
+t : IncreasingTriple (3 * s)
+⊢ (Algebra.trace (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate)))
+      ((mk (rawCandidateModulus candidate)) (rawCandidateScalar candidate) *
+        fieldDet3
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVector (increasingTripleI t)))
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVector (increasingTripleJ t)))
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVector (increasingTripleK t)))) =
+    (((sorry ()) (coordinateVector (increasingTripleI t))) (coordinateVector (increasingTripleJ t)))
+      (coordinateVector (increasingTripleK t))
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:156:28: declaration uses `sorry`
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:196:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  coefficient ?C (increasingTripleI ?t) (increasingTripleJ ?t) (increasingTripleK ?t)
+in the target expression
+  coefficient (decodeRawArray compatible) i j k =
+    coefficient (rawTraceDetTensor candidate hfield forward inverse hcoordinates) i j k
+
+case h
+s : ℕ
+compatible : RawBinaryArray
+candidate : RawFieldCandidate s
+hfield : rawFieldCandidateCheck candidate = true
+forward inverse : RawCoordinateMatrix
+hcoordinates : rawCoordinateMatrixCheck forward inverse = true
+hcheck : rawTraceCompatibleCheck compatible candidate hfield forward inverse hcoordinates = true
+i j k : Fin (3 * s)
+hij : i < j
+hjk : j < k
+t : IncreasingTriple (3 * s) := ⟨((i, j), k), ⋯⟩
+heq :
+  ∀ (t : IncreasingTriple (3 * s)),
+    encodeDenseInput (decodeRawArray compatible) t = rawTraceDetPayload candidate hfield forward inverse hcoordinates t
+hc : encodeDenseInput (decodeRawArray compatible) t = rawTraceDetPayload candidate hfield forward inverse hcoordinates t
+hd :
+  encodeDenseInput (decodeRawArray compatible) t =
+    compatible[rawCoefficientOffset (3 * s) (increasingTripleI t) (increasingTripleJ t) (increasingTripleK t)]!
+hp :
+  rawTraceDetPayload candidate hfield forward inverse hcoordinates t =
+    encodeDenseInput (rawTraceDetTensor candidate hfield forward inverse hcoordinates) t
+⊢ coefficient (decodeRawArray compatible) i j k =
+    coefficient (rawTraceDetTensor candidate hfield forward inverse hcoordinates) i j k
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:224:8: Function expected at
+  rawTraceDetTensor candidate hfield forward inverse hcoordinates +
+    pullback (decodeRawArray p.residual) (rawSupportMap p.supportMatrix)
+but this term has type
+  ?m.56
+
+Note: Expected a function because this term is being applied to the argument
+  x
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawTraceDecomposition

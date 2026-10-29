@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T17:20:36.659210+00:00",
+  "identity": "3335066512373302615",
+  "ingress": "IAP TCP22 and internal subnet only",
+  "initial_state": "TERMINATED",
+  "prior_batch_stop": "2026-10-29T17:15:23+00:00"
+}

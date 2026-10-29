@@ -1,0 +1,41 @@
+✖ [2954/2954] Building CorruptedFieldRecovery.ProbabilityFiveTupleAssembly (68s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.setup.json --json
+error: CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.lean:70:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  l ≥ 1
+  k ≥ 1
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  h - i - j ≥ 0
+  h - j - k ≥ -1
+  g ≥ 0
+  g - h ≤ 0
+  g - j ≤ -1
+  f ≥ 0
+  f - h + j ≤ 0
+  e ≥ 0
+  e - l ≤ -1
+  d ≥ 0
+  d - h + j + k ≤ 1
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 0
+  a ≥ 0
+where
+ a := ↑r
+ b := ↑(canonicalGoodFourFlatImage K A (nonGenerators K)).card
+ c := ↑(A.card - (nonGenerators K).card * Fintype.card K ^ 2) *
+  ↑((A.card - Fintype.card K ^ 2) * ((A.card - Fintype.card K) * (A.card - 1)))
+ d := ↑(nonGenerators K).card
+ e := ↑(badTranslateScalars K (supportCoordinateFinset K U)).card
+ f := ↑(nonGenerators K ∪ badTranslateScalars K (supportCoordinateFinset K U)).card
+ g := ↑G.card
+ h := ↑(Fintype.card K)
+ i := ↑B.card
+ j := ↑(Fintype.card K - (∑ d ∈ properDegrees K, 2 ^ d + (2 ^ (2 * r) - 1)))
+ k := ↑2 ^ (2 * r)
+ l := ↑2 ^ (2 * Module.finrank (ZMod 2) ↥U)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProbabilityFiveTupleAssembly

@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T17:23:56.652116+00:00",
+  "run": "cfr-trace-decomposition-dev02-20261029T172051Z-b631aa",
+  "launched": false,
+  "superseded_by": "cfr-trace-literal-decomposition-dev03-20261029T172251Z-6590a1",
+  "reason": "Author replaced payload decoder presentation with literal trace-determinant and equality bridge before launch"
+}

@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-29T18:20:57.664973+00:00",
+  "accepted": [
+    "cfr-five-tuple-sigma-dev12-20261029T175350Z-614167"
+  ],
+  "accepted_scope": "Dependent finite good-five-event count only; no success probability or complete certification.",
+  "in_progress": "cfr-actual-five-tape-dev17-20261029T181621Z-0f3474",
+  "trace_latest_failed": "cfr-trace-multilinear-decomposition-dev16-20261029T181312Z-94f355",
+  "builder_state": "RUNNING",
+  "effective_stop_ceiling": "2026-10-29T21:21:14.623Z",
+  "no_local_Lean": true
+}

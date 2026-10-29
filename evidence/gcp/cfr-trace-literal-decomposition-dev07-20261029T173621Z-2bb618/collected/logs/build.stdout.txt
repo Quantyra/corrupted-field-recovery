@@ -1,0 +1,107 @@
+✖ [2027/2027] Building CorruptedFieldRecovery.RawTraceDecomposition (4.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawTraceDecomposition.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawTraceDecomposition.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawTraceDecomposition.setup.json --json
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:41:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:39:51: unsolved goals
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+a : ZMod 2
+x y z : FieldTriple K
+⊢ a • (x.1 * y.2.1 * z.2.2 - x.1 * y.2.2 * z.2.1) - y.1 * a • (z.2.2 * x.2.1) + y.1 * a • (z.2.1 * x.2.2) +
+        z.1 * a • (y.2.2 * x.2.1) -
+      z.1 * a • (y.2.1 * x.2.2) =
+    a • (x.1 * y.2.1 * z.2.2 - x.1 * y.2.2 * z.2.1 - z.2.2 * y.1 * x.2.1 + z.2.1 * y.1 * x.2.2) +
+      a • (-(y.2.1 * x.2.2 * z.1) + y.2.2 * x.2.1 * z.1)
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:40:19: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3,̵ ̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:47:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:45:51: unsolved goals
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+a : ZMod 2
+x y z : FieldTriple K
+⊢ x.1 * a • (y.2.1 * z.2.2) - x.1 * a • (y.2.2 * z.2.1) - a • (z.2.2 * y.1 * x.2.1 - z.2.1 * y.1 * x.2.2) +
+        z.1 * a • (y.2.2 * x.2.1) -
+      z.1 * a • (y.2.1 * x.2.2) =
+    a • (x.1 * y.2.1 * z.2.2 - x.1 * y.2.2 * z.2.1 - z.2.2 * y.1 * x.2.1 + z.2.1 * y.1 * x.2.2) +
+      a • (-(y.2.1 * x.2.2 * z.1) + y.2.2 * x.2.1 * z.1)
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:46:19: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3,̵ ̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: CorruptedFieldRecovery/RawTraceDecomposition.lean:53:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:51:51: unsolved goals
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+a : ZMod 2
+x y z : FieldTriple K
+⊢ x.1 * a • (y.2.1 * z.2.2) - x.1 * a • (y.2.2 * z.2.1) - y.1 * a • (z.2.2 * x.2.1) + y.1 * a • (z.2.1 * x.2.2) =
+    a • (x.1 * y.2.1 * z.2.2 - x.1 * y.2.2 * z.2.1 - z.2.2 * y.1 * x.2.1 + z.2.1 * y.1 * x.2.2)
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:52:19: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [fieldDet3,̵ ̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:73:27: failed to synthesize instance of type class
+  Module (ZMod 2) K
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:147:27: failed to synthesize instance of type class
+  Module (ZMod 2) K
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:211:8: Unknown identifier `traceDeterminantTensor`
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:231:4: Unknown identifier `traceDeterminantTensor_alternating`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:230:9: declaration uses `sorry`
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:250:2: Tactic `rfl` failed: The left-hand side
+  rawTraceDetPayload candidate hfield forward inverse hcoordinates t
+is not definitionally equal to the right-hand side
+  encodeDenseInput (rawTraceDetTensor candidate hfield forward inverse hcoordinates) t
+
+case h
+s : ℕ
+candidate : RawFieldCandidate s
+hfield : rawFieldCandidateCheck candidate = true
+forward inverse : RawCoordinateMatrix
+hcoordinates : rawCoordinateMatrixCheck forward inverse = true
+hvalid : rawFieldCandidateValid candidate
+hmod :
+  (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).Monic ∧
+    (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).natDegree = s
+this✝ : Fact (Irreducible (rawCandidateModulus candidate)) :=
+  { out := accepted_rawCandidateModulus_irreducible candidate hfield }
+K : Type := AdjoinRoot (rawCandidateModulus candidate)
+this : Module.Finite (ZMod 2) K := Polynomial.Monic.finite_adjoinRoot hmod.left
+t : IncreasingTriple (3 * s)
+⊢ rawTraceDetPayload candidate hfield forward inverse hcoordinates t =
+    encodeDenseInput (rawTraceDetTensor candidate hfield forward inverse hcoordinates) t
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawTraceDecomposition

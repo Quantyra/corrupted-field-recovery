@@ -1,0 +1,155 @@
+✖ [2027/2027] Building CorruptedFieldRecovery.RawTraceDecomposition (8.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawTraceDecomposition.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawTraceDecomposition.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawTraceDecomposition.setup.json --json
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:39:51: unsolved goals
+case «0»
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+x y z : FieldTriple K
+⊢ 0 • (x.1 * (y.2.1 * z.2.2 - y.2.2 * z.2.1)) - y.1 * (0 • (x.2.1 * z.2.2) - 0 • (x.2.2 * z.2.1)) +
+      z.1 * (0 • (x.2.1 * y.2.2) - 0 • (x.2.2 * y.2.1)) =
+    0 • (x.1 * (y.2.1 * z.2.2 - y.2.2 * z.2.1) - y.1 * (x.2.1 * z.2.2 - x.2.2 * z.2.1)) +
+      0 • (z.1 * (x.2.1 * y.2.2 - x.2.2 * y.2.1))
+
+case «1»
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+x y z : FieldTriple K
+⊢ 1 • (x.1 * (y.2.1 * z.2.2 - y.2.2 * z.2.1)) - y.1 * (1 • (x.2.1 * z.2.2) - 1 • (x.2.2 * z.2.1)) +
+      z.1 * (1 • (x.2.1 * y.2.2) - 1 • (x.2.2 * y.2.1)) =
+    1 • (x.1 * (y.2.1 * z.2.2 - y.2.2 * z.2.1) - y.1 * (x.2.1 * z.2.2 - x.2.2 * z.2.1)) +
+      1 • (z.1 * (x.2.1 * y.2.2 - x.2.2 * y.2.1))
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:44:51: unsolved goals
+case «0»
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+x y z : FieldTriple K
+⊢ x.1 * (0 • (y.2.1 * z.2.2) - 0 • (y.2.2 * z.2.1)) - 0 • (y.1 * (x.2.1 * z.2.2 - x.2.2 * z.2.1)) +
+      z.1 * (0 • (x.2.1 * y.2.2) - 0 • (x.2.2 * y.2.1)) =
+    0 • (x.1 * (y.2.1 * z.2.2 - y.2.2 * z.2.1) - y.1 * (x.2.1 * z.2.2 - x.2.2 * z.2.1)) +
+      0 • (z.1 * (x.2.1 * y.2.2 - x.2.2 * y.2.1))
+
+case «1»
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+x y z : FieldTriple K
+⊢ x.1 * (1 • (y.2.1 * z.2.2) - 1 • (y.2.2 * z.2.1)) - 1 • (y.1 * (x.2.1 * z.2.2 - x.2.2 * z.2.1)) +
+      z.1 * (1 • (x.2.1 * y.2.2) - 1 • (x.2.2 * y.2.1)) =
+    1 • (x.1 * (y.2.1 * z.2.2 - y.2.2 * z.2.1) - y.1 * (x.2.1 * z.2.2 - x.2.2 * z.2.1)) +
+      1 • (z.1 * (x.2.1 * y.2.2 - x.2.2 * y.2.1))
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:49:51: unsolved goals
+case «0»
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+x y z : FieldTriple K
+⊢ x.1 * (0 • (y.2.1 * z.2.2) - 0 • (y.2.2 * z.2.1)) - y.1 * (0 • (x.2.1 * z.2.2) - 0 • (x.2.2 * z.2.1)) =
+    0 • (x.1 * (y.2.1 * z.2.2 - y.2.2 * z.2.1) - y.1 * (x.2.1 * z.2.2 - x.2.2 * z.2.1))
+
+case «1»
+K : Type u_1
+inst✝¹ : CommRing K
+inst✝ : Algebra (ZMod 2) K
+x y z : FieldTriple K
+⊢ x.1 * (1 • (y.2.1 * z.2.2) - 1 • (y.2.2 * z.2.1)) - y.1 * (1 • (x.2.1 * z.2.2) - 1 • (x.2.2 * z.2.1)) =
+    1 • (x.1 * (y.2.1 * z.2.2 - y.2.2 * z.2.1) - y.1 * (x.2.1 * z.2.2 - x.2.2 * z.2.1))
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:93:20: No goals to be solved
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:96:20: unsolved goals
+case h
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Algebra (ZMod 2) K
+inst✝ : Module.Finite (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x y w z : BinaryVector n
+⊢ (Algebra.trace (ZMod 2) K) (c * fieldDet3 (coords x) (coords y) (coords z)) +
+      (Algebra.trace (ZMod 2) K) (c * fieldDet3 (coords x) (coords w) (coords z)) =
+    ({ toFun := fun z => (Algebra.trace (ZMod 2) K) (c * fieldDet3 (coords x) (coords y) (coords z)), map_add' := ⋯,
+          map_smul' := ⋯ } +
+        { toFun := fun z => (Algebra.trace (ZMod 2) K) (c * fieldDet3 (coords x) (coords w) (coords z)), map_add' := ⋯,
+          map_smul' := ⋯ })
+      z
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:117:16: No goals to be solved
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:120:16: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:154:19: Function expected at
+  traceDeterminantTensor
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  K
+
+Hint: The identifier `traceDeterminantTensor` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:157:4: Application type mismatch: The argument
+  traceDeterminantTensor
+has type
+  x✝
+but is expected to have type
+  ?m.1
+in the application
+  @?m.25 traceDeterminantTensor
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:162:4: Application type mismatch: The argument
+  traceDeterminantTensor
+has type
+  x✝
+but is expected to have type
+  ?m.1
+in the application
+  @?m.25 traceDeterminantTensor
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:167:4: Application type mismatch: The argument
+  traceDeterminantTensor
+has type
+  x✝
+but is expected to have type
+  ?m.1
+in the application
+  @?m.25 traceDeterminantTensor
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:157:11: failed to synthesize instance of type class
+  CommRing ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:162:11: failed to synthesize instance of type class
+  CommRing ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:167:11: failed to synthesize instance of type class
+  CommRing ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:216:8: Unknown identifier `traceDeterminantTensor`
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:236:4: Unknown identifier `traceDeterminantTensor_alternating`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:235:9: declaration uses `sorry`
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:255:2: Tactic `rfl` failed: The left-hand side
+  rawTraceDetPayload candidate hfield forward inverse hcoordinates t
+is not definitionally equal to the right-hand side
+  encodeDenseInput (rawTraceDetTensor candidate hfield forward inverse hcoordinates) t
+
+case h
+s : ℕ
+candidate : RawFieldCandidate s
+hfield : rawFieldCandidateCheck candidate = true
+forward inverse : RawCoordinateMatrix
+hcoordinates : rawCoordinateMatrixCheck forward inverse = true
+hvalid : rawFieldCandidateValid candidate
+hmod :
+  (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).Monic ∧
+    (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).natDegree = s
+this✝ : Fact (Irreducible (rawCandidateModulus candidate)) :=
+  { out := accepted_rawCandidateModulus_irreducible candidate hfield }
+K : Type := AdjoinRoot (rawCandidateModulus candidate)
+this : Module.Finite (ZMod 2) K := Polynomial.Monic.finite_adjoinRoot hmod.left
+t : IncreasingTriple (3 * s)
+⊢ rawTraceDetPayload candidate hfield forward inverse hcoordinates t =
+    encodeDenseInput (rawTraceDetTensor candidate hfield forward inverse hcoordinates) t
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawTraceDecomposition

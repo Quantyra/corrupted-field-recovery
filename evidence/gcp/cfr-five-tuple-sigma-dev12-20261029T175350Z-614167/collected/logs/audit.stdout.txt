@@ -1,0 +1,79 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.basisFifthIndexEquiv
+CorruptedFieldRecovery.basisFifthIndexEquiv.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+      {s : Nat} →
+        (b : Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K) →
+          Equiv.{1, u_1 + 1} (CorruptedFieldRecovery.BinaryVector s) K
+CFR_TYPE_END:CorruptedFieldRecovery.basisFifthIndexEquiv
+'CorruptedFieldRecovery.basisFifthIndexEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.goodFifthScalars
+CorruptedFieldRecovery.goodFifthScalars.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Fintype.{u_1} K] →
+      [inst_2 : DecidableEq.{u_1 + 1} K] →
+        [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+          [inst_4 : Finite.{u_1 + 1} K] →
+            (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K)) →
+              Finset.{u_1} K
+CFR_TYPE_END:CorruptedFieldRecovery.goodFifthScalars
+'CorruptedFieldRecovery.goodFifthScalars' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.goodFifthIndices
+CorruptedFieldRecovery.goodFifthIndices.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Fintype.{u_1} K] →
+      [inst_2 : DecidableEq.{u_1 + 1} K] →
+        [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+          [inst_4 : Finite.{u_1 + 1} K] →
+            {s : Nat} →
+              (b : Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K) →
+                (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K)) →
+                  Finset.{0} (CorruptedFieldRecovery.BinaryVector s)
+CFR_TYPE_END:CorruptedFieldRecovery.goodFifthIndices
+'CorruptedFieldRecovery.goodFifthIndices' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.goodFiveTupleSigma
+CorruptedFieldRecovery.goodFiveTupleSigma.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Fintype.{u_1} K] →
+      [inst_2 : DecidableEq.{u_1 + 1} K] →
+        [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+          [inst_4 : Finite.{u_1 + 1} K] →
+            {s : Nat} →
+              (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+                (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K)) →
+                  (b :
+                      (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+                        Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K) →
+                    Finset.{u_1}
+                      ((_ : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) ×
+                        CorruptedFieldRecovery.BinaryVector s)
+CFR_TYPE_END:CorruptedFieldRecovery.goodFiveTupleSigma
+'CorruptedFieldRecovery.goodFiveTupleSigma' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_goodFiveTupleSigma_lower
+CorruptedFieldRecovery.card_goodFiveTupleSigma_lower.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_5 : Finite.{u_1 + 1} K] {s : Nat}
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K)
+  (r : Nat) (hr : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField ↥U) r),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0}
+        (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A)
+          (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K))
+            (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)))
+        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+          (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))
+            (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1))))
+      (HSub.hSub.{0, 0, 0} (Fintype.card.{u_1} K)
+        (HAdd.hAdd.{0, 0, 0} (∑ d ∈ CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)
+          (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1))))
+    (Finset.card.{u_1} (CorruptedFieldRecovery.goodFiveTupleSigma.{u_1} K A U b))
+CFR_TYPE_END:CorruptedFieldRecovery.card_goodFiveTupleSigma_lower
+'CorruptedFieldRecovery.card_goodFiveTupleSigma_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

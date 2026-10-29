@@ -1,0 +1,14 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "Dependent good five-tuple sigma finite lower bound for an arbitrary clean finset A, actual binary submodule U with finrank=r, and tuple-dependent binary basis b(e) of K. The bound uses truncated natural subtraction and the actual nongenerator and bad-translate sets.",
+  "remaining": "Physical bit-tape equivalence, the basis selected by the algorithm, numeric inequalities and success probability remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "audited_declarations": 5,
+  "owned_warnings": 0,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

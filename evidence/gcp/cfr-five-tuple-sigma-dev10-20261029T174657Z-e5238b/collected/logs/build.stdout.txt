@@ -1,0 +1,53 @@
+✖ [2954/2954] Building CorruptedFieldRecovery.ProbabilityFiveTupleAssembly (4.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.setup.json --json
+info: CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.lean:138:16: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.lean:138:13: unsolved goals
+K : Type u_1
+inst✝⁵ : Field K
+inst✝⁴ : Fintype K
+inst✝³ : DecidableEq K
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Finite K
+s : ℕ
+A : Finset (FieldTriple K)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Basis (Fin s) BinaryField K
+r : ℕ
+hr : finrank BinaryField ↥U = r
+E : Finset (Fin 4 → FieldTriple K) := canonicalGoodFourFlatImage K A (nonGenerators K)
+G : Finset K := goodFifthScalars K U
+hfour :
+  (A.card - (nonGenerators K).card * Fintype.card K ^ 2) *
+      ((A.card - Fintype.card K ^ 2) * ((A.card - Fintype.card K) * (A.card - 1))) ≤
+    (canonicalGoodFourFlatImage K A (nonGenerators K)).card
+hgen : (nonGenerators K).card ≤ ∑ d ∈ properDegrees K, 2 ^ d
+htrans : (badTranslateScalars K (supportCoordinateFinset K U)).card ≤ 2 ^ (2 * finrank (ZMod 2) ↥U) - 1
+hbad :
+  (nonGenerators K ∪ badTranslateScalars K (supportCoordinateFinset K U)).card ≤
+    ∑ d ∈ properDegrees K, 2 ^ d + (2 ^ (2 * r) - 1)
+hgood : Fintype.card K - (∑ d ∈ properDegrees K, 2 ^ d + (2 ^ (2 * r) - 1)) ≤ G.card
+hfiber :
+  ∀ e ∈ E, Fintype.card K - (∑ d ∈ properDegrees K, 2 ^ d + (2 ^ (2 * r) - 1)) ≤ (goodFifthIndices K (b e) U).card
+hsum :
+  (Fintype.card K - (∑ d ∈ properDegrees K, 2 ^ d + (2 ^ (2 * r) - 1))) * E.card ≤
+    (E.sigma fun e => goodFifthIndices K (b e) U).card
+hfour' :
+  (A.card - (nonGenerators K).card * Fintype.card K ^ 2) *
+      ((A.card - Fintype.card K ^ 2) * ((A.card - Fintype.card K) * (A.card - 1))) ≤
+    E.card
+⊢ (Fintype.card K - (∑ x ∈ properDegrees K, 2 ^ x + (2 ^ (r * 2) - 1))) * E.card = ?m.990
+error: CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.lean:135:4: invalid 'calc' step, left-hand side is
+  ?m.983 * E.card : Nat
+but is expected to be
+  (A.card - (nonGenerators K).card * Fintype.card K ^ 2) *
+      ((A.card - Fintype.card K ^ 2) * ((A.card - Fintype.card K) * (A.card - 1))) *
+    (Fintype.card K - (∑ d ∈ properDegrees K, 2 ^ d + (2 ^ (2 * r) - 1))) : Nat
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProbabilityFiveTupleAssembly
