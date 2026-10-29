@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T15:11:58.307687+00:00",
+  "run": "cfr-mask-range-converse-dev39-20261029T150648Z-9b8372",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
