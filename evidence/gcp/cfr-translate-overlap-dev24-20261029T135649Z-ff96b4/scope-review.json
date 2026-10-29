@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T14:06:35.146339+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "Build/audit commands pass, zero-warning gate rejects unused instances on CharTwo helper",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

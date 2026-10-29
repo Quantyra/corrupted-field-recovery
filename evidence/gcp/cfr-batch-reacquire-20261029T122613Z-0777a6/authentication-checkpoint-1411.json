@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-29T14:10:32.307689+00:00",
+  "required_account": "dfredriksen@quantyra.org",
+  "status": "Interactive reauthentication required; no credential fallback found",
+  "unknown_launch": "cfr-raw-factor-irreducible-dev25-20261029T140217Z-990ff3",
+  "launch_request_utc": "2026-10-29T14:07:15.207910+00:00",
+  "no_pid_observed": true,
+  "no_terminal_receipt_collected": true,
+  "queued_unsubmitted": "cfr-translate-overlap-dev26-20261029T140634Z-c115fc",
+  "last_verified_instance_state": "RUNNING at factor25 submission; no current state inferred",
+  "saved_STOP_ceiling_utc": "2026-10-29T16:27:32.617+00:00",
+  "latest_new_submission_utc": "2026-10-29T15:32:32.617+00:00",
+  "task_egress_last_observed_present": true,
+  "local_plink_pscp_gcloud_processes_at_inspection": false,
+  "existing_auth_accounts": [
+    "dfredriksen@quantyra.org"
+  ],
+  "adc_exists": false,
+  "credential_environment_configured": false,
+  "pending_receipt_sha256": {
+    "bootstrap-assets.json": "774cc6affdbaa980802d58c48c3d99e5a3badb61460fc9203ee656b3634cdc6b",
+    "capture-manifest.json": "1494d50690f2aa6f848054d790b69aa1b8d81defa566020d1f8730ced6cf8216",
+    "cfr-auth-metadata-20261029T140905Z-d1d7ac-fallback-metadata.json": "fb2d0bb74c4dc63a5c35103ba3144efdbed7cb48fb86c9dcc5b9069b7c7725ea",
+    "cfr-auth-metadata-20261029T140905Z-d1d7ac.exit.json": "8de3e15d79968a45173d86d9a6dcd85eb9f02d52a85068cae92b74372c45a972",
+    "cfr-observe-20261029T140758Z-1db04c.exit.json": "18289578bddb32ca63923d3b7b5ec18382295c8bf8636f50d5b071d3746d09d4",
+    "execution-manifest.json": "14049982532062dfd974a10f932d85d5148a5974b581b9dfc4be9808bbfcc970",
+    "instance-ownership.json": "0452c66fd25ec24a5790b58630db7338a04aeee0f6e4832bc591d4c864e47abd",
+    "launch-once.exit.json": "525f8d8b9ad3c8403d5192955aa5149e7a9bbc854fff7b1b6fc1888444d95d95",
+    "launch-request.json": "6205f7c25e3c6126494058d0b6b5e159e0a6ab24919a90244fe61d3d092b1423",
+    "per-start-ceiling.json": "381e8a817d02022d0eb1d32ed7f01ae8aa4d9e824e9198ad9fe35ce5526b0e12",
+    "source-offer.json": "a23898e082c9a93430f48c4b5ef5a1af101d08ca15a22c833a8665c3ba947953",
+    "submission-instance-state.exit.json": "b913a5d840e8b5f4fe46f86d9fe05ff86e5b4d8ee4f59a79a96f5aa3e4591f3c",
+    "submission-preflight.exit.json": "cf760af298ecba340ff17c0ed469f4149bd0092ec7e4f8b7202785876589d96e",
+    "upload-capture-and-controller.exit.json": "6ee4f2af57e64298a78a5533a6d0badd151483d9b69640c92995c11ec29f7924",
+    "verify-transferred-inputs.exit.json": "40ed0882487304151de66a3d67cf109c6f157bf390cf43cf44381a866a5d6fcb"
+  },
+  "remaining": "Authenticate, observe/collect same handle, then workload guards and remove task egress/stop dedicated VM; never duplicate unknown launch."
+}
