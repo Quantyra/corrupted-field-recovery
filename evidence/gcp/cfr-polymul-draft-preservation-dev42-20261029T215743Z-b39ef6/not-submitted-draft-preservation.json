@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T21:58:54.036191+00:00",
+  "run": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6",
+  "never_submitted": true,
+  "reason": "Warning-only corrected source preserved as an uncompiled draft after the conservative submission cutoff. Prior dev40 remains failed warning-gate evidence; no new acceptance or queued cloud run."
+}

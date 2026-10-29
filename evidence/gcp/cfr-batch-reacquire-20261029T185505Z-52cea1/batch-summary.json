@@ -1,0 +1,647 @@
+{
+  "utc": "2026-10-29T22:07:46.326841+00:00",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "all_launched_outcomes_collected": true,
+  "launched_count": 34,
+  "passed_count": 7,
+  "failed_count": 27,
+  "root_accepted_scoped_count": 7,
+  "runs": [
+    {
+      "run": "cfr-actual-numeric-dev06-20261029T190420Z-f7885d",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size",
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-actual-numeric-dev09-20261029T191218Z-3d78a5",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size",
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-actual-numeric-dev11-20261029T191816Z-2ee3f0",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size",
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-actual-numeric-dev12-20261029T192641Z-00ea3c",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size",
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-actual-numeric-dev13-20261029T193321Z-7fbcc2",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size",
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-actual-numeric-dev15-20261029T193817Z-80b2e9",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size",
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-actual-numeric-dev17-20261029T194701Z-93890f",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size",
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-actual-numeric-dev19-20261029T195813Z-d559d1",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size",
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-beta-actual-dev23-20261029T201547Z-f239a1",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.beta_lt_half_actual"
+      ]
+    },
+    {
+      "run": "cfr-clean-cardinality-dev24-20261029T202427Z-01327c",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.cleanSupportSet_card"
+      ]
+    },
+    {
+      "run": "cfr-clean-cardinality-dev26-20261029T203502Z-e70344",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.cleanSupportSet_card"
+      ]
+    },
+    {
+      "run": "cfr-count-clean-dev08-20261029T190924Z-76829b",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.one_sub_mul_one_sub_lower",
+        "CorruptedFieldRecovery.four_one_sub_product_lower",
+        "CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower",
+        "CorruptedFieldRecovery.four_clean_losses_le_beta"
+      ]
+    },
+    {
+      "run": "cfr-count-clean-dev10-20261029T191345Z-389210",
+      "status": "passed",
+      "exit_code": "0",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": {
+        "utc": "2026-10-29T19:22:01.131629+00:00",
+        "reviewer": "Root",
+        "accepted": true,
+        "scope": "Rational four-factor bound; truncated Nat normalization under positivity, individual bounds and loss premises; clean loss <= beta given q^3/a <= p.",
+        "remaining": "Does not derive premises, actual finite count or probability.",
+        "evidence": "collected/logs/emitted-types.json"
+      },
+      "owned_warning_headers": [],
+      "audit_exports": [
+        "CorruptedFieldRecovery.one_sub_mul_one_sub_lower",
+        "CorruptedFieldRecovery.four_one_sub_product_lower",
+        "CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower",
+        "CorruptedFieldRecovery.four_clean_losses_le_beta"
+      ]
+    },
+    {
+      "run": "cfr-count-product-dev02-20261029T185935Z-b47da1",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.one_sub_mul_one_sub_lower",
+        "CorruptedFieldRecovery.four_one_sub_product_lower",
+        "CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower"
+      ]
+    },
+    {
+      "run": "cfr-dual-annihilator-card-dev28-20261029T204423Z-50c5c2",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.cleanSupportSet_card"
+      ]
+    },
+    {
+      "run": "cfr-dual-annihilator-card-dev30-20261029T205543Z-8429db",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.cleanSupportSet_card"
+      ]
+    },
+    {
+      "run": "cfr-dual-annihilator-card-dev33-20261029T210553Z-edbc7f",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.cleanSupportSet_card"
+      ]
+    },
+    {
+      "run": "cfr-dual-annihilator-card-dev35-20261029T211712Z-a62448",
+      "status": "passed",
+      "exit_code": "0",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": {
+        "utc": "2026-10-29T21:29:25.592940+00:00",
+        "reviewer": "Root",
+        "accepted": true,
+        "scope": "Supplied rank-r binary-dual submodule W annihilator has cardinality 2^(3*s-r), under stated field-finrank hypotheses.",
+        "remaining": "No physical-support or actual tape correspondence.",
+        "evidence": "collected/logs/emitted-types.json"
+      },
+      "owned_warning_headers": [],
+      "audit_exports": [
+        "CorruptedFieldRecovery.cleanSupportSet_card"
+      ]
+    },
+    {
+      "run": "cfr-executable-quotient-dev14-20261029T193407Z-5aea84",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawReduceStep",
+        "CorruptedFieldRecovery.rawReduceFuel",
+        "CorruptedFieldRecovery.rawFieldMulFuel",
+        "CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two",
+        "CorruptedFieldRecovery.rawReduceStep_quotient_sound",
+        "CorruptedFieldRecovery.rawReduceFuel_quotient_sound",
+        "CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound"
+      ]
+    },
+    {
+      "run": "cfr-executable-quotient-dev16-20261029T194356Z-afa995",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawReduceStep",
+        "CorruptedFieldRecovery.rawReduceFuel",
+        "CorruptedFieldRecovery.rawFieldMulFuel",
+        "CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two",
+        "CorruptedFieldRecovery.rawReduceStep_quotient_sound",
+        "CorruptedFieldRecovery.rawReduceFuel_quotient_sound",
+        "CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound"
+      ]
+    },
+    {
+      "run": "cfr-executable-quotient-dev18-20261029T195247Z-f6d78d",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawReduceStep",
+        "CorruptedFieldRecovery.rawReduceFuel",
+        "CorruptedFieldRecovery.rawFieldMulFuel",
+        "CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two",
+        "CorruptedFieldRecovery.rawReduceStep_quotient_sound",
+        "CorruptedFieldRecovery.rawReduceFuel_quotient_sound",
+        "CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound"
+      ]
+    },
+    {
+      "run": "cfr-executable-quotient-dev20-20261029T200306Z-2a8ce1",
+      "status": "passed",
+      "exit_code": "0",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": {
+        "utc": "2026-10-29T20:11:32.853829+00:00",
+        "reviewer": "Root",
+        "accepted": true,
+        "scope": "rawReduceStep/Fuel quotient-class preservation for arbitrary modulus, degree and fuel; rawFieldMulFuel quotient product soundness.",
+        "remaining": "No adequate fuel, output bound, field trace, cost or complete verifier.",
+        "evidence": "collected/logs/emitted-types.json"
+      },
+      "owned_warning_headers": [],
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawReduceStep",
+        "CorruptedFieldRecovery.rawReduceFuel",
+        "CorruptedFieldRecovery.rawFieldMulFuel",
+        "CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two",
+        "CorruptedFieldRecovery.rawReduceStep_quotient_sound",
+        "CorruptedFieldRecovery.rawReduceFuel_quotient_sound",
+        "CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound"
+      ]
+    },
+    {
+      "run": "cfr-numeric-components-dev21-20261029T200733Z-3a9ff0",
+      "status": "passed",
+      "exit_code": "0",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": {
+        "utc": "2026-10-29T20:21:33.935797+00:00",
+        "reviewer": "Root",
+        "accepted": true,
+        "scope": "Proper-degree sum/scaling under finrank and size; arithmetic bound on truncated scalar complement; beta<1/2 conditional on scaled tau premise.",
+        "remaining": "Arithmetic count is not by itself event-to-tape or constructor success.",
+        "evidence": "collected/logs/emitted-types.json"
+      },
+      "owned_warning_headers": [],
+      "audit_exports": [
+        "CorruptedFieldRecovery.proper_degree_sum_lt_half_power",
+        "CorruptedFieldRecovery.scaled_tau_lt_field_size",
+        "CorruptedFieldRecovery.scaled_support_lt_field_size",
+        "CorruptedFieldRecovery.actual_proper_degree_scaled_bound",
+        "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters",
+        "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower",
+        "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth",
+        "CorruptedFieldRecovery.beta_lt_half_from_size"
+      ]
+    },
+    {
+      "run": "cfr-physical-support-dev37-20261029T212948Z-4f81bb",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.binaryFieldTripleTraceDualEquiv",
+        "CorruptedFieldRecovery.actualTraceSupportSubmodule",
+        "CorruptedFieldRecovery.physicalSupportObservation_surjective",
+        "CorruptedFieldRecovery.physicalSupportObservation_kernel_iff"
+      ]
+    },
+    {
+      "run": "cfr-physical-support-dev39-20261029T214037Z-3c3ceb",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.binaryFieldTripleTraceDualEquiv",
+        "CorruptedFieldRecovery.actualTraceSupportSubmodule",
+        "CorruptedFieldRecovery.physicalSupportObservation_surjective",
+        "CorruptedFieldRecovery.physicalSupportObservation_kernel_iff"
+      ]
+    },
+    {
+      "run": "cfr-polymul-bounds-dev38-20261029T213659Z-da23ae",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawPolyMul_lt_pow",
+        "CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted_2s"
+      ]
+    },
+    {
+      "run": "cfr-polymul-bounds-dev40-20261029T214530Z-ccfb4c",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "AssertionError('New owned warning headers')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": [
+        "warning: CorruptedFieldRecovery/RawPolyMulBounds.lean:28:52: this tactic is never executed",
+        "warning: CorruptedFieldRecovery/RawPolyMulBounds.lean:28:52: 'omega' tactic does nothing"
+      ],
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawPolyMul_lt_pow",
+        "CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted_2s"
+      ]
+    },
+    {
+      "run": "cfr-reduction-bounds-dev22-20261029T201221Z-9d4c3f",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawXor_lt_two_pow_of_top_bit",
+        "CorruptedFieldRecovery.rawReduceStep_lt_pow_of_top_bit"
+      ]
+    },
+    {
+      "run": "cfr-reduction-bounds-dev25-20261029T202706Z-4f0a53",
+      "status": "passed",
+      "exit_code": "0",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": {
+        "utc": "2026-10-29T20:40:34.176914+00:00",
+        "reviewer": "Root",
+        "accepted": true,
+        "scope": "Conditional shared-highest-bit XOR and raw reduction step bound with explicit top-bit and no-higher-bit assumptions.",
+        "remaining": "No band, fuel or cost theorem.",
+        "evidence": "collected/logs/emitted-types.json"
+      },
+      "owned_warning_headers": [],
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawXor_lt_two_pow_of_top_bit",
+        "CorruptedFieldRecovery.rawReduceStep_lt_pow_of_top_bit"
+      ]
+    },
+    {
+      "run": "cfr-reduction-interval-dev27-20261029T204132Z-4edfa1",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds",
+        "CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band",
+        "CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band",
+        "CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band",
+        "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band"
+      ]
+    },
+    {
+      "run": "cfr-reduction-interval-dev29-20261029T205014Z-672614",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "AssertionError('New owned warning headers')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": [
+        "warning: CorruptedFieldRecovery/RawReductionInterval.lean:52:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+      ],
+      "audit_exports": [
+        "CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds",
+        "CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band",
+        "CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band",
+        "CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band",
+        "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band"
+      ]
+    },
+    {
+      "run": "cfr-reduction-interval-dev31-20261029T210025Z-6f7c28",
+      "status": "passed",
+      "exit_code": "0",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": {
+        "utc": "2026-10-29T21:12:54.340316+00:00",
+        "reviewer": "Root",
+        "accepted": true,
+        "scope": "Accepted candidate mask band; power-band bit facts; strict reduction-step decrease; fuel >= a+1 output bound under modulus band.",
+        "remaining": "Value-linear fuel is not polynomial bit-cost; no executable trace or complete verifier.",
+        "evidence": "collected/logs/emitted-types.json"
+      },
+      "owned_warning_headers": [],
+      "audit_exports": [
+        "CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds",
+        "CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band",
+        "CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band",
+        "CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band",
+        "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band"
+      ]
+    },
+    {
+      "run": "cfr-reduction-logfuel-dev34-20261029T211318Z-0dfb57",
+      "status": "failed",
+      "exit_code": "1",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": null,
+      "owned_warning_headers": null,
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawLog2_lt_of_lt_pow",
+        "CorruptedFieldRecovery.rawReduceStep_lt_pow_of_modulus_band",
+        "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band_logFuel",
+        "CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted"
+      ]
+    },
+    {
+      "run": "cfr-reduction-logfuel-dev36-20261029T212414Z-b35c83",
+      "status": "passed",
+      "exit_code": "0",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": {
+        "utc": "2026-10-29T21:34:59.296944+00:00",
+        "reviewer": "Root",
+        "accepted": true,
+        "scope": "For positive s and modulus band, reduction output < 2^s at fuel >= log2(a)-s+1; accepted candidate multiplication output bound at logarithmic fuel.",
+        "remaining": "No primitive-bit cost, product-bit upper bound, trace implementation or full verifier.",
+        "evidence": "collected/logs/emitted-types.json"
+      },
+      "owned_warning_headers": [],
+      "audit_exports": [
+        "CorruptedFieldRecovery.rawLog2_lt_of_lt_pow",
+        "CorruptedFieldRecovery.rawReduceStep_lt_pow_of_modulus_band",
+        "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band_logFuel",
+        "CorruptedFieldRecovery.rawFieldMulFuel_lt_of_accepted"
+      ]
+    }
+  ],
+  "unlaunched": [
+    {
+      "run": "cfr-actual-scalar-dev05-20261029T190231Z-5b0551",
+      "reason": "superseded before launch"
+    },
+    {
+      "run": "cfr-count-product-dev01-20261029T185859Z-053ab7",
+      "reason": "encoding preflight rejected"
+    },
+    {
+      "run": "cfr-count-product-dev07-20261029T190626Z-b011bc",
+      "reason": "superseded before launch"
+    },
+    {
+      "run": "cfr-physical-support-dev32-20261029T210339Z-43d71f",
+      "reason": "superseded before launch"
+    },
+    {
+      "run": "cfr-physical-support-dev41-20261029T214951Z-117daf",
+      "reason": "explicit uncompiled draft preservation"
+    },
+    {
+      "run": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6",
+      "reason": "explicit uncompiled draft preservation"
+    },
+    {
+      "run": "cfr-proper-degree-dev03-20261029T190012Z-e98512",
+      "reason": "superseded before launch"
+    },
+    {
+      "run": "cfr-size-arithmetic-dev04-20261029T190041Z-3fc7aa",
+      "reason": "superseded before launch"
+    }
+  ],
+  "queued_captures": [],
+  "final_state": "TERMINATED",
+  "stop_verified": true,
+  "persistent_cache_retained": true,
+  "task_egress_removed": true,
+  "no_unrelated_workload_observed": true,
+  "shutdown_receipt": "cfr-polymul-bounds-dev40-20261029T214530Z-ccfb4c/cfr-shutdown-20261029T220218Z-aac2e8-result.json",
+  "accepted_scope": "Seven Root-reviewed intermediate scopes only; complete manuscript certification remains open.",
+  "note": "All proof/warning and transport failures preserved; draft41 physical repair and draft42 product-warning repair are explicitly uncompiled and not queued. No local Lean/Lake. Persistent disk/cache retained."
+}

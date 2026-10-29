@@ -1,0 +1,48 @@
+quantyra-cfr-lean-builder-20261028a
+2026-10-29T21:59:32Z
+USER         PID    PPID ELAPSED %CPU %MEM COMMAND
+dfredri+   29797       1       0 12.9  0.0 /usr/lib/systemd/systemd --user
+root       29783     990       2  1.0  0.0 sshd: dfredriksen_quantyra_org [priv]
+root           1       0   10979  0.1  0.0 /sbin/init
+root         167       1   10976  0.0  0.0 /usr/lib/systemd/systemd-journald
+message+     626       1   10968  0.0  0.0 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        1011       1   10950  0.0  0.0 /usr/lib/systemd/systemd-logind
+root          16       2   10979  0.0  0.0 [rcu_sched]
+root         630       1   10967  0.0  0.0 /usr/bin/google_osconfig_agent
+syslog       690       1   10967  0.0  0.0 /usr/sbin/rsyslogd -n -iNONE
+root         846       1   10950  0.0  0.0 /usr/bin/google_guest_agent
+polkitd      847       1   10950  0.0  0.0 /usr/lib/polkit-1/polkitd --no-debug
+root         233       1   10976  0.0  0.0 /sbin/multipathd -d -s
+root         100       2   10978  0.0  0.0 [hwrng]
+root       24602       2    2157  0.0  0.0 [kworker/4:2-events]
+root       28635       2     629  0.0  0.0 [kworker/4:1-events]
+root         646       1   10967  0.0  0.0 /usr/lib/snapd/snapd
+root          75       2   10978  0.0  0.0 [kcompactd0]
+root       26062       2    1657  0.0  0.0 [kworker/u32:4-flush-8:0]
+root          15       2   10979  0.0  0.0 [pr/ttyS0]
+root       26852       2    1296  0.0  0.0 [kworker/u32:2-writeback]
+root       24543       2    2171  0.0  0.0 [kworker/3:0-events]
+root       27245       2    1144  0.0  0.0 [kworker/0:2-mm_percpu_wq]
+root       20198       2    3951  0.0  0.0 [kworker/6:3-events]
+root       28521       2     661  0.0  0.0 [kworker/u32:1-events_power_efficient]
+root       26385       2    1506  0.0  0.0 [kworker/2:3-events]
+root         990       1   10950  0.0  0.0 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         239       1   10975  0.0  0.0 /usr/lib/systemd/systemd-udevd
+root       28955       2     464  0.0  0.0 [kworker/7:3-events]
+systemd+     414       1   10975  0.0  0.0 /usr/lib/systemd/systemd-resolved
+root       28694       2     616  0.0  0.0 [kworker/1:3-events]
+root       23731       2    2485  0.0  0.0 [kworker/5:2-events]
+root         128       2   10977  0.0  0.0 [jbd2/sda1-8]
+root         640       1   10967  0.0  0.0 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+systemd+     580       1   10970  0.0  0.0 /usr/lib/systemd/systemd-networkd
+root          37       2   10978  0.0  0.0 [migration/3]
+root          25       2   10978  0.0  0.0 [migration/1]
+root         719       1   10967  0.0  0.0 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root          31       2   10978  0.0  0.0 [migration/2]
+root          49       2   10978  0.0  0.0 [migration/5]
+root          55       2   10978  0.0  0.0 [migration/6]
+root          61       2   10978  0.0  0.0 [migration/7]
+root          19       2   10978  0.0  0.0 [migration/0]
+root           2       0   10979  0.0  0.0 [kthreadd]
+root          62       2   10978  0.0  0.0 [ksoftirqd/7]
+WORKLOAD_GUARD_COMPLETE

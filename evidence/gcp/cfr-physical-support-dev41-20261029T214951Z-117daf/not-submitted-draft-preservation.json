@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T21:50:37.627219+00:00",
+  "run": "cfr-physical-support-dev41-20261029T214951Z-117daf",
+  "never_submitted": true,
+  "reason": "Remaining bounded cloud window reserved for same-handle dev40 prelaunch transport recovery, collection and shutdown; this exact corrected source is preserved only as an uncompiled draft, not a queued run or proof result."
+}

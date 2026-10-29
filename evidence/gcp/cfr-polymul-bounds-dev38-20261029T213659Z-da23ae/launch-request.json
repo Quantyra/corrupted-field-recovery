@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T21:40:30.706762+00:00",
+  "run": "cfr-polymul-bounds-dev38-20261029T213659Z-da23ae",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

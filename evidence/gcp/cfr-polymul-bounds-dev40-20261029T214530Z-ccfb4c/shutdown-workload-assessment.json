@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T22:01:31.809966+00:00",
+  "no_unrelated_active_workload_observed": true,
+  "no_lean_lake_or_runner": true,
+  "task_lock_free": true,
+  "evidence": [
+    "cfr-shutdown-workload-scan-20261029T215854Z-2e8409.stdout.txt",
+    "cfr-shutdown-full-process-inventory-20261029T220013Z-51c65d.stdout.txt"
+  ],
+  "assessment": "Complete process inventory contains kernel/system/Google guest services and this task SSH/process-inventory session only; no unrelated acquired workload observed. Every launched outcome is collected."
+}

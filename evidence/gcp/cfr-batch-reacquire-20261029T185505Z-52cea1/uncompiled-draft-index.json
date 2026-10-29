@@ -1,0 +1,44 @@
+[
+  {
+    "path": "CorruptedFieldRecovery/RawPolyMulBounds.lean",
+    "sha256": "e1a9a53dfaa47def62e06f79da7aeefdcdf8c4861f681b757c9c585ec4aed868",
+    "exact_source_archive": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6/inputs.tar.gz",
+    "compiled_or_accepted": false
+  },
+  {
+    "path": "CorruptedFieldRecovery/RawReductionBoundsExpanded.lean",
+    "sha256": "3d2f880066e46cbc78fd70098420415b40d9ccf937a29c44c9c5d79ffe798b32",
+    "exact_source_archive": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6/inputs.tar.gz",
+    "compiled_or_accepted": false
+  },
+  {
+    "path": "CorruptedFieldRecovery/S010BetaActual.lean",
+    "sha256": "cc1e057392b3b39f4ca6703133e2ab37bd81db5f078622d4c879904b78c81a7c",
+    "exact_source_archive": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6/inputs.tar.gz",
+    "compiled_or_accepted": false
+  },
+  {
+    "path": "CorruptedFieldRecovery/S010ModeImageTraceTransport.lean",
+    "sha256": "361de0c4a0d0d2a90fff4faffefdc1e4bf33026408d8795c9c293393ff526f4d",
+    "exact_source_archive": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6/inputs.tar.gz",
+    "compiled_or_accepted": false
+  },
+  {
+    "path": "CorruptedFieldRecovery/S010NumericTapeBridge.lean",
+    "sha256": "df56e3a358570d3a6248f89913eb03c411b77b86385ede9be9b4fbddbd121078",
+    "exact_source_archive": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6/inputs.tar.gz",
+    "compiled_or_accepted": false
+  },
+  {
+    "path": "CorruptedFieldRecovery/S010PhysicalFiveCount.lean",
+    "sha256": "1b885ab23035a04919e7c1cf63b2dee0f0c22da5c78596935220bb710f4d3c01",
+    "exact_source_archive": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6/inputs.tar.gz",
+    "compiled_or_accepted": false
+  },
+  {
+    "path": "CorruptedFieldRecovery/S010PhysicalSupportTransport.lean",
+    "sha256": "8d79303f480843efe18b947151da77c1051ec23f13e0a0c7c42bac1be2797dca",
+    "exact_source_archive": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6/inputs.tar.gz",
+    "compiled_or_accepted": false
+  }
+]

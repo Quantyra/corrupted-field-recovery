@@ -1,0 +1,8 @@
+⚠ [1840/1840] Built CorruptedFieldRecovery.RawPolyMulBounds (2.4s)
+warning: CorruptedFieldRecovery/RawPolyMulBounds.lean:28:52: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: CorruptedFieldRecovery/RawPolyMulBounds.lean:28:52: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Build completed successfully (1840 jobs).

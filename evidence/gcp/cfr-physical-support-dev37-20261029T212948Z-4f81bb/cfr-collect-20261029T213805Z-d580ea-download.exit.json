@@ -1,0 +1,18 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-29T21:39:13.742222+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "quantyra-cfr-lean-builder-20261028a:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-physical-support-dev37-20261029T212948Z-4f81bb/collected-evidence.tar.gz",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-physical-support-dev37-20261029T212948Z-4f81bb\\cfr-collect-20261029T213805Z-d580ea-evidence.tar.gz",
+    "--tunnel-through-iap",
+    "--scp-flag=-hostkey",
+    "--scp-flag=SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}
