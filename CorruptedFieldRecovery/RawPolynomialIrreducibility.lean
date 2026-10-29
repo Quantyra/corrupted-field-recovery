@@ -1,5 +1,6 @@
 import CorruptedFieldRecovery.RawPolynomialMaskCompleteness
 import Mathlib.Algebra.Polynomial.Monic
+import Mathlib.Algebra.Polynomial.Degree.IsMonicOfDegree
 
 /-! Ordinary bridge work for the finite raw factor search.  The initial
 lemmas pin down the boundedness of its coefficient-mask representation; the
@@ -98,6 +99,113 @@ theorem rawBitsToNat_append_true (bits : List Bool) :
     rawBitsToNat (bits ++ [true]) = rawBitsToNat bits + 2 ^ bits.length := by
   rw [rawBitsToNat_append]
   simp [rawBitsToNat]
+
+theorem rawBits_exists_append_singleton (bits : List Bool) (hbits : bits ≠ []) :
+    ∃ preBits b, bits = preBits ++ [b] := by
+  induction bits with
+  | nil => contradiction
+  | cons head tail ih =>
+      cases tail with
+      | nil => exact ⟨[], head, by simp⟩
+      | cons next rest =>
+          obtain ⟨preBits, b, hsplit⟩ := ih (by simp)
+          exact ⟨head :: preBits, b, by simp [hsplit, List.cons_append]⟩
+
+theorem rawBitsToNat_lastBit_of_top (bits : List Bool) (s : Nat)
+    (hlen : bits.length = s + 1)
+    (htop : rawBitsToNat bits / 2 ^ s % 2 = 1) :
+    ∃ preBits, bits = preBits ++ [true] ∧ preBits.length = s := by
+  have hbits0 : bits ≠ [] := by
+    intro hnil
+    simp [hnil] at hlen
+  obtain ⟨preBits, b, hsplit⟩ := rawBits_exists_append_singleton bits hbits0
+  have hprelen : preBits.length = s := by
+    have h := congrArg List.length hsplit
+    simp at h
+    omega
+  have hmask : rawBitsToNat bits =
+      rawBitsToNat preBits + 2 ^ preBits.length * rawBitsToNat [b] := by
+    rw [hsplit, rawBitsToNat_append]
+  have hprelt : rawBitsToNat preBits < 2 ^ s := by
+    have h := rawBitsToNat_lt_pow_length preBits
+    rw [hprelen] at h
+    exact h
+  cases b with
+  | false =>
+      have hmask0 : rawBitsToNat bits = rawBitsToNat preBits := by
+        rw [hmask, hprelen]
+        simp [rawBitsToNat]
+      rw [hmask0, Nat.div_eq_of_lt hprelt] at htop
+      norm_num at htop
+  | true => exact ⟨preBits, by simp [hsplit], hprelen⟩
+
+theorem rawBoolListPolynomial_append (bits suffix : List Bool) :
+    rawBoolListPolynomial (bits ++ suffix) =
+      rawBoolListPolynomial bits + X ^ bits.length * rawBoolListPolynomial suffix := by
+  induction bits with
+  | nil => simp [rawBoolListPolynomial]
+  | cons b bs ih =>
+      simp only [List.cons_append, List.length_cons, rawBoolListPolynomial]
+      rw [ih, pow_succ]
+      ring
+
+theorem rawBoolListPolynomial_natDegree_lt_length (bits : List Bool)
+    (hbits : bits ≠ []) : (rawBoolListPolynomial bits).natDegree < bits.length := by
+  induction bits with
+  | nil => contradiction
+  | cons b bs ih =>
+      cases bs with
+      | nil => cases b <;> simp [rawBoolListPolynomial]
+      | cons c cs =>
+          have htail := ih (by simp)
+          have htaille : (rawBoolListPolynomial (c :: cs)).natDegree + 1 ≤
+              (c :: cs).length := by omega
+          have hdeg : (rawBoolListPolynomial (c :: cs) * X).natDegree ≤
+              (c :: cs).length := by
+            calc
+              (rawBoolListPolynomial (c :: cs) * X).natDegree ≤
+                  (rawBoolListPolynomial (c :: cs)).natDegree + X.natDegree :=
+                    natDegree_mul_le
+              _ ≤ (c :: cs).length := by simpa using htaille
+          have hconst : (C (if b then (1 : ZMod 2) else 0)).natDegree = 0 := by
+            cases b <;> simp
+          have hsum := natDegree_add_le
+            (C (if b then (1 : ZMod 2) else 0))
+            (X * rawBoolListPolynomial (c :: cs))
+          change (C (if b then (1 : ZMod 2) else 0) +
+            X * rawBoolListPolynomial (c :: cs)).natDegree < (c :: cs).length + 1
+          have hmul : (X * rawBoolListPolynomial (c :: cs)).natDegree ≤ (c :: cs).length := by
+            simpa [mul_comm] using hdeg
+          simp only [hconst] at hsum
+          omega
+
+theorem rawFieldCandidateValid_modulus_polynomial {s : Nat}
+    (candidate : RawFieldCandidate s) (hvalid : rawFieldCandidateValid candidate) :
+    (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).Monic ∧
+      (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).natDegree = s := by
+  rcases hvalid with ⟨hs, hsize, htop, hscalarSize, hscalar, hirred⟩
+  have hlen : candidate.modulus.toList.length = s + 1 := by
+    simpa using hsize
+  obtain ⟨preBits, hbits, hprelen⟩ := rawBitsToNat_lastBit_of_top
+    candidate.modulus.toList s hlen htop
+  have hpre0 : preBits ≠ [] := by
+    intro he
+    simp [he] at hprelen
+    omega
+  have hpredegree : (rawBoolListPolynomial preBits).natDegree < s := by
+    rw [← hprelen]
+    exact rawBoolListPolynomial_natDegree_lt_length preBits hpre0
+  have hlistDegree : IsMonicOfDegree
+      (rawBoolListPolynomial candidate.modulus.toList) s := by
+    rw [hbits, rawBoolListPolynomial_append, hprelen]
+    simpa [rawBoolListPolynomial] using
+      (isMonicOfDegree_X_pow (ZMod 2) s).add_left hpredegree
+  have harrayMonic : (rawFieldArrayPolynomial candidate.modulus).Monic := by
+    simpa [rawFieldArrayPolynomial] using hlistDegree.monic
+  have harrayDegree : (rawFieldArrayPolynomial candidate.modulus).natDegree = s := by
+    simpa [rawFieldArrayPolynomial] using hlistDegree.natDegree_eq
+  rw [rawFieldArrayPolynomial_eq_mask] at harrayMonic harrayDegree
+  exact ⟨harrayMonic, harrayDegree⟩
 
 /-- The bounded encoder uses exactly one bit for each coefficient through the
 polynomial's leading degree. -/
@@ -293,5 +401,16 @@ theorem rawIrreducible_mask_implies_polynomial_irreducible
     · exact contradiction_of_ordered_factors f g hf hg hf0 hg0 hfn hfgsmall hfg
     · apply contradiction_of_ordered_factors g f hg hf hg0 hf0 hgn hgsmall
       simpa [mul_comm] using hfg
+
+theorem accepted_rawFieldCandidateCheck_polynomial_irreducible {s : Nat}
+    (candidate : RawFieldCandidate s) (hcheck : rawFieldCandidateCheck candidate = true) :
+    Irreducible (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)) := by
+  have hvalid := accepted_rawFieldCandidateCheck candidate hcheck
+  have hvalidProof := hvalid
+  rcases hvalid with ⟨hs, hsize, htop, hscalarSize, hscalar, hirred⟩
+  obtain ⟨hmonic, hdegree⟩ :=
+    rawFieldCandidateValid_modulus_polynomial candidate hvalidProof
+  exact rawIrreducible_mask_implies_polynomial_irreducible
+    (rawFieldBitsToNat candidate.modulus) s hs hdegree hmonic hirred
 
 end CorruptedFieldRecovery

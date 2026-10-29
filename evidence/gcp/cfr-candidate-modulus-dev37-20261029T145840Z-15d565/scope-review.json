@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "Raw candidate check true implies decoded modulus irreducible; raw candidate validity implies decoded monicity and degree s.",
+  "remaining": "Converse, quotient-field and nonzero scalar validation, coordinate validation and runtime remain open.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 2,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}
