@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.encode_decodeRawArray": {
+    "emitted_type": "@CorruptedFieldRecovery.encode_decodeRawArray : \u2200 {n : Nat} (raw : CorruptedFieldRecovery.RawCoefficientArray)\n  (t : CorruptedFieldRecovery.IncreasingTriple n),\n  Eq.{1} (CorruptedFieldRecovery.encodeDenseInput (CorruptedFieldRecovery.decodeRawArray raw) t)\n    (GetElem?.getElem!.{0, 0, 0} raw\n      (CorruptedFieldRecovery.rawCoefficientOffset n (CorruptedFieldRecovery.increasingTripleI t)\n        (CorruptedFieldRecovery.increasingTripleJ t) (CorruptedFieldRecovery.increasingTripleK t)))\n",
+    "sha256": "bbae42e247225917754f8822243f044f031046685cd055b37e7f1143b850134a"
+  },
+  "CorruptedFieldRecovery.decodeRawArray_isAlternating": {
+    "emitted_type": "@CorruptedFieldRecovery.decodeRawArray_isAlternating : \u2200 {n : Nat} (raw : CorruptedFieldRecovery.RawCoefficientArray),\n  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.decodeRawArray raw)\n",
+    "sha256": "c6c7ad88b7b385fd37db35f482f0a3a60f40887d419220477133fa85c60978ec"
+  },
+  "CorruptedFieldRecovery.accepted_raw_array_decoders_equal": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_raw_array_decoders_equal : \u2200 {n : Nat}\n  (input represented : CorruptedFieldRecovery.RawCoefficientArray)\n  (accepted : Eq.{1} (CorruptedFieldRecovery.rawArrayCheck input represented) Bool.true),\n  Eq.{1} (CorruptedFieldRecovery.decodeRawArray input) (CorruptedFieldRecovery.decodeRawArray represented)\n",
+    "sha256": "c12f686c23a68b8caac732a953c950f2acdc2d68d66f7bd3a4443e57a14f40de"
+  },
+  "CorruptedFieldRecovery.decodeRawArray_add": {
+    "emitted_type": "@CorruptedFieldRecovery.decodeRawArray_add : \u2200 {n : Nat} (left right : CorruptedFieldRecovery.RawCoefficientArray)\n  (hsize : Eq.{1} (Array.size.{0} left) (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} n n) n)),\n  Eq.{1} (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.rawArrayAdd left right))\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.decodeRawArray left) (CorruptedFieldRecovery.decodeRawArray right))\n",
+    "sha256": "417bd8245ef8b65833e5be753ff7878275192da2fff84ecf469b0a4fde60c262"
+  },
+  "CorruptedFieldRecovery.accepted_raw_certificate_is_computed_sum": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_raw_certificate_is_computed_sum : \u2200 {n : Nat}\n  (compatible residual represented : CorruptedFieldRecovery.RawCoefficientArray)\n  (accepted : Eq.{1} (CorruptedFieldRecovery.rawCertificateCheck compatible residual represented) Bool.true),\n  Eq.{1} represented (CorruptedFieldRecovery.rawArrayAdd compatible residual)\n",
+    "sha256": "7816efad0d26ce433764ed678f2ae0a60ef8331afcd0498fbf964629f60a59fa"
+  }
+}

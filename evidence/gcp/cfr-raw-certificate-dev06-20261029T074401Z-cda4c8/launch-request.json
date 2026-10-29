@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T07:47:44.937485+00:00",
+  "run": "cfr-raw-certificate-dev06-20261029T074401Z-cda4c8",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

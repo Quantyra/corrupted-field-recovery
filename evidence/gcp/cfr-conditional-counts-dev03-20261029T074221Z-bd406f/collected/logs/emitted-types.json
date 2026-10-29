@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.card_first_coordinate_fiber": {
+    "emitted_type": "CorruptedFieldRecovery.card_first_coordinate_fiber.{u_1} : \u2200 (K : Type u_1) [inst : Fintype.{u_1} K]\n  [inst_1 : DecidableEq.{u_1 + 1} K] (a : K),\n  Eq.{1} (Fintype.card.{u_1} (Subtype.{u_1 + 1} fun x => Eq.{u_1 + 1} (x 0) a))\n    (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)\n",
+    "sha256": "d885299b7a6d6d4da2aea7ad6a1a7e1c7a77bcaf71cc45ef6e69e08500b701e5"
+  },
+  "CorruptedFieldRecovery.card_subset_first_coordinate_fiber_le": {
+    "emitted_type": "CorruptedFieldRecovery.card_subset_first_coordinate_fiber_le.{u_1} : \u2200 (K : Type u_1) [inst : Fintype.{u_1} K]\n  [inst_1 : DecidableEq.{u_1 + 1} K] (A : Finset.{u_1} ((a : Fin 3) \u2192 K)) (a : K),\n  LE.le.{0} (Finset.card.{u_1} ({x \u2208 A | Eq.{u_1 + 1} (x 0) a})) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)\n",
+    "sha256": "2379c5f645fb7654cf16c2231c7b70562445f2054616afdbafe783a03fa482e0"
+  }
+}

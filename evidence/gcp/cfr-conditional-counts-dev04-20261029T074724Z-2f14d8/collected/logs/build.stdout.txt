@@ -1,0 +1,9 @@
+⚠ [2942/2942] Built CorruptedFieldRecovery.ConditionalCounts (4.2s)
+warning: CorruptedFieldRecovery/ConditionalCounts.lean:78:30: This simp argument is unused:
+  x.2
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵x̵.̵2̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (2942 jobs).

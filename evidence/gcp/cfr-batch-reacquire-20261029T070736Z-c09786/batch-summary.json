@@ -1,0 +1,194 @@
+{
+  "record_kind": "operator evidence index; authoritative raw receipts stay in each run directory",
+  "compile_host": "GCP only; no local Lean/Lake",
+  "lean": "4.30.0",
+  "mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "builder_lifecycle_directory": "cfr-batch-reacquire-20261029T070736Z-c09786",
+  "runs": [
+    {
+      "run": "cfr-conditional-counts-dev01-20261029T070817Z-2a2b6c",
+      "archive_sha256": "a2cc7b393379b3e57909decf064f8bfb31e85ca400062c7a3f33c80b8ba34a38",
+      "targets": [
+        "CorruptedFieldRecovery.ConditionalCounts"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-conditional-counts-dev02-20261029T072836Z-563faa",
+      "archive_sha256": "884dfdf509014af006c89cbc438ccf4381e966e1d47a880eed022c4190b5be49",
+      "targets": [
+        "CorruptedFieldRecovery.ConditionalCounts"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')"
+    },
+    {
+      "run": "cfr-conditional-counts-dev03-20261029T074221Z-bd406f",
+      "archive_sha256": "65e0bc5fe696870f955e24a23b786bafad3a325b8b4e4a48e6fb1a902ac8901f",
+      "targets": [
+        "CorruptedFieldRecovery.ConditionalCounts"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "root_reviewed_scope": "Single first-coordinate fiber has cardinality |K|^2; arbitrary finite subset intersection is at most |K|^2. No probability or field hypothesis."
+    },
+    {
+      "run": "cfr-conditional-counts-dev04-20261029T074724Z-2f14d8",
+      "archive_sha256": "fd04c091d3244a802636a0bd5bcd7bd29f2b927dd1084ebbfbe07e65f4701e20",
+      "targets": [
+        "CorruptedFieldRecovery.ConditionalCounts"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')"
+    },
+    {
+      "run": "cfr-conditional-counts-dev05-20261029T075252Z-90826b",
+      "archive_sha256": "edb7151fd9476e9c50498857f66d426480f4d5a1f5e557cf3a0c7207373035a3",
+      "targets": [
+        "CorruptedFieldRecovery.ConditionalCounts"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "root_reviewed_scope": "Also arbitrary finite A with first coordinate in finite D has cardinality at most |D|*|K|^2. No sampler probability, generation or field claim."
+    },
+    {
+      "run": "cfr-raw-certificate-dev01-20261029T070755Z-3d4594",
+      "archive_sha256": "de41874bd59499a7e623d2d25c5842a5867f2c4204313556f5c1a2f95f28e37f",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-raw-certificate-dev02-20261029T071800Z-cc019f",
+      "archive_sha256": "8833a522eff2d56f75eaf21b130d82614d96dec54616399828e79783608f6f1d",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": false,
+      "collected": false,
+      "status": "source-capture-only",
+      "failure": null
+    },
+    {
+      "run": "cfr-raw-certificate-dev03-20261029T071916Z-a2ff56",
+      "archive_sha256": "07bf0a50e5b76900accd0985a441ba7c672171cf42f714b585bce32a0e3f47fe",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": false,
+      "collected": false,
+      "status": "source-capture-only",
+      "failure": null
+    },
+    {
+      "run": "cfr-raw-certificate-dev04-20261029T072253Z-4a9315",
+      "archive_sha256": "b7175ff42be3addff51e7772cd28d90dfa9f490743c1ab3ef6329a7b750446fd",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "root_reviewed_scope": "Raw array decoding is alternating; increasing coordinates match selected raw entries; whole-array comparison acceptance implies decoder equality. No field/support validity or combined input/sum theorem."
+    },
+    {
+      "run": "cfr-raw-certificate-dev05-20261029T074244Z-480d96",
+      "archive_sha256": "5df5e9260dac49a2b0650f71dd3a4c6f3b8986f5a920e0f40be5e6f538ebf5c0",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": false,
+      "collected": false,
+      "status": "source-capture-only",
+      "failure": null
+    },
+    {
+      "run": "cfr-raw-certificate-dev06-20261029T074401Z-cda4c8",
+      "archive_sha256": "39bf67be656ff8f06c1a5ab05d9534919b326153cd0745a3dc68ac2a4852a325",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-raw-certificate-dev07-20261029T075023Z-6e39c5",
+      "archive_sha256": "9f6c92f522a30591de90bec4aa0bb849054463b03d6536272b447e2311f69581",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": false,
+      "collected": false,
+      "status": "source-capture-only",
+      "failure": null
+    },
+    {
+      "run": "cfr-raw-certificate-dev08-20261029T075125Z-8ac44b",
+      "archive_sha256": "4a03fdb4dc6aa083735cc2790a5765c234d43825c8cff7ac34d617e4451436db",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-raw-certificate-dev09-20261029T075804Z-5a5902",
+      "archive_sha256": "1ef12bc61db599d8a67b2b3d0a55e414daf87c66b93cd9472ca2ab0dee74ff5b",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')"
+    },
+    {
+      "run": "cfr-raw-certificate-dev10-20261029T080342Z-bafa25",
+      "archive_sha256": "52d2e86765d0e7193ef2d528f435a9c2d52fbf8006707d1c8799aa33b43a4fb5",
+      "targets": [
+        "CorruptedFieldRecovery.RawCertificate"
+      ],
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "root_reviewed_scope": "Also size-conditioned decoder linearity for computed rawArrayAdd, and separate Boolean certificate gate acceptance implies represented is the computed rawArrayAdd. No combined input equality, field, nonzero or support validation."
+    }
+  ],
+  "remaining": [
+    "Full conditional sampling/generation/trial probability proof",
+    "Complete certificate field, nonzero, coordinate and support validation",
+    "Combined input equality theorem",
+    "Charged algorithm/cost semantics and final manuscript theorem audit"
+  ],
+  "shutdown": {
+    "run": "cfr-raw-certificate-dev10-20261029T080342Z-bafa25",
+    "receipt_prefix": "cfr-shutdown-20261029T080831Z-b2bbe9",
+    "final_state": "TERMINATED",
+    "task_only_egress_removed": true,
+    "cache_retained": true,
+    "outcomes_collected": true,
+    "final_workload_check": "cfr-batch-reacquire-20261029T070736Z-c09786/final-workload.stdout.txt",
+    "verified_utc": "2026-10-29T08:12:11.397431+00:00"
+  }
+}

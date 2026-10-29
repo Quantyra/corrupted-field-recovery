@@ -1,0 +1,24 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_first_coordinate_fiber
+CorruptedFieldRecovery.card_first_coordinate_fiber.{u_1} : ∀ (K : Type u_1) [inst : Fintype.{u_1} K]
+  [inst_1 : DecidableEq.{u_1 + 1} K] (a : K),
+  Eq.{1} (Fintype.card.{u_1} (Subtype.{u_1 + 1} fun x => Eq.{u_1 + 1} (x 0) a))
+    (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)
+CFR_TYPE_END:CorruptedFieldRecovery.card_first_coordinate_fiber
+'CorruptedFieldRecovery.card_first_coordinate_fiber' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_subset_first_coordinate_fiber_le
+CorruptedFieldRecovery.card_subset_first_coordinate_fiber_le.{u_1} : ∀ (K : Type u_1) [inst : Fintype.{u_1} K]
+  [inst_1 : DecidableEq.{u_1 + 1} K] (A : Finset.{u_1} ((a : Fin 3) → K)) (a : K),
+  LE.le.{0} (Finset.card.{u_1} ({x ∈ A | Eq.{u_1 + 1} (x 0) a})) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)
+CFR_TYPE_END:CorruptedFieldRecovery.card_subset_first_coordinate_fiber_le
+'CorruptedFieldRecovery.card_subset_first_coordinate_fiber_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_subset_first_coordinate_values_le
+CorruptedFieldRecovery.card_subset_first_coordinate_values_le.{u_1} : ∀ (K : Type u_1) [inst : Fintype.{u_1} K]
+  [inst_1 : DecidableEq.{u_1 + 1} K] (A : Finset.{u_1} ((a : Fin 3) → K)) (D : Finset.{u_1} K),
+  LE.le.{0} (Finset.card.{u_1} ({x ∈ A | Membership.mem.{u_1, u_1} D (x 0)}))
+    (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+CFR_TYPE_END:CorruptedFieldRecovery.card_subset_first_coordinate_values_le
+'CorruptedFieldRecovery.card_subset_first_coordinate_values_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

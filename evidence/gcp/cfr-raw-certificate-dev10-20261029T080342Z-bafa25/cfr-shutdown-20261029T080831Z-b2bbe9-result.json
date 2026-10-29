@@ -1,0 +1,8 @@
+{
+  "initial_state": "RUNNING",
+  "final_state": "TERMINATED",
+  "utc": "2026-10-29T08:12:11.397431+00:00",
+  "started_for_task": true,
+  "stop_verified": true,
+  "persistent_cache_retained": true
+}

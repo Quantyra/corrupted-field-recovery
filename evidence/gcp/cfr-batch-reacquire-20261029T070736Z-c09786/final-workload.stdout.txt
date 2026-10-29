@@ -1,0 +1,34 @@
+NON_KERNEL_WORKLOAD
+USER         PID    PPID     ELAPSED COMMAND
+root           1       0       58:45 /sbin/init
+root           2       0       58:45 [kthreadd]
+root         168       1       58:42 /usr/lib/systemd/systemd-journald
+root         234       1       58:41 /sbin/multipathd -d -s
+root         238       1       58:41 /usr/lib/systemd/systemd-udevd
+systemd+     497       1       58:40 /usr/lib/systemd/systemd-resolved
+systemd+     582       1       58:34 /usr/lib/systemd/systemd-networkd
+message+     627       1       58:31 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         631       1       58:31 /usr/bin/google_osconfig_agent
+root         639       1       58:31 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         648       1       58:31 /usr/lib/snapd/snapd
+syslog       687       1       58:31 /usr/sbin/rsyslogd -n -iNONE
+_chrony      727       1       58:31 /usr/sbin/chronyd -F 1
+root         728       1       58:31 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+_chrony      729     727       58:31 /usr/sbin/chronyd -F 1
+root         855       1       58:21 /usr/bin/google_guest_agent
+polkitd      983       1       58:13 /usr/lib/polkit-1/polkitd --no-debug
+root         984       1       58:13 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root         990       1       58:13 /sbin/agetty -o -p -- \u --noclear - linux
+root         992       1       58:13 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        1032       1       58:12 /usr/lib/systemd/systemd-logind
+root        1037       1       58:12 /usr/sbin/cron -f -P
+dfredri+   10974       1       00:07 /usr/lib/systemd/systemd --user
+dfredri+   10975   10974       00:07 (sd-pam)
+root       11041     992       00:01 sshd: dfredriksen_quantyra_org [priv]
+dfredri+   11089   11041       00:00 sshd: dfredriksen_quantyra_org@notty
+dfredri+   11090   11089       00:00 bash -c echo c2V0IC1ldQpwcmludGYgIk5PTl9LRVJORUxfV09SS0xPQURcbiIKcHMgLWVvIHVzZXIscGlkLHBwaWQsZXRpbWUsYXJncyB8IGF3ayAnJDMgIT0gMiB7cHJpbnR9JwpwcmludGYgIkNPTVBJTEVSXG4iCnBncmVwIC1hIC14IGxlYW4gfHwgdHJ1ZQpwZ3JlcCAtYSAteCBsYWtlIHx8IHRydWUKcHJpbnRmICJMT0NLXG4iCmZsb2NrIC1uICIkSE9NRS9xdWFudHlyYS1jZnItcnVucy9jZnItbGVhbjQzMC1jNWVhLWlzb2xhdGVkLTIwMjYxMDI4YS9sb2NrIiB0cnVlCg== | base64 -d | bash
+dfredri+   11093   11090       00:00 bash
+dfredri+   11094   11093       00:00 ps -eo user,pid,ppid,etime,args
+dfredri+   11095   11093       00:00 awk $3 != 2 {print}
+COMPILER
+LOCK

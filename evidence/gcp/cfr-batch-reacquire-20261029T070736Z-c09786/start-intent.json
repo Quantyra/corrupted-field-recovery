@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T07:08:33.696946+00:00",
+  "initial_state": "TERMINATED",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "project": "quantyra-lean-cert-20260915",
+  "zone": "us-central1-a",
+  "purpose": "Bounded exact-source CFR batch; existing four-hour STOP constraint retained"
+}

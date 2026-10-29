@@ -1,0 +1,39 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.encode_decodeRawArray
+@CorruptedFieldRecovery.encode_decodeRawArray : ∀ {n : Nat} (raw : CorruptedFieldRecovery.RawCoefficientArray)
+  (t : CorruptedFieldRecovery.IncreasingTriple n),
+  Eq.{1} (CorruptedFieldRecovery.encodeDenseInput (CorruptedFieldRecovery.decodeRawArray raw) t)
+    (GetElem?.getElem!.{0, 0, 0} raw
+      (CorruptedFieldRecovery.rawCoefficientOffset n (CorruptedFieldRecovery.increasingTripleI t)
+        (CorruptedFieldRecovery.increasingTripleJ t) (CorruptedFieldRecovery.increasingTripleK t)))
+CFR_TYPE_END:CorruptedFieldRecovery.encode_decodeRawArray
+'CorruptedFieldRecovery.encode_decodeRawArray' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.decodeRawArray_isAlternating
+@CorruptedFieldRecovery.decodeRawArray_isAlternating : ∀ {n : Nat} (raw : CorruptedFieldRecovery.RawCoefficientArray),
+  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.decodeRawArray raw)
+CFR_TYPE_END:CorruptedFieldRecovery.decodeRawArray_isAlternating
+'CorruptedFieldRecovery.decodeRawArray_isAlternating' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_raw_array_decoders_equal
+@CorruptedFieldRecovery.accepted_raw_array_decoders_equal : ∀ {n : Nat}
+  (input represented : CorruptedFieldRecovery.RawCoefficientArray)
+  (accepted : Eq.{1} (CorruptedFieldRecovery.rawArrayCheck input represented) Bool.true),
+  Eq.{1} (CorruptedFieldRecovery.decodeRawArray input) (CorruptedFieldRecovery.decodeRawArray represented)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_raw_array_decoders_equal
+'CorruptedFieldRecovery.accepted_raw_array_decoders_equal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.decodeRawArray_add
+@CorruptedFieldRecovery.decodeRawArray_add : ∀ {n : Nat} (left right : CorruptedFieldRecovery.RawCoefficientArray)
+  (hsize : Eq.{1} (Array.size.{0} left) (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} n n) n)),
+  Eq.{1} (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.rawArrayAdd left right))
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.decodeRawArray left) (CorruptedFieldRecovery.decodeRawArray right))
+CFR_TYPE_END:CorruptedFieldRecovery.decodeRawArray_add
+'CorruptedFieldRecovery.decodeRawArray_add' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_raw_certificate_is_computed_sum
+@CorruptedFieldRecovery.accepted_raw_certificate_is_computed_sum : ∀ {n : Nat}
+  (compatible residual represented : CorruptedFieldRecovery.RawCoefficientArray)
+  (accepted : Eq.{1} (CorruptedFieldRecovery.rawCertificateCheck compatible residual represented) Bool.true),
+  Eq.{1} represented (CorruptedFieldRecovery.rawArrayAdd compatible residual)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_raw_certificate_is_computed_sum
+'CorruptedFieldRecovery.accepted_raw_certificate_is_computed_sum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

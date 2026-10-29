@@ -1,0 +1,92 @@
+✖ [1348/1348] Building CorruptedFieldRecovery.RawCertificate (29s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCertificate.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCertificate.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCertificate.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCertificate.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCertificate.setup.json --json
+warning: CorruptedFieldRecovery/RawCertificate.lean:23:21: unused variable `hij`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/RawCertificate.lean:23:35: unused variable `hjk`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: CorruptedFieldRecovery/RawCertificate.lean:39:8: Function expected at
+  encode_decodeDenseInput ?m.15
+but this term has type
+  encodeDenseInput (decodeDenseInput ?m.15) = ?m.15
+
+Note: Expected a function because this term is being applied to the argument
+  t
+error: CorruptedFieldRecovery/RawCertificate.lean:42:4: don't know how to synthesize implicit argument `n`
+  @IsAlternating (?m.3 raw) (decodeRawArray raw)
+context:
+n : ℕ
+raw : RawCoefficientArray
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCertificate.lean:42:19: don't know how to synthesize implicit argument `n`
+  @decodeRawArray (?m.3 raw) raw
+context:
+n : ℕ
+raw : RawCoefficientArray
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCertificate.lean:48:25: don't know how to synthesize implicit argument `α`
+  @Eq (BinaryTensor (?m.5 h)) (decodeRawArray left) (decodeRawArray right)
+context:
+n : ℕ
+left right : RawCoefficientArray
+h : left = right
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCertificate.lean:48:47: don't know how to synthesize implicit argument `n`
+  @decodeRawArray (?m.5 h) right
+context:
+n : ℕ
+left right : RawCoefficientArray
+h : left = right
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCertificate.lean:48:25: don't know how to synthesize implicit argument `n`
+  @decodeRawArray (?m.5 h) left
+context:
+n : ℕ
+left right : RawCoefficientArray
+h : left = right
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCertificate.lean:61:4: don't know how to synthesize implicit argument `α`
+  @Eq (BinaryTensor (?m.5 input represented accepted)) (decodeRawArray input) (decodeRawArray represented)
+context:
+n : ℕ
+input represented : RawCoefficientArray
+accepted : rawArrayCheck input represented = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCertificate.lean:61:27: don't know how to synthesize implicit argument `n`
+  @decodeRawArray (?m.5 input represented accepted) represented
+context:
+n : ℕ
+input represented : RawCoefficientArray
+accepted : rawArrayCheck input represented = true
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCertificate.lean:61:4: don't know how to synthesize implicit argument `n`
+  @decodeRawArray (?m.5 input represented accepted) input
+context:
+n : ℕ
+input represented : RawCoefficientArray
+accepted : rawArrayCheck input represented = true
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCertificate.lean:63:46: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression
+  accepted.right
+has type `(input == represented) = true` which has no fields.
+error: CorruptedFieldRecovery/RawCertificate.lean:64:8: Unknown identifier `decodeRawArray_congr`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCertificate

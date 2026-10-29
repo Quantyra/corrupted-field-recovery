@@ -1,0 +1,57 @@
+✖ [1348/1348] Building CorruptedFieldRecovery.RawCertificate (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCertificate.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCertificate.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCertificate.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCertificate.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCertificate.setup.json --json
+error: CorruptedFieldRecovery/RawCertificate.lean:93:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  l ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f - g ≥ 1
+  f - h ≤ -1
+  e ≥ 0
+  d ≥ 0
+  d - e ≥ 1
+  d - f ≥ 1
+  d - g ≥ 1
+  d - h ≥ 1
+  c ≥ 0
+  c - d ≤ -1
+  b ≥ 0
+  b - c ≥ 1
+  b - d ≤ -1
+  b - e ≤ -1
+  a ≥ 0
+  a - e - l ≤ 0
+where
+ a := ↑(n * n) * ↑n
+ b := ↑↑j
+ c := ↑↑i
+ d := ↑n
+ e := ↑↑k
+ f := ↑↑(↑t).1.2
+ g := ↑↑(↑t).1.1
+ h := ↑↑(↑t).2
+ l := ↑(↑i * n + ↑j) * ↑n
+error: CorruptedFieldRecovery/RawCertificate.lean:98:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (rawArrayAdd left right)[rawCoefficientOffset n (increasingTripleI t) (increasingTripleJ t) (increasingTripleK t)]!
+in the target expression
+  coefficient (decodeRawArray (rawArrayAdd left right)) i j k =
+    coefficient (decodeRawArray left + decodeRawArray right) i j k
+
+case h
+n : ℕ
+left right : RawCoefficientArray
+hsize : Array.size left = n * n * n
+i j k : Fin n
+hij : i < j
+hjk : j < k
+t : IncreasingTriple n := ⟨((i, j), k), ⋯⟩
+hoff : rawCoefficientOffset n i j k < Array.size left
+hsum :
+  (rawArrayAdd left right)[rawCoefficientOffset n i j k]! =
+    left[rawCoefficientOffset n i j k]! + right[rawCoefficientOffset n i j k]!
+⊢ coefficient (decodeRawArray (rawArrayAdd left right)) i j k =
+    coefficient (decodeRawArray left + decodeRawArray right) i j k
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCertificate

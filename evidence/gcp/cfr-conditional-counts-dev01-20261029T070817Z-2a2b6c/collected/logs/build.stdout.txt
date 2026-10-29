@@ -1,0 +1,31 @@
+✖ [2942/2942] Building CorruptedFieldRecovery.ConditionalCounts (22s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ConditionalCounts.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ConditionalCounts.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ConditionalCounts.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ConditionalCounts.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ConditionalCounts.setup.json --json
+error: CorruptedFieldRecovery/ConditionalCounts.lean:17:68: unsolved goals
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Fintype K
+inst✝ : DecidableEq K
+a : K
+e : { x // x 0 = a } ≃ K × K :=
+  { toFun := fun x => (↑x 1, ↑x 2), invFun := fun y => ⟨fun i => if i = 0 then a else if i = 1 then y.1 else y.2, ⋯⟩,
+    left_inv := ⋯, right_inv := ⋯ }
+⊢ Fintype.card K * Fintype.card K = Fintype.card K ^ 2
+error: CorruptedFieldRecovery/ConditionalCounts.lean:45:4: Type mismatch
+  hx.right
+has type
+  x 0 = a
+but is expected to have type
+  x ∈ Finset.univ ∧ x 0 = a
+error: CorruptedFieldRecovery/ConditionalCounts.lean:51:10: Unknown constant `Fintype.card_subtype_iff`
+error: CorruptedFieldRecovery/ConditionalCounts.lean:50:51: unsolved goals
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Fintype K
+inst✝ : DecidableEq K
+A : Finset (Fin 3 → K)
+a : K
+hsub : {x ∈ A | x 0 = a} ⊆ {x | x 0 = a}
+⊢ {x | x 0 = a}.card = Fintype.card { x // x 0 = a }
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ConditionalCounts

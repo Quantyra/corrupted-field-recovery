@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-29T07:09:34.131037+00:00",
+  "configuration": "external-nat",
+  "purpose": "Task-only ephemeral outbound IPv4; pre-start describe proved accessConfigs absent; effective ingress checked"
+}

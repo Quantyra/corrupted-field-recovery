@@ -1,0 +1,23 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.encode_decodeRawArray
+@CorruptedFieldRecovery.encode_decodeRawArray : ∀ {n : Nat} (raw : CorruptedFieldRecovery.RawCoefficientArray)
+  (t : CorruptedFieldRecovery.IncreasingTriple n),
+  Eq.{1} (CorruptedFieldRecovery.encodeDenseInput (CorruptedFieldRecovery.decodeRawArray raw) t)
+    (GetElem?.getElem!.{0, 0, 0} raw
+      (CorruptedFieldRecovery.rawCoefficientOffset n (CorruptedFieldRecovery.increasingTripleI t)
+        (CorruptedFieldRecovery.increasingTripleJ t) (CorruptedFieldRecovery.increasingTripleK t)))
+CFR_TYPE_END:CorruptedFieldRecovery.encode_decodeRawArray
+'CorruptedFieldRecovery.encode_decodeRawArray' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.decodeRawArray_isAlternating
+@CorruptedFieldRecovery.decodeRawArray_isAlternating : ∀ {n : Nat} (raw : CorruptedFieldRecovery.RawCoefficientArray),
+  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.decodeRawArray raw)
+CFR_TYPE_END:CorruptedFieldRecovery.decodeRawArray_isAlternating
+'CorruptedFieldRecovery.decodeRawArray_isAlternating' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_raw_array_decoders_equal
+@CorruptedFieldRecovery.accepted_raw_array_decoders_equal : ∀ {n : Nat}
+  (input represented : CorruptedFieldRecovery.RawCoefficientArray)
+  (accepted : Eq.{1} (CorruptedFieldRecovery.rawArrayCheck input represented) Bool.true),
+  Eq.{1} (CorruptedFieldRecovery.decodeRawArray input) (CorruptedFieldRecovery.decodeRawArray represented)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_raw_array_decoders_equal
+'CorruptedFieldRecovery.accepted_raw_array_decoders_equal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

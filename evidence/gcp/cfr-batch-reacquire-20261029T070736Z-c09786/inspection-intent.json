@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-29T07:07:36.834036+00:00",
+  "purpose": "Read-only dedicated builder and effective-ingress check before bounded restart"
+}

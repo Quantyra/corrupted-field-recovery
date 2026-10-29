@@ -1,0 +1,8 @@
+{
+  "status": "capture-rejected-before-archive",
+  "stage": "audit-export-name-validation",
+  "reason": "rawArrayAdd_get! contains !, unsupported by controller audit-export name grammar",
+  "cloud_submission": false,
+  "raw_stdout_stderr_saved": false,
+  "record_kind": "operator reconstruction from tool-call outcome; not a compiler receipt"
+}
