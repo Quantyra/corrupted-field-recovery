@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.cleanSupportSet_card": {
+    "emitted_type": "CorruptedFieldRecovery.cleanSupportSet_card.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K]\n  [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s r : Nat)\n  (hs : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s)\n  (W :\n    Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField\n      (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K)))\n  (hW : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField \u21a5W) r),\n  Eq.{1} (Finset.card.{u_1} (CorruptedFieldRecovery.cleanSupportSet.{u_1} W))\n    (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) r))\n",
+    "sha256": "36d8873d682fa89b51e4c76b40c7e2c44a8246cf4db506b540d01669ba18d6ec"
+  }
+}

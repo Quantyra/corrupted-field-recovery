@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T21:28:34.033430+00:00",
+  "effective_STOP_ceiling": "2026-10-29T22:56:29.521Z",
+  "latest_full_stage_launch": "2026-10-29T22:01:29.521Z",
+  "conservative_last_submission_start": "2026-10-29T21:54:00Z",
+  "reason": "Reserve seven minutes for measured guarded upload and launch transport, then full 1800-second stage plus at least 25-minute observation, collection and shutdown margin. No cloud lifetime or runner timeout changed."
+}

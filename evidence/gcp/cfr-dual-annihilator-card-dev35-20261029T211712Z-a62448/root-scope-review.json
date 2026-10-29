@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T21:29:25.592940+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Supplied rank-r binary-dual submodule W annihilator has cardinality 2^(3*s-r), under stated field-finrank hypotheses.",
+  "remaining": "No physical-support or actual tape correspondence.",
+  "evidence": "collected/logs/emitted-types.json"
+}

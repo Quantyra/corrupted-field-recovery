@@ -1,0 +1,13 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.cleanSupportSet_card
+CorruptedFieldRecovery.cleanSupportSet_card.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K]
+  [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s r : Nat)
+  (hs : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s)
+  (W :
+    Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField
+      (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K)))
+  (hW : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField ↥W) r),
+  Eq.{1} (Finset.card.{u_1} (CorruptedFieldRecovery.cleanSupportSet.{u_1} W))
+    (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) r))
+CFR_TYPE_END:CorruptedFieldRecovery.cleanSupportSet_card
+'CorruptedFieldRecovery.cleanSupportSet_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

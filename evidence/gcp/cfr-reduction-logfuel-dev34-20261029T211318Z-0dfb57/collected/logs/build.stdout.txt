@@ -1,0 +1,52 @@
+✖ [1839/1839] Building CorruptedFieldRecovery.RawReductionLogFuel (2.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawReductionLogFuel.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionLogFuel.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionLogFuel.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionLogFuel.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionLogFuel.setup.json --json
+error: CorruptedFieldRecovery/RawReductionLogFuel.lean:14:2: unsolved goals
+case pos
+n L : ℕ
+hL : 0 < L
+hn : n < 2 ^ L
+hge : L ≤ n.log2
+hn0 : n = 0
+hnot : L = 0
+⊢ False
+error: CorruptedFieldRecovery/RawReductionLogFuel.lean:76:46: Application type mismatch: The argument
+  hupper
+has type
+  a < 2 ^ (a.log2 + 1)
+but is expected to have type
+  a < 2 ^ (L + 1)
+in the application
+  lt_of_le_of_lt hcurrentLower hupper
+error: CorruptedFieldRecovery/RawReductionLogFuel.lean:89:20: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  a.log2
+in the target expression
+  L - s + 1 ≤ fuel + 1
+
+s modulus a✝ fuel✝ : ℕ
+hmodLower : 2 ^ s ≤ modulus
+hmodUpper : modulus < 2 ^ (s + 1)
+hs : 0 < s
+hfuel✝ : a✝.log2 - s + 1 ≤ fuel✝
+L : ℕ
+ih : ∀ m < L, ∀ (a : ℕ) (fuel : ℕ), a.log2 = m → m - s + 1 ≤ fuel → rawReduceFuel modulus s fuel a < 2 ^ s
+a : ℕ
+hlog : a.log2 = L
+hsmall : ¬a < 2 ^ s
+hcurrentLower : 2 ^ s ≤ a
+hdegree : s ≤ L
+fuel : ℕ
+hfuel : L - s + 1 ≤ fuel + 1
+hstepBound : rawReduceStep modulus s a < 2 ^ a.log2
+hstepLog : (rawReduceStep modulus s a).log2 < L
+⊢ (rawReduceStep modulus s a).log2 - s + 1 ≤ fuel
+error: CorruptedFieldRecovery/RawReductionLogFuel.lean:108:66: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  c - 2*d ≤ -1
+  c - d ≥ 0
+where
+ c := ↑(rawFieldBitsToNat candidate.modulus)
+ d := ↑2 ^ s
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawReductionLogFuel
