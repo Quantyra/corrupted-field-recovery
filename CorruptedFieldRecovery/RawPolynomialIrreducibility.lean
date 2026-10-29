@@ -207,6 +207,38 @@ theorem rawFieldCandidateValid_modulus_polynomial {s : Nat}
   rw [rawFieldArrayPolynomial_eq_mask] at harrayMonic harrayDegree
   exact ⟨harrayMonic, harrayDegree⟩
 
+theorem rawMaskPolynomial_isMonicOfDegree_of_range (mask d : Nat)
+    (hlower : 2 ^ d ≤ mask) (hupper : mask < 2 ^ (d + 1)) :
+    IsMonicOfDegree (rawMaskPolynomial mask) d := by
+  induction d generalizing mask with
+  | zero =>
+      have hmask : mask = 1 := by omega
+      subst mask
+      have hpoly : rawMaskPolynomial 1 = 1 := by
+        rw [rawMaskPolynomial_step]
+        norm_num [rawMaskPolynomial_zero]
+      simp [hpoly]
+  | succ d ih =>
+      have hlowdiv : 2 ^ d ≤ mask.div2 := by
+        rw [Nat.div2_val]
+        rw [pow_succ] at hlower
+        omega
+      have hhighdiv : mask.div2 < 2 ^ (d + 1) := by
+        rw [Nat.div2_val]
+        have hpow : 2 ^ (d + 1 + 1) = 2 ^ (d + 1) * 2 := by rw [pow_succ]
+        rw [hpow] at hupper
+        omega
+      have htail := ih mask.div2 hlowdiv hhighdiv
+      have hX : IsMonicOfDegree (X * rawMaskPolynomial mask.div2) (d + 1) := by
+        simpa [Nat.add_comm] using (isMonicOfDegree_X_pow (ZMod 2) 1).mul htail
+      have hconst : (C (if mask.bodd then (1 : ZMod 2) else 0)).natDegree = 0 := by
+        cases mask.bodd <;> simp
+      have hconstlt : (C (if mask.bodd then (1 : ZMod 2) else 0)).natDegree < d + 1 := by
+        rw [hconst]
+        omega
+      rw [rawMaskPolynomial_step]
+      exact hX.add_left hconstlt
+
 /-- The bounded encoder uses exactly one bit for each coefficient through the
 polynomial's leading degree. -/
 theorem rawPolynomialBitsFuel_length (fuel : Nat) (p : Polynomial (ZMod 2))

@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "Any mask in [2^d, 2^(d+1)) decodes to a polynomial satisfying IsMonicOfDegree d. Prior raw candidate-gate soundness declarations reaudited.",
+  "remaining": "Converse factor predicate, quotient field and full verifier remain open.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 3,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}
