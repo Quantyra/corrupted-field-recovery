@@ -1,0 +1,174 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_le_iff_vanishes_on_dualCoannihilator
+@CorruptedFieldRecovery.modeImage_le_iff_vanishes_on_dualCoannihilator : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.Trilinear.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (U : Submodule.{0, 0} (ZMod 2) (Module.Dual.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))),
+  Iff (LE.le.{0} (CorruptedFieldRecovery.modeImage.{0, 0} E) U)
+    (∀ (x y v : CorruptedFieldRecovery.BinaryVector n)
+      (a : Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} U) v), Eq.{1} (((E x) y) v) 0)
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_le_iff_vanishes_on_dualCoannihilator
+'CorruptedFieldRecovery.modeImage_le_iff_vanishes_on_dualCoannihilator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.alternating_vanishes_on_dualCoannihilator_all_slots
+@CorruptedFieldRecovery.alternating_vanishes_on_dualCoannihilator_all_slots : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor n) (hE : CorruptedFieldRecovery.IsAlternating E)
+  (U : Submodule.{0, 0} (ZMod 2) (Module.Dual.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)))
+  (h :
+    ∀ (x y v : CorruptedFieldRecovery.BinaryVector n)
+      (a : Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} U) v), Eq.{1} (((E x) y) v) 0)
+  (x y z : CorruptedFieldRecovery.BinaryVector n)
+  (a :
+    Or (Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} U) x)
+      (Or (Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} U) y)
+        (Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} U) z))),
+  Eq.{1} (((E x) y) z) 0
+CFR_TYPE_END:CorruptedFieldRecovery.alternating_vanishes_on_dualCoannihilator_all_slots
+'CorruptedFieldRecovery.alternating_vanishes_on_dualCoannihilator_all_slots' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.supportedQuotientLift
+@CorruptedFieldRecovery.supportedQuotientLift : {n : Nat} →
+  (E : CorruptedFieldRecovery.Trilinear.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) →
+    (N : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) →
+      CorruptedFieldRecovery.Trilinear.{0, 0} (ZMod 2)
+        (HasQuotient.Quotient.{0, 0} (CorruptedFieldRecovery.BinaryVector n) N)
+CFR_TYPE_END:CorruptedFieldRecovery.supportedQuotientLift
+'CorruptedFieldRecovery.supportedQuotientLift' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.supportedQuotientLift_mkQ
+@CorruptedFieldRecovery.supportedQuotientLift_mkQ : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.Trilinear.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (N : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (h₁ : ∀ (x y z : CorruptedFieldRecovery.BinaryVector n) (a : Membership.mem.{0, 0} N x), Eq.{1} (((E x) y) z) 0)
+  (h₂ : ∀ (x y z : CorruptedFieldRecovery.BinaryVector n) (a : Membership.mem.{0, 0} N y), Eq.{1} (((E x) y) z) 0)
+  (h₃ : ∀ (x y z : CorruptedFieldRecovery.BinaryVector n) (a : Membership.mem.{0, 0} N z), Eq.{1} (((E x) y) z) 0)
+  (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1}
+    ((((CorruptedFieldRecovery.supportedQuotientLift E N) ((Submodule.mkQ.{0, 0} N) x)) ((Submodule.mkQ.{0, 0} N) y))
+      ((Submodule.mkQ.{0, 0} N) z))
+    (((E x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.supportedQuotientLift_mkQ
+'CorruptedFieldRecovery.supportedQuotientLift_mkQ' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.exists_supported_quotient_factorization
+@CorruptedFieldRecovery.exists_supported_quotient_factorization : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor n) (hE : CorruptedFieldRecovery.IsAlternating E)
+  (U : Submodule.{0, 0} (ZMod 2) (Module.Dual.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)))
+  (hU : LE.le.{0} (CorruptedFieldRecovery.modeImage.{0, 0} E) U),
+  ∃ e,
+    ∀ (x y z : CorruptedFieldRecovery.BinaryVector n),
+      Eq.{1}
+        (((e ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) x))
+            ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) y))
+          ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) z))
+        (((E x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.exists_supported_quotient_factorization
+'CorruptedFieldRecovery.exists_supported_quotient_factorization' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_le_of_supported_quotient_factorization
+@CorruptedFieldRecovery.modeImage_le_of_supported_quotient_factorization : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor n)
+  (U : Submodule.{0, 0} (ZMod 2) (Module.Dual.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)))
+  (e :
+    CorruptedFieldRecovery.Trilinear.{0, 0} (ZMod 2)
+      (HasQuotient.Quotient.{0, 0} (CorruptedFieldRecovery.BinaryVector n) (Submodule.dualCoannihilator.{0, 0} U)))
+  (hfac :
+    ∀ (x y z : CorruptedFieldRecovery.BinaryVector n),
+      Eq.{1}
+        (((e ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) x))
+            ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) y))
+          ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) z))
+        (((E x) y) z)),
+  LE.le.{0} (CorruptedFieldRecovery.modeImage.{0, 0} E) U
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_le_of_supported_quotient_factorization
+'CorruptedFieldRecovery.modeImage_le_of_supported_quotient_factorization' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_le_iff_exists_supported_quotient_factorization
+@CorruptedFieldRecovery.modeImage_le_iff_exists_supported_quotient_factorization : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor n) (hE : CorruptedFieldRecovery.IsAlternating E)
+  (U : Submodule.{0, 0} (ZMod 2) (Module.Dual.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))),
+  Iff (LE.le.{0} (CorruptedFieldRecovery.modeImage.{0, 0} E) U)
+    (∃ e,
+      And (CorruptedFieldRecovery.IsAlternatingTrilinearOn.{0} e)
+        (∀ (x y z : CorruptedFieldRecovery.BinaryVector n),
+          Eq.{1}
+            (((e ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) x))
+                ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) y))
+              ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) z))
+            (((E x) y) z)))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_le_iff_exists_supported_quotient_factorization
+'CorruptedFieldRecovery.modeImage_le_iff_exists_supported_quotient_factorization' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_is_minimal_common_support
+@CorruptedFieldRecovery.modeImage_is_minimal_common_support : ∀ {n : Nat} (E : CorruptedFieldRecovery.BinaryTensor n)
+  (hE : CorruptedFieldRecovery.IsAlternating E),
+  And
+    (∃ e,
+      And (CorruptedFieldRecovery.IsAlternatingTrilinearOn.{0} e)
+        (∀ (x y z : CorruptedFieldRecovery.BinaryVector n),
+          Eq.{1}
+            (((e
+                  ((Submodule.mkQ.{0, 0}
+                      (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)))
+                    x))
+                ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)))
+                  y))
+              ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)))
+                z))
+            (((E x) y) z)))
+    (∀ (U : Submodule.{0, 0} (ZMod 2) (Module.Dual.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)))
+      (e :
+        CorruptedFieldRecovery.Trilinear.{0, 0} (ZMod 2)
+          (HasQuotient.Quotient.{0, 0} (CorruptedFieldRecovery.BinaryVector n) (Submodule.dualCoannihilator.{0, 0} U)))
+      (a :
+        ∀ (x y z : CorruptedFieldRecovery.BinaryVector n),
+          Eq.{1}
+            (((e ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) x))
+                ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) y))
+              ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) z))
+            (((E x) y) z)),
+      LE.le.{0} (CorruptedFieldRecovery.modeImage.{0, 0} E) U)
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_is_minimal_common_support
+'CorruptedFieldRecovery.modeImage_is_minimal_common_support' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.IsAlternatingTrilinearOn
+@CorruptedFieldRecovery.IsAlternatingTrilinearOn.{u_1} : {V : Type u_1} →
+  [inst : AddCommGroup.{u_1} V] →
+    [inst_1 : Module.{0, u_1} (ZMod 2) V] → (E : CorruptedFieldRecovery.Trilinear.{0, u_1} (ZMod 2) V) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.IsAlternatingTrilinearOn
+'CorruptedFieldRecovery.IsAlternatingTrilinearOn' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.alternating_of_supported_quotient_factorization
+@CorruptedFieldRecovery.alternating_of_supported_quotient_factorization : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor n) (hE : CorruptedFieldRecovery.IsAlternating E)
+  (N : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (e :
+    CorruptedFieldRecovery.Trilinear.{0, 0} (ZMod 2)
+      (HasQuotient.Quotient.{0, 0} (CorruptedFieldRecovery.BinaryVector n) N))
+  (hfac :
+    ∀ (x y z : CorruptedFieldRecovery.BinaryVector n),
+      Eq.{1} (((e ((Submodule.mkQ.{0, 0} N) x)) ((Submodule.mkQ.{0, 0} N) y)) ((Submodule.mkQ.{0, 0} N) z))
+        (((E x) y) z)),
+  CorruptedFieldRecovery.IsAlternatingTrilinearOn.{0} e
+CFR_TYPE_END:CorruptedFieldRecovery.alternating_of_supported_quotient_factorization
+'CorruptedFieldRecovery.alternating_of_supported_quotient_factorization' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.exists_alternating_supported_quotient_factorization
+@CorruptedFieldRecovery.exists_alternating_supported_quotient_factorization : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor n) (hE : CorruptedFieldRecovery.IsAlternating E)
+  (U : Submodule.{0, 0} (ZMod 2) (Module.Dual.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)))
+  (hU : LE.le.{0} (CorruptedFieldRecovery.modeImage.{0, 0} E) U),
+  ∃ e,
+    And (CorruptedFieldRecovery.IsAlternatingTrilinearOn.{0} e)
+      (∀ (x y z : CorruptedFieldRecovery.BinaryVector n),
+        Eq.{1}
+          (((e ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) x))
+              ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) y))
+            ((Submodule.mkQ.{0, 0} (Submodule.dualCoannihilator.{0, 0} U)) z))
+          (((E x) y) z))
+CFR_TYPE_END:CorruptedFieldRecovery.exists_alternating_supported_quotient_factorization
+'CorruptedFieldRecovery.exists_alternating_supported_quotient_factorization' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

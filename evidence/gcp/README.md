@@ -379,3 +379,40 @@ STOP ceiling and persistent cache.
 Remaining to-do list: resolve the Support outer-lift elaboration and obtain
 its actual green audit; continue hidden-input/full theorem obligations;
 preserve future launches and safely stop the dedicated builder at the batch checkpoint.
+
+
+Support [`104d4e`](cfr-isolated-support-dev11-20261029T042433Z-104d4e/collected/terminal-receipt.json)
+passed exact GCP build and the complete 11-export readable type/axiom audit
+at 2026-10-29 04:28:58 UTC, with zero warnings and only `propext`,
+`Classical.choice`, and `Quot.sound`. The section/pullback construction avoided
+the earlier nested-lift elaboration timeouts; its mathematical section is
+noncomputable and establishes semantics rather than an executable constructor.
+All raw logs are collected and hash-bound. Root inspected the actual emitted
+types and accepted minimal common-support equivalence for alternating binary
+tensors, including alternating quotient factorization and its converse under
+the stated hypotheses. This is M1 support semantics; the full input model,
+algorithm, costs, and manuscript certification remain open.
+
+The predecessor `d21f89` failed on section API, representative-difference and
+calc-orientation proof details with six unused-simp warnings; complete raw logs
+remain preserved. Its exact diagnostic repair was captured as `104d4e`, without
+changing hypotheses or suppressing warnings. At this batch checkpoint every
+launched outcome is collected, no compiler/queue remains, and guarded shutdown
+is in progress with disk and persistent cache retained.
+
+Remaining to-do list: preserve and verify guarded builder shutdown; continue
+hidden-input and complete theorem/probability/algorithm/cost obligations.
+
+
+The batch is safely stopped: [`30a8f1`](cfr-isolated-four-sampled-identification-dev01-20261029T014405Z-d9123c/cfr-shutdown-20261029T043321Z-30a8f1-result.json)
+verified final `TERMINATED` at 2026-10-29 04:37:13 UTC. Fresh instance ID matched
+the restart ownership receipt; every launched outcome was collected. Saved
+workload review `c0df08` found no unrelated active user workload, and the normal
+no-Lean/Lake and task-lock guards passed. Task-only external egress was removed;
+the boot disk, pinned dependencies and persistent compiled cache/output hashes
+are retained. No live compiler, transport or queued capture remains.
+
+Remaining to-do list: continue the full input/hidden-isomorphism bridge,
+finite probability bounds, verified bounded constructor and checker, charged
+cost proofs and complete manuscript certification; use the bounded dedicated
+builder continuation runbook for a later authorized compiler batch.

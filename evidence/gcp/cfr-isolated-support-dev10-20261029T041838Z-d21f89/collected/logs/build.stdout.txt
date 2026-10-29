@@ -1,0 +1,91 @@
+✖ [1673/1673] Building CorruptedFieldRecovery.Support (3.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/Support.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Support.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Support.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/Support.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/Support.setup.json --json
+error: CorruptedFieldRecovery/Support.lean:89:2: Type mismatch: After simplification, term
+  mk_quotientEquivOfIsCompl_apply hP q
+ has type
+  True
+but is expected to have type
+  Submodule.Quotient.mk ↑((N.liftQ ((Classical.choose ⋯).projectionOnto N ⋯) ⋯) q) = q
+error: CorruptedFieldRecovery/Support.lean:141:60: unsolved goals
+n : ℕ
+E : Trilinear (ZMod 2) (BinaryVector n)
+N : Submodule (ZMod 2) (BinaryVector n)
+h₁ : ∀ (x y z : BinaryVector n), x ∈ N → ((E x) y) z = 0
+h₂ : ∀ (x y z : BinaryVector n), y ∈ N → ((E x) y) z = 0
+h₃ : ∀ (x y z : BinaryVector n), z ∈ N → ((E x) y) z = 0
+x y z : BinaryVector n
+⊢ Submodule.Quotient.mk x - Submodule.Quotient.mk ((supportedQuotientSection N) (Submodule.Quotient.mk x)) = 0
+error: CorruptedFieldRecovery/Support.lean:144:60: unsolved goals
+n : ℕ
+E : Trilinear (ZMod 2) (BinaryVector n)
+N : Submodule (ZMod 2) (BinaryVector n)
+h₁ : ∀ (x y z : BinaryVector n), x ∈ N → ((E x) y) z = 0
+h₂ : ∀ (x y z : BinaryVector n), y ∈ N → ((E x) y) z = 0
+h₃ : ∀ (x y z : BinaryVector n), z ∈ N → ((E x) y) z = 0
+x y z : BinaryVector n
+hx : x - (supportedQuotientSection N) (N.mkQ x) ∈ N
+⊢ Submodule.Quotient.mk y - Submodule.Quotient.mk ((supportedQuotientSection N) (Submodule.Quotient.mk y)) = 0
+error: CorruptedFieldRecovery/Support.lean:147:60: unsolved goals
+n : ℕ
+E : Trilinear (ZMod 2) (BinaryVector n)
+N : Submodule (ZMod 2) (BinaryVector n)
+h₁ : ∀ (x y z : BinaryVector n), x ∈ N → ((E x) y) z = 0
+h₂ : ∀ (x y z : BinaryVector n), y ∈ N → ((E x) y) z = 0
+h₃ : ∀ (x y z : BinaryVector n), z ∈ N → ((E x) y) z = 0
+x y z : BinaryVector n
+hx : x - (supportedQuotientSection N) (N.mkQ x) ∈ N
+hy : y - (supportedQuotientSection N) (N.mkQ y) ∈ N
+⊢ Submodule.Quotient.mk z - Submodule.Quotient.mk ((supportedQuotientSection N) (Submodule.Quotient.mk z)) = 0
+error: CorruptedFieldRecovery/Support.lean:151:4: invalid 'calc' step, left-hand side is
+  ((E x) y) z : ZMod 2
+but is expected to be
+  (((supportedQuotientLift E N) (N.mkQ x)) (N.mkQ y)) (N.mkQ z) : ZMod 2
+error: CorruptedFieldRecovery/Support.lean:160:4: invalid 'calc' step, right-hand side is
+  (((supportedQuotientLift E N) (N.mkQ x)) (N.mkQ y)) (N.mkQ z) : ZMod 2
+but is expected to be
+  ((E x) y) z : ZMod 2
+warning: CorruptedFieldRecovery/Support.lean:143:31: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  simp [Submodule.mkQ_apply, m̵a̵p̵_̵sub̵,̵ ̵s̵u̵pportedQuotientSection_mkQ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/Support.lean:143:40: This simp argument is unused:
+  supportedQuotientSection_mkQ
+
+Hint: Omit it from the simp argument list.
+  simp [Submodule.mkQ_apply, map_sub,̵ ̵s̵u̵p̵p̵o̵r̵t̵e̵d̵Q̵u̵o̵t̵i̵e̵n̵t̵S̵e̵c̵t̵i̵o̵n̵_̵m̵k̵Q̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/Support.lean:146:31: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  simp [Submodule.mkQ_apply, m̵a̵p̵_̵sub̵,̵ ̵s̵u̵pportedQuotientSection_mkQ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/Support.lean:146:40: This simp argument is unused:
+  supportedQuotientSection_mkQ
+
+Hint: Omit it from the simp argument list.
+  simp [Submodule.mkQ_apply, map_sub,̵ ̵s̵u̵p̵p̵o̵r̵t̵e̵d̵Q̵u̵o̵t̵i̵e̵n̵t̵S̵e̵c̵t̵i̵o̵n̵_̵m̵k̵Q̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/Support.lean:149:31: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  simp [Submodule.mkQ_apply, m̵a̵p̵_̵sub̵,̵ ̵s̵u̵pportedQuotientSection_mkQ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/Support.lean:149:40: This simp argument is unused:
+  supportedQuotientSection_mkQ
+
+Hint: Omit it from the simp argument list.
+  simp [Submodule.mkQ_apply, map_sub,̵ ̵s̵u̵p̵p̵o̵r̵t̵e̵d̵Q̵u̵o̵t̵i̵e̵n̵t̵S̵e̵c̵t̵i̵o̵n̵_̵m̵k̵Q̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.Support

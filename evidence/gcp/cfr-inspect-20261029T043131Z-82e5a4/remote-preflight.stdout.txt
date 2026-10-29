@@ -1,0 +1,10 @@
+quantyra-cfr-lean-builder-20261028a
+Python 3.12.3
+ACTIVE_LEAN_AND_LAKE
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        96G  8.9G   87G  10% /
+tmpfs            32G     0   32G   0% /dev/shm
+EXISTING_TOOLCHAIN
+CFR_WORKSPACE
+drwxrwxr-x 55 dfredriksen_quantyra_org dfredriksen_quantyra_org 4096 Oct 29 04:25 /home/dfredriksen_quantyra_org/quantyra-cfr-runs
+PINNED_ARCHIVES

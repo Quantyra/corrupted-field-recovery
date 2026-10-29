@@ -1,7 +1,9 @@
 import CorruptedFieldRecovery.BinaryTensor
 import CorruptedFieldRecovery.Defect
+import Mathlib.LinearAlgebra.Basis.VectorSpace
 import Mathlib.LinearAlgebra.Dual.Lemmas
 import Mathlib.LinearAlgebra.Quotient.Bilinear
+import Mathlib.LinearAlgebra.Projection
 
 /-! Common-support semantics for the manuscript's actual binary alternating tensors.
 
@@ -67,116 +69,65 @@ theorem alternating_vanishes_on_dualCoannihilator_all_slots
       _ = 0 := h x z y hy
   · exact h x y z hz
 
-/- The inner two slots of a trilinear form lifted through a quotient. -/
-theorem supportedSecondKernel
-    (E : Trilinear (ZMod 2) (BinaryVector n))
-    (N : Submodule (ZMod 2) (BinaryVector n))
-    (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
-    (x : BinaryVector n) : N ≤ LinearMap.ker (E x) := by
-  intro y hy
-  apply LinearMap.ext
-  intro z
-  exact h₂ x y z hy
+/-- Choose a linear complement and use its quotient equivalence to select representatives. -/
+noncomputable def supportedQuotientSection
+    (N : Submodule (ZMod 2) (BinaryVector n)) :
+    (BinaryVector n ⧸ N) →ₗ[ZMod 2] BinaryVector n := by
+  classical
+  letI : FiniteDimensional (ZMod 2) (BinaryVector n) := inferInstance
+  let P := Classical.choose (Submodule.exists_isCompl N)
+  have hP : IsCompl N P := Classical.choose_spec (Submodule.exists_isCompl N)
+  exact P.subtype.comp (N.quotientEquivOfIsCompl P hP).toLinearMap
 
-theorem supportedThirdKernel
-    (E : Trilinear (ZMod 2) (BinaryVector n))
+theorem supportedQuotientSection_mkQ
     (N : Submodule (ZMod 2) (BinaryVector n))
-    (h₃ : ∀ x y z, z ∈ N → E x y z = 0)
-    (x : BinaryVector n) : N ≤ LinearMap.ker (E x).flip := by
-  intro z hz
-  apply LinearMap.ext
-  intro y
-  exact h₃ x y z hz
+    (q : BinaryVector n ⧸ N) : N.mkQ (supportedQuotientSection N q) = q := by
+  classical
+  letI : FiniteDimensional (ZMod 2) (BinaryVector n) := inferInstance
+  let P := Classical.choose (Submodule.exists_isCompl N)
+  have hP : IsCompl N P := Classical.choose_spec (Submodule.exists_isCompl N)
+  change N.mkQ (P.subtype ((N.quotientEquivOfIsCompl P hP) q)) = q
+  exact Submodule.mk_quotientEquivOfIsCompl_apply (p := N) (q := P) hP q
 
-noncomputable def supportedInnerLift
-    (E : Trilinear (ZMod 2) (BinaryVector n))
-    (N : Submodule (ZMod 2) (BinaryVector n))
-    (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
-    (h₃ : ∀ x y z, z ∈ N → E x y z = 0) :
-    BinaryVector n →ₗ[ZMod 2]
-      (BinaryVector n ⧸ N →ₗ[ZMod 2] BinaryVector n ⧸ N →ₗ[ZMod 2] ZMod 2) := by
-  let hsecond := fun x => supportedSecondKernel E N h₂ x
-  let hthird := fun x => supportedThirdKernel E N h₃ x
-  have liftEval (x y z : BinaryVector n) :
-      (E x).liftQ₂ N N (hsecond x) (hthird x) (N.mkQ y) (N.mkQ z) = E x y z := by
-    exact LinearMap.liftQ₂_mk (hsecond x) (hthird x) y z
-  exact {
-    toFun := fun x => (E x).liftQ₂ N N (hsecond x) (hthird x)
-    map_add' := by
-      intro x y
-      apply LinearMap.ext
-      intro q
-      apply LinearMap.ext
-      intro r
-      obtain ⟨q', rfl⟩ := Submodule.mkQ_surjective N q
-      obtain ⟨r', rfl⟩ := Submodule.mkQ_surjective N r
-      change (E (x + y)).liftQ₂ N N (hsecond (x + y)) (hthird (x + y))
-          (N.mkQ q') (N.mkQ r') =
-        (E x).liftQ₂ N N (hsecond x) (hthird x) (N.mkQ q') (N.mkQ r') +
-        (E y).liftQ₂ N N (hsecond y) (hthird y) (N.mkQ q') (N.mkQ r')
-      rw [liftEval, liftEval, liftEval]
-      exact congrArg (fun f : BinaryVector n →ₗ[ZMod 2]
-        BinaryVector n →ₗ[ZMod 2] ZMod 2 => f q' r') (map_add E x y)
-    map_smul' := by
-      intro a x
-      apply LinearMap.ext
-      intro q
-      apply LinearMap.ext
-      intro r
-      obtain ⟨q', rfl⟩ := Submodule.mkQ_surjective N q
-      obtain ⟨r', rfl⟩ := Submodule.mkQ_surjective N r
-      change (E (a • x)).liftQ₂ N N (hsecond (a • x)) (hthird (a • x))
-          (N.mkQ q') (N.mkQ r') =
-        a • ((E x).liftQ₂ N N (hsecond x) (hthird x) (N.mkQ q') (N.mkQ r'))
-      rw [liftEval, liftEval]
-      exact congrArg (fun f : BinaryVector n →ₗ[ZMod 2]
-        BinaryVector n →ₗ[ZMod 2] ZMod 2 => f q' r') (map_smul E a x) }
-
-@[simp]
-theorem supportedInnerLift_mkQ
-    (E : Trilinear (ZMod 2) (BinaryVector n))
-    (N : Submodule (ZMod 2) (BinaryVector n))
-    (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
-    (h₃ : ∀ x y z, z ∈ N → E x y z = 0)
-    (x y z : BinaryVector n) :
-    supportedInnerLift E N h₂ h₃ x (N.mkQ y) (N.mkQ z) = E x y z := by
-  change (E x).liftQ₂ N N
-      (supportedSecondKernel E N h₂ x) (supportedThirdKernel E N h₃ x)
-      (N.mkQ y) (N.mkQ z) = E x y z
-  exact LinearMap.liftQ₂_mk
-    (supportedSecondKernel E N h₂ x) (supportedThirdKernel E N h₃ x) y z
-
-theorem supportedInnerLift_firstKernel
+theorem supported_replace_first
     (E : Trilinear (ZMod 2) (BinaryVector n))
     (N : Submodule (ZMod 2) (BinaryVector n))
     (h₁ : ∀ x y z, x ∈ N → E x y z = 0)
-    (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
-    (h₃ : ∀ x y z, z ∈ N → E x y z = 0) :
-    N ≤ LinearMap.ker (supportedInnerLift E N h₂ h₃) := by
-  intro x hx
-  apply LinearMap.ext
-  intro q
-  apply LinearMap.ext
-  intro r
-  obtain ⟨q', rfl⟩ := Submodule.mkQ_surjective N q
-  obtain ⟨r', rfl⟩ := Submodule.mkQ_surjective N r
-  change supportedInnerLift E N h₂ h₃ x (N.mkQ q') (N.mkQ r') = 0
-  rw [supportedInnerLift_mkQ]
-  exact h₁ x q' r' hx
+    {x x' y z : BinaryVector n} (hx : x - x' ∈ N) : E x y z = E x' y z := by
+  calc
+    E x y z = E ((x - x') + x') y z := by rw [sub_add_cancel]
+    _ = E (x - x') y z + E x' y z :=
+      congrArg (fun f : BinaryVector n →ₗ[ZMod 2]
+        BinaryVector n →ₗ[ZMod 2] ZMod 2 => f y z) (map_add E (x - x') x')
+    _ = E x' y z := by rw [h₁ (x - x') y z hx, zero_add]
 
-/- Lift the first slot, after `supportedInnerLift` has lifted the other two. -/
+theorem supported_replace_second
+    (E : Trilinear (ZMod 2) (BinaryVector n))
+    (N : Submodule (ZMod 2) (BinaryVector n))
+    (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
+    {x y y' z : BinaryVector n} (hy : y - y' ∈ N) : E x y z = E x y' z := by
+  calc
+    E x y z = E x ((y - y') + y') z := by rw [sub_add_cancel]
+    _ = E x (y - y') z + E x y' z :=
+      congrArg (fun f : BinaryVector n →ₗ[ZMod 2] ZMod 2 => f z)
+        (map_add (E x) (y - y') y')
+    _ = E x y' z := by rw [h₂ x (y - y') z hy, zero_add]
+
+theorem supported_replace_third
+    (E : Trilinear (ZMod 2) (BinaryVector n))
+    (N : Submodule (ZMod 2) (BinaryVector n))
+    (h₃ : ∀ x y z, z ∈ N → E x y z = 0)
+    {x y z z' : BinaryVector n} (hz : z - z' ∈ N) : E x y z = E x y z' := by
+  calc
+    E x y z = E x y ((z - z') + z') := by rw [sub_add_cancel]
+    _ = E x y (z - z') + E x y z' := map_add (E x y) (z - z') z'
+    _ = E x y z' := by rw [h₃ x y (z - z') hz, zero_add]
+
 noncomputable def supportedQuotientLift
     (E : Trilinear (ZMod 2) (BinaryVector n))
-    (N : Submodule (ZMod 2) (BinaryVector n))
-    (h₁ : ∀ x y z, x ∈ N → E x y z = 0)
-    (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
-    (h₃ : ∀ x y z, z ∈ N → E x y z = 0) :
-    (BinaryVector n ⧸ N) →ₗ[ZMod 2]
-      BinaryVector n ⧸ N →ₗ[ZMod 2] BinaryVector n ⧸ N →ₗ[ZMod 2] ZMod 2 := by
-  let G : BinaryVector n →ₗ[ZMod 2]
-      (BinaryVector n ⧸ N →ₗ[ZMod 2] BinaryVector n ⧸ N →ₗ[ZMod 2] ZMod 2) :=
-    supportedInnerLift E N h₂ h₃
-  exact N.liftQ G (supportedInnerLift_firstKernel E N h₁ h₂ h₃)
+    (N : Submodule (ZMod 2) (BinaryVector n)) :
+    Trilinear (ZMod 2) (BinaryVector n ⧸ N) :=
+  pullback E (supportedQuotientSection N)
 
 @[simp]
 theorem supportedQuotientLift_mkQ
@@ -186,8 +137,33 @@ theorem supportedQuotientLift_mkQ
     (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
     (h₃ : ∀ x y z, z ∈ N → E x y z = 0)
     (x y z : BinaryVector n) :
-    supportedQuotientLift E N h₁ h₂ h₃ (N.mkQ x) (N.mkQ y) (N.mkQ z) = E x y z := by
-  rw [supportedQuotientLift, Submodule.liftQ_apply, supportedInnerLift_mkQ]
+    supportedQuotientLift E N (N.mkQ x) (N.mkQ y) (N.mkQ z) = E x y z := by
+  have hxq : N.mkQ (x - supportedQuotientSection N (N.mkQ x)) = 0 := by
+    rw [map_sub, supportedQuotientSection_mkQ, sub_self]
+  have hyq : N.mkQ (y - supportedQuotientSection N (N.mkQ y)) = 0 := by
+    rw [map_sub, supportedQuotientSection_mkQ, sub_self]
+  have hzq : N.mkQ (z - supportedQuotientSection N (N.mkQ z)) = 0 := by
+    rw [map_sub, supportedQuotientSection_mkQ, sub_self]
+  have hx : x - supportedQuotientSection N (N.mkQ x) ∈ N :=
+    (Submodule.Quotient.mk_eq_zero N).1 hxq
+  have hy : y - supportedQuotientSection N (N.mkQ y) ∈ N :=
+    (Submodule.Quotient.mk_eq_zero N).1 hyq
+  have hz : z - supportedQuotientSection N (N.mkQ z) ∈ N :=
+    (Submodule.Quotient.mk_eq_zero N).1 hzq
+  have hrep : E x y z = E (supportedQuotientSection N (N.mkQ x))
+      (supportedQuotientSection N (N.mkQ y))
+      (supportedQuotientSection N (N.mkQ z)) := calc
+    E x y z = E (supportedQuotientSection N (N.mkQ x)) y z :=
+      supported_replace_first E N h₁ hx
+    _ = E (supportedQuotientSection N (N.mkQ x))
+        (supportedQuotientSection N (N.mkQ y)) z :=
+      supported_replace_second E N h₂ hy
+    _ = E (supportedQuotientSection N (N.mkQ x))
+        (supportedQuotientSection N (N.mkQ y))
+        (supportedQuotientSection N (N.mkQ z)) :=
+      supported_replace_third E N h₃ hz
+  rw [supportedQuotientLift, pullback_apply]
+  exact hrep.symm
 
 /-- Every common-support bound yields a genuine factorization through `V/U⊥` in all slots. -/
 theorem exists_supported_quotient_factorization
@@ -201,12 +177,12 @@ theorem exists_supported_quotient_factorization
   have hthird : ∀ x y z, z ∈ U.dualCoannihilator → E x y z = 0 :=
     (modeImage_le_iff_vanishes_on_dualCoannihilator E U).mp hU
   have hall := alternating_vanishes_on_dualCoannihilator_all_slots E hE U hthird
-  refine ⟨supportedQuotientLift E U.dualCoannihilator
-      (fun x y z hx => hall x y z (Or.inl hx))
-      (fun x y z hy => hall x y z (Or.inr (Or.inl hy)))
-      (fun x y z hz => hall x y z (Or.inr (Or.inr hz))), ?_⟩
+  refine ⟨supportedQuotientLift E U.dualCoannihilator, ?_⟩
   intro x y z
-  exact supportedQuotientLift_mkQ E _ _ _ _ x y z
+  exact supportedQuotientLift_mkQ E U.dualCoannihilator
+    (fun x y z hx => hall x y z (Or.inl hx))
+    (fun x y z hy => hall x y z (Or.inr (Or.inl hy)))
+    (fun x y z hz => hall x y z (Or.inr (Or.inr hz))) x y z
 
 /-- An alternating form remains alternating after factoring through a surjective quotient. -/
 theorem alternating_of_supported_quotient_factorization

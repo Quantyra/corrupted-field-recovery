@@ -1,0 +1,14 @@
+LOGIN_SESSIONS
+USER_WORKLOADS
+USER         PID    PPID     ELAPSED COMMAND
+systemd+     451       1    02:30:09 /usr/lib/systemd/systemd-resolved
+systemd+     581       1    02:30:05 /usr/lib/systemd/systemd-networkd
+message+     626       1    02:30:03 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+dfredri+   17435       1       00:00 /usr/lib/systemd/systemd --user
+dfredri+   17436   17435       00:00 (sd-pam)
+dfredri+   17500   17428       00:00 sshd: dfredriksen_quantyra_org@notty
+dfredri+   17501   17500       00:00 bash -c echo c2V0IC1ldQpwcmludGYgJ0xPR0lOX1NFU1NJT05TXG4nCndobwpwcmludGYgJ1VTRVJfV09SS0xPQURTXG4nCnBzIC1lbyB1c2VyLHBpZCxwcGlkLGV0aW1lLGFyZ3MgfCBhd2sgJyQxICF+IC9eKHJvb3R8c3lzdGVtZHxtZXNzYWdlYnVzfHN5c2xvZ3xfY2hyb255fHBvbGtpdGR8dXVpZGR8c3NoZHxyZWRpc3x3d3ctZGF0YSkkLyB7cHJpbnR9JwpwcmludGYgJ0NBTVBBSUdOX0xPQ0tcbicKZmxvY2sgLW4gIiRIT01FL3F1YW50eXJhLWNmci1ydW5zL2Nmci1sZWFuNDMwLWM1ZWEtaXNvbGF0ZWQtMjAyNjEwMjhhL2xvY2siIHRydWUK | base64 -d | bash
+dfredri+   17504   17501       00:00 bash
+dfredri+   17506   17504       00:00 ps -eo user,pid,ppid,etime,args
+dfredri+   17507   17504       00:00 awk $1 !~ /^(root|systemd|messagebus|syslog|_chrony|polkitd|uuidd|sshd|redis|www-data)$/ {print}
+CAMPAIGN_LOCK

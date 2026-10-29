@@ -1,0 +1,6 @@
+{
+  "review": "No unrelated user workload: only system services and this read-only SSH inspection. No login sessions; task flock acquired; separate inspect found no Lean/Lake.",
+  "ownership_correction": "Initial stop-owned invocation using latest Support handle was rejected by local ownership validation before cloud action. Fresh start receipt belongs to d9123c; corrected to exact d9123c/abac32 pair. Console rejection is not represented as a saved raw command receipt.",
+  "run": "cfr-isolated-four-sampled-identification-dev01-20261029T014405Z-d9123c",
+  "ownership_receipt": "cfr-isolated-restart-20261029T020104Z-abac32/ownership.json"
+}
