@@ -1,0 +1,12 @@
+⚠ [2011/2011] Built CorruptedFieldRecovery.TraceDualTranslateBridge (4.0s)
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:147:25: This simp argument is unused:
+  RingHom.id_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [map_smul,̵ ̵R̵i̵n̵g̵H̵o̵m̵.̵i̵d̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:168:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (2011 jobs).
