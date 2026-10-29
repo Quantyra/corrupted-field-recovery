@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T12:51:01.295912+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build failed; deprecation and owned warnings also present; observation transport crash preserved independently",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

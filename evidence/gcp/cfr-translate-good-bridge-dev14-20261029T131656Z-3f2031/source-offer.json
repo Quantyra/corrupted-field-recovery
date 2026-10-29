@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:17:27.049940+00:00",
+  "author": "Luna translate-count author",
+  "owned_path": "CorruptedFieldRecovery/TranslateScalarCounts.lean",
+  "sha256": "068f7a204efff922961a03cb6fd7cb5676b9412da48e4dc3ef67c7a72bec7a97",
+  "predecessor": "cfr-translate-good-bridge-dev12-20261029T130903Z-0aac42",
+  "frozen_pending_diagnostics": true
+}

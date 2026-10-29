@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T13:18:11.059969+00:00",
+  "run": "cfr-mask-highbit-dev13-20261029T131244Z-84a65f",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

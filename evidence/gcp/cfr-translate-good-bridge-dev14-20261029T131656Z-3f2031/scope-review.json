@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T13:25:34.685944+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Bad finite scalar relation iff complement of explicit translateActionGood for finite U containing zero, and nonzero-pair witness iff.",
+  "not_established": [
+    "Actual submodule dual action and disjointness",
+    "Binary support cardinality",
+    "Scalar sampler"
+  ],
+  "basis": "Root inspected exact 3f2031 types and source."
+}

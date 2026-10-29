@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-29T14:01:01.250581+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Monic binary polynomial encoding mask lies in [2^natDegree,2^(natDegree+1)), including final-bit witness and associated helper equations.",
+  "not_established": [
+    "Factor enumeration completeness",
+    "Polynomial irreducibility"
+  ],
+  "basis": "Root inspected exactf2ac6e theorem types."
+}

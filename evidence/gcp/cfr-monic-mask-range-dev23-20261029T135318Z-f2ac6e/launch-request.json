@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T13:57:58.945000+00:00",
+  "run": "cfr-monic-mask-range-dev23-20261029T135318Z-f2ac6e",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

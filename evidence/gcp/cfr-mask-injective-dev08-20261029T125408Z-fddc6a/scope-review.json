@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T13:04:42.783416+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "All-Nat injectivity of rawMaskPolynomial, raw bit-list mask upper bound 2^length, arbitrary polynomial encode/decode equality and helper equations.",
+  "not_established": [
+    "Degree/length correspondence",
+    "Lower mask ranges",
+    "Raw factor predicate implies polynomial irreducibility"
+  ],
+  "basis": "Root inspected saved GCP emitted types and audit; immutable source identity retained."
+}

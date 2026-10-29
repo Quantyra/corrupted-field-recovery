@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:52:42.661941+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build failed at final mask-range rewrite orientation",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

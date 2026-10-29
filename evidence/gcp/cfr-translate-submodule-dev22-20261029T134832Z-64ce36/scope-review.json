@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-29T13:57:47.396552+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Finite supportCoordinateFinset membership/cardinality=2^finrank, bad scalar count <=2^(2finrank)-1 for actual binary submodule of K^3, and scalar action on restricted subtype injective iff kernel clause.",
+  "not_established": [
+    "Translate overlap equivalence",
+    "Dual-map linkage"
+  ],
+  "basis": "Root inspected exact64ce36 emitted types."
+}

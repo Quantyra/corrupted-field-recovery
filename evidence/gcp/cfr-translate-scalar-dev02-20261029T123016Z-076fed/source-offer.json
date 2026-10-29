@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-29T12:32:30.687636+00:00",
+  "author": "Luna translate-count author",
+  "owned_path": "CorruptedFieldRecovery/TranslateScalarCounts.lean",
+  "sha256": "06e2dd1668d06ed4ee64ddfa62c1fa4051d6d1d13cf67050cb04660e3978504a",
+  "frozen_pending_diagnostics": true,
+  "scope": "Uncompiled source offer; no semantic acceptance inferred",
+  "batch": "cfr-batch-reacquire-20261029T122613Z-0777a6"
+}

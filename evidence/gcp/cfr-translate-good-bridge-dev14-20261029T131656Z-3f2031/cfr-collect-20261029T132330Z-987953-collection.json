@@ -1,0 +1,26 @@
+{
+  "run": "cfr-translate-good-bridge-dev14-20261029T131656Z-3f2031",
+  "utc": "2026-10-29T13:24:42.368475+00:00",
+  "archive_sha256": "22cf76b747772bca0fe313196a0b6f04d2c40fa1fe9ad3e5abce8eb6de7e2d4c",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "2ed4c817bea6f87eb91c3ffc6bd5265eae9a0ce3b42c0bbb152029899dd7294c",
+    "launch.log": "8c89ba2ea1c99b6cf5321e72f69990f3629075565209d2936f25380b668025f6",
+    "runner-pid": "0f0ffa52f9bf24ecbcd2b724b7e94ccb2a6bdab05eb1540ce859eb6b4ae8bf6d",
+    "started-utc": "b540521afc7b354d9c715241fe851e923ad652ccdec0f2a7a047575c3d022f56",
+    "terminal-receipt.json": "740193767197640ce4f3d80d92019ca254ac0f8636f8de1b1d23c90e28af5e4e",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "d696bab0a2574f382b46fc84dcf25fb9c9780c399a36ae6a23b266675cfeadfb",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "ef15a077404b59933a787bffc817fc8bf67caccf4dc72c5162ada6d48a640b5c",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "f5171e3179fcee44c4d8ad412b4b0a4b3531322efff2555cd56641a42414cfdf",
+    "logs/emitted-types.json": "79ba4577c2b8e6dd74f6d71b8fb25ca707aadd778722cffd4a21662ffca61d28",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "8c89ba2ea1c99b6cf5321e72f69990f3629075565209d2936f25380b668025f6"
+  }
+}

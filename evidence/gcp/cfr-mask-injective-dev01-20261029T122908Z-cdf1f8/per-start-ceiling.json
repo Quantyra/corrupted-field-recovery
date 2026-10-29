@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T12:31:34.825926+00:00",
+  "actual_start": "2026-10-29T05:27:32.617-07:00",
+  "instance_id": "3335066512373302615",
+  "max_run_seconds": 14400,
+  "stop_ceiling": "2026-10-29T09:27:32.617000-07:00",
+  "latest_submission": "2026-10-29T08:32:32.617000-07:00",
+  "stage_timeout_seconds": 1800,
+  "preservation_reserve_seconds": 1500,
+  "adequate_time_verified": true
+}

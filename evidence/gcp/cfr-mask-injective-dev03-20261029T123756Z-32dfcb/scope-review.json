@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T12:46:33.324316+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build elaboration failures and unused-simp warning; raw logs retained",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

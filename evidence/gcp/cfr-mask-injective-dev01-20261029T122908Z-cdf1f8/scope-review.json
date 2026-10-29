@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-29T12:37:29.274831+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build exited 1 with three elaboration failures; no audit or theorem acceptance",
+  "diagnostics": "collected/logs/build.stdout.txt",
+  "remaining": "Correct draft and rerun exact-source GCP audit."
+}

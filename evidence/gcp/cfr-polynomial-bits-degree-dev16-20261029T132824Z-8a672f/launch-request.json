@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T13:30:52.598464+00:00",
+  "run": "cfr-polynomial-bits-degree-dev16-20261029T132824Z-8a672f",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

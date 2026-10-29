@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T13:22:03.329416+00:00",
+  "run": "cfr-translate-good-bridge-dev14-20261029T131656Z-3f2031",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

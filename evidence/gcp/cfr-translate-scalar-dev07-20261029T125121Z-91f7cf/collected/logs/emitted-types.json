@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.card_translateScalarRoots_le_one": {
+    "emitted_type": "CorruptedFieldRecovery.card_translateScalarRoots_le_one.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] (u\u2080 u\u2081 : CorruptedFieldRecovery.KTriple.{u_1} K)\n  (hu\u2081 : Ne.{u_1 + 1} u\u2081 0), LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.translateScalarRoots.{u_1} K u\u2080 u\u2081)) 1\n",
+    "sha256": "e3d19566379994ef6839b61c03f895dea3c74ce497178f2a966526a7404b0d5a"
+  },
+  "CorruptedFieldRecovery.card_nonzeroTranslatePairs_le": {
+    "emitted_type": "CorruptedFieldRecovery.card_nonzeroTranslatePairs_le.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : DecidableEq.{u_1 + 1} K] (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K))\n  (hzero : Membership.mem.{u_1, u_1} U 0),\n  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonzeroTranslatePairs.{u_1} K U))\n    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} (Finset.card.{u_1} U) 2) 1)\n",
+    "sha256": "8c44f54e4b47c3554287cae19ada2166517a2c451960e27cf90bf4494cc0eea9"
+  },
+  "CorruptedFieldRecovery.card_badTranslateScalars_le": {
+    "emitted_type": "CorruptedFieldRecovery.card_badTranslateScalars_le.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (hzero : Membership.mem.{u_1, u_1} U 0),\n  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U))\n    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} (Finset.card.{u_1} U) 2) 1)\n",
+    "sha256": "12acb5dae9531884276b188be343680334280beaf3fb0377fccac7c0fb1ec3e3"
+  },
+  "CorruptedFieldRecovery.card_badTranslateScalars_le_pow": {
+    "emitted_type": "CorruptedFieldRecovery.card_badTranslateScalars_le_pow.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (hzero : Membership.mem.{u_1, u_1} U 0) (r : Nat)\n  (hcard : Eq.{1} (Finset.card.{u_1} U) (HPow.hPow.{0, 0, 0} 2 r)),\n  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U))\n    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1)\n",
+    "sha256": "09ea373afa45636d0af87e1abde7ad1659800e766bd87b5d787245fcf2914c89"
+  }
+}

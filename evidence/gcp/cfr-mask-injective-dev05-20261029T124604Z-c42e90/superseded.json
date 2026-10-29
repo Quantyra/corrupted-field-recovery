@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-29T12:49:20.609341+00:00",
+  "reason": "Full predecessor log review found additional elaboration errors; queued capture never submitted",
+  "replacement_source_sha256": "fee5995d33c1e42ab72b3802982cf1032f271ae8dc20ca32272289d4c3d82074"
+}

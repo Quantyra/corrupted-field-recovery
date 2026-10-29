@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T12:59:38.697689+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Finite-set bad-scalar relation-root bound <= |U|^2-1 for a finite subset of K^3 containing zero, and conditional |U|=2^r corollary.",
+  "not_established": [
+    "Connection to actual binary support subspace",
+    "Restricted injectivity and disjointness equivalence",
+    "Random sampler or trial probability"
+  ],
+  "basis": "Root inspected exact audited types in saved GCP evidence; source identity is immutable capture, not later successor."
+}

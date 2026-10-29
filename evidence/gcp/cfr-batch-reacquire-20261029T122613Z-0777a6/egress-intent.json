@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T12:28:09.489656+00:00",
+  "task_only": "external-nat",
+  "effective_ingress_review": "IAP TCP22 plus internal 10.128.0.0/9 only",
+  "remove_at_safe_shutdown": true
+}

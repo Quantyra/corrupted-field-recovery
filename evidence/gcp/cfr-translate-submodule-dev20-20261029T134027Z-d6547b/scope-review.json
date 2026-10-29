@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:48:56.246700+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "Build/audit commands pass, zero-warning gate rejects unused DecidableEq on successful kernel theorem",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

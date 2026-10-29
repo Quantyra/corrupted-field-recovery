@@ -1,0 +1,9 @@
+⚠ [1507/1507] Built CorruptedFieldRecovery.RawPolynomialIrreducibility (3.1s)
+warning: CorruptedFieldRecovery/RawPolynomialIrreducibility.lean:94:24: This simp argument is unused:
+  rawBitsToNat
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵r̵a̵w̵B̵i̵t̵s̵T̵o̵N̵a̵t̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (1507 jobs).

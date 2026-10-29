@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:10:57.520756+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build unsolved witness-order goal and unnecessarySimpa warning; failed observation/collection transport retained",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

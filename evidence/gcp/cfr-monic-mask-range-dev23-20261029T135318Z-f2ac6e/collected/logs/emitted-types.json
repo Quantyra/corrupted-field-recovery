@@ -1,0 +1,62 @@
+{
+  "CorruptedFieldRecovery.rawMaskPolynomial_step": {
+    "emitted_type": "CorruptedFieldRecovery.rawMaskPolynomial_step : \u2200 (n : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial n)\n    (HAdd.hAdd.{0, 0, 0} (Polynomial.C.{0} (ite.{1} (Eq.{1} (Nat.bodd n) Bool.true) 1 0))\n      (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (CorruptedFieldRecovery.rawMaskPolynomial (Nat.div2 n))))\n",
+    "sha256": "0b71b4692b2442e46ba3b93d940a26a0e8ee0a9d3360af6e83b2322541ea0d82"
+  },
+  "CorruptedFieldRecovery.rawMaskPolynomial_eval_zero": {
+    "emitted_type": "CorruptedFieldRecovery.rawMaskPolynomial_eval_zero : \u2200 (n : Nat),\n  Eq.{1} (Polynomial.eval.{0} 0 (CorruptedFieldRecovery.rawMaskPolynomial n))\n    (ite.{1} (Eq.{1} (Nat.bodd n) Bool.true) 1 0)\n",
+    "sha256": "92613515f369e09795eec44d7fcb1853cee4cd42621a5ba59f4f31247cf611b1"
+  },
+  "CorruptedFieldRecovery.rawDivX_X_mul": {
+    "emitted_type": "CorruptedFieldRecovery.rawDivX_X_mul : \u2200 (p : Polynomial.{0} (ZMod 2)),\n  Eq.{1} (Polynomial.divX.{0} (HMul.hMul.{0, 0, 0} Polynomial.X.{0} p)) p\n",
+    "sha256": "8caf5c68b0494d81e328492a5959ce9f7895314bb27e7dc89cb71b4af19612ef"
+  },
+  "CorruptedFieldRecovery.rawMaskPolynomial_injective": {
+    "emitted_type": "@CorruptedFieldRecovery.rawMaskPolynomial_injective : \u2200 {a b : Nat}\n  (h : Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial a) (CorruptedFieldRecovery.rawMaskPolynomial b)), Eq.{1} a b\n",
+    "sha256": "2d68279dda76fdf576fda7082fc1d0f88fbd9412bc78c3b66db3690759a2d279"
+  },
+  "CorruptedFieldRecovery.rawBitsToNat_lt_pow_length": {
+    "emitted_type": "CorruptedFieldRecovery.rawBitsToNat_lt_pow_length : \u2200 (bits : List.{0} Bool),\n  LT.lt.{0} (CorruptedFieldRecovery.rawBitsToNat bits) (HPow.hPow.{0, 0, 0} 2 (List.length.{0} bits))\n",
+    "sha256": "eb177ef4f1d0d2bf238a4e410723c57aa49709f4b0a8e3011163e2f940a00e26"
+  },
+  "CorruptedFieldRecovery.rawBitsToNat_append": {
+    "emitted_type": "CorruptedFieldRecovery.rawBitsToNat_append : \u2200 (bits suffix : List.{0} Bool),\n  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (HAppend.hAppend.{0, 0, 0} bits suffix))\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawBitsToNat bits)\n      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (List.length.{0} bits)) (CorruptedFieldRecovery.rawBitsToNat suffix)))\n",
+    "sha256": "12f26bf09904edf93f4021f8010b81d201ca5215d75e797a2d6a240df475a70d"
+  },
+  "CorruptedFieldRecovery.rawBitsToNat_append_true": {
+    "emitted_type": "CorruptedFieldRecovery.rawBitsToNat_append_true : \u2200 (bits : List.{0} Bool),\n  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (HAppend.hAppend.{0, 0, 0} bits (List.cons.{0} Bool.true List.nil.{0})))\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawBitsToNat bits) (HPow.hPow.{0, 0, 0} 2 (List.length.{0} bits)))\n",
+    "sha256": "84cca434beb09b26e25733af363881eede28effff23b997e4b73fb0a8269913f"
+  },
+  "CorruptedFieldRecovery.rawPolynomialBitsFuel_length": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialBitsFuel_length : \u2200 (fuel : Nat) (p : Polynomial.{0} (ZMod 2)) (hp : Ne.{1} p 0)\n  (hdeg : LT.lt.{0} (Polynomial.natDegree.{0} p) fuel),\n  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.rawPolynomialBitsFuel fuel p))\n    (HAdd.hAdd.{0, 0, 0} (Polynomial.natDegree.{0} p) 1)\n",
+    "sha256": "a0763616cf8fc691a4e373fd907733651c5a039b86bd459fbacb4a4392cc42db"
+  },
+  "CorruptedFieldRecovery.rawPolynomialBits_length": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialBits_length : \u2200 (p : Polynomial.{0} (ZMod 2)) (hp : Ne.{1} p 0),\n  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.rawPolynomialBits p))\n    (HAdd.hAdd.{0, 0, 0} (Polynomial.natDegree.{0} p) 1)\n",
+    "sha256": "e4321ac806643b302ec745fe10b210647155d290078ef23d7d79c8ef01d51b39"
+  },
+  "CorruptedFieldRecovery.rawBitsEndsTrue_cons": {
+    "emitted_type": "CorruptedFieldRecovery.rawBitsEndsTrue_cons : \u2200 (b : Bool) (bits : List.{0} Bool)\n  (h : CorruptedFieldRecovery.rawBitsEndsTrue bits), CorruptedFieldRecovery.rawBitsEndsTrue (List.cons.{0} b bits)\n",
+    "sha256": "1dcb3b15ab60aec23ded32b8507789b4d37044735e5adaa7b4fb04c3d7fc17e7"
+  },
+  "CorruptedFieldRecovery.monic_divX_of_natDegree_pos": {
+    "emitted_type": "@CorruptedFieldRecovery.monic_divX_of_natDegree_pos : \u2200 {p : Polynomial.{0} (ZMod 2)} (hp : Polynomial.Monic.{0} p)\n  (hpos : LT.lt.{0} 0 (Polynomial.natDegree.{0} p)), Polynomial.Monic.{0} (Polynomial.divX.{0} p)\n",
+    "sha256": "138811cf862119b4377ef7ced4e14daedef0ef7d26a4cf40540e1b90d13bdfe9"
+  },
+  "CorruptedFieldRecovery.rawPolynomialBitsFuel_monic_endsTrue": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialBitsFuel_monic_endsTrue : \u2200 (fuel : Nat) (p : Polynomial.{0} (ZMod 2))\n  (hp : Polynomial.Monic.{0} p) (hdeg : LT.lt.{0} (Polynomial.natDegree.{0} p) fuel),\n  CorruptedFieldRecovery.rawBitsEndsTrue (CorruptedFieldRecovery.rawPolynomialBitsFuel fuel p)\n",
+    "sha256": "f0f11f466d30a3ff68c7a22e930c8bd18fb38106361f2ea2eb43d48479d16d4b"
+  },
+  "CorruptedFieldRecovery.rawPolynomialBits_monic_endsTrue": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialBits_monic_endsTrue : \u2200 (p : Polynomial.{0} (ZMod 2)) (hp : Polynomial.Monic.{0} p),\n  CorruptedFieldRecovery.rawBitsEndsTrue (CorruptedFieldRecovery.rawPolynomialBits p)\n",
+    "sha256": "828498e3893b6d39d5da5e72fc3ae3352db09de8fb06c723727ce98f046c68ef"
+  },
+  "CorruptedFieldRecovery.rawPolynomialBits_mask_range": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialBits_mask_range : \u2200 (p : Polynomial.{0} (ZMod 2)) (hp : Polynomial.Monic.{0} p),\n  And\n    (LE.le.{0} (HPow.hPow.{0, 0, 0} 2 (Polynomial.natDegree.{0} p))\n      (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawPolynomialBits p)))\n    (LT.lt.{0} (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawPolynomialBits p))\n      (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (Polynomial.natDegree.{0} p) 1)))\n",
+    "sha256": "88143266b26acd4289c6fc9009093bd4e9c303e5722ae7d10b9818c97a207242"
+  },
+  "CorruptedFieldRecovery.rawPolynomialBits_mask_decode": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialBits_mask_decode : \u2200 (p : Polynomial.{0} (ZMod 2)),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawMaskPolynomial\n      (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawPolynomialBits p)))\n    p\n",
+    "sha256": "a8116ae1526554e01a5ab0d928c73614bcab3b8cd3961c12d05ebd4cf7539c3d"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "utc": "2026-10-29T13:18:29.857393+00:00",
+  "runs": [
+    {
+      "run": "cfr-mask-highbit-dev11-20261029T130400Z-56e677",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')",
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-mask-highbit-dev13-20261029T131244Z-84a65f",
+      "launched": true,
+      "collected": false,
+      "status": null,
+      "failure": null,
+      "scope_review": false,
+      "superseded": false
+    },
+    {
+      "run": "cfr-mask-injective-dev01-20261029T122908Z-cdf1f8",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-mask-injective-dev03-20261029T123756Z-32dfcb",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-mask-injective-dev05-20261029T124604Z-c42e90",
+      "launched": false,
+      "collected": false,
+      "status": null,
+      "failure": null,
+      "scope_review": false,
+      "superseded": true
+    },
+    {
+      "run": "cfr-mask-injective-dev06-20261029T124920Z-9f12da",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-mask-injective-dev08-20261029T125408Z-fddc6a",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-translate-good-bridge-dev09-20261029T125954Z-fd1c55",
+      "launched": false,
+      "collected": false,
+      "status": null,
+      "failure": null,
+      "scope_review": false,
+      "superseded": true
+    },
+    {
+      "run": "cfr-translate-good-bridge-dev10-20261029T130108Z-a9899c",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-translate-good-bridge-dev12-20261029T130903Z-0aac42",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')",
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-translate-good-bridge-dev14-20261029T131656Z-3f2031",
+      "launched": false,
+      "collected": false,
+      "status": null,
+      "failure": null,
+      "scope_review": false,
+      "superseded": false
+    },
+    {
+      "run": "cfr-translate-scalar-dev02-20261029T123016Z-076fed",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-translate-scalar-dev04-20261029T124247Z-953ea1",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": true,
+      "superseded": false
+    },
+    {
+      "run": "cfr-translate-scalar-dev07-20261029T125121Z-91f7cf",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true,
+      "superseded": false
+    }
+  ],
+  "builder_state": "RUNNING dedicated same identity",
+  "remaining": "Collect current compiler and finish authorized original proof increments; full certification remains incomplete."
+}

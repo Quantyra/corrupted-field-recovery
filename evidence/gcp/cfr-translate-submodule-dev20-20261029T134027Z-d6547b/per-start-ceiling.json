@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:43:39.611495+00:00",
+  "actual_start": "2026-10-29T05:27:32.617-07:00",
+  "stop_ceiling": "2026-10-29T09:27:32.617000-07:00",
+  "stage_timeout_seconds": 1800,
+  "preservation_reserve_seconds": 1500,
+  "adequate_time_verified": true
+}

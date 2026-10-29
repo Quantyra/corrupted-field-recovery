@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T13:45:17.072367+00:00",
+  "run": "cfr-translate-submodule-dev20-20261029T134027Z-d6547b",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

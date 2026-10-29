@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T12:55:41.530323+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build failed on final quotient normalization; unused simp warning retained",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T12:42:12.805005+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build elaboration failures, exact raw logs retained",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

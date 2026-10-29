@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:29:48.653536+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "Build/audit commands pass, zero-owned-warning gate rejects unused hdiv",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

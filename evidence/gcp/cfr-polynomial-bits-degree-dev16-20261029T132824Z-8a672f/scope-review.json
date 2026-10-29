@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T13:35:48.206156+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Nonzero polynomial encoding length equals natDegree+1; bounded fuel lemma additionally requires degree<fuel.",
+  "not_established": [
+    "Final encoding bit is true",
+    "Lower mask range",
+    "Factor enumeration completeness"
+  ],
+  "basis": "Root inspected exact8a672f emitted types."
+}

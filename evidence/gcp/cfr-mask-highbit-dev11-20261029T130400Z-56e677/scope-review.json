@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:13:23.341650+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "Build and audit commands exited0, but zero-owned-warning gate rejected unused simp argument; not accepted",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T12:27:02.895347+00:00",
+  "initial_state": "TERMINATED",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "authorization": "Standing CFR isolated GCP compiler workflow; same dedicated instance only"
+}

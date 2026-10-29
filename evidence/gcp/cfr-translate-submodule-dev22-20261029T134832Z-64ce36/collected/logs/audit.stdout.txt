@@ -1,0 +1,103 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_translateScalarRoots_le_one
+CorruptedFieldRecovery.card_translateScalarRoots_le_one.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] (u₀ u₁ : CorruptedFieldRecovery.KTriple.{u_1} K)
+  (hu₁ : Ne.{u_1 + 1} u₁ 0), LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.translateScalarRoots.{u_1} K u₀ u₁)) 1
+CFR_TYPE_END:CorruptedFieldRecovery.card_translateScalarRoots_le_one
+'CorruptedFieldRecovery.card_translateScalarRoots_le_one' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.mem_badTranslateScalars_iff
+CorruptedFieldRecovery.mem_badTranslateScalars_iff.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (t : K),
+  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U) t)
+    (∃ u₀,
+      And (Membership.mem.{u_1, u_1} U u₀)
+        (∃ u₁,
+          And (Membership.mem.{u_1, u_1} U u₁)
+            (And (Or (Ne.{u_1 + 1} u₀ 0) (Ne.{u_1 + 1} u₁ 0))
+              (Eq.{u_1 + 1} (HAdd.hAdd.{u_1, u_1, u_1} u₀ (HSMul.hSMul.{u_1, u_1, u_1} t u₁)) 0))))
+CFR_TYPE_END:CorruptedFieldRecovery.mem_badTranslateScalars_iff
+'CorruptedFieldRecovery.mem_badTranslateScalars_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.mem_badTranslateScalars_iff_not_good
+CorruptedFieldRecovery.mem_badTranslateScalars_iff_not_good.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (t : K) (hzero : Membership.mem.{u_1, u_1} U 0),
+  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U) t)
+    (Not (CorruptedFieldRecovery.translateActionGood.{u_1} K U t))
+CFR_TYPE_END:CorruptedFieldRecovery.mem_badTranslateScalars_iff_not_good
+'CorruptedFieldRecovery.mem_badTranslateScalars_iff_not_good' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_nonzeroTranslatePairs_le
+CorruptedFieldRecovery.card_nonzeroTranslatePairs_le.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : DecidableEq.{u_1 + 1} K] (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (hzero : Membership.mem.{u_1, u_1} U 0),
+  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonzeroTranslatePairs.{u_1} K U))
+    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} (Finset.card.{u_1} U) 2) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.card_nonzeroTranslatePairs_le
+'CorruptedFieldRecovery.card_nonzeroTranslatePairs_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_badTranslateScalars_le
+CorruptedFieldRecovery.card_badTranslateScalars_le.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (hzero : Membership.mem.{u_1, u_1} U 0),
+  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U))
+    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} (Finset.card.{u_1} U) 2) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.card_badTranslateScalars_le
+'CorruptedFieldRecovery.card_badTranslateScalars_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_badTranslateScalars_le_pow
+CorruptedFieldRecovery.card_badTranslateScalars_le_pow.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (hzero : Membership.mem.{u_1, u_1} U 0) (r : Nat)
+  (hcard : Eq.{1} (Finset.card.{u_1} U) (HPow.hPow.{0, 0, 0} 2 r)),
+  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U))
+    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.card_badTranslateScalars_le_pow
+'CorruptedFieldRecovery.card_badTranslateScalars_le_pow' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.mem_supportCoordinateFinset_iff
+CorruptedFieldRecovery.mem_supportCoordinateFinset_iff.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : Algebra.{0, u_1} (ZMod 2) K]
+  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (x : CorruptedFieldRecovery.KTriple.{u_1} K),
+  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U) x)
+    (Membership.mem.{u_1, u_1} U x)
+CFR_TYPE_END:CorruptedFieldRecovery.mem_supportCoordinateFinset_iff
+'CorruptedFieldRecovery.mem_supportCoordinateFinset_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_supportCoordinateFinset
+CorruptedFieldRecovery.card_supportCoordinateFinset.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : Algebra.{0, u_1} (ZMod 2) K]
+  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K)),
+  Eq.{1} (Finset.card.{u_1} (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U))
+    (HPow.hPow.{0, 0, 0} 2 (Module.finrank.{0, u_1} (ZMod 2) ↥U))
+CFR_TYPE_END:CorruptedFieldRecovery.card_supportCoordinateFinset
+'CorruptedFieldRecovery.card_supportCoordinateFinset' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_badTranslateScalars_submodule_le
+CorruptedFieldRecovery.card_badTranslateScalars_submodule_le.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Algebra.{0, u_1} (ZMod 2) K]
+  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K)),
+  LE.le.{0}
+    (Finset.card.{u_1}
+      (CorruptedFieldRecovery.badTranslateScalars.{u_1} K (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U)))
+    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 (Module.finrank.{0, u_1} (ZMod 2) ↥U))) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.card_badTranslateScalars_submodule_le
+'CorruptedFieldRecovery.card_badTranslateScalars_submodule_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.scalarAction_injective_subtype_iff
+CorruptedFieldRecovery.scalarAction_injective_subtype_iff.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : Algebra.{0, u_1} (ZMod 2) K]
+  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K)) (t : K),
+  Iff (Function.Injective.{u_1 + 1, u_1 + 1} fun u => HSMul.hSMul.{u_1, u_1, u_1} t ↑u)
+    (∀ (x : CorruptedFieldRecovery.KTriple.{u_1} K)
+      (a : Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U) x)
+      (a : Eq.{u_1 + 1} (HSMul.hSMul.{u_1, u_1, u_1} t x) 0), Eq.{u_1 + 1} x 0)
+CFR_TYPE_END:CorruptedFieldRecovery.scalarAction_injective_subtype_iff
+'CorruptedFieldRecovery.scalarAction_injective_subtype_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

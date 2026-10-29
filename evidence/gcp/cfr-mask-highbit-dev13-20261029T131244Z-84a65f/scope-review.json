@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T13:21:37.419615+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "rawBitsToNat append and append-true equations, alongside previously accepted rawMaskPolynomial injectivity.",
+  "not_established": [
+    "Degree correspondence",
+    "Factor enumeration completeness",
+    "Polynomial irreducibility"
+  ],
+  "basis": "Root inspected actual 84a65f exact emitted audit, not warning-rejected predecessor."
+}

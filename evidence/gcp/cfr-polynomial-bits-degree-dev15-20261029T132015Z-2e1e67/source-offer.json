@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:21:15.906816+00:00",
+  "author": "Luna irreducibility author",
+  "owned_path": "CorruptedFieldRecovery/RawPolynomialIrreducibility.lean",
+  "sha256": "52100defae6229c6e0ed42980fc33c4e752032088d9c5c879935a1119629b21f",
+  "predecessor": "cfr-mask-highbit-dev13-20261029T131244Z-84a65f",
+  "frozen_pending_diagnostics": true
+}

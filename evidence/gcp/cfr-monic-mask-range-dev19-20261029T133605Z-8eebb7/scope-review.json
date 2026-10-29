@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:44:37.550558+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build parser/proof failures including reserved prefix token; generated sorry diagnostics are rejected failure evidence; launch transport crash preserved, same handle collected",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

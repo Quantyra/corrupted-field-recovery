@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-29T12:33:22.566981+00:00",
+  "reviewer": "Compiler",
+  "identity_confirmed": "3335066512373302615",
+  "effective_ingress": "IAP-only TCP22 plus internal subnet, no public source ingress",
+  "task_egress_only": "external-nat",
+  "initial_state": "TERMINATED",
+  "new_start": "2026-10-29T12:27:32.617+00:00",
+  "effective_STOP_ceiling": "2026-10-29T16:27:32.617+00:00",
+  "latest_submission_with_stage_and_preservation_reserve": "2026-10-29T15:32:32.617+00:00",
+  "prior_launched_outcomes_collected": true,
+  "persistent_cache_reuse": true
+}

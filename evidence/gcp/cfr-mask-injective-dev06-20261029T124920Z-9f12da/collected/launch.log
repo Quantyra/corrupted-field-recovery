@@ -1,0 +1,14 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-mask-injective-dev06-20261029T124920Z-9f12da/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
+Traceback (most recent call last):
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-mask-injective-dev06-20261029T124920Z-9f12da/gcp_cfr_runner.py", line 294, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-mask-injective-dev06-20261029T124920Z-9f12da/gcp_cfr_runner.py", line 233, in main
+    stage('build', ['lake', 'build', *manifest['targets']], source)
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-mask-injective-dev06-20261029T124920Z-9f12da/gcp_cfr_runner.py", line 144, in stage
+    raise RuntimeError('Stage failed: '+name+' exit='+str(code))
+RuntimeError: Stage failed: build exit=1

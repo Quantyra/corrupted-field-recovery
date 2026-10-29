@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T13:40:08.624271+00:00",
+  "reviewer": "Compiler",
+  "accepted_scope": null,
+  "status": "failed",
+  "reason": "GCP build failed on unreduced lambda in kernel-converse equality; unused DecidableEq warnings retained",
+  "diagnostics": "collected/logs/build.stdout.txt"
+}

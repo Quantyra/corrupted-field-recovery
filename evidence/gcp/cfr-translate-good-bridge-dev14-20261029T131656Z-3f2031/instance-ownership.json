@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-translate-good-bridge-dev14-20261029T131656Z-3f2031",
+  "utc": "2026-10-29T13:20:14.470083+00:00"
+}
