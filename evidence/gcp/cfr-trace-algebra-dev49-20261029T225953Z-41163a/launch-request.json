@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T23:06:53.042039+00:00",
+  "run": "cfr-trace-algebra-dev49-20261029T225953Z-41163a",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
