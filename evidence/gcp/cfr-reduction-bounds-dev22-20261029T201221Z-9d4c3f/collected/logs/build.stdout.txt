@@ -1,0 +1,23 @@
+✖ [1837/1837] Building CorruptedFieldRecovery.RawReductionBounds (1.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawReductionBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionBounds.setup.json --json
+error: CorruptedFieldRecovery/RawReductionBounds.lean:17:2: unsolved goals
+case hnm
+a b k : ℕ
+ha : a.testBit k = true
+hb : b.testBit k = true
+habove : ∀ (j : ℕ), k < j → a.testBit j = false
+hbabove : ∀ (j : ℕ), k < j → b.testBit j = false
+j : ℕ
+hj : k < j
+⊢ (2 ^ k).testBit j = false
+warning: CorruptedFieldRecovery/RawReductionBounds.lean:19:6: This simp argument is unused:
+  Nat.testBit_two_pow_of_ne (ne_of_gt hj)
+
+Hint: Omit it from the simp argument list.
+  simp [Nat.testBit_xor, habove j hj, hbabove j hj,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵_̵t̵w̵o̵_̵p̵o̵w̵_̵o̵f̵_̵n̵e̵ ̵(̵n̵e̵_̵o̵f̵_̵g̵t̵ ̵h̵j̵)̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawReductionBounds

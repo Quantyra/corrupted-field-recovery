@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T20:32:41.390042+00:00",
+  "run": "cfr-clean-cardinality-dev24-20261029T202427Z-01327c",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,27 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawXor_lt_two_pow_of_top_bit
+CorruptedFieldRecovery.rawXor_lt_two_pow_of_top_bit : ∀ (a b k : Nat) (ha : Eq.{1} (Nat.testBit a k) Bool.true)
+  (hb : Eq.{1} (Nat.testBit b k) Bool.true)
+  (habove : ∀ (j : Nat) (a_1 : LT.lt.{0} k j), Eq.{1} (Nat.testBit a j) Bool.false)
+  (hbabove : ∀ (j : Nat) (a : LT.lt.{0} k j), Eq.{1} (Nat.testBit b j) Bool.false),
+  LT.lt.{0} (Nat.xor a b) (HPow.hPow.{0, 0, 0} 2 k)
+CFR_TYPE_END:CorruptedFieldRecovery.rawXor_lt_two_pow_of_top_bit
+'CorruptedFieldRecovery.rawXor_lt_two_pow_of_top_bit' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStep_lt_pow_of_top_bit
+CorruptedFieldRecovery.rawReduceStep_lt_pow_of_top_bit : ∀ (modulus degree a : Nat)
+  (ha : Eq.{1} (Nat.testBit a (Nat.log2 a)) Bool.true)
+  (hshift :
+    Eq.{1}
+      (Nat.testBit (HMul.hMul.{0, 0, 0} modulus (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (Nat.log2 a) degree)))
+        (Nat.log2 a))
+      Bool.true)
+  (habove : ∀ (j : Nat) (a_1 : LT.lt.{0} (Nat.log2 a) j), Eq.{1} (Nat.testBit a j) Bool.false)
+  (hshiftAbove :
+    ∀ (j : Nat) (a_1 : LT.lt.{0} (Nat.log2 a) j),
+      Eq.{1}
+        (Nat.testBit (HMul.hMul.{0, 0, 0} modulus (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (Nat.log2 a) degree))) j)
+        Bool.false),
+  LT.lt.{0} (CorruptedFieldRecovery.rawReduceStep modulus degree a) (HPow.hPow.{0, 0, 0} 2 (Nat.log2 a))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStep_lt_pow_of_top_bit
+'CorruptedFieldRecovery.rawReduceStep_lt_pow_of_top_bit' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

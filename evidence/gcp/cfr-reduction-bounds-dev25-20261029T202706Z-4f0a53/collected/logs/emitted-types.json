@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawXor_lt_two_pow_of_top_bit": {
+    "emitted_type": "CorruptedFieldRecovery.rawXor_lt_two_pow_of_top_bit : \u2200 (a b k : Nat) (ha : Eq.{1} (Nat.testBit a k) Bool.true)\n  (hb : Eq.{1} (Nat.testBit b k) Bool.true)\n  (habove : \u2200 (j : Nat) (a_1 : LT.lt.{0} k j), Eq.{1} (Nat.testBit a j) Bool.false)\n  (hbabove : \u2200 (j : Nat) (a : LT.lt.{0} k j), Eq.{1} (Nat.testBit b j) Bool.false),\n  LT.lt.{0} (Nat.xor a b) (HPow.hPow.{0, 0, 0} 2 k)\n",
+    "sha256": "c9d7fa58095516dd07c0565f7ef82ef7b0abb4399a4adc8b0c03582207876965"
+  },
+  "CorruptedFieldRecovery.rawReduceStep_lt_pow_of_top_bit": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStep_lt_pow_of_top_bit : \u2200 (modulus degree a : Nat)\n  (ha : Eq.{1} (Nat.testBit a (Nat.log2 a)) Bool.true)\n  (hshift :\n    Eq.{1}\n      (Nat.testBit (HMul.hMul.{0, 0, 0} modulus (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (Nat.log2 a) degree)))\n        (Nat.log2 a))\n      Bool.true)\n  (habove : \u2200 (j : Nat) (a_1 : LT.lt.{0} (Nat.log2 a) j), Eq.{1} (Nat.testBit a j) Bool.false)\n  (hshiftAbove :\n    \u2200 (j : Nat) (a_1 : LT.lt.{0} (Nat.log2 a) j),\n      Eq.{1}\n        (Nat.testBit (HMul.hMul.{0, 0, 0} modulus (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (Nat.log2 a) degree))) j)\n        Bool.false),\n  LT.lt.{0} (CorruptedFieldRecovery.rawReduceStep modulus degree a) (HPow.hPow.{0, 0, 0} 2 (Nat.log2 a))\n",
+    "sha256": "3a64d15912b5e51503c0f033781cb24889d6304f66c73e1dc986f6bc5d93b9d2"
+  }
+}

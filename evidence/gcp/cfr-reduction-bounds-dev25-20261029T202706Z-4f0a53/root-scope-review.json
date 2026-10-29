@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T20:40:34.176914+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Conditional shared-highest-bit XOR and raw reduction step bound with explicit top-bit and no-higher-bit assumptions.",
+  "remaining": "No band, fuel or cost theorem.",
+  "evidence": "collected/logs/emitted-types.json"
+}
