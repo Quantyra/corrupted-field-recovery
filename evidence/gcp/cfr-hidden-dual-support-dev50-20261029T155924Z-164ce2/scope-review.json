@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "For a specified hidden input isomorphism, the trace-dual equivalence transports scalar dual conjugacy (given hT), support maps and disjointness. HiddenFourBalanced supplies existence of a scalar action under explicit nonzero coefficient and sampled-coordinate generator hypotheses.",
+  "remaining": "Clean sampling, the arbitrary physical support promise and the full recovery theorem are not derived here.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 6,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

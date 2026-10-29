@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T16:02:51.381251+00:00",
+  "run": "cfr-hidden-dual-support-dev50-20261029T155924Z-164ce2",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

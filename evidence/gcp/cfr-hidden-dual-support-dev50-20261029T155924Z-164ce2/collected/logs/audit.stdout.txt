@@ -1,0 +1,116 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hiddenTraceDualEquiv
+CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        {n : Nat} →
+          (ι :
+              LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K)))
+                (CorruptedFieldRecovery.BinaryInput.{u_1} K n) (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+            LinearEquiv.{0, 0, u_1, 0} (RingHom.id.{0} (ZMod (ringChar.{u_1} K)))
+              (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+              (Module.Dual.{0, 0} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.BinaryInput.{u_1} K n))
+CFR_TYPE_END:CorruptedFieldRecovery.hiddenTraceDualEquiv
+'CorruptedFieldRecovery.hiddenTraceDualEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hiddenTraceDualEquiv_dualAction
+CorruptedFieldRecovery.hiddenTraceDualEquiv_dualAction.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {n : Nat}
+  (ι :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (T : Module.End.{0, 0} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)) (t : K)
+  (hT :
+    ∀ (x : CorruptedFieldRecovery.BinaryInput.{u_1} K n),
+      Eq.{u_1 + 1} (ι (T x)) ((CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t) (ι x)))
+  (a : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{1} ((LinearMap.dualMap.{0, 0, 0} T) ((CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι) a))
+    ((CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι) (HSMul.hSMul.{u_1, u_1, u_1} t a))
+CFR_TYPE_END:CorruptedFieldRecovery.hiddenTraceDualEquiv_dualAction
+'CorruptedFieldRecovery.hiddenTraceDualEquiv_dualAction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hiddenTraceDualEquiv_dualMap_conjugate
+CorruptedFieldRecovery.hiddenTraceDualEquiv_dualMap_conjugate.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {n : Nat}
+  (ι :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (T : Module.End.{0, 0} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)) (t : K)
+  (hT :
+    ∀ (x : CorruptedFieldRecovery.BinaryInput.{u_1} K n),
+      Eq.{u_1 + 1} (ι (T x)) ((CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t) (ι x))),
+  Eq.{u_1 + 1} (LinearMap.dualMap.{0, 0, 0} T ∘ₗ ↑(CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι))
+    (↑(CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι) ∘ₗ
+      CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t)
+CFR_TYPE_END:CorruptedFieldRecovery.hiddenTraceDualEquiv_dualMap_conjugate
+'CorruptedFieldRecovery.hiddenTraceDualEquiv_dualMap_conjugate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hiddenTraceDualEquiv_map_support
+CorruptedFieldRecovery.hiddenTraceDualEquiv_map_support.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {n : Nat}
+  (ι :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (T : Module.End.{0, 0} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)) (t : K)
+  (hT :
+    ∀ (x : CorruptedFieldRecovery.BinaryInput.{u_1} K n),
+      Eq.{u_1 + 1} (ι (T x)) ((CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t) (ι x)))
+  (U : Submodule.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  Eq.{1}
+    (Submodule.map.{0, 0, 0, 0} (LinearMap.dualMap.{0, 0, 0} T)
+      (Submodule.map.{0, 0, u_1, 0} (↑(CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι)) U))
+    (Submodule.map.{0, 0, u_1, 0} (↑(CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι))
+      (Submodule.map.{0, 0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t) U))
+CFR_TYPE_END:CorruptedFieldRecovery.hiddenTraceDualEquiv_map_support
+'CorruptedFieldRecovery.hiddenTraceDualEquiv_map_support' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hiddenTraceDualEquiv_disjoint_iff
+CorruptedFieldRecovery.hiddenTraceDualEquiv_disjoint_iff.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {n : Nat}
+  (ι :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (U V : Submodule.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  Iff
+    (Disjoint.{0} (Submodule.map.{0, 0, u_1, 0} (↑(CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι)) U)
+      (Submodule.map.{0, 0, u_1, 0} (↑(CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι)) V))
+    (Disjoint.{u_1} U V)
+CFR_TYPE_END:CorruptedFieldRecovery.hiddenTraceDualEquiv_disjoint_iff
+'CorruptedFieldRecovery.hiddenTraceDualEquiv_disjoint_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hiddenFourBalanced_dualSupport_action
+CorruptedFieldRecovery.hiddenFourBalanced_dualSupport_action.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] [inst_3 : Fintype.{u_1} K]
+  [inst_4 : CharP.{u_1} K 2] {n : Nat}
+  (ι :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (v : CorruptedFieldRecovery.FieldTriple.{u_1} K) (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (hgen :
+    Or
+      (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).1]
+        Top.top.{u_1})
+      (Or
+        (Eq.{u_1 + 1}
+          (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.1]
+          Top.top.{u_1})
+        (Eq.{u_1 + 1}
+          (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.2]
+          Top.top.{u_1})))
+  (T : Module.End.{0, 0} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.BinaryInput.{u_1} K n))
+  (hbal : CorruptedFieldRecovery.hiddenFourBalanced.{u_1} K ι basis v c T)
+  (U : Submodule.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  ∃ t,
+    Eq.{1}
+      (Submodule.map.{0, 0, 0, 0} (LinearMap.dualMap.{0, 0, 0} T)
+        (Submodule.map.{0, 0, u_1, 0} (↑(CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι)) U))
+      (Submodule.map.{0, 0, u_1, 0} (↑(CorruptedFieldRecovery.hiddenTraceDualEquiv.{u_1} K ι))
+        (Submodule.map.{0, 0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t) U))
+CFR_TYPE_END:CorruptedFieldRecovery.hiddenFourBalanced_dualSupport_action
+'CorruptedFieldRecovery.hiddenFourBalanced_dualSupport_action' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
