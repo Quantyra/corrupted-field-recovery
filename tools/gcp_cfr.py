@@ -21,7 +21,8 @@ if hasattr(sys.stdout, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8', errors='backslashreplace')
 
 ROOT = Path(__file__).resolve().parents[1]
-CONTROLLER_SHA256 = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+CONTROLLER_BYTES = Path(__file__).read_bytes()
+CONTROLLER_SHA256 = hashlib.sha256(CONTROLLER_BYTES).hexdigest()
 EVIDENCE = ROOT / 'evidence' / 'gcp'
 SDK = Path('C:/Users/dfred/AppData/Local/Google/Cloud SDK/google-cloud-sdk')
 CLOUD = [str(SDK/'platform/bundledpython/python.exe'), '-S', str(SDK/'lib/gcloud.py')]
@@ -69,6 +70,8 @@ def cloud(args, out, label, flags=True):
             structured = json.loads(display)
             if isinstance(structured, dict) and structured.get('kind') == 'compute#instance':
                 display = json.dumps({k:structured.get(k) for k in ['name', 'id', 'status', 'machineType']})
+            elif isinstance(structured, list) and structured and all(isinstance(item, dict) and item.get('kind') == 'compute#instance' for item in structured):
+                display = json.dumps([{k:item.get(k) for k in ['name', 'id', 'status', 'machineType']} for item in structured])
         except ValueError:
             pass
         print(display[-7000:], flush=True)
@@ -162,6 +165,11 @@ def submit(args):
 
 
 def prepare_execution(out, run, runner_bytes):
+    controller_path = out/'loaded-controller.py'
+    if controller_path.exists() and controller_path.read_bytes() != CONTROLLER_BYTES:
+        raise RuntimeError('Refusing to replace retained controller bytes')
+    if not controller_path.exists():
+        controller_path.write_bytes(CONTROLLER_BYTES)
     script = '''#!/usr/bin/env bash
 set -euo pipefail
 run="$HOME/quantyra-cfr-runs/RUN"
@@ -315,6 +323,8 @@ def stop_owned(args):
         original = json.loads((authority.parent/'create-isolated-instance.stdout.txt').read_text(encoding='utf-8'))
         if not isinstance(original, list) or len(original) != 1 or current.get('id') != original[0].get('id'):
             raise RuntimeError('Instance identity differs from task creation receipt; refusing shutdown')
+    if ownership.get('instance_id') and current.get('id') != ownership['instance_id']:
+        raise RuntimeError('Instance identity differs from fresh start ownership receipt; refusing shutdown')
     state = current['status']
     if state != 'RUNNING':
         raise RuntimeError('Expected running task-owned instance, got '+state)

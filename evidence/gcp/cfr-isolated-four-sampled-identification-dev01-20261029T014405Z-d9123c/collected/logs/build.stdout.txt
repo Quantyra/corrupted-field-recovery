@@ -1,0 +1,783 @@
+✖ [2006/2006] Building CorruptedFieldRecovery.FourContractions (34s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/FourContractions.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/FourContractions.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/FourContractions.setup.json --json
+error: CorruptedFieldRecovery/FourContractions.lean:58:4: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:59:2: Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  Basis
+has type `x✝` which does not have the necessary form.
+error: CorruptedFieldRecovery/FourContractions.lean:62:35: typeclass instance problem is stuck
+  One ?m.6
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `One` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: CorruptedFieldRecovery/FourContractions.lean:67:35: typeclass instance problem is stuck
+  One ?m.6
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `One` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: CorruptedFieldRecovery/FourContractions.lean:72:35: typeclass instance problem is stuck
+  One ?m.6
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `One` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: CorruptedFieldRecovery/FourContractions.lean:78:31: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:83:31: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:84:76: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝ : Field K
+b : sorry
+i : Fin 3
+⊢ (sorry ()) (sorry ()) = sorry ()
+warning: CorruptedFieldRecovery/FourContractions.lean:85:8: declaration uses `sorry`
+error: CorruptedFieldRecovery/FourContractions.lean:89:31: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:94:31: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:103:6: Unknown identifier `Basis.det_apply`
+error: CorruptedFieldRecovery/FourContractions.lean:102:69: unsolved goals
+K : Type u_1
+inst✝ : Field K
+x y z : FieldTriple K
+⊢ fieldDet3 x y z = sorry
+error: CorruptedFieldRecovery/FourContractions.lean:112:31: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:117:47: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝ : Field K
+b : sorry
+x y z : FieldTriple K
+⊢ fieldDet3 x y z =
+    sampledBasisDeterminant K b *
+      fieldDet3 ((sampledBasisCoordinateEquiv K b) x) ((sampledBasisCoordinateEquiv K b) y)
+        ((sampledBasisCoordinateEquiv K b) z)
+error: CorruptedFieldRecovery/FourContractions.lean:553:17: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:561:17: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:569:17: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:583:21: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:818:3: Unknown constant `Module.RestrictScalars.lsmul`
+error: CorruptedFieldRecovery/FourContractions.lean:821:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'ringChar', which is 'noncomputable'
+error: CorruptedFieldRecovery/FourContractions.lean:838:6: Unknown constant `Module.RestrictScalars.lsmul_apply_apply`
+warning: CorruptedFieldRecovery/FourContractions.lean:837:11: declaration uses `sorry`
+error: CorruptedFieldRecovery/FourContractions.lean:865:36: Unknown constant `Module.RestrictScalars.lsmul_apply_apply`
+error: CorruptedFieldRecovery/FourContractions.lean:862:2: unsolved goals
+case mp.hl.h.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((sorry ()) k) (x, 0)).1 = k * x
+
+case mp.hl.h.snd.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.1 =
+    ((T ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.1
+
+case mp.hl.h.snd.snd
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.2 =
+    ((T ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.2
+
+case mp.hr.hl.h.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+          LinearMap.inl (ZMod (ringChar K)) K K)
+        x).1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).1
+
+case mp.hr.hl.h.snd.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inl (ZMod (ringChar K)) K K)
+          x).2.1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).2.1
+
+case mp.hr.hl.h.snd.snd
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inl (ZMod (ringChar K)) K K)
+          x).2.2 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).2.2
+
+case mp.hr.hr.h.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+          LinearMap.inr (ZMod (ringChar K)) K K)
+        x).1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).1
+
+case mp.hr.hr.h.snd.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inr (ZMod (ringChar K)) K K)
+          x).2.1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).2.1
+
+case mp.hr.hr.h.snd.snd
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inr (ZMod (ringChar K)) K K)
+          x).2.2 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).2.2
+error: CorruptedFieldRecovery/FourContractions.lean:871:34: Unknown constant `Module.RestrictScalars.lsmul_apply_apply`
+warning: CorruptedFieldRecovery/FourContractions.lean:865:10: declaration uses `sorry`
+error: CorruptedFieldRecovery/FourContractions.lean:897:21: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:905:6: Unknown identifier `fieldDet3_sampledBasis_change`
+error: CorruptedFieldRecovery/FourContractions.lean:902:51: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c : K
+basis : sorry
+x y : FieldTriple K
+⊢ c * fieldDet3 x y sorry =
+    c * sampledBasisDeterminant K basis *
+      fieldDet3 ((sampledBasisCoordinateEquiv K basis) x) ((sampledBasisCoordinateEquiv K basis) y) fieldBasis0
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_5
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.37 K c basis x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_6
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.39 K c basis x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_7
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.41 K c basis x y
+error: CorruptedFieldRecovery/FourContractions.lean:912:21: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:920:6: Unknown identifier `fieldDet3_sampledBasis_change`
+error: CorruptedFieldRecovery/FourContractions.lean:917:51: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c : K
+basis : sorry
+x y : FieldTriple K
+⊢ c * fieldDet3 x y sorry =
+    c * sampledBasisDeterminant K basis *
+      fieldDet3 ((sampledBasisCoordinateEquiv K basis) x) ((sampledBasisCoordinateEquiv K basis) y) fieldBasis1
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_5
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.37 K c basis x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_6
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.39 K c basis x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_7
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.41 K c basis x y
+error: CorruptedFieldRecovery/FourContractions.lean:927:21: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:935:6: Unknown identifier `fieldDet3_sampledBasis_change`
+error: CorruptedFieldRecovery/FourContractions.lean:932:51: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c : K
+basis : sorry
+x y : FieldTriple K
+⊢ c * fieldDet3 x y sorry =
+    c * sampledBasisDeterminant K basis *
+      fieldDet3 ((sampledBasisCoordinateEquiv K basis) x) ((sampledBasisCoordinateEquiv K basis) y) fieldBasis2
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_5
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.37 K c basis x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_6
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.39 K c basis x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] → [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → Sort u_7
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (x y : FieldTriple K) → ?m.41 K c basis x y
+error: CorruptedFieldRecovery/FourContractions.lean:942:21: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:953:6: Unknown identifier `fieldDet3_sampledBasis_change`
+error: CorruptedFieldRecovery/FourContractions.lean:950:51: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c : K
+basis : sorry
+v x y : FieldTriple K
+⊢ c * fieldDet3 x y v =
+    c * sampledBasisDeterminant K basis *
+      fieldDet3 ((sampledBasisCoordinateEquiv K basis) x) ((sampledBasisCoordinateEquiv K basis) y)
+        (((sampledBasisCoordinateEquiv K basis) v).1, ((sampledBasisCoordinateEquiv K basis) v).2.1,
+          ((sampledBasisCoordinateEquiv K basis) v).2.2)
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] →
+          [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → FieldTriple K → Sort u_4
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (v x y : FieldTriple K) → ?m.57 K c basis v x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] →
+          [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → FieldTriple K → Sort u_8
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (v x y : FieldTriple K) → ?m.65 K c basis v x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] →
+          [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → FieldTriple K → Sort u_9
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (v x y : FieldTriple K) → ?m.67 K c basis v x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] →
+          [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → FieldTriple K → Sort u_5
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (v x y : FieldTriple K) → ?m.59 K c basis v x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] →
+          [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → FieldTriple K → Sort u_6
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (v x y : FieldTriple K) → ?m.61 K c basis v x y
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [Finite K] →
+          [Algebra (ZMod (ringChar K)) K] → K → sorry → FieldTriple K → FieldTriple K → FieldTriple K → Sort u_7
+
+⊢ {Basis : ?m.1} →
+    (K : Type u_1) →
+      [inst : Field K] →
+        [inst_1 : Finite K] →
+          [inst_2 : Algebra (ZMod (ringChar K)) K] →
+            (c : K) → (basis : sorry) → (v x y : FieldTriple K) → ?m.63 K c basis v x y
+error: CorruptedFieldRecovery/FourContractions.lean:990:13: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:997:57: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+basis : sorry
+v : FieldTriple K
+c : K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+⊢ sampledFourBalanced K c basis v T ↔
+    fourContractionsBalancedVia K (sampledBasisCoordinateEquiv K basis) (c * sampledBasisDeterminant K basis)
+      ((sampledBasisCoordinateEquiv K basis) v).1 ((sampledBasisCoordinateEquiv K basis) v).2.1
+      ((sampledBasisCoordinateEquiv K basis) v).2.2 T
+error: CorruptedFieldRecovery/FourContractions.lean:1049:8: Unknown constant `Module.RestrictScalars.lsmul_apply_apply`
+error: CorruptedFieldRecovery/FourContractions.lean:1055:6: Unknown constant `Module.RestrictScalars.lsmul_apply_apply`
+error: CorruptedFieldRecovery/FourContractions.lean:1051:2: unsolved goals
+case mpr.hl.h.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((sorry ()) k) (x, 0)).1 = k * x
+
+case mpr.hl.h.snd.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.1 =
+    ((T ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.1
+
+case mpr.hl.h.snd.snd
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.2 =
+    ((T ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.2
+
+case mpr.hr.hl.h.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+          LinearMap.inl (ZMod (ringChar K)) K K)
+        x).1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).1
+
+case mpr.hr.hl.h.snd.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inl (ZMod (ringChar K)) K K)
+          x).2.1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).2.1
+
+case mpr.hr.hl.h.snd.snd
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inl (ZMod (ringChar K)) K K)
+          x).2.2 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).2.2
+
+case mpr.hr.hr.h.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+          LinearMap.inr (ZMod (ringChar K)) K K)
+        x).1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).1
+
+case mpr.hr.hr.h.snd.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inr (ZMod (ringChar K)) K K)
+          x).2.1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).2.1
+
+case mpr.hr.hr.h.snd.snd
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : Module.End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inr (ZMod (ringChar K)) K K)
+          x).2.2 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).2.2
+warning: CorruptedFieldRecovery/FourContractions.lean:1048:13: declaration uses `sorry`
+error: CorruptedFieldRecovery/FourContractions.lean:1063:13: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:1076:20: Unknown identifier `sampledBasisDeterminant_ne_zero`
+error: CorruptedFieldRecovery/FourContractions.lean:1074:46: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+basis : sorry
+v : FieldTriple K
+c : K
+hc : c ≠ 0
+hgen :
+  (ZMod (ringChar K))[((sampledBasisCoordinateEquiv K basis) v).1] = ⊤ ∨
+    (ZMod (ringChar K))[((sampledBasisCoordinateEquiv K basis) v).2.1] = ⊤ ∨
+      (ZMod (ringChar K))[((sampledBasisCoordinateEquiv K basis) v).2.2] = ⊤
+⊢ (∀ (T : Module.End (ZMod (ringChar K)) (FieldTriple K)),
+      sampledFourBalanced K c basis v T ↔ T ∈ scalarTripleEndRange K) ∧
+    Module.finrank (ZMod (ringChar K)) ↥(scalarTripleEndRange K) = Module.finrank (ZMod (ringChar K)) K
+error: CorruptedFieldRecovery/FourContractions.lean:1094:13: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin 3)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/FourContractions.lean:1104:42: failed to synthesize instance of type class
+  OfNat (Type ?u.70130) 2
+numerals are polymorphic in Lean, but the numeral `2` cannot be used in a context where the expected type is
+  Type ?u.70130
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/FourContractions.lean:1105:12: failed to synthesize instance of type class
+  Fintype (ZMod (ringChar K))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/FourContractions.lean:1107:16: Unknown identifier `sampled_four_contractions_identification_and_finrank`
+error: CorruptedFieldRecovery/FourContractions.lean:1103:71: unsolved goals
+x✝ : Sort u_2
+Basis : x✝
+K : Type u_1
+inst✝⁴ : Field K
+inst✝³ : Finite K
+inst✝² : Fintype K
+inst✝¹ : CharP K 2
+inst✝ : Algebra (ZMod (ringChar K)) K
+basis : sorry
+v : FieldTriple K
+c : K
+hc : c ≠ 0
+hgen :
+  (ZMod (ringChar K))[((sampledBasisCoordinateEquiv K basis) v).1] = ⊤ ∨
+    (ZMod (ringChar K))[((sampledBasisCoordinateEquiv K basis) v).2.1] = ⊤ ∨
+      (ZMod (ringChar K))[((sampledBasisCoordinateEquiv K basis) v).2.2] = ⊤
+s : ℕ
+hcard : Fintype.card K = 2 ^ s
+hchar : ringChar K = 2
+hF : sorry = 2
+⊢ Module.finrank (ZMod (ringChar K)) ↥(scalarTripleEndRange K) = s
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.FourContractions

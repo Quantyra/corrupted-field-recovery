@@ -1,0 +1,10 @@
+{
+  "reviewer": "root",
+  "status": "rejected-precompile-static-review",
+  "findings": [
+    "Subspace abbreviation passed directly as W := U",
+    "two swap equality orientations require correction"
+  ],
+  "compiled": false,
+  "coverage_promoted": false
+}

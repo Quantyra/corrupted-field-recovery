@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T02:01:54.676868+00:00",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "instance_id": "3335066512373302615",
+  "initial_state": "TERMINATED",
+  "run": "cfr-isolated-four-sampled-identification-dev01-20261029T014405Z-d9123c",
+  "note": "One authorized task-owned dedicated restart. Observe actual state if transport fails; never duplicate start."
+}

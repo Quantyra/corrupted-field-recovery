@@ -1,0 +1,104 @@
+✖ [1673/1673] Building CorruptedFieldRecovery.Support (14s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/Support.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Support.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Support.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/Support.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/Support.setup.json --json
+error: CorruptedFieldRecovery/Support.lean:31:11: Unknown constant `Submodule.mem_dualCoannihilator.mp`
+error: CorruptedFieldRecovery/Support.lean:40:19: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?φ ∈ dualAnnihilator ?m.183
+in the target expression
+  (fun xy => (E xy.1) xy.2) (x, y) ∈ ↑U.dualCoannihilator.dualAnnihilator
+
+case mpr
+n : ℕ
+E : Trilinear (ZMod 2) (BinaryVector n)
+U : Submodule (ZMod 2) (Dual (ZMod 2) (BinaryVector n))
+h : ∀ (x y v : BinaryVector n), v ∈ U.dualCoannihilator → ((E x) y) v = 0
+x y : BinaryVector n
+this✝ : FiniteDimensional (ZMod 2) (BinaryVector n)
+this : FiniteDimensional (ZMod 2) (Dual (ZMod 2) (BinaryVector n))
+hdouble : U.dualCoannihilator.dualAnnihilator = U
+⊢ (fun xy => (E xy.1) xy.2) (x, y) ∈ ↑U.dualCoannihilator.dualAnnihilator
+error: CorruptedFieldRecovery/Support.lean:78:8: Type mismatch
+  h₂ x y (↑↑z) hy
+has type
+  ((E x) y) ↑↑z = 0
+but is expected to have type
+  ((E x) y ∘ₗ single (ZMod 2) (fun i => ZMod 2) z) 1 = (0 ∘ₗ single (ZMod 2) (fun i => ZMod 2) z) 1
+error: CorruptedFieldRecovery/Support.lean:83:8: Type mismatch
+  h₃ x (↑↑y) z hz
+has type
+  ((E x) ↑↑y) z = 0
+but is expected to have type
+  ((E x).flip z ∘ₗ single (ZMod 2) (fun i => ZMod 2) y) 1 = (0 ∘ₗ single (ZMod 2) (fun i => ZMod 2) y) 1
+error: CorruptedFieldRecovery/Support.lean:87:53: Application type mismatch: The argument
+  q
+has type
+  Fin n
+but is expected to have type
+  BinaryVector n ⧸ N
+in the application
+  mkQ_surjective N q
+error: CorruptedFieldRecovery/Support.lean:94:53: Application type mismatch: The argument
+  q
+has type
+  Fin n
+but is expected to have type
+  BinaryVector n ⧸ N
+in the application
+  mkQ_surjective N q
+error: CorruptedFieldRecovery/Support.lean:102:51: Application type mismatch: The argument
+  q
+has type
+  Fin n
+but is expected to have type
+  BinaryVector n ⧸ N
+in the application
+  mkQ_surjective N q
+error: CorruptedFieldRecovery/Support.lean:70:47: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: CorruptedFieldRecovery/Support.lean:116:4: Function expected at
+  supportedQuotientLift
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  E
+
+Hint: The identifier `supportedQuotientLift` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/Support.lean:117:8: Invalid argument: Variable `supportedQuotientLift` is not a proposition or let-declaration
+error: CorruptedFieldRecovery/Support.lean:117:31: Unknown constant `LinearMap.liftQ_apply`
+error: CorruptedFieldRecovery/Support.lean:116:82: unsolved goals
+n : ℕ
+x✝ : Sort u_1
+supportedQuotientLift : x✝
+E : Trilinear (ZMod 2) (BinaryVector n)
+N : Submodule (ZMod 2) (BinaryVector n)
+h₁ : ∀ (x y z : BinaryVector n), x ∈ N → ((E x) y) z = 0
+h₂ : ∀ (x y z : BinaryVector n), y ∈ N → ((E x) y) z = 0
+h₃ : ∀ (x y z : BinaryVector n), z ∈ N → ((E x) y) z = 0
+x y z : BinaryVector n
+⊢ sorry () = ((E x) y) z
+warning: CorruptedFieldRecovery/Support.lean:117:54: This simp argument is unused:
+  LinearMap.liftQ₂_mk
+
+Hint: Omit it from the simp argument list.
+  simp [supportedQuotientLift, LinearMap.liftQ_apply,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵l̵i̵f̵t̵Q̵₂̵_̵m̵k̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/Support.lean:131:10: Unknown identifier `supportedQuotientLift`
+error: CorruptedFieldRecovery/Support.lean:149:29: Unknown constant `Submodule.Quotient.mk_eq_zero.mpr`
+error: CorruptedFieldRecovery/Support.lean:145:23: unsolved goals
+n : ℕ
+E : BinaryTensor n
+U : Submodule (ZMod 2) (Dual (ZMod 2) (BinaryVector n))
+e : Trilinear (ZMod 2) (BinaryVector n ⧸ U.dualCoannihilator)
+hfac :
+  ∀ (x y z : BinaryVector n),
+    ((e (U.dualCoannihilator.mkQ x)) (U.dualCoannihilator.mkQ y)) (U.dualCoannihilator.mkQ z) = ((E x) y) z
+x y v : BinaryVector n
+hv : v ∈ U.dualCoannihilator
+⊢ ((e (Submodule.Quotient.mk x)) (Submodule.Quotient.mk y)) (Submodule.Quotient.mk v) = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.Support

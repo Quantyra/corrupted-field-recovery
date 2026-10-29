@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-29T02:03:12.530586+00:00",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "instance_id": "3335066512373302615",
+  "configuration": "external-nat",
+  "ephemeral": true,
+  "effective_ingress_receipt": "effective-ingress.stdout.txt",
+  "effective_ingress_sha256": "6fffc8a089d13f31097b13a13bd9629a0c6e7e71ac2ccad866cfe05f198b718d",
+  "remove_after_preservation": true
+}

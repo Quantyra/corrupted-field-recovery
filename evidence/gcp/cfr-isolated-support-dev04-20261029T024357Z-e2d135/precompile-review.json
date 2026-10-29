@@ -1,0 +1,10 @@
+{
+  "reviewer": "root",
+  "status": "scope-consistent-uncompiled",
+  "findings": [
+    "quotient factor alternation derived by surjectivity rather than assumed",
+    "mode-image bound iff actual alternating quotient factorization and minimality matches intended intermediate support claim"
+  ],
+  "compiled": false,
+  "coverage_promoted": false
+}

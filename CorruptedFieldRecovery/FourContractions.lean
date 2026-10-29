@@ -12,6 +12,8 @@ transport still have to be connected to the algebraic core below.
 
 namespace CorruptedFieldRecovery
 
+open Module
+
 /-- The finite-field trace pairing is nondegenerate in either argument. -/
 theorem tracePairing_nondegenerate
     (K : Type*) [Field K] [Finite K] [Algebra (ZMod (ringChar K)) K]
@@ -101,8 +103,8 @@ theorem fieldDet3_eq_standardBasis_det
     (K : Type*) [Field K] (x y z : FieldTriple K) :
     fieldDet3 x y z = (fieldTripleStandardBasis K).det ![x, y, z] := by
   rw [Basis.det_apply, Matrix.det_fin_three]
-  simp [Basis.toMatrix, Basis.ofEquivFun_repr_apply, fieldTripleEquivPi,
-    fieldDet3]
+  simp [Basis.toMatrix, fieldTripleStandardBasis,
+    Basis.ofEquivFun_repr_apply, fieldTripleEquivPi, fieldDet3]
   ring
 
 /-- Determinants in sampled coordinates equal ambient determinants divided by
@@ -117,6 +119,8 @@ theorem fieldDet3_sampledBasis_change
         (sampledBasisCoordinateEquiv K b z) := by
   let e := fieldTripleStandardBasis K
   let q := sampledBasisCoordinateEquiv K b
+  have hqb (i : Fin 3) : q (b i) = e i := by
+    simp [q, e, sampledBasisCoordinateEquiv]
   have hmap : e.det.compLinearMap q.toLinearMap = b.det := by
     apply Module.Basis.ext_alternating b
     intro v hv
@@ -125,9 +129,16 @@ theorem fieldDet3_sampledBasis_change
     have hv' : v = σ := by
       funext i
       rfl
-    subst v
-    simp [AlternatingMap.compLinearMap_apply, q, sampledBasisCoordinateEquiv,
-      e, fieldTripleStandardBasis, Basis.equiv_apply, AlternatingMap.map_perm]
+    rw [hv']
+    rw [AlternatingMap.compLinearMap_apply]
+    have hqv : (fun i : Fin 3 => q (b (σ i))) = fun i => e (σ i) := by
+      funext i
+      exact hqb (σ i)
+    change e.det (fun i => q (b (σ i))) = b.det (fun i => b (σ i))
+    rw [hqv]
+    change e.det (e ∘ σ) = b.det (b ∘ σ)
+    rw [AlternatingMap.map_perm, AlternatingMap.map_perm]
+    simp only [Basis.det_self]
   have hdet : e.det = e.det b • b.det :=
     AlternatingMap.eq_smul_basis_det (e := b) e.det
   have hcoord : b.det ![x, y, z] = e.det ![q x, q y, q z] := by
@@ -135,7 +146,9 @@ theorem fieldDet3_sampledBasis_change
     simpa [AlternatingMap.compLinearMap_apply] using h.symm
   calc
     fieldDet3 x y z = e.det ![x, y, z] := fieldDet3_eq_standardBasis_det K x y z
-    _ = (e.det b) * b.det ![x, y, z] := by rw [hdet]; simp
+    _ = (e.det b) * b.det ![x, y, z] := by
+      have h := congrArg (fun f => f ![x, y, z]) hdet
+      simpa [smul_eq_mul] using h
     _ = (e.det b) * e.det ![q x, q y, q z] := by rw [hcoord]
     _ = (e.det b) * fieldDet3 (q x) (q y) (q z) := by
       rw [fieldDet3_eq_standardBasis_det]
@@ -815,10 +828,12 @@ identifies it with the balanced endomorphisms.
 noncomputable def scalarTripleEndLinearMap
     (K : Type*) [Field K] [Algebra (ZMod (ringChar K)) K] :
     K →ₗ[ZMod (ringChar K)] Module.End (ZMod (ringChar K)) (FieldTriple K) :=
-  (Module.RestrictScalars.lsmul (ZMod (ringChar K)) K (FieldTriple K)).toLinearMap
+  (Algebra.lsmul (ZMod (ringChar K)) (ZMod (ringChar K)) (FieldTriple K) :
+    K →ₐ[ZMod (ringChar K)]
+      Module.End (ZMod (ringChar K)) (FieldTriple K)).toLinearMap
 
 /-- The scalar-action submodule of binary-linear endomorphisms. -/
-def scalarTripleEndRange
+noncomputable def scalarTripleEndRange
     (K : Type*) [Field K] [Algebra (ZMod (ringChar K)) K] :
     Submodule (ZMod (ringChar K))
       (Module.End (ZMod (ringChar K)) (FieldTriple K)) :=
@@ -834,8 +849,7 @@ theorem scalarTripleEndLinearMap_injective
     T (fieldBasis0 : FieldTriple K)) h
   have hv' : k₁ • (fieldBasis0 : FieldTriple K) =
       k₂ • (fieldBasis0 : FieldTriple K) := by
-    simpa [scalarTripleEndLinearMap,
-      Module.RestrictScalars.lsmul_apply_apply] using hv
+    simpa [scalarTripleEndLinearMap, Algebra.lsmul_apply] using hv
   have h0 := congrArg Prod.fst hv'
   simpa [fieldBasis0, smul_eq_mul] using h0
 
@@ -861,15 +875,21 @@ theorem standard_four_balance_iff_mem_scalarTripleEndRange
   constructor
   · rintro ⟨k, hk⟩
     refine ⟨k, ?_⟩
-    ext x
-    simp [scalarTripleEndLinearMap, Module.RestrictScalars.lsmul_apply_apply,
-      fieldScalarTriple_eq_smul, hk]
+    apply LinearMap.ext
+    intro x
+    change k • x = T x
+    calc
+      k • x = fieldScalarTriple k x := (fieldScalarTriple_eq_smul k x).symm
+      _ = T x := (hk x).symm
   · rintro ⟨k, hk⟩
     refine ⟨k, ?_⟩
     intro x
     have hx := congrArg (fun f : Module.End (ZMod (ringChar K)) (FieldTriple K) => f x) hk
-    rw [scalarTripleEndLinearMap, Module.RestrictScalars.lsmul_apply_apply] at hx
-    rw [← hx, fieldScalarTriple_eq_smul]
+    have hx' : k • x = T x := by
+      simpa [scalarTripleEndLinearMap, Algebra.lsmul_apply] using hx
+    calc
+      T x = k • x := hx'.symm
+      _ = fieldScalarTriple k x := (fieldScalarTriple_eq_smul k x).symm
 
 /-- The standard four-contraction balance space has dimension `finrank F K`.
 The preceding membership theorem establishes that this range is exactly the
@@ -1045,15 +1065,16 @@ theorem scalarTripleEndRange_mem_iff
     have hx := congrArg
       (fun f : Module.End (ZMod (ringChar K)) (FieldTriple K) => f x) hk
     have hx' : k • x = T x := by
-      simpa [scalarTripleEndLinearMap,
-        Module.RestrictScalars.lsmul_apply_apply] using hx
+      simpa [scalarTripleEndLinearMap, Algebra.lsmul_apply] using hx
     rw [← hx', fieldScalarTriple_eq_smul]
   · rintro ⟨k, hk⟩
     refine ⟨k, ?_⟩
-    ext x
-    simp [scalarTripleEndLinearMap,
-      Module.RestrictScalars.lsmul_apply_apply,
-      fieldScalarTriple_eq_smul, hk]
+    apply LinearMap.ext
+    intro x
+    change k • x = T x
+    calc
+      k • x = fieldScalarTriple k x := (fieldScalarTriple_eq_smul k x).symm
+      _ = T x := (hk x).symm
 
 /-- Actual arbitrary-sampled-basis identification, including both directions
 and the dimension of its balance submodule. -/
@@ -1101,9 +1122,12 @@ theorem sampled_four_contractions_balance_finrank_eq_s
         {(sampledBasisCoordinateEquiv K basis v).2.2} = ⊤)
     (s : ℕ) (hcard : Fintype.card K = 2 ^ s) :
     Module.finrank (ZMod (ringChar K)) (scalarTripleEndRange K) = s := by
-  have hchar : ringChar K = 2 := CharP.eq 2
+  classical
+  letI : NeZero (ringChar K) := ⟨CharP.ringChar_ne_zero_of_finite K⟩
+  letI : Fact (Nat.Prime (ringChar K)) := ⟨CharP.prime_ringChar K⟩
+  have hchar : ringChar K = 2 := ringChar.eq K 2
   have hF : Fintype.card (ZMod (ringChar K)) = 2 := by
-    rw [hchar, ZMod.card]
+    exact (ZMod.card (ringChar K)).trans hchar
   have hdim := (sampled_four_contractions_identification_and_finrank
     K basis v c hc hgen).2
   have hcard' : Fintype.card K =

@@ -1,0 +1,296 @@
+✖ [2006/2006] Building CorruptedFieldRecovery.FourContractions (17s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/FourContractions.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/FourContractions.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/FourContractions.setup.json --json
+error: CorruptedFieldRecovery/FourContractions.lean:122:59: unsolved goals
+K : Type u_1
+inst✝ : Field K
+b : Basis (Fin 3) K (FieldTriple K)
+x y z : FieldTriple K
+e : Basis (Fin 3) K (FieldTriple K) := fieldTripleStandardBasis K
+q : FieldTriple K ≃ₗ[K] FieldTriple K := sampledBasisCoordinateEquiv K b
+v : Fin 3 → Fin 3
+hv : Function.Injective v
+σ : Equiv.Perm (Fin 3) := Equiv.ofBijective v ⋯
+hv' : v = ⇑σ
+⊢ ((Basis.ofEquivFun (fieldTripleEquivPi K)).det fun i => (fieldTripleEquivPi K).symm (Pi.single (σ i) 1)) =
+    b.det fun i => b (σ i)
+warning: CorruptedFieldRecovery/FourContractions.lean:132:54: This simp argument is unused:
+  AlternatingMap.map_perm
+
+Hint: Omit it from the simp argument list.
+  simp [AlternatingMap.compLinearMap_apply, q, sampledBasisCoordinateEquiv, e,
+  ̲  ̲ ̲ ̲ ̲ ̲fieldTripleStandardBasis, B̵a̵s̵i̵s̵.̵e̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵,̵ ̵A̵l̵t̵e̵r̵n̵a̵t̵i̵n̵g̵M̵a̵p̵.̵m̵a̵p̵_̵p̵e̵r̵m̵]̵B̲a̲s̲i̲s̲.̲e̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/FourContractions.lean:867:2: unsolved goals
+case mp.hl.h.snd.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.1 =
+    ((T ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.1
+
+case mp.hl.h.snd.snd
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.2 =
+    ((T ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.2
+
+case mp.hr.hl.h.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+          LinearMap.inl (ZMod (ringChar K)) K K)
+        x).1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).1
+
+case mp.hr.hl.h.snd.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inl (ZMod (ringChar K)) K K)
+          x).2.1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).2.1
+
+case mp.hr.hl.h.snd.snd
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inl (ZMod (ringChar K)) K K)
+          x).2.2 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).2.2
+
+case mp.hr.hr.h.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+          LinearMap.inr (ZMod (ringChar K)) K K)
+        x).1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).1
+
+case mp.hr.hr.h.snd.fst
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inr (ZMod (ringChar K)) K K)
+          x).2.1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).2.1
+
+case mp.hr.hr.h.snd.snd
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inr (ZMod (ringChar K)) K K)
+          x).2.2 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).2.2
+error: CorruptedFieldRecovery/FourContractions.lean:876:34: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ((Algebra.lsmul ?R ?B ?M) ?a) ?m
+in the target expression
+  (fun f => f x) ((Algebra.lsmul (ZMod (ringChar K)) (ZMod (ringChar K)) (FieldTriple K)).toLinearMap k) =
+    (fun f => f x) T
+
+case mpr
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c a b d : K
+hc : c ≠ 0
+hgen : (ZMod (ringChar K))[a] = ⊤ ∨ (ZMod (ringChar K))[b] = ⊤ ∨ (ZMod (ringChar K))[d] = ⊤
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : (scalarTripleEndLinearMap K) k = T
+x : FieldTriple K
+hx :
+  (fun f => f x) ((Algebra.lsmul (ZMod (ringChar K)) (ZMod (ringChar K)) (FieldTriple K)).toLinearMap k) =
+    (fun f => f x) T
+⊢ T x = fieldScalarTriple k x
+warning: CorruptedFieldRecovery/FourContractions.lean:870:36: This simp argument is unused:
+  Algebra.lsmul_apply
+
+Hint: Omit it from the simp argument list.
+  simp [scalarTripleEndLinearMap, A̵l̵g̵e̵b̵r̵a̵.̵l̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵fieldScalarTriple_eq_smul, hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/FourContractions.lean:1055:2: unsolved goals
+case mpr.hl.h.snd.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.1 =
+    ((T ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.1
+
+case mpr.hl.h.snd.snd
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ (((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.2 =
+    ((T ∘ₗ LinearMap.inl (ZMod (ringChar K)) K (K × K)) x).2.2
+
+case mpr.hr.hl.h.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+          LinearMap.inl (ZMod (ringChar K)) K K)
+        x).1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).1
+
+case mpr.hr.hl.h.snd.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inl (ZMod (ringChar K)) K K)
+          x).2.1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).2.1
+
+case mpr.hr.hl.h.snd.snd
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inl (ZMod (ringChar K)) K K)
+          x).2.2 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inl (ZMod (ringChar K)) K K) x).2.2
+
+case mpr.hr.hr.h.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+          LinearMap.inr (ZMod (ringChar K)) K K)
+        x).1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).1
+
+case mpr.hr.hr.h.snd.fst
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inr (ZMod (ringChar K)) K K)
+          x).2.1 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).2.1
+
+case mpr.hr.hr.h.snd.snd
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra (ZMod (ringChar K)) K
+T : End (ZMod (ringChar K)) (FieldTriple K)
+k : K
+hk : ∀ (x : FieldTriple K), T x = fieldScalarTriple k x
+x : K
+⊢ ((((scalarTripleEndLinearMap K) k ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ
+            LinearMap.inr (ZMod (ringChar K)) K K)
+          x).2.2 =
+    (((T ∘ₗ LinearMap.inr (ZMod (ringChar K)) K (K × K)) ∘ₗ LinearMap.inr (ZMod (ringChar K)) K K) x).2.2
+warning: CorruptedFieldRecovery/FourContractions.lean:1058:36: This simp argument is unused:
+  Algebra.lsmul_apply
+
+Hint: Omit it from the simp argument list.
+  simp [scalarTripleEndLinearMap, A̵l̵g̵e̵b̵r̵a̵.̵l̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵fieldScalarTriple_eq_smul, hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.FourContractions

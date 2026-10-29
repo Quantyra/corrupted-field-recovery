@@ -248,3 +248,74 @@ The latest four-contraction source `57592dc8a091b056bfaa38b848d53bc7be4f748d019e
 Read-only readiness was refreshed in [`1670c2`](cfr-readiness-20261029T015239Z-1670c2/receipt.json), preserving the prior artifact: exit 1, `ready=false`, `complete_lean=false`, with five missing source/evidence bindings in the release inventory. This does not erase the independent saved green GCP receipts above, and those partial receipts do not close the full formal obligations. The coverage inventory is unchanged.
 
 The dedicated builder is safely stopped: [`49450d` shutdown result](cfr-isolated-denseinput-roundtrip-dev04-20261029T013625Z-42ba02/cfr-shutdown-20261029T015003Z-49450d-result.json). All launched outcomes were collected, no Lean/Lake process or task lock remained, and persistent cache/output hashes were preserved. Its numeric instance ID matched the original creation receipt; task-only external egress was removed and final state verified `TERMINATED`. No live compiler/SSH handle remains. Resume the active goal through the [bounded continuation runbook](../../tools/gcp-README.md#bounded-continuation-on-the-dedicated-builder): inspect/start this dedicated VM once, preserve the fresh four-hour STOP ceiling, restore only task-owned egress if needed, then compile the unlaunched `d9123c` source capture with its full fresh audit. Earlier failed and superseded captures are historical, not duplicate launch instructions.
+
+The active goal resumed the same dedicated builder through [`abac32`](cfr-isolated-restart-20261029T020104Z-abac32/ownership.json). Read-only inspection confirmed original instance ID `3335066512373302615`, `TERMINATED`, no external access config, and effective ingress limited to IAP TCP22 plus the internal subnet. One successful start and one task-only ephemeral egress restoration were preserved separately; the actual fresh STOP ceiling is 2026-10-29 06:02:12.544296 UTC. Persistent disk/cache and pinned host key were retained; shared networking/builder were not changed.
+
+Sampled-identification `d9123c` failed build on pinned basis/RestrictScalars APIs and prime-field typeclass elaboration. Its successor `0b2ea0` removed the initial Basis cascade but failed determinant/binder, scalar-action namespace and final characteristic-two cardinality proofs. Both exact terminal logs are collected/hash verified, including the failed Windows transport package receipt. Neither run reached a passing type/axiom audit.
+
+New ninth owned source `Support.lean` was captured as `2fd6dc` before author edits; Root's static Subspace/swap review is saved. Corrected successor `838358` was compiled only after the last eight-source run was collected, activating the nine-source inventory without deleting cached sources. It failed quotient/coannihilator/lift API elaboration; complete raw logs were collected and routed to its author. Old eight-source drafts are historical and must not be replayed after this activation. New captures include all nine owned source files, with acceptance restricted to requested targets and actual emitted declarations.
+
+The controller now preserves `loaded-controller.py` bytes matching each execution manifest's controller hash, including exact retained copies for `d9123c`/`0b2ea0`; it refuses replacement. Console summaries handle instance lists without dumping startup metadata, while raw receipts remain exact. Shutdown additionally verifies the numeric ID in fresh-start ownership receipts. Pure-Python execution-hash/transport regression passes; no Lean/Lake was executed locally.
+
+
+The replacement sole compiler recovered the already launched sampled-identification
+`0b3c0f` through same-handle observation and collection; no compiler was relaunched.
+Its build failed at 02:59:55 UTC on two determinant-transport proof details
+(let-bound standard basis and a coerced coordinate-map rewrite). Full stdout,
+stderr and terminal hashes are retained. Exact repair SHA-256
+`5f6019c5bd872045ecf13c9d746763cd8da89b7fb0cae71d6fcd24fdabd62ff5`
+is captured as `11c3b5`, with the same 66-export audit policy, pending compilation.
+
+Support `cccbb2` launched once as PID 8102 and failed at 03:09:31 UTC.
+Its originating failure is the 200000-heartbeat `whnf` timeout at line 77;
+unknown `supportedQuotientLift` references and two unused-simp warnings are
+consequences in that failed build. The complete raw logs were collected and
+independently rehashed against every terminal log digest before routing the
+actual originating diagnostic to the author. No audit or formal coverage was
+promoted. The non-compiling transport regression passed. Fresh submission
+inspection confirmed instance `3335066512373302615`, a four-hour STOP duration,
+and the same start; the earlier conservative ceiling remains
+2026-10-29 06:02:12 UTC.
+
+Remaining to-do list: compile and collect `11c3b5`; capture and compile the
+Support repair; inspect exact green types/axioms; continue the manuscript
+milestones; safely stop the dedicated builder after preservation and workload checks.
+
+
+Sampled-identification `11c3b5` subsequently failed at 03:14:31 UTC on
+one no-progress `simp` call and one unnecessary-`simpa` warning; its complete
+raw logs are collected. The author's statement-preserving repair SHA-256
+`254ee5392d54ee0247fb4cb0f7a67b7835db5521ea51d83a81866d234a6d8f32`
+is captured as `2bfb9f` with the same 66-export audit. Support successor
+`80c78b91ac2748eddb83c02238a802e33cdb4e1d83cd0aebd6fc34f923aab6ec`
+is captured as `b9a0d4`; it splits the timed-out declaration into smaller
+proved lifts without changing the heartbeat limit or suppressing warnings.
+Both archives and all captured member hashes were checked locally without Lean.
+
+Remaining to-do list: preserve Support `b9a0d4` and Four `2bfb9f` outcomes;
+inspect actual green statements/axioms; continue full certification; safely
+stop the builder after collecting every launch and excluding other workloads.
+
+
+Four `2bfb9f` failed at 03:26:59 UTC on the explicit remaining equality
+between the determinants of permuted basis vectors; no warnings were emitted.
+Its complete logs are collected. Support `b9a0d4` failed at 03:21:33 UTC on
+the outer lift's 200000-heartbeat timeout and two no-op `change` warnings;
+its complete logs are collected. Both collections preserve Windows-gcloud
+crashes that occurred after delivering package hashes; same-handle read-only
+collection retries succeeded without compiler reruns.
+
+Four successor `1d211e` captures SHA-256
+`d05c0fbe41a0125a1b4f3121317b481d1eb34bc547cedcf29b4a05251040aa04`
+with the same 66-export audit. Support successor `57add0` captures SHA-256
+`9c97eea57e6efa53f01ca45df8fb0669ceba93c3ad8d8c0adfb7f81be9297fc8`
+with the same 11-export audit. The latter removes the no-op tactics and scopes
+a 3200000-heartbeat allowance to the outer lift under Root's direction;
+it does not change a theorem statement, stage timeout, live input or VM ceiling.
+Support launched once as PID 11281 at 03:36:24 UTC and was still running build
+at the 03:38:28 observation. A premature read-only collection was correctly
+refused by the missing-exit-code guard and is retained as failed transport.
+
+Remaining to-do list: retain terminal outcomes for Support `57add0`, then
+Four `1d211e`; review actual green declarations/axioms; continue the complete
+manuscript milestones; safely stop the builder after all evidence is collected.

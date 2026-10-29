@@ -34,6 +34,7 @@ def main():
         manifest = json.loads((out/'execution-manifest.json').read_text())
         assert manifest['shell_sha256'] == hashlib.sha256(shell).hexdigest()
         assert manifest['runner_sha256'] == hashlib.sha256(runner).hexdigest()
+        assert manifest['controller_sha256'] == hashlib.sha256((out/'loaded-controller.py').read_bytes()).hexdigest()
         assert run.encode() in shell and b'RUNNERHASH' not in shell
         assert not (out/'launch-request.json').exists()
     print('PASS: absolute destinations, invalid-home/run controls, ordered non-compiling guard')

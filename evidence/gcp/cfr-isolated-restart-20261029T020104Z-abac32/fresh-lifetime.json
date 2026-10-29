@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-29T02:03:12.524689+00:00",
+  "last_start": "2026-10-28T19:02:31.770-07:00",
+  "termination_timestamp": "2026-10-29T06:02:12.544296Z",
+  "max_run_seconds": "14400",
+  "instance_id": "3335066512373302615",
+  "reserve_seconds": 1500,
+  "stage_timeout_seconds": 1800
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T02:02:34.371609+00:00",
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "instance_id": "3335066512373302615",
+  "zone": "us-central1-a",
+  "run": "cfr-isolated-four-sampled-identification-dev01-20261029T014405Z-d9123c",
+  "initial_state": "TERMINATED",
+  "started_for_task": true,
+  "creation_authority": "cfr-isolated-create-20261028T224800Z-c092b2/ownership.json"
+}
