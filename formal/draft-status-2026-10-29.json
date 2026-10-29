@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-29T12:18:49.535947+00:00",
+  "remaining": "S006 remains incomplete; accepted exact-source scopes are recorded in each receipt scope-review.json.",
+  "drafts": [
+    {
+      "path": "CorruptedFieldRecovery/ProbabilityFourTupleCount.lean",
+      "sha256": "dce0af1409ca56db0a4bb7607afef13419e48024dc95b6ec9f67d8b8c8638fe2",
+      "status": "Failed alternative: last submitted dev16 failed; superseded by accepted canonical finset route."
+    },
+    {
+      "path": "CorruptedFieldRecovery/ProbabilityFlatTupleBridge.lean",
+      "sha256": "4c677a435c9a0c709dadaf198fed6c7b3f02617dbb09bb881dd89348e53d5d49",
+      "status": "Uncompiled abandoned dependent draft; imports unsuccessful subtype route. Not accepted evidence."
+    }
+  ]
+}

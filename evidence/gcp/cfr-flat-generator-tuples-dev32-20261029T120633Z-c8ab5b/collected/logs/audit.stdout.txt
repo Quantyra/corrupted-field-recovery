@@ -1,0 +1,56 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.canonicalGoodFourFlatTuple_injective
+CorruptedFieldRecovery.canonicalGoodFourFlatTuple_injective.{u_1} : ∀ (K : Type u_1),
+  Function.Injective.{u_1 + 1, u_1 + 1} (CorruptedFieldRecovery.canonicalGoodFourFlatTuple.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.canonicalGoodFourFlatTuple_injective
+'CorruptedFieldRecovery.canonicalGoodFourFlatTuple_injective' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.mem_canonicalGoodFourFlatImage_iff
+CorruptedFieldRecovery.mem_canonicalGoodFourFlatImage_iff.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (D : Finset.{u_1} K)
+  (x : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.canonicalGoodFourFlatImage.{u_1} K A D) x)
+    (∃ fr,
+      And (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.cleanFrameSet.{u_1, u_1} A) fr)
+        (∃ v,
+          And (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.goodFourthFinset.{u_1} K A D fr) v)
+            (Eq.{u_1 + 1} (CorruptedFieldRecovery.canonicalGoodFourFlatTuple.{u_1} K (Sigma.mk.{u_1, u_1} fr v)) x)))
+CFR_TYPE_END:CorruptedFieldRecovery.mem_canonicalGoodFourFlatImage_iff
+'CorruptedFieldRecovery.mem_canonicalGoodFourFlatImage_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_canonicalGoodFourFlatImage_lower
+CorruptedFieldRecovery.card_canonicalGoodFourFlatImage_lower.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (D : Finset.{u_1} K),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A)
+        (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)))
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))
+          (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1))))
+    (Finset.card.{u_1} (CorruptedFieldRecovery.canonicalGoodFourFlatImage.{u_1} K A D))
+CFR_TYPE_END:CorruptedFieldRecovery.card_canonicalGoodFourFlatImage_lower
+'CorruptedFieldRecovery.card_canonicalGoodFourFlatImage_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_canonicalGoodFourGeneratorFlatImage_lower
+CorruptedFieldRecovery.card_canonicalGoodFourGeneratorFlatImage_lower.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_5 : Finite.{u_1 + 1} K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A)
+        (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K))
+          (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)))
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))
+          (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1))))
+    (Finset.card.{u_1}
+      (CorruptedFieldRecovery.canonicalGoodFourFlatImage.{u_1} K A (CorruptedFieldRecovery.nonGenerators.{u_1} K)))
+CFR_TYPE_END:CorruptedFieldRecovery.card_canonicalGoodFourGeneratorFlatImage_lower
+'CorruptedFieldRecovery.card_canonicalGoodFourGeneratorFlatImage_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

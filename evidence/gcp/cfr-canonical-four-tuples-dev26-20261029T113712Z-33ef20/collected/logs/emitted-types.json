@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.card_clean_frame_finset_lower": {
+    "emitted_type": "CorruptedFieldRecovery.card_clean_frame_finset_lower.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)),\n  LE.le.{0}\n    (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))\n      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))\n        (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1)))\n    (Finset.card.{u_1} (CorruptedFieldRecovery.cleanFrameSet\u271d.{u_1, u_1} A))\n",
+    "sha256": "b5499db781ecf558c623f62b86ee4d37b2eac2427f0722959884a7e5ef3347cb"
+  },
+  "CorruptedFieldRecovery.card_canonical_good_four_tuple_finset_lower": {
+    "emitted_type": "CorruptedFieldRecovery.card_canonical_good_four_tuple_finset_lower.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (D : Finset.{u_1} K),\n  LE.le.{0}\n    (HMul.hMul.{0, 0, 0}\n      (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A)\n        (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)))\n      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))\n        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))\n          (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1))))\n    (Finset.card.{u_1}\n      (Finset.sigma.{u_1, u_1} (CorruptedFieldRecovery.cleanFrameSet\u271d.{u_1, u_1} A)\n        (CorruptedFieldRecovery.goodFourthFinset\u271d.{u_1} K A D)))\n",
+    "sha256": "666e75006ce70fdf477868ccb253535633703f4f5e1eea92bf9e1f4afc02aab7"
+  }
+}

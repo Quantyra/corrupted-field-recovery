@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.zmodTwo_eq_zero_or_one": {
+    "emitted_type": "CorruptedFieldRecovery.zmodTwo_eq_zero_or_one : \u2200 (c : ZMod 2), Or (Eq.{1} c 0) (Eq.{1} c 1)\n",
+    "sha256": "7db9e4a3d0a239ac24cc8b29a921b3e1e79a5be8541374410b14a31a0930f87c"
+  },
+  "CorruptedFieldRecovery.rawPolynomialBitsFuel_decode": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialBitsFuel_decode : \u2200 (fuel : Nat) (p : Polynomial.{0} (ZMod 2))\n  (hdeg : LT.lt.{0} (Polynomial.natDegree.{0} p) fuel),\n  Eq.{1} (CorruptedFieldRecovery.rawBoolListPolynomial (CorruptedFieldRecovery.rawPolynomialBitsFuel fuel p)) p\n",
+    "sha256": "49c6e5e6da497f5d97587614e9aa2b90af0da8215b714e1a7d0d55c3931a14f4"
+  },
+  "CorruptedFieldRecovery.rawPolynomialBits_decode": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialBits_decode : \u2200 (p : Polynomial.{0} (ZMod 2)),\n  Eq.{1} (CorruptedFieldRecovery.rawBoolListPolynomial (CorruptedFieldRecovery.rawPolynomialBits p)) p\n",
+    "sha256": "eea7d88622388ad7cea30a41a39f73b6cdd31eb7caae594f8b914ca02aae2e48"
+  }
+}

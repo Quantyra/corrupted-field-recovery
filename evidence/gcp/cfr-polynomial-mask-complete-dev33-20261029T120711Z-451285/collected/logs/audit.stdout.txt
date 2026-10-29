@@ -1,0 +1,15 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.zmodTwo_eq_zero_or_one
+CorruptedFieldRecovery.zmodTwo_eq_zero_or_one : ∀ (c : ZMod 2), Or (Eq.{1} c 0) (Eq.{1} c 1)
+CFR_TYPE_END:CorruptedFieldRecovery.zmodTwo_eq_zero_or_one
+'CorruptedFieldRecovery.zmodTwo_eq_zero_or_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialBitsFuel_decode
+CorruptedFieldRecovery.rawPolynomialBitsFuel_decode : ∀ (fuel : Nat) (p : Polynomial.{0} (ZMod 2))
+  (hdeg : LT.lt.{0} (Polynomial.natDegree.{0} p) fuel),
+  Eq.{1} (CorruptedFieldRecovery.rawBoolListPolynomial (CorruptedFieldRecovery.rawPolynomialBitsFuel fuel p)) p
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialBitsFuel_decode
+'CorruptedFieldRecovery.rawPolynomialBitsFuel_decode' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialBits_decode
+CorruptedFieldRecovery.rawPolynomialBits_decode : ∀ (p : Polynomial.{0} (ZMod 2)),
+  Eq.{1} (CorruptedFieldRecovery.rawBoolListPolynomial (CorruptedFieldRecovery.rawPolynomialBits p)) p
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialBits_decode
+'CorruptedFieldRecovery.rawPolynomialBits_decode' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

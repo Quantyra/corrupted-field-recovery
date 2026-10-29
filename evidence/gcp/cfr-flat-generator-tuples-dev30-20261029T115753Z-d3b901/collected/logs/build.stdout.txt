@@ -1,0 +1,11 @@
+⚠ [2952/2952] Built CorruptedFieldRecovery.ProbabilityCanonicalFlatTupleBridge (3.1s)
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:15:11: unused variable `fr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:15:19: unused variable `xy`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:15:27: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (2952 jobs).

@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-29T12:16:42.500365+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Proof-only finite-fuel encoding of every binary polynomial with decode roundtrip, deriving existence of a mask.",
+  "not_established": [
+    "mask degree and range bounds",
+    "factor enumeration completeness",
+    "irreducibility",
+    "executable encoding"
+  ],
+  "basis": "Root inspected exact source and emitted types after saved GCP build/three declaration audits."
+}

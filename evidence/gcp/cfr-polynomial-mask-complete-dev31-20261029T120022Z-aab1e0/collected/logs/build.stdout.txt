@@ -1,0 +1,21 @@
+✖ [1506/1506] Building CorruptedFieldRecovery.RawPolynomialMaskCompleteness (1.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawPolynomialMaskCompleteness.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialMaskCompleteness.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialMaskCompleteness.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPolynomialMaskCompleteness.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPolynomialMaskCompleteness.setup.json --json
+error: CorruptedFieldRecovery/RawPolynomialMaskCompleteness.lean:59:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rawPolynomialBitsFuel ?fuel 0
+in the target expression
+  C (p.coeff 0) + X * 0 = p
+
+case pos
+fuel : ℕ
+ih : ∀ (p : (ZMod 2)[X]), p.natDegree < fuel → rawBoolListPolynomial (rawPolynomialBitsFuel fuel p) = p
+p : (ZMod 2)[X]
+hdeg : p.natDegree < fuel + 1
+hp : ¬p = 0
+hdiv : p.divX = 0
+hpC : p = C (p.coeff 0)
+hbits : rawPolynomialBitsFuel (fuel + 1) p = [rawCoeffBit (p.coeff 0)]
+hcoeff : (if rawCoeffBit (p.coeff 0) = true then 1 else 0) = p.coeff 0
+⊢ C (p.coeff 0) + X * 0 = p
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawPolynomialMaskCompleteness

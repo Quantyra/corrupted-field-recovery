@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-29T11:49:50.315171+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Exact little-endian Bool-list and array polynomial decoder identity to the Nat-mask polynomial.",
+  "not_established": [
+    "encoding surjectivity",
+    "irreducibility",
+    "quotient field validity"
+  ],
+  "proof_model": "Decoder is noncomputable and used only as semantic proof model.",
+  "basis": "Root inspected exact source and emitted types after saved build/three declaration audits."
+}

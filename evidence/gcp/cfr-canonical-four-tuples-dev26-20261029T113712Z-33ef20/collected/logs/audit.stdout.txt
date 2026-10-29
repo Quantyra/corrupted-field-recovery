@@ -1,0 +1,31 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_clean_frame_finset_lower
+CorruptedFieldRecovery.card_clean_frame_finset_lower.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))
+        (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1)))
+    (Finset.card.{u_1} (CorruptedFieldRecovery.cleanFrameSet✝.{u_1, u_1} A))
+CFR_TYPE_END:CorruptedFieldRecovery.card_clean_frame_finset_lower
+'CorruptedFieldRecovery.card_clean_frame_finset_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_canonical_good_four_tuple_finset_lower
+CorruptedFieldRecovery.card_canonical_good_four_tuple_finset_lower.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (D : Finset.{u_1} K),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A)
+        (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)))
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))
+        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))
+          (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1))))
+    (Finset.card.{u_1}
+      (Finset.sigma.{u_1, u_1} (CorruptedFieldRecovery.cleanFrameSet✝.{u_1, u_1} A)
+        (CorruptedFieldRecovery.goodFourthFinset✝.{u_1} K A D)))
+CFR_TYPE_END:CorruptedFieldRecovery.card_canonical_good_four_tuple_finset_lower
+'CorruptedFieldRecovery.card_canonical_good_four_tuple_finset_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

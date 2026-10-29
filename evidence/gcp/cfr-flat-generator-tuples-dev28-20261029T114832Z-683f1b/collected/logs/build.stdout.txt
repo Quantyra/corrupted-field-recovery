@@ -1,0 +1,52 @@
+✔ [2951/2952] Built CorruptedFieldRecovery.ProbabilityCanonicalFourTuples (4.1s)
+✖ [2952/2952] Building CorruptedFieldRecovery.ProbabilityCanonicalFlatTupleBridge (4.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.setup.json --json
+error: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:17:11: Application type mismatch: The argument
+  x.fst.fst.fst.1
+has type
+  K
+but is expected to have type
+  FieldTriple K
+in the application
+  Fin.cons x.fst.fst.fst.1
+error: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:18:14: Application type mismatch: The argument
+  x.fst.fst.fst.2
+has type
+  K × K
+but is expected to have type
+  FieldTriple K
+in the application
+  Fin.cons x.fst.fst.fst.2
+error: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:28:4: Type mismatch: After simplification, term
+  h'
+ has type
+  True
+but is expected to have type
+  x₀ = y₀
+error: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:31:4: Type mismatch: After simplification, term
+  h'
+ has type
+  True
+but is expected to have type
+  x₁ = y₁
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:28:11: declaration uses `sorry`
+error: CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean:59:54: unsolved goals
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Fintype K
+inst✝ : DecidableEq K
+A : Finset (FieldTriple K)
+D : Finset K
+x : Fin 4 → FieldTriple K
+⊢ (∃ a a_1 b a_2 a_3 b_1 a_4 a_5 b_2 a_6 a_7 b_3,
+      (⟨⟨(a, a_1, b), (a_2, a_3, b_1)⟩, (a_4, a_5, b_2)⟩ ∈ cleanFrameSet A ∧
+          (a_6, a_7, b_3) ∈ goodFourthFinset K A D ⟨⟨(a, a_1, b), (a_2, a_3, b_1)⟩, (a_4, a_5, b_2)⟩) ∧
+        canonicalGoodFourFlatTuple K ⟨⟨⟨(a, a_1, b), (a_2, a_3, b_1)⟩, (a_4, a_5, b_2)⟩, (a_6, a_7, b_3)⟩ = x) ↔
+    ∃ a a_1 b a_2 a_3 b_1 a_4 a_5 b_2,
+      ⟨⟨(a, a_1, b), (a_2, a_3, b_1)⟩, (a_4, a_5, b_2)⟩ ∈ cleanFrameSet A ∧
+        ∃ a_6 a_7 b_3,
+          (a_6, a_7, b_3) ∈ goodFourthFinset K A D ⟨⟨(a, a_1, b), (a_2, a_3, b_1)⟩, (a_4, a_5, b_2)⟩ ∧
+            canonicalGoodFourFlatTuple K ⟨⟨⟨(a, a_1, b), (a_2, a_3, b_1)⟩, (a_4, a_5, b_2)⟩, (a_6, a_7, b_3)⟩ = x
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProbabilityCanonicalFlatTupleBridge

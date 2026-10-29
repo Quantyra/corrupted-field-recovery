@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-polynomial-mask-complete-dev29-20261029T115157Z-438a11",
+  "utc": "2026-10-29T11:54:45.414354+00:00"
+}

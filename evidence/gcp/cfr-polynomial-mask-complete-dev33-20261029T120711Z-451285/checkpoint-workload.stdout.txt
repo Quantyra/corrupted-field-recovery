@@ -1,0 +1,29 @@
+USER         PID    PPID     ELAPSED COMMAND         COMMAND
+root           1       0    02:48:28 systemd         /sbin/init
+root         168       1    02:48:26 systemd-journal /usr/lib/systemd/systemd-journald
+root         235       1    02:48:26 multipathd      /sbin/multipathd -d -s
+root         240       1    02:48:26 systemd-udevd   /usr/lib/systemd/systemd-udevd
+systemd+     438       1    02:48:25 systemd-resolve /usr/lib/systemd/systemd-resolved
+systemd+     580       1    02:48:20 systemd-network /usr/lib/systemd/systemd-networkd
+message+     626       1    02:48:18 dbus-daemon     @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         630       1    02:48:18 google_osconfig /usr/bin/google_osconfig_agent
+root         638       1    02:48:18 networkd-dispat /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         648       1    02:48:18 snapd           /usr/lib/snapd/snapd
+syslog       694       1    02:48:18 rsyslogd        /usr/sbin/rsyslogd -n -iNONE
+_chrony      736       1    02:48:18 chronyd         /usr/sbin/chronyd -F 1
+_chrony      738     736    02:48:18 chronyd         /usr/sbin/chronyd -F 1
+root         756       1    02:48:17 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+polkitd      862       1    02:48:10 polkitd         /usr/lib/polkit-1/polkitd --no-debug
+root         878       1    02:48:05 google_guest_ag /usr/bin/google_guest_agent
+root         880       1    02:48:05 agetty          /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root         886       1    02:48:05 agetty          /sbin/agetty -o -p -- \u --noclear - linux
+root        1021       1    02:48:05 sshd            sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        1046       1    02:48:05 systemd-logind  /usr/lib/systemd/systemd-logind
+root        1051       1    02:48:04 cron            /usr/sbin/cron -f -P
+dfredri+   27340       1       00:01 systemd         /usr/lib/systemd/systemd --user
+dfredri+   27341   27340       00:00 (sd-pam)        (sd-pam)
+dfredri+   27405   27333       00:00 sshd            sshd: dfredriksen_quantyra_org@notty
+dfredri+   27406   27405       00:00 bash            bash -c echo c2V0IC1ldQppZiBwZ3JlcCAteCBsZWFuIHx8IHBncmVwIC14IGxha2U7IHRoZW4gZXhpdCA3MzsgZmkKcHMgLWVvIHVzZXIscGlkLHBwaWQsZXRpbWUsY29tbSxhcmdzIHwgYXdrICckMiA9PSAxIHx8ICQzID09IDEgfHwgJDEgIT0gInJvb3QiJwpmbG9jayAtbiAiJEhPTUUvcXVhbnR5cmEtY2ZyLXJ1bnMvY2ZyLWxlYW40MzAtYzVlYS1pc29sYXRlZC0yMDI2MTAyOGEvbG9jayIgdHJ1ZQo= | base64 -d | bash
+dfredri+   27409   27406       00:00 bash            bash
+dfredri+   27412   27409       00:00 ps              ps -eo user,pid,ppid,etime,comm,args
+dfredri+   27413   27409       00:00 awk             awk $2 == 1 || $3 == 1 || $1 != "root"

@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-29T11:44:13.570195+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Product lower bound for explicit nested Finset.sigma of clean independent frames and fourth vector coordinate avoiding arbitrary D, with truncated Nat subtraction.",
+  "not_established": [
+    "flat sample-space equivalence",
+    "nongenerator specialization",
+    "numerical or probability bound",
+    "full good-trial event"
+  ],
+  "basis": "Root inspected exact source and emitted types after saved build and two declaration audits."
+}

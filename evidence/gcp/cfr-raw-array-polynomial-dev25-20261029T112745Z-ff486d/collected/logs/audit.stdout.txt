@@ -1,0 +1,21 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsToNat_cons
+CorruptedFieldRecovery.rawBitsToNat_cons : ∀ (b : Bool) (bs : List.{0} Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (List.cons.{0} b bs)) (Nat.bit b (CorruptedFieldRecovery.rawBitsToNat bs))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsToNat_cons
+'CorruptedFieldRecovery.rawBitsToNat_cons' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBoolListPolynomial_eq_mask
+CorruptedFieldRecovery.rawBoolListPolynomial_eq_mask : ∀ (bits : List.{0} Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBoolListPolynomial bits)
+    (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawBitsToNat bits))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBoolListPolynomial_eq_mask
+'CorruptedFieldRecovery.rawBoolListPolynomial_eq_mask' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldArrayPolynomial_eq_mask
+CorruptedFieldRecovery.rawFieldArrayPolynomial_eq_mask : ∀ (bits : CorruptedFieldRecovery.RawFieldBits),
+  Eq.{1} (CorruptedFieldRecovery.rawFieldArrayPolynomial bits)
+    (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawFieldBitsToNat bits))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldArrayPolynomial_eq_mask
+'CorruptedFieldRecovery.rawFieldArrayPolynomial_eq_mask' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

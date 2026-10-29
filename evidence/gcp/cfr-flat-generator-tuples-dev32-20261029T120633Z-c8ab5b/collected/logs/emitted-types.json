@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.canonicalGoodFourFlatTuple_injective": {
+    "emitted_type": "CorruptedFieldRecovery.canonicalGoodFourFlatTuple_injective.{u_1} : \u2200 (K : Type u_1),\n  Function.Injective.{u_1 + 1, u_1 + 1} (CorruptedFieldRecovery.canonicalGoodFourFlatTuple.{u_1} K)\n",
+    "sha256": "f38fe8b049fcd81544e463b99302db3e49d55d5635c7f49d7a013c4b8a944b97"
+  },
+  "CorruptedFieldRecovery.mem_canonicalGoodFourFlatImage_iff": {
+    "emitted_type": "CorruptedFieldRecovery.mem_canonicalGoodFourFlatImage_iff.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (D : Finset.{u_1} K)\n  (x : (a : Fin 4) \u2192 CorruptedFieldRecovery.FieldTriple.{u_1} K),\n  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.canonicalGoodFourFlatImage.{u_1} K A D) x)\n    (\u2203 fr,\n      And (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.cleanFrameSet.{u_1, u_1} A) fr)\n        (\u2203 v,\n          And (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.goodFourthFinset.{u_1} K A D fr) v)\n            (Eq.{u_1 + 1} (CorruptedFieldRecovery.canonicalGoodFourFlatTuple.{u_1} K (Sigma.mk.{u_1, u_1} fr v)) x)))\n",
+    "sha256": "76388a7a5a61e9c87650df0e1307c91de024eff885ea48fb757534c82ffde8f7"
+  },
+  "CorruptedFieldRecovery.card_canonicalGoodFourFlatImage_lower": {
+    "emitted_type": "CorruptedFieldRecovery.card_canonicalGoodFourFlatImage_lower.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (D : Finset.{u_1} K),\n  LE.le.{0}\n    (HMul.hMul.{0, 0, 0}\n      (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A)\n        (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} D) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)))\n      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))\n        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))\n          (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1))))\n    (Finset.card.{u_1} (CorruptedFieldRecovery.canonicalGoodFourFlatImage.{u_1} K A D))\n",
+    "sha256": "5ad4beac7f8fa05ffa23cee3e11ac92aff0c82c3bfe339f1d41402cc06961203"
+  },
+  "CorruptedFieldRecovery.card_canonicalGoodFourGeneratorFlatImage_lower": {
+    "emitted_type": "CorruptedFieldRecovery.card_canonicalGoodFourGeneratorFlatImage_lower.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_5 : Finite.{u_1 + 1} K]\n  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)),\n  LE.le.{0}\n    (HMul.hMul.{0, 0, 0}\n      (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A)\n        (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K))\n          (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2)))\n      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} K) 2))\n        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) (Fintype.card.{u_1} K))\n          (HSub.hSub.{0, 0, 0} (Finset.card.{u_1} A) 1))))\n    (Finset.card.{u_1}\n      (CorruptedFieldRecovery.canonicalGoodFourFlatImage.{u_1} K A (CorruptedFieldRecovery.nonGenerators.{u_1} K)))\n",
+    "sha256": "58d40391953270db197cf930741fd7c95b0b4007a9d563734e6204ff8bcfeb32"
+  }
+}

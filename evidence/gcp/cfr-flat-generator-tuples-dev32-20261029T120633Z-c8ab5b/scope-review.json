@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-29T12:13:02.557458+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "Injective nested-to-flat tuple map, exact image membership and product lower bound in Fin 4 -> FieldTriple sample space, specialized to the actual nongenerator set.",
+  "not_established": [
+    "n-bit sampler mapping",
+    "fifth scalar event",
+    "numerical or probability bounds",
+    "full good-trial theorem"
+  ],
+  "basis": "Root inspected exact emitted types after saved GCP build/four declaration audits."
+}

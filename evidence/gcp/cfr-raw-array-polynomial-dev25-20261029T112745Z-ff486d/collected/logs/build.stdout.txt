@@ -1,0 +1,5 @@
+⚠ [1505/1505] Built CorruptedFieldRecovery.RawFieldArrayPolynomial (1.0s)
+warning: CorruptedFieldRecovery/RawFieldArrayPolynomial.lean:16:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (1505 jobs).

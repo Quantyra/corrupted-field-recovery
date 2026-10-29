@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T11:51:35.478449+00:00",
+  "run": "cfr-flat-generator-tuples-dev28-20261029T114832Z-683f1b",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T12:05:17.670636+00:00",
+  "run": "cfr-polynomial-mask-complete-dev31-20261029T120022Z-aab1e0",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

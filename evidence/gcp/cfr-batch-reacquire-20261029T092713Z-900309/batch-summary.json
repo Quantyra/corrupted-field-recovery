@@ -1,0 +1,307 @@
+{
+  "utc": "2026-10-29T12:21:41.932329+00:00",
+  "runs": [
+    {
+      "run": "cfr-canonical-four-tuples-dev18-20261029T105453Z-7532ad",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-canonical-four-tuples-dev20-20261029T110546Z-1b2561",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-canonical-four-tuples-dev22-20261029T111616Z-0c4eb0",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-canonical-four-tuples-dev24-20261029T112654Z-fda28f",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-canonical-four-tuples-dev26-20261029T113712Z-33ef20",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true
+    },
+    {
+      "run": "cfr-combined-count-field-dev03-20261029T094320Z-cb820a",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-combined-count-field-dev06-20261029T095356Z-4e7c63",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-flat-generator-tuples-dev28-20261029T114832Z-683f1b",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-flat-generator-tuples-dev30-20261029T115753Z-d3b901",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-flat-generator-tuples-dev32-20261029T120633Z-c8ab5b",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true
+    },
+    {
+      "run": "cfr-four-tuple-count-dev14-20261029T102626Z-0619f4",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-four-tuple-count-dev16-20261029T103951Z-24e379",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-polynomial-mask-complete-dev29-20261029T115157Z-438a11",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-polynomial-mask-complete-dev31-20261029T120022Z-aab1e0",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-polynomial-mask-complete-dev33-20261029T120711Z-451285",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true
+    },
+    {
+      "run": "cfr-probability-assembly-dev01-20261029T093132Z-8d27ee",
+      "launched": false,
+      "collected": false,
+      "status": null,
+      "failure": null,
+      "scope_review": false
+    },
+    {
+      "run": "cfr-probability-basis-transport-dev01-20261029T093729Z-8df953",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('Mathlib.Data.Array.Lemmas')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-probability-basis-transport-dev02-20261029T094251Z-9ab702",
+      "launched": false,
+      "collected": false,
+      "status": null,
+      "failure": null,
+      "scope_review": false
+    },
+    {
+      "run": "cfr-probability-counts-dev05-20261029T095020Z-385367",
+      "launched": false,
+      "collected": false,
+      "status": null,
+      "failure": null,
+      "scope_review": false
+    },
+    {
+      "run": "cfr-probability-counts-dev09-20261029T100212Z-f6441e",
+      "launched": false,
+      "collected": false,
+      "status": null,
+      "failure": null,
+      "scope_review": false
+    },
+    {
+      "run": "cfr-probability-counts-dev10-20261029T100952Z-76a5f0",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-probability-counts-dev12-20261029T101645Z-01bfaa",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true
+    },
+    {
+      "run": "cfr-raw-array-polynomial-dev23-20261029T111626Z-765797",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-array-polynomial-dev25-20261029T112745Z-ff486d",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-array-polynomial-dev27-20261029T113825Z-06ef79",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true
+    },
+    {
+      "run": "cfr-raw-field-candidate-audit08-20261029T100010Z-619ea8",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true
+    },
+    {
+      "run": "cfr-raw-field-candidate-dev01-20261029T092842Z-aff7ca",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-field-candidate-dev04-20261029T094915Z-c93f1c",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-polynomial-bridge-dev07-20261029T095827Z-da6f0f",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-polynomial-bridge-dev11-20261029T101458Z-e97268",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-polynomial-bridge-dev13-20261029T102455Z-8d168d",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-polynomial-bridge-dev15-20261029T103356Z-48d614",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-polynomial-bridge-dev17-20261029T104328Z-e7cd31",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-polynomial-bridge-dev19-20261029T105740Z-f65dc8",
+      "launched": true,
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "scope_review": false
+    },
+    {
+      "run": "cfr-raw-polynomial-bridge-dev21-20261029T110752Z-d221fc",
+      "launched": true,
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "scope_review": true
+    }
+  ],
+  "accepted_runs": [
+    "cfr-canonical-four-tuples-dev26-20261029T113712Z-33ef20",
+    "cfr-flat-generator-tuples-dev32-20261029T120633Z-c8ab5b",
+    "cfr-polynomial-mask-complete-dev33-20261029T120711Z-451285",
+    "cfr-probability-counts-dev12-20261029T101645Z-01bfaa",
+    "cfr-raw-array-polynomial-dev27-20261029T113825Z-06ef79",
+    "cfr-raw-field-candidate-audit08-20261029T100010Z-619ea8",
+    "cfr-raw-polynomial-bridge-dev21-20261029T110752Z-d221fc"
+  ],
+  "shutdown_receipt": "cfr-polynomial-mask-complete-dev33-20261029T120711Z-451285/cfr-shutdown-20261029T121723Z-dc3aa0-result.json",
+  "shutdown": {
+    "initial_state": "RUNNING",
+    "final_state": "TERMINATED",
+    "utc": "2026-10-29T12:21:14.026106+00:00",
+    "started_for_task": true,
+    "stop_verified": true,
+    "persistent_cache_retained": true
+  },
+  "external_egress_removed": true,
+  "all_launched_outcomes_collected": true,
+  "no_queued_capture": true,
+  "remaining": "S006 full model, field validator, sampler/fifth event, numerical probability, constructor, cost and final theorem/audit remain open."
+}

@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-flat-generator-tuples-dev30-20261029T115753Z-d3b901",
+  "utc": "2026-10-29T11:59:02.195274+00:00"
+}

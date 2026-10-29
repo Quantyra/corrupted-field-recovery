@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.rawBitsToNat_cons": {
+    "emitted_type": "CorruptedFieldRecovery.rawBitsToNat_cons : \u2200 (b : Bool) (bs : List.{0} Bool),\n  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (List.cons.{0} b bs)) (Nat.bit b (CorruptedFieldRecovery.rawBitsToNat bs))\n",
+    "sha256": "86ecc40588056414a741179b95c3d94def2fea5c8066f0ce3e4287fbe5b60416"
+  },
+  "CorruptedFieldRecovery.rawBoolListPolynomial_eq_mask": {
+    "emitted_type": "CorruptedFieldRecovery.rawBoolListPolynomial_eq_mask : \u2200 (bits : List.{0} Bool),\n  Eq.{1} (CorruptedFieldRecovery.rawBoolListPolynomial bits)\n    (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawBitsToNat bits))\n",
+    "sha256": "b5d084c0530292dadd3c9cf15e009a9fa9715ffe79f7d0d8a2876aa05b8b991f"
+  },
+  "CorruptedFieldRecovery.rawFieldArrayPolynomial_eq_mask": {
+    "emitted_type": "CorruptedFieldRecovery.rawFieldArrayPolynomial_eq_mask : \u2200 (bits : CorruptedFieldRecovery.RawFieldBits),\n  Eq.{1} (CorruptedFieldRecovery.rawFieldArrayPolynomial bits)\n    (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawFieldBitsToNat bits))\n",
+    "sha256": "bf9b97fdc445630168f48efbf639645575d78b01f1a2df15cf872f230354c0bb"
+  }
+}
