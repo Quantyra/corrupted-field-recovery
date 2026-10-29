@@ -1,0 +1,34 @@
+✖ [2951/2951] Building CorruptedFieldRecovery.S010ModeImageTraceTransport (5.1s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ModeImageTraceTransport.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageTraceTransport.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageTraceTransport.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ModeImageTraceTransport.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ModeImageTraceTransport.setup.json --json
+error: CorruptedFieldRecovery/S010ModeImageTraceTransport.lean:50:72: Application type mismatch: The argument
+  P
+has type
+  Submodule.{0, 0} BinaryField (Module.Dual BinaryField (BinaryVector (3 * s)))
+of sort `Type` but is expected to have type
+  Submodule.{0, u_1} BinaryField (KTriple K)
+of sort `Type u_1` in the application
+  Submodule.map f P
+error: CorruptedFieldRecovery/S010ModeImageTraceTransport.lean:90:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (Q.dualMap.symm ?g) (Q x)
+in the target expression
+  (↑Q.dualMap.symm g) (Q x) = 0
+
+case mpr
+K : Type u_1
+inst✝³ : Field K
+inst✝² : Finite K
+inst✝¹ : Algebra BinaryField K
+inst✝ : FiniteDimensional BinaryField K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+x : BinaryVector (3 * s)
+htransport : ∀ (g : Module.Dual BinaryField (BinaryVector (3 * s))), (Q.dualMap.symm g) (Q x) = g x
+hx : ∀ φ ∈ modeImage E, φ x = 0
+g : Module.Dual BinaryField (BinaryVector (3 * s))
+hg : g ∈ modeImage E
+hf : ↑Q.dualMap.symm g ∈ Submodule.map (↑Q.dualMap.symm) (modeImage E)
+⊢ (↑Q.dualMap.symm g) (Q x) = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ModeImageTraceTransport
