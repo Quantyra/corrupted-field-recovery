@@ -1,0 +1,336 @@
+✖ [1838/1838] Building CorruptedFieldRecovery.RawCoordinateEquivalence (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCoordinateEquivalence.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCoordinateEquivalence.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCoordinateEquivalence.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCoordinateEquivalence.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCoordinateEquivalence.setup.json --json
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:6: don't know how to synthesize implicit argument `α`
+  @Eq (BinaryVector (?m.59 forward inverse hcheck) →ₗ[ZMod 2] BinaryVector (?m.59 forward inverse hcheck))
+    (rawCoordinateMatrixMap forward ∘ₗ rawCoordinateMatrixMap inverse) LinearMap.id
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:49:8: don't know how to synthesize implicit argument
+  @LinearMap.id (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck)) Field.toSemifield.toDivisionSemiring.toSemiring
+    Pi.addCommMonoid (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Module (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:49:8: don't know how to synthesize implicit argument
+  @LinearMap.id (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck)) Field.toSemifield.toDivisionSemiring.toSemiring
+    Pi.addCommMonoid (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ AddCommMonoid (BinaryVector (?m.59 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:49:8: don't know how to synthesize implicit argument `M`
+  @LinearMap.id (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck)) Field.toSemifield.toDivisionSemiring.toSemiring
+    Pi.addCommMonoid (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:6: don't know how to synthesize implicit argument `module_M₃`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+    (BinaryVector (?m.59 forward inverse hcheck)) (BinaryVector (?m.59 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap forward) (rawCoordinateMatrixMap inverse)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Module (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:6: don't know how to synthesize implicit argument `module_M₂`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+    (BinaryVector (?m.59 forward inverse hcheck)) (BinaryVector (?m.59 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap forward) (rawCoordinateMatrixMap inverse)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Module (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:6: don't know how to synthesize implicit argument `module_M₁`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+    (BinaryVector (?m.59 forward inverse hcheck)) (BinaryVector (?m.59 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap forward) (rawCoordinateMatrixMap inverse)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Module (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:6: don't know how to synthesize implicit argument `M₃`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+    (BinaryVector (?m.59 forward inverse hcheck)) (BinaryVector (?m.59 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap forward) (rawCoordinateMatrixMap inverse)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:6: don't know how to synthesize implicit argument `M₂`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+    (BinaryVector (?m.59 forward inverse hcheck)) (BinaryVector (?m.59 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap forward) (rawCoordinateMatrixMap inverse)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:6: don't know how to synthesize implicit argument `M₁`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.59 forward inverse hcheck))
+    (BinaryVector (?m.59 forward inverse hcheck)) (BinaryVector (?m.59 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.59 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap forward) (rawCoordinateMatrixMap inverse)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:45: don't know how to synthesize implicit argument `n`
+  @rawCoordinateMatrixMap (?m.59 forward inverse hcheck) inverse
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:48:7: don't know how to synthesize implicit argument `n`
+  @rawCoordinateMatrixMap (?m.59 forward inverse hcheck) forward
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:4: don't know how to synthesize implicit argument `α`
+  @Eq (BinaryVector (?m.58 forward inverse hcheck) →ₗ[ZMod 2] BinaryVector (?m.58 forward inverse hcheck))
+    (rawCoordinateMatrixMap inverse ∘ₗ rawCoordinateMatrixMap forward) LinearMap.id
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:47:8: don't know how to synthesize implicit argument
+  @LinearMap.id (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck)) Field.toSemifield.toDivisionSemiring.toSemiring
+    Pi.addCommMonoid (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Module (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:47:8: don't know how to synthesize implicit argument
+  @LinearMap.id (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck)) Field.toSemifield.toDivisionSemiring.toSemiring
+    Pi.addCommMonoid (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ AddCommMonoid (BinaryVector (?m.58 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:47:8: don't know how to synthesize implicit argument `M`
+  @LinearMap.id (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck)) Field.toSemifield.toDivisionSemiring.toSemiring
+    Pi.addCommMonoid (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:4: don't know how to synthesize implicit argument `module_M₃`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+    (BinaryVector (?m.58 forward inverse hcheck)) (BinaryVector (?m.58 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap inverse) (rawCoordinateMatrixMap forward)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Module (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:4: don't know how to synthesize implicit argument `module_M₂`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+    (BinaryVector (?m.58 forward inverse hcheck)) (BinaryVector (?m.58 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap inverse) (rawCoordinateMatrixMap forward)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Module (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:4: don't know how to synthesize implicit argument `module_M₁`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+    (BinaryVector (?m.58 forward inverse hcheck)) (BinaryVector (?m.58 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap inverse) (rawCoordinateMatrixMap forward)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Module (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:4: don't know how to synthesize implicit argument `M₃`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+    (BinaryVector (?m.58 forward inverse hcheck)) (BinaryVector (?m.58 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap inverse) (rawCoordinateMatrixMap forward)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:4: don't know how to synthesize implicit argument `M₂`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+    (BinaryVector (?m.58 forward inverse hcheck)) (BinaryVector (?m.58 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap inverse) (rawCoordinateMatrixMap forward)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:4: don't know how to synthesize implicit argument `M₁`
+  @LinearMap.comp (ZMod 2) (ZMod 2) (ZMod 2) (BinaryVector (?m.58 forward inverse hcheck))
+    (BinaryVector (?m.58 forward inverse hcheck)) (BinaryVector (?m.58 forward inverse hcheck))
+    Field.toSemifield.toDivisionSemiring.toSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid Pi.addCommMonoid Pi.addCommMonoid
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2))
+    (Pi.Function.module (Fin (?m.58 forward inverse hcheck)) (ZMod 2) (ZMod 2)) (RingHom.id (ZMod 2))
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ (rawCoordinateMatrixMap inverse) (rawCoordinateMatrixMap forward)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:43: don't know how to synthesize implicit argument `n`
+  @rawCoordinateMatrixMap (?m.58 forward inverse hcheck) forward
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:46:5: don't know how to synthesize implicit argument `n`
+  @rawCoordinateMatrixMap (?m.58 forward inverse hcheck) inverse
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:45:14: don't know how to synthesize implicit argument `n`
+  @rawCoordinateMatrixCheck (?m.57 forward inverse) forward inverse
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:43:14: 'theorem' subsumes 'noncomputable', code is not generated for theorems
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:76:14: don't know how to synthesize implicit argument `n`
+  @rawCoordinateMatrixCheck (?m.17 forward inverse) forward inverse
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+⊢ ℕ
+
+Note: Because this declaration's type has been explicitly provided, all parameter types and holes (e.g., `_`) in its header are resolved before its body is processed; information from the declaration body cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:79:18: Unknown identifier `accepted_rawCoordinateMatrixCheck_compositions`
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:78:60: unsolved goals
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Function.Bijective ⇑(rawCoordinateMatrixMap forward)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCoordinateEquivalence
