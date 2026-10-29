@@ -1,0 +1,29 @@
+{
+  "run": "cfr-trace-algebra-dev51-20261029T231447Z-0334fd",
+  "utc": "2026-10-29T23:26:40.167004+00:00",
+  "archive_sha256": "f319f284dd061621219f8246b8a51e31cbaaaf4924070b3c9feb3e8476fe847f",
+  "recovered_from": "cfr-collect-20261029T232354Z-c33455-package",
+  "package_transport_exit": 3221225477,
+  "all_terminal_log_hashes_verified": true,
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "1fb82f894f60798c485fe3e5b0583984dad75746d23522092b946b7736cff412",
+    "launch.log": "9951da880d0296dcdc1ccbca76429fe1ddfd3dd0e8ceba819ed43ff4e9294130",
+    "runner-pid": "39d85698bcc3c37aff68ea18919e903bd2e6df5c8028012638c0c03af9fcd2d2",
+    "started-utc": "d155ae6064a488d55a25198c42a09919a4001dfc00f8f7a3f6ed4ec2b36dddc6",
+    "terminal-receipt.json": "d3568c45899bcda95b5b32111ffc2c76da1c5c21140f1539d8033a0e559516e7",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "51280714b26c3d28681a3aabfc3193b30294b83884490336af5c0d2c1b5ca497",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "0b06ef60b51bd6b6e99a73b149dd8cf85c4f6c391383a4987b27f80276b06224",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/emitted-types.json": "9dece2e7e519dd5497fa8f37d9ad2290afcdede731a609632e8c6238a0639833",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "9951da880d0296dcdc1ccbca76429fe1ddfd3dd0e8ceba819ed43ff4e9294130"
+  }
+}

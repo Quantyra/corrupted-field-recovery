@@ -1,0 +1,23 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidate_finrank
+@CorruptedFieldRecovery.accepted_rawCandidate_finrank : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),
+  Eq.{1} (Module.finrank.{0, 0} (ZMod 2) (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))) s
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidate_finrank
+'CorruptedFieldRecovery.accepted_rawCandidate_finrank' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTraceBits_quotient_eq_algebraTrace
+@CorruptedFieldRecovery.rawFieldTraceBits_quotient_eq_algebraTrace : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (x : Nat),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate
+      (CorruptedFieldRecovery.rawFieldTraceBits candidate hcheck x))
+    ((AdjoinRoot.of.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      ((Algebra.trace.{0, 0} (ZMod 2) (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))
+        (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTraceBits_quotient_eq_algebraTrace
+'CorruptedFieldRecovery.rawFieldTraceBits_quotient_eq_algebraTrace' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

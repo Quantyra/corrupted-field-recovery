@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.accepted_rawCandidate_finrank": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidate_finrank : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),\n  Eq.{1} (Module.finrank.{0, 0} (ZMod 2) (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))) s\n",
+    "sha256": "a824bd2f93c0218e9d34ddf079b90b9547770d8e43dbae2a005fae1705362418"
+  },
+  "CorruptedFieldRecovery.rawFieldTraceBits_quotient_eq_algebraTrace": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldTraceBits_quotient_eq_algebraTrace : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (x : Nat),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate\n      (CorruptedFieldRecovery.rawFieldTraceBits candidate hcheck x))\n    ((AdjoinRoot.of.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n      ((Algebra.trace.{0, 0} (ZMod 2) (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))\n        (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x)))\n",
+    "sha256": "3ac08c1e5d3b93c7dfebb0f6282129abd5ea10954bb896e220d4b3fdf4a56f76"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Accepted-candidate quotient finrank=s; computed trace mask quotient class equals embedded algebraic trace for arbitrary Nat input x, retaining candidate check.",
+  "remaining": "Raw-mask base-bit extraction, determinant/coordinates/verifier and cost remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261029T221338Z-1cdd08"
+}
