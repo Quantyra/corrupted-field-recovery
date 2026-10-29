@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T19:07:38.611798+00:00",
+  "run": "cfr-proper-degree-dev03-20261029T190012Z-e98512",
+  "superseded_by": "cfr-actual-numeric-dev06-20261029T190420Z-f7885d",
+  "never_submitted": true,
+  "reason": "Combined public declaration audit; omit private helper export"
+}

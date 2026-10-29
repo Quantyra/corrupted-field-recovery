@@ -1,0 +1,60 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.one_sub_mul_one_sub_lower
+@CorruptedFieldRecovery.one_sub_mul_one_sub_lower : ∀ {x y : Rat} (hx : LE.le.{0} 0 x) (hy : LE.le.{0} 0 y),
+  GE.ge.{0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 x) (HSub.hSub.{0, 0, 0} 1 y))
+    (HSub.hSub.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} x y))
+CFR_TYPE_END:CorruptedFieldRecovery.one_sub_mul_one_sub_lower
+'CorruptedFieldRecovery.one_sub_mul_one_sub_lower' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.four_one_sub_product_lower
+@CorruptedFieldRecovery.four_one_sub_product_lower : ∀ {a b c d : Rat} (ha : LE.le.{0} 0 a) (hb : LE.le.{0} 0 b)
+  (hc : LE.le.{0} 0 c) (hd : LE.le.{0} 0 d)
+  (habcd : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} a b) c) d) 1),
+  GE.ge.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 a) (HSub.hSub.{0, 0, 0} 1 b))
+        (HSub.hSub.{0, 0, 0} 1 c))
+      (HSub.hSub.{0, 0, 0} 1 d))
+    (HSub.hSub.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} a b) c) d))
+CFR_TYPE_END:CorruptedFieldRecovery.four_one_sub_product_lower
+'CorruptedFieldRecovery.four_one_sub_product_lower' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower
+@CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower : ∀ {A b₁ b₂ b₃ b₄ : Nat} (hA : LT.lt.{0} 0 A)
+  (hb₁ : LE.le.{0} b₁ A) (hb₂ : LE.le.{0} b₂ A) (hb₃ : LE.le.{0} b₃ A) (hb₄ : LE.le.{0} b₄ A)
+  (hloss :
+    LE.le.{0}
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} ↑b₁ ↑A) (HDiv.hDiv.{0, 0, 0} ↑b₂ ↑A))
+          (HDiv.hDiv.{0, 0, 0} ↑b₃ ↑A))
+        (HDiv.hDiv.{0, 0, 0} ↑b₄ ↑A))
+      1),
+  GE.ge.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} ↑(HSub.hSub.{0, 0, 0} A b₁) ↑A)
+          (HDiv.hDiv.{0, 0, 0} ↑(HSub.hSub.{0, 0, 0} A b₂) ↑A))
+        (HDiv.hDiv.{0, 0, 0} ↑(HSub.hSub.{0, 0, 0} A b₃) ↑A))
+      (HDiv.hDiv.{0, 0, 0} ↑(HSub.hSub.{0, 0, 0} A b₄) ↑A))
+    (HSub.hSub.{0, 0, 0} 1
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} ↑b₁ ↑A) (HDiv.hDiv.{0, 0, 0} ↑b₂ ↑A))
+          (HDiv.hDiv.{0, 0, 0} ↑b₃ ↑A))
+        (HDiv.hDiv.{0, 0, 0} ↑b₄ ↑A)))
+CFR_TYPE_END:CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower
+'CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.four_clean_losses_le_beta
+@CorruptedFieldRecovery.four_clean_losses_le_beta : ∀ {q a p t : Rat} (hq : LT.lt.{0} 0 q) (ha : LT.lt.{0} 0 a)
+  (ht : LE.le.{0} 0 t) (hgain : LE.le.{0} (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} q 3) a) p),
+  LE.le.{0}
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} 1 a) (HDiv.hDiv.{0, 0, 0} q a))
+        (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} q 2) a))
+      (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} t (HPow.hPow.{0, 0, 0} q 2)) a))
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} p (HPow.hPow.{0, 0, 0} q 3))
+          (HDiv.hDiv.{0, 0, 0} p (HPow.hPow.{0, 0, 0} q 2)))
+        (HDiv.hDiv.{0, 0, 0} p q))
+      (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} p t) q))
+CFR_TYPE_END:CorruptedFieldRecovery.four_clean_losses_le_beta
+'CorruptedFieldRecovery.four_clean_losses_le_beta' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

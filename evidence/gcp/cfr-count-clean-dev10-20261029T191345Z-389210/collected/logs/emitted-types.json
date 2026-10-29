@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.one_sub_mul_one_sub_lower": {
+    "emitted_type": "@CorruptedFieldRecovery.one_sub_mul_one_sub_lower : \u2200 {x y : Rat} (hx : LE.le.{0} 0 x) (hy : LE.le.{0} 0 y),\n  GE.ge.{0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 x) (HSub.hSub.{0, 0, 0} 1 y))\n    (HSub.hSub.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} x y))\n",
+    "sha256": "087a84335e9076ce89aad6d58879a9741a4bf4c4ecdaa631c50465c44376fb35"
+  },
+  "CorruptedFieldRecovery.four_one_sub_product_lower": {
+    "emitted_type": "@CorruptedFieldRecovery.four_one_sub_product_lower : \u2200 {a b c d : Rat} (ha : LE.le.{0} 0 a) (hb : LE.le.{0} 0 b)\n  (hc : LE.le.{0} 0 c) (hd : LE.le.{0} 0 d)\n  (habcd : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} a b) c) d) 1),\n  GE.ge.{0}\n    (HMul.hMul.{0, 0, 0}\n      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 a) (HSub.hSub.{0, 0, 0} 1 b))\n        (HSub.hSub.{0, 0, 0} 1 c))\n      (HSub.hSub.{0, 0, 0} 1 d))\n    (HSub.hSub.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} a b) c) d))\n",
+    "sha256": "a8d07462f939e226b3874ab4c7095789f0ff6005b0871d89fad80f82f5cb593d"
+  },
+  "CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower": {
+    "emitted_type": "@CorruptedFieldRecovery.four_nat_sub_factors_normalized_lower : \u2200 {A b\u2081 b\u2082 b\u2083 b\u2084 : Nat} (hA : LT.lt.{0} 0 A)\n  (hb\u2081 : LE.le.{0} b\u2081 A) (hb\u2082 : LE.le.{0} b\u2082 A) (hb\u2083 : LE.le.{0} b\u2083 A) (hb\u2084 : LE.le.{0} b\u2084 A)\n  (hloss :\n    LE.le.{0}\n      (HAdd.hAdd.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} \u2191b\u2081 \u2191A) (HDiv.hDiv.{0, 0, 0} \u2191b\u2082 \u2191A))\n          (HDiv.hDiv.{0, 0, 0} \u2191b\u2083 \u2191A))\n        (HDiv.hDiv.{0, 0, 0} \u2191b\u2084 \u2191A))\n      1),\n  GE.ge.{0}\n    (HMul.hMul.{0, 0, 0}\n      (HMul.hMul.{0, 0, 0}\n        (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} \u2191(HSub.hSub.{0, 0, 0} A b\u2081) \u2191A)\n          (HDiv.hDiv.{0, 0, 0} \u2191(HSub.hSub.{0, 0, 0} A b\u2082) \u2191A))\n        (HDiv.hDiv.{0, 0, 0} \u2191(HSub.hSub.{0, 0, 0} A b\u2083) \u2191A))\n      (HDiv.hDiv.{0, 0, 0} \u2191(HSub.hSub.{0, 0, 0} A b\u2084) \u2191A))\n    (HSub.hSub.{0, 0, 0} 1\n      (HAdd.hAdd.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} \u2191b\u2081 \u2191A) (HDiv.hDiv.{0, 0, 0} \u2191b\u2082 \u2191A))\n          (HDiv.hDiv.{0, 0, 0} \u2191b\u2083 \u2191A))\n        (HDiv.hDiv.{0, 0, 0} \u2191b\u2084 \u2191A)))\n",
+    "sha256": "60ef7003743786dd98bf3b0a845afc5b454b172f61446c97e0067f4d4b37ac0d"
+  },
+  "CorruptedFieldRecovery.four_clean_losses_le_beta": {
+    "emitted_type": "@CorruptedFieldRecovery.four_clean_losses_le_beta : \u2200 {q a p t : Rat} (hq : LT.lt.{0} 0 q) (ha : LT.lt.{0} 0 a)\n  (ht : LE.le.{0} 0 t) (hgain : LE.le.{0} (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} q 3) a) p),\n  LE.le.{0}\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} 1 a) (HDiv.hDiv.{0, 0, 0} q a))\n        (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} q 2) a))\n      (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} t (HPow.hPow.{0, 0, 0} q 2)) a))\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} p (HPow.hPow.{0, 0, 0} q 3))\n          (HDiv.hDiv.{0, 0, 0} p (HPow.hPow.{0, 0, 0} q 2)))\n        (HDiv.hDiv.{0, 0, 0} p q))\n      (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} p t) q))\n",
+    "sha256": "5d3a1e821b95230301b27535af3f32a8dac2f2d791e881972c50dcb0f9ccc4b5"
+  }
+}

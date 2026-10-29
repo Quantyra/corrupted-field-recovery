@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T19:22:01.131629+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Rational four-factor bound; truncated Nat normalization under positivity, individual bounds and loss premises; clean loss <= beta given q^3/a <= p.",
+  "remaining": "Does not derive premises, actual finite count or probability.",
+  "evidence": "collected/logs/emitted-types.json"
+}

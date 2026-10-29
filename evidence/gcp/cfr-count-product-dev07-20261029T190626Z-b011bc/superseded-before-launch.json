@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T19:15:32.900661+00:00",
+  "run": "cfr-count-product-dev07-20261029T190626Z-b011bc",
+  "superseded_by": "cfr-count-clean-dev08-20261029T190924Z-76829b",
+  "never_submitted": true,
+  "reason": "Combined independent clean-loss audit with corrected count product"
+}

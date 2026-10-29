@@ -1,0 +1,82 @@
+✖ [2943/2947] Building CorruptedFieldRecovery.S010SizeArithmetic (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010SizeArithmetic.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010SizeArithmetic.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010SizeArithmetic.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010SizeArithmetic.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010SizeArithmetic.setup.json --json
+error: CorruptedFieldRecovery/S010SizeArithmetic.lean:13:47: Function expected at
+  Nat.mul_lt_mul_left ?m.140
+but this term has type
+  ?m.137 * ?m.138 < ?m.137 * ?m.139 ↔ ?m.138 < ?m.139
+
+Note: Expected a function because this term is being applied to the argument
+  htau
+error: CorruptedFieldRecovery/S010SizeArithmetic.lean:21:12: Function expected at
+  Nat.mul_lt_mul_left ?m.375
+but this term has type
+  ?m.362 * ?m.363 < ?m.362 * ?m.364 ↔ ?m.363 < ?m.364
+
+Note: Expected a function because this term is being applied to the argument
+  hmul
+error: CorruptedFieldRecovery/S010SizeArithmetic.lean:21:33: Type mismatch
+  ?m.374 ^ 2
+has type
+  ?m.372
+of sort `outParam (Type ?u.554.7408)` but is expected to have type
+  0 < ?m.362
+of sort `Prop`
+error: Lean exited with code 1
+✖ [2944/2947] Building CorruptedFieldRecovery.S010BetaArithmetic (3.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BetaArithmetic.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BetaArithmetic.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BetaArithmetic.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BetaArithmetic.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BetaArithmetic.setup.json --json
+error: CorruptedFieldRecovery/S010BetaArithmetic.lean:9:24: linarith failed to find a contradiction
+case h
+p q : ℚ
+hq32 : 32 ≤ q
+hpq : 32 * p ≤ q
+hq : 0 < q
+a✝ : p < 0
+⊢ False
+failed
+error: CorruptedFieldRecovery/S010BetaArithmetic.lean:50:34: unsolved goals
+s R T : ℕ
+hsize : 2 * R + 5 ≤ s
+htau : 4 * (2 ^ R * T) < 2 ^ s
+p : ℚ := 2 ^ R
+q : ℚ := 2 ^ s
+hq32Nat : 32 ≤ 2 ^ s
+hexp : R + 5 ≤ s
+h : 2 ^ (R + 5) ≤ 2 ^ s
+⊢ 32 * 2 ^ R = 2 ^ R * 32
+error: Lean exited with code 1
+✖ [2945/2947] Building CorruptedFieldRecovery.S010ProperDegreeArithmetic (3.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ProperDegreeArithmetic.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ProperDegreeArithmetic.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ProperDegreeArithmetic.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ProperDegreeArithmetic.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ProperDegreeArithmetic.setup.json --json
+error: CorruptedFieldRecovery/S010ProperDegreeArithmetic.lean:29:26: Type mismatch
+  Module.finrank_pos
+has type
+  0 < Module.finrank ?m.109 ?m.110
+but is expected to have type
+  0 < s
+error: CorruptedFieldRecovery/S010ProperDegreeArithmetic.lean:36:28: unsolved goals
+K : Type u_1
+inst✝³ : Field K
+inst✝² : Finite K
+inst✝¹ : Algebra BinaryField K
+inst✝ : FiniteDimensional BinaryField K
+s : ℕ
+hs : Module.finrank BinaryField K = s
+m : ℕ := s / 2
+d : ℕ
+hdlt : d < Module.finrank BinaryField K
+hdiv : d ∣ Module.finrank BinaryField K
+hds : d < s
+hdpos : 0 < s
+hdle : d ≤ s
+hdz : ¬d = 0
+hdpos' : 0 < d
+k : ℕ
+h : ¬0 < k
+this : k = 0
+hk : s = 0
+⊢ False
+error: CorruptedFieldRecovery/S010ProperDegreeArithmetic.lean:59:2: `dsimp` made no progress
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010SizeArithmetic
+- CorruptedFieldRecovery.S010BetaArithmetic
+- CorruptedFieldRecovery.S010ProperDegreeArithmetic
