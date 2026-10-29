@@ -1,0 +1,64 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hiddenFourBalanced
+CorruptedFieldRecovery.hiddenFourBalanced.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        {n : Nat} →
+          (ι :
+              LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K)))
+                (CorruptedFieldRecovery.BinaryInput.{u_1} K n) (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+            (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+              (v : CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+                (c : K) →
+                  (T : Module.End.{0, 0} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)) →
+                    Prop
+CFR_TYPE_END:CorruptedFieldRecovery.hiddenFourBalanced
+'CorruptedFieldRecovery.hiddenFourBalanced' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hidden_four_balanced_iff_conjugate
+CorruptedFieldRecovery.hidden_four_balanced_iff_conjugate.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {n : Nat}
+  (ι :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (v : CorruptedFieldRecovery.FieldTriple.{u_1} K) (c : K)
+  (T : Module.End.{0, 0} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)),
+  Iff (CorruptedFieldRecovery.hiddenFourBalanced.{u_1} K ι basis v c T)
+    (CorruptedFieldRecovery.sampledFourBalanced.{u_1} K c basis v
+      ((LinearEquiv.conj.{0, 0, 0, u_1} (LinearEquiv.restrictScalars.{0, 0, 0, u_1} (ZMod (ringChar.{u_1} K)) ι)) T))
+CFR_TYPE_END:CorruptedFieldRecovery.hidden_four_balanced_iff_conjugate
+'CorruptedFieldRecovery.hidden_four_balanced_iff_conjugate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.hidden_four_contractions_identification
+CorruptedFieldRecovery.hidden_four_contractions_identification.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Fintype.{u_1} K] [inst_3 : CharP.{u_1} K 2]
+  [inst_4 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {n : Nat}
+  (ι :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (v : CorruptedFieldRecovery.FieldTriple.{u_1} K) (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (hgen :
+    Or
+      (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).1]
+        Top.top.{u_1})
+      (Or
+        (Eq.{u_1 + 1}
+          (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.1]
+          Top.top.{u_1})
+        (Eq.{u_1 + 1}
+          (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.2]
+          Top.top.{u_1}))),
+  And
+    (∀ (T : Module.End.{0, 0} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.BinaryInput.{u_1} K n)),
+      Iff (CorruptedFieldRecovery.hiddenFourBalanced.{u_1} K ι basis v c T)
+        (∃ k,
+          ∀ (x : CorruptedFieldRecovery.BinaryInput.{u_1} K n),
+            Eq.{1} (T x) ((LinearEquiv.symm.{0, 0, 0, u_1} ι) (HSMul.hSMul.{u_1, u_1, u_1} k (ι x)))))
+    (Eq.{1} (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) ↥(CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K))
+      (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) K))
+CFR_TYPE_END:CorruptedFieldRecovery.hidden_four_contractions_identification
+'CorruptedFieldRecovery.hidden_four_contractions_identification' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

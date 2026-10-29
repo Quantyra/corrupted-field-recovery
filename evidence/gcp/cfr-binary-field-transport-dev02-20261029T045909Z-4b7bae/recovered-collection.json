@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T05:19:31.159267+00:00",
+  "archive_sha256": "d28bd796179fa358f43eade0fe0f01c924b4bdd750a3244634d6336f5fbf2b62",
+  "stage_logs_verified": true,
+  "status": "passed",
+  "note": "Downloaded existing terminal archive after local gcloud crash following remote packaging output; no compiler rerun"
+}
