@@ -1,0 +1,26 @@
+{
+  "run": "cfr-trace-bits-dev47-20261029T224905Z-d91802",
+  "utc": "2026-10-29T22:57:37.066736+00:00",
+  "archive_sha256": "715bc8d9ceb256d87ff3c7ac9515d35e63105bc6cd72de59be19d6325b5b5bb0",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "a569bd665822cce892bec4206704e680862d8ad192bc5f36ce78118a1ff21804",
+    "launch.log": "8ddb02ac8cbd57f3d3ed74d265a367f8e2c2348811992443d4d23b1555d026d6",
+    "runner-pid": "d409ff1277e0a59d10cc9969fb6ca2c37a0a18a4f6f4c73e7aadca1a4aac17ac",
+    "started-utc": "53b3b2ea0ea87fba5c216ec5c38aea876c7e1b2dfaca28d1dfd4dfe46d4c1284",
+    "terminal-receipt.json": "f45770de310cc8f2037ea78de224f6644b2ed40a1311b41805fbddc3d8a5a81d",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "dfbdd199e658015b26a5801b302003c64305e68ce560429df944491f6cda67ee",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "6da91bbc03f2934ed6fe89b17155eab384611bb658752b217f03c05eb3f1a39b",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/emitted-types.json": "d0844232209cf2b5458c2511144bdc65d4b3eebbb843f7d0eda8e9fd8c1c01d1",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "8ddb02ac8cbd57f3d3ed74d265a367f8e2c2348811992443d4d23b1555d026d6"
+  }
+}

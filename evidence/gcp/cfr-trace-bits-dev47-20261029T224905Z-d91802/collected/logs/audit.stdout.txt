@@ -1,0 +1,68 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateQuotientClass
+@CorruptedFieldRecovery.rawCandidateQuotientClass : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (a : Nat) → AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateQuotientClass
+'CorruptedFieldRecovery.rawCandidateQuotientClass' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldMulBits
+@CorruptedFieldRecovery.rawFieldMulBits : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) → (a b : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldMulBits
+'CorruptedFieldRecovery.rawFieldMulBits' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldMulBits_quotient_sound
+@CorruptedFieldRecovery.rawFieldMulBits_quotient_sound : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (a b : Nat),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate
+      (CorruptedFieldRecovery.rawFieldMulBits candidate hcheck a b))
+    (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate a)
+      (CorruptedFieldRecovery.rawCandidateQuotientClass candidate b))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldMulBits_quotient_sound
+'CorruptedFieldRecovery.rawFieldMulBits_quotient_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldAddBits_quotient_sound
+@CorruptedFieldRecovery.rawFieldAddBits_quotient_sound : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (a b : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate (Nat.xor a b))
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate a)
+      (CorruptedFieldRecovery.rawCandidateQuotientClass candidate b))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldAddBits_quotient_sound
+'CorruptedFieldRecovery.rawFieldAddBits_quotient_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTraceAux
+@CorruptedFieldRecovery.rawFieldTraceAux : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) → (a a a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTraceAux
+'CorruptedFieldRecovery.rawFieldTraceAux' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTraceBits
+@CorruptedFieldRecovery.rawFieldTraceBits : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) → (x : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTraceBits
+'CorruptedFieldRecovery.rawFieldTraceBits' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTraceAux_quotient_eq_frobenius_sum
+@CorruptedFieldRecovery.rawFieldTraceAux_quotient_eq_frobenius_sum : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (n x accumulator : Nat),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate
+      (CorruptedFieldRecovery.rawFieldTraceAux candidate hcheck n x accumulator))
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate accumulator)
+      (∑ i ∈ Finset.range n,
+        HPow.hPow.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x) (HPow.hPow.{0, 0, 0} 2 i)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTraceAux_quotient_eq_frobenius_sum
+'CorruptedFieldRecovery.rawFieldTraceAux_quotient_eq_frobenius_sum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTraceBits_lt_pow
+@CorruptedFieldRecovery.rawFieldTraceBits_lt_pow : ∀ {s : Nat} (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (x : Nat)
+  (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 s)),
+  LT.lt.{0} (CorruptedFieldRecovery.rawFieldTraceBits candidate hcheck x) (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTraceBits_lt_pow
+'CorruptedFieldRecovery.rawFieldTraceBits_lt_pow' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

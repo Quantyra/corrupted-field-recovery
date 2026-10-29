@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Computable Nat XOR/squaring evaluator; quotient soundness for add/mul; auxiliary quotient equals accumulator plus Frobenius sum; s-bit output for s-bit input, retaining explicit candidate check.",
+  "remaining": "Algebra.trace/base-bit identification, determinant/coordinate integration and primitive-bit costs remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261029T221338Z-1cdd08"
+}
