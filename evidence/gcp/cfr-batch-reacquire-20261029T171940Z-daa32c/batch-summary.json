@@ -1,0 +1,168 @@
+{
+  "utc": "2026-10-29T18:51:47.694005+00:00",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "all_launched_outcomes_collected": true,
+  "final_state": "TERMINATED",
+  "stop_verified": true,
+  "persistent_cache_retained": true,
+  "task_egress_removed": true,
+  "no_unrelated_workload_observed": true,
+  "queued_captures": [],
+  "runs": [
+    {
+      "run": "cfr-actual-five-tape-dev14-20261029T180002Z-e8737b",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-actual-five-tape-dev15-20261029T181055Z-57f00a",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-actual-five-tape-dev17-20261029T181621Z-0f3474",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "AssertionError('New owned warning headers')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-actual-five-tape-dev19-20261029T182541Z-a736a6",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-five-tuple-assembly-dev01-20261029T172021Z-630323",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-five-tuple-sigma-dev06-20261029T173007Z-02bc29",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-five-tuple-sigma-dev08-20261029T173940Z-70e64d",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-five-tuple-sigma-dev10-20261029T174657Z-e5238b",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-five-tuple-sigma-dev12-20261029T175350Z-614167",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": true
+    },
+    {
+      "run": "cfr-trace-literal-decomposition-dev03-20261029T172251Z-6590a1",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-literal-decomposition-dev07-20261029T173621Z-2bb618",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-literal-decomposition-dev09-20261029T174317Z-4eff83",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-literal-decomposition-dev11-20261029T175028Z-18f0f8",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-literal-decomposition-dev13-20261029T175832Z-0ba6b9",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-multilinear-decomposition-dev16-20261029T181312Z-94f355",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-multilinear-decomposition-dev18-20261029T182337Z-9fbdc6",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-multilinear-decomposition-dev20-20261029T183055Z-e1db44",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-multilinear-decomposition-dev21-20261029T183731Z-8e87cd",
+      "exit_code": "1",
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "collected": true,
+      "root_scope_review": false
+    },
+    {
+      "run": "cfr-trace-multilinear-decomposition-dev22-20261029T184158Z-adcd86",
+      "exit_code": "0",
+      "status": "passed",
+      "failure": null,
+      "collected": true,
+      "root_scope_review": true
+    }
+  ],
+  "shutdown_receipt": "cfr-trace-multilinear-decomposition-dev22-20261029T184158Z-adcd86/cfr-shutdown-20261029T184715Z-cf6a66-result.json",
+  "accepted_scope": "Three Root-reviewed intermediate scopes: dependent finite count, physical tape cardinal transport, noncomputable trace-compatible decomposition. S006 remains incomplete.",
+  "note": "All failed compiler and transport attempts remain preserved; dev02/dev04/dev05 captures were explicitly superseded before launch. No local Lean/Lake execution."
+}
