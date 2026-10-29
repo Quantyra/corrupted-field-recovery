@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.rawReduceStep": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStep : (modulus degree a : Nat) \u2192 Nat\n",
+    "sha256": "b57288fc45e63d73aae3ffae2ba9104421b672f5d840cc6a104ccbb144bd528a"
+  },
+  "CorruptedFieldRecovery.rawReduceFuel": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuel : (modulus degree a a : Nat) \u2192 Nat\n",
+    "sha256": "916858da3f813348db09ddc337d4edd8c44cdef07f2b0f2d8ef54f728016ccc1"
+  },
+  "CorruptedFieldRecovery.rawFieldMulFuel": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldMulFuel : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 (fuel a b : Nat) \u2192 Nat\n",
+    "sha256": "6374d39a5dc3325df9b3f210d4db6297f679b40e1d2b673ac96bfe493df98413"
+  },
+  "CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two": {
+    "emitted_type": "CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two : \u2200 (a k : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (HMul.hMul.{0, 0, 0} a (HPow.hPow.{0, 0, 0} 2 k)))\n    (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawMaskPolynomial a) (HPow.hPow.{0, 0, 0} Polynomial.X.{0} k))\n",
+    "sha256": "c0aab3db244082dc6416254099f415a13ac48d8e69d5ca8dcec59ec45aad4317"
+  },
+  "CorruptedFieldRecovery.rawReduceStep_quotient_sound": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStep_quotient_sound : \u2200 (modulus degree a : Nat),\n  Eq.{1}\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))\n      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawReduceStep modulus degree a)))\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))\n      (CorruptedFieldRecovery.rawMaskPolynomial a))\n",
+    "sha256": "b9bdbe04e2c36ed5e033462e46b4391e33c02a88f6388e6907b338e6cdc8c766"
+  },
+  "CorruptedFieldRecovery.rawReduceFuel_quotient_sound": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuel_quotient_sound : \u2200 (modulus degree fuel a : Nat),\n  Eq.{1}\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))\n      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawReduceFuel modulus degree fuel a)))\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))\n      (CorruptedFieldRecovery.rawMaskPolynomial a))\n",
+    "sha256": "c7dab6ea5ddc63c50de88bbede09f570c39c61dfa5fcad71046f66a1613c338a"
+  },
+  "CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (fuel a b : Nat),\n  Eq.{1}\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawFieldMulFuel candidate fuel a b)))\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawMaskPolynomial a) (CorruptedFieldRecovery.rawMaskPolynomial b)))\n",
+    "sha256": "eade67fd74f54f1906bcfe67800e623a9cc748c8853580dcf1c1a61a419c1cb8"
+  }
+}

@@ -1,0 +1,51 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStep
+CorruptedFieldRecovery.rawReduceStep : (modulus degree a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStep
+'CorruptedFieldRecovery.rawReduceStep' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuel
+CorruptedFieldRecovery.rawReduceFuel : (modulus degree a a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuel
+'CorruptedFieldRecovery.rawReduceFuel' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldMulFuel
+@CorruptedFieldRecovery.rawFieldMulFuel : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) → (fuel a b : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldMulFuel
+'CorruptedFieldRecovery.rawFieldMulFuel' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two
+CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two : ∀ (a k : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (HMul.hMul.{0, 0, 0} a (HPow.hPow.{0, 0, 0} 2 k)))
+    (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawMaskPolynomial a) (HPow.hPow.{0, 0, 0} Polynomial.X.{0} k))
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two
+'CorruptedFieldRecovery.rawMaskPolynomial_mul_pow_two' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStep_quotient_sound
+CorruptedFieldRecovery.rawReduceStep_quotient_sound : ∀ (modulus degree a : Nat),
+  Eq.{1}
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))
+      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawReduceStep modulus degree a)))
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))
+      (CorruptedFieldRecovery.rawMaskPolynomial a))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStep_quotient_sound
+'CorruptedFieldRecovery.rawReduceStep_quotient_sound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuel_quotient_sound
+CorruptedFieldRecovery.rawReduceFuel_quotient_sound : ∀ (modulus degree fuel a : Nat),
+  Eq.{1}
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))
+      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawReduceFuel modulus degree fuel a)))
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))
+      (CorruptedFieldRecovery.rawMaskPolynomial a))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuel_quotient_sound
+'CorruptedFieldRecovery.rawReduceFuel_quotient_sound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound
+@CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (fuel a b : Nat),
+  Eq.{1}
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawFieldMulFuel candidate fuel a b)))
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawMaskPolynomial a) (CorruptedFieldRecovery.rawMaskPolynomial b)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound
+'CorruptedFieldRecovery.rawFieldMulFuel_quotient_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T20:11:32.853829+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "rawReduceStep/Fuel quotient-class preservation for arbitrary modulus, degree and fuel; rawFieldMulFuel quotient product soundness.",
+  "remaining": "No adequate fuel, output bound, field trace, cost or complete verifier.",
+  "evidence": "collected/logs/emitted-types.json"
+}
