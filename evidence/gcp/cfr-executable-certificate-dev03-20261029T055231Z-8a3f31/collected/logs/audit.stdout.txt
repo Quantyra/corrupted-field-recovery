@@ -1,0 +1,42 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.CoefficientArray
+CorruptedFieldRecovery.CoefficientArray : Type
+CFR_TYPE_END:CorruptedFieldRecovery.CoefficientArray
+'CorruptedFieldRecovery.CoefficientArray' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.coefficientOffset
+CorruptedFieldRecovery.coefficientOffset : (n : Nat) → (i j k : Fin n) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.coefficientOffset
+'CorruptedFieldRecovery.coefficientOffset' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.ExecutableCertificate
+CorruptedFieldRecovery.ExecutableCertificate : (n R : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.ExecutableCertificate
+'CorruptedFieldRecovery.ExecutableCertificate' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.ExecutableInput
+CorruptedFieldRecovery.ExecutableInput : (n : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.ExecutableInput
+'CorruptedFieldRecovery.ExecutableInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.executableCoefficientCheck
+@CorruptedFieldRecovery.executableCoefficientCheck : {n R : Nat} →
+  (input : CorruptedFieldRecovery.ExecutableInput n) → (cert : CorruptedFieldRecovery.ExecutableCertificate n R) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.executableCoefficientCheck
+'CorruptedFieldRecovery.executableCoefficientCheck' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_executable_coefficients
+@CorruptedFieldRecovery.accepted_executable_coefficients : ∀ {n R : Nat}
+  (input : CorruptedFieldRecovery.ExecutableInput n) (cert : CorruptedFieldRecovery.ExecutableCertificate n R)
+  (accepted : Eq.{1} (CorruptedFieldRecovery.executableCoefficientCheck input cert) Bool.true) (i j k : Fin n),
+  Eq.{1} (CorruptedFieldRecovery.coefficient (CorruptedFieldRecovery.ExecutableInput.tensor input) i j k)
+    (CorruptedFieldRecovery.coefficient (CorruptedFieldRecovery.ExecutableCertificate.representedTensor cert) i j k)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_executable_coefficients
+'CorruptedFieldRecovery.accepted_executable_coefficients' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_executable_certificate_sound
+@CorruptedFieldRecovery.accepted_executable_certificate_sound : ∀ {n R : Nat}
+  (input : CorruptedFieldRecovery.ExecutableInput n) (cert : CorruptedFieldRecovery.ExecutableCertificate n R)
+  (accepted : Eq.{1} (CorruptedFieldRecovery.executableCoefficientCheck input cert) Bool.true)
+  (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.ExecutableInput.tensor input) x) y) z)
+    ((((CorruptedFieldRecovery.ExecutableCertificate.representedTensor cert) x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_executable_certificate_sound
+'CorruptedFieldRecovery.accepted_executable_certificate_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

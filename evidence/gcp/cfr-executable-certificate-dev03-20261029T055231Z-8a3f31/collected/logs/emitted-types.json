@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.CoefficientArray": {
+    "emitted_type": "CorruptedFieldRecovery.CoefficientArray : Type\n",
+    "sha256": "4763e7143d1ea3a47c145459c05c97e00cf0e5c117e59c9bfe53bafc0e74a2b0"
+  },
+  "CorruptedFieldRecovery.coefficientOffset": {
+    "emitted_type": "CorruptedFieldRecovery.coefficientOffset : (n : Nat) \u2192 (i j k : Fin n) \u2192 Nat\n",
+    "sha256": "761601ca70358e5b6ac4e6b3d7d179dbd1f12f8415f8228f2f6fe1ec4162026d"
+  },
+  "CorruptedFieldRecovery.ExecutableCertificate": {
+    "emitted_type": "CorruptedFieldRecovery.ExecutableCertificate : (n R : Nat) \u2192 Type\n",
+    "sha256": "80b5add4d051367a28ccb9afbf5325fc7b3a7f2c8e3d57e7fb651955fd1aabc2"
+  },
+  "CorruptedFieldRecovery.ExecutableInput": {
+    "emitted_type": "CorruptedFieldRecovery.ExecutableInput : (n : Nat) \u2192 Type\n",
+    "sha256": "d903e6f6417bda401eb10c59c50dfbc9479c4df1cf9ab572326789fa750095b6"
+  },
+  "CorruptedFieldRecovery.executableCoefficientCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.executableCoefficientCheck : {n R : Nat} \u2192\n  (input : CorruptedFieldRecovery.ExecutableInput n) \u2192 (cert : CorruptedFieldRecovery.ExecutableCertificate n R) \u2192 Bool\n",
+    "sha256": "134d8f586ef195b65e24a0382c0f6e2e47dd69e61214fb8e5cf21cc0395a43a3"
+  },
+  "CorruptedFieldRecovery.accepted_executable_coefficients": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_executable_coefficients : \u2200 {n R : Nat}\n  (input : CorruptedFieldRecovery.ExecutableInput n) (cert : CorruptedFieldRecovery.ExecutableCertificate n R)\n  (accepted : Eq.{1} (CorruptedFieldRecovery.executableCoefficientCheck input cert) Bool.true) (i j k : Fin n),\n  Eq.{1} (CorruptedFieldRecovery.coefficient (CorruptedFieldRecovery.ExecutableInput.tensor input) i j k)\n    (CorruptedFieldRecovery.coefficient (CorruptedFieldRecovery.ExecutableCertificate.representedTensor cert) i j k)\n",
+    "sha256": "6672ac1dc8e1744e8f01c9972a0a21a6c945fd329d34ca3f11c0a7879c302f65"
+  },
+  "CorruptedFieldRecovery.accepted_executable_certificate_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_executable_certificate_sound : \u2200 {n R : Nat}\n  (input : CorruptedFieldRecovery.ExecutableInput n) (cert : CorruptedFieldRecovery.ExecutableCertificate n R)\n  (accepted : Eq.{1} (CorruptedFieldRecovery.executableCoefficientCheck input cert) Bool.true)\n  (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} ((((CorruptedFieldRecovery.ExecutableInput.tensor input) x) y) z)\n    ((((CorruptedFieldRecovery.ExecutableCertificate.representedTensor cert) x) y) z)\n",
+    "sha256": "0ee05abc82ff5b7fe24ab326562ace2ca9d9ae4ea62382cfc539488a0cd7593e"
+  }
+}
