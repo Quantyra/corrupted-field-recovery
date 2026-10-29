@@ -113,3 +113,14 @@ At a batch checkpoint, use `stop-owned` with the task creation authority `cfr-is
 For a later authorized continuation, read the preserved stop receipt and inspect this exact VM/profile and effective ingress again. Start the same dedicated VM once, recording a fresh start intent/result and ownership receipt; observe that operation if transport fails instead of issuing a second start. Preserve the new actual start timestamp and four-hour STOP ceiling. If internet is needed for pinned dependency/cache downloads, add only the task-owned ephemeral `external-nat` configuration after confirming it is absent and effective ingress remains restricted; preserve that receipt and remove it again at the next safe stop. Do not change shared networking, the shared builder, disk/cache ownership or the immutable source archives.
 
 A fresh capture/run identity may reuse verified persistent dependencies; it must retain exact source/dependency/controller hashes and the normal no-competing-compiler guard. `submit` can start a stopped VM but does not recreate a removed external IP; provisioning the task-only egress and verifying its exact state is an explicit lifecycle step. After an uncertain start or access-config operation, inspect actual state before any retry. The old run identities and failed transport receipts remain historical evidence.
+
+The next queued source is already immutable; no recapture is needed unless its source or audit policy changes. After the read-only identity/ingress checks above, preserve the exact intent, output and exit code of each lifecycle command separately (the controller's `cloud` helper writes these receipts). Inspect actual state after any uncertain result; do not issue these as an unconditional retry chain:
+
+```powershell
+gcloud compute instances start quantyra-cfr-lean-builder-20261028a --project=quantyra-lean-cert-20260915 --zone=us-central1-a --account=dfredriksen@quantyra.org --format=json --quiet
+# Only if external-nat is absent and effective ingress is still restricted:
+gcloud compute instances add-access-config quantyra-cfr-lean-builder-20261028a --network-interface=nic0 --access-config-name=external-nat --project=quantyra-lean-cert-20260915 --zone=us-central1-a --account=dfredriksen@quantyra.org --format=json --quiet
+& 'C:/Users/dfred/AppData/Local/Google/Cloud SDK/google-cloud-sdk/platform/bundledpython/python.exe' tools/gcp_cfr.py submit --run cfr-isolated-four-sampled-identification-dev01-20261029T014405Z-d9123c
+```
+
+The first two commands describe the separately receipted lifecycle actions, not an instruction to repeat a completed operation. Submission must still pass the normal capture/hash/ownership/process guards and preserve the new start ceiling before launching. The source SHA-256 for `d9123c` is `57592dc8a091b056bfaa38b848d53bc7be4f748d019ec5eab99ed1f14222c604`; its archive SHA-256 is `7ad7bbd07cccf5d5ea00c18f6ad6b17e5a92acd4ac6d89369aabb58128f53a5f`.
