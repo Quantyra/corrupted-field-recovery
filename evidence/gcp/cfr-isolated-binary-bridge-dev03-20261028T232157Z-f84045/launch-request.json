@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-28T23:27:47.154565+00:00",
+  "run": "cfr-isolated-binary-bridge-dev03-20261028T232157Z-f84045",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

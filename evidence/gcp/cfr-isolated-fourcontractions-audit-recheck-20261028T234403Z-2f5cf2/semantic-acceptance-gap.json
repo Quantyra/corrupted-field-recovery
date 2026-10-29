@@ -1,0 +1,13 @@
+{
+  "original_terminal_unchanged": true,
+  "build_and_axiom_evidence_retained": true,
+  "full_type_acceptance": false,
+  "reason": "Root found Lean pp truncation/omission markers; byte hashes do not establish complete type rendering.",
+  "truncated_blocks": {
+    "CorruptedFieldRecovery.balanced_first_three_preserves_axes": {
+      "characters": 166216,
+      "ellipsis_count": 21
+    }
+  },
+  "successor": "cfr-isolated-four-readable-audit-20261028T235254Z-44587f"
+}

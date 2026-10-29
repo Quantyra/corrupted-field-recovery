@@ -1,0 +1,6 @@
+{
+  "original_run": "cfr-isolated-fourcontractions-dev04-20261028T233600Z-094ef6",
+  "reason": "Original required source/cache/build/audit stages all exit0; runner rejected valid universe-qualified standard axioms. Preserve original red gate and rerun with strict token normalization.",
+  "source_and_dependency_bytes_identical": true,
+  "archive_sha256": "28b39fc84fc4256c636e5be1997b5473881b80a63c1d51e6fee97e9bed095466"
+}

@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T00:29:50.983354+00:00",
+  "run": "cfr-isolated-bitcost-dev02-20261029T001817Z-23e6c1",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

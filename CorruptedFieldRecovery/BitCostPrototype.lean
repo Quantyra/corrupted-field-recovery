@@ -154,7 +154,7 @@ def execute (k : Nat) : List Op → State → RunReport
       let s' := advance k op s
       let rest := execute k ops s'
       ⟨rest.final, max (declaredLiveBits k s) rest.peakDeclaredBits⟩
-termination_by ops s => ops.length
+termination_by ops _s => ops.length
 decreasing_by all_goals simp_wf
 
 def initialState (x y carry : Bool) : State :=
@@ -168,7 +168,9 @@ def erasure (s : State) : Bool × Bool :=
 
 theorem stage_erasure (k : Nat) (x y carry : Bool) :
     erasure (stage k x y carry).final = fullAdder x y carry := by
-  cases x <;> cases y <;> cases carry <;> rfl
+  cases x <;> cases y <;> cases carry <;>
+    simp [erasure, stage, execute, program, initialState, advance,
+      fullAdder, xorBit, andBit, orBit]
 
 theorem stage_charge (k : Nat) (x y carry : Bool) :
     (stage k x y carry).final.charge.reads = 13 ∧
@@ -178,6 +180,7 @@ theorem stage_charge (k : Nat) (x y carry : Bool) :
       3 * addressWidth k + 8 * (opcodeBits + pcBits) := by
   simp [stage, execute, program, initialState, advance, opCharge,
     Charge.add, addressWidth, opcodeBits, pcBits]
+  omega
 
 /-- Exact total charged operations for one executed stage. -/
 theorem stage_total_charge (k : Nat) (x y carry : Bool) :
@@ -185,7 +188,8 @@ theorem stage_total_charge (k : Nat) (x y carry : Bool) :
       82 + 3 * addressWidth k := by
   have h := stage_charge k x y carry
   rcases h with ⟨hr, hw, hg, hc⟩
-  simp [Charge.total, hr, hw, hg, hc]
+  simp [Charge.total, hr, hw, hg, hc, opcodeBits, pcBits]
+  omega
 
 /-- The cost-model's declared measure is the constant 40 for every state.
 This is only an equation for the selected measure: `pc` is represented by an
@@ -194,9 +198,9 @@ arbitrary states/operation lists or that the measure captures runtime memory. -/
 theorem execute_declared_measure_exact (k : Nat) (ops : List Op) (s : State) :
     (execute k ops s).peakDeclaredBits = 40 := by
   induction ops generalizing s with
-  | nil => simp [execute, declaredLiveBits, pcBits, programBits, opcodeBits]
+  | nil => simp [execute, declaredLiveBits, pcBits, programBits, opcodeBits, programLength]
   | cons op ops ih =>
-      simp [execute, declaredLiveBits, pcBits, programBits, opcodeBits, ih]
+      simp [execute, declaredLiveBits, pcBits, programBits, opcodeBits, programLength, ih]
 
 /-- The executed stage reports 40 under the declared cost-model measure only;
 this is not a proof of actual peak storage or of PC-layout adequacy. -/
@@ -213,7 +217,7 @@ def ripple : Word → Word → Bool → Word × Bool
       let rest := ripple xs ys one.2
       (one.1 :: rest.1, rest.2)
   | _, _, carry => ([], carry)
-termination_by xs ys carry => xs.length
+termination_by xs _ys _carry => xs.length
 decreasing_by all_goals simp_wf
 
 theorem ripple_correct (xs ys : Word) (carry : Bool)
@@ -235,7 +239,8 @@ theorem ripple_correct (xs ys : Word) (carry : Bool)
           have hRest := ih ys (fullAdder x y carry).2 hTail
           simp only [ripple, stage_erasure, value]
           dsimp [fullAdder] at hGate hRest ⊢
-          simp only [List.length_cons, pow_succ]
+          simp only [Nat.pow_succ]
+          rw [Nat.mul_comm (2 ^ xs.length) 2, Nat.mul_assoc]
           omega
 
 /-! ### Scope and unresolved refinements

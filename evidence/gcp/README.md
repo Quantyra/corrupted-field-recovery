@@ -59,8 +59,8 @@ formal coverage. Both await GCP compilation and diagnostics.
 
 The non-Lean readiness command was rerun and its accurately false result now
 appears in `artifacts/release-readiness.json`; it reports missing compiled
-evidence for the four draft modules. The prior working-tree result is preserved under
-`cfr-readiness-20261028T223233Z-be1679` alongside the exact new output, command
+evidence bindings for the five development modules. The prior working-tree result is preserved under
+`cfr-readiness-20261029T003509Z-1f450f` alongside the exact new output, command
 and exit code. This working-tree change does not alter the separately verified
 first archive or its DOI.
 
@@ -175,9 +175,9 @@ captures replace cloud identity only; old shared prelaunch evidence is unchanged
 |---|---|
 | `cfr-isolated-baseline-20261028T224830Z-75ad79` | Passed, collected and log hashes verified; root build/audit exit0, zero owned warnings, standard three axioms only |
 | `cfr-isolated-binary-bridge-dev01-20261028T225253Z-c544e3` | Failed build, collected; first error missing Field(ZMod2) instance in BinaryTensor; Bridge/audit not reached |
-| `cfr-isolated-binary-bridge-dev02-20261028T231148Z-14cf5a` | Exact import/warning repair captured, pending compiler |
-| `cfr-isolated-fourcontractions-dev01-20261028T225446Z-b42475` | Failed build; full diagnostics being collected and routed for repair |
-| `cfr-isolated-bitcost-dev01-20261028T225447Z-93b03f` | Captured; pending compiler under limited one-bit scope |
+| `cfr-isolated-binary-bridge-dev02-20261028T231148Z-14cf5a` | Failed build, collected; later repairs led to green binary/bridge evidence |
+| `cfr-isolated-fourcontractions-dev01-20261028T225446Z-b42475` | Failed build, collected and routed for repair |
+| `cfr-isolated-bitcost-dev01-20261028T225447Z-93b03f` | Captured; superseded before launch by the readable-audit cost attempt |
 
 The baseline preserves exact old baseline source/dependency identities, verified
 Lean commit `d024af099ca4bf2c86f649261ebf59565dc8c622`, seven audited declarations
@@ -188,3 +188,41 @@ failed attempts remain immutable evidence. Formal coverage remains unchanged.
 Remaining to-do list: finish the compiler/repair/audit loop, preserve every
 outcome, then remove task egress and stop the dedicated builder; complete all
 remaining manuscript obligations.
+
+## Current accepted intermediate scope
+
+The six-field-lemma full-type gate is green at
+`cfr-isolated-four-fulltype-recheck-20261028T235851Z-925763`; the binary/bridge
+gate is green at `cfr-isolated-binary-bridge-dev06-20261028T235231Z-b47944`.
+Both outcomes are collected, log hashes verified, warning-free against the
+frozen baseline and restricted to the three reported standard axioms. Root
+inspected the actual untruncated declaration text. Their conclusions are
+intermediate: the dense codec, complete two-translate application, complete
+field identification, sampling, constructor and charged costs remain open.
+
+Preserve the gate history: `094ef6` rejected universe-qualified standard axiom
+spellings; `2f5cf2` passed build/axioms but its axis type contained 21 truncation
+glyphs, so full-type acceptance was withheld; `44587f` printed full readable
+types but a notation-dependent token criterion failed. None of these receipts
+was rewritten. `925763` has exactly the same readable audit stdout as Root's
+manual review, with the corrected automated gate.
+
+The active audit generator keeps all outer binder names/types, universes and
+full names, raises pretty-printer limits, enables deep terms/proofs and rejects
+empty or truncated type blocks. Axiom validation retains raw universe spellings
+and accepts only the exact standard declarations. Fixtures reject project,
+sorry/native, spoofed, malformed, duplicate and truncated profiles. Lexical
+checks supplement the required semantic statement inspection.
+
+The block-form repair `cfr-isolated-four-block-dev02-20261029T001053Z-6b82bf`
+has passed with Root's narrow statement inspection. The common-block attempt
+`cfr-isolated-four-common-dev01-20261029T002212Z-8c46c5` failed on one multiplication-order proof step; the exact correction is captured at `cfr-isolated-four-common-dev02-20261029T004012Z-300888`. Frozen
+successors are dense-input `cfr-isolated-denseinput-dev02-20261029T002853Z-af3d02`
+and bounded cost `cfr-isolated-bitcost-dev03-20261029T003340Z-d8f6de`.
+Initial dense-input and cost failures are preserved. The older seven-source
+queue finished before DenseInput activated the eighth owned source; no
+uncaptured source or cache was silently deleted.
+
+Remaining to-do list: preserve the queued development outcomes and repairs;
+complete the actual input/field/algorithm/probability/cost obligations; remove
+task egress and stop the dedicated VM after preserving the batch.

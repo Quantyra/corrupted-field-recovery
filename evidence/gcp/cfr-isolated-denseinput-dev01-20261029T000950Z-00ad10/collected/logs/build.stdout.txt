@@ -1,0 +1,67 @@
+✖ [1347/1347] Building CorruptedFieldRecovery.DenseInput (5.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/DenseInput.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/DenseInput.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/DenseInput.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/DenseInput.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/DenseInput.setup.json --json
+error: CorruptedFieldRecovery/DenseInput.lean:18:31: Unknown identifier `Pi.proj`
+error: CorruptedFieldRecovery/DenseInput.lean:23:6: No goals to be solved
+error: CorruptedFieldRecovery/DenseInput.lean:28:6: No goals to be solved
+error: CorruptedFieldRecovery/DenseInput.lean:33:6: No goals to be solved
+error: CorruptedFieldRecovery/DenseInput.lean:43:56: unsolved goals
+n : ℕ
+i j k : Fin n
+x y z : BinaryVector n
+⊢ ((sorry ()) z = z k ∨ y j = 0) ∨ x i = 0
+warning: CorruptedFieldRecovery/DenseInput.lean:44:8: declaration uses `sorry`
+info: CorruptedFieldRecovery/DenseInput.lean:67:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/DenseInput.lean:65:2: unsolved goals
+case refine_1
+n : ℕ
+i j k : Fin n
+x z : BinaryVector n
+⊢ x i * x j * z k * 2 + x i * x k * z j * 2 + x j * x k * z i * 2 = 0
+info: CorruptedFieldRecovery/DenseInput.lean:70:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/DenseInput.lean:68:2: unsolved goals
+case refine_2
+n : ℕ
+i j k : Fin n
+x y : BinaryVector n
+⊢ x i * y j * x k * 2 + x i * y k * x j * 2 + x k * x j * y i * 2 = 0
+info: CorruptedFieldRecovery/DenseInput.lean:73:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/DenseInput.lean:71:2: unsolved goals
+case refine_3
+n : ℕ
+i j k : Fin n
+x y : BinaryVector n
+⊢ x i * y j * y k * 2 + y j * y i * x k * 2 + y k * x j * y i * 2 = 0
+error: CorruptedFieldRecovery/DenseInput.lean:77:25: Application type mismatch: The argument
+  (↑t).1
+has type
+  Fin n × Fin n
+but is expected to have type
+  Fin n
+in the application
+  coefficient C (↑t).1
+error: CorruptedFieldRecovery/DenseInput.lean:81:52: Application type mismatch: The argument
+  (↑t).1
+has type
+  Fin n × Fin n
+but is expected to have type
+  Fin ?m.7
+in the application
+  minorTensor (↑t).1
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.DenseInput

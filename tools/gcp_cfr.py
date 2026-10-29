@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTROLLER_SHA256 = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 EVIDENCE = ROOT / 'evidence' / 'gcp'
 SDK = Path('C:/Users/dfred/AppData/Local/Google/Cloud SDK/google-cloud-sdk')
-CLOUD = [str(SDK/'platform/bundledpython/python.exe'), str(SDK/'lib/gcloud.py')]
+CLOUD = [str(SDK/'platform/bundledpython/python.exe'), '-S', str(SDK/'lib/gcloud.py')]
 PROJECT = 'quantyra-lean-cert-20260915'
 ZONE = 'us-central1-a'
 VM = 'quantyra-lean-builder-01'
@@ -318,6 +318,30 @@ def stop_owned(args):
          started_for_task=True, stop_verified=True, persistent_cache_retained=True))
 
 
+def audit_source(targets, exports):
+    imports = sorted(set(['CorruptedFieldRecovery']+targets))
+    audit = '\n'.join('import '+name for name in imports)+(
+        '\n\nset_option pp.universes true\nset_option pp.explicit false\n'
+        'set_option pp.fullNames true\nset_option pp.piBinderTypes true\n'
+        'set_option pp.piBinderNames true\nset_option pp.piBinderNames.hygienic true\n'
+        'set_option pp.proofs true\nset_option pp.deepTerms true\n'
+        'set_option pp.maxSteps 1000000\nset_option maxRecDepth 10000\n')
+    for name in exports:
+        audit += '\n#eval IO.println "CFR_TYPE_BEGIN:'+name+'"\n#check @'+name+'\n'
+        audit += '#eval IO.println "CFR_TYPE_END:'+name+'"\n#print axioms '+name+'\n'
+    return audit.encode('utf-8')
+
+
+def expected_type_tokens(exports):
+    known = {
+        'CorruptedFieldRecovery.balanced_first_three_preserves_axes':
+            ['K', 'c', 'hc', 'T', 'h0', 'h1', 'h2', 'fieldContraction0', 'fieldContraction1', 'fieldContraction2', 'And'],
+        'CorruptedFieldRecovery.balanced_first_three_block_form': ['K', 'c', 'hc', 'T', 'h0', 'h1', 'h2', 'fieldBlock0', 'fieldBlock1', 'fieldBlock2'],
+        'CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator': ['F', 'K', 'A', 'hgen', 'hcomm', 'Eq', 'HMul.hMul', 'A 1'],
+    }
+    return {name:known[name] for name in exports if name in known}
+
+
 def capture(args):
     run = unique(args.label)
     out = EVIDENCE/run
@@ -337,14 +361,8 @@ def capture(args):
         for name in args.audit_export:
             if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_.\']*', name):
                 raise ValueError('Invalid audited declaration name')
-        imports = sorted(set(['CorruptedFieldRecovery']+(args.target or [])))
-        audit = '\n'.join('import '+name for name in imports)+(
-            '\n\nset_option pp.universes true\nset_option pp.explicit true\nset_option pp.fullNames true\n')
-        for name in args.audit_export:
-            audit += '\n#eval IO.println "CFR_TYPE_BEGIN:'+name+'"\n#check @'+name+'\n'
-            audit += '#eval IO.println "CFR_TYPE_END:'+name+'"\n#print axioms '+name+'\n'
         audit_path = 'checks/CaptureAudit.lean'
-        files[audit_path] = audit.encode('utf-8')
+        files[audit_path] = audit_source(args.target or [], args.audit_export)
     errors = []
     for name, content in files.items():
         if content.startswith(b'\xef\xbb\xbf'):
@@ -367,6 +385,7 @@ def capture(args):
                     builder_profile=PROFILE,
                     targets=args.target or ['CorruptedFieldRecovery'], audit=not args.no_audit,
                     audit_path=audit_path, audited_exports=args.audit_export or [],
+                    expected_type_tokens=expected_type_tokens(args.audit_export or []),
                     source_sha256={n:hashlib.sha256(b).hexdigest() for n,b in sorted(files.items())},
                     dependencies=json.loads(files['lake-manifest.json'])['packages'],
                     lean_toolchain=files['lean-toolchain'].decode('utf-8').strip(),

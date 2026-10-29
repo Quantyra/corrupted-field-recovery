@@ -17,6 +17,50 @@ import tarfile
 import time
 
 
+def approved_axiom_profile(value):
+    """Validate printed standard axioms, allowing their single universe parameter.
+
+    Lean's dependency report prints abstract named universe parameters here,
+    not arbitrary level expressions. Conservatively accept one lowercase
+    parameter (optionally with a numeric index) or a numeral. This excludes
+    reserved words and compound expressions; preserve raw spelling in receipts.
+    """
+    raw = [part.strip() for part in value.split(',')]
+    if not value.strip():
+        return [], []
+    normalized = []
+    for token in raw:
+        match = re.fullmatch(r'(propext|Classical\.choice|Quot\.sound)(?:\.\{([a-z](?:_[0-9]+)?|[0-9]+)\})?', token)
+        if not match or (match.group(1) == 'propext' and match.group(2) is not None):
+            raise ValueError('Unapproved or malformed axiom token: '+repr(token))
+        normalized.append(match.group(1))
+    if len(normalized) != len(set(normalized)):
+        raise ValueError('Duplicate axiom declaration in one profile')
+    return raw, normalized
+
+
+def validate_type_block(body, expected_tokens=()):
+    if not body.strip():
+        raise ValueError('Empty emitted declaration type')
+    if any(marker in body for marker in ['⋯', '…', '...']):
+        raise ValueError('Truncated or omitted emitted declaration type')
+    if '--' in body or '/-' in body or '-/' in body:
+        raise ValueError('Unexpected comment syntax in emitted declaration type')
+    visible = re.sub(r'"(?:\\.|[^"\\])*"|«[^»]*»', ' ', body)
+    for token in expected_tokens:
+        choices = [token]
+        if token == 'And':
+            choices += ['∧']
+        elif token == 'Exists':
+            choices += ['∃']
+        elif token.startswith('field'):
+            choices += ['CorruptedFieldRecovery.'+token]
+        found = any(re.search(r"(?<![\w'.])"+re.escape(choice)+r"(?![\w'])", visible)
+                    if choice.isascii() else choice in visible for choice in choices)
+        if not found:
+            raise ValueError('Missing expected declaration binder/hypothesis/conclusion token: '+token)
+
+
 def digest(path):
     with path.open('rb') as source:
         return hashlib.file_digest(source, 'sha256').hexdigest()
@@ -210,8 +254,9 @@ def main():
             expected = re.findall(r'^#print axioms\s+(\S+)\s*$', audit_file.read_text(), re.M)
             names = [name for name,_ in reports]+empty
             assert len(names) == len(set(names)) and set(names) == set(expected)
-            axioms = sorted({a.strip() for _,values in reports for a in values.split(',') if a.strip()})
-            assert set(axioms) <= {'propext', 'Quot.sound', 'Classical.choice'}, axioms
+            profiles = {name:approved_axiom_profile(values) for name,values in reports}
+            axioms = sorted({a for _,normalized in profiles.values() for a in normalized})
+            receipt['reported_axiom_profiles_raw'] = {name:raw for name,(raw,_) in profiles.items()}
             receipt['audited_declarations'] = sorted(names)
             receipt['reported_axioms'] = axioms
             receipt['type_axiom_audit'] = dict(source_sha256=digest(audit_file),
@@ -222,6 +267,7 @@ def main():
                 begin, end = 'CFR_TYPE_BEGIN:'+name+'\n', 'CFR_TYPE_END:'+name+'\n'
                 assert text.count(begin) == text.count(end) == 1, name
                 body = text.split(begin, 1)[1].split(end, 1)[0]
+                validate_type_block(body, manifest.get('expected_type_tokens', {}).get(name, []))
                 blocks[name] = dict(emitted_type=body, sha256=hashlib.sha256(body.encode('utf-8')).hexdigest())
             if blocks:
                 write(logs/'emitted-types.json', blocks)

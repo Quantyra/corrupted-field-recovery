@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\dfred\\AppData\\Local\\Google\\Cloud SDK\\google-cloud-sdk\\platform\\bundledpython\\python.exe",
+    "-B",
+    "tools/check_gcp_axioms.py"
+  ],
+  "exit_code": 0,
+  "compile_invoked": false,
+  "runner_sha256": "867a82b188e7966679bb9979b7bf2be9baa8b4995eed5733c658708135da6ae6",
+  "approved_profiles": 6,
+  "rejected_profiles": 17
+}

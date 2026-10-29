@@ -1,0 +1,40 @@
+✔ [1674/1675] Built CorruptedFieldRecovery.BinaryTensor (2.6s)
+✖ [1675/1675] Building CorruptedFieldRecovery.Bridge (3.1s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/Bridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Bridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Bridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/Bridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/Bridge.setup.json --json
+error: CorruptedFieldRecovery/Bridge.lean:103:4: Type mismatch
+  hsym x y ↑↑z
+has type
+  ((D x) y) ↑↑z = ((D y) x) ↑↑z
+but is expected to have type
+  ((D x) y ∘ₗ LinearMap.single (ZMod 2) (fun i => ZMod 2) z) 1 =
+    ((D y) x ∘ₗ LinearMap.single (ZMod 2) (fun i => ZMod 2) z) 1
+error: CorruptedFieldRecovery/Bridge.lean:109:8: Type mismatch
+  hdiag (coordinateVector i) ↑↑z
+has type
+  ((D (coordinateVector i)) (coordinateVector i)) ↑↑z = 0
+but is expected to have type
+  ((D (coordinateVector i)) (coordinateVector i) ∘ₗ LinearMap.single (ZMod 2) (fun i => ZMod 2) z) 1 =
+    (0 ∘ₗ LinearMap.single (ZMod 2) (fun i => ZMod 2) z) 1
+error: CorruptedFieldRecovery/Bridge.lean:124:6: invalid 'calc' step, left-hand side is
+  S : Submodule (ZMod 2) (BinaryVector n →ₗ[ZMod 2] ZMod 2)
+but previous right-hand side is
+  ∑ j, (b.repr y) j • (D (coordinateVector i)) (b j) : BinaryVector n →ₗ[ZMod 2] ZMod 2
+error: CorruptedFieldRecovery/Bridge.lean:130:6: invalid 'calc' step, left-hand side is
+  S : Submodule (ZMod 2) (BinaryVector n →ₗ[ZMod 2] ZMod 2)
+but previous right-hand side is
+  ∑ i, (b.repr x) i • (D (b i)) y : BinaryVector n →ₗ[ZMod 2] ZMod 2
+error: CorruptedFieldRecovery/Bridge.lean:129:43: unsolved goals
+n : ℕ
+D : BinaryTensor n
+hsym : ∀ (x y z : BinaryVector n), ((D x) y) z = ((D y) x) z
+hdiag : ∀ (x z : BinaryVector n), ((D x) x) z = 0
+b : Module.Basis (Fin n) (ZMod 2) (Fin n → ZMod 2) := Pi.basisFun (ZMod 2) (Fin n)
+S : Submodule (ZMod 2) (BinaryVector n →ₗ[ZMod 2] ZMod 2) := Submodule.span (ZMod 2) (increasingPairCovectors D)
+hswap : ∀ (x y : BinaryVector n), (D x) y = (D y) x
+hslice : ∀ (i j : Fin n), (D (coordinateVector i)) (coordinateVector j) ∈ S
+hsecond : ∀ (i : Fin n) (y : BinaryVector n), (D (coordinateVector i)) y ∈ S
+x y : BinaryVector n
+⊢ (∑ x_1, (b.repr x) x_1 • D (b x_1)) y = ∑ i, (b.repr x) i • (D (b i)) y
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.Bridge

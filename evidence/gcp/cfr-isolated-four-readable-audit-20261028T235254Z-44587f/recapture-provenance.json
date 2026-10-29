@@ -1,0 +1,8 @@
+{
+  "original_run": "cfr-isolated-fourcontractions-dev04-20261028T233600Z-094ef6",
+  "changed_files": [
+    "checks/CaptureAudit.lean"
+  ],
+  "proof_source_and_dependency_bytes_unchanged": true,
+  "reason": "Original build/axioms passed but pp.explicit output was truncated; regenerate readable complete binder/hypothesis audit with strict truncation gate."
+}

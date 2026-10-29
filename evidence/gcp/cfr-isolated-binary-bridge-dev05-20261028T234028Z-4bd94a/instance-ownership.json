@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-isolated-binary-bridge-dev05-20261028T234028Z-4bd94a",
+  "utc": "2026-10-28T23:47:30.723229+00:00"
+}

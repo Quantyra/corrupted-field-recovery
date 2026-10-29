@@ -1,0 +1,8 @@
+{
+  "original_run": "cfr-isolated-fourcontractions-dev05-20261028T233821Z-01c779",
+  "changed_files": [
+    "checks/CaptureAudit.lean"
+  ],
+  "proof_and_dependency_bytes_unchanged": true,
+  "reason": "Apply corrected readable all-binder audit configuration before first cloud launch; original capture remains unlaunched and preserved."
+}

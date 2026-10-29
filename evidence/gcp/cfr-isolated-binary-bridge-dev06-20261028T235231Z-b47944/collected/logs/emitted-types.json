@@ -1,0 +1,102 @@
+{
+  "CorruptedFieldRecovery.imbalance_add": {
+    "emitted_type": "@CorruptedFieldRecovery.imbalance_add.{u_1,\n    u_2} : \u2200 {F : Type u_1} {V : Type u_2} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] (C E : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V)\n  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V),\n  Eq.{max (u_1 + 1) (u_2 + 1)}\n    (CorruptedFieldRecovery.imbalance.{u_1, u_2} (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} C E) T)\n    (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} (CorruptedFieldRecovery.imbalance.{u_1, u_2} C T)\n      (CorruptedFieldRecovery.imbalance.{u_1, u_2} E T))\n",
+    "sha256": "8fc8ac3de115993e4ef7fdd6d5d27242f80bac4c2e17bc598dea6c375cb67286"
+  },
+  "CorruptedFieldRecovery.balanced_cancels": {
+    "emitted_type": "@CorruptedFieldRecovery.balanced_cancels.{u_1,\n    u_2} : \u2200 {F : Type u_1} {V : Type u_2} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] (C E : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V)\n  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V)\n  (balanced : \u2200 (x y z : V), Eq.{u_1 + 1} (((C (T x)) y) z) (((C x) (T y)) z)),\n  Eq.{max (u_1 + 1) (u_2 + 1)}\n    (CorruptedFieldRecovery.imbalance.{u_1, u_2} (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} C E) T)\n    (CorruptedFieldRecovery.imbalance.{u_1, u_2} E T)\n",
+    "sha256": "f23cfeabca054ab9a0f725911f45b1bd153a3cb962059af7bccd8d736b584ceb"
+  },
+  "CorruptedFieldRecovery.imbalance_mode_le": {
+    "emitted_type": "@CorruptedFieldRecovery.imbalance_mode_le.{u_1,\n    u_2} : \u2200 {F : Type u_1} {V : Type u_2} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] (E : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V)\n  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V),\n  LE.le.{max u_1 u_2} (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.imbalance.{u_1, u_2} E T))\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2} E)\n",
+    "sha256": "2aeaf4f11ac10b4b6d38d6cdf630e5580b298d5b427fd509f6ce3ea20db0740c"
+  },
+  "CorruptedFieldRecovery.two_translate_modeImage": {
+    "emitted_type": "@CorruptedFieldRecovery.two_translate_modeImage.{u_1, u_2,\n    u_3} : \u2200 {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]\n  (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W) (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)\n  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V)\n  (split : Function.Surjective.{u_2 + 1, u_3 + 1} fun x => Prod.mk.{u_3, u_3} (u x) (u (T x))),\n  Eq.{max (u_1 + 1) (u_2 + 1)}\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2}\n      (CorruptedFieldRecovery.imbalance.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u) T))\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))\n",
+    "sha256": "1b14be2656a0dec5ede6407e0aad72caa16b5bd814a7b95a7ea3f0b817c249e5"
+  },
+  "CorruptedFieldRecovery.recovery_modeImage": {
+    "emitted_type": "@CorruptedFieldRecovery.recovery_modeImage.{u_1, u_2,\n    u_3} : \u2200 {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]\n  (C : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V) (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W)\n  (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)\n  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V)\n  (balanced : \u2200 (x y z : V), Eq.{u_1 + 1} (((C (T x)) y) z) (((C x) (T y)) z))\n  (split : Function.Surjective.{u_2 + 1, u_3 + 1} fun x => Prod.mk.{u_3, u_3} (u x) (u (T x))),\n  Eq.{max (u_1 + 1) (u_2 + 1)}\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2}\n      (CorruptedFieldRecovery.imbalance.{u_1, u_2}\n        (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} C (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u)) T))\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))\n",
+    "sha256": "c8eae8141e877db39e9e190c400eaa3efe5edabdb37d71a5d305b9cce07c8edf"
+  },
+  "CorruptedFieldRecovery.joint_surjective_of_disjoint_duals": {
+    "emitted_type": "@CorruptedFieldRecovery.joint_surjective_of_disjoint_duals.{u_1, u_2,\n    u_3} : \u2200 {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]\n  (u v : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W) (hu : Function.Surjective.{u_2 + 1, u_3 + 1} \u21d1u)\n  (hv : Function.Surjective.{u_2 + 1, u_3 + 1} \u21d1v)\n  (hd :\n    Disjoint.{max u_1 u_2} (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u))\n      (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} v))),\n  Function.Surjective.{u_2 + 1, u_3 + 1} \u21d1(LinearMap.prod.{u_1, u_2, u_3, u_3} u v)\n",
+    "sha256": "02284c4b51b81d25bd3e5fc3e192fc79d2167e04eead6ab7c6302c48eb1e287c"
+  },
+  "CorruptedFieldRecovery.two_translate_of_disjoint": {
+    "emitted_type": "@CorruptedFieldRecovery.two_translate_of_disjoint.{u_1, u_2,\n    u_3} : \u2200 {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]\n  (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W) (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)\n  (T : LinearEquiv.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V) (hu : Function.Surjective.{u_2 + 1, u_3 + 1} \u21d1u)\n  (hd :\n    Disjoint.{max u_1 u_2} (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u))\n      (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} (u \u2218\u2097 \u2191T)))),\n  Eq.{max (u_1 + 1) (u_2 + 1)}\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2}\n      (CorruptedFieldRecovery.imbalance.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u) \u2191T))\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))\n",
+    "sha256": "0b6ca4d9d1a6b4cc58133c46c6f3b14a7dcbd39b64ee4a9252debc13faf71904"
+  },
+  "CorruptedFieldRecovery.BinaryVector": {
+    "emitted_type": "CorruptedFieldRecovery.BinaryVector : (n : Nat) \u2192 Type\n",
+    "sha256": "3054df080445ff81350f5a8a1e93f95bc01d8afea0b979e486de473d4f46f2b9"
+  },
+  "CorruptedFieldRecovery.BinaryTensor": {
+    "emitted_type": "CorruptedFieldRecovery.BinaryTensor : (n : Nat) \u2192 Type\n",
+    "sha256": "7f66260353cc3997748d33c051e8f5b7dc4ee981b02edeb5286b85b8bdb447d9"
+  },
+  "CorruptedFieldRecovery.coordinateVector": {
+    "emitted_type": "@CorruptedFieldRecovery.coordinateVector : {n : Nat} \u2192 (i : Fin n) \u2192 CorruptedFieldRecovery.BinaryVector n\n",
+    "sha256": "b55409af15eb92a76709a0326421a4746d6e29990b0e51fdc68df3ef1a0232f6"
+  },
+  "CorruptedFieldRecovery.coefficient": {
+    "emitted_type": "@CorruptedFieldRecovery.coefficient : {n : Nat} \u2192 (C : CorruptedFieldRecovery.BinaryTensor n) \u2192 (i j k : Fin n) \u2192 ZMod 2\n",
+    "sha256": "d339ec70a877accc342e1851a0346b8f4456912f6e82132deb53e867dce79918"
+  },
+  "CorruptedFieldRecovery.IsAlternating": {
+    "emitted_type": "@CorruptedFieldRecovery.IsAlternating : {n : Nat} \u2192 (C : CorruptedFieldRecovery.BinaryTensor n) \u2192 Prop\n",
+    "sha256": "31a2f7f0e055265de8dbb611a5d6c1125cc6870eb79b8032d8952e11eb259d6d"
+  },
+  "CorruptedFieldRecovery.binaryTensor_ext_of_coefficients": {
+    "emitted_type": "@CorruptedFieldRecovery.binaryTensor_ext_of_coefficients : \u2200 {n : Nat} {C D : CorruptedFieldRecovery.BinaryTensor n}\n  (h :\n    \u2200 (i j k : Fin n),\n      Eq.{1} (CorruptedFieldRecovery.coefficient C i j k) (CorruptedFieldRecovery.coefficient D i j k)),\n  Eq.{1} C D\n",
+    "sha256": "2566c79eb6cac37264a4a54937f4a1d2a967e912907bb2fba4584701620e6bdc"
+  },
+  "CorruptedFieldRecovery.alternating_swap12": {
+    "emitted_type": "@CorruptedFieldRecovery.alternating_swap12 : \u2200 {n : Nat} {C : CorruptedFieldRecovery.BinaryTensor n}\n  (h : CorruptedFieldRecovery.IsAlternating C) (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} (((C y) x) z) (((C x) y) z)\n",
+    "sha256": "69a680e2b5ceb76267bba63adfe7a2aea86a193189c18b8ccff3deb27815af37"
+  },
+  "CorruptedFieldRecovery.alternating_swap23": {
+    "emitted_type": "@CorruptedFieldRecovery.alternating_swap23 : \u2200 {n : Nat} {C : CorruptedFieldRecovery.BinaryTensor n}\n  (h : CorruptedFieldRecovery.IsAlternating C) (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} (((C x) z) y) (((C x) y) z)\n",
+    "sha256": "68498ec20489b9da0a7675663f48f195145a3262d3d02d86880b34fd71800589"
+  },
+  "CorruptedFieldRecovery.alternating_swap13": {
+    "emitted_type": "@CorruptedFieldRecovery.alternating_swap13 : \u2200 {n : Nat} {C : CorruptedFieldRecovery.BinaryTensor n}\n  (h : CorruptedFieldRecovery.IsAlternating C) (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} (((C z) y) x) (((C x) y) z)\n",
+    "sha256": "801f7e95b1db2232f82d00ab9143a2bd60c2aa0d3c5e0ec6a12ccf277ec2fff5"
+  },
+  "CorruptedFieldRecovery.binaryTensor_ext_of_increasing_coefficients": {
+    "emitted_type": "@CorruptedFieldRecovery.binaryTensor_ext_of_increasing_coefficients : \u2200 {n : Nat}\n  {C D : CorruptedFieldRecovery.BinaryTensor n} (hC : CorruptedFieldRecovery.IsAlternating C)\n  (hD : CorruptedFieldRecovery.IsAlternating D)\n  (h :\n    \u2200 (i j k : Fin n) (a : LT.lt.{0} i j) (a : LT.lt.{0} j k),\n      Eq.{1} (CorruptedFieldRecovery.coefficient C i j k) (CorruptedFieldRecovery.coefficient D i j k)),\n  Eq.{1} C D\n",
+    "sha256": "24d29fbf5ec86ff3aa4b3b7372f4a7eb5815af228c773de964a639ced5c39201"
+  },
+  "CorruptedFieldRecovery.two_translate_of_restricted_injective_disjoint": {
+    "emitted_type": "@CorruptedFieldRecovery.two_translate_of_restricted_injective_disjoint.{u_1, u_2,\n    u_3} : \u2200 {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]\n  (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W) (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)\n  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V) (hu : Function.Surjective.{u_2 + 1, u_3 + 1} \u21d1u)\n  (hinj :\n    Set.InjOn.{max u_1 u_2, max u_1 u_2} \u21d1(LinearMap.dualMap.{u_1, u_2, u_2} T)\n      \u2191(LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u)))\n  (hd :\n    Disjoint.{max u_1 u_2} (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u))\n      (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} (u \u2218\u2097 T)))),\n  Eq.{max (u_1 + 1) (u_2 + 1)}\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2}\n      (CorruptedFieldRecovery.imbalance.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u) T))\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))\n",
+    "sha256": "887156f6c298c049cc137aa5a29187a8b35f21c015c904207bd6611272856028"
+  },
+  "CorruptedFieldRecovery.recovery_modeImage_of_restricted_injective_disjoint": {
+    "emitted_type": "@CorruptedFieldRecovery.recovery_modeImage_of_restricted_injective_disjoint.{u_1, u_2,\n    u_3} : \u2200 {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]\n  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]\n  (C : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V) (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W)\n  (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)\n  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V)\n  (balanced : \u2200 (x y z : V), Eq.{u_1 + 1} (((C (T x)) y) z) (((C x) (T y)) z))\n  (hu : Function.Surjective.{u_2 + 1, u_3 + 1} \u21d1u)\n  (hinj :\n    Set.InjOn.{max u_1 u_2, max u_1 u_2} \u21d1(LinearMap.dualMap.{u_1, u_2, u_2} T)\n      \u2191(LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u)))\n  (hd :\n    Disjoint.{max u_1 u_2} (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u))\n      (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} (u \u2218\u2097 T)))),\n  Eq.{max (u_1 + 1) (u_2 + 1)}\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2}\n      (CorruptedFieldRecovery.imbalance.{u_1, u_2}\n        (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} C (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u)) T))\n    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))\n",
+    "sha256": "fdfe29fb58773298a6d17d080adab06ea67c11dbc65095d16303623a20c3e9b3"
+  },
+  "CorruptedFieldRecovery.imbalance_apply_eq_add_of_char_two": {
+    "emitted_type": "@CorruptedFieldRecovery.imbalance_apply_eq_add_of_char_two : \u2200 {n : Nat} (E : CorruptedFieldRecovery.BinaryTensor n)\n  (T :\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector n))\n  (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} ((((CorruptedFieldRecovery.imbalance.{0, 0} E T) x) y) z)\n    (HAdd.hAdd.{0, 0, 0} (((E (T x)) y) z) (((E x) (T y)) z))\n",
+    "sha256": "2d57eddb1da11885cbf42267c778d75dd54f40b13c3338b6df7f433dfc8c8a2e"
+  },
+  "CorruptedFieldRecovery.imbalance_symmetric12_of_alternating": {
+    "emitted_type": "@CorruptedFieldRecovery.imbalance_symmetric12_of_alternating : \u2200 {n : Nat} (E : CorruptedFieldRecovery.BinaryTensor n)\n  (T :\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector n))\n  (hE : CorruptedFieldRecovery.IsAlternating E) (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} ((((CorruptedFieldRecovery.imbalance.{0, 0} E T) x) y) z)\n    ((((CorruptedFieldRecovery.imbalance.{0, 0} E T) y) x) z)\n",
+    "sha256": "19bd4217b3f92f2414aff279c2b5ede1fe7996b33df01f32c3574fe85877d22d"
+  },
+  "CorruptedFieldRecovery.imbalance_zero_diagonal12_of_alternating": {
+    "emitted_type": "@CorruptedFieldRecovery.imbalance_zero_diagonal12_of_alternating : \u2200 {n : Nat}\n  (E : CorruptedFieldRecovery.BinaryTensor n)\n  (T :\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector n))\n  (hE : CorruptedFieldRecovery.IsAlternating E) (x z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} ((((CorruptedFieldRecovery.imbalance.{0, 0} E T) x) x) z) 0\n",
+    "sha256": "a34fd894503d92d6a07ba4e1957b3c90a21b64f55a6304f5a10d3be65b59080e"
+  },
+  "CorruptedFieldRecovery.increasingPairCovectors": {
+    "emitted_type": "@CorruptedFieldRecovery.increasingPairCovectors : {n : Nat} \u2192\n  (D : CorruptedFieldRecovery.BinaryTensor n) \u2192\n    Set.{0} (LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n) (ZMod 2))\n",
+    "sha256": "5a70ada21dcf82d5da769def46ee54ae5580a22a6d73ee0b1b7e18cc5730c161"
+  },
+  "CorruptedFieldRecovery.modeImage_eq_increasingPairCovectors_of_symmetric12_zero_diagonal": {
+    "emitted_type": "@CorruptedFieldRecovery.modeImage_eq_increasingPairCovectors_of_symmetric12_zero_diagonal : \u2200 {n : Nat}\n  (D : CorruptedFieldRecovery.BinaryTensor n)\n  (hsym : \u2200 (x y z : CorruptedFieldRecovery.BinaryVector n), Eq.{1} (((D x) y) z) (((D y) x) z))\n  (hdiag : \u2200 (x z : CorruptedFieldRecovery.BinaryVector n), Eq.{1} (((D x) x) z) 0),\n  Eq.{1} (CorruptedFieldRecovery.modeImage.{0, 0} D)\n    (Submodule.span.{0, 0} (ZMod 2) (CorruptedFieldRecovery.increasingPairCovectors D))\n",
+    "sha256": "a74d7e0442fb6782260605d90cc97b45ec913a748a8ecf998970c656bd33343a"
+  },
+  "CorruptedFieldRecovery.imbalance_modeImage_eq_increasingPairCovectors_of_alternating": {
+    "emitted_type": "@CorruptedFieldRecovery.imbalance_modeImage_eq_increasingPairCovectors_of_alternating : \u2200 {n : Nat}\n  (E : CorruptedFieldRecovery.BinaryTensor n)\n  (T :\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector n))\n  (hE : CorruptedFieldRecovery.IsAlternating E),\n  Eq.{1} (CorruptedFieldRecovery.modeImage.{0, 0} (CorruptedFieldRecovery.imbalance.{0, 0} E T))\n    (Submodule.span.{0, 0} (ZMod 2)\n      (CorruptedFieldRecovery.increasingPairCovectors (CorruptedFieldRecovery.imbalance.{0, 0} E T)))\n",
+    "sha256": "955875d1808e912ff69b99dfe616f7e5491d6d842db16a59eaebd9d39a2bdd2e"
+  }
+}

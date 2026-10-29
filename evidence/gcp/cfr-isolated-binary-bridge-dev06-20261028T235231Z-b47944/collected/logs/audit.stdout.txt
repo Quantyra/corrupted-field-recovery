@@ -1,0 +1,260 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.imbalance_add
+@CorruptedFieldRecovery.imbalance_add.{u_1,
+    u_2} : ∀ {F : Type u_1} {V : Type u_2} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] (C E : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V)
+  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V),
+  Eq.{max (u_1 + 1) (u_2 + 1)}
+    (CorruptedFieldRecovery.imbalance.{u_1, u_2} (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} C E) T)
+    (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} (CorruptedFieldRecovery.imbalance.{u_1, u_2} C T)
+      (CorruptedFieldRecovery.imbalance.{u_1, u_2} E T))
+CFR_TYPE_END:CorruptedFieldRecovery.imbalance_add
+'CorruptedFieldRecovery.imbalance_add' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanced_cancels
+@CorruptedFieldRecovery.balanced_cancels.{u_1,
+    u_2} : ∀ {F : Type u_1} {V : Type u_2} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] (C E : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V)
+  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V)
+  (balanced : ∀ (x y z : V), Eq.{u_1 + 1} (((C (T x)) y) z) (((C x) (T y)) z)),
+  Eq.{max (u_1 + 1) (u_2 + 1)}
+    (CorruptedFieldRecovery.imbalance.{u_1, u_2} (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} C E) T)
+    (CorruptedFieldRecovery.imbalance.{u_1, u_2} E T)
+CFR_TYPE_END:CorruptedFieldRecovery.balanced_cancels
+'CorruptedFieldRecovery.balanced_cancels' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.imbalance_mode_le
+@CorruptedFieldRecovery.imbalance_mode_le.{u_1,
+    u_2} : ∀ {F : Type u_1} {V : Type u_2} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] (E : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V)
+  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V),
+  LE.le.{max u_1 u_2} (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.imbalance.{u_1, u_2} E T))
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2} E)
+CFR_TYPE_END:CorruptedFieldRecovery.imbalance_mode_le
+'CorruptedFieldRecovery.imbalance_mode_le' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.two_translate_modeImage
+@CorruptedFieldRecovery.two_translate_modeImage.{u_1, u_2,
+    u_3} : ∀ {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]
+  (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W) (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)
+  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V)
+  (split : Function.Surjective.{u_2 + 1, u_3 + 1} fun x => Prod.mk.{u_3, u_3} (u x) (u (T x))),
+  Eq.{max (u_1 + 1) (u_2 + 1)}
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2}
+      (CorruptedFieldRecovery.imbalance.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u) T))
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))
+CFR_TYPE_END:CorruptedFieldRecovery.two_translate_modeImage
+'CorruptedFieldRecovery.two_translate_modeImage' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.recovery_modeImage
+@CorruptedFieldRecovery.recovery_modeImage.{u_1, u_2,
+    u_3} : ∀ {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]
+  (C : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V) (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W)
+  (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)
+  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V)
+  (balanced : ∀ (x y z : V), Eq.{u_1 + 1} (((C (T x)) y) z) (((C x) (T y)) z))
+  (split : Function.Surjective.{u_2 + 1, u_3 + 1} fun x => Prod.mk.{u_3, u_3} (u x) (u (T x))),
+  Eq.{max (u_1 + 1) (u_2 + 1)}
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2}
+      (CorruptedFieldRecovery.imbalance.{u_1, u_2}
+        (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} C (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u)) T))
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))
+CFR_TYPE_END:CorruptedFieldRecovery.recovery_modeImage
+'CorruptedFieldRecovery.recovery_modeImage' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.joint_surjective_of_disjoint_duals
+@CorruptedFieldRecovery.joint_surjective_of_disjoint_duals.{u_1, u_2,
+    u_3} : ∀ {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]
+  (u v : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W) (hu : Function.Surjective.{u_2 + 1, u_3 + 1} ⇑u)
+  (hv : Function.Surjective.{u_2 + 1, u_3 + 1} ⇑v)
+  (hd :
+    Disjoint.{max u_1 u_2} (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u))
+      (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} v))),
+  Function.Surjective.{u_2 + 1, u_3 + 1} ⇑(LinearMap.prod.{u_1, u_2, u_3, u_3} u v)
+CFR_TYPE_END:CorruptedFieldRecovery.joint_surjective_of_disjoint_duals
+'CorruptedFieldRecovery.joint_surjective_of_disjoint_duals' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.two_translate_of_disjoint
+@CorruptedFieldRecovery.two_translate_of_disjoint.{u_1, u_2,
+    u_3} : ∀ {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]
+  (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W) (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)
+  (T : LinearEquiv.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V) (hu : Function.Surjective.{u_2 + 1, u_3 + 1} ⇑u)
+  (hd :
+    Disjoint.{max u_1 u_2} (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u))
+      (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} (u ∘ₗ ↑T)))),
+  Eq.{max (u_1 + 1) (u_2 + 1)}
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2}
+      (CorruptedFieldRecovery.imbalance.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u) ↑T))
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))
+CFR_TYPE_END:CorruptedFieldRecovery.two_translate_of_disjoint
+'CorruptedFieldRecovery.two_translate_of_disjoint' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BinaryVector
+CorruptedFieldRecovery.BinaryVector : (n : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.BinaryVector
+'CorruptedFieldRecovery.BinaryVector' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.BinaryTensor
+CorruptedFieldRecovery.BinaryTensor : (n : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.BinaryTensor
+'CorruptedFieldRecovery.BinaryTensor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.coordinateVector
+@CorruptedFieldRecovery.coordinateVector : {n : Nat} → (i : Fin n) → CorruptedFieldRecovery.BinaryVector n
+CFR_TYPE_END:CorruptedFieldRecovery.coordinateVector
+'CorruptedFieldRecovery.coordinateVector' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.coefficient
+@CorruptedFieldRecovery.coefficient : {n : Nat} → (C : CorruptedFieldRecovery.BinaryTensor n) → (i j k : Fin n) → ZMod 2
+CFR_TYPE_END:CorruptedFieldRecovery.coefficient
+'CorruptedFieldRecovery.coefficient' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.IsAlternating
+@CorruptedFieldRecovery.IsAlternating : {n : Nat} → (C : CorruptedFieldRecovery.BinaryTensor n) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.IsAlternating
+'CorruptedFieldRecovery.IsAlternating' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.binaryTensor_ext_of_coefficients
+@CorruptedFieldRecovery.binaryTensor_ext_of_coefficients : ∀ {n : Nat} {C D : CorruptedFieldRecovery.BinaryTensor n}
+  (h :
+    ∀ (i j k : Fin n),
+      Eq.{1} (CorruptedFieldRecovery.coefficient C i j k) (CorruptedFieldRecovery.coefficient D i j k)),
+  Eq.{1} C D
+CFR_TYPE_END:CorruptedFieldRecovery.binaryTensor_ext_of_coefficients
+'CorruptedFieldRecovery.binaryTensor_ext_of_coefficients' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.alternating_swap12
+@CorruptedFieldRecovery.alternating_swap12 : ∀ {n : Nat} {C : CorruptedFieldRecovery.BinaryTensor n}
+  (h : CorruptedFieldRecovery.IsAlternating C) (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} (((C y) x) z) (((C x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.alternating_swap12
+'CorruptedFieldRecovery.alternating_swap12' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.alternating_swap23
+@CorruptedFieldRecovery.alternating_swap23 : ∀ {n : Nat} {C : CorruptedFieldRecovery.BinaryTensor n}
+  (h : CorruptedFieldRecovery.IsAlternating C) (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} (((C x) z) y) (((C x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.alternating_swap23
+'CorruptedFieldRecovery.alternating_swap23' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.alternating_swap13
+@CorruptedFieldRecovery.alternating_swap13 : ∀ {n : Nat} {C : CorruptedFieldRecovery.BinaryTensor n}
+  (h : CorruptedFieldRecovery.IsAlternating C) (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} (((C z) y) x) (((C x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.alternating_swap13
+'CorruptedFieldRecovery.alternating_swap13' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.binaryTensor_ext_of_increasing_coefficients
+@CorruptedFieldRecovery.binaryTensor_ext_of_increasing_coefficients : ∀ {n : Nat}
+  {C D : CorruptedFieldRecovery.BinaryTensor n} (hC : CorruptedFieldRecovery.IsAlternating C)
+  (hD : CorruptedFieldRecovery.IsAlternating D)
+  (h :
+    ∀ (i j k : Fin n) (a : LT.lt.{0} i j) (a : LT.lt.{0} j k),
+      Eq.{1} (CorruptedFieldRecovery.coefficient C i j k) (CorruptedFieldRecovery.coefficient D i j k)),
+  Eq.{1} C D
+CFR_TYPE_END:CorruptedFieldRecovery.binaryTensor_ext_of_increasing_coefficients
+'CorruptedFieldRecovery.binaryTensor_ext_of_increasing_coefficients' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.two_translate_of_restricted_injective_disjoint
+@CorruptedFieldRecovery.two_translate_of_restricted_injective_disjoint.{u_1, u_2,
+    u_3} : ∀ {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]
+  (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W) (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)
+  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V) (hu : Function.Surjective.{u_2 + 1, u_3 + 1} ⇑u)
+  (hinj :
+    Set.InjOn.{max u_1 u_2, max u_1 u_2} ⇑(LinearMap.dualMap.{u_1, u_2, u_2} T)
+      ↑(LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u)))
+  (hd :
+    Disjoint.{max u_1 u_2} (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u))
+      (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} (u ∘ₗ T)))),
+  Eq.{max (u_1 + 1) (u_2 + 1)}
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2}
+      (CorruptedFieldRecovery.imbalance.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u) T))
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))
+CFR_TYPE_END:CorruptedFieldRecovery.two_translate_of_restricted_injective_disjoint
+'CorruptedFieldRecovery.two_translate_of_restricted_injective_disjoint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.recovery_modeImage_of_restricted_injective_disjoint
+@CorruptedFieldRecovery.recovery_modeImage_of_restricted_injective_disjoint.{u_1, u_2,
+    u_3} : ∀ {F : Type u_1} {V : Type u_2} {W : Type u_3} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+  [inst_2 : Module.{u_1, u_2} F V] [inst_3 : AddCommGroup.{u_3} W] [inst_4 : Module.{u_1, u_3} F W]
+  (C : CorruptedFieldRecovery.Trilinear.{u_1, u_2} F V) (E : CorruptedFieldRecovery.Trilinear.{u_1, u_3} F W)
+  (u : LinearMap.{u_1, u_1, u_2, u_3} (RingHom.id.{u_1} F) V W)
+  (T : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) V V)
+  (balanced : ∀ (x y z : V), Eq.{u_1 + 1} (((C (T x)) y) z) (((C x) (T y)) z))
+  (hu : Function.Surjective.{u_2 + 1, u_3 + 1} ⇑u)
+  (hinj :
+    Set.InjOn.{max u_1 u_2, max u_1 u_2} ⇑(LinearMap.dualMap.{u_1, u_2, u_2} T)
+      ↑(LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u)))
+  (hd :
+    Disjoint.{max u_1 u_2} (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} u))
+      (LinearMap.range.{u_1, u_1, max u_1 u_3, max u_1 u_2} (LinearMap.dualMap.{u_1, u_2, u_3} (u ∘ₗ T)))),
+  Eq.{max (u_1 + 1) (u_2 + 1)}
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2}
+      (CorruptedFieldRecovery.imbalance.{u_1, u_2}
+        (HAdd.hAdd.{max u_1 u_2, max u_1 u_2, max u_1 u_2} C (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u)) T))
+    (CorruptedFieldRecovery.modeImage.{u_1, u_2} (CorruptedFieldRecovery.pullback.{u_1, u_2, u_3} E u))
+CFR_TYPE_END:CorruptedFieldRecovery.recovery_modeImage_of_restricted_injective_disjoint
+'CorruptedFieldRecovery.recovery_modeImage_of_restricted_injective_disjoint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.imbalance_apply_eq_add_of_char_two
+@CorruptedFieldRecovery.imbalance_apply_eq_add_of_char_two : ∀ {n : Nat} (E : CorruptedFieldRecovery.BinaryTensor n)
+  (T :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector n))
+  (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.imbalance.{0, 0} E T) x) y) z)
+    (HAdd.hAdd.{0, 0, 0} (((E (T x)) y) z) (((E x) (T y)) z))
+CFR_TYPE_END:CorruptedFieldRecovery.imbalance_apply_eq_add_of_char_two
+'CorruptedFieldRecovery.imbalance_apply_eq_add_of_char_two' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.imbalance_symmetric12_of_alternating
+@CorruptedFieldRecovery.imbalance_symmetric12_of_alternating : ∀ {n : Nat} (E : CorruptedFieldRecovery.BinaryTensor n)
+  (T :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector n))
+  (hE : CorruptedFieldRecovery.IsAlternating E) (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.imbalance.{0, 0} E T) x) y) z)
+    ((((CorruptedFieldRecovery.imbalance.{0, 0} E T) y) x) z)
+CFR_TYPE_END:CorruptedFieldRecovery.imbalance_symmetric12_of_alternating
+'CorruptedFieldRecovery.imbalance_symmetric12_of_alternating' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.imbalance_zero_diagonal12_of_alternating
+@CorruptedFieldRecovery.imbalance_zero_diagonal12_of_alternating : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor n)
+  (T :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector n))
+  (hE : CorruptedFieldRecovery.IsAlternating E) (x z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.imbalance.{0, 0} E T) x) x) z) 0
+CFR_TYPE_END:CorruptedFieldRecovery.imbalance_zero_diagonal12_of_alternating
+'CorruptedFieldRecovery.imbalance_zero_diagonal12_of_alternating' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.increasingPairCovectors
+@CorruptedFieldRecovery.increasingPairCovectors : {n : Nat} →
+  (D : CorruptedFieldRecovery.BinaryTensor n) →
+    Set.{0} (LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n) (ZMod 2))
+CFR_TYPE_END:CorruptedFieldRecovery.increasingPairCovectors
+'CorruptedFieldRecovery.increasingPairCovectors' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_eq_increasingPairCovectors_of_symmetric12_zero_diagonal
+@CorruptedFieldRecovery.modeImage_eq_increasingPairCovectors_of_symmetric12_zero_diagonal : ∀ {n : Nat}
+  (D : CorruptedFieldRecovery.BinaryTensor n)
+  (hsym : ∀ (x y z : CorruptedFieldRecovery.BinaryVector n), Eq.{1} (((D x) y) z) (((D y) x) z))
+  (hdiag : ∀ (x z : CorruptedFieldRecovery.BinaryVector n), Eq.{1} (((D x) x) z) 0),
+  Eq.{1} (CorruptedFieldRecovery.modeImage.{0, 0} D)
+    (Submodule.span.{0, 0} (ZMod 2) (CorruptedFieldRecovery.increasingPairCovectors D))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_eq_increasingPairCovectors_of_symmetric12_zero_diagonal
+'CorruptedFieldRecovery.modeImage_eq_increasingPairCovectors_of_symmetric12_zero_diagonal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.imbalance_modeImage_eq_increasingPairCovectors_of_alternating
+@CorruptedFieldRecovery.imbalance_modeImage_eq_increasingPairCovectors_of_alternating : ∀ {n : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor n)
+  (T :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector n))
+  (hE : CorruptedFieldRecovery.IsAlternating E),
+  Eq.{1} (CorruptedFieldRecovery.modeImage.{0, 0} (CorruptedFieldRecovery.imbalance.{0, 0} E T))
+    (Submodule.span.{0, 0} (ZMod 2)
+      (CorruptedFieldRecovery.increasingPairCovectors (CorruptedFieldRecovery.imbalance.{0, 0} E T)))
+CFR_TYPE_END:CorruptedFieldRecovery.imbalance_modeImage_eq_increasingPairCovectors_of_alternating
+'CorruptedFieldRecovery.imbalance_modeImage_eq_increasingPairCovectors_of_alternating' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

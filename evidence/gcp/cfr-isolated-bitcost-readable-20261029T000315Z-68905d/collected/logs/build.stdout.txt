@@ -1,0 +1,106 @@
+✖ [2/2] Building CorruptedFieldRecovery.BitCostPrototype (1.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/BitCostPrototype.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/BitCostPrototype.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/BitCostPrototype.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/BitCostPrototype.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/BitCostPrototype.setup.json --json
+warning: CorruptedFieldRecovery/BitCostPrototype.lean:157:19: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: CorruptedFieldRecovery/BitCostPrototype.lean:171:42: Tactic `rfl` failed: The left-hand side
+  erasure (stage k false false false).final
+is not definitionally equal to the right-hand side
+  fullAdder false false false
+
+case false.false.false
+k : Nat
+⊢ erasure (stage k false false false).final = fullAdder false false false
+error: CorruptedFieldRecovery/BitCostPrototype.lean:171:42: Tactic `rfl` failed: The left-hand side
+  erasure (stage k false false true).final
+is not definitionally equal to the right-hand side
+  fullAdder false false true
+
+case false.false.true
+k : Nat
+⊢ erasure (stage k false false true).final = fullAdder false false true
+error: CorruptedFieldRecovery/BitCostPrototype.lean:171:42: Tactic `rfl` failed: The left-hand side
+  erasure (stage k false true false).final
+is not definitionally equal to the right-hand side
+  fullAdder false true false
+
+case false.true.false
+k : Nat
+⊢ erasure (stage k false true false).final = fullAdder false true false
+error: CorruptedFieldRecovery/BitCostPrototype.lean:171:42: Tactic `rfl` failed: The left-hand side
+  erasure (stage k false true true).final
+is not definitionally equal to the right-hand side
+  fullAdder false true true
+
+case false.true.true
+k : Nat
+⊢ erasure (stage k false true true).final = fullAdder false true true
+error: CorruptedFieldRecovery/BitCostPrototype.lean:171:42: Tactic `rfl` failed: The left-hand side
+  erasure (stage k true false false).final
+is not definitionally equal to the right-hand side
+  fullAdder true false false
+
+case true.false.false
+k : Nat
+⊢ erasure (stage k true false false).final = fullAdder true false false
+error: CorruptedFieldRecovery/BitCostPrototype.lean:171:42: Tactic `rfl` failed: The left-hand side
+  erasure (stage k true false true).final
+is not definitionally equal to the right-hand side
+  fullAdder true false true
+
+case true.false.true
+k : Nat
+⊢ erasure (stage k true false true).final = fullAdder true false true
+error: CorruptedFieldRecovery/BitCostPrototype.lean:171:42: Tactic `rfl` failed: The left-hand side
+  erasure (stage k true true false).final
+is not definitionally equal to the right-hand side
+  fullAdder true true false
+
+case true.true.false
+k : Nat
+⊢ erasure (stage k true true false).final = fullAdder true true false
+error: CorruptedFieldRecovery/BitCostPrototype.lean:171:42: Tactic `rfl` failed: The left-hand side
+  erasure (stage k true true true).final
+is not definitionally equal to the right-hand side
+  fullAdder true true true
+
+case true.true.true
+k : Nat
+⊢ erasure (stage k true true true).final = fullAdder true true true
+error: CorruptedFieldRecovery/BitCostPrototype.lean:178:56: unsolved goals
+k : Nat
+x y carry : Bool
+⊢ (k + 1).log2 + 1 + 3 + 4 + ((k + 1).log2 + 1 + 3 + 4) + 7 + 7 + 7 + 7 + 7 + ((k + 1).log2 + 1 + 3 + 4) =
+    3 * ((k + 1).log2 + 1) + 56
+error: CorruptedFieldRecovery/BitCostPrototype.lean:185:33: unsolved goals
+k : Nat
+x y carry : Bool
+hr : (stage k x y carry).final.charge.reads = 13
+hw : (stage k x y carry).final.charge.writes = 8
+hg : (stage k x y carry).final.charge.gates = 5
+hc : (stage k x y carry).final.charge.controlBits = 3 * addressWidth k + 8 * (opcodeBits + pcBits)
+⊢ 26 + (3 * addressWidth k + 8 * (opcodeBits + pcBits)) = 82 + 3 * addressWidth k
+error: CorruptedFieldRecovery/BitCostPrototype.lean:197:8: unsolved goals
+case nil
+k : Nat
+s : State
+⊢ 16 + 3 * programLength = 40
+error: CorruptedFieldRecovery/BitCostPrototype.lean:198:19: unsolved goals
+case cons
+k : Nat
+op : Op
+ops : List Op
+ih : ∀ (s : State), (execute k ops s).peakDeclaredBits = 40
+s : State
+⊢ max (16 + 3 * programLength) 40 = 40
+warning: CorruptedFieldRecovery/BitCostPrototype.lean:216:18: unused variable `ys`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/BitCostPrototype.lean:216:21: unused variable `carry`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: CorruptedFieldRecovery/BitCostPrototype.lean:238:39: Unknown identifier `pow_succ`
+error: CorruptedFieldRecovery/BitCostPrototype.lean:238:10: `simp` made no progress
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.BitCostPrototype

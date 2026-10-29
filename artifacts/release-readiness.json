@@ -1,10 +1,11 @@
 {
   "ready": false,
   "failures": [
+    "missing Lean source evidence: CorruptedFieldRecovery/DenseInput.lean",
     "missing Lean source evidence: CorruptedFieldRecovery/BitCostPrototype.lean",
+    "missing Lean source evidence: CorruptedFieldRecovery/FourContractions.lean",
     "missing Lean source evidence: CorruptedFieldRecovery/BinaryTensor.lean",
-    "missing Lean source evidence: CorruptedFieldRecovery/Bridge.lean",
-    "missing Lean source evidence: CorruptedFieldRecovery/FourContractions.lean"
+    "missing Lean source evidence: CorruptedFieldRecovery/Bridge.lean"
   ],
   "require_complete_lean": false,
   "complete_lean": false,

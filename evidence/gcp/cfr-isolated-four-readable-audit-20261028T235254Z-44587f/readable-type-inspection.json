@@ -1,0 +1,58 @@
+{
+  "original_terminal_unchanged": true,
+  "token_gate_false_negative": "Lean prints And, and scalar-generator conclusion is explicit A(1), not existential.",
+  "full_types_for_root_inspection": {
+    "CorruptedFieldRecovery.tracePairing_nondegenerate": {
+      "emitted_type": "CorruptedFieldRecovery.tracePairing_nondegenerate.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (scale : K)\n  (hscale : Ne.{u_1 + 1} scale 0) (x : K) (hx : Ne.{u_1 + 1} x 0),\n  \u2203 y,\n    Ne.{1}\n      ((Algebra.trace.{0, u_1} (ZMod (ringChar.{u_1} K)) K)\n        (HMul.hMul.{u_1, u_1, u_1} (HMul.hMul.{u_1, u_1, u_1} scale x) y))\n      0\n",
+      "characters": 426,
+      "expected_tokens_checked": []
+    },
+    "CorruptedFieldRecovery.fieldContraction0_radical": {
+      "emitted_type": "CorruptedFieldRecovery.fieldContraction0_radical.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)\n  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n  Iff\n    (\u2200 (y : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n      Eq.{1} (CorruptedFieldRecovery.fieldContraction0.{u_1} K c x y) 0)\n    (And (Eq.{u_1 + 1} x.2.1 0) (Eq.{u_1 + 1} x.2.2 0))\n",
+      "characters": 461,
+      "expected_tokens_checked": []
+    },
+    "CorruptedFieldRecovery.fieldContraction1_radical": {
+      "emitted_type": "CorruptedFieldRecovery.fieldContraction1_radical.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)\n  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n  Iff\n    (\u2200 (y : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n      Eq.{1} (CorruptedFieldRecovery.fieldContraction1.{u_1} K c x y) 0)\n    (And (Eq.{u_1 + 1} x.1 0) (Eq.{u_1 + 1} x.2.2 0))\n",
+      "characters": 459,
+      "expected_tokens_checked": []
+    },
+    "CorruptedFieldRecovery.fieldContraction2_radical": {
+      "emitted_type": "CorruptedFieldRecovery.fieldContraction2_radical.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)\n  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n  Iff\n    (\u2200 (y : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n      Eq.{1} (CorruptedFieldRecovery.fieldContraction2.{u_1} K c x y) 0)\n    (And (Eq.{u_1 + 1} x.1 0) (Eq.{u_1 + 1} x.2.1 0))\n",
+      "characters": 459,
+      "expected_tokens_checked": []
+    },
+    "CorruptedFieldRecovery.balanced_first_three_preserves_axes": {
+      "emitted_type": "CorruptedFieldRecovery.balanced_first_three_preserves_axes.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)\n  (T :\n    LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.FieldTriple.{u_1} K)\n      (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n  (h0 :\n    \u2200 (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n      Eq.{1} (CorruptedFieldRecovery.fieldContraction0.{u_1} K c (T x) y)\n        (CorruptedFieldRecovery.fieldContraction0.{u_1} K c x (T y)))\n  (h1 :\n    \u2200 (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n      Eq.{1} (CorruptedFieldRecovery.fieldContraction1.{u_1} K c (T x) y)\n        (CorruptedFieldRecovery.fieldContraction1.{u_1} K c x (T y)))\n  (h2 :\n    \u2200 (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n      Eq.{1} (CorruptedFieldRecovery.fieldContraction2.{u_1} K c (T x) y)\n        (CorruptedFieldRecovery.fieldContraction2.{u_1} K c x (T y))),\n  And\n    (\u2200 (t : K),\n      And (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} t (Prod.mk.{u_1, u_1} 0 0))).2.1 0)\n        (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} t (Prod.mk.{u_1, u_1} 0 0))).2.2 0))\n    (And\n      (\u2200 (t : K),\n        And (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} 0 (Prod.mk.{u_1, u_1} t 0))).1 0)\n          (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} 0 (Prod.mk.{u_1, u_1} t 0))).2.2 0))\n      (\u2200 (t : K),\n        And (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} 0 (Prod.mk.{u_1, u_1} 0 t))).1 0)\n          (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} 0 (Prod.mk.{u_1, u_1} 0 t))).2.1 0)))\n",
+      "characters": 1603,
+      "expected_tokens_checked": [
+        "K",
+        "c",
+        "hc",
+        "T",
+        "h0",
+        "h1",
+        "h2",
+        "fieldContraction0",
+        "fieldContraction1",
+        "fieldContraction2",
+        "And"
+      ]
+    },
+    "CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator": {
+      "emitted_type": "CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator.{u_1,\n  u_2} : \u2200 (F : Type u_1) (K : Type u_2) [inst : CommRing.{u_1} F] [inst_1 : Field.{u_2} K]\n  [inst_2 : Algebra.{u_1, u_2} F K] (A : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) K K) (\u03b1 : K)\n  (hgen : Eq.{u_2 + 1} F[\u03b1] Top.top.{u_2})\n  (hcomm : \u2200 (x : K), Eq.{u_2 + 1} (A (HMul.hMul.{u_2, u_2, u_2} \u03b1 x)) (HMul.hMul.{u_2, u_2, u_2} \u03b1 (A x))) (x : K),\n  Eq.{u_2 + 1} (A x) (HMul.hMul.{u_2, u_2, u_2} (A 1) x)\n",
+      "characters": 483,
+      "expected_tokens_checked": [
+        "F",
+        "K",
+        "A",
+        "hgen",
+        "hcomm",
+        "Eq",
+        "HMul.hMul",
+        "A 1"
+      ]
+    }
+  },
+  "semantic_acceptance": "Root review pending; not inferred from token matching."
+}

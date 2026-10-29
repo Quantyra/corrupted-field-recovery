@@ -1,0 +1,30 @@
+{
+  "pinned_lean_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+  "source": "https://raw.githubusercontent.com/leanprover/lean4/d024af099ca4bf2c86f649261ebf59565dc8c622/src/Lean/PrettyPrinter/Delaborator/Options.lean",
+  "documented_defaults": {
+    "pp.maxSteps": 5000,
+    "pp.deepTerms": false,
+    "pp.deepTerms.threshold": 50,
+    "pp.proofs": false
+  },
+  "generated_capture_options": {
+    "pp.explicit": false,
+    "pp.universes": true,
+    "pp.fullNames": true,
+    "pp.piBinderTypes": true,
+    "pp.piBinderNames": true,
+    "pp.piBinderNames.hygienic": true,
+    "pp.proofs": true,
+    "pp.deepTerms": true,
+    "pp.maxSteps": 1000000,
+    "maxRecDepth": 10000
+  },
+  "gate_rejects": [
+    "empty type",
+    "\u22ef",
+    "\u2026",
+    "...",
+    "missing specified expected binder/hypothesis/conclusion tokens"
+  ],
+  "scope": "Readable full declaration types for semantic inspection; outer binders/hypotheses retained. This is not a kernel-Expr round-trip claim."
+}

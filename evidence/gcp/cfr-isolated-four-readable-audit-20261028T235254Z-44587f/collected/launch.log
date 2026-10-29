@@ -1,0 +1,15 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-isolated-four-readable-audit-20261028T235254Z-44587f/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
+STAGE=audit
+Traceback (most recent call last):
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-isolated-four-readable-audit-20261028T235254Z-44587f/gcp_cfr_runner.py", line 283, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-isolated-four-readable-audit-20261028T235254Z-44587f/gcp_cfr_runner.py", line 259, in main
+    validate_type_block(body, manifest.get('expected_type_tokens', {}).get(name, []))
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-isolated-four-readable-audit-20261028T235254Z-44587f/gcp_cfr_runner.py", line 50, in validate_type_block
+    raise ValueError('Missing expected declaration binder/hypothesis/conclusion token: '+token)
+ValueError: Missing expected declaration binder/hypothesis/conclusion token: ∧

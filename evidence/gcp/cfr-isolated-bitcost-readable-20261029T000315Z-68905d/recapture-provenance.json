@@ -1,0 +1,8 @@
+{
+  "original_run": "cfr-isolated-bitcost-dev01-20261028T225447Z-93b03f",
+  "changed_files": [
+    "checks/CaptureAudit.lean"
+  ],
+  "proof_and_dependency_bytes_unchanged": true,
+  "reason": "Apply corrected readable all-binder audit configuration before first cloud launch; original capture remains unlaunched and preserved."
+}

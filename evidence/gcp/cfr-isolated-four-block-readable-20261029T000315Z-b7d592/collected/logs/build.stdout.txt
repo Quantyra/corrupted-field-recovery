@@ -1,0 +1,28 @@
+✖ [2006/2006] Building CorruptedFieldRecovery.FourContractions (3.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/FourContractions.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/FourContractions.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/FourContractions.setup.json --json
+error: CorruptedFieldRecovery/FourContractions.lean:243:4: Tactic `rfl` failed: The left-hand side
+  (x0, x1, x2)
+is not definitionally equal to the right-hand side
+  ((x0, x1, x2).1, 0, 0) + (0, (x0, x1, x2).2.1, 0) + (0, 0, (x0, x1, x2).2.2)
+
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra (ZMod (ringChar K)) K
+c : K
+hc : c ≠ 0
+T : FieldTriple K →ₗ[ZMod (ringChar K)] FieldTriple K
+h0 : ∀ (x y : FieldTriple K), fieldContraction0 K c (T x) y = fieldContraction0 K c x (T y)
+h1 : ∀ (x y : FieldTriple K), fieldContraction1 K c (T x) y = fieldContraction1 K c x (T y)
+h2 : ∀ (x y : FieldTriple K), fieldContraction2 K c (T x) y = fieldContraction2 K c x (T y)
+haxes :
+  (∀ (t : K), (T (t, 0, 0)).2.1 = 0 ∧ (T (t, 0, 0)).2.2 = 0) ∧
+    (∀ (t : K), (T (0, t, 0)).1 = 0 ∧ (T (0, t, 0)).2.2 = 0) ∧ ∀ (t : K), (T (0, 0, t)).1 = 0 ∧ (T (0, 0, t)).2.1 = 0
+ht0 : ∀ (t : K), T (t, 0, 0) = ((fieldBlock0 (ZMod (ringChar K)) K T) t, 0, 0)
+ht1 : ∀ (t : K), T (0, t, 0) = (0, (fieldBlock1 (ZMod (ringChar K)) K T) t, 0)
+ht2 : ∀ (t : K), T (0, 0, t) = (0, 0, (fieldBlock2 (ZMod (ringChar K)) K T) t)
+x0 x1 x2 : K
+⊢ (x0, x1, x2) = ((x0, x1, x2).1, 0, 0) + (0, (x0, x1, x2).2.1, 0) + (0, 0, (x0, x1, x2).2.2)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.FourContractions

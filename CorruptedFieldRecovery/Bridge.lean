@@ -99,13 +99,15 @@ theorem modeImage_eq_increasingPairCovectors_of_symmetric12_zero_diagonal
   let b := Pi.basisFun (ZMod 2) (Fin n)
   let S := Submodule.span (ZMod 2) (increasingPairCovectors D)
   have hswap (x y : BinaryVector n) : D x y = D y x := by
-    ext z
+    apply LinearMap.ext
+    intro z
     exact hsym x y z
   have hslice (i j : Fin n) : D (coordinateVector i) (coordinateVector j) ∈ S := by
     by_cases hij : i = j
     · subst j
       have hzero : D (coordinateVector i) (coordinateVector i) = 0 := by
-        ext z
+        apply LinearMap.ext
+        intro z
         exact hdiag (coordinateVector i) z
       rw [hzero]
       exact S.zero_mem
@@ -116,19 +118,15 @@ theorem modeImage_eq_increasingPairCovectors_of_symmetric12_zero_diagonal
             D (coordinateVector j) (coordinateVector i) from hswap _ _]
         exact Submodule.subset_span ⟨⟨(j, i), hji⟩, rfl⟩
   have hsecond (i : Fin n) (y : BinaryVector n) : D (coordinateVector i) y ∈ S := by
-    calc
-      D (coordinateVector i) y =
-          D (coordinateVector i) (∑ j, (b.repr y j) • b j) := by rw [b.sum_repr y]
-      _ = ∑ j, (b.repr y j) • D (coordinateVector i) (b j) := by
-          simp only [map_sum, map_smul]
-      _ ∈ S := Submodule.sum_smul_mem S _ (fun j _ => by
-          simpa [coordinateVector, Pi.basisFun] using hslice i j)
+    rw [← b.sum_repr y]
+    simp only [map_sum, map_smul]
+    exact Submodule.sum_smul_mem S _ (fun j _ => by
+      simpa [coordinateVector, Pi.basisFun, b] using hslice i j)
   have hall (x y : BinaryVector n) : D x y ∈ S := by
-    calc
-      D x y = D (∑ i, (b.repr x i) • b i) y := by rw [b.sum_repr x]
-      _ = ∑ i, (b.repr x i) • D (b i) y := by simp only [map_sum, map_smul]
-      _ ∈ S := Submodule.sum_smul_mem S _ (fun i _ => by
-          simpa [coordinateVector, Pi.basisFun] using hsecond i y)
+    rw [← b.sum_repr x]
+    simp only [map_sum, map_smul, LinearMap.sum_apply, LinearMap.smul_apply]
+    exact Submodule.sum_smul_mem S _ (fun i _ => by
+      simpa [coordinateVector, Pi.basisFun, b] using hsecond i y)
   apply le_antisymm
   · apply Submodule.span_le.mpr
     rintro _ ⟨xy, rfl⟩

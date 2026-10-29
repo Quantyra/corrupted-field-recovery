@@ -1,0 +1,193 @@
+{
+  "run": "cfr-isolated-four-fulltype-recheck-20261028T235851Z-925763",
+  "utc": "2026-10-28T23:58:51.190574+00:00",
+  "parent_commit": "1f2e70a4d0072511f27340372c88152c35ac5f82",
+  "source_kind": "immutable-recapture-fulltype-gate-correction",
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "compile_host": "GCP",
+  "builder_profile": {
+    "profile": "cfr-isolated-20261028a",
+    "project": "quantyra-lean-cert-20260915",
+    "instance": "quantyra-cfr-lean-builder-20261028a",
+    "zone": "us-central1-a",
+    "account": "dfredriksen@quantyra.org",
+    "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+    "toolchain_bin": "/opt/quantyra/lean-4.30.0-linux/bin",
+    "machine_type": "e2-highmem-8",
+    "boot_disk_gb": 100,
+    "max_run_duration_seconds": 14400,
+    "idle_shutdown": false,
+    "ephemeral_external_ip": "Outbound only; effective ingress restricted to IAP SSH and internal subnet. Remove after preserving outcomes.",
+    "ssh_host_key_fingerprint": "SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "ownership": "Dedicated CFR builder explicitly requested by Dan; no shared disk or cache"
+  },
+  "targets": [
+    "CorruptedFieldRecovery.FourContractions"
+  ],
+  "audit": true,
+  "audit_path": "checks/CaptureAudit.lean",
+  "audited_exports": [
+    "CorruptedFieldRecovery.tracePairing_nondegenerate",
+    "CorruptedFieldRecovery.fieldContraction0_radical",
+    "CorruptedFieldRecovery.fieldContraction1_radical",
+    "CorruptedFieldRecovery.fieldContraction2_radical",
+    "CorruptedFieldRecovery.balanced_first_three_preserves_axes",
+    "CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator"
+  ],
+  "source_sha256": {
+    "CorruptedFieldRecovery.lean": "5bb695b100945569e6a9d98bdb8f0c70e01ed890c3c8ac73be4ff736aef4e80c",
+    "CorruptedFieldRecovery/BinaryTensor.lean": "a98590adf42e2389358ea56ac4664db5ce5a8ae7fe62db27178daa2791296cc7",
+    "CorruptedFieldRecovery/BitCostPrototype.lean": "5174288a682f34dab8d313b44938ee582c9c9e799444d96664df8b5b39a60dbb",
+    "CorruptedFieldRecovery/Bridge.lean": "b129613c4139b105b5fb14b41118636a4ba3bf14983a651a8ad463f4eb30f0d9",
+    "CorruptedFieldRecovery/Defect.lean": "12a92e387a360cde83ec27b885103bd65ccb0eb7593c9a57143ea261b09c08c6",
+    "CorruptedFieldRecovery/FourContractions.lean": "b948de2ade99fd3b815cdf421fec3ec65f93eef1e6357d99f3f39a385153c5e2",
+    "CorruptedFieldRecovery/Independent.lean": "1e051f2e7d19c748242db1a091c9aa42c4ec532f69467796e81487f7b53f3baf",
+    "checks/Audit.lean": "3b1b3e1737b3621b4e5a401819d10001fcf67f9f440f6a62ffcdddb6c4eb40b3",
+    "checks/CaptureAudit.lean": "bd6998f77886a741564df76dc22014ffb410c73bf9d67c77cc96c14c3a107d87",
+    "lake-manifest.json": "5e95294fc479a9e41d6fb269dddbb1372127d716e01fa74017656e3c0b6bd4a0",
+    "lakefile.toml": "46ac718eb654678ceea6d9f0a19f6944af19e4e513b01b91f89f0dc94373f8ce",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+  },
+  "dependencies": [
+    {
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "name": "mathlib",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "inherited": false,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/plausible",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a456461b368b71d2accd95234832cd9c174b5437",
+      "name": "plausible",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "name": "LeanSearchClient",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/import-graph",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "515cf9d0c00ece5e661f6de4326a53dedc1e8ea1",
+      "name": "importGraph",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a84b3e2475d5c5ab979567b1ad8aea21b764bcf8",
+      "name": "proofwidgets",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v0.0.99",
+      "inherited": true,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/aesop",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "558915ae105bfd8074e22d597613d1961822adc2",
+      "name": "aesop",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/quote4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a6e6c34c4ef182f83b219a3a5a385f51f44bdc4c",
+      "name": "Qq",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/batteries",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "32dc18cde3684679f3c003de608743b57498c56f",
+      "name": "batteries",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover/lean4-cli",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover",
+      "rev": "6b907cf12b2e445ccb7c24bc208ef04a1f39e84c",
+      "name": "Cli",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    }
+  ],
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "archive_sha256": "16eea6a1e93e33891f2d2a1ad8a31a76f697b9752cd1cffc3ab9a47739872f00",
+  "utf8_no_bom_verified": true,
+  "encoding_errors": [],
+  "recaptured_from": "cfr-isolated-four-readable-audit-20261028T235254Z-44587f",
+  "expected_type_tokens": {
+    "CorruptedFieldRecovery.balanced_first_three_preserves_axes": [
+      "K",
+      "c",
+      "hc",
+      "T",
+      "h0",
+      "h1",
+      "h2",
+      "fieldContraction0",
+      "fieldContraction1",
+      "fieldContraction2",
+      "And"
+    ],
+    "CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator": [
+      "F",
+      "K",
+      "A",
+      "hgen",
+      "hcomm",
+      "Eq",
+      "HMul.hMul",
+      "A 1"
+    ]
+  }
+}
