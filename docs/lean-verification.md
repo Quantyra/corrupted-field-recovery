@@ -43,3 +43,21 @@ The exact-source GCP run `cfr-binary-field-transport-dev02-20261029T045909Z-4b7b
 Root inspected the source and exact emitted types and accepted the narrow transport theorem: with an explicit prime-field-linear hidden input equivalence, finite characteristic-two field, sampled field basis, nonzero coefficient and a generating fourth coordinate, actual hidden-input four-form balance holds exactly for the transported scalar actions `x mapped to iota.symm (k smul iota x)`. The separate finrank conjunct concerns the existing coordinate scalar-map range. This increment does not establish the physical balance-space finrank, clean-sample conditions, hidden-field discovery, complete S009 or the complete recovery theorem.
 
 Remaining to-do list: physical balance-space and input-encoding bridges; clean sampling, finite-field probability bounds, verified constructor and executable certificate validation; charged costs and the end-to-end theorem audit.
+
+
+## GCP bridged array-equality gate, 29 October 2026 UTC
+
+The exact-source GCP run `cfr-executable-certificate-dev03-20261029T055231Z-8a3f31` passed its focused build, seven-declaration untruncated type/transitive-axiom audit and zero-warning gate. Source SHA-256 for `ExecutableCertificate.lean` is `a754b12ac17bfee8c7a76ec83ab41f545cdce4dd18cfa8a2b65918fb62e818d6`. Exact source, prior failed attempts, raw logs and hashed terminal collection remain under `evidence/gcp/`. The audit reports only `propext`, `Classical.choice` and `Quot.sound`.
+
+Root inspected the source and emitted types and accepted only this narrow result: finite ordered-array equality, after the four length checks, implies equality of every tensor coefficient and then every vector triple under the explicit tensor-array bridge fields. The checker reads the finite arrays; its input structures also contain semantic tensors and proof fields. The represented array and its bridge are supplied. Acceptance does not compute or validate the candidate sum, residual support or finite-field representation from raw data. It does not establish a complete executable certificate validator, constructor correctness or cost bounds.
+
+Remaining to-do list: derive and validate the representation and tensor-array bridges from raw finite data; complete support/field validation, sampling and constructor proofs, charged costs and the end-to-end theorem audit.
+
+
+## GCP clean-subspace counts, 29 October 2026 UTC
+
+The exact-source GCP run `cfr-sampling-counts-dev04-20261029T060817Z-627c49` passed its focused build, two-declaration untruncated type/transitive-axiom audit and zero-warning gate. Source SHA-256 for `SamplingCounts.lean` is `9bd1e5bc62c1302b0a4e65bd010f436386f96e24891e7f005c854d54d4691864`. Exact inputs, preceding failed attempts, raw logs and hashed terminal collection remain under `evidence/gcp/`. Both declarations report only `propext`, `Classical.choice` and `Quot.sound`.
+
+Root accepted the exact narrow statements: a surjective binary-linear map between finite-dimensional spaces of dimensions n and r has kernel cardinality 2^(n-r), and four choices from an arbitrary finite subset A give |A|^4 clean words. The kernel need not be linear over the hidden extension field. The second statement is a generic finite-set count. Neither theorem yet connects the manuscript's actual support promise to an independent uniform sampler or derives the clean-sampling probability, field-generation bounds, success amplification or complete S010.
+
+Remaining to-do list: instantiate the support-kernel count and derive the actual finite sampling ratio; prove field-generation/translate estimates and bounded amplification; complete constructor/certificate validation, charged costs and final theorem assembly.

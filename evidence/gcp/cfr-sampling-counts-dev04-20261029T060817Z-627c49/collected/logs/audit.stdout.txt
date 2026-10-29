@@ -1,0 +1,17 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_ker_support_f2
+@CorruptedFieldRecovery.card_ker_support_f2.{u_1,
+    u_2} : ∀ {V : Type u_1} {W : Type u_2} [inst : AddCommGroup.{u_1} V] [inst_1 : Module.{0, u_1} (ZMod 2) V]
+  [inst_2 : FiniteDimensional.{0, u_1} (ZMod 2) V] [inst_3 : AddCommGroup.{u_2} W] [inst_4 : Module.{0, u_2} (ZMod 2) W]
+  [inst_5 : FiniteDimensional.{0, u_2} (ZMod 2) W] [inst_6 : Fintype.{u_1} V] [inst_7 : Fintype.{u_2} W]
+  (u : LinearMap.{0, 0, u_1, u_2} (RingHom.id.{0} (ZMod 2)) V W) (hu : Function.Surjective.{u_1 + 1, u_2 + 1} ⇑u)
+  (n r : Nat) (hV : Eq.{1} (Module.finrank.{0, u_1} (ZMod 2) V) n) (hW : Eq.{1} (Module.finrank.{0, u_2} (ZMod 2) W) r),
+  Eq.{1} (Nat.card.{u_1} ↥(LinearMap.ker.{0, 0, u_1, u_2} u)) (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} n r))
+CFR_TYPE_END:CorruptedFieldRecovery.card_ker_support_f2
+'CorruptedFieldRecovery.card_ker_support_f2' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_four_clean_words
+@CorruptedFieldRecovery.card_four_clean_words.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] (A : Finset.{u_1} V),
+  Eq.{1} (Fintype.card.{u_1} (Subtype.{u_1 + 1} fun x => ∀ (i : Fin 4), Membership.mem.{u_1, u_1} A (x i)))
+    (HPow.hPow.{0, 0, 0} (Finset.card.{u_1} A) 4)
+CFR_TYPE_END:CorruptedFieldRecovery.card_four_clean_words
+'CorruptedFieldRecovery.card_four_clean_words' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
