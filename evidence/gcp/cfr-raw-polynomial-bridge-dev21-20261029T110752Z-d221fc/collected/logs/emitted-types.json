@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawMaskPolynomial_bit": {
+    "emitted_type": "CorruptedFieldRecovery.rawMaskPolynomial_bit : \u2200 (b : Bool) (n : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (Nat.bit b n))\n    (HAdd.hAdd.{0, 0, 0} (Polynomial.C.{0} (ite.{1} (Eq.{1} b Bool.true) 1 0))\n      (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (CorruptedFieldRecovery.rawMaskPolynomial n)))\n",
+    "sha256": "7b1c46f4d0cb4e2524c9f35f1d6704f5acc56cf83ec864cf85b30ddc68c02e10"
+  },
+  "CorruptedFieldRecovery.rawMaskPolynomial_shift": {
+    "emitted_type": "CorruptedFieldRecovery.rawMaskPolynomial_shift : \u2200 (n : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (HMul.hMul.{0, 0, 0} 2 n))\n    (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (CorruptedFieldRecovery.rawMaskPolynomial n))\n",
+    "sha256": "079ba1c176900041d7107580b4706cfe2c40404d8fdf17437b0edcb05f21c5de"
+  },
+  "CorruptedFieldRecovery.rawMaskPolynomial_xor": {
+    "emitted_type": "CorruptedFieldRecovery.rawMaskPolynomial_xor : \u2200 (a b : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (Nat.xor a b))\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawMaskPolynomial a) (CorruptedFieldRecovery.rawMaskPolynomial b))\n",
+    "sha256": "d5a1576a556538c7aa9d0c90fdf9ad1df55c7fa85a5b0b4d105115b53cabb88d"
+  },
+  "CorruptedFieldRecovery.rawPolyMul_polynomial": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolyMul_polynomial : \u2200 (a b : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawPolyMul a b))\n    (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawMaskPolynomial a) (CorruptedFieldRecovery.rawMaskPolynomial b))\n",
+    "sha256": "63c3b0d100a9a7bef8bde4b2e5af4b9092a539d6533e1f66954996c898cca1ce"
+  }
+}

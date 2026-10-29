@@ -1,0 +1,35 @@
+✖ [2951/2951] Building CorruptedFieldRecovery.ProbabilityFourTupleCount (7.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityFourTupleCount.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityFourTupleCount.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityFourTupleCount.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityFourTupleCount.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityFourTupleCount.setup.json --json
+error: CorruptedFieldRecovery/ProbabilityFourTupleCount.lean:34:6: failed to synthesize instance of type class
+  Fintype (GoodFourthCoordinate K A D t)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/ProbabilityFourTupleCount.lean:50:4: Type mismatch
+  sampled_basis_bad_coordinate_count K A D b
+has type
+  {x ∈ A | (sampledBasisCoordinateEquiv K b ≪≫ₗ fieldTripleEquivPi K) x 0 ∈ D}.card ≤ D.card * Fintype.card K ^ 2
+but is expected to have type
+  {x ∈ A | coord x 0 ∈ D}.card ≤ D.card * Fintype.card K ^ 2
+error: CorruptedFieldRecovery/ProbabilityFourTupleCount.lean:76:6: failed to synthesize instance of type class
+  Fintype ((t : CleanBasisTriple A) × GoodFourthCoordinate K A D t)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/ProbabilityFourTupleCount.lean:84:4: Type mismatch
+  card_clean_basis_triples_lower A
+has type
+  (A.card - Fintype.card K ^ 2) * ((A.card - Fintype.card K) * (A.card - 1)) ≤
+    @Fintype.card (CleanBasisTriple A)
+      (@Sigma.instFintype (CleanSecond A) (fun xy => { z // z ∈ A ∧ z ∉ Submodule.span K ↑{↑xy.fst, ↑xy.snd} })
+        (fun i => subtypeFintypeOfFinite fun z => z ∈ A ∧ z ∉ Submodule.span K ↑{↑i.fst, ↑i.snd}) Sigma.instFintype)
+but is expected to have type
+  (A.card - Fintype.card K ^ 2) * ((A.card - Fintype.card K) * (A.card - 1)) ≤
+    @Fintype.card Triple
+      (@Sigma.instFintype (CleanSecond A) (fun xy => { z // z ∈ A ∧ z ∉ Submodule.span K ↑{↑xy.fst, ↑xy.snd} })
+        (fun i => Subtype.fintype fun z => z ∈ A ∧ z ∉ Submodule.span K ↑{↑i.fst, ↑i.snd}) Sigma.instFintype)
+error: CorruptedFieldRecovery/ProbabilityFourTupleCount.lean:85:34: failed to synthesize instance of type class
+  Fintype (GoodFourth t)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProbabilityFourTupleCount

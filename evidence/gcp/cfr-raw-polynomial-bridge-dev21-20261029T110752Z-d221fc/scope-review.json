@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-29T11:18:13.855630+00:00",
+  "reviewer": "Root",
+  "accepted_scope": "All-Nat XOR decodes to polynomial addition and rawPolyMul to polynomial multiplication through proof-only rawMaskPolynomial; bit and shift identities.",
+  "not_established": [
+    "decoder bijection",
+    "degree bounds",
+    "factor enumeration completeness",
+    "irreducibility",
+    "field validation"
+  ],
+  "basis": "Root inspected exact emitted types and source after saved GCP build/four declaration audit."
+}

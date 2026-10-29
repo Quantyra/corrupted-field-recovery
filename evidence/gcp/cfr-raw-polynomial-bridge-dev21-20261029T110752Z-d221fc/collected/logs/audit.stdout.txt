@@ -1,0 +1,25 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPolynomial_bit
+CorruptedFieldRecovery.rawMaskPolynomial_bit : ∀ (b : Bool) (n : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (Nat.bit b n))
+    (HAdd.hAdd.{0, 0, 0} (Polynomial.C.{0} (ite.{1} (Eq.{1} b Bool.true) 1 0))
+      (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (CorruptedFieldRecovery.rawMaskPolynomial n)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPolynomial_bit
+'CorruptedFieldRecovery.rawMaskPolynomial_bit' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPolynomial_shift
+CorruptedFieldRecovery.rawMaskPolynomial_shift : ∀ (n : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (HMul.hMul.{0, 0, 0} 2 n))
+    (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (CorruptedFieldRecovery.rawMaskPolynomial n))
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPolynomial_shift
+'CorruptedFieldRecovery.rawMaskPolynomial_shift' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPolynomial_xor
+CorruptedFieldRecovery.rawMaskPolynomial_xor : ∀ (a b : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (Nat.xor a b))
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawMaskPolynomial a) (CorruptedFieldRecovery.rawMaskPolynomial b))
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPolynomial_xor
+'CorruptedFieldRecovery.rawMaskPolynomial_xor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMul_polynomial
+CorruptedFieldRecovery.rawPolyMul_polynomial : ∀ (a b : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawPolyMul a b))
+    (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawMaskPolynomial a) (CorruptedFieldRecovery.rawMaskPolynomial b))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMul_polynomial
+'CorruptedFieldRecovery.rawPolyMul_polynomial' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

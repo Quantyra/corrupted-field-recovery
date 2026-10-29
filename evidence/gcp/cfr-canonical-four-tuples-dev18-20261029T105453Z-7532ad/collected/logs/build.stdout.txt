@@ -1,0 +1,107 @@
+✖ [2951/2951] Building CorruptedFieldRecovery.ProbabilityCanonicalFourTuples (4.1s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.setup.json --json
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:20:5: failed to synthesize instance of type class
+  DecidablePred fun x => x ∈ Submodule.span K ↑s
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:34:35: Type mismatch
+  card_span_finset_le_pow s
+has type
+  @Fintype.card (↥(Submodule.span K ↑s)) (subtypeFintypeOfFinite (Membership.mem (Submodule.span K ↑s))) ≤
+    Fintype.card K ^ s.card
+but is expected to have type
+  @Fintype.card (↥(Submodule.span K ↑s)) (Subtype.fintype (Membership.mem (Submodule.span K ↑s))) ≤
+    Fintype.card K ^ s.card
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:41:7: failed to synthesize instance of type class
+  DecidablePred fun x => x ∉ Submodule.span K ↑s
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:72:24: failed to synthesize instance of type class
+  OfNat V 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  V
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:78:4: failed to synthesize instance of type class
+  DecidablePred fun y => y ∉ Submodule.span K ↑{x}
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:86:29: overloaded, errors 
+  86:30 Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression
+    xy.fst
+  has type `V` which does not have the necessary form.
+  
+  86:30 unsupported structure instance field abbreviation, expecting identifier
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:114:4: Tactic `apply` failed: could not unify the conclusion of `card_sigma_finset_lower A0
+  (fun x => {y ∈ A | y ∉ Submodule.span K ↑{x}}) (A.card - Fintype.card K)`
+  (A.card - Fintype.card K) * A0.card ≤ (A0.sigma fun x => {y ∈ A | y ∉ Submodule.span K ↑{x}}).card
+with the goal
+  (A.card - Fintype.card K) * A0.card ≤ P.card
+
+Note: The full type of `card_sigma_finset_lower A0 (fun x => {y ∈ A | y ∉ Submodule.span K ↑{x}})
+  (A.card - Fintype.card K)` is
+  (∀ i ∈ A0, A.card - Fintype.card K ≤ {y ∈ A | y ∉ Submodule.span K ↑{i}}.card) →
+    (A.card - Fintype.card K) * A0.card ≤ (A0.sigma fun x => {y ∈ A | y ∉ Submodule.span K ↑{x}}).card
+
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Fintype K
+inst✝ : DecidableEq K
+A : Finset (FieldTriple K)
+A0 : Finset (FieldTriple K) := nonzeroCleanSet A
+P : Finset ((_ : FieldTriple K) × FieldTriple K) := cleanPairSet A
+T : Finset ((_ : (_ : FieldTriple K) × FieldTriple K) × FieldTriple K) := cleanFrameSet A
+hzero : {x ∈ A | x = 0}.card ≤ 1
+hsplit : {x ∈ A | x = 0}.card + {a ∈ A | ¬a = 0}.card = A.card
+hsplit' : {x ∈ A | x = 0}.card + A0.card = A.card
+hfirst : A.card - 1 ≤ A0.card
+⊢ (A.card - Fintype.card K) * A0.card ≤ P.card
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:126:12: overloaded, errors 
+  failed to synthesize instance of type class
+    Singleton (K × K) (Finset (FieldTriple K))
+  
+  Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+  
+  126:13 unsupported structure instance field abbreviation, expecting identifier
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:111:15: declaration uses `sorry`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:145:12: declaration uses `sorry`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:148:12: unused variable `xy`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:148:20: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:153:2: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:154:2: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:155:2: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:152:2: 'have hx := Finset.mem_filter.mp hp.1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:153:2: 'have hy := Finset.mem_filter.mp hp.2' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:154:2: 'have hz := Finset.mem_filter.mp hparts.2' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:155:2: 'exact ⟨⟨⟨fr.1.1, ⟨hx.1, hx.2⟩⟩, ⟨fr.1.2, ⟨hy.1, hy.2⟩⟩⟩, ⟨fr.2, ⟨hz.1, hz.2⟩⟩⟩' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+error: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:165:53: Unknown identifier `fieldTriple_finrank`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:171:12: unused variable `xy`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:171:20: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:203:38: declaration uses `sorry`
+warning: CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean:178:8: declaration uses `sorry`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.ProbabilityCanonicalFourTuples

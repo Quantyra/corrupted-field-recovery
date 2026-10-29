@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T10:58:15.199605+00:00",
+  "run": "cfr-canonical-four-tuples-dev18-20261029T105453Z-7532ad",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
