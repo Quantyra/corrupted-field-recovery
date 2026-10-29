@@ -25,3 +25,12 @@ All builds ran locally on Windows. The local package directory reused the existi
 The [coverage inventory](../formal/coverage.json) is the authoritative list of unfinished manuscript obligations. The default readiness checker validates a preprint with accurate partial-formalization disclosure. Its `--require-complete-lean` mode additionally requires every manuscript obligation and the final theorem. An intermediate build cannot satisfy that stricter gate. Python remains separately tested, not formally verified.
 
 Remaining to-do list: concrete binary/field model; four-contraction theorem; finite-field and conditional sampling bounds; bounded mathematical constructor; complete coefficient-checker soundness; charged costs; final main-theorem assembly and scope audit.
+
+
+## GCP coefficient-semantics increment, 29 October 2026 UTC
+
+The exact-source GCP run `cfr-certificate-soundness-dev02-20261029T045232Z-48c5f2` passed the focused build, five-declaration full-type/transitive-axiom audit and zero-new-warning gate. Source SHA-256 for `CertificateSoundness.lean` is `4dcc2a71b47b6bbd5042dfa879e3aae4d6a14e0145956706c2b252e29fb5b610`; the pinned toolchain and dependencies are unchanged. Raw logs, emitted types and hashed terminal collection are retained under `evidence/gcp/` at that run identity. The preceding failed source and two prelaunch Windows transport failures remain preserved.
+
+Root inspected the actual types and accepted the narrow semantic result: for an alternating binary tensor input and a supplied `RepresentationPayload`, acceptance of the increasing-basis coefficient comparisons implies equality with the payload tensor on every vector triple. The rank parameter is unrestricted. The payload supplies its support data, support-dimension bound and alternating summands as fields. The checker uses noncomputable classical `decide`; this result establishes coefficient-to-tensor equality, not an executable checker, validated trace-determinant structure, complete certificate verification, constructor correctness or any operational cost bound. All five audited declarations use only `propext`, `Classical.choice` and `Quot.sound`.
+
+Remaining to-do list: complete concrete field/certificate validation and executable checking; original recovery constructor, finite probability estimates, charged time/space bounds and end-to-end theorem audit.
