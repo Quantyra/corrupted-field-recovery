@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-29T18:27:32.229170+00:00",
+  "run": "cfr-actual-five-tape-dev17-20261029T181621Z-0f3474",
+  "archive_sha256": "4ffe448e9482f707ce81e9e71d3ff8279f5f2d7f212437d64af8c65a77c6c327",
+  "recovered_after_transport_failure": true,
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "24fc747129f9b96916171857b2fde78f58d6db5b654e18fd80f5fe636f47342a",
+    "launch.log": "5ad51be23f165e5317bc6660368052ed79f21d994b2aa147a554ccce612cc66f",
+    "runner-pid": "55f84aa950e25a0ff28f49b2617375baaf0bb263c5ff1c2232206560494c54bd",
+    "started-utc": "73c15b2b3da8e8515b5cf6e85168264d4f553882702ce2354bdb6467d1b40010",
+    "terminal-receipt.json": "8c0ac5608798d4ec6b0f13729a8127b9b008e0bd9d014c1e98d28f54795cff5b",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "04ce1f6cdb3697a81e71458ba9b5a28bd8f0f91df09efd62199f4585a3d1f47d",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "d67b933e9504d3b5a64e3f539fd4e9bd2e68702fae8acac97bea7c6a13be21c0",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3de5c68d24a2944b2a6b8b48a8f300918fc6bc3f1348283c2b1047b08f245dd",
+    "logs/runner.stdout.txt": "4044dccc7e0171dd8c83e98bb7f97d9f9119b346a57463546ab95031014cdfcf"
+  }
+}

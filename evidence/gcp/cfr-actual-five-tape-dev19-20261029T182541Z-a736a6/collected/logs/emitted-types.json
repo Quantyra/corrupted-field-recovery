@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.FiveWordTape": {
+    "emitted_type": "CorruptedFieldRecovery.FiveWordTape : (s : Nat) \u2192 Type\n",
+    "sha256": "a96977922f48f2089c3a4db44030c5cab98a39ce20ada0dd2c372d21dcaf665e"
+  },
+  "CorruptedFieldRecovery.fiveTapeSemanticEquiv": {
+    "emitted_type": "@CorruptedFieldRecovery.fiveTapeSemanticEquiv.{u_1} : {s : Nat} \u2192\n  (K : Type u_1) \u2192\n    [inst : Field.{u_1} K] \u2192\n      [inst_1 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] \u2192\n        (Q :\n            LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)\n              (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))\n              (CorruptedFieldRecovery.FieldTriple.{u_1} K)) \u2192\n          Equiv.{1, u_1 + 1} (CorruptedFieldRecovery.FiveWordTape s)\n            ((_ : (a : Fin 4) \u2192 CorruptedFieldRecovery.FieldTriple.{u_1} K) \u00d7 CorruptedFieldRecovery.BinaryVector s)\n",
+    "sha256": "f920c3f2014fdc06f1fe12f736016073373f0590397d3328f4c93f2d3b93de0e"
+  },
+  "CorruptedFieldRecovery.actualFiveGoodTapeSet": {
+    "emitted_type": "@CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} : {s : Nat} \u2192\n  (K : Type u_1) \u2192\n    [inst : Field.{u_1} K] \u2192\n      [inst_1 : Fintype.{u_1} K] \u2192\n        [inst_2 : DecidableEq.{u_1 + 1} K] \u2192\n          [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] \u2192\n            [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] \u2192\n              [inst_5 : Finite.{u_1 + 1} K] \u2192\n                (Q :\n                    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)\n                      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))\n                      (CorruptedFieldRecovery.FieldTriple.{u_1} K)) \u2192\n                  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) \u2192\n                    (U :\n                        Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField\n                          (CorruptedFieldRecovery.KTriple.{u_1} K)) \u2192\n                      (b :\n                          (a : (a : Fin 4) \u2192 CorruptedFieldRecovery.FieldTriple.{u_1} K) \u2192\n                            Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K) \u2192\n                        Finset.{0} (CorruptedFieldRecovery.FiveWordTape s)\n",
+    "sha256": "86940fcd8704eee3da875c2efffebc4697a1f704fe0d718fe2632bc7985d05f1"
+  },
+  "CorruptedFieldRecovery.card_actualFiveGoodTapeSet": {
+    "emitted_type": "@CorruptedFieldRecovery.card_actualFiveGoodTapeSet.{u_1} : \u2200 {s : Nat} (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_5 : Finite.{u_1 + 1} K]\n  (Q :\n    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)\n      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))\n  (b :\n    (a : (a : Fin 4) \u2192 CorruptedFieldRecovery.FieldTriple.{u_1} K) \u2192\n      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K),\n  Eq.{1} (Finset.card.{0} (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q A U b))\n    (Finset.card.{u_1} (CorruptedFieldRecovery.goodFiveTupleSigma.{u_1} K A U b))\n",
+    "sha256": "8f89dd92ef251fe1e3ef8f57f806344945e607fd895fa05446c34048023602d1"
+  },
+  "CorruptedFieldRecovery.card_fiveWordTape": {
+    "emitted_type": "CorruptedFieldRecovery.card_fiveWordTape : \u2200 (s : Nat),\n  Eq.{1} (Fintype.card.{0} (CorruptedFieldRecovery.FiveWordTape s)) (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 13 s))\n",
+    "sha256": "47aeb3dd91b717f6243955df70431c232a08e6741b3c8258e9963a3a01bec7db"
+  }
+}

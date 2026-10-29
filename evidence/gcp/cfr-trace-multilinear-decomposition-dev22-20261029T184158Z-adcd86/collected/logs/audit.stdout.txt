@@ -1,0 +1,134 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.traceDeterminantTensor
+@CorruptedFieldRecovery.traceDeterminantTensor.{u_1} : {n : Nat} →
+  (K : Type u_1) →
+    [inst : Field.{u_1} K] →
+      [inst_1 : Algebra.{0, u_1} (ZMod 2) K] →
+        [inst_2 : Module.Finite.{0, u_1} (ZMod 2) K] →
+          (c : K) →
+            (coords :
+                LinearMap.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+                  (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+              CorruptedFieldRecovery.BinaryTensor n
+CFR_TYPE_END:CorruptedFieldRecovery.traceDeterminantTensor
+'CorruptedFieldRecovery.traceDeterminantTensor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.traceDeterminantTensor_apply
+@CorruptedFieldRecovery.traceDeterminantTensor_apply.{u_1} : ∀ {n : Nat} (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Algebra.{0, u_1} (ZMod 2) K] [inst_2 : Module.Finite.{0, u_1} (ZMod 2) K] (c : K)
+  (coords :
+    LinearMap.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.traceDeterminantTensor.{u_1} K c coords) x) y) z)
+    ((Algebra.trace.{0, u_1} (ZMod 2) K)
+      (HMul.hMul.{u_1, u_1, u_1} c (CorruptedFieldRecovery.fieldDet3.{u_1} (coords x) (coords y) (coords z))))
+CFR_TYPE_END:CorruptedFieldRecovery.traceDeterminantTensor_apply
+'CorruptedFieldRecovery.traceDeterminantTensor_apply' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.traceDeterminantTensor_alternating
+@CorruptedFieldRecovery.traceDeterminantTensor_alternating.{u_1} : ∀ {n : Nat} (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Algebra.{0, u_1} (ZMod 2) K] [inst_2 : Module.Finite.{0, u_1} (ZMod 2) K] (c : K)
+  (coords :
+    LinearMap.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.traceDeterminantTensor.{u_1} K c coords)
+CFR_TYPE_END:CorruptedFieldRecovery.traceDeterminantTensor_alternating
+'CorruptedFieldRecovery.traceDeterminantTensor_alternating' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawTraceDetPayload_eq_encode
+@CorruptedFieldRecovery.rawTraceDetPayload_eq_encode : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),
+  Eq.{1} (CorruptedFieldRecovery.rawTraceDetPayload candidate hfield forward inverse hcoordinates)
+    (CorruptedFieldRecovery.encodeDenseInput
+      (CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates))
+CFR_TYPE_END:CorruptedFieldRecovery.rawTraceDetPayload_eq_encode
+'CorruptedFieldRecovery.rawTraceDetPayload_eq_encode' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawTraceDetPayload
+@CorruptedFieldRecovery.rawTraceDetPayload : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+      (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) →
+        (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) →
+          CorruptedFieldRecovery.DenseInputPayload (HMul.hMul.{0, 0, 0} 3 s)
+CFR_TYPE_END:CorruptedFieldRecovery.rawTraceDetPayload
+'CorruptedFieldRecovery.rawTraceDetPayload' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawTraceDetTensor
+@CorruptedFieldRecovery.rawTraceDetTensor : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+      (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) →
+        (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) →
+          CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)
+CFR_TYPE_END:CorruptedFieldRecovery.rawTraceDetTensor
+'CorruptedFieldRecovery.rawTraceDetTensor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawTraceDetTensor_alternating
+@CorruptedFieldRecovery.rawTraceDetTensor_alternating : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),
+  CorruptedFieldRecovery.IsAlternating
+    (CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates)
+CFR_TYPE_END:CorruptedFieldRecovery.rawTraceDetTensor_alternating
+'CorruptedFieldRecovery.rawTraceDetTensor_alternating' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawTraceCompatibleCheck
+@CorruptedFieldRecovery.rawTraceCompatibleCheck : {s : Nat} →
+  (compatible : CorruptedFieldRecovery.RawBinaryArray) →
+    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+      (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+        (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) →
+          (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawTraceCompatibleCheck
+'CorruptedFieldRecovery.rawTraceCompatibleCheck' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawTraceCompatibleCheck
+@CorruptedFieldRecovery.accepted_rawTraceCompatibleCheck : ∀ {s : Nat}
+  (compatible : CorruptedFieldRecovery.RawBinaryArray) (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true)
+  (hcheck :
+    Eq.{1} (CorruptedFieldRecovery.rawTraceCompatibleCheck compatible candidate hfield forward inverse hcoordinates)
+      Bool.true),
+  Eq.{1} (CorruptedFieldRecovery.decodeRawArray compatible)
+    (CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawTraceCompatibleCheck
+'CorruptedFieldRecovery.accepted_rawTraceCompatibleCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawTraceDecompositionCheck
+@CorruptedFieldRecovery.rawTraceDecompositionCheck : {s R : Nat} →
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R) →
+    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+      (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+        (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) →
+          (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawTraceDecompositionCheck
+'CorruptedFieldRecovery.rawTraceDecompositionCheck' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawTraceDecompositionCheck_sound
+@CorruptedFieldRecovery.accepted_rawTraceDecompositionCheck_sound : ∀ {s R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R)
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true)
+  (hcheck :
+    Eq.{1} (CorruptedFieldRecovery.rawTraceDecompositionCheck p candidate hfield forward inverse hcoordinates)
+      Bool.true)
+  (x y z : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{1} ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.input p)) x) y) z)
+    (HAdd.hAdd.{0, 0, 0}
+      ((((CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates) x) y) z)
+      ((((CorruptedFieldRecovery.pullback.{0, 0, 0}
+              (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))
+              (CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))
+            x)
+          y)
+        z))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawTraceDecompositionCheck_sound
+'CorruptedFieldRecovery.accepted_rawTraceDecompositionCheck_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-trace-multilinear-decomposition-dev20-20261029T183055Z-e1db44",
+  "utc": "2026-10-29T18:33:30.556771+00:00"
+}

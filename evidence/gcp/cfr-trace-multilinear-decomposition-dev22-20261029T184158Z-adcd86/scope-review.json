@@ -1,0 +1,14 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "The literal trace-determinant tensor has the printed pointwise formula and is alternating. Given accepted raw field-candidate and coordinate checks, the noncomputable compatible and decomposition checks imply the all-vector literal trace-tensor identity plus the actual residual pullback.",
+  "remaining": "Field cardinality, nonzero scalar and support rank bounds use separate accepted theorems. This checker requires proof inputs and noncomputable quotient-field/trace constructions; it is not a standalone executable verifier, refinement or charged-cost theorem.",
+  "evidence": "collected/logs/emitted-types.json",
+  "audited_declarations": 11,
+  "owned_warnings": 0,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

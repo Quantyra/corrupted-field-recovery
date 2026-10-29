@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T18:17:45.573241+00:00",
+  "run": "cfr-trace-multilinear-decomposition-dev16-20261029T181312Z-94f355",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

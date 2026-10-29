@@ -1,0 +1,46 @@
+{
+  "CorruptedFieldRecovery.traceDeterminantTensor": {
+    "emitted_type": "@CorruptedFieldRecovery.traceDeterminantTensor.{u_1} : {n : Nat} \u2192\n  (K : Type u_1) \u2192\n    [inst : Field.{u_1} K] \u2192\n      [inst_1 : Algebra.{0, u_1} (ZMod 2) K] \u2192\n        [inst_2 : Module.Finite.{0, u_1} (ZMod 2) K] \u2192\n          (c : K) \u2192\n            (coords :\n                LinearMap.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n                  (CorruptedFieldRecovery.FieldTriple.{u_1} K)) \u2192\n              CorruptedFieldRecovery.BinaryTensor n\n",
+    "sha256": "c61b5d41d598fa341283e3b5893375a74dd43cccdc6d324dce70d7ca4153d601"
+  },
+  "CorruptedFieldRecovery.traceDeterminantTensor_apply": {
+    "emitted_type": "@CorruptedFieldRecovery.traceDeterminantTensor_apply.{u_1} : \u2200 {n : Nat} (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Algebra.{0, u_1} (ZMod 2) K] [inst_2 : Module.Finite.{0, u_1} (ZMod 2) K] (c : K)\n  (coords :\n    LinearMap.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n  (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} ((((CorruptedFieldRecovery.traceDeterminantTensor.{u_1} K c coords) x) y) z)\n    ((Algebra.trace.{0, u_1} (ZMod 2) K)\n      (HMul.hMul.{u_1, u_1, u_1} c (CorruptedFieldRecovery.fieldDet3.{u_1} (coords x) (coords y) (coords z))))\n",
+    "sha256": "0b8413b128e92012210f149d1662e8248f4d90988521903f7c487f8cb4de8d39"
+  },
+  "CorruptedFieldRecovery.traceDeterminantTensor_alternating": {
+    "emitted_type": "@CorruptedFieldRecovery.traceDeterminantTensor_alternating.{u_1} : \u2200 {n : Nat} (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Algebra.{0, u_1} (ZMod 2) K] [inst_2 : Module.Finite.{0, u_1} (ZMod 2) K] (c : K)\n  (coords :\n    LinearMap.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.FieldTriple.{u_1} K)),\n  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.traceDeterminantTensor.{u_1} K c coords)\n",
+    "sha256": "c13f76058b1fdef0d21c01581ed5710edfedb084e92146e918943cc47164d0f7"
+  },
+  "CorruptedFieldRecovery.rawTraceDetPayload_eq_encode": {
+    "emitted_type": "@CorruptedFieldRecovery.rawTraceDetPayload_eq_encode : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)\n  (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),\n  Eq.{1} (CorruptedFieldRecovery.rawTraceDetPayload candidate hfield forward inverse hcoordinates)\n    (CorruptedFieldRecovery.encodeDenseInput\n      (CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates))\n",
+    "sha256": "8b32a4fd9fa9fdd7ec13d57c64c987a3a54de696f5a0fb58dc183576afcf9819"
+  },
+  "CorruptedFieldRecovery.rawTraceDetPayload": {
+    "emitted_type": "@CorruptedFieldRecovery.rawTraceDetPayload : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192\n      (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192\n        (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) \u2192\n          CorruptedFieldRecovery.DenseInputPayload (HMul.hMul.{0, 0, 0} 3 s)\n",
+    "sha256": "2a3dc6d8715fd39150d3446d6876e9f16545a009fd30cbeb5573d3543385f8e9"
+  },
+  "CorruptedFieldRecovery.rawTraceDetTensor": {
+    "emitted_type": "@CorruptedFieldRecovery.rawTraceDetTensor : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192\n      (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192\n        (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) \u2192\n          CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)\n",
+    "sha256": "94e83f60645002608bc37d0db32d5b3a75ceba4ae56d39019d53a434d5d069d5"
+  },
+  "CorruptedFieldRecovery.rawTraceDetTensor_alternating": {
+    "emitted_type": "@CorruptedFieldRecovery.rawTraceDetTensor_alternating : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)\n  (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),\n  CorruptedFieldRecovery.IsAlternating\n    (CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates)\n",
+    "sha256": "f78a1fc9c4d7682aaa96d21c93ecb74c50c3f48c89cca27d2aa88cd937ba7b39"
+  },
+  "CorruptedFieldRecovery.rawTraceCompatibleCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawTraceCompatibleCheck : {s : Nat} \u2192\n  (compatible : CorruptedFieldRecovery.RawBinaryArray) \u2192\n    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n      (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192\n        (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192\n          (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) \u2192 Bool\n",
+    "sha256": "b8b787a60ff85bd5734da2c6dc1c8c0fd4c7bd87e75850dde9b50e72bc92bad3"
+  },
+  "CorruptedFieldRecovery.accepted_rawTraceCompatibleCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawTraceCompatibleCheck : \u2200 {s : Nat}\n  (compatible : CorruptedFieldRecovery.RawBinaryArray) (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)\n  (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true)\n  (hcheck :\n    Eq.{1} (CorruptedFieldRecovery.rawTraceCompatibleCheck compatible candidate hfield forward inverse hcoordinates)\n      Bool.true),\n  Eq.{1} (CorruptedFieldRecovery.decodeRawArray compatible)\n    (CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates)\n",
+    "sha256": "397d9e0c02865cc2044b101b3a770ff2dff014acd0a209b767b6f3c015809d90"
+  },
+  "CorruptedFieldRecovery.rawTraceDecompositionCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawTraceDecompositionCheck : {s R : Nat} \u2192\n  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R) \u2192\n    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n      (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192\n        (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192\n          (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) \u2192 Bool\n",
+    "sha256": "3e5dfa6a6cc6928dae4cdecec872b87c016584554fea1fa4e62b3af58a9fa4fc"
+  },
+  "CorruptedFieldRecovery.accepted_rawTraceDecompositionCheck_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawTraceDecompositionCheck_sound : \u2200 {s R : Nat}\n  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R)\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)\n  (hcoordinates : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true)\n  (hcheck :\n    Eq.{1} (CorruptedFieldRecovery.rawTraceDecompositionCheck p candidate hfield forward inverse hcoordinates)\n      Bool.true)\n  (x y z : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),\n  Eq.{1} ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.input p)) x) y) z)\n    (HAdd.hAdd.{0, 0, 0}\n      ((((CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates) x) y) z)\n      ((((CorruptedFieldRecovery.pullback.{0, 0, 0}\n              (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))\n              (CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))\n            x)\n          y)\n        z))\n",
+    "sha256": "9fd30baf7f4708f36848c61d6338a80b1cb2123654d3381adc66d4b79dfaf457"
+  }
+}

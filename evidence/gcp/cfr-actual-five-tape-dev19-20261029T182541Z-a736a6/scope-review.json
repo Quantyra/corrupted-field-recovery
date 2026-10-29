@@ -1,0 +1,14 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "An explicit binary coordinate equivalence Q from BinaryVector (3*s) to K cubed yields a five-word tape-to-semantic tuple equivalence. The pulled-back good tape set has cardinality equal to the dependent good-five-tuple sigma, and the complete tape space has cardinality 2^(13*s).",
+  "remaining": "Q, A, U and tuple-dependent basis b are supplied. This does not prove the actual constructor-selected basis, event soundness or the numerical success probability.",
+  "evidence": "collected/logs/emitted-types.json",
+  "audited_declarations": 5,
+  "owned_warnings": 0,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

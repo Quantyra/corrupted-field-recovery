@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T18:46:16.831428+00:00",
+  "evidence": "cfr-shutdown-workload-review-20261029T184454Z-b4b319.stdout.txt",
+  "assessment": "Only normal system services and this task collection/workload-review SSH sessions observed; no Lean/Lake or unrelated active workload. No further captures queued.",
+  "no_unrelated_workload_observed": true
+}

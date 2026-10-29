@@ -1,0 +1,62 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.FiveWordTape
+CorruptedFieldRecovery.FiveWordTape : (s : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.FiveWordTape
+'CorruptedFieldRecovery.FiveWordTape' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fiveTapeSemanticEquiv
+@CorruptedFieldRecovery.fiveTapeSemanticEquiv.{u_1} : {s : Nat} →
+  (K : Type u_1) →
+    [inst : Field.{u_1} K] →
+      [inst_1 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+        (Q :
+            LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+              (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))
+              (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+          Equiv.{1, u_1 + 1} (CorruptedFieldRecovery.FiveWordTape s)
+            ((_ : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) × CorruptedFieldRecovery.BinaryVector s)
+CFR_TYPE_END:CorruptedFieldRecovery.fiveTapeSemanticEquiv
+'CorruptedFieldRecovery.fiveTapeSemanticEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualFiveGoodTapeSet
+@CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} : {s : Nat} →
+  (K : Type u_1) →
+    [inst : Field.{u_1} K] →
+      [inst_1 : Fintype.{u_1} K] →
+        [inst_2 : DecidableEq.{u_1 + 1} K] →
+          [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+            [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+              [inst_5 : Finite.{u_1 + 1} K] →
+                (Q :
+                    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+                      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))
+                      (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+                  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+                    (U :
+                        Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField
+                          (CorruptedFieldRecovery.KTriple.{u_1} K)) →
+                      (b :
+                          (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+                            Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K) →
+                        Finset.{0} (CorruptedFieldRecovery.FiveWordTape s)
+CFR_TYPE_END:CorruptedFieldRecovery.actualFiveGoodTapeSet
+'CorruptedFieldRecovery.actualFiveGoodTapeSet' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_actualFiveGoodTapeSet
+@CorruptedFieldRecovery.card_actualFiveGoodTapeSet.{u_1} : ∀ {s : Nat} (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_5 : Finite.{u_1 + 1} K]
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K),
+  Eq.{1} (Finset.card.{0} (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q A U b))
+    (Finset.card.{u_1} (CorruptedFieldRecovery.goodFiveTupleSigma.{u_1} K A U b))
+CFR_TYPE_END:CorruptedFieldRecovery.card_actualFiveGoodTapeSet
+'CorruptedFieldRecovery.card_actualFiveGoodTapeSet' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.card_fiveWordTape
+CorruptedFieldRecovery.card_fiveWordTape : ∀ (s : Nat),
+  Eq.{1} (Fintype.card.{0} (CorruptedFieldRecovery.FiveWordTape s)) (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 13 s))
+CFR_TYPE_END:CorruptedFieldRecovery.card_fiveWordTape
+'CorruptedFieldRecovery.card_fiveWordTape' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

@@ -1,0 +1,70 @@
+✖ [2027/2027] Building CorruptedFieldRecovery.RawTraceDecomposition (4.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawTraceDecomposition.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawTraceDecomposition.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawTraceDecomposition.setup.json --json
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:39:19: unsolved goals
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Algebra (ZMod 2) K
+inst✝ : Module.Finite (ZMod 2) K
+c : K
+a : ZMod 2
+x : K
+⊢ (a = ?m.51 a ∨ x = 0) ∨ c = 0
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:41:43: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp [Algebra.smul_def, mul_assoc, m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:62:4: Type mismatch: After simplification, term
+  MultilinearMap.map_update_add m ![x, y, z] 2 z w
+ has type
+  True
+but is expected to have type
+  m ![x, y, z + w] = m ![x, y, z] + m ![x, y, w]
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:64:4: Type mismatch: After simplification, term
+  MultilinearMap.map_update_smul m ![x, y, z] 2 a z
+ has type
+  True
+but is expected to have type
+  m ![x, y, a • z] = a * m ![x, y, z]
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:68:4: Type mismatch: After simplification, term
+  MultilinearMap.map_update_add m ![x, y, z] 1 y w
+ has type
+  True
+but is expected to have type
+  m ![x, y + w, z] = m ![x, y, z] + m ![x, w, z]
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:72:4: Type mismatch: After simplification, term
+  MultilinearMap.map_update_smul m ![x, y, z] 1 a y
+ has type
+  True
+but is expected to have type
+  m ![x, a • y, z] = a * m ![x, y, z]
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:78:4: Type mismatch: After simplification, term
+  MultilinearMap.map_update_add m ![x, z, w] 0 x y
+ has type
+  True
+but is expected to have type
+  m ![x + y, z, w] = m ![x, z, w] + m ![y, z, w]
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:84:4: Type mismatch: After simplification, term
+  MultilinearMap.map_update_smul m ![x, z, w] 0 a x
+ has type
+  True
+but is expected to have type
+  m ![a • x, z, w] = a * m ![x, z, w]
+error: CorruptedFieldRecovery/RawTraceDecomposition.lean:103:83: unsolved goals
+n : ℕ
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Algebra (ZMod 2) K
+inst✝ : Module.Finite (ZMod 2) K
+c : K
+coords : BinaryVector n →ₗ[ZMod 2] FieldTriple K
+x y z : BinaryVector n
+⊢ (sorry c) ((fieldTripleStandardBasis K).det fun i => coords (![x, y, z] i)) =
+    (Algebra.trace (ZMod 2) K) (c * (fieldTripleStandardBasis K).det ![coords x, coords y, coords z])
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:104:32: declaration uses `sorry`
+warning: CorruptedFieldRecovery/RawTraceDecomposition.lean:104:51: declaration uses `sorry`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawTraceDecomposition
