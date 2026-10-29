@@ -1,0 +1,9 @@
+{
+  "lastStartTimestamp": "2026-10-28T22:30:06.330-07:00",
+  "maxRunDuration": {
+    "nanos": 0,
+    "seconds": "14400"
+  },
+  "reserve_seconds": 1500,
+  "stage_timeout_seconds": 1800
+}

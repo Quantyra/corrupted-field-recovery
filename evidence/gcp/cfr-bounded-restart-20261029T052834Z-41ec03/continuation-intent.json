@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T05:28:34.581494+00:00",
+  "purpose": "Authorized next CFR proof batch",
+  "previous_stop": "cfr-binary-field-transport-dev02-20261029T045909Z-4b7bae/cfr-shutdown-20261029T052049Z-bdeead-result.json",
+  "stage_timeout_seconds": 1800,
+  "collection_shutdown_reserve_seconds": 1500
+}

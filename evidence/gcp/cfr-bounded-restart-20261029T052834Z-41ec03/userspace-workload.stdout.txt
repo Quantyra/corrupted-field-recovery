@@ -1,0 +1,29 @@
+    PID    PPID COMMAND         COMMAND
+    168       1 systemd-journal /usr/lib/systemd/systemd-journald
+    233       1 multipathd      /sbin/multipathd -d -s
+    239       1 systemd-udevd   /usr/lib/systemd/systemd-udevd
+    502       1 systemd-resolve /usr/lib/systemd/systemd-resolved
+    583       1 systemd-network /usr/lib/systemd/systemd-networkd
+    627       1 dbus-daemon     @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    631       1 google_osconfig /usr/bin/google_osconfig_agent
+    639       1 networkd-dispat /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    658       1 snapd           /usr/lib/snapd/snapd
+    691       1 rsyslogd        /usr/sbin/rsyslogd -n -iNONE
+    726       1 chronyd         /usr/sbin/chronyd -F 1
+    727     726 chronyd         /usr/sbin/chronyd -F 1
+    759       1 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+    857       1 polkitd         /usr/lib/polkit-1/polkitd --no-debug
+    874       1 google_guest_ag /usr/bin/google_guest_agent
+    875       1 agetty          /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+    881       1 agetty          /sbin/agetty -o -p -- \u --noclear - linux
+   1016       1 sshd            sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+   1035       1 systemd-logind  /usr/lib/systemd/systemd-logind
+   1042       1 cron            /usr/sbin/cron -f -P
+   1502    1016 sshd            sshd: dfredriksen_quantyra_org [priv]
+   1509       1 systemd         /usr/lib/systemd/systemd --user
+   1510    1509 (sd-pam)        (sd-pam)
+   1565    1502 sshd            sshd: dfredriksen_quantyra_org@notty
+   1566    1565 bash            bash -c echo cHMgLWVvIHBpZCxwcGlkLGNvbW0sYXJncyB8IGF3ayAnJDIgIT0gMiAmJiAkMSA+IDIge3ByaW50fScK | base64 -d | bash
+   1569    1566 bash            bash
+   1570    1569 ps              ps -eo pid,ppid,comm,args
+   1571    1569 awk             awk $2 != 2 && $1 > 2 {print}
