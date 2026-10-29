@@ -104,6 +104,94 @@ theorem traceCoordinates_dualMap_mem_iff
       fieldTripleTraceCovector K (t • a) :=
   dualMap_fieldTripleScalarAction_trace K t a
 
+/-- The coordinate trace map, bundled as a linear map over the prime field. -/
+def fieldTripleTraceDualMap :
+    FieldTriple K →ₗ[F] Module.Dual F (FieldTriple K) where
+  toFun := fieldTripleTraceCovector K
+  map_add' := by
+    intro a b
+    apply LinearMap.ext
+    intro x
+    change
+      Algebra.trace F K ((a.1 + b.1) * x.1) +
+          Algebra.trace F K ((a.2.1 + b.2.1) * x.2.1) +
+          Algebra.trace F K ((a.2.2 + b.2.2) * x.2.2) =
+        (Algebra.trace F K (a.1 * x.1) +
+            Algebra.trace F K (a.2.1 * x.2.1) +
+            Algebra.trace F K (a.2.2 * x.2.2)) +
+          (Algebra.trace F K (b.1 * x.1) +
+            Algebra.trace F K (b.2.1 * x.2.1) +
+            Algebra.trace F K (b.2.2 * x.2.2))
+    rw [add_mul, map_add, add_mul, map_add, add_mul, map_add]
+    abel_nf
+  map_smul' := by
+    intro r a
+    apply LinearMap.ext
+    intro x
+    change
+      Algebra.trace F K ((r • a.1) * x.1) +
+          Algebra.trace F K ((r • a.2.1) * x.2.1) +
+          Algebra.trace F K ((r • a.2.2) * x.2.2) =
+        r • (Algebra.trace F K (a.1 * x.1) +
+          Algebra.trace F K (a.2.1 * x.2.1) +
+          Algebra.trace F K (a.2.2 * x.2.2))
+    rw [show (r • a.1) * x.1 = r • (a.1 * x.1) by
+      rw [Algebra.smul_def, Algebra.smul_def]
+      ring,
+      show (r • a.2.1) * x.2.1 = r • (a.2.1 * x.2.1) by
+        rw [Algebra.smul_def, Algebra.smul_def]
+        ring,
+      show (r • a.2.2) * x.2.2 = r • (a.2.2 * x.2.2) by
+        rw [Algebra.smul_def, Algebra.smul_def]
+        ring]
+    simp only [map_smul]
+    simp
+    ring
+
+/-- Nondegeneracy makes the coordinate trace map injective. -/
+theorem fieldTripleTraceDualMap_injective :
+    Function.Injective (fieldTripleTraceDualMap K) := by
+  intro a b hab
+  have hzero : fieldTripleTraceDualMap K (a - b) = 0 := by
+    rw [map_sub, hab, sub_self]
+  change fieldTripleTraceCovector K (a - b) = 0 at hzero
+  have hcoord := (fieldTripleTraceCovector_eq_zero_iff K (a - b)).mp hzero
+  exact sub_eq_zero.mp hcoord
+
+/-- The coordinatewise trace pairing identifies the field three-space with
+its full binary dual, not just with a subspace of that dual. -/
+noncomputable def fieldTripleTraceDualEquiv :
+    FieldTriple K ≃ₗ[F] Module.Dual F (FieldTriple K) :=
+  letI : Fact (Nat.Prime (ringChar K)) := ⟨CharP.prime_ringChar K⟩
+  LinearMap.linearEquivOfInjective (fieldTripleTraceDualMap K)
+    (fieldTripleTraceDualMap_injective K) (by simp)
+
+/-- Scalar multiplication and its actual dual map are conjugate under the
+trace-coordinate equivalence. -/
+theorem fieldTripleScalarAction_dualMap_conjugate (t : K) :
+    (fieldTripleScalarAction K t).dualMap.comp
+        (fieldTripleTraceDualEquiv K).toLinearMap =
+      (fieldTripleTraceDualEquiv K).toLinearMap.comp
+        (fieldTripleScalarAction K t) := by
+  apply LinearMap.ext
+  intro a
+  change
+    (fieldTripleScalarAction K t).dualMap (fieldTripleTraceDualEquiv K a) =
+      fieldTripleTraceDualEquiv K (fieldTripleScalarAction K t a)
+  exact dualMap_fieldTripleScalarAction_trace K t a
+
+/-- For every binary support subspace, the actual dual action on its
+trace-coordinate image is exactly the image of the scalar translate. -/
+theorem fieldTripleScalarAction_map_traceSupport
+    (U : Submodule F (FieldTriple K)) (t : K) :
+    Submodule.map (fieldTripleScalarAction K t).dualMap
+        (Submodule.map (fieldTripleTraceDualEquiv K).toLinearMap U) =
+      Submodule.map (fieldTripleTraceDualEquiv K).toLinearMap
+        (Submodule.map (fieldTripleScalarAction K t) U) := by
+  rw [← Submodule.map_comp,
+    fieldTripleScalarAction_dualMap_conjugate K t,
+    Submodule.map_comp]
+
 end
 
 end CorruptedFieldRecovery

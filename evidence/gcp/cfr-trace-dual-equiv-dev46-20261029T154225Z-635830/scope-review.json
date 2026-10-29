@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "For finite K over its prime field, trace coordinates give a linear equivalence with the full dual, conjugate scalar multiplication to its actual dual map, and transport the scalar-translated support through the explicit submodule map equality.",
+  "remaining": "Binary physical hidden-isomorphism transport and connection of the actual random scalar count to the constructor remain open.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 5,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

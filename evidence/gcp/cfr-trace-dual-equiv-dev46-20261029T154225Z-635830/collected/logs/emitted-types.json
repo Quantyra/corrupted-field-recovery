@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.fieldTripleTraceDualMap": {
+    "emitted_type": "CorruptedFieldRecovery.fieldTripleTraceDualMap.{u_1} : (K : Type u_1) \u2192\n  [inst : Field.{u_1} K] \u2192\n    [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] \u2192\n      LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.FieldTriple.{u_1} K)\n        (Module.Dual.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n",
+    "sha256": "eee36ab50f8323545ec7640d78ac8d718706e7c30e4d7d5299586db1eb34d1d2"
+  },
+  "CorruptedFieldRecovery.fieldTripleTraceDualMap_injective": {
+    "emitted_type": "CorruptedFieldRecovery.fieldTripleTraceDualMap_injective.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K],\n  Function.Injective.{u_1 + 1, u_1 + 1} \u21d1(CorruptedFieldRecovery.fieldTripleTraceDualMap.{u_1} K)\n",
+    "sha256": "1fa83ff979bde7ac064add92ce753b01d3fd8166427e1fba43d8589b69ee6cb6"
+  },
+  "CorruptedFieldRecovery.fieldTripleTraceDualEquiv": {
+    "emitted_type": "CorruptedFieldRecovery.fieldTripleTraceDualEquiv.{u_1} : (K : Type u_1) \u2192\n  [inst : Field.{u_1} K] \u2192\n    [inst_1 : Finite.{u_1 + 1} K] \u2192\n      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] \u2192\n        LinearEquiv.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K)))\n          (CorruptedFieldRecovery.FieldTriple.{u_1} K)\n          (Module.Dual.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n",
+    "sha256": "a6078605d1b47b5801cd535905e3a294dccc7b2a1164f651f87b58f2927d851b"
+  },
+  "CorruptedFieldRecovery.fieldTripleScalarAction_dualMap_conjugate": {
+    "emitted_type": "CorruptedFieldRecovery.fieldTripleScalarAction_dualMap_conjugate.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (t : K),\n  Eq.{u_1 + 1}\n    (LinearMap.dualMap.{0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t) \u2218\u2097\n      \u2191(CorruptedFieldRecovery.fieldTripleTraceDualEquiv.{u_1} K))\n    (\u2191(CorruptedFieldRecovery.fieldTripleTraceDualEquiv.{u_1} K) \u2218\u2097\n      CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t)\n",
+    "sha256": "c4b4e67e86c9ab91bc9b41907ebfbccae5de5cd84d1255819013d9dfd1bd268a"
+  },
+  "CorruptedFieldRecovery.fieldTripleScalarAction_map_traceSupport": {
+    "emitted_type": "CorruptedFieldRecovery.fieldTripleScalarAction_map_traceSupport.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]\n  (U : Submodule.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)) (t : K),\n  Eq.{u_1 + 1}\n    (Submodule.map.{0, 0, u_1, u_1}\n      (LinearMap.dualMap.{0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t))\n      (Submodule.map.{0, 0, u_1, u_1} (\u2191(CorruptedFieldRecovery.fieldTripleTraceDualEquiv.{u_1} K)) U))\n    (Submodule.map.{0, 0, u_1, u_1} (\u2191(CorruptedFieldRecovery.fieldTripleTraceDualEquiv.{u_1} K))\n      (Submodule.map.{0, 0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t) U))\n",
+    "sha256": "a04c8fc1e0051fca62decebbd4fedff5ebf65b9b6a2619fcbd4b20ad9f5d0c9c"
+  }
+}
