@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-trace-dual-bridge-dev29-20261029T143531Z-6c3d22/gcp_cfr_runner.py", line 294, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-trace-dual-bridge-dev29-20261029T143531Z-6c3d22/gcp_cfr_runner.py", line 225, in main
+    assert (packages/'mathlib'/Path(*item.split('.'))).with_suffix('.lean').is_file(), item
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Mathlib.LinearAlgebra.Dual

@@ -1,0 +1,19 @@
+{
+  "run": "cfr-trace-dual-bridge-dev29-20261029T143531Z-6c3d22",
+  "utc": "2026-10-29T14:38:29.052056+00:00",
+  "archive_sha256": "f78fe6edc3b9ff179d0a855a17bd9ed6146b08f598198b3267d0f231b82a0cfa",
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "c5a58ac649c6b2c580e627ff16dda91debc83fa6d8dc4fe2fc465ceddf237795",
+    "launch.log": "7805a3a03548088b04e3ff1d2d4b710c53db7329a70055279b10ec243712c2e7",
+    "runner-pid": "be9f77e5ff30eab70e6aa6b08ecd8700b1efc1d20c9069d1cc6dec2f456518ba",
+    "started-utc": "c5a58ac649c6b2c580e627ff16dda91debc83fa6d8dc4fe2fc465ceddf237795",
+    "terminal-receipt.json": "0b174c83fca8d329e7872fe35f49f6254089aab8be82da007946b8cda7e61024",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e9d608f30c600a39f832d3c82706945cbb027977b768616465fd1ddbed4318df",
+    "logs/runner.stdout.txt": "ba970f064264c44a61bfd7d8d673b7f1c92b897377bdda93f2790740101f27b7"
+  }
+}

@@ -1,0 +1,145 @@
+✖ [2011/2011] Building CorruptedFieldRecovery.TraceDualTranslateBridge (3.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/TraceDualTranslateBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/TraceDualTranslateBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/TraceDualTranslateBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/TraceDualTranslateBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/TraceDualTranslateBridge.setup.json --json
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:33:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  a.1 * r • x.1
+in the target expression
+  (Algebra.trace F K) (r • (a.1 * x.1)) + (Algebra.trace F K) (r • (a.2.1 * x.2.1)) +
+      (Algebra.trace F K) (r • (a.2.2 * x.2.2)) =
+    (RingHom.id F) r •
+      ((Algebra.trace F K) (a.1 * x.1) + (Algebra.trace F K) (a.2.1 * x.2.1) + (Algebra.trace F K) (a.2.2 * x.2.2))
+
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra F K
+a : FieldTriple K
+r : F
+x : FieldTriple K
+⊢ (Algebra.trace F K) (r • (a.1 * x.1)) + (Algebra.trace F K) (r • (a.2.1 * x.2.1)) +
+      (Algebra.trace F K) (r • (a.2.2 * x.2.2)) =
+    (RingHom.id F) r •
+      ((Algebra.trace F K) (a.1 * x.1) + (Algebra.trace F K) (a.2.1 * x.2.1) + (Algebra.trace F K) (a.2.2 * x.2.2))
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:52:18: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵m̵u̵l̵_̵s̵m̵u̵l̵,̵ ̵m̵u̵l̵_̵c̵o̵m̵m̵]̵[̲m̲u̲l̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:52:29: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  simp [smul_smul,̵ ̵m̵u̵l̵_̵c̵o̵m̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:62:55: Unknown identifier `one`
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:63:26: Application type mismatch: The argument
+  h
+has type
+  fieldTripleTraceCovector K a = 0
+but is expected to have type
+  ?m.51 = ?m.52
+in the application
+  congrFun h
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:68:55: Unknown identifier `one`
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:69:26: Application type mismatch: The argument
+  h
+has type
+  fieldTripleTraceCovector K a = 0
+but is expected to have type
+  ?m.102 = ?m.103
+in the application
+  congrFun h
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:74:55: Unknown identifier `one`
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:75:26: Application type mismatch: The argument
+  h
+has type
+  fieldTripleTraceCovector K a = 0
+but is expected to have type
+  ?m.153 = ?m.154
+in the application
+  congrFun h
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:79:2: unsolved goals
+case mpr
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra F K
+⊢ { toFun := fun x => 0, map_add' := ⋯, map_smul' := ⋯ } = 0
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:80:10: declaration uses `sorry`
+error: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:87:44: unsolved goals
+case hl.h.e_a
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra F K
+t : K
+a : FieldTriple K
+x : K
+⊢ { toFun := fun x => t • x, map_add' := ⋯, map_smul' := ⋯ }.dualMap
+        {
+          toFun := fun x =>
+            (Algebra.trace F K) (a.1 * x.1) + (Algebra.trace F K) (a.2.1 * x.2.1) + (Algebra.trace F K) (a.2.2 * x.2.2),
+          map_add' := ⋯, map_smul' := ⋯ } ∘ₗ
+      LinearMap.inl F K (K × K) =
+    {
+        toFun := fun x =>
+          (Algebra.trace F K) ((t • a).1 * x.1) + (Algebra.trace F K) ((t • a).2.1 * x.2.1) +
+            (Algebra.trace F K) ((t • a).2.2 * x.2.2),
+        map_add' := ⋯, map_smul' := ⋯ } ∘ₗ
+      LinearMap.inl F K (K × K)
+
+case hr.hl.h
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra F K
+t : K
+a : FieldTriple K
+x : K
+⊢ (((fieldTripleScalarAction K t).dualMap (fieldTripleTraceCovector K a) ∘ₗ LinearMap.inr F K (K × K)) ∘ₗ
+        LinearMap.inl F K K)
+      x =
+    ((fieldTripleTraceCovector K (t • a) ∘ₗ LinearMap.inr F K (K × K)) ∘ₗ LinearMap.inl F K K) x
+
+case hr.hr.h
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra F K
+t : K
+a : FieldTriple K
+x : K
+⊢ (((fieldTripleScalarAction K t).dualMap (fieldTripleTraceCovector K a) ∘ₗ LinearMap.inr F K (K × K)) ∘ₗ
+        LinearMap.inr F K K)
+      x =
+    ((fieldTripleTraceCovector K (t • a) ∘ₗ LinearMap.inr F K (K × K)) ∘ₗ LinearMap.inr F K K) x
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:90:37: declaration uses `sorry`
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:89:13: This simp argument is unused:
+  LinearMap.dualMap_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵d̵u̵a̵l̵M̵a̵p̵_̵a̵p̵p̵l̵y̵,̵ ̵f̵i̵e̵l̵d̵T̵r̵i̵p̵l̵e̵S̵c̵a̵l̵a̵r̵A̵c̵t̵i̵o̵n̵,̵[̲f̲i̲e̲l̲d̲T̲r̲i̲p̲l̲e̲S̲c̲a̲l̲a̲r̲A̲c̲t̲i̲o̲n̲,̲ LinearMap.coe_mk, AddHom.coe_mk, fieldTripleTraceCovector]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:90:4: This simp argument is unused:
+  LinearMap.coe_mk
+
+Hint: Omit it from the simp argument list.
+  simp only [LinearMap.dualMap_apply, fieldTripleScalarAction, L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵c̵o̵e̵_̵m̵k̵,̵ ̵AddHom.coe_mk,
+  ̲  ̲ ̲ ̲fieldTripleTraceCovector]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/TraceDualTranslateBridge.lean:90:22: This simp argument is unused:
+  AddHom.coe_mk
+
+Hint: Omit it from the simp argument list.
+  simp only [LinearMap.dualMap_apply, fieldTripleScalarAction,
+  ̵  ̵ ̵ ̵LinearMap.coe_mk,
+  ̲ A̵d̵d̵H̵o̵m̵.̵c̵o̵e̵_̵m̵k̵,̵  ̲ ̲fieldTripleTraceCovector]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.TraceDualTranslateBridge

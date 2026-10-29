@@ -1,0 +1,3 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-trace-dual-bridge-dev29-20261029T143531Z-6c3d22/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version

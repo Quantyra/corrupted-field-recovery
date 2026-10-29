@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T14:36:32.858257+00:00",
+  "run": "cfr-trace-dual-bridge-dev29-20261029T143531Z-6c3d22",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
