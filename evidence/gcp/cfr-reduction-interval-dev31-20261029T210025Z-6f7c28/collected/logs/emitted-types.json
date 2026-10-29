@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),\n  And\n    (LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s)\n      (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))\n    (LT.lt.{0} (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))\n      (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1)))\n",
+    "sha256": "03cc2b6f5ca2e21d7368ff9f421cebd6cb68dc7f0d5ead2a0b9e12e1ebdb9995"
+  },
+  "CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band": {
+    "emitted_type": "@CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band : \u2200 {n k : Nat}\n  (hlower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 k) n)\n  (hupper : LT.lt.{0} n (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} k 1))), Eq.{1} (Nat.testBit n k) Bool.true\n",
+    "sha256": "7f5f036b8a244fbc6d895fdbe0b15d77027fed14b08c7603c835dd12191dcd39"
+  },
+  "CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band": {
+    "emitted_type": "@CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band : \u2200 {n k j : Nat}\n  (hupper : LT.lt.{0} n (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} k 1))) (hkj : LT.lt.{0} k j),\n  Eq.{1} (Nat.testBit n j) Bool.false\n",
+    "sha256": "80512540c051f1124ece143556788a7a679083ad3b86775b1a185f0ae33dee67"
+  },
+  "CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band : \u2200 (s modulus a : Nat)\n  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) modulus)\n  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1)))\n  (hcurrentLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) a),\n  LT.lt.{0} (CorruptedFieldRecovery.rawReduceStep modulus s a) a\n",
+    "sha256": "b1bcaff48db2d00603f7576886a069c5bf6ec5ee834bfac7fb88791de1747dfe"
+  },
+  "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band : \u2200 (s modulus a fuel : Nat)\n  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) modulus)\n  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1)))\n  (hfuel : LE.le.{0} (HAdd.hAdd.{0, 0, 0} a 1) fuel),\n  LT.lt.{0} (CorruptedFieldRecovery.rawReduceFuel modulus s fuel a) (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "f213ec6b06937ed4a30a61d27d53d582b0cae421db507b77bf499891b129a963"
+  }
+}

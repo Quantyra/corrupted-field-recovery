@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T21:12:54.340316+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Accepted candidate mask band; power-band bit facts; strict reduction-step decrease; fuel >= a+1 output bound under modulus band.",
+  "remaining": "Value-linear fuel is not polynomial bit-cost; no executable trace or complete verifier.",
+  "evidence": "collected/logs/emitted-types.json"
+}

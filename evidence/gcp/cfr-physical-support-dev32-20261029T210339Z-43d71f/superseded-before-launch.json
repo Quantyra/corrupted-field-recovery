@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T21:06:06.824100+00:00",
+  "run": "cfr-physical-support-dev32-20261029T210339Z-43d71f",
+  "never_submitted": true,
+  "reason": "Uncompiled count dependency failed and was repaired; recapture full exact source after focused count acceptance."
+}

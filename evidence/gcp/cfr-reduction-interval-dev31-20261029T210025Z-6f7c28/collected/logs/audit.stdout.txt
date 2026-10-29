@@ -1,0 +1,49 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds
+@CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),
+  And
+    (LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s)
+      (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))
+    (LT.lt.{0} (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))
+      (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1)))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds
+'CorruptedFieldRecovery.accepted_rawCandidateModulusMask_bounds' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band
+@CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band : ∀ {n k : Nat}
+  (hlower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 k) n)
+  (hupper : LT.lt.{0} n (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} k 1))), Eq.{1} (Nat.testBit n k) Bool.true
+CFR_TYPE_END:CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band
+'CorruptedFieldRecovery.rawTestBit_eq_true_of_power_band' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band
+@CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band : ∀ {n k j : Nat}
+  (hupper : LT.lt.{0} n (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} k 1))) (hkj : LT.lt.{0} k j),
+  Eq.{1} (Nat.testBit n j) Bool.false
+CFR_TYPE_END:CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band
+'CorruptedFieldRecovery.rawTestBit_eq_false_above_power_band' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band
+CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band : ∀ (s modulus a : Nat)
+  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1)))
+  (hcurrentLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) a),
+  LT.lt.{0} (CorruptedFieldRecovery.rawReduceStep modulus s a) a
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band
+'CorruptedFieldRecovery.rawReduceStep_lt_of_modulus_band' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band
+CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band : ∀ (s modulus a fuel : Nat)
+  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 s) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} s 1)))
+  (hfuel : LE.le.{0} (HAdd.hAdd.{0, 0, 0} a 1) fuel),
+  LT.lt.{0} (CorruptedFieldRecovery.rawReduceFuel modulus s fuel a) (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band
+'CorruptedFieldRecovery.rawReduceFuel_lt_of_modulus_band' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
