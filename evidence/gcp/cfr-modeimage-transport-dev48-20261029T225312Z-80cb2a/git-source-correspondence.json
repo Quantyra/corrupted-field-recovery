@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "8ee5b7be51adf7fd5cfefb3ba52ad368cf223f4b0749381e0473daddefa40cdb",
+  "staged_git_blob_sha256": "8ee5b7be51adf7fd5cfefb3ba52ad368cf223f4b0749381e0473daddefa40cdb",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ModeImageTraceTransport.lean"
+}

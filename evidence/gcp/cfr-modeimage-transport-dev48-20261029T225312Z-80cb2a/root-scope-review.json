@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Q-based linear equivalence; semantic preimage of supplied physical support; trace-image equality with pulled-back support; observation zero iff membership in modeImage E coannihilator. E and Q explicitly supplied.",
+  "remaining": "Actual count, chosen basis, algorithm and recovery remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261029T221338Z-1cdd08"
+}
