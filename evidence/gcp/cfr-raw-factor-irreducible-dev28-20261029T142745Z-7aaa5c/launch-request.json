@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T14:30:15.139872+00:00",
+  "run": "cfr-raw-factor-irreducible-dev28-20261029T142745Z-7aaa5c",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

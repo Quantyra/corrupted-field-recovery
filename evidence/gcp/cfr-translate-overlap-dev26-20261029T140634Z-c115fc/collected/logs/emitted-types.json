@@ -1,0 +1,50 @@
+{
+  "CorruptedFieldRecovery.card_translateScalarRoots_le_one": {
+    "emitted_type": "CorruptedFieldRecovery.card_translateScalarRoots_le_one.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] (u\u2080 u\u2081 : CorruptedFieldRecovery.KTriple.{u_1} K)\n  (hu\u2081 : Ne.{u_1 + 1} u\u2081 0), LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.translateScalarRoots.{u_1} K u\u2080 u\u2081)) 1\n",
+    "sha256": "e3d19566379994ef6839b61c03f895dea3c74ce497178f2a966526a7404b0d5a"
+  },
+  "CorruptedFieldRecovery.mem_badTranslateScalars_iff": {
+    "emitted_type": "CorruptedFieldRecovery.mem_badTranslateScalars_iff.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (t : K),\n  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U) t)\n    (\u2203 u\u2080,\n      And (Membership.mem.{u_1, u_1} U u\u2080)\n        (\u2203 u\u2081,\n          And (Membership.mem.{u_1, u_1} U u\u2081)\n            (And (Or (Ne.{u_1 + 1} u\u2080 0) (Ne.{u_1 + 1} u\u2081 0))\n              (Eq.{u_1 + 1} (HAdd.hAdd.{u_1, u_1, u_1} u\u2080 (HSMul.hSMul.{u_1, u_1, u_1} t u\u2081)) 0))))\n",
+    "sha256": "379dd4c3b9ef27b71adfca64f3d5bc39f5c3f497189e5ea11a6775bd760239f1"
+  },
+  "CorruptedFieldRecovery.mem_badTranslateScalars_iff_not_good": {
+    "emitted_type": "CorruptedFieldRecovery.mem_badTranslateScalars_iff_not_good.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (t : K) (hzero : Membership.mem.{u_1, u_1} U 0),\n  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U) t)\n    (Not (CorruptedFieldRecovery.translateActionGood.{u_1} K U t))\n",
+    "sha256": "454c03192644136afea4f40fca9e4407549624992b9cf3d3632e5c12c0cbf4b3"
+  },
+  "CorruptedFieldRecovery.card_nonzeroTranslatePairs_le": {
+    "emitted_type": "CorruptedFieldRecovery.card_nonzeroTranslatePairs_le.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : DecidableEq.{u_1 + 1} K] (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K))\n  (hzero : Membership.mem.{u_1, u_1} U 0),\n  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonzeroTranslatePairs.{u_1} K U))\n    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} (Finset.card.{u_1} U) 2) 1)\n",
+    "sha256": "8c44f54e4b47c3554287cae19ada2166517a2c451960e27cf90bf4494cc0eea9"
+  },
+  "CorruptedFieldRecovery.card_badTranslateScalars_le": {
+    "emitted_type": "CorruptedFieldRecovery.card_badTranslateScalars_le.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (hzero : Membership.mem.{u_1, u_1} U 0),\n  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U))\n    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} (Finset.card.{u_1} U) 2) 1)\n",
+    "sha256": "12acb5dae9531884276b188be343680334280beaf3fb0377fccac7c0fb1ec3e3"
+  },
+  "CorruptedFieldRecovery.card_badTranslateScalars_le_pow": {
+    "emitted_type": "CorruptedFieldRecovery.card_badTranslateScalars_le_pow.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]\n  (U : Finset.{u_1} (CorruptedFieldRecovery.KTriple.{u_1} K)) (hzero : Membership.mem.{u_1, u_1} U 0) (r : Nat)\n  (hcard : Eq.{1} (Finset.card.{u_1} U) (HPow.hPow.{0, 0, 0} 2 r)),\n  LE.le.{0} (Finset.card.{u_1} (CorruptedFieldRecovery.badTranslateScalars.{u_1} K U))\n    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1)\n",
+    "sha256": "09ea373afa45636d0af87e1abde7ad1659800e766bd87b5d787245fcf2914c89"
+  },
+  "CorruptedFieldRecovery.mem_supportCoordinateFinset_iff": {
+    "emitted_type": "CorruptedFieldRecovery.mem_supportCoordinateFinset_iff.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : Algebra.{0, u_1} (ZMod 2) K]\n  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K))\n  (x : CorruptedFieldRecovery.KTriple.{u_1} K),\n  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U) x)\n    (Membership.mem.{u_1, u_1} U x)\n",
+    "sha256": "3fa47fd1dfef8987db681d013ce42ff50ca14f92c0b5c9c97a953e381fc91399"
+  },
+  "CorruptedFieldRecovery.card_supportCoordinateFinset": {
+    "emitted_type": "CorruptedFieldRecovery.card_supportCoordinateFinset.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : Algebra.{0, u_1} (ZMod 2) K]\n  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K)),\n  Eq.{1} (Finset.card.{u_1} (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U))\n    (HPow.hPow.{0, 0, 0} 2 (Module.finrank.{0, u_1} (ZMod 2) \u21a5U))\n",
+    "sha256": "b4545944b75525f920c3837b895d36de2c685bd9a1c70091c6a3c160963db414"
+  },
+  "CorruptedFieldRecovery.card_badTranslateScalars_submodule_le": {
+    "emitted_type": "CorruptedFieldRecovery.card_badTranslateScalars_submodule_le.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Algebra.{0, u_1} (ZMod 2) K]\n  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K)),\n  LE.le.{0}\n    (Finset.card.{u_1}\n      (CorruptedFieldRecovery.badTranslateScalars.{u_1} K (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U)))\n    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 (Module.finrank.{0, u_1} (ZMod 2) \u21a5U))) 1)\n",
+    "sha256": "ce1b0bb419a359d78ef7dfcff40c495375e3da879c69c31c265919b505eaad54"
+  },
+  "CorruptedFieldRecovery.scalarAction_injective_subtype_iff": {
+    "emitted_type": "CorruptedFieldRecovery.scalarAction_injective_subtype_iff.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : Algebra.{0, u_1} (ZMod 2) K]\n  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K)) (t : K),\n  Iff (Function.Injective.{u_1 + 1, u_1 + 1} fun u => HSMul.hSMul.{u_1, u_1, u_1} t \u2191u)\n    (\u2200 (x : CorruptedFieldRecovery.KTriple.{u_1} K)\n      (a : Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U) x)\n      (a : Eq.{u_1 + 1} (HSMul.hSMul.{u_1, u_1, u_1} t x) 0), Eq.{u_1 + 1} x 0)\n",
+    "sha256": "e32533cc22f4c37f2eff988bd5bcfbfc8eb679bdf7bc37593c48a93075f10cbd"
+  },
+  "CorruptedFieldRecovery.charTwo_sum_eq_zero_iff": {
+    "emitted_type": "CorruptedFieldRecovery.charTwo_sum_eq_zero_iff.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  {x y : CorruptedFieldRecovery.KTriple.{u_1} K} [inst_1 : CharP.{u_1} K 2],\n  Iff (Eq.{u_1 + 1} (HAdd.hAdd.{u_1, u_1, u_1} x y) 0) (Eq.{u_1 + 1} y x)\n",
+    "sha256": "db728ae1ddbf8690ffb5ac85409a56a9f2dfa7d91adfe820596693e0cd2a0d68"
+  },
+  "CorruptedFieldRecovery.translateActionGood_submodule_iff": {
+    "emitted_type": "CorruptedFieldRecovery.translateActionGood_submodule_iff.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Algebra.{0, u_1} (ZMod 2) K]\n  (U : Submodule.{0, u_1} (ZMod 2) (CorruptedFieldRecovery.KTriple.{u_1} K)) (t : K) [inst_4 : CharP.{u_1} K 2],\n  Iff (CorruptedFieldRecovery.translateActionGood.{u_1} K (CorruptedFieldRecovery.supportCoordinateFinset.{u_1} K U) t)\n    (And (Function.Injective.{u_1 + 1, u_1 + 1} fun u => HSMul.hSMul.{u_1, u_1, u_1} t \u2191u)\n      (CorruptedFieldRecovery.translateOverlapTrivial.{u_1} K U t))\n",
+    "sha256": "2384726e7302f3d9088089202b878052101eb489100ebc3546bc819fc4f62374"
+  }
+}

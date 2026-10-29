@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T14:27:46.468007+00:00",
+  "run": "cfr-translate-overlap-dev26-20261029T140634Z-c115fc",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "In characteristic two, for a binary submodule U of K^3, the finite translateActionGood predicate is equivalent to restricted scalar-action injectivity together with the explicitly defined trivial-overlap condition.",
+  "remaining": "Relate the scalar-coordinate action to the manuscript dual map and connect to the full sampler. This is not a full probability or recovery theorem.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 12,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

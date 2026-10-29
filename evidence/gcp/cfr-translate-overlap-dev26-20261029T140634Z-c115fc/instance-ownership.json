@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-translate-overlap-dev26-20261029T140634Z-c115fc",
+  "utc": "2026-10-29T14:27:01.710870+00:00"
+}

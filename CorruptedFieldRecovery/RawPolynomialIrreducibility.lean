@@ -1,4 +1,5 @@
 import CorruptedFieldRecovery.RawPolynomialMaskCompleteness
+import Mathlib.Algebra.Polynomial.Monic
 
 /-! Ordinary bridge work for the finite raw factor search.  The initial
 lemmas pin down the boundedness of its coefficient-mask representation; the
@@ -214,5 +215,83 @@ theorem rawPolynomialBits_mask_decode (p : Polynomial (ZMod 2)) :
     rawMaskPolynomial (rawBitsToNat (rawPolynomialBits p)) = p := by
   rw [← rawBoolListPolynomial_eq_mask]
   exact rawPolynomialBits_decode p
+
+/-- A raw finite factor gate with no bounded factor pair certifies the
+standard polynomial irreducibility predicate. The proof constructs masks for
+both factors, proves their exact degree ranges, and transports the product
+identity through the raw multiplication decoder and its injectivity theorem. -/
+theorem rawIrreducible_mask_implies_polynomial_irreducible
+    (mask s : Nat)
+    (hs : 1 ≤ s)
+    (hdegree : (rawMaskPolynomial mask).natDegree = s)
+    (hmonic : (rawMaskPolynomial mask).Monic)
+    (hraw : rawIrreducible mask s) :
+    Irreducible (rawMaskPolynomial mask) := by
+  rw [hmonic.irreducible_iff_natDegree]
+  constructor
+  · intro hunit
+    have hdegzero : (rawMaskPolynomial mask).natDegree = 0 := by
+      rw [hunit]
+      simp
+    omega
+  · intro f g hf hg hfg
+    by_contra hnot
+    have hf0 : f ≠ 0 := by
+      intro hz
+      subst f
+      simp at hf
+    have hg0 : g ≠ 0 := by
+      intro hz
+      subst g
+      simp at hg
+    have hfn : f.natDegree ≠ 0 := by
+      intro hz
+      exact hnot (Or.inl hz)
+    have hgn : g.natDegree ≠ 0 := by
+      intro hz
+      exact hnot (Or.inr hz)
+    have hsum : f.natDegree + g.natDegree = s := by
+      calc
+        f.natDegree + g.natDegree = (f * g).natDegree := (natDegree_mul hf0 hg0).symm
+        _ = s := by rw [hfg, hdegree]
+    have contradiction_of_ordered_factors
+        (a b : Polynomial (ZMod 2)) (ha : a.Monic) (hb : b.Monic)
+        (ha0 : a ≠ 0) (hb0 : b ≠ 0) (han : a.natDegree ≠ 0)
+        (hab : a.natDegree ≤ b.natDegree)
+        (habprod : a * b = rawMaskPolynomial mask) : False := by
+      have habsum : a.natDegree + b.natDegree = s := by
+        calc
+          a.natDegree + b.natDegree = (a * b).natDegree := (natDegree_mul ha0 hb0).symm
+          _ = s := by rw [habprod, hdegree]
+      have hdbound : a.natDegree ≤ s / 2 := by omega
+      let amask := rawBitsToNat (rawPolynomialBits a)
+      let bmask := rawBitsToNat (rawPolynomialBits b)
+      have haRange := rawPolynomialBits_mask_range a ha
+      have hbRange := rawPolynomialBits_mask_range b hb
+      have hadecode : rawMaskPolynomial amask = a := by
+        simpa [amask] using rawPolynomialBits_mask_decode a
+      have hbdecode : rawMaskPolynomial bmask = b := by
+        simpa [bmask] using rawPolynomialBits_mask_decode b
+      have hmaskprod : rawPolyMul amask bmask = mask := by
+        apply rawMaskPolynomial_injective
+        calc
+          rawMaskPolynomial (rawPolyMul amask bmask) =
+              rawMaskPolynomial amask * rawMaskPolynomial bmask := rawPolyMul_polynomial _ _
+          _ = a * b := by rw [hadecode, hbdecode]
+          _ = rawMaskPolynomial mask := habprod
+      have hbexp : b.natDegree + 1 = s - a.natDegree + 1 := by omega
+      have hrawResult := hraw a.natDegree (by
+        simp only [Finset.mem_Icc]
+        exact ⟨by omega, hdbound⟩) amask (by
+        simp only [Finset.mem_Ico]
+        exact ⟨haRange.1, haRange.2⟩) bmask (by
+        simp only [Finset.mem_range]
+        rw [← hbexp]
+        exact hbRange.2)
+      exact hrawResult hmaskprod
+    rcases le_total f.natDegree g.natDegree with hfgsmall | hgsmall
+    · exact contradiction_of_ordered_factors f g hf hg hf0 hg0 hfn hfgsmall hfg
+    · apply contradiction_of_ordered_factors g f hg hf hg0 hf0 hgn hgsmall
+      simpa [mul_comm] using hfg
 
 end CorruptedFieldRecovery

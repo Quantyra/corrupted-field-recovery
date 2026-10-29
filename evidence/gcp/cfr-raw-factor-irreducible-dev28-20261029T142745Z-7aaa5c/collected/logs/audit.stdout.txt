@@ -1,0 +1,107 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPolynomial_step
+CorruptedFieldRecovery.rawMaskPolynomial_step : ∀ (n : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial n)
+    (HAdd.hAdd.{0, 0, 0} (Polynomial.C.{0} (ite.{1} (Eq.{1} (Nat.bodd n) Bool.true) 1 0))
+      (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (CorruptedFieldRecovery.rawMaskPolynomial (Nat.div2 n))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPolynomial_step
+'CorruptedFieldRecovery.rawMaskPolynomial_step' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPolynomial_eval_zero
+CorruptedFieldRecovery.rawMaskPolynomial_eval_zero : ∀ (n : Nat),
+  Eq.{1} (Polynomial.eval.{0} 0 (CorruptedFieldRecovery.rawMaskPolynomial n))
+    (ite.{1} (Eq.{1} (Nat.bodd n) Bool.true) 1 0)
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPolynomial_eval_zero
+'CorruptedFieldRecovery.rawMaskPolynomial_eval_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawDivX_X_mul
+CorruptedFieldRecovery.rawDivX_X_mul : ∀ (p : Polynomial.{0} (ZMod 2)),
+  Eq.{1} (Polynomial.divX.{0} (HMul.hMul.{0, 0, 0} Polynomial.X.{0} p)) p
+CFR_TYPE_END:CorruptedFieldRecovery.rawDivX_X_mul
+'CorruptedFieldRecovery.rawDivX_X_mul' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPolynomial_injective
+@CorruptedFieldRecovery.rawMaskPolynomial_injective : ∀ {a b : Nat}
+  (h : Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial a) (CorruptedFieldRecovery.rawMaskPolynomial b)), Eq.{1} a b
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPolynomial_injective
+'CorruptedFieldRecovery.rawMaskPolynomial_injective' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsToNat_lt_pow_length
+CorruptedFieldRecovery.rawBitsToNat_lt_pow_length : ∀ (bits : List.{0} Bool),
+  LT.lt.{0} (CorruptedFieldRecovery.rawBitsToNat bits) (HPow.hPow.{0, 0, 0} 2 (List.length.{0} bits))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsToNat_lt_pow_length
+'CorruptedFieldRecovery.rawBitsToNat_lt_pow_length' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsToNat_append
+CorruptedFieldRecovery.rawBitsToNat_append : ∀ (bits suffix : List.{0} Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (HAppend.hAppend.{0, 0, 0} bits suffix))
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawBitsToNat bits)
+      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (List.length.{0} bits)) (CorruptedFieldRecovery.rawBitsToNat suffix)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsToNat_append
+'CorruptedFieldRecovery.rawBitsToNat_append' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsToNat_append_true
+CorruptedFieldRecovery.rawBitsToNat_append_true : ∀ (bits : List.{0} Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (HAppend.hAppend.{0, 0, 0} bits (List.cons.{0} Bool.true List.nil.{0})))
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawBitsToNat bits) (HPow.hPow.{0, 0, 0} 2 (List.length.{0} bits)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsToNat_append_true
+'CorruptedFieldRecovery.rawBitsToNat_append_true' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialBitsFuel_length
+CorruptedFieldRecovery.rawPolynomialBitsFuel_length : ∀ (fuel : Nat) (p : Polynomial.{0} (ZMod 2)) (hp : Ne.{1} p 0)
+  (hdeg : LT.lt.{0} (Polynomial.natDegree.{0} p) fuel),
+  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.rawPolynomialBitsFuel fuel p))
+    (HAdd.hAdd.{0, 0, 0} (Polynomial.natDegree.{0} p) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialBitsFuel_length
+'CorruptedFieldRecovery.rawPolynomialBitsFuel_length' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialBits_length
+CorruptedFieldRecovery.rawPolynomialBits_length : ∀ (p : Polynomial.{0} (ZMod 2)) (hp : Ne.{1} p 0),
+  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.rawPolynomialBits p))
+    (HAdd.hAdd.{0, 0, 0} (Polynomial.natDegree.{0} p) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialBits_length
+'CorruptedFieldRecovery.rawPolynomialBits_length' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsEndsTrue_cons
+CorruptedFieldRecovery.rawBitsEndsTrue_cons : ∀ (b : Bool) (bits : List.{0} Bool)
+  (h : CorruptedFieldRecovery.rawBitsEndsTrue bits), CorruptedFieldRecovery.rawBitsEndsTrue (List.cons.{0} b bits)
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsEndsTrue_cons
+'CorruptedFieldRecovery.rawBitsEndsTrue_cons' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.monic_divX_of_natDegree_pos
+@CorruptedFieldRecovery.monic_divX_of_natDegree_pos : ∀ {p : Polynomial.{0} (ZMod 2)} (hp : Polynomial.Monic.{0} p)
+  (hpos : LT.lt.{0} 0 (Polynomial.natDegree.{0} p)), Polynomial.Monic.{0} (Polynomial.divX.{0} p)
+CFR_TYPE_END:CorruptedFieldRecovery.monic_divX_of_natDegree_pos
+'CorruptedFieldRecovery.monic_divX_of_natDegree_pos' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialBitsFuel_monic_endsTrue
+CorruptedFieldRecovery.rawPolynomialBitsFuel_monic_endsTrue : ∀ (fuel : Nat) (p : Polynomial.{0} (ZMod 2))
+  (hp : Polynomial.Monic.{0} p) (hdeg : LT.lt.{0} (Polynomial.natDegree.{0} p) fuel),
+  CorruptedFieldRecovery.rawBitsEndsTrue (CorruptedFieldRecovery.rawPolynomialBitsFuel fuel p)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialBitsFuel_monic_endsTrue
+'CorruptedFieldRecovery.rawPolynomialBitsFuel_monic_endsTrue' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialBits_monic_endsTrue
+CorruptedFieldRecovery.rawPolynomialBits_monic_endsTrue : ∀ (p : Polynomial.{0} (ZMod 2)) (hp : Polynomial.Monic.{0} p),
+  CorruptedFieldRecovery.rawBitsEndsTrue (CorruptedFieldRecovery.rawPolynomialBits p)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialBits_monic_endsTrue
+'CorruptedFieldRecovery.rawPolynomialBits_monic_endsTrue' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialBits_mask_range
+CorruptedFieldRecovery.rawPolynomialBits_mask_range : ∀ (p : Polynomial.{0} (ZMod 2)) (hp : Polynomial.Monic.{0} p),
+  And
+    (LE.le.{0} (HPow.hPow.{0, 0, 0} 2 (Polynomial.natDegree.{0} p))
+      (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawPolynomialBits p)))
+    (LT.lt.{0} (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawPolynomialBits p))
+      (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (Polynomial.natDegree.{0} p) 1)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialBits_mask_range
+'CorruptedFieldRecovery.rawPolynomialBits_mask_range' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawIrreducible_mask_implies_polynomial_irreducible
+CorruptedFieldRecovery.rawIrreducible_mask_implies_polynomial_irreducible : ∀ (mask s : Nat) (hs : LE.le.{0} 1 s)
+  (hdegree : Eq.{1} (Polynomial.natDegree.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask)) s)
+  (hmonic : Polynomial.Monic.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask))
+  (hraw : CorruptedFieldRecovery.rawIrreducible mask s), Irreducible.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask)
+CFR_TYPE_END:CorruptedFieldRecovery.rawIrreducible_mask_implies_polynomial_irreducible
+'CorruptedFieldRecovery.rawIrreducible_mask_implies_polynomial_irreducible' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialBits_mask_decode
+CorruptedFieldRecovery.rawPolynomialBits_mask_decode : ∀ (p : Polynomial.{0} (ZMod 2)),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawMaskPolynomial
+      (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawPolynomialBits p)))
+    p
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialBits_mask_decode
+'CorruptedFieldRecovery.rawPolynomialBits_mask_decode' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

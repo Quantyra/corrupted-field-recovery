@@ -223,6 +223,46 @@ theorem scalarAction_injective_subtype_iff
       ((mem_supportCoordinateFinset_iff K U (x.1 - y.1)).2 hdiffU) hdiff
     exact sub_eq_zero.mp hzero
 
+def translateOverlapTrivial
+    (U : Submodule (ZMod 2) (KTriple K)) (t : K) : Prop :=
+  ∀ u₀, u₀ ∈ U → ∀ u₁, u₁ ∈ U → t • u₁ = u₀ → u₀ = 0
+
+omit [Fintype K] [DecidableEq K] [Algebra (ZMod 2) K] in
+theorem charTwo_sum_eq_zero_iff {x y : KTriple K} [CharP K 2] :
+    x + y = 0 ↔ y = x := by
+  constructor
+  · intro h
+    funext i
+    exact (CharTwo.add_eq_zero.mp (congrFun h i)).symm
+  · intro h
+    funext i
+    exact CharTwo.add_eq_zero.mpr (congrFun h i).symm
+
+theorem translateActionGood_submodule_iff
+    (U : Submodule (ZMod 2) (KTriple K)) (t : K) [CharP K 2] :
+    translateActionGood K (supportCoordinateFinset K U) t ↔
+      Function.Injective (fun u : U => t • (u : KTriple K)) ∧
+        translateOverlapTrivial K U t := by
+  constructor
+  · intro h
+    constructor
+    · exact (scalarAction_injective_subtype_iff K U t).2 h.1
+    · intro u₀ hu₀ u₁ hu₁ hact
+      have hrel : u₀ + t • u₁ = 0 :=
+        (charTwo_sum_eq_zero_iff (x := u₀) (y := t • u₁)).2 hact
+      by_cases hu₀zero : u₀ = 0
+      · exact hu₀zero
+      · exact (h.2 u₀ ((mem_supportCoordinateFinset_iff K U u₀).2 hu₀)
+          u₁ ((mem_supportCoordinateFinset_iff K U u₁).2 hu₁) hu₀zero hrel).elim
+  · rintro ⟨hinj, hoverlap⟩
+    constructor
+    · exact (scalarAction_injective_subtype_iff K U t).1 hinj
+    · intro u₀ hu₀ u₁ hu₁ hu₀ne hrel
+      have hact : t • u₁ = u₀ :=
+        (charTwo_sum_eq_zero_iff (x := u₀) (y := t • u₁)).1 hrel
+      exact hu₀ne (hoverlap u₀ ((mem_supportCoordinateFinset_iff K U u₀).1 hu₀)
+        u₁ ((mem_supportCoordinateFinset_iff K U u₁).1 hu₁) hact)
+
 end
 
 end CorruptedFieldRecovery
