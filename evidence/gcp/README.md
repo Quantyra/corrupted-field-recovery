@@ -319,3 +319,63 @@ refused by the missing-exit-code guard and is retained as failed transport.
 Remaining to-do list: retain terminal outcomes for Support `57add0`, then
 Four `1d211e`; review actual green declarations/axioms; continue the complete
 manuscript milestones; safely stop the builder after all evidence is collected.
+
+
+Support `57add0` ultimately failed at 03:39:46 UTC after a 196-second
+build on the scoped 3200000-heartbeat outer-lift timeout; its complete logs
+were collected. Support refactor `024a9f` failed at 03:58:22 UTC at the direct
+outer lift's 200000-heartbeat inference step; its complete logs were collected.
+Neither changes coverage. The typed-map successor SHA-256
+`73d4a684db84d9ccbeeb1b15abbf5621d16fd765b75436c313f3666d97cdf765`
+is captured as `44c6b6` with 11 actual audited exports and no heartbeat increase.
+
+Four `1d211e` passed its actual build but failed audit at 03:46:43 UTC solely
+because the inherited export list included nonexistent `CorruptedFieldRecovery.has`.
+The full failed audit is retained; every actual printed type remains readable.
+Corrected `c2fca6` captures the identical Four source `d05c0fbe...1040aa04`
+with 65 actual exports, removing only that phantom entry. No failed receipt
+was rewritten. Its cloud result remains pending.
+
+Repeated Windows-gcloud exit 3221225477 occurred after successful remote package
+hash output. Exact saved read-only recovery scripts download those existing
+archives, check the retained remote archive digest and every terminal stage-log
+digest, and preserve raw transport receipts. These recoveries fully collected
+`1d211e` and `024a9f`; no compiler or launched input was restarted. A prelaunch
+crash on `024a9f` was continued through the guarded same-handle resumable route
+before its sole PID 13421 launch. All preservation and source bytes are exact.
+
+Remaining to-do list: collect corrected Four `c2fca6`, run and collect Support
+`44c6b6`, inspect exact green type/axiom scope, continue full certification,
+and stop the dedicated builder only after outcome and workload guards pass.
+
+
+Corrected Four [`c2fca6`](cfr-isolated-four-sampled-identification-audit09-20261029T035343Z-c2fca6/collected/terminal-receipt.json)
+passed GCP build and the full 65-declaration readable type/axiom audit at
+2026-10-29 04:04:54 UTC, with zero warnings and only `propext`,
+`Classical.choice`, and `Quot.sound`. All raw logs are collected and hash-bound.
+Root inspected the actual emitted theorem types and accepted the sampled-basis
+K? identification and finrank component: nonzero coefficient and a generating
+coordinate are explicit hypotheses. This does not close whole M2, establish
+hidden-input linkage, or certify the manuscript. The earlier build-green,
+phantom-export audit failure `1d211e` remains red and preserved separately.
+
+Support `44c6b6` is the next active exact-source run; no source-dependent
+coverage or acceptance is inferred from Four's green evidence.
+
+Remaining to-do list: collect Support `44c6b6`, inspect its exact type/axiom
+scope if green, continue hidden-input and full manuscript obligations, and
+stop the dedicated builder after all launched evidence and workload checks.
+
+
+Support `44c6b6` failed its exact GCP build at 04:11:59 UTC with two
+200000-heartbeat `whnf` timeouts at lines 179 and 168, followed by references
+to the uncreated quotient lift; zero warning headers were emitted. Full raw
+logs are collected and hash-bound in `60200e`, and the actual diagnostic was
+routed to the author. The explicit typed-map repair remains an unaccepted
+proof draft. All launched outcomes are preserved; no compiler remains active
+at this checkpoint. The dedicated VM retains its conservative 06:02:12 UTC
+STOP ceiling and persistent cache.
+
+Remaining to-do list: resolve the Support outer-lift elaboration and obtain
+its actual green audit; continue hidden-input/full theorem obligations;
+preserve future launches and safely stop the dedicated builder at the batch checkpoint.

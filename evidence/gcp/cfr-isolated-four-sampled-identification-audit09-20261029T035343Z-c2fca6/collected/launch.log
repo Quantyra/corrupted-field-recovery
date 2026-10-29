@@ -1,0 +1,6 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-isolated-four-sampled-identification-audit09-20261029T035343Z-c2fca6/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
+STAGE=audit

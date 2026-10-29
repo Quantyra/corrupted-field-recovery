@@ -1,0 +1,25 @@
+{
+  "run": "cfr-isolated-support-dev08-20261029T034454Z-024a9f",
+  "utc": "2026-10-29T04:01:46.141663+00:00",
+  "archive_sha256": "27d860b8a215028fae7d0de5ba6a9e50f909dd3962eb071e5e0e422328de6912",
+  "package_transport_failed": true,
+  "recovery": "Read-only download of already packaged archive; retained package stdout hash; archive and all terminal log hashes checked",
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "d6a6833dc5bbd3b06f82fade515e16b9b7db15b7574749fe64979ec8bbdf708f",
+    "launch.log": "5c74dd5e6454e7ae408a553102942a11a5d3b2c6f2c301914caffb872f962d60",
+    "runner-pid": "758a22dd77b6b98a07a547ad9a7add75aa3c2de935fcdd706e3b5061a747b154",
+    "started-utc": "79d140dff9f9207473313db7993afee40705c2704d7eba7168662108f993f364",
+    "terminal-receipt.json": "701cfa4141811c3a1861582f517400ebfb39b89eac31140b2ef8d99a2c47a7c7",
+    "logs/build.stderr.txt": "c4a27db198c4d8632369ee6102944ef46e83c20d685f7c17a6aaff9cfcfc710f",
+    "logs/build.stdout.txt": "518b67c6f8e65d86c59d37b875d2a0d504d6d0975f0d4d36ae8852e112226d6b",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "65d061e6e40b7f7044f6bf2eec711ca1eab687326f2e9f5c1306177db7739062",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "643d1011cbebc721730f5c84bc7889f33804c675895685f8315e648b41104078",
+    "logs/runner.stdout.txt": "3325445eb11f0eb5f17789be60c34f7a46c94585d6336504fd53f72a8f7c9b60"
+  }
+}

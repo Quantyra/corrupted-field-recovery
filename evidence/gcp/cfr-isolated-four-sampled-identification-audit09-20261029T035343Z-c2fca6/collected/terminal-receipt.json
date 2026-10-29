@@ -1,0 +1,925 @@
+{
+  "run": "cfr-isolated-four-sampled-identification-audit09-20261029T035343Z-c2fca6",
+  "compile_host": "GCP",
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "started_utc": "2026-10-29T04:04:42.433771+00:00",
+  "status": "passed",
+  "stage_outcomes": [
+    {
+      "stage": "lean-version",
+      "command": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.065
+    },
+    {
+      "stage": "lake-version",
+      "command": [
+        "lake",
+        "--version"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.065
+    },
+    {
+      "stage": "dependency-cache-incremental",
+      "command": [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib.Algebra.CharP.Two",
+        "Mathlib.Algebra.Field.ZMod",
+        "Mathlib.Algebra.Module.LinearMap.Basic",
+        "Mathlib.Data.ZMod.Basic",
+        "Mathlib.FieldTheory.Finite.Trace",
+        "Mathlib.LinearAlgebra.BilinearMap",
+        "Mathlib.LinearAlgebra.Determinant",
+        "Mathlib.LinearAlgebra.Dual.Lemmas",
+        "Mathlib.LinearAlgebra.Prod",
+        "Mathlib.LinearAlgebra.Quotient.Bilinear",
+        "Mathlib.LinearAlgebra.Span.Basic",
+        "Mathlib.LinearAlgebra.StdBasis",
+        "Mathlib.Tactic.Abel",
+        "Mathlib.Tactic.Ring"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 4.332
+    },
+    {
+      "stage": "build",
+      "command": [
+        "lake",
+        "build",
+        "CorruptedFieldRecovery.FourContractions"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.771
+    },
+    {
+      "stage": "audit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "checks/CaptureAudit.lean"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 5.334
+    }
+  ],
+  "source_sha256": {
+    "CorruptedFieldRecovery.lean": "5bb695b100945569e6a9d98bdb8f0c70e01ed890c3c8ac73be4ff736aef4e80c",
+    "CorruptedFieldRecovery/BinaryTensor.lean": "a98590adf42e2389358ea56ac4664db5ce5a8ae7fe62db27178daa2791296cc7",
+    "CorruptedFieldRecovery/BitCostPrototype.lean": "840b63401089874dd48979333623a714730e00073be82940946cf4511fd55278",
+    "CorruptedFieldRecovery/Bridge.lean": "b20ef169e4123db1ac6aa61c4f22fb50a0bac6f8d6221e0dff57708614e21a8b",
+    "CorruptedFieldRecovery/Defect.lean": "12a92e387a360cde83ec27b885103bd65ccb0eb7593c9a57143ea261b09c08c6",
+    "CorruptedFieldRecovery/DenseInput.lean": "8f7b424beea9bc14735c9bc3a962c40508e1c50368be3ee5cfd08cd0839545c0",
+    "CorruptedFieldRecovery/FourContractions.lean": "d05c0fbe41a0125a1b4f3121317b481d1eb34bc547cedcf29b4a05251040aa04",
+    "CorruptedFieldRecovery/Independent.lean": "1e051f2e7d19c748242db1a091c9aa42c4ec532f69467796e81487f7b53f3baf",
+    "CorruptedFieldRecovery/Support.lean": "c33f77aa965cd51ee3e0b0cbe1389e647d5d7ff2cad88c39bc8019aa35c106b8",
+    "checks/Audit.lean": "3b1b3e1737b3621b4e5a401819d10001fcf67f9f440f6a62ffcdddb6c4eb40b3",
+    "checks/CaptureAudit.lean": "8c24032bab74638e609c762b4244ce8b3bc2ea7f761aac822b5a4f6e24f98dd8",
+    "lake-manifest.json": "5e95294fc479a9e41d6fb269dddbb1372127d716e01fa74017656e3c0b6bd4a0",
+    "lakefile.toml": "46ac718eb654678ceea6d9f0a19f6944af19e4e513b01b91f89f0dc94373f8ce",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+  },
+  "dependencies": [
+    {
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "name": "mathlib",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "inherited": false,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/plausible",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a456461b368b71d2accd95234832cd9c174b5437",
+      "name": "plausible",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "name": "LeanSearchClient",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/import-graph",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "515cf9d0c00ece5e661f6de4326a53dedc1e8ea1",
+      "name": "importGraph",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a84b3e2475d5c5ab979567b1ad8aea21b764bcf8",
+      "name": "proofwidgets",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v0.0.99",
+      "inherited": true,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/aesop",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "558915ae105bfd8074e22d597613d1961822adc2",
+      "name": "aesop",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/quote4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a6e6c34c4ef182f83b219a3a5a385f51f44bdc4c",
+      "name": "Qq",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/batteries",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "32dc18cde3684679f3c003de608743b57498c56f",
+      "name": "batteries",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover/lean4-cli",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover",
+      "rev": "6b907cf12b2e445ccb7c24bc208ef04a1f39e84c",
+      "name": "Cli",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    }
+  ],
+  "authoritative_scope": "Exact captured sources and requested targets only; not full manuscript certification",
+  "cache_predecessor": {
+    "run": "cfr-isolated-denseinput-roundtrip-dev04-20261029T013625Z-42ba02",
+    "source_sha256": {
+      "CorruptedFieldRecovery.lean": "5bb695b100945569e6a9d98bdb8f0c70e01ed890c3c8ac73be4ff736aef4e80c",
+      "CorruptedFieldRecovery/BinaryTensor.lean": "a98590adf42e2389358ea56ac4664db5ce5a8ae7fe62db27178daa2791296cc7",
+      "CorruptedFieldRecovery/BitCostPrototype.lean": "840b63401089874dd48979333623a714730e00073be82940946cf4511fd55278",
+      "CorruptedFieldRecovery/Bridge.lean": "b20ef169e4123db1ac6aa61c4f22fb50a0bac6f8d6221e0dff57708614e21a8b",
+      "CorruptedFieldRecovery/Defect.lean": "12a92e387a360cde83ec27b885103bd65ccb0eb7593c9a57143ea261b09c08c6",
+      "CorruptedFieldRecovery/DenseInput.lean": "8f7b424beea9bc14735c9bc3a962c40508e1c50368be3ee5cfd08cd0839545c0",
+      "CorruptedFieldRecovery/FourContractions.lean": "3e8d19395c73ab598389620feb99318996fa6e82bc5a8c432a268acb9f07b57b",
+      "CorruptedFieldRecovery/Independent.lean": "1e051f2e7d19c748242db1a091c9aa42c4ec532f69467796e81487f7b53f3baf",
+      "checks/Audit.lean": "3b1b3e1737b3621b4e5a401819d10001fcf67f9f440f6a62ffcdddb6c4eb40b3",
+      "checks/CaptureAudit.lean": "aee4caf8a3f22112db5871292a5389ec0b4baaa524517ea52a46b100f82c68ca",
+      "lake-manifest.json": "5e95294fc479a9e41d6fb269dddbb1372127d716e01fa74017656e3c0b6bd4a0",
+      "lakefile.toml": "46ac718eb654678ceea6d9f0a19f6944af19e4e513b01b91f89f0dc94373f8ce",
+      "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+    },
+    "dependencies": [
+      {
+        "url": "https://github.com/leanprover-community/mathlib4.git",
+        "type": "git",
+        "subDir": null,
+        "scope": "",
+        "rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+        "name": "mathlib",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+        "inherited": false,
+        "configFile": "lakefile.lean"
+      },
+      {
+        "url": "https://github.com/leanprover-community/plausible",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "a456461b368b71d2accd95234832cd9c174b5437",
+        "name": "plausible",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "name": "LeanSearchClient",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/import-graph",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "515cf9d0c00ece5e661f6de4326a53dedc1e8ea1",
+        "name": "importGraph",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "a84b3e2475d5c5ab979567b1ad8aea21b764bcf8",
+        "name": "proofwidgets",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v0.0.99",
+        "inherited": true,
+        "configFile": "lakefile.lean"
+      },
+      {
+        "url": "https://github.com/leanprover-community/aesop",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "558915ae105bfd8074e22d597613d1961822adc2",
+        "name": "aesop",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v4.30.0",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/quote4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "a6e6c34c4ef182f83b219a3a5a385f51f44bdc4c",
+        "name": "Qq",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v4.30.0",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/batteries",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "32dc18cde3684679f3c003de608743b57498c56f",
+        "name": "batteries",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover/lean4-cli",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover",
+        "rev": "6b907cf12b2e445ccb7c24bc208ef04a1f39e84c",
+        "name": "Cli",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v4.30.0",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      }
+    ],
+    "targets": [
+      "CorruptedFieldRecovery.DenseInput"
+    ],
+    "utc": "2026-10-29T01:46:52.581584+00:00"
+  },
+  "toolchain_binary_sha256": {
+    "lean": "3e0d0d3d801675359f2d4cf9815bfdb417b20b92fdd9d48b3b14c95bbae28bbf",
+    "lake": "d3e1f322c08d87f0d5850132a0b0309c1edbe53d641276b344717da448c8bc8b"
+  },
+  "source_and_dependencies_verified_before": true,
+  "dependency_tree_sha1": {
+    "mathlib": "1fe688f4d9e84fb268a300f8ac33cbca883fbd28",
+    "plausible": "cbfb86e477a2ed89137953b22bbf38149658b672",
+    "LeanSearchClient": "d0224b6df6c90cc0b4ed2db6218037d31bfd6f52",
+    "importGraph": "7418207a8b90a9f8e7223c20009d7eab86a4fd53",
+    "proofwidgets": "e0e2c368464f34b36f0db3901ce3c8ab4a1b8a40",
+    "aesop": "9f9a222ac975ad751c92bcf0f46de9fd2b0c3cfb",
+    "Qq": "3cd6c8c7454ab4cdc4f5c7068250d42e6f072b42",
+    "batteries": "436fbfdcb885492763ccee85e5db580d1995966f",
+    "Cli": "8a76534436fb49125055d57998a2907a396186f8"
+  },
+  "lean_commit_verified": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+  "reported_lean_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+  "source_and_dependencies_verified_after": true,
+  "owned_warning_headers": [],
+  "frozen_warning_baseline": {
+    "source_sha256": {
+      "CorruptedFieldRecovery.lean": "5bb695b100945569e6a9d98bdb8f0c70e01ed890c3c8ac73be4ff736aef4e80c",
+      "CorruptedFieldRecovery/Defect.lean": "12a92e387a360cde83ec27b885103bd65ccb0eb7593c9a57143ea261b09c08c6",
+      "CorruptedFieldRecovery/Independent.lean": "1e051f2e7d19c748242db1a091c9aa42c4ec532f69467796e81487f7b53f3baf",
+      "checks/Audit.lean": "3b1b3e1737b3621b4e5a401819d10001fcf67f9f440f6a62ffcdddb6c4eb40b3",
+      "lake-manifest.json": "5e95294fc479a9e41d6fb269dddbb1372127d716e01fa74017656e3c0b6bd4a0",
+      "lakefile.toml": "46ac718eb654678ceea6d9f0a19f6944af19e4e513b01b91f89f0dc94373f8ce",
+      "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+    },
+    "dependencies": [
+      {
+        "url": "https://github.com/leanprover-community/mathlib4.git",
+        "type": "git",
+        "subDir": null,
+        "scope": "",
+        "rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+        "name": "mathlib",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+        "inherited": false,
+        "configFile": "lakefile.lean"
+      },
+      {
+        "url": "https://github.com/leanprover-community/plausible",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "a456461b368b71d2accd95234832cd9c174b5437",
+        "name": "plausible",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "name": "LeanSearchClient",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/import-graph",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "515cf9d0c00ece5e661f6de4326a53dedc1e8ea1",
+        "name": "importGraph",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "a84b3e2475d5c5ab979567b1ad8aea21b764bcf8",
+        "name": "proofwidgets",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v0.0.99",
+        "inherited": true,
+        "configFile": "lakefile.lean"
+      },
+      {
+        "url": "https://github.com/leanprover-community/aesop",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "558915ae105bfd8074e22d597613d1961822adc2",
+        "name": "aesop",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v4.30.0",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/quote4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "a6e6c34c4ef182f83b219a3a5a385f51f44bdc4c",
+        "name": "Qq",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v4.30.0",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/batteries",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "32dc18cde3684679f3c003de608743b57498c56f",
+        "name": "batteries",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover/lean4-cli",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover",
+        "rev": "6b907cf12b2e445ccb7c24bc208ef04a1f39e84c",
+        "name": "Cli",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v4.30.0",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      }
+    ],
+    "warnings": [],
+    "baseline_run": "cfr-isolated-baseline-20261028T224830Z-75ad79"
+  },
+  "reported_axiom_profiles_raw": {
+    "CorruptedFieldRecovery.tracePairing_nondegenerate": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldContraction0": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldContraction1": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldContraction2": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldContraction4": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldScalarTriple_eq_smul": [
+      "propext"
+    ],
+    "CorruptedFieldRecovery.fieldDet3_smul_left": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldDet3_smul_right": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldContraction0_radical": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldContraction1_radical": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldContraction2_radical": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.balanced_first_three_preserves_axes": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldAxis0": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldAxis1": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldAxis2": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldCoordinate0": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldCoordinate1": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldCoordinate2": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldBlock0": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldBlock1": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldBlock2": [
+      "propext",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.balanced_first_three_block_form": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldTracePair": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.balanced_first_three_pair_relations": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldTracePair_right_injective": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.three_pair_relations_common_selfadjoint": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.first_three_common_block": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fourth_balance_weighted_pairs": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldFourBalanced": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.standard_four_contractions_iff_scalar": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fourContractionsBalancedVia": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.four_contractions_via_iff_scalar": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.scalarTripleEndLinearMap": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.scalarTripleEndRange": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.scalarTripleEndLinearMap_injective": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.scalarTripleEndRange_finrank": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.standard_four_balance_iff_mem_scalarTripleEndRange": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.standard_four_contractions_balance_finrank": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldTripleEquivPi": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldTripleStandardBasis": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledBasisCoordinateEquiv": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledBasisDeterminant": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledBasisDeterminant_ne_zero": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldDet3_eq_standardBasis_det": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.fieldDet3_sampledBasis_change": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledContraction0": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledContraction1": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledContraction2": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledContraction4": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledFourBalanced": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledContraction0_eq_coordinate": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledContraction1_eq_coordinate": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledContraction2_eq_coordinate": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampledContraction4_eq_coordinate": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampled_four_contractions_iff_via": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.scalarTripleEndRange_mem_iff": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampled_four_contractions_identification_and_finrank": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ],
+    "CorruptedFieldRecovery.sampled_four_contractions_balance_finrank_eq_s": [
+      "propext",
+      "Classical.choice.{u}",
+      "Quot.sound.{u}"
+    ]
+  },
+  "audited_declarations": [
+    "CorruptedFieldRecovery.FieldTriple",
+    "CorruptedFieldRecovery.balanced_first_three_block_form",
+    "CorruptedFieldRecovery.balanced_first_three_pair_relations",
+    "CorruptedFieldRecovery.balanced_first_three_preserves_axes",
+    "CorruptedFieldRecovery.fieldAxis0",
+    "CorruptedFieldRecovery.fieldAxis1",
+    "CorruptedFieldRecovery.fieldAxis2",
+    "CorruptedFieldRecovery.fieldBasis0",
+    "CorruptedFieldRecovery.fieldBasis1",
+    "CorruptedFieldRecovery.fieldBasis2",
+    "CorruptedFieldRecovery.fieldBlock0",
+    "CorruptedFieldRecovery.fieldBlock1",
+    "CorruptedFieldRecovery.fieldBlock2",
+    "CorruptedFieldRecovery.fieldContraction0",
+    "CorruptedFieldRecovery.fieldContraction0_radical",
+    "CorruptedFieldRecovery.fieldContraction1",
+    "CorruptedFieldRecovery.fieldContraction1_radical",
+    "CorruptedFieldRecovery.fieldContraction2",
+    "CorruptedFieldRecovery.fieldContraction2_radical",
+    "CorruptedFieldRecovery.fieldContraction4",
+    "CorruptedFieldRecovery.fieldCoordinate0",
+    "CorruptedFieldRecovery.fieldCoordinate1",
+    "CorruptedFieldRecovery.fieldCoordinate2",
+    "CorruptedFieldRecovery.fieldDet3",
+    "CorruptedFieldRecovery.fieldDet3_eq_standardBasis_det",
+    "CorruptedFieldRecovery.fieldDet3_sampledBasis_change",
+    "CorruptedFieldRecovery.fieldDet3_smul_left",
+    "CorruptedFieldRecovery.fieldDet3_smul_right",
+    "CorruptedFieldRecovery.fieldFourBalanced",
+    "CorruptedFieldRecovery.fieldScalarTriple",
+    "CorruptedFieldRecovery.fieldScalarTriple_eq_smul",
+    "CorruptedFieldRecovery.fieldTracePair",
+    "CorruptedFieldRecovery.fieldTracePair_right_injective",
+    "CorruptedFieldRecovery.fieldTripleEquivPi",
+    "CorruptedFieldRecovery.fieldTripleStandardBasis",
+    "CorruptedFieldRecovery.first_three_common_block",
+    "CorruptedFieldRecovery.fourContractionsBalancedVia",
+    "CorruptedFieldRecovery.four_contractions_via_iff_scalar",
+    "CorruptedFieldRecovery.fourth_balance_weighted_pairs",
+    "CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator",
+    "CorruptedFieldRecovery.sampledBasisCoordinateEquiv",
+    "CorruptedFieldRecovery.sampledBasisDeterminant",
+    "CorruptedFieldRecovery.sampledBasisDeterminant_ne_zero",
+    "CorruptedFieldRecovery.sampledContraction0",
+    "CorruptedFieldRecovery.sampledContraction0_eq_coordinate",
+    "CorruptedFieldRecovery.sampledContraction1",
+    "CorruptedFieldRecovery.sampledContraction1_eq_coordinate",
+    "CorruptedFieldRecovery.sampledContraction2",
+    "CorruptedFieldRecovery.sampledContraction2_eq_coordinate",
+    "CorruptedFieldRecovery.sampledContraction4",
+    "CorruptedFieldRecovery.sampledContraction4_eq_coordinate",
+    "CorruptedFieldRecovery.sampledFourBalanced",
+    "CorruptedFieldRecovery.sampled_four_contractions_balance_finrank_eq_s",
+    "CorruptedFieldRecovery.sampled_four_contractions_identification_and_finrank",
+    "CorruptedFieldRecovery.sampled_four_contractions_iff_via",
+    "CorruptedFieldRecovery.scalarTripleEndLinearMap",
+    "CorruptedFieldRecovery.scalarTripleEndLinearMap_injective",
+    "CorruptedFieldRecovery.scalarTripleEndRange",
+    "CorruptedFieldRecovery.scalarTripleEndRange_finrank",
+    "CorruptedFieldRecovery.scalarTripleEndRange_mem_iff",
+    "CorruptedFieldRecovery.standard_four_balance_iff_mem_scalarTripleEndRange",
+    "CorruptedFieldRecovery.standard_four_contractions_balance_finrank",
+    "CorruptedFieldRecovery.standard_four_contractions_iff_scalar",
+    "CorruptedFieldRecovery.three_pair_relations_common_selfadjoint",
+    "CorruptedFieldRecovery.tracePairing_nondegenerate"
+  ],
+  "reported_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "type_axiom_audit": {
+    "source_sha256": "8c24032bab74638e609c762b4244ce8b3bc2ea7f761aac822b5a4f6e24f98dd8",
+    "stdout_sha256": "a088b3c4923777599d4819a110e702fbb952c45959eab0577a3851b571f51f38",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "semantic_acceptance": "Not inferred; Root must inspect emitted types against the manuscript target.",
+    "emitted_types_sha256": "a42c3bbbc6395489b2b0d01efc2d6969c66d2491cee44032d7cc098e81e7fddf",
+    "type_block_sha256": {
+      "CorruptedFieldRecovery.tracePairing_nondegenerate": "3be0dc5c72d47a19b04851d5667c8c2c76000dfa74513a04c1eb71fa73dd01c3",
+      "CorruptedFieldRecovery.fieldDet3": "359f99a12861a41531782eeba5b4a472141f36bdb858833b302de86d4ed4a99f",
+      "CorruptedFieldRecovery.fieldBasis0": "9e61198cc015274e75cc6a21602220717b96fd39448e4f6ae2db511e91b32cec",
+      "CorruptedFieldRecovery.fieldBasis1": "e9eb5c634c4a8402c6d914c6b370f2b51c9200690585d2be16d262cf0a886afd",
+      "CorruptedFieldRecovery.fieldBasis2": "dda27c141494e33d7ba3fbadeb0969c73e4ef3c393c70047ec028d08f3680132",
+      "CorruptedFieldRecovery.fieldContraction0": "440fe247056802642ee4add539c4a5bf7828c2c0ba75abc473bddad78e8b19ec",
+      "CorruptedFieldRecovery.fieldContraction1": "1f00ac2d9aaf09215ad826db0d644702bc92a3e74f514625ffa10dc82b2d114e",
+      "CorruptedFieldRecovery.fieldContraction2": "ee574ec94306fab5d3e482def137d232f770853d0562e59acac3d15383e5f34e",
+      "CorruptedFieldRecovery.fieldContraction4": "c9a4819e8de85bfe35bdcf4f25120ba140646d98f140e6ac846ce0374cc7c7fc",
+      "CorruptedFieldRecovery.fieldScalarTriple": "df659a9846649846a54409bf8f8c3a2d79af503e1de26c979e73b02a9d22346e",
+      "CorruptedFieldRecovery.fieldScalarTriple_eq_smul": "cd9081ed514b8fc682566dc7bfaba5c753b8c9c091cb7861e718ead002e80f22",
+      "CorruptedFieldRecovery.fieldDet3_smul_left": "592ec852c2339a456f25c7208477d6c549313947f7a6115610e8f491421ff012",
+      "CorruptedFieldRecovery.fieldDet3_smul_right": "eeb8cd71e76a6bca2365fb18b117a9eef0b8c0f1f447d523719637a3d13cff2c",
+      "CorruptedFieldRecovery.fieldContraction0_radical": "b20aee568177948c02b33f80768367564336917dba85e052cf64f886eb58cfd3",
+      "CorruptedFieldRecovery.fieldContraction1_radical": "afdfec6b6b9572d2e5dce3015124440147d1b382f67056a087feac3f201ba3e8",
+      "CorruptedFieldRecovery.fieldContraction2_radical": "fbc8676ff117a819e5ea78c00d2252d8fc8499f85e55af396aea10469e54a85a",
+      "CorruptedFieldRecovery.balanced_first_three_preserves_axes": "bffa121eb2908533521440eda1765b79055febd0739ccaf9272a2bbabd98fda6",
+      "CorruptedFieldRecovery.fieldAxis0": "9454728832c1fa1311bbcb10bf21d6a9c72b415df49c4479ca92f0e32d6e19a7",
+      "CorruptedFieldRecovery.fieldAxis1": "53f68a893201cec43db3dc8a4efa8515ceb93a2f52a6fc5fdb7f2d112bfd0298",
+      "CorruptedFieldRecovery.fieldAxis2": "b9f5fbd6c1e9961eb874f36e8cdc765b79ec3665dc35307937bbe8156e51a976",
+      "CorruptedFieldRecovery.fieldCoordinate0": "59161288e8bf6de29908296202c46797f774b22e8ef7db15dbf885808e611586",
+      "CorruptedFieldRecovery.fieldCoordinate1": "bf59e8909e532d66a94935de37d7a345f4b510e35a3762d3c3736407636a5318",
+      "CorruptedFieldRecovery.fieldCoordinate2": "43954530a6a4588defb9b6dfa359ae0a554273c30b6f0f0accbee1b30da0768a",
+      "CorruptedFieldRecovery.fieldBlock0": "136787e3c07002b97f16daedeea3c6450d4871f51fc64e2b440821f8ff641ad0",
+      "CorruptedFieldRecovery.fieldBlock1": "b1d8e4fb08ab0337c8c648e0711ce83b870eebcff0d60a60ab6df50cf3ec7816",
+      "CorruptedFieldRecovery.fieldBlock2": "1b2e88774b7a9d8903f5a440f514b8c552dfc3a025ea6a02bd20bdf11925864a",
+      "CorruptedFieldRecovery.balanced_first_three_block_form": "776acebd42958c8538947292683a2c642b70aceaf0f50660767aeef9377bfd56",
+      "CorruptedFieldRecovery.fieldTracePair": "7a802a61f3e507720861d217d50345b1935d5d04af9362798ec8bfee9c3c7671",
+      "CorruptedFieldRecovery.balanced_first_three_pair_relations": "84d141d437413bd94ccb5b0ad4966c803631b78ed4c7ffda1533ccc0368422e3",
+      "CorruptedFieldRecovery.fieldTracePair_right_injective": "b7ce6fb9f789c2ade6a0baf2cc2e4dd7d0ae93dde652bf6b1887139344a6a93f",
+      "CorruptedFieldRecovery.three_pair_relations_common_selfadjoint": "e540d27740362dc9825e7818bb5315afbdf97be3a8247ba1b8025999c224ed24",
+      "CorruptedFieldRecovery.first_three_common_block": "5f1fd0ee52813372b516ae7f9ff4702f7ad80ca004d9857d75e8c91e392376e4",
+      "CorruptedFieldRecovery.fourth_balance_weighted_pairs": "732b4e378bfc22a06cdec91aaaa4a8a33e7600dccf646640832a574e58da9fb8",
+      "CorruptedFieldRecovery.fieldFourBalanced": "30245bbe6347835cf1632882f3d95e8f913bc16f3e06a5b9f555f16589afdd02",
+      "CorruptedFieldRecovery.standard_four_contractions_iff_scalar": "77134ed0fa07ba67f1f56e858788480a7dc3df16f81c9e1205c108cf429c6762",
+      "CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator": "db150dd5e43f3bf303c0da546400f1c935ff50dd8374d986a559b07257a75f4c",
+      "CorruptedFieldRecovery.FieldTriple": "b14adc5494617f27b8230b1729cf35d0d8321cf52a1875ab54791350312e95e6",
+      "CorruptedFieldRecovery.fourContractionsBalancedVia": "0f7943b23ae1da70f76d75dea7f0058ddd87dda8b7dc966c2f71b3c4c28fbd8a",
+      "CorruptedFieldRecovery.four_contractions_via_iff_scalar": "5a77a3bca0aa4b1b88e4118664226424463c21fbb9df142a470a2c6b4bd6a161",
+      "CorruptedFieldRecovery.scalarTripleEndLinearMap": "200c828e5e4db2df777647547b4edfca34caa483d8e8f9b07d691e2c97c4004e",
+      "CorruptedFieldRecovery.scalarTripleEndRange": "107a4439dcda1d1f85424de52d08339d8def438ceb559464f48795c1a7016581",
+      "CorruptedFieldRecovery.scalarTripleEndLinearMap_injective": "706344c2629a013f19617e2d4779edcd7ce0d91af69b8ba44b4de9388435ed17",
+      "CorruptedFieldRecovery.scalarTripleEndRange_finrank": "8db07c35104e46aac3f766cf5321d7e83af60af3b2a77b70d0736a6e7b95a500",
+      "CorruptedFieldRecovery.standard_four_balance_iff_mem_scalarTripleEndRange": "e149e272ca3ac464b236842fb8a211435f251b9f25e6615e2499967a2106489b",
+      "CorruptedFieldRecovery.standard_four_contractions_balance_finrank": "24ef5bfe2ec141a3239cfe39e2aa1ddd80c4971cba6ec378c2ed39f04e565335",
+      "CorruptedFieldRecovery.fieldTripleEquivPi": "8b8808d00b2c6d5ac0c8973a17982b9e95fa3c437c7728da7211f3e41cee0a55",
+      "CorruptedFieldRecovery.fieldTripleStandardBasis": "5c5df649afc5fe21604ecd484f054e66ea980cbf7d7f35bf9fce6b0932fe6628",
+      "CorruptedFieldRecovery.sampledBasisCoordinateEquiv": "8111cee6ff87c90521760d2f0d6ab0b82551ed651104104cc1e9c1453b82b6a2",
+      "CorruptedFieldRecovery.sampledBasisDeterminant": "3c37c94b659bdd6f248e854e0b0f7040d6b565047d1610fda73108746019c833",
+      "CorruptedFieldRecovery.sampledBasisDeterminant_ne_zero": "8cbb245d79f10bff87e47d70deddef4933ccad51747d9ae3050cd985cfb88d27",
+      "CorruptedFieldRecovery.fieldDet3_eq_standardBasis_det": "4facb49f909a7a9ee0c6f662b2487fc0087b99d9e4210c97fa40ce79b04fd2a6",
+      "CorruptedFieldRecovery.fieldDet3_sampledBasis_change": "9d77db92a5c77dcff6c61a0efcc869c2f52392a011dfe720e89c440a378dce10",
+      "CorruptedFieldRecovery.sampledContraction0": "4f2584ab8311bedd1c9927187a5cda76cac38ba8bac6bc83b5b45652e403f8f1",
+      "CorruptedFieldRecovery.sampledContraction1": "6864d044c0d8678016cfb79ccd834c36b1d6bbc4723b48b1b809a954e2ad23bb",
+      "CorruptedFieldRecovery.sampledContraction2": "8decb197cb13d87520db899934ce455aef0e1b42b22f3e5a1a526e0510043dc1",
+      "CorruptedFieldRecovery.sampledContraction4": "2078cffdbee5baa53947fac1d1e7d9e92e955ac5fdcf2dcc2a4042e6a2b7d993",
+      "CorruptedFieldRecovery.sampledFourBalanced": "6854463c90da2ad1602f3a5f74c21ebf2e3d46cedb03bb340dfc295ef08277b5",
+      "CorruptedFieldRecovery.sampledContraction0_eq_coordinate": "15187d33d2f0674213d1adabfca84b12216d7aed923d8fb5c2f927306b4be4d8",
+      "CorruptedFieldRecovery.sampledContraction1_eq_coordinate": "91bfb9ecda96fb80bd056f307e030cbd0bf86c6f73e8737fbd671124e66459dc",
+      "CorruptedFieldRecovery.sampledContraction2_eq_coordinate": "098e2243809a89e9e53b25eb5f2c240ab1cd3461f932acec83962a5c125c337e",
+      "CorruptedFieldRecovery.sampledContraction4_eq_coordinate": "10fa2074f8f7276223a1c6921ea417389eb45007077198118484a169d8a9f1c5",
+      "CorruptedFieldRecovery.sampled_four_contractions_iff_via": "a9235164d4f525ef1b4e0e5056702c424d1cec64d120e4d31be5114326cd5094",
+      "CorruptedFieldRecovery.scalarTripleEndRange_mem_iff": "aaa84d107522ff479fdb3af87c6c7a7db0a4f736cfeaf921a101a53e20d09203",
+      "CorruptedFieldRecovery.sampled_four_contractions_identification_and_finrank": "4240ed7bf6f1d7d93830da2b601c833dd2a6b6d18713572cba9ab8e51ffed57a",
+      "CorruptedFieldRecovery.sampled_four_contractions_balance_finrank_eq_s": "691cbb8762f854255ed286eac6b34b855f83063d6fdcb464e77f6ff6fda1253d"
+    }
+  },
+  "finished_utc": "2026-10-29T04:04:54.170591+00:00",
+  "log_sha256": {
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "a088b3c4923777599d4819a110e702fbb952c45959eab0577a3851b571f51f38",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "aaa0864094127b3915b06523e6eaa15faaa2e29e4e5f4f77f3532fa202c2194d",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "65d061e6e40b7f7044f6bf2eec711ca1eab687326f2e9f5c1306177db7739062",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55"
+  }
+}

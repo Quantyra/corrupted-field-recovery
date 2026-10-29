@@ -146,28 +146,37 @@ theorem supportedInnerLift_mkQ
   exact LinearMap.liftQ₂_mk
     (supportedSecondKernel E N h₂ x) (supportedThirdKernel E N h₃ x) y z
 
-/- The actual quotient lift applies `liftQ` to the first slot after `liftQ₂` on the inner slots. -/
-set_option maxHeartbeats 3200000 in
+theorem supportedInnerLift_firstKernel
+    (E : Trilinear (ZMod 2) (BinaryVector n))
+    (N : Submodule (ZMod 2) (BinaryVector n))
+    (h₁ : ∀ x y z, x ∈ N → E x y z = 0)
+    (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
+    (h₃ : ∀ x y z, z ∈ N → E x y z = 0) :
+    N ≤ LinearMap.ker (supportedInnerLift E N h₂ h₃) := by
+  intro x hx
+  apply LinearMap.ext
+  intro q
+  apply LinearMap.ext
+  intro r
+  obtain ⟨q', rfl⟩ := Submodule.mkQ_surjective N q
+  obtain ⟨r', rfl⟩ := Submodule.mkQ_surjective N r
+  change supportedInnerLift E N h₂ h₃ x (N.mkQ q') (N.mkQ r') = 0
+  rw [supportedInnerLift_mkQ]
+  exact h₁ x q' r' hx
+
+/- Lift the first slot, after `supportedInnerLift` has lifted the other two. -/
 noncomputable def supportedQuotientLift
     (E : Trilinear (ZMod 2) (BinaryVector n))
     (N : Submodule (ZMod 2) (BinaryVector n))
     (h₁ : ∀ x y z, x ∈ N → E x y z = 0)
     (h₂ : ∀ x y z, y ∈ N → E x y z = 0)
     (h₃ : ∀ x y z, z ∈ N → E x y z = 0) :
-    Trilinear (ZMod 2) (BinaryVector n ⧸ N) := by
-  let G := supportedInnerLift E N h₂ h₃
-  have houter : N ≤ LinearMap.ker G := by
-    intro x hx
-    apply LinearMap.ext
-    intro q
-    apply LinearMap.ext
-    intro r
-    obtain ⟨q', rfl⟩ := Submodule.mkQ_surjective N q
-    obtain ⟨r', rfl⟩ := Submodule.mkQ_surjective N r
-    change supportedInnerLift E N h₂ h₃ x (N.mkQ q') (N.mkQ r') = 0
-    rw [supportedInnerLift_mkQ]
-    exact h₁ x q' r' hx
-  exact N.liftQ G houter
+    (BinaryVector n ⧸ N) →ₗ[ZMod 2]
+      BinaryVector n ⧸ N →ₗ[ZMod 2] BinaryVector n ⧸ N →ₗ[ZMod 2] ZMod 2 := by
+  let G : BinaryVector n →ₗ[ZMod 2]
+      (BinaryVector n ⧸ N →ₗ[ZMod 2] BinaryVector n ⧸ N →ₗ[ZMod 2] ZMod 2) :=
+    supportedInnerLift E N h₂ h₃
+  exact N.liftQ G (supportedInnerLift_firstKernel E N h₁ h₂ h₃)
 
 @[simp]
 theorem supportedQuotientLift_mkQ
@@ -178,8 +187,7 @@ theorem supportedQuotientLift_mkQ
     (h₃ : ∀ x y z, z ∈ N → E x y z = 0)
     (x y z : BinaryVector n) :
     supportedQuotientLift E N h₁ h₂ h₃ (N.mkQ x) (N.mkQ y) (N.mkQ z) = E x y z := by
-  change supportedInnerLift E N h₂ h₃ x (N.mkQ y) (N.mkQ z) = E x y z
-  exact supportedInnerLift_mkQ E N h₂ h₃ x y z
+  rw [supportedQuotientLift, Submodule.liftQ_apply, supportedInnerLift_mkQ]
 
 /-- Every common-support bound yields a genuine factorization through `V/U⊥` in all slots. -/
 theorem exists_supported_quotient_factorization

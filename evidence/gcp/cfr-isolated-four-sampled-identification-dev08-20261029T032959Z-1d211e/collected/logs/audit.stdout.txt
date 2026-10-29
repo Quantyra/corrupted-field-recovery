@@ -1,0 +1,806 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.tracePairing_nondegenerate
+CorruptedFieldRecovery.tracePairing_nondegenerate.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (scale : K)
+  (hscale : Ne.{u_1 + 1} scale 0) (x : K) (hx : Ne.{u_1 + 1} x 0),
+  ∃ y,
+    Ne.{1}
+      ((Algebra.trace.{0, u_1} (ZMod (ringChar.{u_1} K)) K)
+        (HMul.hMul.{u_1, u_1, u_1} (HMul.hMul.{u_1, u_1, u_1} scale x) y))
+      0
+CFR_TYPE_END:CorruptedFieldRecovery.tracePairing_nondegenerate
+'CorruptedFieldRecovery.tracePairing_nondegenerate' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldDet3
+@CorruptedFieldRecovery.fieldDet3.{u_1} : {K : Type u_1} →
+  [inst : CommRing.{u_1} K] → (x y z : CorruptedFieldRecovery.FieldTriple.{u_1} K) → K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldDet3
+'CorruptedFieldRecovery.fieldDet3' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldBasis0
+@CorruptedFieldRecovery.fieldBasis0.{u_1} : {K : Type u_1} →
+  [inst : Zero.{u_1} K] → [inst : One.{u_1} K] → CorruptedFieldRecovery.FieldTriple.{u_1} K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldBasis0
+'CorruptedFieldRecovery.fieldBasis0' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldBasis1
+@CorruptedFieldRecovery.fieldBasis1.{u_1} : {K : Type u_1} →
+  [inst : Zero.{u_1} K] → [inst : One.{u_1} K] → CorruptedFieldRecovery.FieldTriple.{u_1} K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldBasis1
+'CorruptedFieldRecovery.fieldBasis1' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldBasis2
+@CorruptedFieldRecovery.fieldBasis2.{u_1} : {K : Type u_1} →
+  [inst : Zero.{u_1} K] → [inst : One.{u_1} K] → CorruptedFieldRecovery.FieldTriple.{u_1} K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldBasis2
+'CorruptedFieldRecovery.fieldBasis2' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldContraction0
+CorruptedFieldRecovery.fieldContraction0.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c : K) → (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldContraction0
+'CorruptedFieldRecovery.fieldContraction0' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldContraction1
+CorruptedFieldRecovery.fieldContraction1.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c : K) → (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldContraction1
+'CorruptedFieldRecovery.fieldContraction1' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldContraction2
+CorruptedFieldRecovery.fieldContraction2.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c : K) → (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldContraction2
+'CorruptedFieldRecovery.fieldContraction2' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldContraction4
+CorruptedFieldRecovery.fieldContraction4.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c a b d : K) → (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldContraction4
+'CorruptedFieldRecovery.fieldContraction4' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldScalarTriple
+@CorruptedFieldRecovery.fieldScalarTriple.{u_1} : {K : Type u_1} →
+  [inst : Semiring.{u_1} K] →
+    (k : K) → (x : CorruptedFieldRecovery.FieldTriple.{u_1} K) → CorruptedFieldRecovery.FieldTriple.{u_1} K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldScalarTriple
+'CorruptedFieldRecovery.fieldScalarTriple' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldScalarTriple_eq_smul
+@CorruptedFieldRecovery.fieldScalarTriple_eq_smul.{u_1} : ∀ {K : Type u_1} [inst : Semiring.{u_1} K] (k : K)
+  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{u_1 + 1} (CorruptedFieldRecovery.fieldScalarTriple.{u_1} k x) (HSMul.hSMul.{u_1, u_1, u_1} k x)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldScalarTriple_eq_smul
+'CorruptedFieldRecovery.fieldScalarTriple_eq_smul' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldDet3_smul_left
+@CorruptedFieldRecovery.fieldDet3_smul_left.{u_1} : ∀ {K : Type u_1} [inst : CommRing.{u_1} K] (k : K)
+  (x y z : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{u_1 + 1} (CorruptedFieldRecovery.fieldDet3.{u_1} (HSMul.hSMul.{u_1, u_1, u_1} k x) y z)
+    (HMul.hMul.{u_1, u_1, u_1} k (CorruptedFieldRecovery.fieldDet3.{u_1} x y z))
+CFR_TYPE_END:CorruptedFieldRecovery.fieldDet3_smul_left
+'CorruptedFieldRecovery.fieldDet3_smul_left' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldDet3_smul_right
+@CorruptedFieldRecovery.fieldDet3_smul_right.{u_1} : ∀ {K : Type u_1} [inst : CommRing.{u_1} K] (k : K)
+  (x y z : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{u_1 + 1} (CorruptedFieldRecovery.fieldDet3.{u_1} x (HSMul.hSMul.{u_1, u_1, u_1} k y) z)
+    (HMul.hMul.{u_1, u_1, u_1} k (CorruptedFieldRecovery.fieldDet3.{u_1} x y z))
+CFR_TYPE_END:CorruptedFieldRecovery.fieldDet3_smul_right
+'CorruptedFieldRecovery.fieldDet3_smul_right' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldContraction0_radical
+CorruptedFieldRecovery.fieldContraction0_radical.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Iff
+    (∀ (y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction0.{u_1} K c x y) 0)
+    (And (Eq.{u_1 + 1} x.2.1 0) (Eq.{u_1 + 1} x.2.2 0))
+CFR_TYPE_END:CorruptedFieldRecovery.fieldContraction0_radical
+'CorruptedFieldRecovery.fieldContraction0_radical' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldContraction1_radical
+CorruptedFieldRecovery.fieldContraction1_radical.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Iff
+    (∀ (y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction1.{u_1} K c x y) 0)
+    (And (Eq.{u_1 + 1} x.1 0) (Eq.{u_1 + 1} x.2.2 0))
+CFR_TYPE_END:CorruptedFieldRecovery.fieldContraction1_radical
+'CorruptedFieldRecovery.fieldContraction1_radical' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldContraction2_radical
+CorruptedFieldRecovery.fieldContraction2_radical.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Iff
+    (∀ (y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction2.{u_1} K c x y) 0)
+    (And (Eq.{u_1 + 1} x.1 0) (Eq.{u_1 + 1} x.2.1 0))
+CFR_TYPE_END:CorruptedFieldRecovery.fieldContraction2_radical
+'CorruptedFieldRecovery.fieldContraction2_radical' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanced_first_three_preserves_axes
+CorruptedFieldRecovery.balanced_first_three_preserves_axes.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (T :
+    LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (h0 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction0.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction0.{u_1} K c x (T y)))
+  (h1 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction1.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction1.{u_1} K c x (T y)))
+  (h2 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction2.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction2.{u_1} K c x (T y))),
+  And
+    (∀ (t : K),
+      And (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} t (Prod.mk.{u_1, u_1} 0 0))).2.1 0)
+        (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} t (Prod.mk.{u_1, u_1} 0 0))).2.2 0))
+    (And
+      (∀ (t : K),
+        And (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} 0 (Prod.mk.{u_1, u_1} t 0))).1 0)
+          (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} 0 (Prod.mk.{u_1, u_1} t 0))).2.2 0))
+      (∀ (t : K),
+        And (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} 0 (Prod.mk.{u_1, u_1} 0 t))).1 0)
+          (Eq.{u_1 + 1} (T (Prod.mk.{u_1, u_1} 0 (Prod.mk.{u_1, u_1} 0 t))).2.1 0)))
+CFR_TYPE_END:CorruptedFieldRecovery.balanced_first_three_preserves_axes
+'CorruptedFieldRecovery.balanced_first_three_preserves_axes' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldAxis0
+CorruptedFieldRecovery.fieldAxis0.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) K (CorruptedFieldRecovery.FieldTriple.{u_2} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldAxis0
+'CorruptedFieldRecovery.fieldAxis0' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldAxis1
+CorruptedFieldRecovery.fieldAxis1.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) K (CorruptedFieldRecovery.FieldTriple.{u_2} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldAxis1
+'CorruptedFieldRecovery.fieldAxis1' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldAxis2
+CorruptedFieldRecovery.fieldAxis2.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) K (CorruptedFieldRecovery.FieldTriple.{u_2} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldAxis2
+'CorruptedFieldRecovery.fieldAxis2' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldCoordinate0
+CorruptedFieldRecovery.fieldCoordinate0.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) (CorruptedFieldRecovery.FieldTriple.{u_2} K) K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldCoordinate0
+'CorruptedFieldRecovery.fieldCoordinate0' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldCoordinate1
+CorruptedFieldRecovery.fieldCoordinate1.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) (CorruptedFieldRecovery.FieldTriple.{u_2} K) K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldCoordinate1
+'CorruptedFieldRecovery.fieldCoordinate1' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldCoordinate2
+CorruptedFieldRecovery.fieldCoordinate2.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) (CorruptedFieldRecovery.FieldTriple.{u_2} K) K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldCoordinate2
+'CorruptedFieldRecovery.fieldCoordinate2' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldBlock0
+CorruptedFieldRecovery.fieldBlock0.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          (T :
+              LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) (CorruptedFieldRecovery.FieldTriple.{u_2} K)
+                (CorruptedFieldRecovery.FieldTriple.{u_2} K)) →
+            LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) K K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldBlock0
+'CorruptedFieldRecovery.fieldBlock0' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldBlock1
+CorruptedFieldRecovery.fieldBlock1.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          (T :
+              LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) (CorruptedFieldRecovery.FieldTriple.{u_2} K)
+                (CorruptedFieldRecovery.FieldTriple.{u_2} K)) →
+            LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) K K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldBlock1
+'CorruptedFieldRecovery.fieldBlock1' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldBlock2
+CorruptedFieldRecovery.fieldBlock2.{u_1,
+  u_2} : (F : Type u_1) →
+  (K : Type u_2) →
+    [inst : CommSemiring.{u_1} F] →
+      [inst_1 : Field.{u_2} K] →
+        [inst_2 : Algebra.{u_1, u_2} F K] →
+          (T :
+              LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) (CorruptedFieldRecovery.FieldTriple.{u_2} K)
+                (CorruptedFieldRecovery.FieldTriple.{u_2} K)) →
+            LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) K K
+CFR_TYPE_END:CorruptedFieldRecovery.fieldBlock2
+'CorruptedFieldRecovery.fieldBlock2' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanced_first_three_block_form
+CorruptedFieldRecovery.balanced_first_three_block_form.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (T :
+    LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (h0 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction0.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction0.{u_1} K c x (T y)))
+  (h1 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction1.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction1.{u_1} K c x (T y)))
+  (h2 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction2.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction2.{u_1} K c x (T y)))
+  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{u_1 + 1} (T x)
+    (Prod.mk.{u_1, u_1} ((CorruptedFieldRecovery.fieldBlock0.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) x.1)
+      (Prod.mk.{u_1, u_1} ((CorruptedFieldRecovery.fieldBlock1.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) x.2.1)
+        ((CorruptedFieldRecovery.fieldBlock2.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) x.2.2)))
+CFR_TYPE_END:CorruptedFieldRecovery.balanced_first_three_block_form
+'CorruptedFieldRecovery.balanced_first_three_block_form' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldTracePair
+CorruptedFieldRecovery.fieldTracePair.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] → (c x y : K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldTracePair
+'CorruptedFieldRecovery.fieldTracePair' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanced_first_three_pair_relations
+CorruptedFieldRecovery.balanced_first_three_pair_relations.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (T :
+    LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (h0 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction0.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction0.{u_1} K c x (T y)))
+  (h1 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction1.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction1.{u_1} K c x (T y)))
+  (h2 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction2.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction2.{u_1} K c x (T y))),
+  And
+    (∀ (u v : K),
+      Eq.{1}
+        (CorruptedFieldRecovery.fieldTracePair.{u_1} K c
+          ((CorruptedFieldRecovery.fieldBlock1.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) u) v)
+        (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u
+          ((CorruptedFieldRecovery.fieldBlock2.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) v)))
+    (And
+      (∀ (u v : K),
+        Eq.{1}
+          (CorruptedFieldRecovery.fieldTracePair.{u_1} K c
+            ((CorruptedFieldRecovery.fieldBlock2.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) u) v)
+          (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u
+            ((CorruptedFieldRecovery.fieldBlock0.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) v)))
+      (∀ (u v : K),
+        Eq.{1}
+          (CorruptedFieldRecovery.fieldTracePair.{u_1} K c
+            ((CorruptedFieldRecovery.fieldBlock0.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) u) v)
+          (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u
+            ((CorruptedFieldRecovery.fieldBlock1.{0, u_1} (ZMod (ringChar.{u_1} K)) K T) v))))
+CFR_TYPE_END:CorruptedFieldRecovery.balanced_first_three_pair_relations
+'CorruptedFieldRecovery.balanced_first_three_pair_relations' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldTracePair_right_injective
+CorruptedFieldRecovery.fieldTracePair_right_injective.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  {x y : K}
+  (h :
+    ∀ (z : K),
+      Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c z x)
+        (CorruptedFieldRecovery.fieldTracePair.{u_1} K c z y)),
+  Eq.{u_1 + 1} x y
+CFR_TYPE_END:CorruptedFieldRecovery.fieldTracePair_right_injective
+'CorruptedFieldRecovery.fieldTracePair_right_injective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.three_pair_relations_common_selfadjoint
+CorruptedFieldRecovery.three_pair_relations_common_selfadjoint.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (A0 A1 A2 : LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) K K)
+  (h12 :
+    ∀ (u v : K),
+      Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c (A1 u) v)
+        (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u (A2 v)))
+  (h23 :
+    ∀ (u v : K),
+      Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c (A2 u) v)
+        (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u (A0 v)))
+  (h01 :
+    ∀ (u v : K),
+      Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c (A0 u) v)
+        (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u (A1 v))),
+  ∃ A,
+    And (Eq.{u_1 + 1} A0 A)
+      (And (Eq.{u_1 + 1} A1 A)
+        (And (Eq.{u_1 + 1} A2 A)
+          (∀ (u v : K),
+            Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c (A u) v)
+              (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u (A v)))))
+CFR_TYPE_END:CorruptedFieldRecovery.three_pair_relations_common_selfadjoint
+'CorruptedFieldRecovery.three_pair_relations_common_selfadjoint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.first_three_common_block
+CorruptedFieldRecovery.first_three_common_block.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (T :
+    LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (h0 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction0.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction0.{u_1} K c x (T y)))
+  (h1 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction1.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction1.{u_1} K c x (T y)))
+  (h2 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction2.{u_1} K c (T x) y)
+        (CorruptedFieldRecovery.fieldContraction2.{u_1} K c x (T y))),
+  ∃ A,
+    And
+      (∀ (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+        Eq.{u_1 + 1} (T x) (Prod.mk.{u_1, u_1} (A x.1) (Prod.mk.{u_1, u_1} (A x.2.1) (A x.2.2))))
+      (∀ (u v : K),
+        Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c (A u) v)
+          (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u (A v)))
+CFR_TYPE_END:CorruptedFieldRecovery.first_three_common_block
+'CorruptedFieldRecovery.first_three_common_block' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fourth_balance_weighted_pairs
+CorruptedFieldRecovery.fourth_balance_weighted_pairs.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c a b d : K)
+  (A : LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) K K)
+  (T :
+    LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (hform :
+    ∀ (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{u_1 + 1} (T x) (Prod.mk.{u_1, u_1} (A x.1) (Prod.mk.{u_1, u_1} (A x.2.1) (A x.2.2))))
+  (h4 :
+    ∀ (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+      Eq.{1} (CorruptedFieldRecovery.fieldContraction4.{u_1} K c a b d (T x) y)
+        (CorruptedFieldRecovery.fieldContraction4.{u_1} K c a b d x (T y))),
+  And
+    (∀ (u v : K),
+      Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c (A u) (HMul.hMul.{u_1, u_1, u_1} a v))
+        (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u (HMul.hMul.{u_1, u_1, u_1} a (A v))))
+    (And
+      (∀ (u v : K),
+        Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c (A u) (HMul.hMul.{u_1, u_1, u_1} b v))
+          (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u (HMul.hMul.{u_1, u_1, u_1} b (A v))))
+      (∀ (u v : K),
+        Eq.{1} (CorruptedFieldRecovery.fieldTracePair.{u_1} K c (A u) (HMul.hMul.{u_1, u_1, u_1} d v))
+          (CorruptedFieldRecovery.fieldTracePair.{u_1} K c u (HMul.hMul.{u_1, u_1, u_1} d (A v)))))
+CFR_TYPE_END:CorruptedFieldRecovery.fourth_balance_weighted_pairs
+'CorruptedFieldRecovery.fourth_balance_weighted_pairs' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldFourBalanced
+CorruptedFieldRecovery.fieldFourBalanced.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c a b d : K) →
+          (T :
+              LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K)))
+                (CorruptedFieldRecovery.FieldTriple.{u_1} K) (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+            Prop
+CFR_TYPE_END:CorruptedFieldRecovery.fieldFourBalanced
+'CorruptedFieldRecovery.fieldFourBalanced' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.standard_four_contractions_iff_scalar
+CorruptedFieldRecovery.standard_four_contractions_iff_scalar.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c a b d : K)
+  (hc : Ne.{u_1 + 1} c 0)
+  (hgen :
+    Or (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[a] Top.top.{u_1})
+      (Or (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[b] Top.top.{u_1})
+        (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[d] Top.top.{u_1})))
+  (T :
+    LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  Iff (CorruptedFieldRecovery.fieldFourBalanced.{u_1} K c a b d T)
+    (∃ k,
+      ∀ (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+        Eq.{u_1 + 1} (T x) (CorruptedFieldRecovery.fieldScalarTriple.{u_1} k x))
+CFR_TYPE_END:CorruptedFieldRecovery.standard_four_contractions_iff_scalar
+'CorruptedFieldRecovery.standard_four_contractions_iff_scalar' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator
+CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator.{u_1,
+  u_2} : ∀ (F : Type u_1) (K : Type u_2) [inst : CommRing.{u_1} F] [inst_1 : Field.{u_2} K]
+  [inst_2 : Algebra.{u_1, u_2} F K] (A : LinearMap.{u_1, u_1, u_2, u_2} (RingHom.id.{u_1} F) K K) (α : K)
+  (hgen : Eq.{u_2 + 1} F[α] Top.top.{u_2})
+  (hcomm : ∀ (x : K), Eq.{u_2 + 1} (A (HMul.hMul.{u_2, u_2, u_2} α x)) (HMul.hMul.{u_2, u_2, u_2} α (A x))) (x : K),
+  Eq.{u_2 + 1} (A x) (HMul.hMul.{u_2, u_2, u_2} (A 1) x)
+CFR_TYPE_END:CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator
+'CorruptedFieldRecovery.linearMap_scalar_of_commutes_generator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.FieldTriple
+CorruptedFieldRecovery.FieldTriple.{u_1} : (K : Type u_1) → Type u_1
+CFR_TYPE_END:CorruptedFieldRecovery.FieldTriple
+'CorruptedFieldRecovery.FieldTriple' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fourContractionsBalancedVia
+CorruptedFieldRecovery.fourContractionsBalancedVia.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (q :
+            LinearEquiv.{u_1, u_1, u_1, u_1} (RingHom.id.{u_1} K) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+              (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+          (c a b d : K) →
+            (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.fourContractionsBalancedVia
+'CorruptedFieldRecovery.fourContractionsBalancedVia' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.four_contractions_via_iff_scalar
+CorruptedFieldRecovery.four_contractions_via_iff_scalar.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]
+  (q :
+    LinearEquiv.{u_1, u_1, u_1, u_1} (RingHom.id.{u_1} K) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+      (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (c a b d : K) (hc : Ne.{u_1 + 1} c 0)
+  (hgen :
+    Or (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[a] Top.top.{u_1})
+      (Or (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[b] Top.top.{u_1})
+        (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[d] Top.top.{u_1})))
+  (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  Iff (CorruptedFieldRecovery.fourContractionsBalancedVia.{u_1} K q c a b d T)
+    (∃ k, ∀ (x : CorruptedFieldRecovery.FieldTriple.{u_1} K), Eq.{u_1 + 1} (T x) (HSMul.hSMul.{u_1, u_1, u_1} k x))
+CFR_TYPE_END:CorruptedFieldRecovery.four_contractions_via_iff_scalar
+'CorruptedFieldRecovery.four_contractions_via_iff_scalar' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.has
+checks/CaptureAudit.lean:211:8: error(lean.unknownIdentifier): Unknown identifier `CorruptedFieldRecovery.has`
+CFR_TYPE_END:CorruptedFieldRecovery.has
+checks/CaptureAudit.lean:213:14: error(lean.unknownIdentifier): Unknown constant `CorruptedFieldRecovery.has`
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.scalarTripleEndLinearMap
+CorruptedFieldRecovery.scalarTripleEndLinearMap.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+      LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K))) K
+        (Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+CFR_TYPE_END:CorruptedFieldRecovery.scalarTripleEndLinearMap
+'CorruptedFieldRecovery.scalarTripleEndLinearMap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.scalarTripleEndRange
+CorruptedFieldRecovery.scalarTripleEndRange.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+      Submodule.{0, u_1} (ZMod (ringChar.{u_1} K))
+        (Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+CFR_TYPE_END:CorruptedFieldRecovery.scalarTripleEndRange
+'CorruptedFieldRecovery.scalarTripleEndRange' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.scalarTripleEndLinearMap_injective
+CorruptedFieldRecovery.scalarTripleEndLinearMap_injective.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K],
+  Function.Injective.{u_1 + 1, u_1 + 1} ⇑(CorruptedFieldRecovery.scalarTripleEndLinearMap.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.scalarTripleEndLinearMap_injective
+'CorruptedFieldRecovery.scalarTripleEndLinearMap_injective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.scalarTripleEndRange_finrank
+CorruptedFieldRecovery.scalarTripleEndRange_finrank.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K],
+  Eq.{1} (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) ↥(CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K))
+    (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) K)
+CFR_TYPE_END:CorruptedFieldRecovery.scalarTripleEndRange_finrank
+'CorruptedFieldRecovery.scalarTripleEndRange_finrank' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.standard_four_balance_iff_mem_scalarTripleEndRange
+CorruptedFieldRecovery.standard_four_balance_iff_mem_scalarTripleEndRange.{u_1} : ∀ (K : Type u_1)
+  [inst : Field.{u_1} K] [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]
+  (c a b d : K) (hc : Ne.{u_1 + 1} c 0)
+  (hgen :
+    Or (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[a] Top.top.{u_1})
+      (Or (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[b] Top.top.{u_1})
+        (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[d] Top.top.{u_1})))
+  (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  Iff (CorruptedFieldRecovery.fieldFourBalanced.{u_1} K c a b d T)
+    (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K) T)
+CFR_TYPE_END:CorruptedFieldRecovery.standard_four_balance_iff_mem_scalarTripleEndRange
+'CorruptedFieldRecovery.standard_four_balance_iff_mem_scalarTripleEndRange' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.standard_four_contractions_balance_finrank
+CorruptedFieldRecovery.standard_four_contractions_balance_finrank.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c a b d : K)
+  (hc : Ne.{u_1 + 1} c 0)
+  (hgen :
+    Or (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[a] Top.top.{u_1})
+      (Or (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[b] Top.top.{u_1})
+        (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[d] Top.top.{u_1}))),
+  And
+    (∀ (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+      Iff (CorruptedFieldRecovery.fieldFourBalanced.{u_1} K c a b d T)
+        (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K) T))
+    (Eq.{1} (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) ↥(CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K))
+      (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) K))
+CFR_TYPE_END:CorruptedFieldRecovery.standard_four_contractions_balance_finrank
+'CorruptedFieldRecovery.standard_four_contractions_balance_finrank' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldTripleEquivPi
+CorruptedFieldRecovery.fieldTripleEquivPi.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    LinearEquiv.{u_1, u_1, u_1, u_1} (RingHom.id.{u_1} K) (CorruptedFieldRecovery.FieldTriple.{u_1} K) ((a : Fin 3) → K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldTripleEquivPi
+'CorruptedFieldRecovery.fieldTripleEquivPi' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldTripleStandardBasis
+CorruptedFieldRecovery.fieldTripleStandardBasis.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] → Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldTripleStandardBasis
+'CorruptedFieldRecovery.fieldTripleStandardBasis' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledBasisCoordinateEquiv
+CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+      LinearEquiv.{u_1, u_1, u_1, u_1} (RingHom.id.{u_1} K) (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+        (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.sampledBasisCoordinateEquiv
+'CorruptedFieldRecovery.sampledBasisCoordinateEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledBasisDeterminant
+CorruptedFieldRecovery.sampledBasisDeterminant.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] → (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)) → K
+CFR_TYPE_END:CorruptedFieldRecovery.sampledBasisDeterminant
+'CorruptedFieldRecovery.sampledBasisDeterminant' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledBasisDeterminant_ne_zero
+CorruptedFieldRecovery.sampledBasisDeterminant_ne_zero.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  Ne.{u_1 + 1} (CorruptedFieldRecovery.sampledBasisDeterminant.{u_1} K b) 0
+CFR_TYPE_END:CorruptedFieldRecovery.sampledBasisDeterminant_ne_zero
+'CorruptedFieldRecovery.sampledBasisDeterminant_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldDet3_eq_standardBasis_det
+CorruptedFieldRecovery.fieldDet3_eq_standardBasis_det.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  (x y z : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{u_1 + 1} (CorruptedFieldRecovery.fieldDet3.{u_1} x y z)
+    ((Module.Basis.det.{u_1, u_1, 0} (CorruptedFieldRecovery.fieldTripleStandardBasis.{u_1} K))
+      (Matrix.vecCons.{u_1} x (Matrix.vecCons.{u_1} y (Matrix.vecCons.{u_1} z Matrix.vecEmpty.{u_1}))))
+CFR_TYPE_END:CorruptedFieldRecovery.fieldDet3_eq_standardBasis_det
+'CorruptedFieldRecovery.fieldDet3_eq_standardBasis_det' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldDet3_sampledBasis_change
+CorruptedFieldRecovery.fieldDet3_sampledBasis_change.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (x y z : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{u_1 + 1} (CorruptedFieldRecovery.fieldDet3.{u_1} x y z)
+    (HMul.hMul.{u_1, u_1, u_1} (CorruptedFieldRecovery.sampledBasisDeterminant.{u_1} K b)
+      (CorruptedFieldRecovery.fieldDet3.{u_1} ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K b) x)
+        ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K b) y)
+        ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K b) z)))
+CFR_TYPE_END:CorruptedFieldRecovery.fieldDet3_sampledBasis_change
+'CorruptedFieldRecovery.fieldDet3_sampledBasis_change' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledContraction0
+CorruptedFieldRecovery.sampledContraction0.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c : K) →
+          (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+            (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.sampledContraction0
+'CorruptedFieldRecovery.sampledContraction0' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledContraction1
+CorruptedFieldRecovery.sampledContraction1.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c : K) →
+          (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+            (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.sampledContraction1
+'CorruptedFieldRecovery.sampledContraction1' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledContraction2
+CorruptedFieldRecovery.sampledContraction2.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c : K) →
+          (b : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+            (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.sampledContraction2
+'CorruptedFieldRecovery.sampledContraction2' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledContraction4
+CorruptedFieldRecovery.sampledContraction4.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c : K) → (v x y : CorruptedFieldRecovery.FieldTriple.{u_1} K) → ZMod (ringChar.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.sampledContraction4
+'CorruptedFieldRecovery.sampledContraction4' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledFourBalanced
+CorruptedFieldRecovery.sampledFourBalanced.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+        (c : K) →
+          (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+            (v : CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+              (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.sampledFourBalanced
+'CorruptedFieldRecovery.sampledFourBalanced' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledContraction0_eq_coordinate
+CorruptedFieldRecovery.sampledContraction0_eq_coordinate.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K)
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{1} (CorruptedFieldRecovery.sampledContraction0.{u_1} K c basis x y)
+    (CorruptedFieldRecovery.fieldContraction0.{u_1} K
+      (HMul.hMul.{u_1, u_1, u_1} c (CorruptedFieldRecovery.sampledBasisDeterminant.{u_1} K basis))
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) x)
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) y))
+CFR_TYPE_END:CorruptedFieldRecovery.sampledContraction0_eq_coordinate
+'CorruptedFieldRecovery.sampledContraction0_eq_coordinate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledContraction1_eq_coordinate
+CorruptedFieldRecovery.sampledContraction1_eq_coordinate.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K)
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{1} (CorruptedFieldRecovery.sampledContraction1.{u_1} K c basis x y)
+    (CorruptedFieldRecovery.fieldContraction1.{u_1} K
+      (HMul.hMul.{u_1, u_1, u_1} c (CorruptedFieldRecovery.sampledBasisDeterminant.{u_1} K basis))
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) x)
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) y))
+CFR_TYPE_END:CorruptedFieldRecovery.sampledContraction1_eq_coordinate
+'CorruptedFieldRecovery.sampledContraction1_eq_coordinate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledContraction2_eq_coordinate
+CorruptedFieldRecovery.sampledContraction2_eq_coordinate.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K)
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{1} (CorruptedFieldRecovery.sampledContraction2.{u_1} K c basis x y)
+    (CorruptedFieldRecovery.fieldContraction2.{u_1} K
+      (HMul.hMul.{u_1, u_1, u_1} c (CorruptedFieldRecovery.sampledBasisDeterminant.{u_1} K basis))
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) x)
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) y))
+CFR_TYPE_END:CorruptedFieldRecovery.sampledContraction2_eq_coordinate
+'CorruptedFieldRecovery.sampledContraction2_eq_coordinate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampledContraction4_eq_coordinate
+CorruptedFieldRecovery.sampledContraction4_eq_coordinate.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (c : K)
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (v x y : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{1} (CorruptedFieldRecovery.sampledContraction4.{u_1} K c v x y)
+    (CorruptedFieldRecovery.fieldContraction4.{u_1} K
+      (HMul.hMul.{u_1, u_1, u_1} c (CorruptedFieldRecovery.sampledBasisDeterminant.{u_1} K basis))
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).1
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.1
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.2
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) x)
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) y))
+CFR_TYPE_END:CorruptedFieldRecovery.sampledContraction4_eq_coordinate
+'CorruptedFieldRecovery.sampledContraction4_eq_coordinate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampled_four_contractions_iff_via
+CorruptedFieldRecovery.sampled_four_contractions_iff_via.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (v : CorruptedFieldRecovery.FieldTriple.{u_1} K) (c : K)
+  (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  Iff (CorruptedFieldRecovery.sampledFourBalanced.{u_1} K c basis v T)
+    (CorruptedFieldRecovery.fourContractionsBalancedVia.{u_1} K
+      (CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis)
+      (HMul.hMul.{u_1, u_1, u_1} c (CorruptedFieldRecovery.sampledBasisDeterminant.{u_1} K basis))
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).1
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.1
+      ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.2 T)
+CFR_TYPE_END:CorruptedFieldRecovery.sampled_four_contractions_iff_via
+'CorruptedFieldRecovery.sampled_four_contractions_iff_via' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.scalarTripleEndRange_mem_iff
+CorruptedFieldRecovery.scalarTripleEndRange_mem_iff.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]
+  (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+  Iff (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K) T)
+    (∃ k,
+      ∀ (x : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+        Eq.{u_1 + 1} (T x) (CorruptedFieldRecovery.fieldScalarTriple.{u_1} k x))
+CFR_TYPE_END:CorruptedFieldRecovery.scalarTripleEndRange_mem_iff
+'CorruptedFieldRecovery.scalarTripleEndRange_mem_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampled_four_contractions_identification_and_finrank
+CorruptedFieldRecovery.sampled_four_contractions_identification_and_finrank.{u_1} : ∀ (K : Type u_1)
+  [inst : Field.{u_1} K] [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (v : CorruptedFieldRecovery.FieldTriple.{u_1} K) (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (hgen :
+    Or
+      (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).1]
+        Top.top.{u_1})
+      (Or
+        (Eq.{u_1 + 1}
+          (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.1]
+          Top.top.{u_1})
+        (Eq.{u_1 + 1}
+          (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.2]
+          Top.top.{u_1}))),
+  And
+    (∀ (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+      Iff (CorruptedFieldRecovery.sampledFourBalanced.{u_1} K c basis v T)
+        (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K) T))
+    (Eq.{1} (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) ↥(CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K))
+      (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) K))
+CFR_TYPE_END:CorruptedFieldRecovery.sampled_four_contractions_identification_and_finrank
+'CorruptedFieldRecovery.sampled_four_contractions_identification_and_finrank' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.sampled_four_contractions_balance_finrank_eq_s
+CorruptedFieldRecovery.sampled_four_contractions_balance_finrank_eq_s.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Fintype.{u_1} K] [inst_3 : CharP.{u_1} K 2]
+  [inst_4 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]
+  (basis : Module.Basis.{0, u_1, u_1} (Fin 3) K (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (v : CorruptedFieldRecovery.FieldTriple.{u_1} K) (c : K) (hc : Ne.{u_1 + 1} c 0)
+  (hgen :
+    Or
+      (Eq.{u_1 + 1} (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).1]
+        Top.top.{u_1})
+      (Or
+        (Eq.{u_1 + 1}
+          (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.1]
+          Top.top.{u_1})
+        (Eq.{u_1 + 1}
+          (ZMod (ringChar.{u_1} K))[((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K basis) v).2.2]
+          Top.top.{u_1})))
+  (s : Nat) (hcard : Eq.{1} (Fintype.card.{u_1} K) (HPow.hPow.{0, 0, 0} 2 s)),
+  Eq.{1} (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) ↥(CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K)) s
+CFR_TYPE_END:CorruptedFieldRecovery.sampled_four_contractions_balance_finrank_eq_s
+'CorruptedFieldRecovery.sampled_four_contractions_balance_finrank_eq_s' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
