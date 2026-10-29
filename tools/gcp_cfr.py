@@ -302,7 +302,25 @@ def stop_owned(args):
     live = [p.parent for p in EVIDENCE.glob('*/launch-request.json')]
     for directory in live:
         if not (directory/'collected/exit-code').is_file():
-            raise RuntimeError('A launched CFR outcome is not collected: '+directory.name)
+            resolution = directory/'never-started-resolution.json'
+            if not resolution.is_file():
+                raise RuntimeError('A launched CFR outcome is not collected: '+directory.name)
+            resolved = json.loads(resolution.read_text())
+            manifest = directory/'capture-manifest.json'
+            if not (resolved.get('run') == directory.name and
+                    resolved.get('instance') == VM and
+                    resolved.get('capture_manifest_sha256') == hashlib.sha256(manifest.read_bytes()).hexdigest() and
+                    resolved.get('never_started') is True):
+                raise RuntimeError('Invalid never-started resolution: '+directory.name)
+            remote_run = '$HOME/quantyra-cfr-runs/'+directory.name
+            never_started_raw = ssh('set -eu\nrun="'+remote_run+'"\n'
+                'test -d "$run"\n'
+                'for marker in runner-pid launch.log started-utc exit-code current-stage logs terminal-receipt.json; do '
+                'test ! -e "$run/$marker"; done\n'
+                'if pgrep -af "[g]cp_cfr_runner.py|[q]uantyra-cfr-runs/.*/run.sh"; then exit 74; fi\n'
+                'sha256sum "$run/capture-manifest.json"\n', out, unique('never-started-recheck'))
+            if never_started_raw.decode().split()[0] != resolved['capture_manifest_sha256']:
+                raise RuntimeError('Remote resolved capture identity changed')
     label = unique('shutdown')
     remote = '$HOME/quantyra-cfr-runs/'+CAMPAIGN
     raw = ssh('set -eu\n'

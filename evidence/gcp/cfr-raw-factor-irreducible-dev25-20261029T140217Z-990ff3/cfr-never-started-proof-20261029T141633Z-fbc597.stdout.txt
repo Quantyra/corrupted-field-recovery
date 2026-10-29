@@ -1,0 +1,2 @@
+1494d50690f2aa6f848054d790b69aa1b8d81defa566020d1f8730ced6cf8216  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-raw-factor-irreducible-dev25-20261029T140217Z-990ff3/capture-manifest.json
+cf4fc3b621586e74dcd3ab19e62526bdd97710f0985f63628d47ef3bd844b893  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-raw-factor-irreducible-dev25-20261029T140217Z-990ff3/inputs.tar.gz

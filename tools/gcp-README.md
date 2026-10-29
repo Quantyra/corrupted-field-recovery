@@ -51,6 +51,15 @@ under `evidence/gcp/RUN`. A failed stage remains a failed result; absence of a
 terminal receipt is not success. Failed authentication cannot establish VM
 state or authorize a claim that a compiler ran.
 
+If a launch intent exists but recovered remote evidence shows that execution
+never started, preserve a `never-started-resolution.json` bound to the run,
+instance and capture-manifest SHA-256. This is an operational resolution, not
+a compiler outcome; never fabricate an exit code or relaunch that handle.
+Shutdown rechecks the remote manifest hash, absence of runner/output markers,
+and absence of runner processes before applying its ordinary compiler, lock,
+identity and cache guards. A run with any execution marker still requires
+terminal collection.
+
 The remote task owns `~/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a` as a
 persistent disk cache. It uses private dependency copies from the established
 Space pinned-source archive, verifies their Git revisions and clean tracked

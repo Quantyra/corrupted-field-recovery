@@ -1,0 +1,171 @@
+Thu Oct 29 14:15:49 UTC 2026
+total 116
+drwxrwxr-x   2 dfredriksen_quantyra_org dfredriksen_quantyra_org  4096 Oct 29 14:06 .
+drwxrwxr-x 146 dfredriksen_quantyra_org dfredriksen_quantyra_org 20480 Oct 29 14:05 ..
+-rw-rw-r--   1 dfredriksen_quantyra_org dfredriksen_quantyra_org   206 Oct 29 14:06 bootstrap-assets.json
+-rw-rw-r--   1 dfredriksen_quantyra_org dfredriksen_quantyra_org  9939 Oct 29 14:06 capture-manifest.json
+-rw-rw-r--   1 dfredriksen_quantyra_org dfredriksen_quantyra_org 15641 Oct 29 14:06 gcp_cfr_runner.py
+-rw-rw-r--   1 dfredriksen_quantyra_org dfredriksen_quantyra_org 49285 Oct 29 14:06 inputs.tar.gz
+-rw-rw-r--   1 dfredriksen_quantyra_org dfredriksen_quantyra_org   717 Oct 29 14:06 run.sh
+    PID    PPID ELAPSED COMMAND
+      1       0    6488 /sbin/init
+      2       0    6488 [kthreadd]
+      3       2    6487 [pool_workqueue_release]
+      4       2    6487 [kworker/R-rcu_gp]
+      5       2    6487 [kworker/R-sync_wq]
+      6       2    6487 [kworker/R-kvfree_rcu_reclaim]
+      7       2    6487 [kworker/R-slub_flushwq]
+      8       2    6487 [kworker/R-netns]
+     10       2    6487 [kworker/0:0H-kblockd]
+     13       2    6487 [kworker/R-mm_percpu_wq]
+     14       2    6487 [ksoftirqd/0]
+     15       2    6487 [pr/ttyS0]
+     16       2    6487 [rcu_sched]
+     17       2    6487 [rcu_exp_par_gp_kthread_worker/0]
+     18       2    6487 [rcu_exp_gp_kthread_worker]
+     19       2    6487 [migration/0]
+     20       2    6487 [kprobe-optimizer]
+     21       2    6487 [idle_inject/0]
+     22       2    6487 [cpuhp/0]
+     23       2    6487 [cpuhp/1]
+     24       2    6487 [idle_inject/1]
+     25       2    6487 [migration/1]
+     26       2    6487 [ksoftirqd/1]
+     28       2    6487 [kworker/1:0H-kblockd]
+     29       2    6487 [cpuhp/2]
+     30       2    6487 [idle_inject/2]
+     31       2    6487 [migration/2]
+     32       2    6487 [ksoftirqd/2]
+     34       2    6487 [kworker/2:0H-kblockd]
+     35       2    6487 [cpuhp/3]
+     36       2    6487 [idle_inject/3]
+     37       2    6487 [migration/3]
+     38       2    6487 [ksoftirqd/3]
+     40       2    6487 [kworker/3:0H-kblockd]
+     41       2    6487 [cpuhp/4]
+     42       2    6487 [idle_inject/4]
+     43       2    6487 [migration/4]
+     44       2    6487 [ksoftirqd/4]
+     46       2    6487 [kworker/4:0H-kblockd]
+     47       2    6487 [cpuhp/5]
+     48       2    6487 [idle_inject/5]
+     49       2    6487 [migration/5]
+     50       2    6487 [ksoftirqd/5]
+     52       2    6487 [kworker/5:0H-kblockd]
+     53       2    6487 [cpuhp/6]
+     54       2    6487 [idle_inject/6]
+     55       2    6487 [migration/6]
+     56       2    6487 [ksoftirqd/6]
+     58       2    6487 [kworker/6:0H-kblockd]
+     59       2    6487 [cpuhp/7]
+     60       2    6487 [idle_inject/7]
+     61       2    6487 [migration/7]
+     62       2    6487 [ksoftirqd/7]
+     64       2    6487 [kworker/7:0H-kblockd]
+     65       2    6487 [kdevtmpfs]
+     66       2    6487 [kworker/R-inet_frag_wq]
+     67       2    6487 [rcu_tasks_kthread]
+     68       2    6487 [rcu_tasks_rude_kthread]
+     69       2    6487 [kauditd]
+     70       2    6487 [khungtaskd]
+     71       2    6487 [oom_reaper]
+     73       2    6487 [kworker/R-writeback]
+     75       2    6487 [kcompactd0]
+     76       2    6487 [ksmd]
+     77       2    6487 [khugepaged]
+     78       2    6487 [kworker/R-kblockd]
+     79       2    6487 [kworker/R-blkcg_punt_bio]
+     80       2    6487 [kworker/R-kintegrityd]
+     81       2    6487 [irq/9-acpi]
+     85       2    6487 [kworker/R-tpm_dev_wq]
+     86       2    6487 [kworker/R-ata_sff]
+     87       2    6487 [kworker/R-md_bitmap]
+     88       2    6487 [kworker/R-md_llbitmap_io]
+     89       2    6487 [kworker/R-md_llbitmap_unplug]
+     90       2    6487 [kworker/R-edac-poller]
+     91       2    6487 [kworker/R-devfreq_wq]
+     92       2    6487 [watchdogd]
+     94       2    6487 [kworker/R-quota_events_unbound]
+     95       2    6487 [kswapd0]
+     96       2    6487 [ecryptfs-kthread]
+     97       2    6487 [kworker/R-kthrotld]
+     98       2    6487 [kworker/R-acpi_thermal_pm]
+     99       2    6487 [hwrng]
+    100       2    6487 [scsi_eh_0]
+    101       2    6487 [kworker/R-scsi_tmf_0]
+    102       2    6487 [kworker/R-nvme-wq]
+    103       2    6487 [kworker/R-nvme-reset-wq]
+    104       2    6487 [kworker/R-nvme-delete-wq]
+    105       2    6487 [kworker/R-nvme-auth-wq]
+    107       2    6487 [kworker/1:1-cgroup_free]
+    108       2    6487 [kworker/R-mld]
+    109       2    6487 [kworker/R-ipv6_addrconf]
+    110       2    6487 [kworker/R-kstrp]
+    114       2    6487 [kworker/u33:0]
+    126       2    6487 [kworker/R-charger_manager]
+    127       2    6487 [kworker/0:1H-kblockd]
+    128       2    6486 [jbd2/sda1-8]
+    129       2    6486 [kworker/R-ext4-rsv-conversion]
+    153       2    6486 [kworker/4:1H-kblockd]
+    167       1    6485 /usr/lib/systemd/systemd-journald
+    203       2    6485 [kworker/R-kmpathd]
+    204       2    6485 [kworker/7:1H-kblockd]
+    205       2    6485 [kworker/R-kmpath_handlerd]
+    234       1    6485 /sbin/multipathd -d -s
+    237       2    6485 [kworker/5:1H-kblockd]
+    238       2    6485 [kworker/1:1H-kblockd]
+    239       1    6485 /usr/lib/systemd/systemd-udevd
+    242       2    6485 [kworker/3:1H-kblockd]
+    252       2    6485 [kworker/6:1H-kblockd]
+    253       2    6485 [psimon]
+    364       2    6484 [jbd2/sda16-8]
+    365       2    6484 [kworker/R-ext4-rsv-conversion]
+    444       1    6484 /usr/lib/systemd/systemd-resolved
+    539       2    6482 [kworker/R-cfg80211]
+    582       1    6480 /usr/lib/systemd/systemd-networkd
+    596       2    6478 [kworker/2:1H-kblockd]
+    628       1    6478 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    632       1    6478 /usr/bin/google_osconfig_agent
+    640       1    6478 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    649       1    6478 /usr/lib/snapd/snapd
+    696       1    6478 /usr/sbin/rsyslogd -n -iNONE
+    740       1    6477 /usr/sbin/chronyd -F 1
+    742     740    6477 /usr/sbin/chronyd -F 1
+    755       1    6477 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+    861       1    6468 /usr/lib/polkit-1/polkitd --no-debug
+    876       1    6464 /usr/bin/google_guest_agent
+    878       1    6464 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+    885       1    6464 /sbin/agetty -o -p -- \u --noclear - linux
+   1020       1    6463 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+   1044       1    6463 /usr/lib/systemd/systemd-logind
+   1052       1    6463 /usr/sbin/cron -f -P
+   7668       2    4087 [kworker/R-tls-strp]
+  11524       2    2951 [kworker/4:3-mm_percpu_wq]
+  12003       2    2850 [kworker/6:2-events]
+  12447       2    2689 [kworker/3:1-cgroup_free]
+  12937       2    2510 [kworker/7:0-events]
+  13826       2    2199 [kworker/0:3-events]
+  14028       2    2147 [kworker/2:1-events]
+  14496       2    1952 [kworker/5:0-events]
+  14886       2    1803 [kworker/1:3-events]
+  15575       2    1633 [kworker/u32:3-events_unbound]
+  17255       2    1108 [kworker/2:2-cgroup_free]
+  17620       2    1032 [kworker/u32:2-events_power_efficient]
+  17791       2    1014 [kworker/4:0-cgroup_free]
+  18105       2     870 [kworker/6:0]
+  18522       2     776 [kworker/5:2-cgroup_release]
+  18590       2     712 [kworker/0:1-cgroup_free]
+  18884       2     516 [kworker/7:1-cgroup_release]
+  18893       2     502 [kworker/3:0-events]
+  18894       2     485 [kworker/u32:1-events_power_efficient]
+  18919       2      28 [kworker/2:0-cgroup_free]
+  18993       2      27 [kworker/0:0]
+  18999       2      17 [kworker/5:1-events]
+  19003    1020       1 sshd: dfredriksen_quantyra_org [priv]
+  19008       2       0 [psimon]
+  19010       1       0 /usr/lib/systemd/systemd --user
+  19011   19010       0 (sd-pam)
+  19066   19003       0 sshd: dfredriksen_quantyra_org@notty
+  19067   19066       0 bash -c echo ZGF0ZSAtdTsgbHMgLWxhIH4vcXVhbnR5cmEtY2ZyLXJ1bnMvY2ZyLXJhdy1mYWN0b3ItaXJyZWR1Y2libGUtZGV2MjUtMjAyNjEwMjlUMTQwMjE3Wi05OTBmZjM7IHBzIC1lbyBwaWQscHBpZCxldGltZXMsYXJnczs= | base64 -d | bash
+  19070   19067       0 bash
+  19073   19070       0 ps -eo pid,ppid,etimes,args
