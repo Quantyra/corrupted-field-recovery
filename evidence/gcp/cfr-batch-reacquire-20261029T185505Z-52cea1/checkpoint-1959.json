@@ -1,0 +1,94 @@
+{
+  "utc": "2026-10-29T19:59:30.292264+00:00",
+  "runs": [
+    {
+      "run": "cfr-actual-numeric-dev06-20261029T190420Z-f7885d",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-actual-numeric-dev09-20261029T191218Z-3d78a5",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-actual-numeric-dev11-20261029T191816Z-2ee3f0",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-actual-numeric-dev12-20261029T192641Z-00ea3c",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-actual-numeric-dev13-20261029T193321Z-7fbcc2",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-actual-numeric-dev15-20261029T193817Z-80b2e9",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-actual-numeric-dev17-20261029T194701Z-93890f",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-count-clean-dev08-20261029T190924Z-76829b",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-count-clean-dev10-20261029T191345Z-389210",
+      "collected": true,
+      "status": "passed",
+      "failure": null,
+      "root_review": true
+    },
+    {
+      "run": "cfr-count-product-dev02-20261029T185935Z-b47da1",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-executable-quotient-dev14-20261029T193407Z-5aea84",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    },
+    {
+      "run": "cfr-executable-quotient-dev16-20261029T194356Z-afa995",
+      "collected": true,
+      "status": "failed",
+      "failure": "RuntimeError('Stage failed: build exit=1')",
+      "root_review": false
+    }
+  ],
+  "active_submission": "cfr-executable-quotient-dev18-20261029T195247Z-f6d78d",
+  "next_capture": "cfr-actual-numeric-dev19-20261029T195813Z-d559d1",
+  "effective_STOP_ceiling": "2026-10-29T22:56:29.521Z",
+  "latest_submission": "2026-10-29T22:01:29.521Z",
+  "remaining": "Continue current coherent routes under bounded ceiling; collect all launched outcomes and stop/remove task egress before closeout."
+}

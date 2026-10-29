@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-29T19:32:19.673345+00:00",
+  "commit": "da9536f48f1e5b422529197cdaf77f88e580c170",
+  "exact_audited_source": "inputs.tar.gz",
+  "source_correspondence": [
+    {
+      "path": "CorruptedFieldRecovery/S010ProductBounds.lean",
+      "audited_sha256": "7f5e578e008cd17773b503e654db58d3a262d124256844f350c48cd4e7ba9283",
+      "git_blob_sha256": "ac04552dc9afb4d576bca66b28a4d3b7520edbc29557c5a64d554ad2f478d855",
+      "only_difference": "CRLF normalized to LF per .gitattributes"
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010CountProduct.lean",
+      "audited_sha256": "6229add40bac95bf759b621ef2253512ab9c329068329f50d0fd026925f01faf",
+      "git_blob_sha256": "4552e68f26def88dfcd2a1bafd9e4f4e36853b1bc7f1bbac496a8628bea5da56",
+      "only_difference": "CRLF normalized to LF per .gitattributes"
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010CleanLossBounds.lean",
+      "audited_sha256": "783d61981b7bff91b7551f5334ed76715d4000346311f58f747da0d02a10d306",
+      "git_blob_sha256": "19c4659d63f72c82cc4d003b8617e3b6b0bab7e6eac69dc5af0f87cc90a6fbb0",
+      "only_difference": "CRLF normalized to LF per .gitattributes"
+    }
+  ],
+  "note": "Audited exact bytes are retained in immutable archive; Git commit blobs use required LF normalization. No identical-byte claim for normalized commit blobs."
+}
