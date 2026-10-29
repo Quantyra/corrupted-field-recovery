@@ -1,0 +1,86 @@
+✖ [1836/1836] Building CorruptedFieldRecovery.RawCoordinateEquivalence (2.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCoordinateEquivalence.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCoordinateEquivalence.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCoordinateEquivalence.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCoordinateEquivalence.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCoordinateEquivalence.setup.json --json
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:14:4: Function expected at
+  BinaryVector
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  n
+
+Hint: The identifier `BinaryVector` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:14:30: Function expected at
+  BinaryVector
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  n
+
+Hint: The identifier `BinaryVector` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:31:6: Unknown identifier `rawCoordinateMatrixMap`
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:35:6: Unknown identifier `rawCoordinateMatrixMap`
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:26:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Module.Basis.instFunLike', which is 'noncomputable'
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:42:5: Function expected at
+  rawCoordinateMatrixMap
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  inverse
+
+Hint: The identifier `rawCoordinateMatrixMap` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:44:7: Function expected at
+  rawCoordinateMatrixMap
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  forward
+
+Hint: The identifier `rawCoordinateMatrixMap` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:49:6: Function expected at
+  rawCoordinateMatrixMap
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  inverse
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:53:6: Function expected at
+  rawCoordinateMatrixMap
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  forward
+warning: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:47:13: declaration uses `sorry`
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:67:4: Function expected at
+  BinaryVector
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  n
+
+Hint: The identifier `BinaryVector` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:67:30: Function expected at
+  BinaryVector
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  n
+
+Hint: The identifier `BinaryVector` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:68:27: Unknown identifier `rawCoordinateMatrixMap`
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:69:18: Unknown identifier `accepted_rawCoordinateMatrixCheck_compositions`
+error: CorruptedFieldRecovery/RawCoordinateEquivalence.lean:68:60: unsolved goals
+x✝ : Sort ?u.18128
+BinaryVector : x✝
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+⊢ Function.Bijective ⇑sorry
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCoordinateEquivalence
