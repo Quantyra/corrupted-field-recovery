@@ -1,0 +1,92 @@
+✖ [2021/2021] Building CorruptedFieldRecovery.RawFieldCoordinateBridge (4.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawFieldCoordinateBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldCoordinateBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldCoordinateBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldCoordinateBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldCoordinateBridge.setup.json --json
+error: CorruptedFieldRecovery/RawFieldCoordinateBridge.lean:47:17: unsolved goals
+case h.«0»
+s : ℕ
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdegree : p.natDegree = s
+f : Fin 3 × Fin s → ZMod 2
+j : Fin s
+⊢ ∑ x, f (0, x) * (Finsupp.single x 1) j = f (0, j)
+
+case h.«1»
+s : ℕ
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdegree : p.natDegree = s
+f : Fin 3 × Fin s → ZMod 2
+j : Fin s
+⊢ ∑ x, f (1, x) * (Finsupp.single x 1) j = f (1, j)
+
+case h.«2»
+s : ℕ
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdegree : p.natDegree = s
+f : Fin 3 × Fin s → ZMod 2
+j : Fin s
+⊢ ∑ x, f (2, x) * (Finsupp.single x 1) j = f (2, j)
+error: CorruptedFieldRecovery/RawFieldCoordinateBridge.lean:76:4: Tactic `apply` failed: could not unify the conclusion of `LinearEquiv.injective coord`
+  coord ?a₁ = coord ?a₂ → ?a₁ = ?a₂
+with the goal
+  ∀ (y : FieldTriple (AdjoinRoot p)),
+    (fun k => coord (x + y) (idx.symm k)) = (fun k => coord x (idx.symm k)) + fun k => coord y (idx.symm k)
+
+Note: The full type of `LinearEquiv.injective coord` is
+  Function.Injective ⇑coord
+
+case refine_1
+s : ℕ
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdegree : p.natDegree = s
+coord : FieldTriple (AdjoinRoot p) ≃ₗ[ZMod 2] Fin 3 × Fin s → ZMod 2 := rawFieldTriplePowerCoordinates p hmonic hdegree
+idx : Fin 3 × Fin s ≃ Fin (3 * s) := finProdFinEquiv
+x : FieldTriple (AdjoinRoot p)
+⊢ ∀ (y : FieldTriple (AdjoinRoot p)),
+    (fun k => coord (x + y) (idx.symm k)) = (fun k => coord x (idx.symm k)) + fun k => coord y (idx.symm k)
+error: CorruptedFieldRecovery/RawFieldCoordinateBridge.lean:80:4: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  (∀ (x : ?α), ?f x = ?g x) → ?f = ?g
+with the goal
+  ∀ (x : FieldTriple (AdjoinRoot p)),
+    (fun k => coord (v • x) (idx.symm k)) = (RingHom.id (ZMod 2)) v • fun k => coord x (idx.symm k)
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.84642} {β : α → Sort ?u.84641} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case refine_2
+s : ℕ
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdegree : p.natDegree = s
+coord : FieldTriple (AdjoinRoot p) ≃ₗ[ZMod 2] Fin 3 × Fin s → ZMod 2 := rawFieldTriplePowerCoordinates p hmonic hdegree
+idx : Fin 3 × Fin s ≃ Fin (3 * s) := finProdFinEquiv
+v : ZMod 2
+⊢ ∀ (x : FieldTriple (AdjoinRoot p)),
+    (fun k => coord (v • x) (idx.symm k)) = (RingHom.id (ZMod 2)) v • fun k => coord x (idx.symm k)
+error: CorruptedFieldRecovery/RawFieldCoordinateBridge.lean:82:12: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case refine_3
+s : ℕ
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdegree : p.natDegree = s
+coord : FieldTriple (AdjoinRoot p) ≃ₗ[ZMod 2] Fin 3 × Fin s → ZMod 2 := rawFieldTriplePowerCoordinates p hmonic hdegree
+idx : Fin 3 × Fin s ≃ Fin (3 * s) := finProdFinEquiv
+x : FieldTriple (AdjoinRoot p)
+⊢ (fun v => coord.symm fun ij => v (idx ij)) ((fun x k => coord x (idx.symm k)) x) = x
+error: CorruptedFieldRecovery/RawFieldCoordinateBridge.lean:85:12: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case refine_4
+s : ℕ
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdegree : p.natDegree = s
+coord : FieldTriple (AdjoinRoot p) ≃ₗ[ZMod 2] Fin 3 × Fin s → ZMod 2 := rawFieldTriplePowerCoordinates p hmonic hdegree
+idx : Fin 3 × Fin s ≃ Fin (3 * s) := finProdFinEquiv
+c : BinaryVector (3 * s)
+⊢ (fun x k => coord x (idx.symm k)) ((fun v => coord.symm fun ij => v (idx ij)) c) = c
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawFieldCoordinateBridge
