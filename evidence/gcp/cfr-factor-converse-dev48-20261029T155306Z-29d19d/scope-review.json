@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "For s >= 1 and a decoded monic degree-s polynomial, polynomial irreducibility implies the raw finite factor-exclusion predicate. Together with the previously accepted reverse implication this gives equivalence under those hypotheses.",
+  "remaining": "This does not prove completeness of the full candidate check, whose scalar and array conditions remain separate.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 2,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

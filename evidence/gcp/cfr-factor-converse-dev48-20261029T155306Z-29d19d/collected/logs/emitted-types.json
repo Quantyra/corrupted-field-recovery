@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.polynomial_irreducible_implies_rawIrreducible_mask": {
+    "emitted_type": "CorruptedFieldRecovery.polynomial_irreducible_implies_rawIrreducible_mask : \u2200 (mask s : Nat) (hs : LE.le.{0} 1 s)\n  (hdegree : Eq.{1} (Polynomial.natDegree.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask)) s)\n  (hmonic : Polynomial.Monic.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask))\n  (hirreducible : Irreducible.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask)),\n  CorruptedFieldRecovery.rawIrreducible mask s\n",
+    "sha256": "8b5675025047be3064375d8fadd8e9f6d65373721ae1443a7459f6c40465cbba"
+  },
+  "CorruptedFieldRecovery.accepted_rawFieldCandidateCheck_polynomial_irreducible": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawFieldCandidateCheck_polynomial_irreducible : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),\n  Irreducible.{0}\n    (CorruptedFieldRecovery.rawMaskPolynomial\n      (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))\n",
+    "sha256": "26122460c94056d2a191c520fbf4328e5ebe76c09c757766f40f7e34cf7e99b4"
+  }
+}

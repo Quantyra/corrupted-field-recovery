@@ -434,6 +434,56 @@ theorem rawIrreducible_mask_implies_polynomial_irreducible
     · apply contradiction_of_ordered_factors g f hg hf hg0 hf0 hgn hgsmall
       simpa [mul_comm] using hfg
 
+theorem polynomial_irreducible_implies_rawIrreducible_mask
+    (mask s : Nat)
+    (hs : 1 ≤ s)
+    (hdegree : (rawMaskPolynomial mask).natDegree = s)
+    (hmonic : (rawMaskPolynomial mask).Monic)
+    (hirreducible : Irreducible (rawMaskPolynomial mask)) :
+    rawIrreducible mask s := by
+  unfold rawIrreducible
+  intro d hd g hg q _hq hmul
+  have hdBounds : 1 ≤ d ∧ d ≤ s / 2 := Finset.mem_Icc.mp hd
+  have hdlo : 1 ≤ d := hdBounds.1
+  have hdhi : d ≤ s / 2 := hdBounds.2
+  have hgBounds : 2 ^ d ≤ g ∧ g < 2 ^ (d + 1) := Finset.mem_Ico.mp hg
+  have hfactor := rawMaskPolynomial_isMonicOfDegree_of_range g d hgBounds.1 (by omega)
+  have hfMonic : (rawMaskPolynomial g).Monic := hfactor.monic
+  have hfDegree : (rawMaskPolynomial g).natDegree = d := hfactor.natDegree_eq
+  have hproduct : rawMaskPolynomial g * rawMaskPolynomial q = rawMaskPolynomial mask := by
+    calc
+      rawMaskPolynomial g * rawMaskPolynomial q =
+          rawMaskPolynomial (rawPolyMul g q) := (rawPolyMul_polynomial g q).symm
+      _ = rawMaskPolynomial mask := congrArg rawMaskPolynomial hmul
+  have hfzero : rawMaskPolynomial g ≠ 0 := hfMonic.ne_zero
+  have hqzero : rawMaskPolynomial q ≠ 0 := by
+    intro hz
+    have hmaskzero : rawMaskPolynomial mask = 0 := by
+      rw [← hproduct, hz, mul_zero]
+    have : (rawMaskPolynomial mask).Monic := hmonic
+    rw [hmaskzero] at this
+    simp at this
+  have hproductMonic : (rawMaskPolynomial g * rawMaskPolynomial q).Monic := by
+    rw [hproduct]
+    exact hmonic
+  have hqMonic : (rawMaskPolynomial q).Monic :=
+    hfMonic.of_mul_monic_left hproductMonic
+  have hsum : d + (rawMaskPolynomial q).natDegree = s := by
+    calc
+      d + (rawMaskPolynomial q).natDegree =
+          (rawMaskPolynomial g).natDegree + (rawMaskPolynomial q).natDegree := by
+            rw [hfDegree]
+      _ = (rawMaskPolynomial g * rawMaskPolynomial q).natDegree :=
+            (natDegree_mul hfzero hqzero).symm
+      _ = s := by rw [hproduct, hdegree]
+  have hqpos : 1 ≤ (rawMaskPolynomial q).natDegree := by omega
+  obtain ⟨_, hfactorization⟩ := hmonic.irreducible_iff_natDegree.mp hirreducible
+  have hzeroOr : (rawMaskPolynomial g).natDegree = 0 ∨
+      (rawMaskPolynomial q).natDegree = 0 :=
+    hfactorization (rawMaskPolynomial g) (rawMaskPolynomial q)
+      hfMonic hqMonic hproduct
+  rcases hzeroOr with hzero | hzero <;> omega
+
 theorem accepted_rawFieldCandidateCheck_polynomial_irreducible {s : Nat}
     (candidate : RawFieldCandidate s) (hcheck : rawFieldCandidateCheck candidate = true) :
     Irreducible (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)) := by

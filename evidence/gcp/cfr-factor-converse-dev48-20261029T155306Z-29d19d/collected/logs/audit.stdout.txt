@@ -1,0 +1,21 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.polynomial_irreducible_implies_rawIrreducible_mask
+CorruptedFieldRecovery.polynomial_irreducible_implies_rawIrreducible_mask : ∀ (mask s : Nat) (hs : LE.le.{0} 1 s)
+  (hdegree : Eq.{1} (Polynomial.natDegree.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask)) s)
+  (hmonic : Polynomial.Monic.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask))
+  (hirreducible : Irreducible.{0} (CorruptedFieldRecovery.rawMaskPolynomial mask)),
+  CorruptedFieldRecovery.rawIrreducible mask s
+CFR_TYPE_END:CorruptedFieldRecovery.polynomial_irreducible_implies_rawIrreducible_mask
+'CorruptedFieldRecovery.polynomial_irreducible_implies_rawIrreducible_mask' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawFieldCandidateCheck_polynomial_irreducible
+@CorruptedFieldRecovery.accepted_rawFieldCandidateCheck_polynomial_irreducible : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),
+  Irreducible.{0}
+    (CorruptedFieldRecovery.rawMaskPolynomial
+      (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawFieldCandidateCheck_polynomial_irreducible
+'CorruptedFieldRecovery.accepted_rawFieldCandidateCheck_polynomial_irreducible' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
