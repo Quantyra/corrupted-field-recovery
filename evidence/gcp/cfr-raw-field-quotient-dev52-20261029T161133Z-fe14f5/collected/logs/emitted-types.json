@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.accepted_rawCandidateModulus_monic": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidateModulus_monic : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),\n  Polynomial.Monic.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)\n",
+    "sha256": "3870871b5ff3dac382b0b2e332ea51c56ce6e5f80e2d3d6a8333e1c53a8328d2"
+  },
+  "CorruptedFieldRecovery.accepted_rawCandidateModulus_irreducible": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidateModulus_irreducible : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),\n  Irreducible.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)\n",
+    "sha256": "9f2195ab6aa7d260609e0beffb4379d293f42ad3722f5cc5fdfe286d951bbbde"
+  },
+  "CorruptedFieldRecovery.accepted_rawCandidate_quotient_field": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidate_quotient_field : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),\n  Nonempty.{1} (Field.{0} (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))\n",
+    "sha256": "4364193cd869bf0644a2b49dceed211442bb9323276bc3572cf13acd9aa2ebf8"
+  },
+  "CorruptedFieldRecovery.accepted_rawCandidate_quotient_card": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidate_quotient_card : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),\n  Eq.{1} (Nat.card.{0} (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))\n    (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "0efe89da9ff96c80a615e15f71f3a59604ef6f69bb432aa654ed4f4e99c2e9fd"
+  },
+  "CorruptedFieldRecovery.accepted_rawCandidate_scalar_residue_ne_zero": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidate_scalar_residue_ne_zero : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),\n  Ne.{1}\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n      (CorruptedFieldRecovery.rawCandidateScalar candidate))\n    0\n",
+    "sha256": "5da141a6cfbc8ecf57ae051f3c50e06126e85bd10963b0a7c069a35d1ebff155"
+  }
+}

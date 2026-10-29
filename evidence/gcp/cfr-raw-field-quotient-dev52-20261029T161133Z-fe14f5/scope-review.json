@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "Actual raw candidate check true implies monic irreducible decoded modulus, a nonempty Field structure on its AdjoinRoot quotient, quotient Nat.card = 2^s, and nonzero decoded scalar residue.",
+  "remaining": "Arithmetic implementation refinement, coordinate invertibility, trace-determinant validation and the full certificate remain open.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 5,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

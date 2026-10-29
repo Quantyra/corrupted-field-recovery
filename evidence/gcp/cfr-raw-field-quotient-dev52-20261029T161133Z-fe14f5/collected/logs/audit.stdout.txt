@@ -1,0 +1,49 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidateModulus_monic
+@CorruptedFieldRecovery.accepted_rawCandidateModulus_monic : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),
+  Polynomial.Monic.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidateModulus_monic
+'CorruptedFieldRecovery.accepted_rawCandidateModulus_monic' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidateModulus_irreducible
+@CorruptedFieldRecovery.accepted_rawCandidateModulus_irreducible : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),
+  Irreducible.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidateModulus_irreducible
+'CorruptedFieldRecovery.accepted_rawCandidateModulus_irreducible' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidate_quotient_field
+@CorruptedFieldRecovery.accepted_rawCandidate_quotient_field : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),
+  Nonempty.{1} (Field.{0} (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidate_quotient_field
+'CorruptedFieldRecovery.accepted_rawCandidate_quotient_field' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidate_quotient_card
+@CorruptedFieldRecovery.accepted_rawCandidate_quotient_card : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),
+  Eq.{1} (Nat.card.{0} (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))
+    (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidate_quotient_card
+'CorruptedFieldRecovery.accepted_rawCandidate_quotient_card' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidate_scalar_residue_ne_zero
+@CorruptedFieldRecovery.accepted_rawCandidate_scalar_residue_ne_zero : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true),
+  Ne.{1}
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      (CorruptedFieldRecovery.rawCandidateScalar candidate))
+    0
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidate_scalar_residue_ne_zero
+'CorruptedFieldRecovery.accepted_rawCandidate_scalar_residue_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
