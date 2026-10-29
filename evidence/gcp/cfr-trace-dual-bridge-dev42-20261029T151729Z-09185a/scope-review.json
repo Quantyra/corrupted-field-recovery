@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "For finite K over its prime field, the coordinate trace covector is zero iff its coordinates are zero. The actual dual map of scalar multiplication sends the trace covector of a to the trace covector of t times a.",
+  "remaining": "No linear equivalence, surjectivity or support transfer is proved. The third export is a duplicate equality, despite its mem_iff name.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 3,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

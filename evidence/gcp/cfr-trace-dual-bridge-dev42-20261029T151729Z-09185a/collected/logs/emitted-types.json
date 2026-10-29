@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.fieldTripleTraceCovector_eq_zero_iff": {
+    "emitted_type": "CorruptedFieldRecovery.fieldTripleTraceCovector_eq_zero_iff.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]\n  (a : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n  Iff (Eq.{u_1 + 1} (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K a) 0) (Eq.{u_1 + 1} a 0)\n",
+    "sha256": "0cb6241d83fb49322f5a03f3d4162b6f3563dc0ac36375b7f0b928bc9a78dccf"
+  },
+  "CorruptedFieldRecovery.dualMap_fieldTripleScalarAction_trace": {
+    "emitted_type": "CorruptedFieldRecovery.dualMap_fieldTripleScalarAction_trace.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (t : K) (a : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n  Eq.{u_1 + 1}\n    ((LinearMap.dualMap.{0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t))\n      (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K a))\n    (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K (HSMul.hSMul.{u_1, u_1, u_1} t a))\n",
+    "sha256": "6ca2de34de5a8afc8cc9b5f931f72adcd74fa808ad91406e76976e8d8b88c51a"
+  },
+  "CorruptedFieldRecovery.traceCoordinates_dualMap_mem_iff": {
+    "emitted_type": "CorruptedFieldRecovery.traceCoordinates_dualMap_mem_iff.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (t : K) (a : CorruptedFieldRecovery.FieldTriple.{u_1} K),\n  Eq.{u_1 + 1}\n    ((LinearMap.dualMap.{0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t))\n      (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K a))\n    (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K (HSMul.hSMul.{u_1, u_1, u_1} t a))\n",
+    "sha256": "f031b6513c9174eb6c5ee325a0eca7a47ec2fa3d7dc0eafa43283554f1be78c1"
+  }
+}

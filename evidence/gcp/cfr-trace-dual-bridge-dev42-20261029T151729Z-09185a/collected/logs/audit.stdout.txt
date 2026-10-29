@@ -1,0 +1,31 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.fieldTripleTraceCovector_eq_zero_iff
+CorruptedFieldRecovery.fieldTripleTraceCovector_eq_zero_iff.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]
+  (a : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Iff (Eq.{u_1 + 1} (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K a) 0) (Eq.{u_1 + 1} a 0)
+CFR_TYPE_END:CorruptedFieldRecovery.fieldTripleTraceCovector_eq_zero_iff
+'CorruptedFieldRecovery.fieldTripleTraceCovector_eq_zero_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.dualMap_fieldTripleScalarAction_trace
+CorruptedFieldRecovery.dualMap_fieldTripleScalarAction_trace.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (t : K) (a : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{u_1 + 1}
+    ((LinearMap.dualMap.{0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t))
+      (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K a))
+    (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K (HSMul.hSMul.{u_1, u_1, u_1} t a))
+CFR_TYPE_END:CorruptedFieldRecovery.dualMap_fieldTripleScalarAction_trace
+'CorruptedFieldRecovery.dualMap_fieldTripleScalarAction_trace' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.traceCoordinates_dualMap_mem_iff
+CorruptedFieldRecovery.traceCoordinates_dualMap_mem_iff.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] (t : K) (a : CorruptedFieldRecovery.FieldTriple.{u_1} K),
+  Eq.{u_1 + 1}
+    ((LinearMap.dualMap.{0, u_1, u_1} (CorruptedFieldRecovery.fieldTripleScalarAction.{u_1} K t))
+      (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K a))
+    (CorruptedFieldRecovery.fieldTripleTraceCovector.{u_1} K (HSMul.hSMul.{u_1, u_1, u_1} t a))
+CFR_TYPE_END:CorruptedFieldRecovery.traceCoordinates_dualMap_mem_iff
+'CorruptedFieldRecovery.traceCoordinates_dualMap_mem_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
