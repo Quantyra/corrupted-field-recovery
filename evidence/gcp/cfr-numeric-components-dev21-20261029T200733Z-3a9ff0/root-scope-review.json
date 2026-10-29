@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T20:21:33.935797+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Proper-degree sum/scaling under finrank and size; arithmetic bound on truncated scalar complement; beta<1/2 conditional on scaled tau premise.",
+  "remaining": "Arithmetic count is not by itself event-to-tape or constructor success.",
+  "evidence": "collected/logs/emitted-types.json"
+}

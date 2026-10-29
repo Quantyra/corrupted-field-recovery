@@ -1,0 +1,96 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.proper_degree_sum_lt_half_power
+CorruptedFieldRecovery.proper_degree_sum_lt_half_power.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s : Nat)
+  (hs : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s),
+  LT.lt.{0} (∑ d ∈ CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)
+    (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 1))
+CFR_TYPE_END:CorruptedFieldRecovery.proper_degree_sum_lt_half_power
+'CorruptedFieldRecovery.proper_degree_sum_lt_half_power' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.scaled_tau_lt_field_size
+@CorruptedFieldRecovery.scaled_tau_lt_field_size : ∀ {s R tau : Nat}
+  (hs : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s)
+  (htau : LT.lt.{0} tau (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 1))),
+  LT.lt.{0} (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R) tau)) (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.scaled_tau_lt_field_size
+'CorruptedFieldRecovery.scaled_tau_lt_field_size' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.scaled_support_lt_field_size
+@CorruptedFieldRecovery.scaled_support_lt_field_size : ∀ {s R : Nat}
+  (hs : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s),
+  LE.le.{0} (HMul.hMul.{0, 0, 0} 32 (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 R))) (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.scaled_support_lt_field_size
+'CorruptedFieldRecovery.scaled_support_lt_field_size' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actual_proper_degree_scaled_bound
+CorruptedFieldRecovery.actual_proper_degree_scaled_bound.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s R : Nat)
+  (hsdim : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s)
+  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s),
+  LT.lt.{0}
+    (HMul.hMul.{0, 0, 0} 4
+      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R)
+        (∑ d ∈ CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)))
+    (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.actual_proper_degree_scaled_bound
+'CorruptedFieldRecovery.actual_proper_degree_scaled_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters
+CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s R r : Nat)
+  (hsdim : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s) (hr : LE.le.{0} r R)
+  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0} 4
+      (HAdd.hAdd.{0, 0, 0} (∑ d ∈ CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)
+        (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1)))
+    (HMul.hMul.{0, 0, 0} 3 (HPow.hPow.{0, 0, 0} 2 s))
+CFR_TYPE_END:CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters
+'CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actual_good_scalar_finite_count_lower
+CorruptedFieldRecovery.actual_good_scalar_finite_count_lower.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s R r : Nat)
+  (hsdim : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s) (hr : LE.le.{0} r R)
+  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s),
+  GE.ge.{0}
+    (HMul.hMul.{0, 0, 0} 4
+      (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s)
+        (HAdd.hAdd.{0, 0, 0} (∑ d ∈ CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)
+          (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1))))
+    (HPow.hPow.{0, 0, 0} 2 s)
+CFR_TYPE_END:CorruptedFieldRecovery.actual_good_scalar_finite_count_lower
+'CorruptedFieldRecovery.actual_good_scalar_finite_count_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.beta_span_terms_lt_sixteenth
+@CorruptedFieldRecovery.beta_span_terms_lt_sixteenth : ∀ {p q : Rat} (hq32 : LE.le.{0} 32 q)
+  (hpq : LE.le.{0} (HMul.hMul.{0, 0, 0} 32 p) q),
+  LT.lt.{0}
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} p q) (HDiv.hDiv.{0, 0, 0} p (HPow.hPow.{0, 0, 0} q 2)))
+      (HDiv.hDiv.{0, 0, 0} p (HPow.hPow.{0, 0, 0} q 3)))
+    (1 / 16)
+CFR_TYPE_END:CorruptedFieldRecovery.beta_span_terms_lt_sixteenth
+'CorruptedFieldRecovery.beta_span_terms_lt_sixteenth' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.beta_lt_half_from_size
+@CorruptedFieldRecovery.beta_lt_half_from_size : ∀ {s R T : Nat}
+  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s)
+  (htau :
+    LT.lt.{0} (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R) T)) (HPow.hPow.{0, 0, 0} 2 s)),
+  LT.lt.{0}
+    (HAdd.hAdd.{0, 0, 0}
+      (HDiv.hDiv.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R)
+          (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HPow.hPow.{0, 0, 0} 2 s))
+            (HPow.hPow.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s) 2)))
+        (HPow.hPow.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s) 3))
+      (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R) ↑T) (HPow.hPow.{0, 0, 0} 2 s)))
+    (1 / 2)
+CFR_TYPE_END:CorruptedFieldRecovery.beta_lt_half_from_size
+'CorruptedFieldRecovery.beta_lt_half_from_size' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

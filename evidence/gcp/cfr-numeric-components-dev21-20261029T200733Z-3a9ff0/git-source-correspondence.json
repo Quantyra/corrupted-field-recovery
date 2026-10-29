@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-29T20:21:39.978012+00:00",
+  "source_capture": "cfr-numeric-components-dev21-20261029T200733Z-3a9ff0",
+  "source_correspondence": [
+    {
+      "path": "CorruptedFieldRecovery/S010ProperDegreeArithmetic.lean",
+      "staged_git_blob_sha256": "2187e2c9dad141068aec59a044b71d6616a196494baf39fbf84170bc12880078",
+      "audited_source_sha256": "2187e2c9dad141068aec59a044b71d6616a196494baf39fbf84170bc12880078",
+      "identical_bytes": true
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010SizeArithmetic.lean",
+      "staged_git_blob_sha256": "0c5828ffb95570a64c8cdfaaf4f209d5a958e899bd6de771ce84de06d76842a6",
+      "audited_source_sha256": "0c5828ffb95570a64c8cdfaaf4f209d5a958e899bd6de771ce84de06d76842a6",
+      "identical_bytes": true
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010ActualScalarBounds.lean",
+      "staged_git_blob_sha256": "38292f61f4b2c7c6f600a2858e92b0b00b2f110c734d622ccc56a4a3d7433824",
+      "audited_source_sha256": "38292f61f4b2c7c6f600a2858e92b0b00b2f110c734d622ccc56a4a3d7433824",
+      "identical_bytes": true
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010BetaArithmetic.lean",
+      "staged_git_blob_sha256": "c25514ed31099670a61d5e87bce35a6c39f0393cf8ef33675f7e05cfe638b0fa",
+      "audited_source_sha256": "c25514ed31099670a61d5e87bce35a6c39f0393cf8ef33675f7e05cfe638b0fa",
+      "identical_bytes": true
+    }
+  ],
+  "note": "UTF-8 no-BOM LF sources exactly equal staged Git bytes and immutable audited archive."
+}

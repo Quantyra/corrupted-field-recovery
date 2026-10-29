@@ -1,0 +1,34 @@
+{
+  "CorruptedFieldRecovery.proper_degree_sum_lt_half_power": {
+    "emitted_type": "CorruptedFieldRecovery.proper_degree_sum_lt_half_power.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s : Nat)\n  (hs : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s),\n  LT.lt.{0} (\u2211 d \u2208 CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)\n    (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 1))\n",
+    "sha256": "36ad62f65b16a7c932d12d415a4d8bf47c6fdebeae7bf0992cded205db90c430"
+  },
+  "CorruptedFieldRecovery.scaled_tau_lt_field_size": {
+    "emitted_type": "@CorruptedFieldRecovery.scaled_tau_lt_field_size : \u2200 {s R tau : Nat}\n  (hs : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s)\n  (htau : LT.lt.{0} tau (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 1))),\n  LT.lt.{0} (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R) tau)) (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "1dd47c55f6f97f4496e9ba259ab8b79769b2c0c46e903e415b24f0fc1ed5eff5"
+  },
+  "CorruptedFieldRecovery.scaled_support_lt_field_size": {
+    "emitted_type": "@CorruptedFieldRecovery.scaled_support_lt_field_size : \u2200 {s R : Nat}\n  (hs : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s),\n  LE.le.{0} (HMul.hMul.{0, 0, 0} 32 (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 R))) (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "63e76a1642b8162ecd67d53358b942f5e59159990441762cdffb7b023596100e"
+  },
+  "CorruptedFieldRecovery.actual_proper_degree_scaled_bound": {
+    "emitted_type": "CorruptedFieldRecovery.actual_proper_degree_scaled_bound.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s R : Nat)\n  (hsdim : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s)\n  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s),\n  LT.lt.{0}\n    (HMul.hMul.{0, 0, 0} 4\n      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R)\n        (\u2211 d \u2208 CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)))\n    (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "5c06d56f2b2df283e0d02bb7701abeb8a7c039fff7facc5ce5540fa19d43a528"
+  },
+  "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters": {
+    "emitted_type": "CorruptedFieldRecovery.actual_scalar_bad_count_le_three_quarters.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s R r : Nat)\n  (hsdim : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s) (hr : LE.le.{0} r R)\n  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s),\n  LE.le.{0}\n    (HMul.hMul.{0, 0, 0} 4\n      (HAdd.hAdd.{0, 0, 0} (\u2211 d \u2208 CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)\n        (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1)))\n    (HMul.hMul.{0, 0, 0} 3 (HPow.hPow.{0, 0, 0} 2 s))\n",
+    "sha256": "629d213969879b8bb173f813dffab11d33eccf1c448a0e035d53c4f0e64f566c"
+  },
+  "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower": {
+    "emitted_type": "CorruptedFieldRecovery.actual_good_scalar_finite_count_lower.{u_1} : \u2200 (K : Type u_1) [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] (s R r : Nat)\n  (hsdim : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s) (hr : LE.le.{0} r R)\n  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s),\n  GE.ge.{0}\n    (HMul.hMul.{0, 0, 0} 4\n      (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s)\n        (HAdd.hAdd.{0, 0, 0} (\u2211 d \u2208 CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)\n          (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1))))\n    (HPow.hPow.{0, 0, 0} 2 s)\n",
+    "sha256": "383955c736adbb04e9010f5c4cb3a467429c97e5368af01651431112af456195"
+  },
+  "CorruptedFieldRecovery.beta_span_terms_lt_sixteenth": {
+    "emitted_type": "@CorruptedFieldRecovery.beta_span_terms_lt_sixteenth : \u2200 {p q : Rat} (hq32 : LE.le.{0} 32 q)\n  (hpq : LE.le.{0} (HMul.hMul.{0, 0, 0} 32 p) q),\n  LT.lt.{0}\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} p q) (HDiv.hDiv.{0, 0, 0} p (HPow.hPow.{0, 0, 0} q 2)))\n      (HDiv.hDiv.{0, 0, 0} p (HPow.hPow.{0, 0, 0} q 3)))\n    (1 / 16)\n",
+    "sha256": "8c7ea5727c07f4e45056cf9a394b90c4f876e33859366dafe75337f23ba277a1"
+  },
+  "CorruptedFieldRecovery.beta_lt_half_from_size": {
+    "emitted_type": "@CorruptedFieldRecovery.beta_lt_half_from_size : \u2200 {s R T : Nat}\n  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s)\n  (htau :\n    LT.lt.{0} (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R) T)) (HPow.hPow.{0, 0, 0} 2 s)),\n  LT.lt.{0}\n    (HAdd.hAdd.{0, 0, 0}\n      (HDiv.hDiv.{0, 0, 0}\n        (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R)\n          (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HPow.hPow.{0, 0, 0} 2 s))\n            (HPow.hPow.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s) 2)))\n        (HPow.hPow.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s) 3))\n      (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 R) \u2191T) (HPow.hPow.{0, 0, 0} 2 s)))\n    (1 / 2)\n",
+    "sha256": "5d471f0d30188198b2954256ad5f899ea16aa5105aea971105983183d177e28c"
+  }
+}
