@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "The finite checker validates n^2 array sizes and both compositions on explicit computable coordinate unit vectors. Acceptance implies the decoded binary linear maps are mutual inverses and yields a LinearEquiv. The checker is a plain def.",
+  "remaining": "Runtime, power-basis coordinates on K^3, trace-determinant validation and the full certificate remain open.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 4,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

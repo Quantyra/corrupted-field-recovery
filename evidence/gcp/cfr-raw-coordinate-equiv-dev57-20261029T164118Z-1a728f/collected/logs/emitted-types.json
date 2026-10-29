@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawCoordinateMatrixMap": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCoordinateMatrixMap : {n : Nat} \u2192\n  (matrix : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector n)\n",
+    "sha256": "a1712dfba1c30d454f2626bd9968892a07a1773afa84cf7d0bed2b14fca578b1"
+  },
+  "CorruptedFieldRecovery.rawCoordinateMatrixCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCoordinateMatrixCheck : {n : Nat} \u2192\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192 Bool\n",
+    "sha256": "d815db3cd6fc2d76fc29f15230c5c6dacfd851139e20fec39fa1f378b79a4996"
+  },
+  "CorruptedFieldRecovery.accepted_rawCoordinateMatrixCheck_compositions": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCoordinateMatrixCheck_compositions : \u2200 {n : Nat}\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),\n  And\n    (Eq.{1}\n      (CorruptedFieldRecovery.rawCoordinateMatrixMap inverse \u2218\u2097 CorruptedFieldRecovery.rawCoordinateMatrixMap forward)\n      LinearMap.id.{0, 0})\n    (Eq.{1}\n      (CorruptedFieldRecovery.rawCoordinateMatrixMap forward \u2218\u2097 CorruptedFieldRecovery.rawCoordinateMatrixMap inverse)\n      LinearMap.id.{0, 0})\n",
+    "sha256": "e1dd1658d21da873bf674a6cbc47815b1798bac2309cf02cc152525ed83e4c49"
+  },
+  "CorruptedFieldRecovery.accepted_rawCoordinateMatrixEquiv": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCoordinateMatrixEquiv : {n : Nat} \u2192\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192\n    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) \u2192\n      LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n        (CorruptedFieldRecovery.BinaryVector n)\n",
+    "sha256": "f54bb88d5cdba49f5c0b5ce7638202e11a978b659091959cc0845ecbdd6747dd"
+  }
+}

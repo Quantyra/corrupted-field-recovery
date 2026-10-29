@@ -1,0 +1,37 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCoordinateMatrixMap
+@CorruptedFieldRecovery.rawCoordinateMatrixMap : {n : Nat} →
+  (matrix : CorruptedFieldRecovery.RawCoordinateMatrix) →
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector n)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCoordinateMatrixMap
+'CorruptedFieldRecovery.rawCoordinateMatrixMap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCoordinateMatrixCheck
+@CorruptedFieldRecovery.rawCoordinateMatrixCheck : {n : Nat} →
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawCoordinateMatrixCheck
+'CorruptedFieldRecovery.rawCoordinateMatrixCheck' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCoordinateMatrixCheck_compositions
+@CorruptedFieldRecovery.accepted_rawCoordinateMatrixCheck_compositions : ∀ {n : Nat}
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),
+  And
+    (Eq.{1}
+      (CorruptedFieldRecovery.rawCoordinateMatrixMap inverse ∘ₗ CorruptedFieldRecovery.rawCoordinateMatrixMap forward)
+      LinearMap.id.{0, 0})
+    (Eq.{1}
+      (CorruptedFieldRecovery.rawCoordinateMatrixMap forward ∘ₗ CorruptedFieldRecovery.rawCoordinateMatrixMap inverse)
+      LinearMap.id.{0, 0})
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCoordinateMatrixCheck_compositions
+'CorruptedFieldRecovery.accepted_rawCoordinateMatrixCheck_compositions' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCoordinateMatrixEquiv
+@CorruptedFieldRecovery.accepted_rawCoordinateMatrixEquiv : {n : Nat} →
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) →
+    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true) →
+      LinearEquiv.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+        (CorruptedFieldRecovery.BinaryVector n)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCoordinateMatrixEquiv
+'CorruptedFieldRecovery.accepted_rawCoordinateMatrixEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
