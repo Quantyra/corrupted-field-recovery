@@ -1,0 +1,39 @@
+✖ [1835/1835] Building CorruptedFieldRecovery.RawFieldQuotient (2.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawFieldQuotient.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldQuotient.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldQuotient.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldQuotient.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldQuotient.setup.json --json
+error: CorruptedFieldRecovery/RawFieldQuotient.lean:47:6: typeclass instance problem is stuck
+  Module.Finite ?m.90 (AdjoinRoot (rawCandidateModulus candidate))
+
+Note: Lean will not try to resolve this typeclass instance problem because the first, third, and fifth type arguments to `Module.Finite` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: CorruptedFieldRecovery/RawFieldQuotient.lean:75:4: Type mismatch: After simplification, term
+  h
+ has type
+  (rawBoolListPolynomial candidate.scalar.toList).natDegree < Array.size candidate.scalar
+but is expected to have type
+  (rawBoolListPolynomial candidate.scalar.toList).natDegree < s
+error: CorruptedFieldRecovery/RawFieldQuotient.lean:78:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).natDegree
+in the target expression
+  (rawCandidateScalar candidate).natDegree < (rawCandidateModulus candidate).natDegree
+
+s : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+hs : 1 ≤ s
+hmodsize : Array.size candidate.modulus = s + 1
+htop : rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1
+hscalarsize : Array.size candidate.scalar = s
+hscalarNonzero : rawFieldBitsToNat candidate.scalar ≠ 0
+hirred : rawIrreducible (rawFieldBitsToNat candidate.modulus) s
+hmod :
+  (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).Monic ∧
+    (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).natDegree = s
+hscalarNonzeroPoly : rawCandidateScalar candidate ≠ 0
+hscalarLength : candidate.scalar.toList.length = s
+hscalarListNonempty : candidate.scalar.toList ≠ []
+hscalarDegree : (rawCandidateScalar candidate).natDegree < s
+⊢ (rawCandidateScalar candidate).natDegree < (rawCandidateModulus candidate).natDegree
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawFieldQuotient
