@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "a3f32ea1ed0343bfa58a120ea8fd4ea4b1783edc388dd57e19e5f74a3dd5c027",
+  "staged_git_blob_sha256": "a3f32ea1ed0343bfa58a120ea8fd4ea4b1783edc388dd57e19e5f74a3dd5c027",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ModeImageFiveCount.lean"
+}

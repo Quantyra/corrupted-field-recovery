@@ -1,0 +1,92 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImageSemanticSupport
+@CorruptedFieldRecovery.modeImageSemanticSupport.{u_1} : {K : Type u_1} →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+        [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+          {s : Nat} →
+            (Q :
+                LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+                  (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))
+                  (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+              (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) →
+                Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.modeImageSemanticSupport
+'CorruptedFieldRecovery.modeImageSemanticSupport' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_physical_clean_iff
+@CorruptedFieldRecovery.modeImage_physical_clean_iff.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Fintype.{u_1} K] [inst_3 : DecidableEq.{u_1 + 1} K]
+  [inst_4 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_5 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (x : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+  Iff (Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)) x)
+    (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) (Q x))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_physical_clean_iff
+'CorruptedFieldRecovery.modeImage_physical_clean_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImageSemanticCleanFieldSet_card
+@CorruptedFieldRecovery.modeImageSemanticCleanFieldSet_card.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Fintype.{u_1} K] [inst_3 : DecidableEq.{u_1 + 1} K]
+  [inst_4 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_5 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] {s r : Nat}
+  (hs : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s)
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (hr :
+    Eq.{1}
+      (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField
+        ↥(CorruptedFieldRecovery.modeImageSemanticSupport.{u_1} Q E))
+      r),
+  Eq.{1} (Finset.card.{u_1} (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E))
+    (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) r))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImageSemanticCleanFieldSet_card
+'CorruptedFieldRecovery.modeImageSemanticCleanFieldSet_card' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_actualFiveTape_count_lower
+@CorruptedFieldRecovery.modeImage_actualFiveTape_count_lower.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_5 : Finite.{u_1 + 1} K] {s r : Nat}
+  (hs : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s)
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (hr :
+    Eq.{1}
+      (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField
+        ↥(CorruptedFieldRecovery.modeImageSemanticSupport.{u_1} Q E))
+      r)
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0}
+        (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) r))
+          (HMul.hMul.{0, 0, 0} (Finset.card.{u_1} (CorruptedFieldRecovery.nonGenerators.{u_1} K))
+            (HPow.hPow.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s) 2)))
+        (HMul.hMul.{0, 0, 0}
+          (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) r))
+            (HPow.hPow.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s) 2))
+          (HMul.hMul.{0, 0, 0}
+            (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) r))
+              (HPow.hPow.{0, 0, 0} 2 s))
+            (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) r)) 1))))
+      (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 s)
+        (HAdd.hAdd.{0, 0, 0} (∑ d ∈ CorruptedFieldRecovery.properDegrees.{u_1} K, HPow.hPow.{0, 0, 0} 2 d)
+          (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HMul.hMul.{0, 0, 0} 2 r)) 1))))
+    (Finset.card.{0}
+      (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E)
+        (CorruptedFieldRecovery.modeImageSemanticSupport.{u_1} Q E) b))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_actualFiveTape_count_lower
+'CorruptedFieldRecovery.modeImage_actualFiveTape_count_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

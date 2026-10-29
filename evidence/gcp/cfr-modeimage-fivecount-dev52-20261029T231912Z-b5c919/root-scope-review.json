@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Physical clean equivalence; semantic clean cardinality at explicit rank r; actual five-word tape count product lower bound with Nat subtraction, same U from modeImage E and supplied Q/dependent basis b.",
+  "remaining": "Numeric lower bound/probability, computed basis and algorithm success remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261029T221338Z-1cdd08"
+}
