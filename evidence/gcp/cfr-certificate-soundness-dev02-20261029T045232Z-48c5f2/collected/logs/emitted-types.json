@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.RepresentationPayload": {
+    "emitted_type": "CorruptedFieldRecovery.RepresentationPayload : (n R : Nat) \u2192 Type\n",
+    "sha256": "e16a1db3d05d01a7d0575b255b61d783983e9be71fb550af66cdc1e43ab599c4"
+  },
+  "CorruptedFieldRecovery.RepresentationPayload.tensor": {
+    "emitted_type": "@CorruptedFieldRecovery.RepresentationPayload.tensor : {n R : Nat} \u2192\n  (cert : CorruptedFieldRecovery.RepresentationPayload n R) \u2192 CorruptedFieldRecovery.BinaryTensor n\n",
+    "sha256": "478979500f204a7786b639e13736b92bccd9ca466f737b6bec07c1d7d203327e"
+  },
+  "CorruptedFieldRecovery.RepresentationPayload.tensor_alternating": {
+    "emitted_type": "@CorruptedFieldRecovery.RepresentationPayload.tensor_alternating : \u2200 {n R : Nat}\n  (cert : CorruptedFieldRecovery.RepresentationPayload n R),\n  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.RepresentationPayload.tensor cert)\n",
+    "sha256": "6b88409f914279bb33fe54de54e99c40e76bce4b64438c9c7800efbbe934c071"
+  },
+  "CorruptedFieldRecovery.increasingCoefficientCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.increasingCoefficientCheck : {n R : Nat} \u2192\n  (input : CorruptedFieldRecovery.BinaryTensor n) \u2192 (cert : CorruptedFieldRecovery.RepresentationPayload n R) \u2192 Bool\n",
+    "sha256": "5376c6ec42440192a5ed5e05f07d98a8c9fff7f8d9a116b4d1570e5feea03cd7"
+  },
+  "CorruptedFieldRecovery.accepted_certificate_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_certificate_sound : \u2200 {n R : Nat} (input : CorruptedFieldRecovery.BinaryTensor n)\n  (input_alternating : CorruptedFieldRecovery.IsAlternating input)\n  (cert : CorruptedFieldRecovery.RepresentationPayload n R)\n  (accepted : Eq.{1} (CorruptedFieldRecovery.increasingCoefficientCheck input cert) Bool.true)\n  (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1} (((input x) y) z) ((((CorruptedFieldRecovery.RepresentationPayload.tensor cert) x) y) z)\n",
+    "sha256": "b8f67450bb05c4864609655c40b8436bc67ce4d184b970a22f7c56ae92dccc17"
+  }
+}

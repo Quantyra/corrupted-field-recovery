@@ -1,0 +1,6 @@
+inputs.tar.gz: OK
+capture-manifest.json: OK
+gcp_cfr_runner.py: OK
+run.sh: OK
+bootstrap-assets.json: OK
+REMOTE_PID=3599

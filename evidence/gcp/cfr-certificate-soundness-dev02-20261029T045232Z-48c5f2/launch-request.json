@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T05:05:02.714576+00:00",
+  "run": "cfr-certificate-soundness-dev02-20261029T045232Z-48c5f2",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "guarded_prelaunch_continuation": true,
+  "note": "Observe only after uncertain transport; never duplicate launch"
+}

@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-29T05:05:02.703433+00:00",
+  "reason": "Prior local gcloud access violations after valid remote output; revalidate all bytes and guards before single launch",
+  "script": "set -eu\nrun=\"$HOME/quantyra-cfr-runs/cfr-certificate-soundness-dev02-20261029T045232Z-48c5f2\"\ntest -d \"$run\"\ntest ! -e \"$run/runner-pid\"\ntest ! -e \"$run/started-utc\"\nif pgrep -x lean || pgrep -x lake; then exit 73; fi\nflock -n \"$HOME/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/lock\" true\ncd \"$run\"\nsha256sum -c <<'CFR_HASHES'\n08a739090be66b28f9d32890e5b24395a9ae63d310c478af292ebf6c800e60d9  inputs.tar.gz\nbcf89df7f8daaf8b5826be11957d3c1c7735ee07d127bb55004fcb0ac13d7bcf  capture-manifest.json\nb8b5779c34ff0d8da07916a6376f920949c9dd600019d19a878285d0172ec005  gcp_cfr_runner.py\n4a37c1235da2e8342327de9dbd765d3d8abce29b3d9223f80c7c8c80a44769de  run.sh\n774cc6affdbaa980802d58c48c3d99e5a3badb61460fc9203ee656b3634cdc6b  bootstrap-assets.json\nCFR_HASHES\nnohup bash \"$run/run.sh\" > \"$run/launch.log\" 2>&1 < /dev/null &\necho \"$!\" > \"$run/runner-pid\"\nprintf \"REMOTE_PID=\"; cat \"$run/runner-pid\"\n"
+}

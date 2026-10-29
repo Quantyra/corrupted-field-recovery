@@ -1,0 +1,31 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RepresentationPayload
+CorruptedFieldRecovery.RepresentationPayload : (n R : Nat) → Type
+CFR_TYPE_END:CorruptedFieldRecovery.RepresentationPayload
+'CorruptedFieldRecovery.RepresentationPayload' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RepresentationPayload.tensor
+@CorruptedFieldRecovery.RepresentationPayload.tensor : {n R : Nat} →
+  (cert : CorruptedFieldRecovery.RepresentationPayload n R) → CorruptedFieldRecovery.BinaryTensor n
+CFR_TYPE_END:CorruptedFieldRecovery.RepresentationPayload.tensor
+'CorruptedFieldRecovery.RepresentationPayload.tensor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RepresentationPayload.tensor_alternating
+@CorruptedFieldRecovery.RepresentationPayload.tensor_alternating : ∀ {n R : Nat}
+  (cert : CorruptedFieldRecovery.RepresentationPayload n R),
+  CorruptedFieldRecovery.IsAlternating (CorruptedFieldRecovery.RepresentationPayload.tensor cert)
+CFR_TYPE_END:CorruptedFieldRecovery.RepresentationPayload.tensor_alternating
+'CorruptedFieldRecovery.RepresentationPayload.tensor_alternating' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.increasingCoefficientCheck
+@CorruptedFieldRecovery.increasingCoefficientCheck : {n R : Nat} →
+  (input : CorruptedFieldRecovery.BinaryTensor n) → (cert : CorruptedFieldRecovery.RepresentationPayload n R) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.increasingCoefficientCheck
+'CorruptedFieldRecovery.increasingCoefficientCheck' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_certificate_sound
+@CorruptedFieldRecovery.accepted_certificate_sound : ∀ {n R : Nat} (input : CorruptedFieldRecovery.BinaryTensor n)
+  (input_alternating : CorruptedFieldRecovery.IsAlternating input)
+  (cert : CorruptedFieldRecovery.RepresentationPayload n R)
+  (accepted : Eq.{1} (CorruptedFieldRecovery.increasingCoefficientCheck input cert) Bool.true)
+  (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} (((input x) y) z) ((((CorruptedFieldRecovery.RepresentationPayload.tensor cert) x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_certificate_sound
+'CorruptedFieldRecovery.accepted_certificate_sound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
