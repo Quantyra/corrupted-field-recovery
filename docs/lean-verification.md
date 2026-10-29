@@ -61,3 +61,14 @@ The exact-source GCP run `cfr-sampling-counts-dev04-20261029T060817Z-627c49` pas
 Root accepted the exact narrow statements: a surjective binary-linear map between finite-dimensional spaces of dimensions n and r has kernel cardinality 2^(n-r), and four choices from an arbitrary finite subset A give |A|^4 clean words. The kernel need not be linear over the hidden extension field. The second statement is a generic finite-set count. Neither theorem yet connects the manuscript's actual support promise to an independent uniform sampler or derives the clean-sampling probability, field-generation bounds, success amplification or complete S010.
 
 Remaining to-do list: instantiate the support-kernel count and derive the actual finite sampling ratio; prove field-generation/translate estimates and bounded amplification; complete constructor/certificate validation, charged costs and final theorem assembly.
+
+
+## GCP physical four-word clean counts, 29 October 2026 UTC
+
+The exact-source GCP run `cfr-sampling-counts-dev08-20261029T064827Z-3ebddf` passed its focused build, four-declaration untruncated type/transitive-axiom audit and zero-warning gate. Source SHA-256 for `SamplingCounts.lean` is `22510a882dfc9a5c69a6d3f4c904c33e171c76beeb5ffcdd7e41b566f28eab05`. Earlier failed extensions and the local launch transport crash remain preserved. Observation and collection recovered this same launched run; the compiler was not repeated. All four audited declarations report only `propext`, `Classical.choice` and `Quot.sound`.
+
+Root accepted the precise new conjunction: for a surjective binary-linear support map from `BinaryVector n` to `BinaryVector r`, with r <= R, the number of four-word tuples all in its kernel is 2^(4(n-r)), and that count multiplied by 2^(4R) is at least the number of all four-word tuples. The count uses the physical binary input space and does not assume extension-field linearity. This is an exact finite-count bound. The formal statement does not define an actual random-tape measure or establish conditional basis/generator events, a successful recovery trial, amplification or complete S010.
+
+The guarded batch shutdown `2dc644` preserved every launched outcome, verified the task lock and absence of competing workloads or Lean/Lake processes, removed task-only external egress and verified the dedicated builder `TERMINATED` at 2026-10-29 07:01:38 UTC. Its persistent disk and compiled cache remain retained. Exact shutdown/cache receipts are alongside the dev08 evidence; no live compiler or queued capture remains.
+
+Remaining to-do list: connect the support-map count to actual uniform independent tape sampling; prove the remaining conditional finite-field and translate estimates, trial success and amplification; finish constructor/certificate validation, charged costs and the final theorem audit.

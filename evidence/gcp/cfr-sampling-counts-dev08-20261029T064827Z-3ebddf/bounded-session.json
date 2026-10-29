@@ -1,0 +1,6 @@
+{
+  "lastStartTimestamp": "2026-10-28T22:30:06.330-07:00",
+  "ceiling": "2026-10-29T02:30:06.330000-07:00",
+  "stage_timeout_seconds": 1800,
+  "reserve_seconds": 1500
+}

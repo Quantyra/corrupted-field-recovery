@@ -1,0 +1,31 @@
+USERSPACE_WORKLOAD
+    PID    PPID COMMAND         COMMAND
+    627       1 dbus-daemon     @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    631       1 google_osconfig /usr/bin/google_osconfig_agent
+    639       1 networkd-dispat /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    658       1 snapd           /usr/lib/snapd/snapd
+    726       1 chronyd         /usr/sbin/chronyd -F 1
+    727     726 chronyd         /usr/sbin/chronyd -F 1
+    759       1 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+    875       1 agetty          /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+    881       1 agetty          /sbin/agetty -o -p -- \u --noclear - linux
+  21287       1 multipathd      /sbin/multipathd -d -s
+  22636       1 systemd-journal /usr/lib/systemd/systemd-journald
+  22641       1 systemd-resolve /usr/lib/systemd/systemd-resolved
+  22651       1 systemd-udevd   /usr/lib/systemd/systemd-udevd
+  22655       1 systemd-network /usr/lib/systemd/systemd-networkd
+  22659       1 google_guest_ag /usr/bin/google_guest_agent
+  22805       1 systemd-logind  /usr/lib/systemd/systemd-logind
+  22809       1 cron            /usr/sbin/cron -f -P
+  27927       1 sshd            sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+  28194       1 polkitd         /usr/lib/polkit-1/polkitd --no-debug
+  28879       1 rsyslogd        /usr/sbin/rsyslogd -n -iNONE
+  30434   27927 sshd            sshd: dfredriksen_quantyra_org [priv]
+  30441       1 systemd         /usr/lib/systemd/systemd --user
+  30442   30441 (sd-pam)        (sd-pam)
+  30507   30434 sshd            sshd: dfredriksen_quantyra_org@notty
+  30508   30507 bash            bash -c echo c2V0IC1ldQpwcmludGYgIlVTRVJTUEFDRV9XT1JLTE9BRFxuIgpwcyAtZW8gcGlkLHBwaWQsY29tbSxhcmdzIHwgYXdrICckMiAhPSAyICYmICQxID4gMiB7cHJpbnR9JwpwcmludGYgIk5PX0FDVElWRV9DT01QSUxFUlxuIgppZiBwZ3JlcCAteCBsZWFuIHx8IHBncmVwIC14IGxha2U7IHRoZW4gZXhpdCA3MzsgZmkKZmxvY2sgLW4gIiRIT01FL3F1YW50eXJhLWNmci1ydW5zL2Nmci1sZWFuNDMwLWM1ZWEtaXNvbGF0ZWQtMjAyNjEwMjhhL2xvY2siIHRydWUK | base64 -d | bash
+  30511   30508 bash            bash
+  30512   30511 ps              ps -eo pid,ppid,comm,args
+  30513   30511 awk             awk $2 != 2 && $1 > 2 {print}
+NO_ACTIVE_COMPILER
