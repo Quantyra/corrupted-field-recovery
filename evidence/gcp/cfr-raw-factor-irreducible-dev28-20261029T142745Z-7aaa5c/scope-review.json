@@ -1,0 +1,10 @@
+{
+  "reviewer": "Root",
+  "date": "2026-10-29",
+  "accepted_scope": "The raw irreducible-mask predicate implies polynomial irreducibility under explicit s >= 1, decoded degree = s and monicity hypotheses.",
+  "remaining": "The candidate gate must still supply degree and monicity; converse, quotient-field construction and complete validator remain open.",
+  "evidence": "collected/logs/audit.stdout.txt",
+  "audited_declarations": 16,
+  "owned_warnings": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"]
+}
