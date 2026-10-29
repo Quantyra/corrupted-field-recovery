@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-29T22:34:45.635887+00:00",
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Binary-field trace-dual linear equivalence; definition of trace-image support U; surjective physical observation and zero-kernel/coannihilator equivalence for explicit Q and W.",
+  "remaining": "Does not identify W with actual modeImage E or prove sampler/recovery.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261029T221338Z-1cdd08"
+}

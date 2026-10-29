@@ -1,0 +1,56 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.binaryFieldTripleTraceDualEquiv
+CorruptedFieldRecovery.binaryFieldTripleTraceDualEquiv.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+        [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+          LinearEquiv.{0, 0, u_1, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+            (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+            (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+CFR_TYPE_END:CorruptedFieldRecovery.binaryFieldTripleTraceDualEquiv
+'CorruptedFieldRecovery.binaryFieldTripleTraceDualEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualTraceSupportSubmodule
+@CorruptedFieldRecovery.actualTraceSupportSubmodule.{u_1} : {K : Type u_1} →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+        [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+          (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K)) →
+            Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField
+              (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+CFR_TYPE_END:CorruptedFieldRecovery.actualTraceSupportSubmodule
+'CorruptedFieldRecovery.actualTraceSupportSubmodule' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.physicalSupportObservation_surjective
+@CorruptedFieldRecovery.physicalSupportObservation_surjective.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (W :
+    Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField
+      (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K))),
+  Function.Surjective.{1, u_1 + 1} ⇑(CorruptedFieldRecovery.physicalSupportObservation.{u_1} Q W)
+CFR_TYPE_END:CorruptedFieldRecovery.physicalSupportObservation_surjective
+'CorruptedFieldRecovery.physicalSupportObservation_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.physicalSupportObservation_kernel_iff
+@CorruptedFieldRecovery.physicalSupportObservation_kernel_iff.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (W :
+    Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField
+      (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K)))
+  (x : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+  Iff (Eq.{u_1 + 1} ((CorruptedFieldRecovery.physicalSupportObservation.{u_1} Q W) x) 0)
+    (Membership.mem.{u_1, u_1} (Submodule.dualCoannihilator.{0, u_1} W) (Q x))
+CFR_TYPE_END:CorruptedFieldRecovery.physicalSupportObservation_kernel_iff
+'CorruptedFieldRecovery.physicalSupportObservation_kernel_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

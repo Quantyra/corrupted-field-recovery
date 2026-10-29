@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.binaryFieldTripleTraceDualEquiv": {
+    "emitted_type": "CorruptedFieldRecovery.binaryFieldTripleTraceDualEquiv.{u_1} : (K : Type u_1) \u2192\n  [inst : Field.{u_1} K] \u2192\n    [inst_1 : Finite.{u_1 + 1} K] \u2192\n      [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] \u2192\n        [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] \u2192\n          LinearEquiv.{0, 0, u_1, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)\n            (CorruptedFieldRecovery.FieldTriple.{u_1} K)\n            (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n",
+    "sha256": "f9268c196988c7fbd2cd36d76b2bbb64bca459a59ac0b09fbf1ca13bfe510f9b"
+  },
+  "CorruptedFieldRecovery.actualTraceSupportSubmodule": {
+    "emitted_type": "@CorruptedFieldRecovery.actualTraceSupportSubmodule.{u_1} : {K : Type u_1} \u2192\n  [inst : Field.{u_1} K] \u2192\n    [inst_1 : Finite.{u_1 + 1} K] \u2192\n      [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] \u2192\n        [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] \u2192\n          (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K)) \u2192\n            Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField\n              (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n",
+    "sha256": "c1c5b47ebfc8b123be87b3cf5f32d6f03581963c4af94553970afdb060714bb8"
+  },
+  "CorruptedFieldRecovery.physicalSupportObservation_surjective": {
+    "emitted_type": "@CorruptedFieldRecovery.physicalSupportObservation_surjective.{u_1} : \u2200 {K : Type u_1} [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] {s : Nat}\n  (Q :\n    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)\n      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n  (W :\n    Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField\n      (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K))),\n  Function.Surjective.{1, u_1 + 1} \u21d1(CorruptedFieldRecovery.physicalSupportObservation.{u_1} Q W)\n",
+    "sha256": "4a140717f3006e109acabff1ab21c2ed96e2ea707389d011ff5dd66ac8ce80b4"
+  },
+  "CorruptedFieldRecovery.physicalSupportObservation_kernel_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.physicalSupportObservation_kernel_iff.{u_1} : \u2200 {K : Type u_1} [inst : Field.{u_1} K]\n  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] {s : Nat}\n  (Q :\n    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)\n      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n  (W :\n    Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField\n      (Module.Dual.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.FieldTriple.{u_1} K)))\n  (x : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),\n  Iff (Eq.{u_1 + 1} ((CorruptedFieldRecovery.physicalSupportObservation.{u_1} Q W) x) 0)\n    (Membership.mem.{u_1, u_1} (Submodule.dualCoannihilator.{0, u_1} W) (Q x))\n",
+    "sha256": "8f066b4416e29f4973a75e8bd3a46cf4a2ebbf0a88f71938a781033dd2849703"
+  }
+}
