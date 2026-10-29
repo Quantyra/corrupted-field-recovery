@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T04:41:59.468741+00:00",
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "initial_state": "TERMINATED",
+  "purpose": "Authorized CFR certification continuation; dedicated existing builder only"
+}

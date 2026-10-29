@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T04:43:56.050094+00:00",
+  "initial_state": "TERMINATED",
+  "started_for_task": true,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a"
+}

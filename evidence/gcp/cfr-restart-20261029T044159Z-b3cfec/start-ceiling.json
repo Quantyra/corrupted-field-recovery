@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-29T04:44:14.666998+00:00",
+  "lastStartTimestamp": "2026-10-28T21:43:53.276-07:00",
+  "maxRunDuration": {
+    "nanos": 0,
+    "seconds": "14400"
+  },
+  "instanceTerminationAction": "STOP"
+}
