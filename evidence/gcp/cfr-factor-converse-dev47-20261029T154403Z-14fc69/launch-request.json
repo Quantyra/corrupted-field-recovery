@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T15:50:24.691759+00:00",
+  "run": "cfr-factor-converse-dev47-20261029T154403Z-14fc69",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
