@@ -1,0 +1,26 @@
+{
+  "run": "cfr-trace-basebit-dev60-20261030T013322Z-d3e07b",
+  "utc": "2026-10-30T01:37:52.568756+00:00",
+  "archive_sha256": "77f61d7e563e5a9bb510d034beaca5dd12c3fb7354f80b2b3a20690d42520761",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "5592d41ca078423f6fc08adfa4f837f727a8fbb511add25180d3b477f030b4e2",
+    "launch.log": "aec374fef7234b3b80946f6f08b42e319e8d016d8faee97d72f121030d4f3962",
+    "runner-pid": "ab7fab3a8a62ac591821e81894593bee39179f76a972dc97720215bc2f56ca21",
+    "started-utc": "5984276afc87ade9c9e238a667060cbe4ed5f7f966743c040524f1849f65677e",
+    "terminal-receipt.json": "af15b795d7eba295901d924ecc96a001e048334d8ae568d250883bf48d4ff9ee",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "957a52388889f5322562a0c6977d67d295fe86ae2cb46644a2307d05982cda7b",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "29800ffb3a6f505dae7a5b5639ca2c69ae5fdd11437604a312a1d3296527354f",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/emitted-types.json": "9aa707407a07b86df5fec86ca5a34808e475a3f194782ed9a6d180206998fa4c",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "aec374fef7234b3b80946f6f08b42e319e8d016d8faee97d72f121030d4f3962"
+  }
+}

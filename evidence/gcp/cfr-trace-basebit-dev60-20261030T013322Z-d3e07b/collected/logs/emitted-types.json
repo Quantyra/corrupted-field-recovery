@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawMaskPolynomial_natDegree_lt_pow": {
+    "emitted_type": "@CorruptedFieldRecovery.rawMaskPolynomial_natDegree_lt_pow : \u2200 {s n : Nat} (hs : LT.lt.{0} 0 s)\n  (hn : LT.lt.{0} n (HPow.hPow.{0, 0, 0} 2 s)),\n  LT.lt.{0} (Polynomial.natDegree.{0} (CorruptedFieldRecovery.rawMaskPolynomial n)) s\n",
+    "sha256": "4461a20607ef8baa9f6824638b0b01f65fba0c82df8856e3e58bee4415a212ef"
+  },
+  "CorruptedFieldRecovery.rawFieldTraceBits_eq_baseBit": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldTraceBits_eq_baseBit : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (x : Nat)\n  (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 s)),\n  Eq.{1} (CorruptedFieldRecovery.rawFieldTraceBits candidate hcheck x)\n    (ite.{1}\n      (Eq.{1}\n        ((Algebra.trace.{0, 0} (ZMod 2) (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))\n          (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x))\n        0)\n      0 1)\n",
+    "sha256": "81b2b0fde081c6e020d6a78a2e12110daa05b2d01c03f2341b5f9d81388835cb"
+  }
+}

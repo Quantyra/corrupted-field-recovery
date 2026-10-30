@@ -1,0 +1,22 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPolynomial_natDegree_lt_pow
+@CorruptedFieldRecovery.rawMaskPolynomial_natDegree_lt_pow : ∀ {s n : Nat} (hs : LT.lt.{0} 0 s)
+  (hn : LT.lt.{0} n (HPow.hPow.{0, 0, 0} 2 s)),
+  LT.lt.{0} (Polynomial.natDegree.{0} (CorruptedFieldRecovery.rawMaskPolynomial n)) s
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPolynomial_natDegree_lt_pow
+'CorruptedFieldRecovery.rawMaskPolynomial_natDegree_lt_pow' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTraceBits_eq_baseBit
+@CorruptedFieldRecovery.rawFieldTraceBits_eq_baseBit : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (x : Nat)
+  (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 s)),
+  Eq.{1} (CorruptedFieldRecovery.rawFieldTraceBits candidate hcheck x)
+    (ite.{1}
+      (Eq.{1}
+        ((Algebra.trace.{0, 0} (ZMod 2) (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))
+          (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x))
+        0)
+      0 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTraceBits_eq_baseBit
+'CorruptedFieldRecovery.rawFieldTraceBits_eq_baseBit' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

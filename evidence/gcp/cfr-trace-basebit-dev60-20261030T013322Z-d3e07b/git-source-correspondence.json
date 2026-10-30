@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "f9e41d29a94e99ea3a60db29620e223cfaf7be06218b35856d78bbeb5f6a3378",
+  "staged_git_blob_sha256": "f9e41d29a94e99ea3a60db29620e223cfaf7be06218b35856d78bbeb5f6a3378",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/RawFieldTraceBitValue.lean"
+}

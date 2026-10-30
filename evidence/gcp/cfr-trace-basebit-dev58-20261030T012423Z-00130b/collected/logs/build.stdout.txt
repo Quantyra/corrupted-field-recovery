@@ -1,0 +1,24 @@
+✖ [2023/2023] Building CorruptedFieldRecovery.RawFieldTraceBitValue (47s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawFieldTraceBitValue.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldTraceBitValue.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldTraceBitValue.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldTraceBitValue.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldTraceBitValue.setup.json --json
+error: CorruptedFieldRecovery/RawFieldTraceBitValue.lean:20:31: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+error: CorruptedFieldRecovery/RawFieldTraceBitValue.lean:75:42: unsolved goals
+s : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+x : ℕ
+hx : x < 2 ^ s
+tr : ZMod 2 :=
+  (Algebra.trace (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate))) (rawCandidateQuotientClass candidate x)
+bit : ℕ := if tr = 0 then 0 else 1
+hs : 0 < s
+htraceClass :
+  rawCandidateQuotientClass candidate (rawFieldTraceBits candidate hcheck x) =
+    (of (rawCandidateModulus candidate))
+      ((Algebra.trace (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate))) (rawCandidateQuotientClass candidate x))
+hval : tr.val < 2
+ho : tr.val = 1
+⊢ ↑1 = 1
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawFieldTraceBitValue

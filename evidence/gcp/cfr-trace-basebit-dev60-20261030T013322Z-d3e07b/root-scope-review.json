@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Raw mask polynomial degree<s for positive s and n<2^s; actual Nat trace evaluator equals algebraic-trace 0/1 encoding for checked candidate and bounded input.",
+  "remaining": "Determinant, coordinate integration, full verifier and bit-cost remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}
