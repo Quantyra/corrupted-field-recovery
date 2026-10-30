@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawFieldCandidateShapeWorstCaseCharge": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateShapeWorstCaseCharge : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 Nat\n",
+    "sha256": "85acf44e4d23daabe644d79631c08cc9df287cb3eb3072ce25f49d8bff155547"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_cost_le_worst": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_cost_le_worst : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).2\n    (CorruptedFieldRecovery.rawFieldCandidateShapeWorstCaseCharge candidate)\n",
+    "sha256": "5fd0e9b5e080b86fefd3df9376de3ffd879336cebed522ba3e1ea41338dd66c7"
+  }
+}

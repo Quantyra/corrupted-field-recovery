@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T15:29:56.834714+00:00",
+  "accepted": "Explicit all-stages shape worst-case charge and bound for every candidate",
+  "excluded": [
+    "closed polynomial envelope",
+    "operation-machine refinement",
+    "peak space",
+    "full recovery cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

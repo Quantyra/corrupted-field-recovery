@@ -1,0 +1,14 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateShapeWorstCaseCharge
+@CorruptedFieldRecovery.rawFieldCandidateShapeWorstCaseCharge : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateShapeWorstCaseCharge
+'CorruptedFieldRecovery.rawFieldCandidateShapeWorstCaseCharge' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_cost_le_worst
+@CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_cost_le_worst : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).2
+    (CorruptedFieldRecovery.rawFieldCandidateShapeWorstCaseCharge candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_cost_le_worst
+'CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_cost_le_worst' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
