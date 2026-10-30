@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-30T11:01:18.719390+00:00",
+  "review": "Root exact six new types/source",
+  "accepted": "Q-conjugate scalar linear map injection/range; range finrank=finrank K; explicit actual good tape/model/c!=0 balance iff range membership; named finrank theorem gives range finrank=s from hK",
+  "distinction": "Last theorem is not about a separately defined balance submodule. Logical combination identifies balance set dimension, not an executable solver",
+  "excluded": [
+    "executable solver",
+    "computed dimension",
+    "field construction",
+    "constructor success",
+    "runtime costs"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

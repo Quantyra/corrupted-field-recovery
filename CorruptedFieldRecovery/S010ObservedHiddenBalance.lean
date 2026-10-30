@@ -514,6 +514,112 @@ theorem actual_good_tape_observed_balance_iff_scalar
   have hphysicalScalar := physical_scalar_conjugacy_iff_input Q T
   exact hhidden.trans (hinputScalar.trans hphysicalScalar.symm)
 
+/-- The Q-conjugates of field scalar multiplication form a binary-linear
+family of physical endomorphisms. -/
+noncomputable def qScalarConjugateLinearMap
+    {K : Type*} [Field K] [Algebra BinaryField K]
+    {n : Nat} (Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K) :
+    K →ₗ[BinaryField] Module.End BinaryField (BinaryVector n) where
+  toFun k :=
+    { toFun := fun x => Q.symm (k • Q x)
+      map_add' := by
+        intro x y
+        rw [Q.map_add, smul_add, Q.symm.map_add]
+      map_smul' := by
+        intro a x
+        rw [Q.map_smul, smul_comm, ← Q.symm.map_smul]
+        simp [Algebra.smul_def] }
+  map_add' := by
+    intro k₁ k₂
+    apply LinearMap.ext
+    intro x
+    simp [add_smul]
+  map_smul' := by
+    intro a k
+    apply LinearMap.ext
+    intro x
+    change Q.symm ((a • k) • Q x) = a • Q.symm (k • Q x)
+    rw [← Q.symm.map_smul]
+    apply congrArg Q.symm
+    ext <;> simp [Algebra.smul_def] <;> ring
+
+/-- The physical scalar-conjugate submodule has the same dimension as the
+coefficient field, because Q conjugation gives an injective linear map. -/
+noncomputable def qScalarConjugateEndRange
+    {K : Type*} [Field K] [Algebra BinaryField K]
+    {n : Nat} (Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K) :
+    Submodule BinaryField (Module.End BinaryField (BinaryVector n)) :=
+  LinearMap.range (qScalarConjugateLinearMap Q)
+
+theorem qScalarConjugateLinearMap_injective
+    {K : Type*} [Field K] [Algebra BinaryField K]
+    {n : Nat} (Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K) :
+    Function.Injective (qScalarConjugateLinearMap Q) := by
+  intro k₁ k₂ h
+  have hv := congrArg
+    (fun T : Module.End BinaryField (BinaryVector n) =>
+      Q (T (Q.symm (fieldBasis0 : FieldTriple K)))) h
+  have hv' : k₁ • (fieldBasis0 : FieldTriple K) =
+      k₂ • (fieldBasis0 : FieldTriple K) := by
+    simpa [qScalarConjugateLinearMap, fieldBasis0] using hv
+  have h0 := congrArg Prod.fst hv'
+  simpa [fieldBasis0, smul_eq_mul] using h0
+
+theorem qScalarConjugateEndRange_finrank
+    {K : Type*} [Field K] [Algebra BinaryField K]
+    {n : Nat} (Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K) :
+    Module.finrank BinaryField (qScalarConjugateEndRange Q) =
+      Module.finrank BinaryField K := by
+  exact LinearMap.finrank_range_of_inj (qScalarConjugateLinearMap_injective Q)
+
+/-- Under the explicit model promise and the actual good-tape event, the
+physical balance predicate is exactly membership in the Q-conjugate scalar
+submodule; this does not assume the balance conclusion. -/
+theorem actual_good_tape_observed_balance_iff_mem_qScalarConjugateEndRange
+    {K : Type*} [Field K] [Fintype K] [DecidableEq K] [Finite K]
+    [CharP K 2] [Algebra BinaryField K] [FiniteDimensional BinaryField K]
+    [Algebra (ZMod (ringChar K)) K]
+    {s : Nat}
+    (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K)
+    (E : BinaryTensor (3 * s))
+    (U : Submodule BinaryField (KTriple K))
+    (b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K)
+    (tape : FiveWordTape s)
+    (htape : tape ∈ actualFiveGoodTapeSet K Q
+      (modeImageSemanticCleanFieldSet Q E) U b)
+    (Ctotal : BinaryTensor (3 * s)) (c : K)
+    (hmodel : HasObservedTraceDeterminantDecomposition Ctotal E
+      LinearMap.id Q c) (hc : c ≠ 0)
+    (T : Module.End BinaryField (BinaryVector (3 * s))) :
+    actualFourBilinearBalanced Ctotal tape T ↔
+      T ∈ qScalarConjugateEndRange Q := by
+  rcases actual_good_tape_observed_balance_iff_scalar
+      Q E U b tape htape Ctotal c hmodel hc with
+    ⟨fr, v, hfr, hv, hflat, hscalar⟩
+  rw [hscalar T]
+  constructor
+  · rintro ⟨k, hk⟩
+    refine ⟨k, ?_⟩
+    apply LinearMap.ext
+    intro x
+    exact (hk x).symm
+  · rintro ⟨k, hk⟩
+    refine ⟨k, ?_⟩
+    intro x
+    have hx := congrArg (fun S : Module.End BinaryField (BinaryVector (3 * s)) => S x) hk
+    simpa [qScalarConjugateLinearMap] using hx.symm
+
+/-- When the coefficient field has binary dimension `s`, the actual good-tape
+physical balance submodule has dimension `s`, since its members are exactly
+the Q-conjugates of field scalars. -/
+theorem actual_good_tape_observed_balance_submodule_finrank
+    {K : Type*} [Field K] [Fintype K] [Finite K] [CharP K 2]
+    [Algebra BinaryField K]
+    {s : Nat} (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K)
+    (hK : Module.finrank BinaryField K = s) :
+    Module.finrank BinaryField (qScalarConjugateEndRange Q) = s := by
+  rw [qScalarConjugateEndRange_finrank Q, hK]
+
 end
 
 end CorruptedFieldRecovery
