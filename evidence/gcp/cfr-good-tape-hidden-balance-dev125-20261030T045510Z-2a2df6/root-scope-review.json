@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Semantic sampled balance implies hiddenFourBalanced conjugated scalar iff for supplied input equivalence; good tape yields frame/fourth and such hidden balance with Q and input equivalence independent.",
+  "remaining": "No proof the maps coincide, original C/E/contraction algorithm or success.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

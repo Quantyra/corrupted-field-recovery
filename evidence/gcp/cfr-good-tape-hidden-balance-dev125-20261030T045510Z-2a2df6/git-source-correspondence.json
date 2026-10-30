@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "8c08d692e6a5e74562ce3b84a847da26a27ef3f615f34a71cb004d2e01696709",
+  "staged_git_blob_sha256": "8c08d692e6a5e74562ce3b84a847da26a27ef3f615f34a71cb004d2e01696709",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010GoodTapeHiddenBalance.lean"
+}
