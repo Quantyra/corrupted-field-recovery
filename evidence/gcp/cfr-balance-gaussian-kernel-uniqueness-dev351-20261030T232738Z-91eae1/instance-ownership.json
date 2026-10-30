@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-balance-gaussian-kernel-uniqueness-dev351-20261030T232738Z-91eae1",
+  "utc": "2026-10-30T23:30:26.598328+00:00"
+}
