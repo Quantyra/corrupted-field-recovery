@@ -1,0 +1,40 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceCoordinateList_length
+CorruptedFieldRecovery.actualBalanceCoordinateList_length : ∀ (n : Nat),
+  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.actualBalanceCoordinateList n)) n
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceCoordinateList_length
+'CorruptedFieldRecovery.actualBalanceCoordinateList_length' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceColumnList_length
+CorruptedFieldRecovery.actualBalanceColumnList_length : ∀ (s : Nat),
+  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.actualBalanceColumnList s))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceColumnList_length
+'CorruptedFieldRecovery.actualBalanceColumnList_length' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRowList_length
+CorruptedFieldRecovery.actualBalanceRowList_length : ∀ (s : Nat),
+  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.actualBalanceRowList s))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} 3 s)) (HMul.hMul.{0, 0, 0} 3 s))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRowList_length
+'CorruptedFieldRecovery.actualBalanceRowList_length' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceSerializedRow_width
+@CorruptedFieldRecovery.actualBalanceSerializedRow_width : ∀ {s : Nat}
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (row : CorruptedFieldRecovery.ActualBalanceBasisRow s),
+  Eq.{1}
+    (Array.size.{0}
+      (List.toArray.{0}
+        (List.map.{0, 0} (fun col => CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix A tape row col)
+          (CorruptedFieldRecovery.actualBalanceColumnList s))))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceSerializedRow_width
+'CorruptedFieldRecovery.actualBalanceSerializedRow_width' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_exact_outer_size
+@CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_exact_outer_size : ∀ {s : Nat}
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix A tape))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} 3 s)) (HMul.hMul.{0, 0, 0} 3 s))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_exact_outer_size
+'CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_exact_outer_size' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

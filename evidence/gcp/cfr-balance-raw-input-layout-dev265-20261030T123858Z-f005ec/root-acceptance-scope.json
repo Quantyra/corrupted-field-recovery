@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T12:43:45.053624+00:00",
+  "accepted": "Coordinate/column/row enumeration lengths; individual constructed-row width; serializer outer size as exact audited statements",
+  "excluded": [
+    "enumeration bijectivity",
+    "every serialized row width",
+    "elimination",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
