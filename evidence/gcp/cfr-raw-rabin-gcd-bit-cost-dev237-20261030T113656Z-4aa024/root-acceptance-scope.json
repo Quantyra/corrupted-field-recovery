@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T11:41:42.967051+00:00",
+  "accepted": "b>1 implies remainder a b<2^log2 b; paired Euclidean GCD and first projection equality to rawPolynomialGcd forall inputs",
+  "excluded": [
+    "total charge upper bound",
+    "concrete machine refinement",
+    "space",
+    "full verifier bound"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

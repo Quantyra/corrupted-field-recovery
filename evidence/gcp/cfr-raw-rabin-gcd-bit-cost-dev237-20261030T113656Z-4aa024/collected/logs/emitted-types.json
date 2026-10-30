@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.rawPolynomialRemainder_lt_pow_log": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialRemainder_lt_pow_log : \u2200 {a b : Nat} (hb : LT.lt.{0} 1 b),\n  LT.lt.{0} (CorruptedFieldRecovery.rawPolynomialRemainder a b) (HPow.hPow.{0, 0, 0} 2 (Nat.log2 b))\n",
+    "sha256": "e2f3fb5dbbc0934e29a367448831294845d05ca817f124b452148ef45995a1c3"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcdBitCosted : (a a : Nat) \u2192 Prod.{0, 0} Nat Nat\n",
+    "sha256": "723a2cbf7e6d0d71c17276602d75b10580585ccb9437630b731cc9281d1c720f"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcdBitCosted_fst : \u2200 (a b : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).1 (CorruptedFieldRecovery.rawPolynomialGcd a b)\n",
+    "sha256": "7199661c99c978edb5b6a009f94fed3bf01292325294b13950dc9c9f57046367"
+  }
+}

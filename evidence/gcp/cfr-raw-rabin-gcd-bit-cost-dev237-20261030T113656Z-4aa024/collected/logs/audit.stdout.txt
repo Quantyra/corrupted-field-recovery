@@ -1,0 +1,18 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialRemainder_lt_pow_log
+@CorruptedFieldRecovery.rawPolynomialRemainder_lt_pow_log : ∀ {a b : Nat} (hb : LT.lt.{0} 1 b),
+  LT.lt.{0} (CorruptedFieldRecovery.rawPolynomialRemainder a b) (HPow.hPow.{0, 0, 0} 2 (Nat.log2 b))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialRemainder_lt_pow_log
+'CorruptedFieldRecovery.rawPolynomialRemainder_lt_pow_log' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdBitCosted
+CorruptedFieldRecovery.rawPolynomialGcdBitCosted : (a a : Nat) → Prod.{0, 0} Nat Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdBitCosted
+'CorruptedFieldRecovery.rawPolynomialGcdBitCosted' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdBitCosted_fst
+CorruptedFieldRecovery.rawPolynomialGcdBitCosted_fst : ∀ (a b : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).1 (CorruptedFieldRecovery.rawPolynomialGcd a b)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdBitCosted_fst
+'CorruptedFieldRecovery.rawPolynomialGcdBitCosted_fst' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
