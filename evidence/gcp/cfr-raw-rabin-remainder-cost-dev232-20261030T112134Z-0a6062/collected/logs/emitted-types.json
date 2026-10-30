@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.rawPolynomialRemainderBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialRemainderBitCosted : (dividend divisor : Nat) \u2192 Prod.{0, 0} Nat Nat\n",
+    "sha256": "0fbfbc2805aa91971a8d29d763bf40fad8359c064638aa032696fd79fe256e81"
+  },
+  "CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_fst : \u2200 (dividend divisor : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawPolynomialRemainderBitCosted dividend divisor).1\n    (CorruptedFieldRecovery.rawPolynomialRemainder dividend divisor)\n",
+    "sha256": "ee5bb722a82ba242c7bd114dbe55f0582271430bdf7f05967fd4c814e0332bec"
+  },
+  "CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_cost_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_cost_le : \u2200 {A dividend divisor : Nat} (hA : LT.lt.{0} 0 A)\n  (hdividend : LT.lt.{0} dividend (HPow.hPow.{0, 0, 0} 2 A)) (hdivisor : LT.lt.{0} 1 divisor),\n  LE.le.{0} (CorruptedFieldRecovery.rawPolynomialRemainderBitCosted dividend divisor).2\n    (HMul.hMul.{0, 0, 0} A\n      (HMul.hMul.{0, 0, 0} 40\n        (HPow.hPow.{0, 0, 0}\n          (HAdd.hAdd.{0, 0, 0}\n            (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} A (Nat.log2 divisor))\n              (CorruptedFieldRecovery.rawNatBitWidth (Nat.log2 divisor)))\n            4)\n          2)))\n",
+    "sha256": "91d48c56035c57b133f327df572de4202f5dd02d243a79fed1468875cf5a8908"
+  }
+}

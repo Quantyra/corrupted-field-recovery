@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T11:27:37.629444+00:00",
+  "review": "Root exact three types/source",
+  "accepted": "Costed remainder first projection equals rawPolynomialRemainder forall inputs; declared charge at most A*40*(A+log2 divisor+width(log2 divisor)+4)^2 for A>0, dividend<2^A, divisor>1",
+  "excluded": [
+    "concrete bit machine",
+    "space",
+    "full verifier bound"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

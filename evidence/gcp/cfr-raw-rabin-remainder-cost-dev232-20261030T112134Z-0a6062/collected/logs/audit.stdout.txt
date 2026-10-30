@@ -1,0 +1,26 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialRemainderBitCosted
+CorruptedFieldRecovery.rawPolynomialRemainderBitCosted : (dividend divisor : Nat) → Prod.{0, 0} Nat Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialRemainderBitCosted
+'CorruptedFieldRecovery.rawPolynomialRemainderBitCosted' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_fst
+CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_fst : ∀ (dividend divisor : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawPolynomialRemainderBitCosted dividend divisor).1
+    (CorruptedFieldRecovery.rawPolynomialRemainder dividend divisor)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_fst
+'CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_fst' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_cost_le
+@CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_cost_le : ∀ {A dividend divisor : Nat} (hA : LT.lt.{0} 0 A)
+  (hdividend : LT.lt.{0} dividend (HPow.hPow.{0, 0, 0} 2 A)) (hdivisor : LT.lt.{0} 1 divisor),
+  LE.le.{0} (CorruptedFieldRecovery.rawPolynomialRemainderBitCosted dividend divisor).2
+    (HMul.hMul.{0, 0, 0} A
+      (HMul.hMul.{0, 0, 0} 40
+        (HPow.hPow.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} A (Nat.log2 divisor))
+              (CorruptedFieldRecovery.rawNatBitWidth (Nat.log2 divisor)))
+            4)
+          2)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_cost_le
+'CorruptedFieldRecovery.rawPolynomialRemainderBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
