@@ -1,0 +1,38 @@
+✖ [2048/2048] Building CorruptedFieldRecovery.RawRabinRemainderCost (2.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinRemainderCost.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinRemainderCost.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinRemainderCost.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinRemainderCost.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinRemainderCost.setup.json --json
+warning: CorruptedFieldRecovery/RawRabinRemainderCost.lean:22:69: This simp argument is unused:
+  hzero
+
+Hint: Omit it from the simp argument list.
+  simp [rawPolynomialRemainderBitCosted, rawPolynomialRemainder, hz̵e̵r̵o,̵ ̵h̵o̵ne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/RawRabinRemainderCost.lean:48:47: unsolved goals
+A dividend divisor : ℕ
+hA : 0 < A
+hdividend : dividend < 2 ^ A
+hdivisor : 1 < divisor
+hdivisor0 : divisor ≠ 0
+hmodLower : 2 ^ divisor.log2 ≤ divisor
+hmodUpper : divisor < 2 ^ (divisor.log2 + 1)
+hdividendLog : dividend.log2 < A
+hfuel : dividend.log2 + 1 ≤ A
+hbound :
+  (rawReduceFuelBitCosted divisor divisor.log2 (dividend.log2 + 1) dividend).2 ≤
+    (dividend.log2 + 1) * (40 * (A + divisor.log2 + rawNatBitWidth divisor.log2 + 4) ^ 2)
+hmul :
+  (dividend.log2 + 1) * (40 * (A + divisor.log2 + rawNatBitWidth divisor.log2 + 4) ^ 2) ≤
+    A * (40 * (A + divisor.log2 + rawNatBitWidth divisor.log2 + 4) ^ 2)
+⊢ (if divisor = 1 then (0, rawNatBitWidth divisor + 1)
+      else rawReduceFuelBitCosted divisor divisor.log2 (dividend.log2 + 1) dividend).2 =
+    (rawReduceFuelBitCosted divisor divisor.log2 (dividend.log2 + 1) dividend).2
+warning: CorruptedFieldRecovery/RawRabinRemainderCost.lean:49:54: This simp argument is unused:
+  hdivisor
+
+Hint: Omit it from the simp argument list.
+  simp [rawPolynomialRemainderBitCosted, hdivisor0,̵ ̵h̵d̵i̵v̵i̵s̵o̵r̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinRemainderCost
