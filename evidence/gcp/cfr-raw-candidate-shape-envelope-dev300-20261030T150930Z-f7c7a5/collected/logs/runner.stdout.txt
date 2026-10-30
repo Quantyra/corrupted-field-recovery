@@ -1,0 +1,5 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-raw-candidate-shape-envelope-dev300-20261030T150930Z-f7c7a5/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build

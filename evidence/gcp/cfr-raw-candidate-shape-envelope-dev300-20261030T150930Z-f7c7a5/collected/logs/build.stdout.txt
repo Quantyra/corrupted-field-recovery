@@ -1,0 +1,152 @@
+✖ [2067/2067] Building CorruptedFieldRecovery.RawCandidateShapeCostBounds (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapeCostBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapeCostBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCandidateShapeCostBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCandidateShapeCostBounds.setup.json --json
+error: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:32:8: unsolved goals
+case pos
+s : ℕ
+candidate : RawFieldCandidate s
+hs : 1 ≤ s
+hm : Array.size candidate.modulus = s + 1
+ht : rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1
+hscalarSize : Array.size candidate.scalar = s
+⊢ (if (rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2 = 1 then
+        (!decide ((rawFieldBitsToNatBitCosted candidate.scalar).1 = 0),
+          rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+                  ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                        rawShapeDivisionCharge (rawFieldBitsToNatBitCosted candidate.modulus).1 (2 ^ s) +
+                      rawShapeDivisionCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s) 2 +
+                    rawShapeCompareCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2) 1) +
+                rawShapeCompareCharge s s +
+              (rawFieldBitsToNatBitCosted candidate.scalar).2 +
+            rawNatBitWidth (rawFieldBitsToNatBitCosted candidate.scalar).1)
+      else
+        (false,
+          rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+            ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                  rawShapeDivisionCharge (rawFieldBitsToNatBitCosted candidate.modulus).1 (2 ^ s) +
+                rawShapeDivisionCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s) 2 +
+              rawShapeCompareCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2) 1))).2 ≤
+    rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+                    (rawFieldBitsToNatBitCosted candidate.modulus).2 +
+                  s +
+                rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s) +
+              rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2 +
+            rawShapeCompareCharge 1 1 +
+          rawShapeCompareCharge s s +
+        (rawFieldBitsToNatBitCosted candidate.scalar).2 +
+      rawNatBitWidth (rawFieldBitsToNat candidate.scalar)
+error: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:34:8: unsolved goals
+case neg
+s : ℕ
+candidate : RawFieldCandidate s
+hs : 1 ≤ s
+hm : Array.size candidate.modulus = s + 1
+ht : rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1
+hscalarSize : ¬Array.size candidate.scalar = s
+⊢ (if (rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2 = 1 then
+        (false,
+          rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+              ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                    rawShapeDivisionCharge (rawFieldBitsToNatBitCosted candidate.modulus).1 (2 ^ s) +
+                  rawShapeDivisionCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s) 2 +
+                rawShapeCompareCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2) 1) +
+            rawShapeCompareCharge (Array.size candidate.scalar) s)
+      else
+        (false,
+          rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+            ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                  rawShapeDivisionCharge (rawFieldBitsToNatBitCosted candidate.modulus).1 (2 ^ s) +
+                rawShapeDivisionCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s) 2 +
+              rawShapeCompareCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2) 1))).2 ≤
+    rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+                    (rawFieldBitsToNatBitCosted candidate.modulus).2 +
+                  s +
+                rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s) +
+              rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2 +
+            rawShapeCompareCharge 1 1 +
+          rawShapeCompareCharge (Array.size candidate.scalar) s +
+        (rawFieldBitsToNatBitCosted candidate.scalar).2 +
+      rawNatBitWidth (rawFieldBitsToNat candidate.scalar)
+error: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:36:6: unsolved goals
+case neg
+s : ℕ
+candidate : RawFieldCandidate s
+hs : 1 ≤ s
+hm : Array.size candidate.modulus = s + 1
+ht : ¬rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1
+⊢ (if (rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2 = 1 then
+        if Array.size candidate.scalar = s then
+          (!decide ((rawFieldBitsToNatBitCosted candidate.scalar).1 = 0),
+            rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+                    ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                          rawShapeDivisionCharge (rawFieldBitsToNatBitCosted candidate.modulus).1 (2 ^ s) +
+                        rawShapeDivisionCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s) 2 +
+                      rawShapeCompareCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2) 1) +
+                  rawShapeCompareCharge (Array.size candidate.scalar) s +
+                (rawFieldBitsToNatBitCosted candidate.scalar).2 +
+              rawNatBitWidth (rawFieldBitsToNatBitCosted candidate.scalar).1)
+        else
+          (false,
+            rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+                ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                      rawShapeDivisionCharge (rawFieldBitsToNatBitCosted candidate.modulus).1 (2 ^ s) +
+                    rawShapeDivisionCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s) 2 +
+                  rawShapeCompareCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2) 1) +
+              rawShapeCompareCharge (Array.size candidate.scalar) s)
+      else
+        (false,
+          rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+            ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                  rawShapeDivisionCharge (rawFieldBitsToNatBitCosted candidate.modulus).1 (2 ^ s) +
+                rawShapeDivisionCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s) 2 +
+              rawShapeCompareCharge ((rawFieldBitsToNatBitCosted candidate.modulus).1 / 2 ^ s % 2) 1))).2 ≤
+    rawShapeCompareCharge 1 s + rawShapeCompareCharge (s + 1) (s + 1) +
+                    (rawFieldBitsToNatBitCosted candidate.modulus).2 +
+                  s +
+                rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s) +
+              rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2 +
+            rawShapeCompareCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2) 1 +
+          rawShapeCompareCharge (Array.size candidate.scalar) s +
+        (rawFieldBitsToNatBitCosted candidate.scalar).2 +
+      rawNatBitWidth (rawFieldBitsToNat candidate.scalar)
+error: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:38:4: unsolved goals
+case neg
+s : ℕ
+candidate : RawFieldCandidate s
+hs : 1 ≤ s
+hm : ¬Array.size candidate.modulus = s + 1
+⊢ rawShapeCompareCharge 1 s + rawShapeCompareCharge (Array.size candidate.modulus) (s + 1) ≤
+    rawShapeCompareCharge 1 s + rawShapeCompareCharge (Array.size candidate.modulus) (s + 1) +
+                    (rawFieldBitsToNatBitCosted candidate.modulus).2 +
+                  s +
+                rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s) +
+              rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2 +
+            rawShapeCompareCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2) 1 +
+          rawShapeCompareCharge (Array.size candidate.scalar) s +
+        (rawFieldBitsToNatBitCosted candidate.scalar).2 +
+      rawNatBitWidth (rawFieldBitsToNat candidate.scalar)
+error: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:40:2: unsolved goals
+case neg
+s : ℕ
+candidate : RawFieldCandidate s
+hs : ¬1 ≤ s
+⊢ rawShapeCompareCharge 1 s ≤
+    rawShapeCompareCharge 1 s + rawShapeCompareCharge (Array.size candidate.modulus) (s + 1) +
+                    (rawFieldBitsToNatBitCosted candidate.modulus).2 +
+                  s +
+                rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s) +
+              rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2 +
+            rawShapeCompareCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2) 1 +
+          rawShapeCompareCharge (Array.size candidate.scalar) s +
+        (rawFieldBitsToNatBitCosted candidate.scalar).2 +
+      rawNatBitWidth (rawFieldBitsToNat candidate.scalar)
+warning: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:37:57: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp [rawFieldCandidateShapeCheckBitCosted,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵rawFieldCandidateShapeWorstCaseCharge, hs, hm,̵ ̵h̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCandidateShapeCostBounds
