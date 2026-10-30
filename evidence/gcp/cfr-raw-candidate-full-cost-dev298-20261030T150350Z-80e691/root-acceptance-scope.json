@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T15:07:30.331171+00:00",
+  "accepted": "List/array decoding declared-cost bounds; full costed fast candidate gate Boolean refinement; successful-shape aggregate bound with explicit shape charge",
+  "excluded": [
+    "shape charge upper bound",
+    "failed-shape aggregate bound",
+    "concrete machine",
+    "live space",
+    "full recovery verifier bound"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

@@ -1,0 +1,46 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsToNatBitCosted_cost_le
+CorruptedFieldRecovery.rawBitsToNatBitCosted_cost_le : ∀ (bits : List.{0} Bool),
+  LE.le.{0} (CorruptedFieldRecovery.rawBitsToNatBitCosted bits).2
+    (HMul.hMul.{0, 0, 0} (List.length.{0} bits) (HAdd.hAdd.{0, 0, 0} (List.length.{0} bits) 2))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsToNatBitCosted_cost_le
+'CorruptedFieldRecovery.rawBitsToNatBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_cost_le
+CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_cost_le : ∀ (bits : CorruptedFieldRecovery.RawFieldBits),
+  LE.le.{0} (CorruptedFieldRecovery.rawFieldBitsToNatBitCosted bits).2
+    (HMul.hMul.{0, 0, 0} (Array.size.{0} bits) (HAdd.hAdd.{0, 0, 0} (Array.size.{0} bits) 3))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_cost_le
+'CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted
+@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) → Prod.{0, 0} Bool Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted
+'CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_fst
+@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_fst : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted candidate).1
+    (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_fst
+'CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_fst' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le
+@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hshape : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true),
+  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted candidate).2
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).2
+        (HPow.hPow.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 2))
+      (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2)
+        (CorruptedFieldRecovery.rawRabinScanUniformCharge (HAdd.hAdd.{0, 0, 0} s 1) (HDiv.hDiv.{0, 0, 0} s 2))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le
+'CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
