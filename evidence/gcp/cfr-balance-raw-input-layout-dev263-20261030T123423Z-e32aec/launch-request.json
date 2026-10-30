@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T12:36:28.983712+00:00",
+  "run": "cfr-balance-raw-input-layout-dev263-20261030T123423Z-e32aec",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-balance-raw-input-layout-dev263-20261030T123423Z-e32aec",
+  "utc": "2026-10-30T12:35:45.791890+00:00"
+}
