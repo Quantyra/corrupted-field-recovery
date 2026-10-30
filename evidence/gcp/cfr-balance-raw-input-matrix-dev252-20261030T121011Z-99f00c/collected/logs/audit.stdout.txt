@@ -1,0 +1,68 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawInputCoefficientMatrix
+@CorruptedFieldRecovery.actualBalanceRawInputCoefficientMatrix : {s : Nat} →
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) →
+    (tape : CorruptedFieldRecovery.FiveWordTape s) →
+      Matrix.{0, 0, 0} (CorruptedFieldRecovery.ActualBalanceBasisRow s)
+        (Prod.{0, 0} (Fin (HMul.hMul.{0, 0, 0} 3 s)) (Fin (HMul.hMul.{0, 0, 0} 3 s))) (ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawInputCoefficientMatrix
+'CorruptedFieldRecovery.actualBalanceRawInputCoefficientMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_row_spec
+@CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_row_spec : ∀ {s : Nat}
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (ri ci : Nat) (row : CorruptedFieldRecovery.ActualBalanceBasisRow s)
+  (col : Prod.{0, 0} (Fin (HMul.hMul.{0, 0, 0} 3 s)) (Fin (HMul.hMul.{0, 0, 0} 3 s)))
+  (hr : Eq.{1} (GetElem?.getElem?.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceRowList s) ri) (Option.some.{0} row))
+  (hc :
+    Eq.{1} (GetElem?.getElem?.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceColumnList s) ci) (Option.some.{0} col)),
+  Eq.{1}
+    (Option.bind.{0, 0}
+      (GetElem?.getElem?.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix A tape) ri) fun r =>
+      GetElem?.getElem?.{0, 0, 0} r ci)
+    (Option.some.{0} (CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix A tape row col))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_row_spec
+'CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_row_spec' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_outer_size
+@CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_outer_size : ∀ {s : Nat}
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix A tape))
+    (List.length.{0} (CorruptedFieldRecovery.actualBalanceRowList s))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_outer_size
+'CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_outer_size' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck
+@CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck : {s : Nat} →
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) →
+    (tape : CorruptedFieldRecovery.FiveWordTape s) →
+      (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck
+'CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck_iff
+@CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck_iff : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),
+  Iff (Eq.{1} (CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck raw tape T) Bool.true)
+    (And
+      (Eq.{1} (Array.size.{0} raw)
+        (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))
+          (HMul.hMul.{0, 0, 0} 3 s)))
+      (CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.decodeRawArray raw) tape T))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck_iff
+'CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawInputMatrix_eq_decoded
+@CorruptedFieldRecovery.actualBalanceRawInputMatrix_eq_decoded : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  Eq.{1} (CorruptedFieldRecovery.actualBalanceRawInputCoefficientMatrix raw tape)
+    (CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix (CorruptedFieldRecovery.decodeRawArray raw) tape)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawInputMatrix_eq_decoded
+'CorruptedFieldRecovery.actualBalanceRawInputMatrix_eq_decoded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

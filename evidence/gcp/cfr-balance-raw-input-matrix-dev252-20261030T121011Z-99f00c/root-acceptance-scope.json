@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T12:14:24.330017+00:00",
+  "accepted": "Raw matrix based on decodeRawArray; serializer cell under row/column get? witnesses and outer size=list length; Bool iff size=(3s)^3 and balance of decoded tensor for supplied T; definitional matrix equality",
+  "excluded": [
+    "enumeration completeness/cardinal lengths",
+    "arbitrary raw input validity",
+    "elimination",
+    "complexity",
+    "T representation"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
