@@ -1,0 +1,39 @@
+✖ [2981/2981] Building CorruptedFieldRecovery.S010ObservedHiddenBalance (10s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.setup.json --json
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:422:33: Unknown identifier `n`
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:425:34: Unknown identifier `n`
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:439:24: unsolved goals
+K : Type u_1
+inst✝⁴ : Field K
+inst✝³ : Finite K
+inst✝² : CharP K 2
+inst✝¹ : Algebra BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+iota : BinaryInput K (3 * s) ≃ₗ[ZMod (ringChar K)] FieldTriple K := modeImage_inputEquiv_from_Q Q
+hp : ringChar K = 2 := ringChar.eq K 2
+Tin : Module.End (ZMod (ringChar K)) (BinaryInput K (3 * s)) := physicalEndomorphismToInput hp T
+hinput : ∀ (x : BinaryInput K sorry), iota sorry = Q (modeImage_inputVectorToBinary sorry)
+hinputT : ∀ (x : BinaryInput K sorry), iota (Tin sorry) = Q (T (modeImage_inputVectorToBinary sorry))
+k : K
+hk : ∀ (x : BinaryVector (3 * s)), T x = Q.symm (k • Q x)
+x : BinaryInput K (3 * s)
+⊢ k • Q (modeImage_inputVectorToBinary x) = k • iota x
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:453:25: Type mismatch
+  hk xi
+has type
+  Eq.{1} ((physicalEndomorphismToInput ⋯ T) xi)
+    ((modeImage_inputEquiv_from_Q Q).symm (k • (modeImage_inputEquiv_from_Q Q) xi))
+but is expected to have type
+  Eq.{u_1 + 1} (iota (Tin xi)) (k • iota xi)
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:477:13: typeclass instance problem is stuck
+  FiniteDimensional (?m.176 fr v) (FieldTriple K)
+
+Note: Lean will not try to resolve this typeclass instance problem because the first, third, and fifth type arguments to `FiniteDimensional` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ObservedHiddenBalance
