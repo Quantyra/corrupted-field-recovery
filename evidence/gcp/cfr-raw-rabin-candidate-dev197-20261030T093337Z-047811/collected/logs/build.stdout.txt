@@ -1,0 +1,91 @@
+✖ [2053/2053] Building CorruptedFieldRecovery.RawRabinCandidateCorrectness (2.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinCandidateCorrectness.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinCandidateCorrectness.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinCandidateCorrectness.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinCandidateCorrectness.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinCandidateCorrectness.setup.json --json
+error: CorruptedFieldRecovery/RawRabinCandidateCorrectness.lean:83:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rawMaskPolynomial (rawBitsToNat (rawPolynomialBits ?p))
+in the target expression
+  c ∣ X ^ 2 ^ d - X
+
+case mp
+s : ℕ
+candidate : RawFieldCandidate s
+hshape : rawFieldCandidateShapeCheck candidate = true
+hs : 1 ≤ s
+left✝² : Array.size candidate.modulus = s + 1
+left✝¹ : rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1
+left✝ : Array.size candidate.scalar = s
+right✝ : rawFieldBitsToNat candidate.scalar ≠ 0
+hmod :
+  (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).Monic ∧
+    (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).natDegree = s
+hmaskne : rawFieldBitsToNat candidate.modulus ≠ 0
+hscan :
+  rawCandidateRabinCheck candidate = true ↔
+    ∀ (d : ℕ),
+      1 ≤ d →
+        d ≤ s / 2 →
+          rawMaskPairCoprime (rawFieldBitsToNat candidate.modulus) (rawBitsToNat (rawPolynomialBits (X ^ 2 ^ d - X)))
+hcriterion :
+  Irreducible (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)) ↔
+    ∀ (d : ℕ),
+      1 ≤ d → d ≤ s / 2 → rawPolynomialCoprime (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)) (X ^ 2 ^ d - X)
+h :
+  ∀ (d : ℕ),
+    1 ≤ d →
+      d ≤ s / 2 →
+        rawMaskPairCoprime (rawFieldBitsToNat candidate.modulus) (rawBitsToNat (rawPolynomialBits (X ^ 2 ^ d - X)))
+d : ℕ
+hdlo : 1 ≤ d
+hdhi : d ≤ s / 2
+hp :
+  ∀ (c : (ZMod 2)[X]),
+    c ∣ rawMaskPolynomial (rawFieldBitsToNat candidate.modulus) →
+      c ∣ rawMaskPolynomial (rawBitsToNat (rawPolynomialBits (X ^ 2 ^ d - X))) → IsUnit c
+c : (ZMod 2)[X]
+hcf : c ∣ rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)
+hcx : c ∣ X ^ 2 ^ d - X
+⊢ c ∣ rawMaskPolynomial (rawBitsToNat (rawPolynomialBits (X ^ 2 ^ d - X)))
+error: CorruptedFieldRecovery/RawRabinCandidateCorrectness.lean:95:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rawMaskPolynomial mask
+in the target expression
+  c ∣ X ^ 2 ^ d - X
+
+case mpr
+s : ℕ
+candidate : RawFieldCandidate s
+hshape : rawFieldCandidateShapeCheck candidate = true
+hs : 1 ≤ s
+left✝² : Array.size candidate.modulus = s + 1
+left✝¹ : rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1
+left✝ : Array.size candidate.scalar = s
+right✝ : rawFieldBitsToNat candidate.scalar ≠ 0
+hmod :
+  (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).Monic ∧
+    (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).natDegree = s
+hmaskne : rawFieldBitsToNat candidate.modulus ≠ 0
+hscan :
+  rawCandidateRabinCheck candidate = true ↔
+    ∀ (d : ℕ),
+      1 ≤ d →
+        d ≤ s / 2 →
+          rawMaskPairCoprime (rawFieldBitsToNat candidate.modulus) (rawBitsToNat (rawPolynomialBits (X ^ 2 ^ d - X)))
+hcriterion :
+  Irreducible (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)) ↔
+    ∀ (d : ℕ),
+      1 ≤ d → d ≤ s / 2 → rawPolynomialCoprime (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)) (X ^ 2 ^ d - X)
+h :
+  ∀ (d : ℕ),
+    1 ≤ d → d ≤ s / 2 → rawPolynomialCoprime (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)) (X ^ 2 ^ d - X)
+d : ℕ
+hdlo : 1 ≤ d
+hdhi : d ≤ s / 2
+hp : rawPolynomialCoprime (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)) (X ^ 2 ^ d - X)
+mask : ℕ := ⋯
+hdecode : rawMaskPolynomial mask = X ^ 2 ^ d - X
+c : (ZMod 2)[X]
+hcf : c ∣ rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)
+hcm : c ∣ rawMaskPolynomial mask
+⊢ c ∣ X ^ 2 ^ d - X
+error: CorruptedFieldRecovery/RawRabinCandidateCorrectness.lean:121:69: Unknown identifier `hvalid`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinCandidateCorrectness
