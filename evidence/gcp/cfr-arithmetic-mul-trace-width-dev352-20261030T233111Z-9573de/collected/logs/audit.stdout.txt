@@ -1,0 +1,21 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMulActivationTrace
+CorruptedFieldRecovery.rawPolyMulActivationTrace : (a a : Nat) → List.{0} CorruptedFieldRecovery.RawArithmeticFrame
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMulActivationTrace
+'CorruptedFieldRecovery.rawPolyMulActivationTrace' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMulActivationTrace_registers_lt
+@CorruptedFieldRecovery.rawPolyMulActivationTrace_registers_lt : ∀ {a b W : Nat}
+  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))
+  (frame : CorruptedFieldRecovery.RawArithmeticFrame)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolyMulActivationTrace a b) frame) (word : Nat)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),
+  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 W) 1))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMulActivationTrace_registers_lt
+'CorruptedFieldRecovery.rawPolyMulActivationTrace_registers_lt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMulActivationTrace_length_le_charge
+CorruptedFieldRecovery.rawPolyMulActivationTrace_length_le_charge : ∀ (a b : Nat),
+  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.rawPolyMulActivationTrace a b))
+    (CorruptedFieldRecovery.rawPolyMulBitCosted a b).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMulActivationTrace_length_le_charge
+'CorruptedFieldRecovery.rawPolyMulActivationTrace_length_le_charge' depends on axioms: [propext, Quot.sound.{u}]

@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.rawPolyMulActivationTrace": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolyMulActivationTrace : (a a : Nat) \u2192 List.{0} CorruptedFieldRecovery.RawArithmeticFrame\n",
+    "sha256": "14bf425d812612d1018037db16fc74e990b5350646b1680ad1c4f9ffa3e9a556"
+  },
+  "CorruptedFieldRecovery.rawPolyMulActivationTrace_registers_lt": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolyMulActivationTrace_registers_lt : \u2200 {a b W : Nat}\n  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))\n  (frame : CorruptedFieldRecovery.RawArithmeticFrame)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolyMulActivationTrace a b) frame) (word : Nat)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 W) 1))\n",
+    "sha256": "16e2e799a60baa2e56914a5e3acc351067d4be7283ceb4dcb3164d72b731aa48"
+  },
+  "CorruptedFieldRecovery.rawPolyMulActivationTrace_length_le_charge": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolyMulActivationTrace_length_le_charge : \u2200 (a b : Nat),\n  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.rawPolyMulActivationTrace a b))\n    (CorruptedFieldRecovery.rawPolyMulBitCosted a b).2\n",
+    "sha256": "96be9dd6d40a207f735171edc4cb6065bfc1247522c1dbdab44d4ef536a1c377"
+  }
+}

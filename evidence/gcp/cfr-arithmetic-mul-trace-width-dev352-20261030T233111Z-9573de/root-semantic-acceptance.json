@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean",
+  "sha256": "f3b03bf3d28584702c377f1cb7edaae974bb0ba34e8361725f7dce226b3e04dd",
+  "scope": "Custom multiplier activation trace definition, all its register words below 2^(2W+1) for W-bit inputs, and trace length bounded by multiplier declared charge. No evaluator stack/heap semantic refinement or full verifier workspace follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}
