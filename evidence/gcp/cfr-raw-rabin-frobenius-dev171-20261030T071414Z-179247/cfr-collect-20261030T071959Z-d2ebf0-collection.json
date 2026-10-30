@@ -1,0 +1,26 @@
+{
+  "run": "cfr-raw-rabin-frobenius-dev171-20261030T071414Z-179247",
+  "utc": "2026-10-30T07:20:52.141402+00:00",
+  "archive_sha256": "809ae79249fea14680811dd82594280adc44a87edb240509f42d308ea4c110c6",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "a3043d889b74b7f72bb4f62100d00cfb4383932292ede10343c7844d79d3390c",
+    "launch.log": "e7a0f3c1281204b26f08b80e69b0f1781e0d5eec17b2dba5bfb0893c66b46a97",
+    "runner-pid": "feb053c831d234dd230dfb86905db944020362648771340a7d9b6244f6f87156",
+    "started-utc": "40e115f3f42e2d235818d8d34e9c411bf0111255202840195f7e8eb8291f1336",
+    "terminal-receipt.json": "33287685229400be2fbb38f5c9789be277b48fd30f0168149b6dd447d449b585",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "15996d8d15349df562ca8243c1b55fad7c9f6484f3198bca93b345435ce60136",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "bf7b05b2d9c0aa9719d82b3b11b95ddf28ef41c4b0f7714dc0ed3a6854738a74",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/emitted-types.json": "57e54b7eb546e10eec83049636c829b65d6f65508e880a63aea3a9fc747d2e41",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "e7a0f3c1281204b26f08b80e69b0f1781e0d5eec17b2dba5bfb0893c66b46a97"
+  }
+}

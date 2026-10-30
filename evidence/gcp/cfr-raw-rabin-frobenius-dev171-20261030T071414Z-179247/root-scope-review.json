@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "For nonzero modulus,raw repeated-square output quotient equals input to2^d; candidate output quotient equals X to2^d,without hfield or legacy check.",
+  "remaining": "No irreducibility criterion,fast-checker iff,operation costs or verifier integration.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

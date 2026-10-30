@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "cfa5f68eeba877414c7d1dddfe576ae5ce8daef2b60476e996af754fb43b7f2e",
+  "staged_git_blob_sha256": "cfa5f68eeba877414c7d1dddfe576ae5ce8daef2b60476e996af754fb43b7f2e",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/RawRabinFrobenius.lean"
+}
