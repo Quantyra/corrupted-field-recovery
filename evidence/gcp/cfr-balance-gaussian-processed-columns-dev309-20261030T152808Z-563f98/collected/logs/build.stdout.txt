@@ -1,0 +1,43 @@
+✖ [2997/2997] Building CorruptedFieldRecovery.S010BalanceGaussianProcessedColumns (4.1s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean:44:39: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression
+  hcolumns
+has type
+  List.Pairwise (fun x1 x2 => x1 ≠ x2) (column :: columns)
+which is not a one-constructor inductive type.
+error: CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean:45:41: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression
+  hcolumns
+has type
+  List.Pairwise (fun x1 x2 => x1 ≠ x2) (column :: columns)
+which is not a one-constructor inductive type.
+error: CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean:48:56: Application type mismatch: The argument
+  A
+has type
+  Matrix (Fin m) (Fin n) (ZMod 2)
+of sort `Type` but is expected to have type
+  columns.Nodup
+of sort `Prop` in the application
+  ih A
+error: CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean:52:27: Application type mismatch: The argument
+  balanceGaussianPivotRow A row column
+has type
+  Matrix (Fin m) (Fin n) (ZMod 2)
+of sort `Type` but is expected to have type
+  columns.Nodup
+of sort `Prop` in the application
+  ih (balanceGaussianPivotRow A row column)
+error: CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean:53:24: Application type mismatch: The argument
+  used
+has type
+  Finset (Fin m)
+but is expected to have type
+  Matrix (Fin m) (Fin n) (ZMod 2)
+in the application
+  insert row used
+error: CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean:53:13: failed to synthesize instance of type class
+  Insert (Fin m) (Matrix (Fin m) (Fin n) (ZMod 2))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianProcessedColumns
