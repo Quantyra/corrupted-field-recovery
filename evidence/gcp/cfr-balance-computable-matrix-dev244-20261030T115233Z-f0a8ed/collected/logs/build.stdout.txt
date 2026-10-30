@@ -1,0 +1,9 @@
+⚠ [2984/2984] Built CorruptedFieldRecovery.S010BalanceComputableMatrix (2.9s)
+warning: CorruptedFieldRecovery/S010BalanceComputableMatrix.lean:44:46: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [actualBalanceMatrixUnitEnd, hi, hq,̵ ̵P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (2984 jobs).

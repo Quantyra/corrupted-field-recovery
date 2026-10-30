@@ -1,0 +1,24 @@
+✖ [2984/2984] Building CorruptedFieldRecovery.S010BalanceComputableMatrix (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceComputableMatrix.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceComputableMatrix.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceComputableMatrix.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceComputableMatrix.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceComputableMatrix.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceComputableMatrix.lean:38:71: unsolved goals
+case h
+s : ℕ
+p q j i : Fin (3 * s)
+⊢ (if i = p then Pi.single j 1 q else 0) = (if q = j then Pi.single p 1 else 0) i
+warning: CorruptedFieldRecovery/S010BalanceComputableMatrix.lean:43:36: This simp argument is unused:
+  actualBalanceUnitVector_eq_coordinateVector
+
+Hint: Omit it from the simp argument list.
+  simp [actualBalanceMatrixUnitEnd, a̵c̵t̵u̵a̵l̵B̵a̵l̵a̵n̵c̵e̵U̵n̵i̵t̵V̵e̵c̵t̵o̵r̵_̵e̵q̵_̵c̵o̵o̵r̵d̵i̵n̵a̵t̵e̵V̵e̵c̵t̵o̵r̵,̵coordinateVector, Pi.basisFun]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceComputableMatrix.lean:44:4: This simp argument is unused:
+  coordinateVector
+
+Hint: Omit it from the simp argument list.
+  simp [actualBalanceMatrixUnitEnd, actualBalanceUnitVector_eq_coordinateVector, c̵o̵o̵r̵d̵i̵n̵a̵t̵e̵V̵e̵c̵t̵o̵r̵,̵ ̵Pi.basisFun]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceComputableMatrix

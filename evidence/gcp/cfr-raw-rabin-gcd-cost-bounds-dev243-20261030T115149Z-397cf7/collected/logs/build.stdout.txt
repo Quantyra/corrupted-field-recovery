@@ -1,0 +1,135 @@
+✖ [2052/2052] Building CorruptedFieldRecovery.RawRabinGcdBitCostBounds (3.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.setup.json --json
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:52:8: linarith failed to find a contradiction
+case pos.h
+a✝¹ b✝ A✝ : ℕ
+hA✝ : 0 < A✝
+ha✝ : a✝¹ < 2 ^ A✝
+hb✝ : b✝ < 2 ^ A✝
+k : ℕ
+ih :
+  ∀ m < k,
+    ∀ (a : ℕ) (b : ℕ),
+      b.log2 = m →
+        ∀ (A : ℕ),
+          0 < A →
+            a < 2 ^ A → b < 2 ^ A → (rawPolynomialGcdBitCosted a b).2 ≤ (b.log2 + 2) * (40 * (3 * A + 6) ^ 2 * (A + 1))
+a : ℕ
+b : ℕ
+hk : b.log2 = k
+A : ℕ
+hA : 0 < A
+ha : a < 2 ^ A
+hb : b < 2 ^ A
+hPpos : 1 ≤ 40 * (3 * A + 6) ^ 2 * (A + 1)
+hb0 : b = 0
+a✝ : 2 * (40 * (3 * A + 6) ^ 2 * (A + 1)) < Nat.log2 0 + 1
+⊢ False
+failed
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:57:49: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  m ≥ 1
+  l ≥ 2
+  j ≥ 0
+  i - j ≥ 1
+  i - l ≥ 1
+  h ≥ 1
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  d - e ≥ 1
+  d - f ≥ 1
+  c ≥ 1
+where
+ c := ↑A✝
+ d := ↑2 ^ A✝
+ e := ↑a✝¹
+ f := ↑b✝
+ g := ↑k
+ h := ↑A
+ i := ↑2 ^ A
+ j := ↑a
+ l := ↑b
+ m := ↑(40 * (3 * A + 6) ^ 2) * ↑(A + 1)
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:58:66: Application type mismatch: The argument
+  hb
+has type
+  d + 2 < 2 ^ A
+but is expected to have type
+  b < 2 ^ A
+in the application
+  rawLog2_lt_of_lt_pow hA hb
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:64:52: Application type mismatch: The argument
+  hbtwo
+has type
+  1 < d + 2
+but is expected to have type
+  1 < b
+in the application
+  rawPolynomialRemainder_lt_pow_log hbtwo
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:66:37: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  p ≥ 0
+  o - p ≥ 1
+  n ≥ 0
+  m ≥ 0
+  l ≥ 1
+  j ≥ 0
+  i - j ≥ 1
+  i - n ≥ 3
+  h ≥ 1
+  h ≥ 1
+  g ≥ 0
+  f ≥ 0
+  e - f ≥ 1
+  e - g ≥ 1
+  c ≥ 1
+where
+ c := ↑A✝
+ e := ↑2 ^ A✝
+ f := ↑a✝¹
+ g := ↑b
+ h := ↑A
+ i := ↑2 ^ A
+ j := ↑a
+ l := ↑(40 * (3 * A + 6) ^ 2) * ↑(A + 1)
+ m := ↑k
+ n := ↑d
+ o := ↑2 ^ b.log2
+ p := ↑rem.1
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:67:14: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (d + 2).log2
+in the target expression
+  rem.1.log2 < b.log2
+
+case neg
+a✝ b A✝ : ℕ
+hA✝ : 0 < A✝
+ha✝ : a✝ < 2 ^ A✝
+hb✝ : b < 2 ^ A✝
+k : ℕ
+ih :
+  ∀ m < k,
+    ∀ (a : ℕ) (b : ℕ),
+      b.log2 = m →
+        ∀ (A : ℕ),
+          0 < A →
+            a < 2 ^ A → b < 2 ^ A → (rawPolynomialGcdBitCosted a b).2 ≤ (b.log2 + 2) * (40 * (3 * A + 6) ^ 2 * (A + 1))
+a A : ℕ
+hA : 0 < A
+ha : a < 2 ^ A
+hPpos : 1 ≤ 40 * (3 * A + 6) ^ 2 * (A + 1)
+d : ℕ
+hk : (d + 2).log2 = k
+hb : d + 2 < 2 ^ A
+hb0 : ¬d + 2 = 0
+hb1 : ¬d + 2 = 1
+hbtwo : 1 < d + 2
+hlogbA : b.log2 < A
+rem : ℕ × ℕ := rawPolynomialRemainderBitCosted a b
+hrem : rem.1 < 2 ^ b.log2
+hremLog : rem.1.log2 < b.log2
+⊢ (rawPolynomialGcdBitCosted a (d + 2)).2 ≤ ((d + 2).log2 + 2) * (40 * (3 * A + 6) ^ 2 * (A + 1))
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinGcdBitCostBounds
