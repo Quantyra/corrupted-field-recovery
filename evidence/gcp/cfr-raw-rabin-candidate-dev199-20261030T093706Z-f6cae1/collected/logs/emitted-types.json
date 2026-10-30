@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawFieldCandidateShapeCheck_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateShapeCheck_iff : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  Iff (Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true)\n    (And (LE.le.{0} 1 s)\n      (And\n        (Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)) (HAdd.hAdd.{0, 0, 0} s 1))\n        (And\n          (Eq.{1}\n            (HMod.hMod.{0, 0, 0}\n              (HDiv.hDiv.{0, 0, 0}\n                (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))\n                (HPow.hPow.{0, 0, 0} 2 s))\n              2)\n            1)\n          (And (Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)) s)\n            (Ne.{1}\n              (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate))\n              0)))))\n",
+    "sha256": "7ac067425abc39224f83e289c6def06e09d5e8353e23d345679d40581045e0de"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateShapeCheck_modulus_polynomial": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateShapeCheck_modulus_polynomial : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hshape : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true),\n  And\n    (Polynomial.Monic.{0}\n      (CorruptedFieldRecovery.rawMaskPolynomial\n        (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))))\n    (Eq.{1}\n      (Polynomial.natDegree.{0}\n        (CorruptedFieldRecovery.rawMaskPolynomial\n          (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))))\n      s)\n",
+    "sha256": "87f61fa94360a97ee774f2ce621c136c4909e6470ff18d7169085bb6ca9e0df2"
+  },
+  "CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff_irreducible": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff_irreducible : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hshape : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true),\n  Iff (Eq.{1} (CorruptedFieldRecovery.rawCandidateRabinCheck candidate) Bool.true)\n    (Irreducible.{0}\n      (CorruptedFieldRecovery.rawMaskPolynomial\n        (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))))\n",
+    "sha256": "27116b549d9ae3821c0ca047d3a7fa48e250211a4b675ab9912a7c25d1b91397"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateFastCheck_eq_true_iff_valid": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateFastCheck_eq_true_iff_valid : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  Iff (Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true)\n    (CorruptedFieldRecovery.rawFieldCandidateValid candidate)\n",
+    "sha256": "65e7ffd6f4d27771c00ffb6ffc8068978d6d45882dded40de18116b5a4ee252a"
+  }
+}

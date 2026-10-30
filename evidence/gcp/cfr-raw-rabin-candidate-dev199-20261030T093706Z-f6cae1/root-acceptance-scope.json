@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-30T09:42:58.556816+00:00",
+  "review": "Root exact four types/source",
+  "accepted": "Unconditional fast Bool gate=true iff rawFieldCandidateValid; shape characterization and monic-degree; shape implies Rabin scan iff decoded irreducible; no legacy check hypothesis",
+  "excluded": [
+    "verifier substitution",
+    "bit-cost",
+    "runtime"
+  ],
+  "axioms": "shape propext only; other three declarations propext,Classical.choice,Quot.sound"
+}

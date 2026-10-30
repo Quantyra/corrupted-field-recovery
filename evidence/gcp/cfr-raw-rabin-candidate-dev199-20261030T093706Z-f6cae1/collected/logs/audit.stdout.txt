@@ -1,0 +1,59 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateShapeCheck_iff
+@CorruptedFieldRecovery.rawFieldCandidateShapeCheck_iff : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  Iff (Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true)
+    (And (LE.le.{0} 1 s)
+      (And
+        (Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)) (HAdd.hAdd.{0, 0, 0} s 1))
+        (And
+          (Eq.{1}
+            (HMod.hMod.{0, 0, 0}
+              (HDiv.hDiv.{0, 0, 0}
+                (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))
+                (HPow.hPow.{0, 0, 0} 2 s))
+              2)
+            1)
+          (And (Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)) s)
+            (Ne.{1}
+              (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate))
+              0)))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateShapeCheck_iff
+'CorruptedFieldRecovery.rawFieldCandidateShapeCheck_iff' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateShapeCheck_modulus_polynomial
+@CorruptedFieldRecovery.rawFieldCandidateShapeCheck_modulus_polynomial : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hshape : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true),
+  And
+    (Polynomial.Monic.{0}
+      (CorruptedFieldRecovery.rawMaskPolynomial
+        (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))))
+    (Eq.{1}
+      (Polynomial.natDegree.{0}
+        (CorruptedFieldRecovery.rawMaskPolynomial
+          (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))))
+      s)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateShapeCheck_modulus_polynomial
+'CorruptedFieldRecovery.rawFieldCandidateShapeCheck_modulus_polynomial' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff_irreducible
+@CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff_irreducible : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hshape : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true),
+  Iff (Eq.{1} (CorruptedFieldRecovery.rawCandidateRabinCheck candidate) Bool.true)
+    (Irreducible.{0}
+      (CorruptedFieldRecovery.rawMaskPolynomial
+        (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff_irreducible
+'CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff_irreducible' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateFastCheck_eq_true_iff_valid
+@CorruptedFieldRecovery.rawFieldCandidateFastCheck_eq_true_iff_valid : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  Iff (Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true)
+    (CorruptedFieldRecovery.rawFieldCandidateValid candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateFastCheck_eq_true_iff_valid
+'CorruptedFieldRecovery.rawFieldCandidateFastCheck_eq_true_iff_valid' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
