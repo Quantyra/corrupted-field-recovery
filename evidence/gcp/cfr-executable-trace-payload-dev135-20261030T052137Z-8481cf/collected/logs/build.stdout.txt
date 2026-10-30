@@ -1,0 +1,86 @@
+✖ [2041/2041] Building CorruptedFieldRecovery.RawExecutableTraceSemantic (2.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawExecutableTraceSemantic.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableTraceSemantic.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableTraceSemantic.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawExecutableTraceSemantic.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawExecutableTraceSemantic.setup.json --json
+error: CorruptedFieldRecovery/RawExecutableTraceSemantic.lean:100:21: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (AdjoinRoot.mk (rawCandidateModulus candidate)) (rawMaskPolynomial (rawFieldBitsToNat candidate.scalar))
+in the target expression
+  (have hv := ⋯;
+    have hm := ⋯;
+    let K := AdjoinRoot (rawCandidateModulus candidate);
+    (Algebra.trace (ZMod 2) K)
+      (rawCandidateQuotientClass candidate (rawFieldBitsToNat candidate.scalar) *
+        fieldDet3 (coords.symm (coordinateVectorCode (increasingTripleI t)))
+          (coords.symm (coordinateVectorCode (increasingTripleJ t)))
+          (coords.symm (coordinateVectorCode (increasingTripleK t))))) =
+    (Algebra.trace (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate)))
+      ((AdjoinRoot.mk (rawCandidateModulus candidate)) (rawCandidateScalar candidate) *
+        fieldDet3
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVectorCode (increasingTripleI t)))
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVectorCode (increasingTripleJ t)))
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVectorCode (increasingTripleK t))))
+
+s : ℕ
+candidate : RawFieldCandidate s
+hfield : rawFieldCandidateCheck candidate = true
+forward inverse : RawCoordinateMatrix
+hcoordinates : rawCoordinateMatrixCheck forward inverse = true
+t : IncreasingTriple (3 * s)
+hv : rawFieldCandidateValid candidate
+hm :
+  (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).Monic ∧
+    (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)).natDegree = s
+this✝ : Fact (Irreducible (rawCandidateModulus candidate)) :=
+  { out := accepted_rawCandidateModulus_irreducible candidate hfield }
+K : Type := AdjoinRoot (rawCandidateModulus candidate)
+this : Module.Finite (ZMod 2) K := Polynomial.Monic.finite_adjoinRoot hm.left
+coords : FieldTriple (AdjoinRoot (rawCandidateModulus candidate)) ≃ₗ[ZMod 2] BinaryVector (3 * s) :=
+  accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates
+hscalar :
+  (AdjoinRoot.mk (rawCandidateModulus candidate)) (rawMaskPolynomial (rawFieldBitsToNat candidate.scalar)) =
+    (AdjoinRoot.mk (rawCandidateModulus candidate)) (rawCandidateScalar candidate)
+hi :
+  (accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+      (coordinateVectorCode (increasingTripleI t)) =
+    (accepted_rawCandidatePowerBasisCoordinates candidate hfield).symm
+      ((rawCoordinateMatrixMap inverse) (coordinateVectorCode (increasingTripleI t)))
+hj :
+  (accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+      (coordinateVectorCode (increasingTripleJ t)) =
+    (accepted_rawCandidatePowerBasisCoordinates candidate hfield).symm
+      ((rawCoordinateMatrixMap inverse) (coordinateVectorCode (increasingTripleJ t)))
+hk :
+  (accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+      (coordinateVectorCode (increasingTripleK t)) =
+    (accepted_rawCandidatePowerBasisCoordinates candidate hfield).symm
+      ((rawCoordinateMatrixMap inverse) (coordinateVectorCode (increasingTripleK t)))
+hi' :
+  rawPhysicalCanonicalTriple candidate hfield inverse (coordinateVectorCode (increasingTripleI t)) =
+    coords.symm (coordinateVectorCode (increasingTripleI t))
+hj' :
+  rawPhysicalCanonicalTriple candidate hfield inverse (coordinateVectorCode (increasingTripleJ t)) =
+    coords.symm (coordinateVectorCode (increasingTripleJ t))
+hk' :
+  rawPhysicalCanonicalTriple candidate hfield inverse (coordinateVectorCode (increasingTripleK t)) =
+    coords.symm (coordinateVectorCode (increasingTripleK t))
+⊢ (have hv := ⋯;
+    have hm := ⋯;
+    let K := AdjoinRoot (rawCandidateModulus candidate);
+    (Algebra.trace (ZMod 2) K)
+      (rawCandidateQuotientClass candidate (rawFieldBitsToNat candidate.scalar) *
+        fieldDet3 (coords.symm (coordinateVectorCode (increasingTripleI t)))
+          (coords.symm (coordinateVectorCode (increasingTripleJ t)))
+          (coords.symm (coordinateVectorCode (increasingTripleK t))))) =
+    (Algebra.trace (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate)))
+      ((AdjoinRoot.mk (rawCandidateModulus candidate)) (rawCandidateScalar candidate) *
+        fieldDet3
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVectorCode (increasingTripleI t)))
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVectorCode (increasingTripleJ t)))
+          ((accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse hcoordinates).symm
+            (coordinateVectorCode (increasingTripleK t))))
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawExecutableTraceSemantic
