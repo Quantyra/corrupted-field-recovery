@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T11:44:16.770781+00:00",
+  "accepted": "Semantic noncomputable Basis.end coefficient matrix for supplied BinaryTensor A/tape; mulVec repr identity; zero iff actual physical balance/existing Bool check; coefficient application",
+  "excluded": [
+    "serialized computable construction",
+    "elimination",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

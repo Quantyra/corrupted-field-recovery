@@ -1,0 +1,68 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceEndBasis
+CorruptedFieldRecovery.actualBalanceEndBasis : (s : Nat) →
+  Module.Basis.{0, 0, 0} (Prod.{0, 0} (Fin (HMul.hMul.{0, 0, 0} 3 s)) (Fin (HMul.hMul.{0, 0, 0} 3 s))) (ZMod 2)
+    (Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceEndBasis
+'CorruptedFieldRecovery.actualBalanceEndBasis' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix
+@CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix : {s : Nat} →
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) →
+    (tape : CorruptedFieldRecovery.FiveWordTape s) →
+      Matrix.{0, 0, 0} (CorruptedFieldRecovery.ActualBalanceBasisRow s)
+        (Prod.{0, 0} (Fin (HMul.hMul.{0, 0, 0} 3 s)) (Fin (HMul.hMul.{0, 0, 0} 3 s))) (ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix
+'CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawMatrix_mulVec_repr
+@CorruptedFieldRecovery.actualBalanceRawMatrix_mulVec_repr : ∀ {s : Nat}
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),
+  Eq.{1}
+    (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix A tape)
+      ⇑((Module.Basis.repr.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceEndBasis s)) T))
+    ⇑((Module.Basis.repr.{0, 0, 0} (Pi.basisFun.{0, 0} (ZMod 2) (CorruptedFieldRecovery.ActualBalanceBasisRow s)))
+        ((CorruptedFieldRecovery.actualBalanceBasisMatrix A tape) T))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawMatrix_mulVec_repr
+'CorruptedFieldRecovery.actualBalanceRawMatrix_mulVec_repr' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawMatrix_solution_iff
+@CorruptedFieldRecovery.actualBalanceRawMatrix_solution_iff : ∀ {s : Nat}
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),
+  Iff
+    (Eq.{1}
+      (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix A tape)
+        ⇑((Module.Basis.repr.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceEndBasis s)) T))
+      0)
+    (CorruptedFieldRecovery.actualFourBilinearBalanced A tape T)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawMatrix_solution_iff
+'CorruptedFieldRecovery.actualBalanceRawMatrix_solution_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix_apply
+@CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix_apply : ∀ {s : Nat}
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (row : CorruptedFieldRecovery.ActualBalanceBasisRow s)
+  (col : Prod.{0, 0} (Fin (HMul.hMul.{0, 0, 0} 3 s)) (Fin (HMul.hMul.{0, 0, 0} 3 s))),
+  Eq.{1} (CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix A tape row col)
+    ((CorruptedFieldRecovery.actualBalanceBasisMatrix A tape) ((CorruptedFieldRecovery.actualBalanceEndBasis s) col)
+      row)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix_apply
+'CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix_apply' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceRawMatrix_solution_iff_check
+@CorruptedFieldRecovery.actualBalanceRawMatrix_solution_iff_check : ∀ {s : Nat}
+  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),
+  Iff (Eq.{1} (CorruptedFieldRecovery.actualBalanceBasisMatrixCheck A tape T) Bool.true)
+    (Eq.{1}
+      (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix A tape)
+        ⇑((Module.Basis.repr.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceEndBasis s)) T))
+      0)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceRawMatrix_solution_iff_check
+'CorruptedFieldRecovery.actualBalanceRawMatrix_solution_iff_check' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
