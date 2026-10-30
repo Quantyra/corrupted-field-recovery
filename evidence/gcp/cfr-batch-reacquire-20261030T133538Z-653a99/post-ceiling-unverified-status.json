@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-30T17:40:10.450020+00:00",
+  "configured_stop_ceiling_utc": "2026-10-30T17:37:12.351Z",
+  "ceiling_has_passed": true,
+  "same_active_account": "dfredriksen@quantyra.org",
+  "vm_status": "unknown; post-deadline describe blocked by reauthentication",
+  "terminated_verified": false,
+  "explicit_stop_issued": false,
+  "task_egress_removal_verified": false,
+  "duplicate_launch_or_stop": false,
+  "run316": "terminal PASS observed; existing remote archive packaged, hash-verified local collection pending",
+  "run316_archive_sha256": "8d2d822454f6e2ab981551c7391e40d9d99d92f26965f379fc3459871d15d118",
+  "latest_readonly_receipt_prefix": "cfr-post-ceiling-reauth-recheck-20261030T173934Z-d37373",
+  "required_followup": [
+    "restore existing-account credentials",
+    "verify exact VM id/status/access configs/stop timestamp",
+    "recover existing316 archive without relaunch",
+    "remove task-owned egress and guardedly stop if still running",
+    "do not claim termination without cloud confirmation"
+  ]
+}
