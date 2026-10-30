@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T15:23:20.474501+00:00",
+  "accepted": "Recorded pivot rows fresh relative to initial used set and pairwise distinct via Nodup",
+  "excluded": [
+    "column distinctness",
+    "all-column zero",
+    "kernel basis",
+    "full solver",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
