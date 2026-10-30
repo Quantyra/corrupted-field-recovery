@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawRabinCheckListBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawRabinCheckListBitCosted_fst : \u2200 (modulus : Nat) (indices : List.{0} Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawRabinCheckListBitCosted modulus indices).1\n    (List.all.{0} indices fun i =>\n      Decidable.decide\n        (Eq.{1}\n          (CorruptedFieldRecovery.rawPolynomialGcd modulus\n            (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus (HAdd.hAdd.{0, 0, 0} i 1) 2) 2))\n          1))\n",
+    "sha256": "2737e9ee7ae81d5e2379f87be74c80de52c6466351f1da5fbc47a8b8f221079d"
+  },
+  "CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_fst": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_fst : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  Eq.{1} (CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted candidate).1\n    (CorruptedFieldRecovery.rawCandidateRabinCheck candidate)\n",
+    "sha256": "67d415c685721ed1c5a3f5c56949ae11b81fc3c5fc20d8885bd75a4e3a5612da"
+  },
+  "CorruptedFieldRecovery.rawRabinCheckListBitCosted_cost_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawRabinCheckListBitCosted_cost_le : \u2200 {modulus W q : Nat} (hmod : Ne.{1} modulus 0)\n  (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LE.le.{0} 2 W)\n  (indices : List.{0} Nat)\n  (hindices : \u2200 (i : Nat) (a : Membership.mem.{0, 0} indices i), LE.le.{0} (HAdd.hAdd.{0, 0, 0} i 1) q),\n  LE.le.{0} (CorruptedFieldRecovery.rawRabinCheckListBitCosted modulus indices).2\n    (HMul.hMul.{0, 0, 0} (List.length.{0} indices) (CorruptedFieldRecovery.rawRabinScanUniformCharge W q))\n",
+    "sha256": "2e28bc2449b4cbb6456a9f29cf41051349871650450161c7bff6b0a882d4a9c6"
+  },
+  "CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_cost_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_cost_le : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hshape : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true),\n  LE.le.{0} (CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted candidate).2\n    (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2)\n      (CorruptedFieldRecovery.rawRabinScanUniformCharge (HAdd.hAdd.{0, 0, 0} s 1) (HDiv.hDiv.{0, 0, 0} s 2)))\n",
+    "sha256": "896ed5c20367997cceb7fb2b844da50aeb6e91a3c3f12af98001a28c16025290"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T14:04:03.033971+00:00",
+  "accepted": "Short-circuit List.all/candidate Bool output refinement; declared list charge under stated modulus/width/index hypotheses; shape-conditional candidate scan charge",
+  "excluded": [
+    "range construction",
+    "shape-gate charge",
+    "full verifier bound",
+    "concrete machine",
+    "space"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
