@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T14:10:14.372510+00:00",
+  "accepted": "Unused-row mask/search; returned row fresh and entry1; unused1 existence implies return some row",
+  "excluded": [
+    "firstness",
+    "loop invariant",
+    "kernel basis",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

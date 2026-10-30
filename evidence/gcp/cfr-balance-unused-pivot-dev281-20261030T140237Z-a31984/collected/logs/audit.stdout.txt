@@ -1,0 +1,29 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceMaskUsedRows
+@CorruptedFieldRecovery.balanceMaskUsedRows : {m n : Nat} →
+  (used : Finset.{0} (Fin m)) →
+    (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) → Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.balanceMaskUsedRows
+'CorruptedFieldRecovery.balanceMaskUsedRows' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceFirstUnusedPivotRow
+@CorruptedFieldRecovery.balanceFirstUnusedPivotRow : {m n : Nat} →
+  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) → (column : Fin n) → (used : Finset.{0} (Fin m)) → Option.{0} (Fin m)
+CFR_TYPE_END:CorruptedFieldRecovery.balanceFirstUnusedPivotRow
+'CorruptedFieldRecovery.balanceFirstUnusedPivotRow' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceFirstUnusedPivotRow_sound
+@CorruptedFieldRecovery.balanceFirstUnusedPivotRow_sound : ∀ {m n : Nat} (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2))
+  (column : Fin n) (used : Finset.{0} (Fin m)) {row : Fin m}
+  (h : Eq.{1} (CorruptedFieldRecovery.balanceFirstUnusedPivotRow A column used) (Option.some.{0} row)),
+  And (row ∉ used) (Eq.{1} (A row column) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.balanceFirstUnusedPivotRow_sound
+'CorruptedFieldRecovery.balanceFirstUnusedPivotRow_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceFirstUnusedPivotRow_complete
+@CorruptedFieldRecovery.balanceFirstUnusedPivotRow_complete : ∀ {m n : Nat}
+  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (column : Fin n) (used : Finset.{0} (Fin m))
+  (h : ∃ row, And (row ∉ used) (Eq.{1} (A row column) 1)),
+  ∃ row, Eq.{1} (CorruptedFieldRecovery.balanceFirstUnusedPivotRow A column used) (Option.some.{0} row)
+CFR_TYPE_END:CorruptedFieldRecovery.balanceFirstUnusedPivotRow_complete
+'CorruptedFieldRecovery.balanceFirstUnusedPivotRow_complete' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
