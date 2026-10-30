@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "For all natural a,b, rawPolynomialGcd a b equals1 iff every polynomial common divisor of decoded masks is a unit (rawMaskPairCoprime).",
+  "remaining": "No Frobenius criterion,fast-checker equivalence or cost.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

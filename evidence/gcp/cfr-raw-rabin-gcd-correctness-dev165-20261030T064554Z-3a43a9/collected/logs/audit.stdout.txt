@@ -1,0 +1,7 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcd_one_iff_coprime
+CorruptedFieldRecovery.rawPolynomialGcd_one_iff_coprime : ∀ (a b : Nat),
+  Iff (Eq.{1} (CorruptedFieldRecovery.rawPolynomialGcd a b) 1) (CorruptedFieldRecovery.rawMaskPairCoprime a b)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcd_one_iff_coprime
+'CorruptedFieldRecovery.rawPolynomialGcd_one_iff_coprime' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.rawPolynomialGcd_one_iff_coprime": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcd_one_iff_coprime : \u2200 (a b : Nat),\n  Iff (Eq.{1} (CorruptedFieldRecovery.rawPolynomialGcd a b) 1) (CorruptedFieldRecovery.rawMaskPairCoprime a b)\n",
+    "sha256": "fb993c8029fd2d8a271756df5368246993a24f7b541986498158b1ea34a9bf95"
+  }
+}
