@@ -1,0 +1,16 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImageSemanticSupport_finrank_eq
+@CorruptedFieldRecovery.modeImageSemanticSupport_finrank_eq.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{1}
+    (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField
+      ↥(CorruptedFieldRecovery.modeImageSemanticSupport.{u_1} Q E))
+    (Module.finrank.{0, 0} CorruptedFieldRecovery.BinaryField ↥(CorruptedFieldRecovery.modeImage.{0, 0} E))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImageSemanticSupport_finrank_eq
+'CorruptedFieldRecovery.modeImageSemanticSupport_finrank_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
