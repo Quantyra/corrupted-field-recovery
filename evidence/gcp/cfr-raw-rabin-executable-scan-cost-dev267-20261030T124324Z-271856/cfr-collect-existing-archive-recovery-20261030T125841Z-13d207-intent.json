@@ -1,0 +1,6 @@
+{
+  "run": "cfr-raw-rabin-executable-scan-cost-dev267-20261030T124324Z-271856",
+  "utc": "2026-10-30T12:58:41.989173+00:00",
+  "action": "Download existing terminal archive only; no repackage/relaunch",
+  "archive_sha256": "cc8c6e729b99ce2219da1159f4b46fae52766297debce5758712dce4f2d4c0df"
+}

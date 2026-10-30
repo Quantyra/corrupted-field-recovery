@@ -1,0 +1,55 @@
+✖ [2063/2063] Building CorruptedFieldRecovery.RawRabinScanExecutableCost (2.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinScanExecutableCost.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanExecutableCost.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanExecutableCost.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinScanExecutableCost.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinScanExecutableCost.setup.json --json
+error: CorruptedFieldRecovery/RawRabinScanExecutableCost.lean:28:17: unsolved goals
+case cons
+modulus i : ℕ
+is : List ℕ
+ih :
+  (rawRabinCheckListBitCosted modulus is).1 =
+    is.all fun i => decide (rawPolynomialGcd modulus ((rawCandidateFrobeniusAux modulus (i + 1) 2).xor 2) = 1)
+⊢ (if rawPolynomialGcd modulus (rawCandidateFrobeniusAux modulus (i + 1) 2 ^^^ 2) = 1 then
+        (is.all fun i => decide (rawPolynomialGcd modulus (rawCandidateFrobeniusAux modulus (i + 1) 2 ^^^ 2) = 1),
+          (rawRabinCheckIndexBitCosted modulus (i + 1)).2 + (rawRabinCheckListBitCosted modulus is).2)
+      else (false, (rawRabinCheckIndexBitCosted modulus (i + 1)).2)).1 =
+    (decide (rawPolynomialGcd modulus (rawCandidateFrobeniusAux modulus (i + 1) 2 ^^^ 2) = 1) &&
+      is.all fun i => decide (rawPolynomialGcd modulus (rawCandidateFrobeniusAux modulus (i + 1) 2 ^^^ 2) = 1))
+error: CorruptedFieldRecovery/RawRabinScanExecutableCost.lean:42:42: unsolved goals
+s : ℕ
+candidate : RawFieldCandidate s
+⊢ ((List.range (s / 2)).all fun i =>
+      decide
+        (rawPolynomialGcd (rawFieldBitsToNat candidate.modulus)
+            (rawCandidateFrobeniusAux (rawFieldBitsToNat candidate.modulus) (i + 1) 2 ^^^ 2) =
+          1)) =
+    (List.range (s / 2)).all fun i =>
+      decide
+        (rawPolynomialGcd (rawFieldBitsToNat candidate.modulus)
+            (rawCandidateFrobeniusAux (rawFieldBitsToNat candidate.modulus) (i + 1) 2 ^^^ 2) =
+          1)
+error: CorruptedFieldRecovery/RawRabinScanExecutableCost.lean:136:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  j ≥ 1
+  h ≥ 0
+  g ≥ 0
+  g - h ≥ 0
+  f - g ≥ 1
+  e ≥ 2
+  d - e ≤ 0
+  2*d - e ≥ 1
+  c ≥ 0
+  b - c ≥ 1
+  a ≥ 2
+  1 ≤ a - 2*f ≤ 2
+where
+ a := ↑candidate.modulus.toList.length
+ b := ↑2 ^ candidate.modulus.toList.length
+ c := ↑(rawBitsToNat candidate.modulus.toList)
+ d := ↑2 ^ s
+ e := ↑(rawFieldBitsToNat candidate.modulus)
+ f := ↑s / 2
+ g := ↑i
+ h := ↑?m.238
+ j := ↑(rawFieldBitsToNat candidate.scalar)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinScanExecutableCost
