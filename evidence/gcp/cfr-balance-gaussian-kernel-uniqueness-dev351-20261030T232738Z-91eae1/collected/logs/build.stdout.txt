@@ -1,0 +1,73 @@
+✖ [3003/3003] Building CorruptedFieldRecovery.S010BalanceGaussianKernelUniqueness (3.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean:37:10: unsolved goals
+case h₀
+m n : ℕ
+inst✝ : Fintype (Fin n)
+A : Matrix (Fin m) (Fin n) (ZMod 2)
+pivots : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+hrows : (List.map Prod.fst pivots).Nodup
+hunit : ∀ pivot ∈ pivots, ∀ (i : Fin m), A i pivot.2 = if i = pivot.1 then 1 else 0
+hfreezero : ∀ column ∉ List.map Prod.snd pivots, x column = 0
+hker : A *ᵥ x = 0
+column : Fin n
+hfree : ¬column ∉ List.map Prod.snd pivots
+hpivotCol : column ∈ List.map Prod.snd pivots
+pivot : Fin m × Fin n
+hpivot : pivot ∈ pivots
+hpivotColumn : pivot.2 = column
+hrow : (A *ᵥ x) pivot.1 = 0 pivot.1
+hsum : ∑ j, A pivot.1 j * x j = 0
+hpivotEntry : A pivot.1 pivot.2 = 1
+⊢ ∀ (b : Fin n), ¬b = pivot.2 → A pivot.1 b = 0 ∨ x b = 0
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean:41:20: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case h₁
+m n : ℕ
+inst✝ : Fintype (Fin n)
+A : Matrix (Fin m) (Fin n) (ZMod 2)
+pivots : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+hrows : (List.map Prod.fst pivots).Nodup
+hunit : ∀ pivot ∈ pivots, ∀ (i : Fin m), A i pivot.2 = if i = pivot.1 then 1 else 0
+hfreezero : ∀ column ∉ List.map Prod.snd pivots, x column = 0
+hker : A *ᵥ x = 0
+column : Fin n
+hfree : ¬column ∉ List.map Prod.snd pivots
+hpivotCol : column ∈ List.map Prod.snd pivots
+pivot : Fin m × Fin n
+hpivot : pivot ∈ pivots
+hpivotColumn : pivot.2 = column
+hrow : (A *ᵥ x) pivot.1 = 0 pivot.1
+hsum : ∑ j, A pivot.1 j * x j = 0
+j : pivot.2 ∉ Finset.univ
+⊢ A pivot.1 pivot.2 * x pivot.2 = 0
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean:62:10: No goals to be solved
+warning: CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean:40:18: This simp argument is unused:
+  hpivotEntry
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵p̵i̵v̵o̵t̵E̵n̵t̵r̵y̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean:87:71: unsolved goals
+case a
+m n : ℕ
+inst✝¹ : Fintype (Fin n)
+A : Matrix (Fin m) (Fin n) (ZMod 2)
+pivots : List (Fin m × Fin n)
+inst✝ : Fintype (balanceGaussianFreeIndex pivots)
+hrows : (List.map Prod.fst pivots).Nodup
+hunit : ∀ pivot ∈ pivots, ∀ (i : Fin m), A i pivot.2 = if i = pivot.1 then 1 else 0
+hcandidate : ∀ (free : balanceGaussianFreeIndex pivots), A *ᵥ balanceGaussianFreeCandidateFamily A pivots free = 0
+x : Fin n → ZMod 2
+hx : A *ᵥ x = 0
+⊢ A *ᵥ x = 0
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean:108:8: failed to synthesize instance of type class
+  Fintype (balanceGaussianFreeIndex (balanceGaussianColumnScan A ∅ (List.ofFn fun j => j)).2)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianKernelUniqueness
