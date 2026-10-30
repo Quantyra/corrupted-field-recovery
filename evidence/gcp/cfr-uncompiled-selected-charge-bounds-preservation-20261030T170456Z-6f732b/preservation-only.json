@@ -11,7 +11,7 @@
   "dependency_chain": [
     {
       "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean",
-      "sha256": "df64399143c01a922c26801aa868dcc83e03878e4cb1817fbf132223cd3754a9",
+      "sha256": "4ec1f14e3940323b57f27f47f24960b2b3c45f6fa5e213e9ca11225e088c7e4b",
       "status": "uncompiled unaudited unaccepted draft"
     },
     {
@@ -99,5 +99,6 @@
     "bit complexity",
     "input decoding and coefficient serialization",
     "downstream basis/field/Q construction and full recovery"
-  ]
+  ],
+  "dependency_correction_receipt": "dependency-correction.json"
 }

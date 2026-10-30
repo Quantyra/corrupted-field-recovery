@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-30T17:05:58.028950+00:00",
+  "correction": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean",
+      "previous_description_sha256": "df64399143c01a922c26801aa868dcc83e03878e4cb1817fbf132223cd3754a9",
+      "captured_sha256": "4ec1f14e3940323b57f27f47f24960b2b3c45f6fa5e213e9ca11225e088c7e4b"
+    }
+  ],
+  "reason": "Author changed dependency during preservation. Source archive/manifest always contained correct bytes; copied prior dependency description was stale. Archive unchanged; previous description retained in Git commit2fff018.",
+  "compiled": false,
+  "audited": false
+}
