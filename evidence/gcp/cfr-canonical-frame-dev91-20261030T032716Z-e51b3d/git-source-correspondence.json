@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "1e9101e79746b0257eec982c2fb200a727e305fa95ffe714d8573a336e51c48f",
+  "staged_git_blob_sha256": "1e9101e79746b0257eec982c2fb200a727e305fa95ffe714d8573a336e51c48f",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean"
+}

@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Public canonical basis equals clean-frame witness basis for hfr; selected fourth first coordinate avoids nonGenerators under explicit field/finite/algebra hypotheses.",
+  "remaining": "Actual tape to clean frame, computed basis and good-to-success remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}

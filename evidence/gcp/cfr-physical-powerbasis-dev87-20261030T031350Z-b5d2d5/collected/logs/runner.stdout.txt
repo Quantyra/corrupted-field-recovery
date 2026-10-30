@@ -1,0 +1,5 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-physical-powerbasis-dev87-20261030T031350Z-b5d2d5/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build

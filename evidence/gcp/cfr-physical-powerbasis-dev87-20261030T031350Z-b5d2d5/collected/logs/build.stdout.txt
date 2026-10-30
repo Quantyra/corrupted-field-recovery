@@ -1,0 +1,50 @@
+✖ [2031/2031] Building CorruptedFieldRecovery.RawPhysicalPowerBasis (2.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawPhysicalPowerBasis.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalPowerBasis.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalPowerBasis.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPhysicalPowerBasis.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPhysicalPowerBasis.setup.json --json
+error: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:84:46: unsolved goals
+s : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+v : BinaryVector (3 * s)
+block : Fin 3
+hdegree : (rawCandidateModulus candidate).natDegree = s :=
+  have hv := accepted_rawFieldCandidateCheck candidate hcheck;
+  have hm := rawFieldCandidateValid_modulus_polynomial candidate hv;
+  id hm.right
+b : Module.Basis (Fin s) (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate)) :=
+  (powerBasisAux' ⋯).reindex (finCongr hdegree)
+i : Fin s
+hi : i ∈ Finset.univ
+⊢ ∑ x, (mk (rawCandidateModulus candidate)) ((monomial ↑x) (Pi.single (Fin.cast ⋯ i) 1 x)) =
+    (mk (rawCandidateModulus candidate)) ((monomial ↑i) 1)
+error: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:98:14: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (monomial ?m.357) (?m.355 * ?m.356)
+in the target expression
+  (mk (rawCandidateModulus candidate)) ((monomial ↑i) (v (finProdFinEquiv (block, i)))) =
+    (mk (rawCandidateModulus candidate)) (C (v (finProdFinEquiv (block, i))) * (monomial ↑i) 1)
+
+s : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+v : BinaryVector (3 * s)
+block : Fin 3
+hdegree : (rawCandidateModulus candidate).natDegree = s :=
+  have hv := accepted_rawFieldCandidateCheck candidate hcheck;
+  have hm := rawFieldCandidateValid_modulus_polynomial candidate hv;
+  id hm.right
+b : Module.Basis (Fin s) (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate)) :=
+  (powerBasisAux' ⋯).reindex (finCongr hdegree)
+i : Fin s
+hi : i ∈ Finset.univ
+hbi : b i = (mk (rawCandidateModulus candidate)) ((monomial ↑i) 1)
+⊢ (mk (rawCandidateModulus candidate)) ((monomial ↑i) (v (finProdFinEquiv (block, i)))) =
+    (mk (rawCandidateModulus candidate)) (C (v (finProdFinEquiv (block, i))) * (monomial ↑i) 1)
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:88:39: This simp argument is unused:
+  AdjoinRoot.powerBasisAux'
+
+Hint: Omit it from the simp argument list.
+  simp [Module.Basis.coe_ofEquivFun,̵ ̵A̵d̵j̵o̵i̵n̵R̵o̵o̵t̵.̵p̵o̵w̵e̵r̵B̵a̵s̵i̵s̵A̵u̵x̵'̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawPhysicalPowerBasis

@@ -1,0 +1,28 @@
+✖ [2031/2031] Building CorruptedFieldRecovery.RawPhysicalPowerBasis (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawPhysicalPowerBasis.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalPowerBasis.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalPowerBasis.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPhysicalPowerBasis.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPhysicalPowerBasis.setup.json --json
+error: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:84:46: unsolved goals
+s : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+v : BinaryVector (3 * s)
+block : Fin 3
+hdegree : (rawCandidateModulus candidate).natDegree = s :=
+  have hv := accepted_rawFieldCandidateCheck candidate hcheck;
+  have hm := rawFieldCandidateValid_modulus_polynomial candidate hv;
+  id hm.right
+b : Module.Basis (Fin s) (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate)) :=
+  (powerBasisAux' ⋯).reindex (finCongr hdegree)
+i : Fin s
+hi : i ∈ Finset.univ
+⊢ ∑ x, (mk (rawCandidateModulus candidate)) ((monomial ↑x) (if x = Fin.cast ⋯ i then 1 else 0)) =
+    (mk (rawCandidateModulus candidate)) ((monomial ↑i) 1)
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:88:56: This simp argument is unused:
+  Finset.sum_ite_eq'
+
+Hint: Omit it from the simp argument list.
+  simp [Module.Basis.coe_ofEquivFun, Pi.single_apply,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵_̵e̵q̵'̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawPhysicalPowerBasis

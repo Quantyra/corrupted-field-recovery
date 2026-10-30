@@ -1,0 +1,36 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.canonicalGoodFrameBasis_eq_cleanBasisTripleBasis
+CorruptedFieldRecovery.canonicalGoodFrameBasis_eq_cleanBasisTripleBasis.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (fr :
+    (_ : (_ : CorruptedFieldRecovery.FieldTriple.{u_1} K) × CorruptedFieldRecovery.FieldTriple.{u_1} K) ×
+      CorruptedFieldRecovery.FieldTriple.{u_1} K)
+  (hfr : Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.cleanFrameSet.{u_1, u_1} A) fr),
+  Eq.{u_1 + 1} (CorruptedFieldRecovery.canonicalGoodFrameBasis.{u_1} K A fr)
+    (CorruptedFieldRecovery.cleanBasisTripleBasis.{u_1, u_1} (CorruptedFieldRecovery.frameWitness✝.{u_1} K A fr hfr)
+      (CorruptedFieldRecovery.fieldTripleFinrankCanonical✝.{u_1} K))
+CFR_TYPE_END:CorruptedFieldRecovery.canonicalGoodFrameBasis_eq_cleanBasisTripleBasis
+'CorruptedFieldRecovery.canonicalGoodFrameBasis_eq_cleanBasisTripleBasis' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.goodFourthFinset_first_coordinate_not_nonGenerator
+CorruptedFieldRecovery.goodFourthFinset_first_coordinate_not_nonGenerator.{u_1} : ∀ (K : Type u_1)
+  [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_5 : Finite.{u_1 + 1} K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (fr :
+    (_ : (_ : CorruptedFieldRecovery.FieldTriple.{u_1} K) × CorruptedFieldRecovery.FieldTriple.{u_1} K) ×
+      CorruptedFieldRecovery.FieldTriple.{u_1} K)
+  (v : CorruptedFieldRecovery.FieldTriple.{u_1} K)
+  (hv :
+    Membership.mem.{u_1, u_1}
+      (CorruptedFieldRecovery.goodFourthFinset.{u_1} K A (CorruptedFieldRecovery.nonGenerators.{u_1} K) fr) v),
+  ((CorruptedFieldRecovery.sampledBasisCoordinateEquiv.{u_1} K
+          (CorruptedFieldRecovery.canonicalGoodFrameBasis.{u_1} K A fr))
+        v).1 ∉
+    CorruptedFieldRecovery.nonGenerators.{u_1} K
+CFR_TYPE_END:CorruptedFieldRecovery.goodFourthFinset_first_coordinate_not_nonGenerator
+'CorruptedFieldRecovery.goodFourthFinset_first_coordinate_not_nonGenerator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

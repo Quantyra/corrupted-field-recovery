@@ -185,6 +185,25 @@ private noncomputable def frameBasis
     cleanBasisTripleBasis (frameWitness K A fr hfr) (fieldTripleFinrankCanonical K)
   else fieldTripleStandardBasis K
 
+/-- The deterministic basis selected from a clean first-three frame. On a
+member of `cleanFrameSet`, this is exactly the basis induced by those three
+sampled vectors; outside that event it is the fixed standard basis. -/
+noncomputable def canonicalGoodFrameBasis
+    (K : Type*) [Field K] [Fintype K] [DecidableEq K]
+    (A : Finset (FieldTriple K))
+    (fr : Σ _xy : (Σ _x : FieldTriple K, FieldTriple K), FieldTriple K) :
+    Basis (Fin 3) K (FieldTriple K) :=
+  frameBasis K A fr
+
+theorem canonicalGoodFrameBasis_eq_cleanBasisTripleBasis
+    (K : Type*) [Field K] [Fintype K] [DecidableEq K]
+    (A : Finset (FieldTriple K))
+    (fr : Σ _xy : (Σ _x : FieldTriple K, FieldTriple K), FieldTriple K)
+    (hfr : fr ∈ cleanFrameSet (K := K) A) :
+    canonicalGoodFrameBasis K A fr =
+      cleanBasisTripleBasis (frameWitness K A fr hfr) (fieldTripleFinrankCanonical K) := by
+  simp [canonicalGoodFrameBasis, frameBasis, hfr]
+
 noncomputable def goodFourthFinset
     (K : Type*) [Field K] [Fintype K] [DecidableEq K]
     (A : Finset (FieldTriple K)) (D : Finset K)
@@ -192,6 +211,21 @@ noncomputable def goodFourthFinset
   classical
   exact A.filter fun v =>
     (((sampledBasisCoordinateEquiv K (frameBasis K A fr)).trans (fieldTripleEquivPi K)) v) 0 ∉ D
+
+/-- A member of the counted fourth-vector fiber has a generating first
+coordinate in the selected frame basis. -/
+theorem goodFourthFinset_first_coordinate_not_nonGenerator
+    (K : Type*) [Field K] [Fintype K] [DecidableEq K]
+    [Algebra BinaryField K] [FiniteDimensional BinaryField K] [Finite K]
+    (A : Finset (FieldTriple K))
+    (fr : Σ _xy : (Σ _x : FieldTriple K, FieldTriple K), FieldTriple K)
+    (v : FieldTriple K)
+    (hv : v ∈ goodFourthFinset K A (nonGenerators K) fr) :
+    (sampledBasisCoordinateEquiv K (canonicalGoodFrameBasis K A fr) v).1 ∉
+      nonGenerators K := by
+  have h := (Finset.mem_filter.mp hv).2
+  simpa [goodFourthFinset, canonicalGoodFrameBasis, fieldTripleEquivPi, frameBasis]
+    using h
 
 /-- Canonical Finset count for four actual clean vector draws: the first three
 form a sampled K-basis, and the first coordinate of the fourth vector in that
