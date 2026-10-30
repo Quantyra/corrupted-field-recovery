@@ -1,0 +1,152 @@
+{
+  "run": "cfr-uncompiled-generator-fast-check-preservation-20261030T181427Z-20021d",
+  "archive_sha256": "a7d9c74bd91fb3042735cc090c84fae467bb6694e6ce046cdb55fc1a1e6f706b",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianGeneratorFastCheck.lean",
+  "source_sha256": "9EB93173126551F8774AD6C7C658B9B74B269C397E5FE29F9358EF2E6A1906EE",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRecurrenceSerializer.lean",
+      "sha256": "94fdf3936707246f6f98081845abdfec1a1f6316a922f463a23a340a42944733",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianAffineOutput.lean",
+      "sha256": "3161e0f5cb620e37de955ce54b061d48a88c32b31a0dc3ae49842b24e188ae03",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianAffinePowerSolve.lean",
+      "sha256": "6b02d8a0e212806898609fa8c9aabf8ef99e56f518a9500cd1938e5224536fdd",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean",
+      "sha256": "ff961784ad55adf7a5d77526676df9990a22fcd1dcbd29744f53721a081df169",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianOrderedSeedIndex.lean",
+      "sha256": "2ce468d88ed557038067c8d3d152f53ed4c9e8062e3be931da4489b91eebb9d0",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean",
+      "sha256": "c570e8331cac2c348f1cbfca136d03a3d4eeef34839863d79e84d84a26666a11",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianScalarRangeBridge.lean",
+      "sha256": "01af6bd687769953407e66ed8c2f0d23941ef4ac3a57ef79b1fb6eb9bc542235",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean",
+      "sha256": "50b74c9b9a064979a3b2010a764e62381fafe5beb275f6bec3a8ec510d4e267a",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagKernelOutputBridge.lean",
+      "sha256": "2ae5bc6b91e81ad572f38ab40da4f132c54b52e91d3f550a358fde54689549d6",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean",
+      "sha256": "d42f28827dd7980699f5cebcf503ef4b174c849b883c53aa8a8f7d4089cf259d",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+      "sha256": "4429c93a112e2b8d210f072ec7d42186028e6febc8c256d9f594dbb089182b59",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+      "sha256": "7afb6f348edb61b610eb983096847e3ab60861b31568d42f7fddf6aa97685264",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean",
+      "sha256": "4ec1f14e3940323b57f27f47f24960b2b3c45f6fa5e213e9ca11225e088c7e4b",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean",
+      "sha256": "db3f52259766552243d6ebe108575c983e34010362858dfa0451eb60784bd2ed",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayDeterministicScan.lean",
+      "sha256": "39871653b3814604a1ba1c67d3145d85f9f7b65fd6f667b64e1718fe2716ae54",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean",
+      "sha256": "e5ddc3a7ec48e73bb584817003f68616393284caf59d7125a5a2e134dd10bbbf",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean",
+      "sha256": "3b5c2c0c4bb2b7af0476fa9e7870caca67c9cc7b41aeea76a1685088582b5f63",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean",
+      "sha256": "aefd885c7dd441b825d1bd647ca501450c0122b152d282adcb1fd60df789fd39",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled dev316 observed PASS; exact collection and acceptance pending"
+    }
+  ],
+  "accepted_direct_dependency": {
+    "source": "CorruptedFieldRecovery/RawRabinCandidateCorrectness.lean",
+    "sha256": "6f7f0a9321c73a818f700c9dacd9ebede2838e2271b14f0a2d7357f2c6fcfae0",
+    "accepted_run": "dev199"
+  },
+  "scope": "Unaudited proposed deterministic fast-check acceptance from mathematical primitive-generator hypotheses, rather than assuming fast-check success.",
+  "generic_premises": [
+    "true supplied K/Q, T?Q-scalar range",
+    "field finrank=s",
+    "independence of first s powers of T",
+    "sampled scalar primitive:adjoin{k}=top",
+    "s?1",
+    "scalarBits.size=s and decoded scalarBits nonzero"
+  ],
+  "sample_specialization_additional_premises": [
+    "supplied E/U/dependent b, actual good tape,c nonzero,decoded observed model promise,raw size and chosen seed",
+    "both independent-powers and primitive-scalar hypotheses remain explicit for that seed"
+  ],
+  "limits": [
+    "scalarBits length/nonzero does not identify encoded scalar with model coefficient c",
+    "no unconditional or probabilistic claim all/random seeds primitive",
+    "no compiled/audited recurrence, serialization or generator-filter result",
+    "no field/Q discovery, full certificate assembly, constructor success or primitive cost/space bound"
+  ]
+}
