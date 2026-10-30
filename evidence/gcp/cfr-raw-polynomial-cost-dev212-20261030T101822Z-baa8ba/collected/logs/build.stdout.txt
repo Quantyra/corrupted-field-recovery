@@ -1,0 +1,26 @@
+✖ [1841/1841] Building CorruptedFieldRecovery.RawPolynomialBitCost (3.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawPolynomialBitCost.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialBitCost.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialBitCost.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPolynomialBitCost.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPolynomialBitCost.setup.json --json
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:54:21: Unknown constant `Prod.fst_mk`
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:54:34: Unknown identifier `let_eq`
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:55:37: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+where
+ c := ↑(b + 1) / 2
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:51:15: unsolved goals
+case h.succ
+a b : ℕ
+ih : ∀ m < b + 1, (rawPolyMulBitCosted a m).1 = rawPolyMul a m
+hdiv : (b + 1) / 2 < b + 1
+⊢ Nat.xor 0 (2 * rawPolyMul a ((b + 1) / 2)) = if b + 1 = 0 then 0 else Nat.xor 0 (2 * rawPolyMul a ((b + 1) / 2))
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:77:48: gcongr did not make progress
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:117:20: Type mismatch
+  Nat.add_le_add_left hstep ?m.832
+has type
+  ?m.832 + (1 + 4 * (k + 2) + (r + 1) + (r + k + 1) + (r + k + 2)) ≤ ?m.832 + 8 * (r + k + 3)
+but is expected to have type
+  8 * (r + k + 2) * (k + 1) + 1 + 4 * (k + 2) + (r + 1) + (r + k + 1) + (r + k + 2) ≤
+    8 * (r + k + 2) * (k + 1) + 8 * (r + k + 3)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawPolynomialBitCost

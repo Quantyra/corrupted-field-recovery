@@ -1,0 +1,76 @@
+✖ [2981/2981] Building CorruptedFieldRecovery.S010ObservedHiddenBalance (11s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.setup.json --json
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:525:18: unsolved goals
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+k : K
+x y : BinaryVector n
+⊢ Q.symm (k • (Q x + Q y)) = Q.symm (k • Q x) + Q.symm (k • Q y)
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:528:19: unsolved goals
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+k : K
+a : BinaryField
+x : BinaryVector n
+⊢ Q.symm (a • k • Q x) = (RingHom.id BinaryField) a • Q.symm (k • Q x)
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:536:15: unsolved goals
+case h.h.h
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+a : BinaryField
+k : K
+x x✝ : Fin n
+⊢ Q.symm
+      ((k * (algebraMap BinaryField K) a, k * (algebraMap BinaryField K) a, k * (algebraMap BinaryField K) a) *
+        Q (Pi.single x 1))
+      x✝ =
+    a * Q.symm ((k, k, k) * Q (Pi.single x 1)) x✝
+warning: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:530:31: This simp argument is unused:
+  map_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [Q.map_smul, m̵a̵p̵_̵s̵m̵u̵l̵,̵ ̵LinearEquiv.map_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:530:41: This simp argument is unused:
+  LinearEquiv.map_smul
+
+Hint: Omit it from the simp argument list.
+  simp only [Q.map_smul, map_smul,̵ ̵L̵i̵n̵e̵a̵r̵E̵q̵u̵i̵v̵.̵m̵a̵p̵_̵s̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:539:28: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  simp [Algebra.smul_def, s̵m̵u̵l̵_̵s̵m̵u̵l̵,̵ ̵mul_assoc, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:539:39: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [Algebra.smul_def, smul_smul, m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵ ̵mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:559:11: declaration uses `sorry`
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:599:4: Type mismatch
+  Eq.symm (hk ↑↑x)
+has type
+  Q.symm (k • Q ↑↑x) = T ↑↑x
+but is expected to have type
+  ((qScalarConjugateLinearMap Q) k ∘ₗ LinearMap.single BinaryField (fun i => ZMod 2) x) 1 x✝ =
+    (T ∘ₗ LinearMap.single BinaryField (fun i => ZMod 2) x) 1 x✝
+warning: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:604:11: declaration uses `sorry`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ObservedHiddenBalance
