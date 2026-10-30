@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-30T14:46:36.332386+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-raw-candidate-shape-cost-dev292-20261030T144436Z-5f6fd7\\inputs.tar.gz",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-raw-candidate-shape-cost-dev292-20261030T144436Z-5f6fd7\\capture-manifest.json",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-raw-candidate-shape-cost-dev292-20261030T144436Z-5f6fd7\\gcp_cfr_runner.py",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-raw-candidate-shape-cost-dev292-20261030T144436Z-5f6fd7\\run.sh",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-raw-candidate-shape-cost-dev292-20261030T144436Z-5f6fd7\\bootstrap-assets.json",
+    "quantyra-cfr-lean-builder-20261028a:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-raw-candidate-shape-cost-dev292-20261030T144436Z-5f6fd7/",
+    "--tunnel-through-iap",
+    "--scp-flag=-hostkey",
+    "--scp-flag=SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

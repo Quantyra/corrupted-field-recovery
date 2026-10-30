@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T14:50:02.746874+00:00",
+  "accepted": "Costed bit/field decoding definitions and first projection equality; declared compare/division charges; costed shape Bool output refinement",
+  "excluded": [
+    "charge bound",
+    "concrete operation refinement",
+    "scan composition",
+    "runtime",
+    "space"
+  ],
+  "axioms_max": [
+    "propext"
+  ]
+}

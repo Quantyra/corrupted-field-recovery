@@ -1,0 +1,38 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsToNatBitCosted
+CorruptedFieldRecovery.rawBitsToNatBitCosted : (a : List.{0} Bool) → Prod.{0, 0} Nat Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsToNatBitCosted
+'CorruptedFieldRecovery.rawBitsToNatBitCosted' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsToNatBitCosted_fst
+CorruptedFieldRecovery.rawBitsToNatBitCosted_fst : ∀ (bits : List.{0} Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBitsToNatBitCosted bits).1 (CorruptedFieldRecovery.rawBitsToNat bits)
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsToNatBitCosted_fst
+'CorruptedFieldRecovery.rawBitsToNatBitCosted_fst' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldBitsToNatBitCosted
+CorruptedFieldRecovery.rawFieldBitsToNatBitCosted : (bits : CorruptedFieldRecovery.RawFieldBits) → Prod.{0, 0} Nat Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldBitsToNatBitCosted
+'CorruptedFieldRecovery.rawFieldBitsToNatBitCosted' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_fst
+CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_fst : ∀ (bits : CorruptedFieldRecovery.RawFieldBits),
+  Eq.{1} (CorruptedFieldRecovery.rawFieldBitsToNatBitCosted bits).1 (CorruptedFieldRecovery.rawFieldBitsToNat bits)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_fst
+'CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_fst' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawShapeCompareCharge
+CorruptedFieldRecovery.rawShapeCompareCharge : (a b : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawShapeCompareCharge
+'CorruptedFieldRecovery.rawShapeCompareCharge' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawShapeDivisionCharge
+CorruptedFieldRecovery.rawShapeDivisionCharge : (a b : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawShapeDivisionCharge
+'CorruptedFieldRecovery.rawShapeDivisionCharge' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted
+@CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) → Prod.{0, 0} Bool Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted
+'CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_fst
+@CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_fst : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).1
+    (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_fst
+'CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_fst' depends on axioms: [propext]

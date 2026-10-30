@@ -1,0 +1,34 @@
+{
+  "CorruptedFieldRecovery.rawBitsToNatBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawBitsToNatBitCosted : (a : List.{0} Bool) \u2192 Prod.{0, 0} Nat Nat\n",
+    "sha256": "ce6ccea24f85ac32074cd938ccd7a9f75e503c86653e9a18588967134de66fe2"
+  },
+  "CorruptedFieldRecovery.rawBitsToNatBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawBitsToNatBitCosted_fst : \u2200 (bits : List.{0} Bool),\n  Eq.{1} (CorruptedFieldRecovery.rawBitsToNatBitCosted bits).1 (CorruptedFieldRecovery.rawBitsToNat bits)\n",
+    "sha256": "8880a785076ca7bc15388d07d6a3987df13f6fcbc597337a4432385a0339dee0"
+  },
+  "CorruptedFieldRecovery.rawFieldBitsToNatBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawFieldBitsToNatBitCosted : (bits : CorruptedFieldRecovery.RawFieldBits) \u2192 Prod.{0, 0} Nat Nat\n",
+    "sha256": "f815ef41bfc3b6ba8a13ae5df5fffcfe2cab09c9fec79edcdc473c6d382693b6"
+  },
+  "CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawFieldBitsToNatBitCosted_fst : \u2200 (bits : CorruptedFieldRecovery.RawFieldBits),\n  Eq.{1} (CorruptedFieldRecovery.rawFieldBitsToNatBitCosted bits).1 (CorruptedFieldRecovery.rawFieldBitsToNat bits)\n",
+    "sha256": "fd86ee0d821ec5a3d79b20052d8f9dc27b7790ffd3c7d6e1e2a8463ff20d639b"
+  },
+  "CorruptedFieldRecovery.rawShapeCompareCharge": {
+    "emitted_type": "CorruptedFieldRecovery.rawShapeCompareCharge : (a b : Nat) \u2192 Nat\n",
+    "sha256": "09e32efc8443ca4c81b6ad5cee163971b073e67be2a72ef4822eb682fd473e0a"
+  },
+  "CorruptedFieldRecovery.rawShapeDivisionCharge": {
+    "emitted_type": "CorruptedFieldRecovery.rawShapeDivisionCharge : (a b : Nat) \u2192 Nat\n",
+    "sha256": "4ab3261d9f548d807883fbb5cf699d77d2fa55981b4f2a138ddf3652eddc8f40"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 Prod.{0, 0} Bool Nat\n",
+    "sha256": "b1b59b6daaaebed20afb4e70a6880d9651c053f919d569b3e4ea707b69ef3ffb"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_fst": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_fst : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).1\n    (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate)\n",
+    "sha256": "e40eebe0390d0b25240195165a29b9f4f7cae2d94dc9954c331cf4963cc7d5e0"
+  }
+}
