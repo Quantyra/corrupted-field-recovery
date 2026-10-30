@@ -1,0 +1,18 @@
+{
+  "run": "cfr-uncompiled-kernel-span-preservation-20261030T160033Z-28e051",
+  "archive_sha256": "7baa128fb0b9cbbc9c48a662db17d73a4e3e3807ca498982520f0ff3c44b8877",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+  "source_sha256": "52E046A4D4698910BC8566CEBB6890B08AE97560E17DDE7C23BA4C7B1180A672",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "direct_local_dependency": {
+    "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+    "sha256": "C37B975D6EF7EC54BD514DB4E232FFEB01FF5597867E4235C8882A08DFEDF73E",
+    "status": "uncompiled unaudited unaccepted draft"
+  },
+  "other_direct_import": "Mathlib.LinearAlgebra.LinearIndependent.Lemmas under pinned capture manifest",
+  "conditional_scope": "Draft reconstruction theorem explicitly assumes every candidate lies in the kernel (hker) and a kernel vector with zero free coordinates is zero (hunique). Neither premise is discharged as an actual solver claim. Identity-coordinate and independence statements are also uncompiled drafts."
+}
