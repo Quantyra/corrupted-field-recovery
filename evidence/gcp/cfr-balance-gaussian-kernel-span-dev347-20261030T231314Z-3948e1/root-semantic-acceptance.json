@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+  "sha256": "0f7333f3fbf38dc3e1f9d8f461aa42726b271ecff4cafa3b080ba933ee7a0ea9",
+  "scope": "Free-index/family, coordinate identity and linear independence with stated Fintype/DecidableEq instances. Reconstruction remains conditional on explicit hker and hunique; not yet an actual scan basis.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}

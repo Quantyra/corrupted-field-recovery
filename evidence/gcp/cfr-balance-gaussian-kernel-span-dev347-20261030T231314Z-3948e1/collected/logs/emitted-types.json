@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.balanceGaussianFreeIndex": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianFreeIndex : {m n : Nat} \u2192\n  (pivots : List.{0} (Prod.{0, 0} (Fin m) (Fin n))) \u2192 Type\n",
+    "sha256": "9218d5164faa7b6d9780e614df99e7746cc486d00cd3ae4015e95adc21fc3921"
+  },
+  "CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily : {m n : Nat} \u2192\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) \u2192\n    (pivots : List.{0} (Prod.{0, 0} (Fin m) (Fin n))) \u2192\n      (a : CorruptedFieldRecovery.balanceGaussianFreeIndex pivots) \u2192 (a : Fin n) \u2192 ZMod 2\n",
+    "sha256": "f6b46de9b12725f0881e54b56e936e29e9046ffeb27bf14ceb090105ec41585e"
+  },
+  "CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_coordinate_identity": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_coordinate_identity : \u2200 {m n : Nat}\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (pivots : List.{0} (Prod.{0, 0} (Fin m) (Fin n)))\n  [inst : DecidableEq.{1} (CorruptedFieldRecovery.balanceGaussianFreeIndex pivots)]\n  (free column : CorruptedFieldRecovery.balanceGaussianFreeIndex pivots),\n  Eq.{1} (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily A pivots free \u2191column)\n    (ite.{1} (Eq.{1} column free) 1 0)\n",
+    "sha256": "f5f3a78dda1004f613e82337a2c7665ff1898441605bdb4bb57dacc9a5628bef"
+  },
+  "CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_linearIndependent": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_linearIndependent : \u2200 {m n : Nat}\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (pivots : List.{0} (Prod.{0, 0} (Fin m) (Fin n)))\n  [inst : Fintype.{0} (CorruptedFieldRecovery.balanceGaussianFreeIndex pivots)]\n  [inst : DecidableEq.{1} (CorruptedFieldRecovery.balanceGaussianFreeIndex pivots)],\n  LinearIndependent.{0, 0, 0} (ZMod 2) (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily A pivots)\n",
+    "sha256": "569930e9d84447ad25f0e460cbc88576fe37e78705c563f45ca890c4d8d9cfeb"
+  },
+  "CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_reconstruct": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_reconstruct : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (pivots : List.{0} (Prod.{0, 0} (Fin m) (Fin n)))\n  [inst_1 : Fintype.{0} (CorruptedFieldRecovery.balanceGaussianFreeIndex pivots)]\n  (hker :\n    \u2200 (free : CorruptedFieldRecovery.balanceGaussianFreeIndex pivots),\n      Eq.{1} (Matrix.mulVec.{0, 0, 0} A (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily A pivots free)) 0)\n  (hunique :\n    \u2200 (x : (a : Fin n) \u2192 ZMod 2) (a : Eq.{1} (Matrix.mulVec.{0, 0, 0} A x) 0)\n      (a : \u2200 (free : CorruptedFieldRecovery.balanceGaussianFreeIndex pivots), Eq.{1} (x \u2191free) 0), Eq.{1} x 0)\n  (x : (a : Fin n) \u2192 ZMod 2) (a : Eq.{1} (Matrix.mulVec.{0, 0, 0} A x) 0),\n  Eq.{1} x\n    (\u2211 free, HSMul.hSMul.{0, 0, 0} (x \u2191free) (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily A pivots free))\n",
+    "sha256": "2efa4454f13608578413213d423d17e39da803350f4352db20366159c4bfdfb8"
+  }
+}
