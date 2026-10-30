@@ -1,0 +1,52 @@
+✖ [2073/2073] Building CorruptedFieldRecovery.RawArithmeticRegisterSpaceModel (2.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.lean:86:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ -1
+  6*b - d ≥ -6
+  6*b - e ≤ -7
+  0 ≤ a ≤ 5
+where
+ a := ↑tail.length
+ b := ↑W
+ c := ↑(rawNatBitWidth word)
+ d := ↑(List.foldl (fun total word => total + rawNatBitWidth word) 0 tail)
+ e := ↑(List.foldl (fun total word => total + rawNatBitWidth word) (0 + rawNatBitWidth word) tail)
+error: CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.lean:111:47: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  6*c - d ≥ -9
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+  a - e ≤ -1
+where
+ a := ↑F
+ b := ↑(frame :: tail).length
+ c := ↑W
+ d := ↑(rawArithmeticFrameLiveBits frame)
+ e := ↑tail.length
+error: CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.lean:115:23: Application type mismatch: The argument
+  F
+has type
+  ℕ
+of sort `Type` but is expected to have type
+  tail.length ≤ F
+of sort `Prop` in the application
+  ih F
+warning: CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.lean:109:62: This simp argument is unused:
+  List.length_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [rawArithmeticStackLiveBits, List.foldl_cons,̵ ̵L̵i̵s̵t̵.̵l̵e̵n̵g̵t̵h̵_̵c̵o̵n̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticRegisterSpaceModel
