@@ -1,0 +1,12 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialRemainder_commonDivisors
+@CorruptedFieldRecovery.rawPolynomialRemainder_commonDivisors : ∀ {a b c : Nat} (hb : Ne.{1} b 0),
+  Iff
+    (And (Dvd.dvd.{0} (CorruptedFieldRecovery.rawMaskPolynomial c) (CorruptedFieldRecovery.rawMaskPolynomial a))
+      (Dvd.dvd.{0} (CorruptedFieldRecovery.rawMaskPolynomial c) (CorruptedFieldRecovery.rawMaskPolynomial b)))
+    (And (Dvd.dvd.{0} (CorruptedFieldRecovery.rawMaskPolynomial c) (CorruptedFieldRecovery.rawMaskPolynomial b))
+      (Dvd.dvd.{0} (CorruptedFieldRecovery.rawMaskPolynomial c)
+        (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawPolynomialRemainder a b))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialRemainder_commonDivisors
+'CorruptedFieldRecovery.rawPolynomialRemainder_commonDivisors' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

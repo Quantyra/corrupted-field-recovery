@@ -1,0 +1,95 @@
+✖ [2978/2978] Building CorruptedFieldRecovery.S010ObservedCleanTensor (8.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ObservedCleanTensor.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedCleanTensor.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedCleanTensor.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedCleanTensor.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedCleanTensor.setup.json --json
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:102:47: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?f (?x + ?y)
+in the target expression
+  (Algebra.trace BinaryField K) (c * (fieldDet3 (Q x) (Q y) (Q z) + fieldDet3 (Q x) (Q y') (Q z))) =
+    ({ toFun := fun z => (Algebra.trace BinaryField K) (c * fieldDet3 (Q x) (Q y) (Q z)), map_add' := ⋯,
+          map_smul' := ⋯ } +
+        { toFun := fun z => (Algebra.trace BinaryField K) (c * fieldDet3 (Q x) (Q y') (Q z)), map_add' := ⋯,
+          map_smul' := ⋯ })
+      z
+
+case h
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+c : K
+x y y' z : BinaryVector n
+⊢ (Algebra.trace BinaryField K) (c * (fieldDet3 (Q x) (Q y) (Q z) + fieldDet3 (Q x) (Q y') (Q z))) =
+    ({ toFun := fun z => (Algebra.trace BinaryField K) (c * fieldDet3 (Q x) (Q y) (Q z)), map_add' := ⋯,
+          map_smul' := ⋯ } +
+        { toFun := fun z => (Algebra.trace BinaryField K) (c * fieldDet3 (Q x) (Q y') (Q z)), map_add' := ⋯,
+          map_smul' := ⋯ })
+      z
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:121:16: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:160:36: Unknown identifier `qTraceDeterminantTensor`
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:171:13: Function expected at
+  qTraceDeterminantTensor
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  Q
+
+Hint: The identifier `qTraceDeterminantTensor` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:186:34: Function expected at
+  qTraceDeterminantTensor
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  Q
+
+Hint: The identifier `qTraceDeterminantTensor` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:189:5: Function expected at
+  qTraceDeterminantTensor
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  Q
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:186:68: unsolved goals
+x✝ : Sort u_2
+qTraceDeterminantTensor : x✝
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra BinaryField K
+n m : ℕ
+Ctotal : BinaryTensor n
+E : BinaryTensor m
+u : BinaryVector n →ₗ[ZMod 2] BinaryVector m
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+c : K
+hmodel : HasObservedTraceDeterminantDecomposition Ctotal E u Q c
+z : BinaryVector n
+hz : u z ∈ (modeImage E).dualCoannihilator
+⊢ Sort ?u.512733.20
+
+x✝ : Sort u_2
+qTraceDeterminantTensor : x✝
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : Finite K
+inst✝ : Algebra BinaryField K
+n m : ℕ
+Ctotal : BinaryTensor n
+E : BinaryTensor m
+u : BinaryVector n →ₗ[ZMod 2] BinaryVector m
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+c : K
+hmodel : HasObservedTraceDeterminantDecomposition Ctotal E u Q c
+z : BinaryVector n
+hz : u z ∈ (modeImage E).dualCoannihilator
+⊢ ?m.53
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ObservedCleanTensor

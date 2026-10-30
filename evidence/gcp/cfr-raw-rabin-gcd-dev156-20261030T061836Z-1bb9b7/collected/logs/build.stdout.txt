@@ -1,0 +1,5 @@
+⚠ [2044/2044] Built CorruptedFieldRecovery.RawRabinGcdRefinement (2.4s)
+warning: CorruptedFieldRecovery/RawRabinGcdRefinement.lean:34:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (2044 jobs).
