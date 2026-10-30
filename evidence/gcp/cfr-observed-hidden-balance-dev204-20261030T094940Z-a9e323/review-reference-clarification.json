@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-30T09:57:14.838458+00:00",
+  "previous_run190_has_new_iff": false,
+  "new_iff_first_pass_run": "cfr-observed-hidden-balance-dev204-20261030T094940Z-a9e323",
+  "source_sha256": "a80a608669ea75d9762a74c61da994d84e55058b6d8410f5d4ac5d6f7dc47d3a",
+  "checkpoint": "5459564",
+  "status": "Exact204 source checkpointed; Root asked to confirm204-specific provenance after review note referred190. Do not attribute new iff to190."
+}

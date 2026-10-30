@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-30T09:57:35.306150+00:00",
+  "confirmation": "Root explicitly inspected collected204 audit and corrected prior190 label. Accept204 exact source A80A608669EA75D9762A74C61DA994D84E55058B6D8410F5D4AC5D6F7DC47D3A with earlier narrow scope",
+  "prior_type_blocks_byte_identical": [
+    "CorruptedFieldRecovery.physicalEndomorphismToInput",
+    "CorruptedFieldRecovery.physicalEndomorphismToInput_apply",
+    "CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism",
+    "CorruptedFieldRecovery.qTraceDeterminantTensor_apply",
+    "CorruptedFieldRecovery.modeImage_actual_good_tape_q_frame_coordinates"
+  ],
+  "new_type": "CorruptedFieldRecovery.actual_good_tape_clean_balance_iff_hidden",
+  "source_checkpoint": "5459564"
+}
