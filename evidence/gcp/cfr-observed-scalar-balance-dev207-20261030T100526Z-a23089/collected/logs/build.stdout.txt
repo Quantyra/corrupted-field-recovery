@@ -1,0 +1,25 @@
+✖ [2981/2981] Building CorruptedFieldRecovery.S010ObservedHiddenBalance (10s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.setup.json --json
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:415:10: Type mismatch
+  (modeImage_inputEquiv_from_Q ?m.64).symm (k • (modeImage_inputEquiv_from_Q ?m.86) ?m.89)
+has type
+  BinaryInput ?m.58 (3 * ?m.63)
+but is expected to have type
+  Fin n → ZMod (ringChar K)
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:416:47: Application type mismatch: The argument
+  x
+has type
+  BinaryInput K n
+but is expected to have type
+  BinaryInput ?m.80 (3 * ?m.85)
+in the application
+  (modeImage_inputEquiv_from_Q ?m.86) x
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:475:13: typeclass instance problem is stuck
+  FiniteDimensional (?m.176 fr v) (FieldTriple K)
+
+Note: Lean will not try to resolve this typeclass instance problem because the first, third, and fifth type arguments to `FiniteDimensional` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ObservedHiddenBalance

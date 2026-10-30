@@ -1,0 +1,90 @@
+✖ [1841/1841] Building CorruptedFieldRecovery.RawPolynomialBitCost (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawPolynomialBitCost.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialBitCost.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialBitCost.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPolynomialBitCost.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPolynomialBitCost.setup.json --json
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:34:42: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 1
+  a - b ≥ 1
+where
+ a := ↑2 ^ k
+ b := ↑n
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:47:65: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  -1 ≤ c - 2*d ≤ 0
+  c - d ≥ 0
+where
+ c := ↑b
+ d := ↑(b + 1) / 2
+warning: CorruptedFieldRecovery/RawPolynomialBitCost.lean:47:42: Possibly looping simp theorem: `rawPolyMul.eq_1`
+
+Note: Possibly caused by: `rawPolyMul`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:47:10: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:67:10: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 1
+  c ≥ 0
+  b - c ≥ 1
+where
+ b := ↑2 ^ r
+ c := ↑a
+ d := ↑2 ^ k
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:104:50: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  u ≥ 0
+  t ≥ 0
+  s ≥ 0
+  q ≥ 0
+  p ≥ 0
+  o ≥ 0
+  o - s ≥ -2
+  n ≥ 0
+  n - t ≥ -1
+  n + o - p ≥ -1
+  n + o - q ≥ -2
+  m ≥ 0
+  l ≥ 0
+  j - l ≥ 1
+  j - m ≥ 1
+  i ≥ 0
+  h ≥ 0
+  h - i ≥ 0
+  h + 3*n + 6*o - u ≥ -12
+  f ≥ 0
+  -1 ≤ f - 2*g ≤ 0
+  e - g ≥ 1
+  2*e - f ≥ 2
+  d ≥ 0
+  c - d ≥ 1
+where
+ c := ↑2 ^ r
+ d := ↑a
+ e := ↑2 ^ k
+ f := ↑b
+ g := ↑(b + 1) / 2
+ h := ↑(8 * (r + k + 2)) * ↑(k + 1)
+ i := ↑(rawPolyMulBitCosted a ((b + 1) / 2)).2
+ j := ↑2 ^ (r + k)
+ l := ↑(rawPolyMul a ((b + 1) / 2))
+ m := ↑(rawPolyMulBitCosted a ((b + 1) / 2)).1
+ n := ↑r
+ o := ↑k
+ p := ↑(rawNatBitWidth (rawPolyMulBitCosted a ((b + 1) / 2)).1)
+ q := ↑(rawNatBitWidth (2 * (rawPolyMulBitCosted a ((b + 1) / 2)).1))
+ s := ↑(rawNatBitWidth (b + 1))
+ t := ↑(rawNatBitWidth a)
+ u := ↑(8 * (r + k + 3)) * ↑(k + 2)
+error: CorruptedFieldRecovery/RawPolynomialBitCost.lean:105:10: 'change' tactic failed, pattern
+  (rawPolyMulBitCosted a ((b + 1) / 2)).2 + 1 + 4 * rawNatBitWidth (b + 1) + rawNatBitWidth a +
+        rawNatBitWidth (rawPolyMulBitCosted a ((b + 1) / 2)).1 +
+      rawNatBitWidth (2 * (rawPolyMulBitCosted a ((b + 1) / 2)).1) ≤
+    ?m.821
+is not definitionally equal to target
+  (rawPolyMulBitCosted a (b + 1)).2 ≤ 8 * (r + (k + 1) + 2) * (k + 1 + 1)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawPolynomialBitCost
