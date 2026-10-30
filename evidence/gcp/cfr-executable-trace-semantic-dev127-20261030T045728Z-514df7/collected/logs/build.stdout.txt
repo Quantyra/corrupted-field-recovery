@@ -1,0 +1,66 @@
+✖ [2041/2041] Building CorruptedFieldRecovery.RawExecutableTraceSemantic (16s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawExecutableTraceSemantic.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableTraceSemantic.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableTraceSemantic.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawExecutableTraceSemantic.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawExecutableTraceSemantic.setup.json --json
+error: CorruptedFieldRecovery/RawExecutableTraceSemantic.lean:21:19: don't know how to synthesize implicit argument `α`
+  @Eq (BinaryVector ?m.70) ((rawCoordinateMatrixMap inverse) ((rawCoordinateMatrixMap forward) x)) x
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+v : BinaryVector n
+e : BinaryVector n ≃ₗ[ZMod 2] BinaryVector n := ⋯
+hcomp :
+  rawCoordinateMatrixMap inverse ∘ₗ rawCoordinateMatrixMap forward = LinearMap.id ∧
+    rawCoordinateMatrixMap forward ∘ₗ rawCoordinateMatrixMap inverse = LinearMap.id
+hleft : (rawCoordinateMatrixMap forward) ((rawCoordinateMatrixMap inverse) v) = v
+x : BinaryVector ?m.70
+⊢ Type
+error: CorruptedFieldRecovery/RawExecutableTraceSemantic.lean:21:19: don't know how to synthesize implicit argument `n`
+  @DFunLike.coe (BinaryVector ?m.70 →ₗ[ZMod 2] BinaryVector ?m.70) (BinaryVector ?m.70) (fun x => BinaryVector ?m.70)
+    LinearMap.instFunLike (rawCoordinateMatrixMap inverse) ((rawCoordinateMatrixMap forward) x)
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+v : BinaryVector n
+e : BinaryVector n ≃ₗ[ZMod 2] BinaryVector n := ⋯
+hcomp :
+  rawCoordinateMatrixMap inverse ∘ₗ rawCoordinateMatrixMap forward = LinearMap.id ∧
+    rawCoordinateMatrixMap forward ∘ₗ rawCoordinateMatrixMap inverse = LinearMap.id
+hleft : (rawCoordinateMatrixMap forward) ((rawCoordinateMatrixMap inverse) v) = v
+x : BinaryVector ?m.70
+⊢ ℕ
+error: CorruptedFieldRecovery/RawExecutableTraceSemantic.lean:21:51: don't know how to synthesize implicit argument `n`
+  @DFunLike.coe (BinaryVector ?m.70 →ₗ[ZMod 2] BinaryVector ?m.70) (BinaryVector ?m.70) (fun x => BinaryVector ?m.70)
+    LinearMap.instFunLike (rawCoordinateMatrixMap forward) x
+context:
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+v : BinaryVector n
+e : BinaryVector n ≃ₗ[ZMod 2] BinaryVector n := ⋯
+hcomp :
+  rawCoordinateMatrixMap inverse ∘ₗ rawCoordinateMatrixMap forward = LinearMap.id ∧
+    rawCoordinateMatrixMap forward ∘ₗ rawCoordinateMatrixMap inverse = LinearMap.id
+hleft : (rawCoordinateMatrixMap forward) ((rawCoordinateMatrixMap inverse) v) = v
+x : BinaryVector ?m.70
+⊢ ℕ
+error: CorruptedFieldRecovery/RawExecutableTraceSemantic.lean:21:16: Failed to infer type of binder `x`
+error: CorruptedFieldRecovery/RawExecutableTraceSemantic.lean:15:42: unsolved goals
+n : ℕ
+forward inverse : RawCoordinateMatrix
+hcheck : rawCoordinateMatrixCheck forward inverse = true
+v : BinaryVector n
+e : BinaryVector n ≃ₗ[ZMod 2] BinaryVector n := accepted_rawCoordinateMatrixEquiv forward inverse hcheck
+hcomp :
+  rawCoordinateMatrixMap inverse ∘ₗ rawCoordinateMatrixMap forward = LinearMap.id ∧
+    rawCoordinateMatrixMap forward ∘ₗ rawCoordinateMatrixMap inverse = LinearMap.id
+hleft : (rawCoordinateMatrixMap forward) ((rawCoordinateMatrixMap inverse) v) = v
+⊢ (accepted_rawCoordinateMatrixEquiv forward inverse hcheck).symm v = (rawCoordinateMatrixMap inverse) v
+error: CorruptedFieldRecovery/RawExecutableTraceSemantic.lean:30:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawExecutableTraceSemantic
