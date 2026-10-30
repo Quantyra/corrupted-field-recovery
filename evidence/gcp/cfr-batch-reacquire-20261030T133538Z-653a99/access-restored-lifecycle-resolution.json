@@ -1,0 +1,10 @@
+{
+  "prior_stop_verified": true,
+  "lastStopTimestamp": "2026-10-30T17:37:47.584Z",
+  "automatic_stop_effective": true,
+  "task_egress_removed": true,
+  "explicit_stop_issued": false,
+  "existing316_archive_recovered": true,
+  "archive_sha256": "8d2d822454f6e2ab981551c7391e40d9d99d92f26965f379fc3459871d15d118",
+  "fresh_batch": "cfr-batch-reacquire-20261030T205345Z-ff4d30"
+}

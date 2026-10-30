@@ -1,0 +1,8 @@
+{
+  "instance_id": "3335066512373302615",
+  "status": "TERMINATED",
+  "lastStopTimestamp": "2026-10-30T10:37:47.584-07:00",
+  "egress_removed": true,
+  "stop_issued": false,
+  "persistent_disk_retained": true
+}
