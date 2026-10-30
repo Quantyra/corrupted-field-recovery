@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T09:07:55.904387+00:00",
+  "run": "cfr-observed-hidden-balance-dev190-20261030T090631Z-13a1b6",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

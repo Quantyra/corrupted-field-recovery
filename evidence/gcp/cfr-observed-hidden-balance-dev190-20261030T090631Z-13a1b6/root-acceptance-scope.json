@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T09:11:15.658267+00:00",
+  "review": "Root exact five types/source",
+  "accepted": "Public physical endomorphism transport with cast apply/action; literal qTraceDeterminantTensor evaluation; actual good tape canonical frame and fourth with Q(tape castSucc i)=basis i and Q(tape3)=v",
+  "hypotheses": "Explicit Q,E,U,b,htape and field/algebra assumptions",
+  "excluded": [
+    "balance equivalence",
+    "algorithm success",
+    "costs"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
