@@ -1,0 +1,26 @@
+{
+  "run": "cfr-determinant-bits-dev73-20261030T022442Z-459c8a",
+  "utc": "2026-10-30T02:29:35.599404+00:00",
+  "archive_sha256": "b64a0e1c0d152d9202bc88f74e6b87ef30773e66c61bb588f0523e72b97f56f4",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "1e9b86dee6ae85cca5a6b19cff1511f8e16d844fc1987c4c982e643202b75680",
+    "launch.log": "d7c3aa9c3a11f49e96457e38805d0dc8772576c02f1ce06aa97f015901463527",
+    "runner-pid": "724ca8c89275edef8c20e4bb5aec17f251abccd956e2ae72839a75204c605964",
+    "started-utc": "89ac7e8abcc7dee0a11ff87488d70a371a22017334ec0229a2777d9a44f5d01b",
+    "terminal-receipt.json": "76f8c7ffaf0a0b80d7e0fb245225f03814b138be2f13648dbe2184ab89e157e4",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "f31a0ba12441a3ccfe024a9ce4127972333e2154d6d7f062294dadd9b3cceab1",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "d6036bf243ce28368f9cbbba7865418bf4f74dce5ab4f0e4ddbc03861126ef8b",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/emitted-types.json": "5e07f921b22e1fd6bc94c36e1331e4738b5d9b983c8e43a1f98ca51e1f92f946",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "d7c3aa9c3a11f49e96457e38805d0dc8772576c02f1ce06aa97f015901463527"
+  }
+}

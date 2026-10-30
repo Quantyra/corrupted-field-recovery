@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Executable three-product/six-term determinant and trace; quotient determinant soundness and literal trace0/1 of candidate scalar times determinant for supplied Nat coordinate triples and checked candidate.",
+  "remaining": "Physical coordinate extraction, coefficient loop/verifier and bit-cost remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}

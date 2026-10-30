@@ -1,0 +1,70 @@
+✖ [2971/2971] Building CorruptedFieldRecovery.S010ConditionalAmplification (3.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ConditionalAmplification.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ConditionalAmplification.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ConditionalAmplification.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ConditionalAmplification.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ConditionalAmplification.setup.json --json
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:24:19: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:25:16: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:26:25: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+α : Type u_1
+inst✝¹ : Fintype α
+inst✝ : DecidableEq α
+S : Finset α
+n : ℕ
+⊢ ?m.35
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:27:26: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+α : Type u_1
+inst✝¹ : Fintype α
+inst✝ : DecidableEq α
+S : Finset α
+n : ℕ
+⊢ ?m.37
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:19:62: unsolved goals
+case e
+α : Type u_1
+inst✝¹ : Fintype α
+inst✝ : DecidableEq α
+S : Finset α
+n : ℕ
+BadRun : Type (max 0 u_1) := { run // ∀ (i : Fin n), run i ∉ S }
+BadValue : Type (max 0 u_1) := { x // x ∉ S }
+⊢ BadRun ≃ (Fin n → BadValue)
+
+α : Type u_1
+inst✝¹ : Fintype α
+inst✝ : DecidableEq α
+S : Finset α
+n : ℕ
+BadRun : Type (max 0 u_1) := { run // ∀ (i : Fin n), run i ∉ S }
+BadValue : Type (max 0 u_1) := { x // x ∉ S }
+e : BadRun ≃ (Fin n → BadValue) := ?e
+⊢ (repeatedSuccessSet S n).card = Fintype.card α ^ n - (Fintype.card α - S.card) ^ n
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:14:0: internal exception #3
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:28:2: unexpected token 'have'; expected command
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:68:2: linarith failed to find a contradiction
+case h
+α : Type u_1
+inst✝¹ : Fintype α
+inst✝ : DecidableEq α
+S : Finset α
+C n : ℕ
+hCpos : 0 < C
+htrial : C * S.card ≥ Fintype.card α
+hM : S.card ≤ Fintype.card α
+hfail : C * (Fintype.card α - S.card) ≤ (C - 1) * Fintype.card α
+hpow : C ^ n * (Fintype.card α - S.card) ^ n ≤ ((C - 1) * Fintype.card α) ^ n
+hmiss : (Fintype.card α - S.card) ^ n ≤ Fintype.card α ^ n
+a✝ : C ^ n * (Fintype.card α ^ n - (Fintype.card α - S.card) ^ n) < (C ^ n - (C - 1) ^ n) * Fintype.card α ^ n
+⊢ False
+failed
+error: CorruptedFieldRecovery/S010ConditionalAmplification.lean:82:35: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin s)
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ConditionalAmplification

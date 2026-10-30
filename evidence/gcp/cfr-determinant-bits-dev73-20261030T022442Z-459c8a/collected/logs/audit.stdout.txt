@@ -1,0 +1,70 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldMul3Bits
+@CorruptedFieldRecovery.rawFieldMul3Bits : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) → (a b c : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldMul3Bits
+'CorruptedFieldRecovery.rawFieldMul3Bits' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldDet3Bits
+@CorruptedFieldRecovery.rawFieldDet3Bits : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+      (x y z : Prod.{0, 0} Nat (Prod.{0, 0} Nat Nat)) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldDet3Bits
+'CorruptedFieldRecovery.rawFieldDet3Bits' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTraceDet3Bits
+@CorruptedFieldRecovery.rawFieldTraceDet3Bits : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+      (x y z : Prod.{0, 0} Nat (Prod.{0, 0} Nat Nat)) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTraceDet3Bits
+'CorruptedFieldRecovery.rawFieldTraceDet3Bits' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldDet3Bits_quotient_sound
+@CorruptedFieldRecovery.rawFieldDet3Bits_quotient_sound : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (x y z : Prod.{0, 0} Nat (Prod.{0, 0} Nat Nat)),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate
+      (CorruptedFieldRecovery.rawFieldDet3Bits candidate hcheck x y z))
+    (CorruptedFieldRecovery.fieldDet3.{0}
+      (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x.1)
+        (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x.2.1)
+          (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x.2.2)))
+      (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate y.1)
+        (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate y.2.1)
+          (CorruptedFieldRecovery.rawCandidateQuotientClass candidate y.2.2)))
+      (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate z.1)
+        (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate z.2.1)
+          (CorruptedFieldRecovery.rawCandidateQuotientClass candidate z.2.2))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldDet3Bits_quotient_sound
+'CorruptedFieldRecovery.rawFieldDet3Bits_quotient_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTraceDet3Bits_eq_baseTrace
+@CorruptedFieldRecovery.rawFieldTraceDet3Bits_eq_baseTrace : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (x y z : Prod.{0, 0} Nat (Prod.{0, 0} Nat Nat)),
+  Eq.{1} (CorruptedFieldRecovery.rawFieldTraceDet3Bits candidate hcheck x y z)
+    (ite.{1}
+      (Eq.{1}
+        ((Algebra.trace.{0, 0} (ZMod 2) (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))
+          (HMul.hMul.{0, 0, 0}
+            (CorruptedFieldRecovery.rawCandidateQuotientClass candidate
+              (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))
+            (CorruptedFieldRecovery.fieldDet3.{0}
+              (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x.1)
+                (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x.2.1)
+                  (CorruptedFieldRecovery.rawCandidateQuotientClass candidate x.2.2)))
+              (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate y.1)
+                (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate y.2.1)
+                  (CorruptedFieldRecovery.rawCandidateQuotientClass candidate y.2.2)))
+              (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate z.1)
+                (Prod.mk.{0, 0} (CorruptedFieldRecovery.rawCandidateQuotientClass candidate z.2.1)
+                  (CorruptedFieldRecovery.rawCandidateQuotientClass candidate z.2.2))))))
+        0)
+      0 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTraceDet3Bits_eq_baseTrace
+'CorruptedFieldRecovery.rawFieldTraceDet3Bits_eq_baseTrace' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

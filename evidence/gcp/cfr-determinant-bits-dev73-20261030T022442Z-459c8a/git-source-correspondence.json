@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "03efedf912f58cbff621ff5bae82809af19298225631e3c3b798ba48ef65e103",
+  "staged_git_blob_sha256": "03efedf912f58cbff621ff5bae82809af19298225631e3c3b798ba48ef65e103",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/RawFieldDeterminantBits.lean"
+}
