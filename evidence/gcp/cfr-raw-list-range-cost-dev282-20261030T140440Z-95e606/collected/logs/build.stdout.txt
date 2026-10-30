@@ -1,0 +1,86 @@
+✖ [1842/1842] Building CorruptedFieldRecovery.RawListRangeBitCost (1.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawListRangeBitCost.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawListRangeBitCost.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawListRangeBitCost.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawListRangeBitCost.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawListRangeBitCost.setup.json --json
+error: CorruptedFieldRecovery/RawListRangeBitCost.lean:16:0: one parameter bound in `termination_by`, but the body of CorruptedFieldRecovery.rawListAppendSingletonBitCosted only binds 0 parameters.
+error: CorruptedFieldRecovery/RawListRangeBitCost.lean:22:8: unsolved goals
+case nil
+x : ℕ
+⊢ (rawListAppendSingletonBitCosted [] x).1 = [x]
+error: CorruptedFieldRecovery/RawListRangeBitCost.lean:23:17: unsolved goals
+case cons
+x y : ℕ
+ys : List ℕ
+ih : (rawListAppendSingletonBitCosted ys x).1 = ys ++ [x]
+⊢ (rawListAppendSingletonBitCosted (y :: ys) x).1 = y :: (ys ++ [x])
+warning: CorruptedFieldRecovery/RawListRangeBitCost.lean:22:17: This simp argument is unused:
+  rawListAppendSingletonBitCosted
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵r̵a̵w̵L̵i̵s̵t̵A̵p̵p̵e̵n̵d̵S̵i̵n̵g̵l̵e̵t̵o̵n̵B̵i̵t̵C̵o̵s̵t̵e̵d̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawListRangeBitCost.lean:23:26: This simp argument is unused:
+  rawListAppendSingletonBitCosted
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵[̵r̵a̵w̵L̵i̵s̵t̵A̵p̵p̵e̵n̵d̵S̵i̵n̵g̵l̵e̵t̵o̵n̵B̵i̵t̵C̵o̵s̵t̵e̵d̵,̵ ̵i̵h̵]̵s̲i̲m̲p̲ ̲[̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawListRangeBitCost.lean:23:59: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [rawListAppendSingletonBitCosted,̵ ̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/RawListRangeBitCost.lean:28:8: unsolved goals
+case nil
+x : ℕ
+⊢ (rawListAppendSingletonBitCosted [] x).2 = 0
+error: CorruptedFieldRecovery/RawListRangeBitCost.lean:29:60: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+  a - c ≤ -2
+where
+ a := ↑ys.length
+ b := ↑(rawListAppendSingletonBitCosted ys x).2
+ c := ↑(rawListAppendSingletonBitCosted (y :: ys) x).2
+warning: CorruptedFieldRecovery/RawListRangeBitCost.lean:28:17: This simp argument is unused:
+  rawListAppendSingletonBitCosted
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵r̵a̵w̵L̵i̵s̵t̵A̵p̵p̵e̵n̵d̵S̵i̵n̵g̵l̵e̵t̵o̵n̵B̵i̵t̵C̵o̵s̵t̵e̵d̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawListRangeBitCost.lean:29:26: This simp argument is unused:
+  rawListAppendSingletonBitCosted
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵r̵a̵w̵L̵i̵s̵t̵A̵p̵p̵e̵n̵d̵S̵i̵n̵g̵l̵e̵t̵o̵n̵B̵i̵t̵C̵o̵s̵t̵e̵d̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/RawListRangeBitCost.lean:62:6: `dsimp` made no progress
+error: CorruptedFieldRecovery/RawListRangeBitCost.lean:86:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 0
+  e ≥ 0
+  e - f ≥ 2
+  d ≥ 1
+  d - e ≥ 1
+  b ≥ 1
+  b - c ≤ -1
+  a ≥ 0
+  a - b ≥ 1
+  a - c ≤ -1
+where
+ a := ↑q
+ b := ↑i
+ c := ↑2 ^ rawNatBitWidth q
+ d := ↑(rawNatBitWidth q)
+ e := ↑i.log2
+ f := ↑q.log2
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawListRangeBitCost
