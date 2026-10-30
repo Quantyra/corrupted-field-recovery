@@ -1,0 +1,102 @@
+✖ [2068/2068] Building CorruptedFieldRecovery.RawCandidateShapePolynomialBound (21s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCandidateShapePolynomialBound.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapePolynomialBound.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapePolynomialBound.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCandidateShapePolynomialBound.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCandidateShapePolynomialBound.setup.json --json
+error: CorruptedFieldRecovery/RawCandidateShapePolynomialBound.lean:79:55: Application type mismatch: The argument
+  hresidueLt
+has type
+  rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 < 2
+but is expected to have type
+  rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 < 2 ^ (n + 2)
+in the application
+  rawNatBitWidth_le_of_lt_pow_public hresidueLt
+error: CorruptedFieldRecovery/RawCandidateShapePolynomialBound.lean:113:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h_1 ≥ 0
+  g_1 ≥ 0
+  f_1 ≥ 0
+  e_1 ≥ 0
+  d_1 ≥ 0
+  32*d_1 - e_1 ≥ 0
+  32*d_1 - f_1 ≥ 0
+  c_1 ≥ 0
+  b_1 ≥ 0
+  a_1 ≥ 0
+  a_1 - b_1 ≥ 0
+  z ≥ 0
+  y ≥ 0
+  y - z ≥ 0
+  y - c_1 ≥ 0
+  x ≥ 0
+  w ≥ 0
+  w - x ≥ 0
+  v ≥ 0
+  t ≥ 0
+  0 ≤ r - 2*u ≤ 1
+  q ≥ 0
+  p ≥ 1
+  o ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j - k ≥ 1
+  i ≥ 0
+  i - r ≥ 0
+  h - i ≥ 1
+  h - r ≥ 1
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c + d ≥ -4
+  a ≥ 0
+  a + d ≥ -1
+  a + c ≥ -1
+  a + c + d ≥ 0
+  a + c + d - e ≥ -4
+  a + c + d - f ≥ -4
+  a + c + d - g ≥ -4
+  a + c + d - l ≥ -4
+  a + c + d - o ≥ -4
+  a + c + d - q ≥ -4
+  a + c + d - t ≥ -4
+  a + c + d - v ≥ -4
+  a + c + d - g_1 ≥ -4
+  9*a + 10*c + 10*d - 2*e - f - g - o - v - 2*g_1 - h_1 ≤ -41
+where
+ a := ↑s
+ c := ↑(Array.size candidate.modulus)
+ d := ↑(Array.size candidate.scalar)
+ e := ↑(rawNatBitWidth s)
+ f := ↑(rawNatBitWidth m)
+ g := ↑(rawNatBitWidth n)
+ h := ↑2 ^ m
+ i := ↑(rawFieldBitsToNat candidate.modulus)
+ j := ↑2 ^ n
+ k := ↑(rawFieldBitsToNat candidate.scalar)
+ l := ↑(rawNatBitWidth (rawFieldBitsToNat candidate.modulus))
+ o := ↑(rawNatBitWidth (rawFieldBitsToNat candidate.scalar))
+ p := ↑2 ^ s
+ q := ↑(rawNatBitWidth (2 ^ s))
+ r := ↑(rawFieldBitsToNat candidate.modulus) / ↑(2 ^ s)
+ t := ↑(rawNatBitWidth (rawFieldBitsToNat candidate.modulus / 2 ^ s))
+ u := ↑(rawFieldBitsToNat candidate.modulus / 2 ^ s) / 2
+ v := ↑(rawNatBitWidth (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2))
+ w := ↑(Array.size candidate.modulus) * ↑(Array.size candidate.modulus + 3)
+ x := ↑(rawFieldBitsToNatBitCosted candidate.modulus).2
+ y := ↑b * ↑b
+ z := ↑m * ↑(m + 3)
+ a_1 := ↑(Array.size candidate.scalar) * ↑(Array.size candidate.scalar + 3)
+ b_1 := ↑(rawFieldBitsToNatBitCosted candidate.scalar).2
+ c_1 := ↑n * ↑(n + 3)
+ d_1 := ↑(b ^ 2)
+ e_1 := ↑(rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s))
+ f_1 := ↑(rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2)
+ g_1 := ↑(rawNatBitWidth 1)
+ h_1 := ↑(rawNatBitWidth (s + 1))
+error: CorruptedFieldRecovery/RawCandidateShapePolynomialBound.lean:26:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCandidateShapePolynomialBound
