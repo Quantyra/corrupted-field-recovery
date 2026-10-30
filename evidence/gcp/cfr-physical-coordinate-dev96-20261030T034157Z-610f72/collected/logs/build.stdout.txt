@@ -1,0 +1,26 @@
+✖ [2032/2032] Building CorruptedFieldRecovery.RawPhysicalCoordinateCorrespondence (2.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.setup.json --json
+error: CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.lean:40:4: Type mismatch: After simplification, term
+  he
+ has type
+  (if (finProdFinEquiv (block, i)).divNat = 0 then w (finProdFinEquiv (0, (finProdFinEquiv (block, i)).modNat))
+    else
+      if (finProdFinEquiv (block, i)).divNat = 1 then w (finProdFinEquiv (1, (finProdFinEquiv (block, i)).modNat))
+      else w (finProdFinEquiv (2, (finProdFinEquiv (block, i)).modNat))) =
+    w (finProdFinEquiv (block, i))
+but is expected to have type
+  (rawQuotientPowerCoordinates (rawCandidateModulus candidate) hmnic hd)
+      (if block = 0 then
+        (rawQuotientPowerCoordinates (rawCandidateModulus candidate) hmnic hd).symm fun j => w (finProdFinEquiv (0, j))
+      else
+        if block = 1 then
+          (rawQuotientPowerCoordinates (rawCandidateModulus candidate) hmnic hd).symm fun j =>
+            w (finProdFinEquiv (1, j))
+        else
+          (rawQuotientPowerCoordinates (rawCandidateModulus candidate) hmnic hd).symm fun j =>
+            w (finProdFinEquiv (2, j)))
+      i =
+    w (finProdFinEquiv (block, i))
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawPhysicalCoordinateCorrespondence
