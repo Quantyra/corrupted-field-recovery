@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Bool/list polynomial expansion, physical block mask polynomial/quotient equality, checked candidate block quotient equals inverse power-coordinate equivalence.",
+  "remaining": "Full Q/matrix trace determinant composition, coefficient loop, verifier and costs remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}

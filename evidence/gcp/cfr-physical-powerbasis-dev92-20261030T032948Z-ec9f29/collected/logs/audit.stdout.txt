@@ -1,0 +1,50 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawZModTwo_boolValue
+CorruptedFieldRecovery.rawZModTwo_boolValue : ∀ (a : ZMod 2),
+  Eq.{1} (ite.{1} (Eq.{1} (Decidable.decide (Eq.{1} a 1)) Bool.true) 1 0) a
+CFR_TYPE_END:CorruptedFieldRecovery.rawZModTwo_boolValue
+'CorruptedFieldRecovery.rawZModTwo_boolValue' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBoolListPolynomial_ofFn
+@CorruptedFieldRecovery.rawBoolListPolynomial_ofFn : ∀ {s : Nat} (bits : (a : Fin s) → Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBoolListPolynomial (List.ofFn.{0} bits))
+    (∑ i, (Polynomial.monomial.{0} ↑i) (ite.{1} (Eq.{1} (bits i) Bool.true) 1 0))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBoolListPolynomial_ofFn
+'CorruptedFieldRecovery.rawBoolListPolynomial_ofFn' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPhysicalBlockMask_polynomial
+@CorruptedFieldRecovery.rawPhysicalBlockMask_polynomial : ∀ {s : Nat}
+  (v : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (block : Fin 3),
+  Eq.{1} (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawPhysicalBlockMask v block))
+    (∑ i, (Polynomial.monomial.{0} ↑i) (v (finProdFinEquiv (Prod.mk.{0, 0} block i))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPhysicalBlockMask_polynomial
+'CorruptedFieldRecovery.rawPhysicalBlockMask_polynomial' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPhysicalBlockMask_quotient
+@CorruptedFieldRecovery.rawPhysicalBlockMask_quotient : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (v : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (block : Fin 3),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate (CorruptedFieldRecovery.rawPhysicalBlockMask v block))
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      (∑ i, (Polynomial.monomial.{0} ↑i) (v (finProdFinEquiv (Prod.mk.{0, 0} block i)))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPhysicalBlockMask_quotient
+'CorruptedFieldRecovery.rawPhysicalBlockMask_quotient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPhysicalBlockMask_eq_powerCoordinates
+@CorruptedFieldRecovery.rawPhysicalBlockMask_eq_powerCoordinates : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (v : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (block : Fin 3),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate (CorruptedFieldRecovery.rawPhysicalBlockMask v block))
+    ((LinearEquiv.symm.{0, 0, 0, 0}
+        (CorruptedFieldRecovery.rawQuotientPowerCoordinates (CorruptedFieldRecovery.rawCandidateModulus candidate)
+          (CorruptedFieldRecovery.accepted_rawCandidateModulus_monic candidate hcheck)
+          (have hv := CorruptedFieldRecovery.accepted_rawFieldCandidateCheck candidate hcheck;
+          have hm := CorruptedFieldRecovery.rawFieldCandidateValid_modulus_polynomial candidate hv;
+          id.{0} (And.right hm))))
+      fun i => v (finProdFinEquiv (Prod.mk.{0, 0} block i)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPhysicalBlockMask_eq_powerCoordinates
+'CorruptedFieldRecovery.rawPhysicalBlockMask_eq_powerCoordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

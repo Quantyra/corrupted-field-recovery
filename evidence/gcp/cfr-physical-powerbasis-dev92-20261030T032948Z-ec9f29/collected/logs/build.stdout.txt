@@ -1,0 +1,16 @@
+⚠ [2031/2031] Built CorruptedFieldRecovery.RawPhysicalPowerBasis (3.1s)
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:98:15: This simp argument is unused:
+  hdegree
+
+Hint: Omit it from the simp argument list.
+  simp [j,̵ ̵h̵d̵e̵g̵r̵e̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:100:12: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hkj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (2031 jobs).

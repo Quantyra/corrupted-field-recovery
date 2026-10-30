@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "8f46ce0d9a715d49de54fa19c200f450ce62229bae9a7be3ab88dbb50060006b",
+  "staged_git_blob_sha256": "8f46ce0d9a715d49de54fa19c200f450ce62229bae9a7be3ab88dbb50060006b",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/RawPhysicalPowerBasis.lean"
+}
