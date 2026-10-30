@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-29T23:43:12.182959+00:00",
+  "reason": "User paused goal; safety closeout only",
+  "local_submit_controller_pid": 14328,
+  "cancelled_before_launch_request": true,
+  "uploaded_only_uncompiled": true
+}

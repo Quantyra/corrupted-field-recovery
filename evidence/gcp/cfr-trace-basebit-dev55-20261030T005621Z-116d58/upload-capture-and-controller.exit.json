@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-30T01:01:08.350362+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-trace-basebit-dev55-20261030T005621Z-116d58\\inputs.tar.gz",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-trace-basebit-dev55-20261030T005621Z-116d58\\capture-manifest.json",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-trace-basebit-dev55-20261030T005621Z-116d58\\gcp_cfr_runner.py",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-trace-basebit-dev55-20261030T005621Z-116d58\\run.sh",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-trace-basebit-dev55-20261030T005621Z-116d58\\bootstrap-assets.json",
+    "quantyra-cfr-lean-builder-20261028a:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-trace-basebit-dev55-20261030T005621Z-116d58/",
+    "--tunnel-through-iap",
+    "--scp-flag=-hostkey",
+    "--scp-flag=SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

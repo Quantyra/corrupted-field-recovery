@@ -1,0 +1,410 @@
+✖ [2969/2969] Building CorruptedFieldRecovery.S010ModeImageTrialBound (18s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ModeImageTrialBound.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageTrialBound.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageTrialBound.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ModeImageTrialBound.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ModeImageTrialBound.setup.json --json
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:80:4: mod_cast has type
+  (nonGenerators K).card ≤ T
+but is expected to have type
+  ↑(nonGenerators K).card ≤ t
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:100:6: Type mismatch: After simplification, term
+  hBeta
+ has type
+  2 ^ R * (1 + 2 ^ s + (2 ^ s) ^ 2) / (2 ^ s) ^ 3 + (2 ^ R * ∑ x ∈ properDegrees K, 2 ^ x) / 2 ^ s < 2⁻¹
+but is expected to have type
+  2 ^ R / ↑qN ^ 3 + 2 ^ R / ↑qN ^ 2 + 2 ^ R / ↑qN + (2 ^ R * ∑ x ∈ properDegrees K, 2 ^ x) / ↑qN < 2⁻¹
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:113:21: Application type mismatch: The argument
+  (div_lt_iff₀ ?m.1137).mp hfrac'
+has type
+  ↑b₁ < 1 * ↑aN
+but is expected to have type
+  ↑b₁ < ↑aN
+in the application
+  le_of_lt ((div_lt_iff₀ ?m.1137).mp hfrac')
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:124:21: Application type mismatch: The argument
+  (div_lt_iff₀ ?m.1240).mp hfrac'
+has type
+  ↑b₂ < 1 * ↑aN
+but is expected to have type
+  ↑b₂ < ↑aN
+in the application
+  le_of_lt ((div_lt_iff₀ ?m.1240).mp hfrac')
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:135:21: Application type mismatch: The argument
+  (div_lt_iff₀ ?m.1343).mp hfrac'
+has type
+  ↑b₃ < 1 * ↑aN
+but is expected to have type
+  ↑b₃ < ↑aN
+in the application
+  le_of_lt ((div_lt_iff₀ ?m.1343).mp hfrac')
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:146:21: Application type mismatch: The argument
+  (div_lt_iff₀ ?m.1446).mp hfrac'
+has type
+  ↑b₄ < 1 * ↑aN
+but is expected to have type
+  ↑b₄ < ↑aN
+in the application
+  le_of_lt ((div_lt_iff₀ ?m.1446).mp hfrac')
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:152:60: unsolved goals
+K : Type u_1
+inst✝⁵ : Field K
+inst✝⁴ : Fintype K
+inst✝³ : DecidableEq K
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Finite K
+s R r : ℕ
+hs : finrank BinaryField K = s
+hsize : 2 * R + 5 ≤ s
+hrR : r ≤ R
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+hr : finrank BinaryField ↥(modeImageSemanticSupport Q E) = r
+b : (Fin 4 → FieldTriple K) → Basis (Fin s) BinaryField K
+aN : ℕ := 2 ^ (3 * s - r)
+qN : ℕ := 2 ^ s
+T : ℕ := ∑ d ∈ properDegrees K, 2 ^ d
+b₁ : ℕ := (nonGenerators K).card * qN ^ 2
+b₂ : ℕ := qN ^ 2
+b₃ : ℕ := qN
+b₄ : ℕ := 1
+f₁ : ℕ := aN - b₁
+f₂ : ℕ := aN - b₂
+f₃ : ℕ := aN - b₃
+f₄ : ℕ := aN - b₄
+F : ℕ := f₁ * (f₂ * (f₃ * f₄))
+g : ℕ := qN - (T + (2 ^ (2 * r) - 1))
+tapeCount : ℕ := (actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) (modeImageSemanticSupport Q E) b).card
+hTau : 4 * (2 ^ R * T) < 2 ^ s
+hBeta : 2 ^ R * (1 + 2 ^ s + (2 ^ s) ^ 2) / (2 ^ s) ^ 3 + 2 ^ R * ↑T / 2 ^ s < 1 / 2
+q : ℚ := ↑qN
+a : ℚ := ↑aN
+p : ℚ := 2 ^ R
+t : ℚ := ↑T
+hq : 0 < q
+ha : 0 < a
+ht : 0 ≤ t
+hrpow : 2 ^ r ≤ 2 ^ R
+hexp : r + (3 * s - r) = 3 * s
+hqcube : (2 ^ s) ^ 3 = 2 ^ (3 * s)
+hpowfactor : 2 ^ (3 * s) = 2 ^ r * 2 ^ (3 * s - r)
+hgainNat : (2 ^ s) ^ 3 ≤ 2 ^ R * 2 ^ (3 * s - r)
+hgain : q ^ 3 / a ≤ p
+hnonGen : (nonGenerators K).card ≤ T
+hnonGenQ : ↑(nonGenerators K).card ≤ t
+hbad1 : ↑b₁ / a ≤ t * q ^ 2 / a
+loss₁ : ℚ := ↑b₁ / a
+loss₂ : ℚ := q ^ 2 / a
+loss₃ : ℚ := q / a
+loss₄ : ℚ := 1 / a
+hfourLoss : 1 / a + q / a + q ^ 2 / a + t * q ^ 2 / a ≤ p / q ^ 3 + p / q ^ 2 + p / q + p * t / q
+hloss : loss₁ + loss₂ + loss₃ + loss₄ < 1 / 2
+haNpos : 0 < aN
+hb₁ : b₁ ≤ aN
+hb₂ : b₂ ≤ aN
+hb₃ : b₃ ≤ aN
+hb₄ : b₄ ≤ aN
+hsum : loss₁ + loss₂ + loss₃ + loss₄ ≤ 1 / 2
+⊢ 1 / 2 ≤ ?m.1518
+info: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:165:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:160:32: unsolved goals
+K : Type u_1
+inst✝⁵ : Field K
+inst✝⁴ : Fintype K
+inst✝³ : DecidableEq K
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Finite K
+s R r : ℕ
+hs : finrank BinaryField K = s
+hsize : 2 * R + 5 ≤ s
+hrR : r ≤ R
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+hr : finrank BinaryField ↥(modeImageSemanticSupport Q E) = r
+b : (Fin 4 → FieldTriple K) → Basis (Fin s) BinaryField K
+aN : ℕ := 2 ^ (3 * s - r)
+qN : ℕ := 2 ^ s
+T : ℕ := ∑ d ∈ properDegrees K, 2 ^ d
+b₁ : ℕ := (nonGenerators K).card * qN ^ 2
+b₂ : ℕ := qN ^ 2
+b₃ : ℕ := qN
+b₄ : ℕ := 1
+f₁ : ℕ := aN - b₁
+f₂ : ℕ := aN - b₂
+f₃ : ℕ := aN - b₃
+f₄ : ℕ := aN - b₄
+F : ℕ := f₁ * (f₂ * (f₃ * f₄))
+g : ℕ := qN - (T + (2 ^ (2 * r) - 1))
+tapeCount : ℕ := (actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) (modeImageSemanticSupport Q E) b).card
+hTau : 4 * (2 ^ R * T) < 2 ^ s
+hBeta : 2 ^ R * (1 + 2 ^ s + (2 ^ s) ^ 2) / (2 ^ s) ^ 3 + 2 ^ R * ↑T / 2 ^ s < 1 / 2
+q : ℚ := ↑qN
+a : ℚ := ↑aN
+p : ℚ := 2 ^ R
+t : ℚ := ↑T
+hq : 0 < q
+ha : 0 < a
+ht : 0 ≤ t
+hrpow : 2 ^ r ≤ 2 ^ R
+hexp : r + (3 * s - r) = 3 * s
+hqcube : (2 ^ s) ^ 3 = 2 ^ (3 * s)
+hpowfactor : 2 ^ (3 * s) = 2 ^ r * 2 ^ (3 * s - r)
+hgainNat : (2 ^ s) ^ 3 ≤ 2 ^ R * 2 ^ (3 * s - r)
+hgain : q ^ 3 / a ≤ p
+hnonGen : (nonGenerators K).card ≤ T
+hnonGenQ : ↑(nonGenerators K).card ≤ t
+hbad1 : ↑b₁ / a ≤ t * q ^ 2 / a
+loss₁ : ℚ := ↑b₁ / a
+loss₂ : ℚ := q ^ 2 / a
+loss₃ : ℚ := q / a
+loss₄ : ℚ := 1 / a
+hfourLoss : 1 / a + q / a + q ^ 2 / a + t * q ^ 2 / a ≤ p / q ^ 3 + p / q ^ 2 + p / q + p * t / q
+hloss : loss₁ + loss₂ + loss₃ + loss₄ < 1 / 2
+haNpos : 0 < aN
+hb₁ : b₁ ≤ aN
+hb₂ : b₂ ≤ aN
+hb₃ : b₃ ≤ aN
+hb₄ : b₄ ≤ aN
+hlossSum : ↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN ≤ 1
+hnorm :
+  ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) ≥
+    1 - (↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN)
+⊢ -(↑aN * ↑b₁ * ↑b₂ * ↑b₃) - ↑aN * ↑b₁ * ↑b₂ * ↑b₄ - ↑aN * ↑b₁ * ↑b₃ * ↑b₄ - ↑aN * ↑b₂ * ↑b₃ * ↑b₄ +
+                            ↑aN ^ 2 * ↑b₁ * ↑b₂ +
+                          ↑aN ^ 2 * ↑b₁ * ↑b₃ +
+                        ↑aN ^ 2 * ↑b₁ * ↑b₄ +
+                      ↑aN ^ 2 * ↑b₂ * ↑b₃ +
+                    ↑aN ^ 2 * ↑b₂ * ↑b₄ +
+                  ↑aN ^ 2 * ↑b₃ * ↑b₄ -
+                ↑aN ^ 3 * ↑b₁ -
+              ↑aN ^ 3 * ↑b₂ -
+            ↑aN ^ 3 * ↑b₃ -
+          ↑aN ^ 3 * ↑b₄ +
+        ↑aN ^ 4 +
+      ↑b₁ * ↑b₂ * ↑b₃ * ↑b₄ =
+    ↑(aN - b₁) * ↑(aN - b₂) * ↑(aN - b₃) * ↑(aN - b₄)
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:168:4: linarith failed to find a contradiction
+case h
+K : Type u_1
+inst✝⁵ : Field K
+inst✝⁴ : Fintype K
+inst✝³ : DecidableEq K
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Finite K
+s R r : ℕ
+hs : finrank BinaryField K = s
+hsize : 2 * R + 5 ≤ s
+hrR : r ≤ R
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+hr : finrank BinaryField ↥(modeImageSemanticSupport Q E) = r
+b : (Fin 4 → FieldTriple K) → Basis (Fin s) BinaryField K
+aN : ℕ := 2 ^ (3 * s - r)
+qN : ℕ := 2 ^ s
+T : ℕ := ∑ d ∈ properDegrees K, 2 ^ d
+b₁ : ℕ := (nonGenerators K).card * qN ^ 2
+b₂ : ℕ := qN ^ 2
+b₃ : ℕ := qN
+b₄ : ℕ := 1
+f₁ : ℕ := aN - b₁
+f₂ : ℕ := aN - b₂
+f₃ : ℕ := aN - b₃
+f₄ : ℕ := aN - b₄
+F : ℕ := f₁ * (f₂ * (f₃ * f₄))
+g : ℕ := qN - (T + (2 ^ (2 * r) - 1))
+tapeCount : ℕ := (actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) (modeImageSemanticSupport Q E) b).card
+hTau : 4 * (2 ^ R * T) < 2 ^ s
+hBeta : 2 ^ R * (1 + 2 ^ s + (2 ^ s) ^ 2) / (2 ^ s) ^ 3 + 2 ^ R * ↑T / 2 ^ s < 1 / 2
+q : ℚ := ↑qN
+a : ℚ := ↑aN
+p : ℚ := 2 ^ R
+t : ℚ := ↑T
+hq : 0 < q
+ha : 0 < a
+ht : 0 ≤ t
+hrpow : 2 ^ r ≤ 2 ^ R
+hexp : r + (3 * s - r) = 3 * s
+hqcube : (2 ^ s) ^ 3 = 2 ^ (3 * s)
+hpowfactor : 2 ^ (3 * s) = 2 ^ r * 2 ^ (3 * s - r)
+hgainNat : (2 ^ s) ^ 3 ≤ 2 ^ R * 2 ^ (3 * s - r)
+hgain : q ^ 3 / a ≤ p
+hnonGen : (nonGenerators K).card ≤ T
+hnonGenQ : ↑(nonGenerators K).card ≤ t
+hbad1 : ↑b₁ / a ≤ t * q ^ 2 / a
+loss₁ : ℚ := ↑b₁ / a
+loss₂ : ℚ := q ^ 2 / a
+loss₃ : ℚ := q / a
+loss₄ : ℚ := 1 / a
+hfourLoss : 1 / a + q / a + q ^ 2 / a + t * q ^ 2 / a ≤ p / q ^ 3 + p / q ^ 2 + p / q + p * t / q
+hloss : loss₁ + loss₂ + loss₃ + loss₄ < 1 / 2
+haNpos : 0 < aN
+hb₁ : b₁ ≤ aN
+hb₂ : b₂ ≤ aN
+hb₃ : b₃ ≤ aN
+hb₄ : b₄ ≤ aN
+hlossSum : ↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN ≤ 1
+hnorm :
+  ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) ≥
+    1 - (↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN)
+hnormId : ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) = ↑F / ↑aN ^ 4
+a✝ : ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) ≤ 1 / 2
+⊢ False
+failed
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:172:4: linarith failed to find a contradiction
+case h
+K : Type u_1
+inst✝⁵ : Field K
+inst✝⁴ : Fintype K
+inst✝³ : DecidableEq K
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Finite K
+s R r : ℕ
+hs : finrank BinaryField K = s
+hsize : 2 * R + 5 ≤ s
+hrR : r ≤ R
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+hr : finrank BinaryField ↥(modeImageSemanticSupport Q E) = r
+b : (Fin 4 → FieldTriple K) → Basis (Fin s) BinaryField K
+aN : ℕ := 2 ^ (3 * s - r)
+qN : ℕ := 2 ^ s
+T : ℕ := ∑ d ∈ properDegrees K, 2 ^ d
+b₁ : ℕ := (nonGenerators K).card * qN ^ 2
+b₂ : ℕ := qN ^ 2
+b₃ : ℕ := qN
+b₄ : ℕ := 1
+f₁ : ℕ := aN - b₁
+f₂ : ℕ := aN - b₂
+f₃ : ℕ := aN - b₃
+f₄ : ℕ := aN - b₄
+F : ℕ := f₁ * (f₂ * (f₃ * f₄))
+g : ℕ := qN - (T + (2 ^ (2 * r) - 1))
+tapeCount : ℕ := (actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) (modeImageSemanticSupport Q E) b).card
+hTau : 4 * (2 ^ R * T) < 2 ^ s
+hBeta : 2 ^ R * (1 + 2 ^ s + (2 ^ s) ^ 2) / (2 ^ s) ^ 3 + 2 ^ R * ↑T / 2 ^ s < 1 / 2
+q : ℚ := ↑qN
+a : ℚ := ↑aN
+p : ℚ := 2 ^ R
+t : ℚ := ↑T
+hq : 0 < q
+ha : 0 < a
+ht : 0 ≤ t
+hrpow : 2 ^ r ≤ 2 ^ R
+hexp : r + (3 * s - r) = 3 * s
+hqcube : (2 ^ s) ^ 3 = 2 ^ (3 * s)
+hpowfactor : 2 ^ (3 * s) = 2 ^ r * 2 ^ (3 * s - r)
+hgainNat : (2 ^ s) ^ 3 ≤ 2 ^ R * 2 ^ (3 * s - r)
+hgain : q ^ 3 / a ≤ p
+hnonGen : (nonGenerators K).card ≤ T
+hnonGenQ : ↑(nonGenerators K).card ≤ t
+hbad1 : ↑b₁ / a ≤ t * q ^ 2 / a
+loss₁ : ℚ := ↑b₁ / a
+loss₂ : ℚ := q ^ 2 / a
+loss₃ : ℚ := q / a
+loss₄ : ℚ := 1 / a
+hfourLoss : 1 / a + q / a + q ^ 2 / a + t * q ^ 2 / a ≤ p / q ^ 3 + p / q ^ 2 + p / q + p * t / q
+hloss : loss₁ + loss₂ + loss₃ + loss₄ < 1 / 2
+haNpos : 0 < aN
+hb₁ : b₁ ≤ aN
+hb₂ : b₂ ≤ aN
+hb₃ : b₃ ≤ aN
+hb₄ : b₄ ≤ aN
+hlossSum : ↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN ≤ 1
+hnorm :
+  ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) ≥
+    1 - (↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN)
+hnormId : ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) = ↑F / ↑aN ^ 4
+hprodHalf : 1 / 2 < ↑F / ↑aN ^ 4
+hmul : 1 / 2 * ↑aN ^ 4 < ↑F
+a✝ : ↑(2 * F) < ↑aN ^ 4
+⊢ False
+failed
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:205:45: unsolved goals
+K : Type u_1
+inst✝⁵ : Field K
+inst✝⁴ : Fintype K
+inst✝³ : DecidableEq K
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Finite K
+s R r : ℕ
+hs : finrank BinaryField K = s
+hsize : 2 * R + 5 ≤ s
+hrR : r ≤ R
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+hr : finrank BinaryField ↥(modeImageSemanticSupport Q E) = r
+b : (Fin 4 → FieldTriple K) → Basis (Fin s) BinaryField K
+aN : ℕ := 2 ^ (3 * s - r)
+qN : ℕ := 2 ^ s
+T : ℕ := ∑ d ∈ properDegrees K, 2 ^ d
+b₁ : ℕ := (nonGenerators K).card * qN ^ 2
+b₂ : ℕ := qN ^ 2
+b₃ : ℕ := qN
+b₄ : ℕ := 1
+f₁ : ℕ := aN - b₁
+f₂ : ℕ := aN - b₂
+f₃ : ℕ := aN - b₃
+f₄ : ℕ := aN - b₄
+F : ℕ := f₁ * (f₂ * (f₃ * f₄))
+g : ℕ := qN - (T + (2 ^ (2 * r) - 1))
+tapeCount : ℕ := (actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) (modeImageSemanticSupport Q E) b).card
+hTau : 4 * (2 ^ R * T) < 2 ^ s
+hBeta : 2 ^ R * (1 + 2 ^ s + (2 ^ s) ^ 2) / (2 ^ s) ^ 3 + 2 ^ R * ↑T / 2 ^ s < 1 / 2
+q : ℚ := ↑qN
+a : ℚ := ↑aN
+p : ℚ := 2 ^ R
+t : ℚ := ↑T
+hq : 0 < q
+ha : 0 < a
+ht : 0 ≤ t
+hrpow : 2 ^ r ≤ 2 ^ R
+hexp✝ : r + (3 * s - r) = 3 * s
+hqcube : (2 ^ s) ^ 3 = 2 ^ (3 * s)
+hpowfactor : 2 ^ (3 * s) = 2 ^ r * 2 ^ (3 * s - r)
+hgainNat : (2 ^ s) ^ 3 ≤ 2 ^ R * 2 ^ (3 * s - r)
+hgain : q ^ 3 / a ≤ p
+hnonGen : (nonGenerators K).card ≤ T
+hnonGenQ : ↑(nonGenerators K).card ≤ t
+hbad1 : ↑b₁ / a ≤ t * q ^ 2 / a
+loss₁ : ℚ := ↑b₁ / a
+loss₂ : ℚ := q ^ 2 / a
+loss₃ : ℚ := q / a
+loss₄ : ℚ := 1 / a
+hfourLoss : 1 / a + q / a + q ^ 2 / a + t * q ^ 2 / a ≤ p / q ^ 3 + p / q ^ 2 + p / q + p * t / q
+hloss : loss₁ + loss₂ + loss₃ + loss₄ < 1 / 2
+haNpos : 0 < aN
+hb₁ : b₁ ≤ aN
+hb₂ : b₂ ≤ aN
+hb₃ : b₃ ≤ aN
+hb₄ : b₄ ≤ aN
+hlossSum : ↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN ≤ 1
+hnorm :
+  ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) ≥
+    1 - (↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN)
+hnormId : ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) = ↑F / ↑aN ^ 4
+hprodHalf : 1 / 2 < ↑F / ↑aN ^ 4
+hprodRat : ↑aN ^ 4 ≤ ↑(2 * F)
+hprodNat : aN ^ 4 ≤ 2 * F
+hgood : 4 * (2 ^ s - (∑ d ∈ properDegrees K, 2 ^ d + (2 ^ (2 * r) - 1))) ≥ 2 ^ s
+hbase : aN ^ 4 * qN ≤ 8 * (F * g)
+hcount :
+  (2 ^ (3 * s - r) - (nonGenerators K).card * (2 ^ s) ^ 2) *
+        ((2 ^ (3 * s - r) - (2 ^ s) ^ 2) * ((2 ^ (3 * s - r) - 2 ^ s) * (2 ^ (3 * s - r) - 1))) *
+      (2 ^ s - (∑ d ∈ properDegrees K, 2 ^ d + (2 ^ (2 * r) - 1))) ≤
+    (actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) (modeImageSemanticSupport Q E) b).card
+hcountFG : F * g ≤ tapeCount
+hscaled : aN ^ 4 * qN ≤ 8 * tapeCount
+hA4 : aN ^ 4 * qN = 2 ^ (4 * (3 * s - r) + s)
+hexp : 13 * s ≤ 4 * R + 4 * (3 * s - r) + s
+hpow : 2 ^ (13 * s) ≤ 2 ^ (4 * R + 4 * (3 * s - r) + s)
+hcoef : 2 ^ (4 * R + 3) = 2 ^ (4 * R) * 8
+⊢ 2 ^ (4 * R + (4 * (3 * s - r) + s)) = 2 ^ (4 * R + 4 * (3 * s - r) + s)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ModeImageTrialBound

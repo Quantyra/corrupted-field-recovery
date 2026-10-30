@@ -1,0 +1,112 @@
+{
+  "utc": "2026-10-30T01:06:06.729644+00:00",
+  "runs": [
+    {
+      "run": "cfr-polymul-draft-preservation-dev42-20261029T215743Z-b39ef6",
+      "launch_utc": "2026-10-29T22:22:30.706746+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-physical-support-dev41-20261029T214951Z-117daf",
+      "launch_utc": "2026-10-29T22:29:24.426967+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-trace-bits-dev43-20261029T223009Z-53115a",
+      "launch_utc": "2026-10-29T22:34:55.636359+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-transport-dev44-20261029T223536Z-87d989",
+      "launch_utc": "2026-10-29T22:39:32.432431+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-trace-bits-dev45-20261029T224044Z-4de44a",
+      "launch_utc": "2026-10-29T22:43:52.368054+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-transport-dev46-20261029T224322Z-d0d70a",
+      "launch_utc": "2026-10-29T22:49:42.820970+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-trace-bits-dev47-20261029T224905Z-d91802",
+      "launch_utc": "2026-10-29T22:53:10.297072+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-transport-dev48-20261029T225312Z-80cb2a",
+      "launch_utc": "2026-10-29T22:59:20.708396+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-trace-algebra-dev49-20261029T225953Z-41163a",
+      "launch_utc": "2026-10-29T23:06:53.042039+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-fivecount-dev50-20261029T230848Z-0924e4",
+      "launch_utc": "2026-10-29T23:13:12.710485+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-trace-algebra-dev51-20261029T231447Z-0334fd",
+      "launch_utc": "2026-10-29T23:21:46.455879+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-fivecount-dev52-20261029T231912Z-b5c919",
+      "launch_utc": "2026-10-29T23:27:19.200553+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-trace-basebit-dev53-20261029T233034Z-fdc282",
+      "launch_utc": "2026-10-29T23:34:38.989396+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev54-20261029T233856Z-8fd42b",
+      "launch_utc": "2026-10-30T00:58:19.234733+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-trace-basebit-dev55-20261030T005621Z-116d58",
+      "launch_utc": "2026-10-30T01:01:39.129238+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    }
+  ],
+  "all_launched_collected": true,
+  "scope": "intermediate checkpoint; session remains active pending final focused repair/cutoff"
+}
