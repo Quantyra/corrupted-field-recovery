@@ -1,0 +1,71 @@
+✖ [2969/2969] Building CorruptedFieldRecovery.S010ModeImageTrialBound (16s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ModeImageTrialBound.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageTrialBound.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageTrialBound.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ModeImageTrialBound.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ModeImageTrialBound.setup.json --json
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:104:8: No goals to be solved
+error: CorruptedFieldRecovery/S010ModeImageTrialBound.lean:172:32: unsolved goals
+K : Type u_1
+inst✝⁵ : Field K
+inst✝⁴ : Fintype K
+inst✝³ : DecidableEq K
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Finite K
+s R r : ℕ
+hs : finrank BinaryField K = s
+hsize : 2 * R + 5 ≤ s
+hrR : r ≤ R
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+hr : finrank BinaryField ↥(modeImageSemanticSupport Q E) = r
+b : (Fin 4 → FieldTriple K) → Basis (Fin s) BinaryField K
+aN : ℕ := 2 ^ (3 * s - r)
+qN : ℕ := 2 ^ s
+T : ℕ := ∑ d ∈ properDegrees K, 2 ^ d
+b₁ : ℕ := (nonGenerators K).card * qN ^ 2
+b₂ : ℕ := qN ^ 2
+b₃ : ℕ := qN
+b₄ : ℕ := 1
+f₁ : ℕ := aN - b₁
+f₂ : ℕ := aN - b₂
+f₃ : ℕ := aN - b₃
+f₄ : ℕ := aN - b₄
+F : ℕ := f₁ * (f₂ * (f₃ * f₄))
+g : ℕ := qN - (T + (2 ^ (2 * r) - 1))
+tapeCount : ℕ := (actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) (modeImageSemanticSupport Q E) b).card
+hTau : 4 * (2 ^ R * T) < 2 ^ s
+hBeta : 2 ^ R * (1 + 2 ^ s + (2 ^ s) ^ 2) / (2 ^ s) ^ 3 + 2 ^ R * ↑T / 2 ^ s < 1 / 2
+q : ℚ := ↑qN
+a : ℚ := ↑aN
+p : ℚ := 2 ^ R
+t : ℚ := ↑T
+hq : 0 < q
+ha : 0 < a
+ht : 0 ≤ t
+hrpow : 2 ^ r ≤ 2 ^ R
+hexp : r + (3 * s - r) = 3 * s
+hqcube : (2 ^ s) ^ 3 = 2 ^ (3 * s)
+hpowfactor : 2 ^ (3 * s) = 2 ^ r * 2 ^ (3 * s - r)
+hgainNat : (2 ^ s) ^ 3 ≤ 2 ^ R * 2 ^ (3 * s - r)
+hgain : q ^ 3 / a ≤ p
+hnonGen : (nonGenerators K).card ≤ T
+hnonGenQ : ↑(nonGenerators K).card ≤ t
+hbad1 : ↑b₁ / a ≤ t * q ^ 2 / a
+loss₁ : ℚ := ↑b₁ / a
+loss₂ : ℚ := q ^ 2 / a
+loss₃ : ℚ := q / a
+loss₄ : ℚ := 1 / a
+hfourLoss : 1 / a + q / a + q ^ 2 / a + t * q ^ 2 / a ≤ p / q ^ 3 + p / q ^ 2 + p / q + p * t / q
+hloss : loss₁ + loss₂ + loss₃ + loss₄ < 1 / 2
+haNpos : 0 < aN
+hb₁ : b₁ ≤ aN
+hb₂ : b₂ ≤ aN
+hb₃ : b₃ ≤ aN
+hb₄ : b₄ ≤ aN
+hlossSum : ↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN ≤ 1
+hnorm :
+  ↑(aN - b₁) / ↑aN * (↑(aN - b₂) / ↑aN) * (↑(aN - b₃) / ↑aN) * (↑(aN - b₄) / ↑aN) ≥
+    1 - (↑b₁ / ↑aN + ↑b₂ / ↑aN + ↑b₃ / ↑aN + ↑b₄ / ↑aN)
+⊢ ↑(aN - b₁) * ↑(aN - b₂) * ↑(aN - b₃) * ↑(aN - b₄) * ↑(aN ^ 4) =
+    ↑aN ^ 4 * ↑((aN - b₁) * (aN - b₂) * (aN - b₃) * (aN - b₄))
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ModeImageTrialBound

@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T01:47:58.532205+00:00",
+  "run": "cfr-modeimage-trialbound-dev63-20261030T014202Z-730519",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,62 @@
+✖ [2025/2025] Building CorruptedFieldRecovery.RawFieldDeterminantBits (2.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawFieldDeterminantBits.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldDeterminantBits.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldDeterminantBits.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldDeterminantBits.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldDeterminantBits.setup.json --json
+error: CorruptedFieldRecovery/RawFieldDeterminantBits.lean:30:66: unexpected token '/--'; expected ')', ',' or ':'
+info: CorruptedFieldRecovery/RawFieldDeterminantBits.lean:63:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/RawFieldDeterminantBits.lean:57:56: unsolved goals
+s : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+x y z : ℕ × ℕ × ℕ
+this : Fact (Irreducible (rawCandidateModulus candidate)) :=
+  { out := accepted_rawCandidateModulus_irreducible candidate hcheck }
+⊢ rawCandidateQuotientClass candidate
+      (rawFieldMulBits candidate hcheck (rawFieldMulBits candidate hcheck x.1 y.2.1) z.2.2 ^^^
+        (rawFieldMulBits candidate hcheck (rawFieldMulBits candidate hcheck x.1 y.2.2) z.2.1 ^^^
+          (rawFieldMulBits candidate hcheck (rawFieldMulBits candidate hcheck y.1 x.2.1) z.2.2 ^^^
+            (rawFieldMulBits candidate hcheck (rawFieldMulBits candidate hcheck y.1 x.2.2) z.2.1 ^^^
+              (rawFieldMulBits candidate hcheck (rawFieldMulBits candidate hcheck z.1 x.2.1) y.2.2 ^^^
+                rawFieldMulBits candidate hcheck (rawFieldMulBits candidate hcheck z.1 x.2.2) y.2.1))))) =
+    rawCandidateQuotientClass candidate x.1 * rawCandidateQuotientClass candidate y.2.1 *
+                rawCandidateQuotientClass candidate z.2.2 -
+              rawCandidateQuotientClass candidate x.1 * rawCandidateQuotientClass candidate y.2.2 *
+                rawCandidateQuotientClass candidate z.2.1 -
+            rawCandidateQuotientClass candidate y.2.1 * rawCandidateQuotientClass candidate x.2.2 *
+              rawCandidateQuotientClass candidate z.1 -
+          rawCandidateQuotientClass candidate z.2.2 * rawCandidateQuotientClass candidate y.1 *
+            rawCandidateQuotientClass candidate x.2.1 +
+        rawCandidateQuotientClass candidate y.2.2 * rawCandidateQuotientClass candidate x.2.1 *
+          rawCandidateQuotientClass candidate z.1 +
+      rawCandidateQuotientClass candidate z.2.1 * rawCandidateQuotientClass candidate y.1 *
+        rawCandidateQuotientClass candidate x.2.2
+warning: CorruptedFieldRecovery/RawFieldDeterminantBits.lean:61:4: This simp argument is unused:
+  rawFieldAddBits_quotient_sound
+
+Hint: Omit it from the simp argument list.
+  simp [rawFieldDet3Bits, rawFieldMul3Bits, r̵a̵w̵F̵i̵e̵l̵d̵A̵d̵d̵B̵i̵t̵s̵_̵q̵u̵o̵t̵i̵e̵n̵t̵_̵s̵o̵u̵n̵d̵,̵ ̵rawFieldMulBits_quotient_sound, fieldDet3,
+  ̲  ̲ ̲ ̲CharTwo.sub_eq_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawFieldDeterminantBits.lean:61:36: This simp argument is unused:
+  rawFieldMulBits_quotient_sound
+
+Hint: Omit it from the simp argument list.
+  simp [rawFieldDet3Bits, rawFieldMul3Bits, rawFieldAddBits_quotient_sound, r̵a̵w̵F̵i̵e̵l̵d̵M̵u̵l̵B̵i̵t̵s̵_̵q̵u̵o̵t̵i̵e̵n̵t̵_̵s̵o̵u̵n̵d̵,̵fieldDet3,
+      CharTwo.sub_eq_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawFieldDeterminantBits.lean:62:15: This simp argument is unused:
+  CharTwo.sub_eq_add
+
+Hint: Omit it from the simp argument list.
+  simp [rawFieldDet3Bits, rawFieldMul3Bits, rawFieldAddBits_quotient_sound,
+  ̲  ̲ ̲ ̲rawFieldMulBits_quotient_sound, f̵i̵e̵l̵d̵D̵e̵t̵3̵,̵ ̵C̵h̵a̵r̵T̵w̵o̵.̵s̵u̵b̵_̵e̵q̵_̵a̵d̵d̵]̵f̲i̲e̲l̲d̲D̲e̲t̲3̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawFieldDeterminantBits
