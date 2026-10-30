@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T06:53:03.927602+00:00",
+  "run": "cfr-observed-clean-tensor-dev166-20261030T064952Z-f91214",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

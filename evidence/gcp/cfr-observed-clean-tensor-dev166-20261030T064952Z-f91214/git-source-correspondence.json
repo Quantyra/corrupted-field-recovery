@@ -1,0 +1,8 @@
+{
+  "audited_sha256": "e4948b5bbd400360c72264ca4055d6099344d2556ac46134d5c9a6caef17aba6",
+  "staged_git_blob_sha256": "e4948b5bbd400360c72264ca4055d6099344d2556ac46134d5c9a6caef17aba6",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ObservedCleanTensor.lean",
+  "staged_from": "immutable capture archive",
+  "working_successor_preserved": true
+}

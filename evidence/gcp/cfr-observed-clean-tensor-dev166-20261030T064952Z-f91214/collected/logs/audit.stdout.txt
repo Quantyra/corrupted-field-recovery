@@ -1,0 +1,49 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.qTraceDeterminantTensor
+@CorruptedFieldRecovery.qTraceDeterminantTensor.{u_1} : {K : Type u_1} →
+  [inst : Field.{u_1} K] →
+    [inst_1 : Finite.{u_1 + 1} K] →
+      [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+        {n : Nat} →
+          (Q :
+              LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+                (CorruptedFieldRecovery.BinaryVector n) (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+            (c : K) → CorruptedFieldRecovery.BinaryTensor n
+CFR_TYPE_END:CorruptedFieldRecovery.qTraceDeterminantTensor
+'CorruptedFieldRecovery.qTraceDeterminantTensor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.originalObservedTensor_eq_clean_plus_defect
+@CorruptedFieldRecovery.originalObservedTensor_eq_clean_plus_defect.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] {n m : Nat}
+  (Ctotal : CorruptedFieldRecovery.BinaryTensor n) (E : CorruptedFieldRecovery.BinaryTensor m)
+  (u :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector m))
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector n) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (c : K) (hmodel : CorruptedFieldRecovery.HasObservedTraceDeterminantDecomposition.{u_1} Ctotal E u Q c),
+  Eq.{1} Ctotal
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.qTraceDeterminantTensor.{u_1} Q c)
+      (CorruptedFieldRecovery.pullback.{0, 0, 0} E u))
+CFR_TYPE_END:CorruptedFieldRecovery.originalObservedTensor_eq_clean_plus_defect
+'CorruptedFieldRecovery.originalObservedTensor_eq_clean_plus_defect' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.originalObserved_bilinForm_eq_clean_on_coannihilator
+@CorruptedFieldRecovery.originalObserved_bilinForm_eq_clean_on_coannihilator.{u_1} : ∀ {K : Type u_1}
+  [inst : Field.{u_1} K] [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  {n m : Nat} (Ctotal : CorruptedFieldRecovery.BinaryTensor n) (E : CorruptedFieldRecovery.BinaryTensor m)
+  (u :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector m))
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector n) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (c : K) (hmodel : CorruptedFieldRecovery.HasObservedTraceDeterminantDecomposition.{u_1} Ctotal E u Q c)
+  (z : CorruptedFieldRecovery.BinaryVector n)
+  (hz : Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)) (u z)),
+  Eq.{1} (CorruptedFieldRecovery.physicalThirdSlotBilinForm Ctotal z)
+    (CorruptedFieldRecovery.physicalThirdSlotBilinForm (CorruptedFieldRecovery.qTraceDeterminantTensor.{u_1} Q c) z)
+CFR_TYPE_END:CorruptedFieldRecovery.originalObserved_bilinForm_eq_clean_on_coannihilator
+'CorruptedFieldRecovery.originalObserved_bilinForm_eq_clean_on_coannihilator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

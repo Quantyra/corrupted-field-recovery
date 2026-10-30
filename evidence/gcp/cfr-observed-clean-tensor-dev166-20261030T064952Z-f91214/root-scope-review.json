@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Defined Q/c trace determinant BinaryTensor. Explicit HasObservedTraceDeterminantDecomposition promise implies observed tensor equals clean plus pullback E and full clean-slot bilinear equality when u z coannihilates modeImage E.",
+  "remaining": "Nonzero c and support rank not assumed here. No good-tape to u-support relation,computed contraction/balance or success claim.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}
