@@ -1,0 +1,50 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinCheckIndexBitCosted
+CorruptedFieldRecovery.rawRabinCheckIndexBitCosted : (modulus d : Nat) → Prod.{0, 0} Bool Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinCheckIndexBitCosted
+'CorruptedFieldRecovery.rawRabinCheckIndexBitCosted' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_fst
+CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_fst : ∀ (modulus d : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus d).1
+    (Decidable.decide
+      (Eq.{1}
+        (CorruptedFieldRecovery.rawPolynomialGcd modulus
+          (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus d 2) 2))
+        1))
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_fst
+'CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_fst' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinScanBitCosted
+CorruptedFieldRecovery.rawRabinScanBitCosted : (modulus a : Nat) → Prod.{0, 0} Bool Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinScanBitCosted
+'CorruptedFieldRecovery.rawRabinScanBitCosted' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinCheckIndexCharge
+CorruptedFieldRecovery.rawRabinCheckIndexCharge : (W d : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinCheckIndexCharge
+'CorruptedFieldRecovery.rawRabinCheckIndexCharge' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_cost_le
+@CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_cost_le : ∀ {modulus d W : Nat} (hmod : Ne.{1} modulus 0)
+  (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LE.le.{0} 2 W),
+  LE.le.{0} (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus d).2
+    (CorruptedFieldRecovery.rawRabinCheckIndexCharge W d)
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_cost_le
+'CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinScanBitCosted_cost_le
+@CorruptedFieldRecovery.rawRabinScanBitCosted_cost_le : ∀ {modulus q W : Nat} (hmod : Ne.{1} modulus 0)
+  (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LE.le.{0} 2 W),
+  LE.le.{0} (CorruptedFieldRecovery.rawRabinScanBitCosted modulus q).2
+    (HMul.hMul.{0, 0, 0} q
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} q (CorruptedFieldRecovery.rawRabinFrobeniusStepCharge W))
+          (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 W) 2)
+            (HMul.hMul.{0, 0, 0}
+              (HMul.hMul.{0, 0, 0} 40
+                (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 (HMul.hMul.{0, 0, 0} 2 W)) 6) 2))
+              (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 W) 1))))
+        (HMul.hMul.{0, 0, 0} 4 W)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinScanBitCosted_cost_le
+'CorruptedFieldRecovery.rawRabinScanBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

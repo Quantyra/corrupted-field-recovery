@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T12:41:37.483815+00:00",
+  "accepted": "Per-index actual predicate refinement and declared per-index/aggregate charge for reverse-order non-shortcircuit scan under modulus/width hypotheses",
+  "excluded": [
+    "whole scan equality to candidate List.range scan",
+    "machine cost",
+    "space",
+    "full verifier bound"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

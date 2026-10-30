@@ -1,0 +1,26 @@
+{
+  "CorruptedFieldRecovery.rawRabinCheckIndexBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawRabinCheckIndexBitCosted : (modulus d : Nat) \u2192 Prod.{0, 0} Bool Nat\n",
+    "sha256": "725aa782d2449d683b51335eaf8b952867c678c2c70d888d7a796362e001bdda"
+  },
+  "CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_fst : \u2200 (modulus d : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus d).1\n    (Decidable.decide\n      (Eq.{1}\n        (CorruptedFieldRecovery.rawPolynomialGcd modulus\n          (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus d 2) 2))\n        1))\n",
+    "sha256": "14856dda8c4d3e01625a661614151a109fb2d8bfb520a842a64f88d2d0494643"
+  },
+  "CorruptedFieldRecovery.rawRabinScanBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawRabinScanBitCosted : (modulus a : Nat) \u2192 Prod.{0, 0} Bool Nat\n",
+    "sha256": "36f5ba21acea51153da7d5bef9565d81c172a3bc77e976b128a6c65dfe499a8f"
+  },
+  "CorruptedFieldRecovery.rawRabinCheckIndexCharge": {
+    "emitted_type": "CorruptedFieldRecovery.rawRabinCheckIndexCharge : (W d : Nat) \u2192 Nat\n",
+    "sha256": "2cd1ff423a5def67a00f10da06b5b1a77b578c8731c22c7e7edf4dfc1e368bb2"
+  },
+  "CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_cost_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawRabinCheckIndexBitCosted_cost_le : \u2200 {modulus d W : Nat} (hmod : Ne.{1} modulus 0)\n  (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LE.le.{0} 2 W),\n  LE.le.{0} (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus d).2\n    (CorruptedFieldRecovery.rawRabinCheckIndexCharge W d)\n",
+    "sha256": "d4e4f0e96e97bba0b84237f7a7508842a29b3b023f4709fd78353732513942f3"
+  },
+  "CorruptedFieldRecovery.rawRabinScanBitCosted_cost_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawRabinScanBitCosted_cost_le : \u2200 {modulus q W : Nat} (hmod : Ne.{1} modulus 0)\n  (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LE.le.{0} 2 W),\n  LE.le.{0} (CorruptedFieldRecovery.rawRabinScanBitCosted modulus q).2\n    (HMul.hMul.{0, 0, 0} q\n      (HAdd.hAdd.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} q (CorruptedFieldRecovery.rawRabinFrobeniusStepCharge W))\n          (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 W) 2)\n            (HMul.hMul.{0, 0, 0}\n              (HMul.hMul.{0, 0, 0} 40\n                (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 (HMul.hMul.{0, 0, 0} 2 W)) 6) 2))\n              (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 W) 1))))\n        (HMul.hMul.{0, 0, 0} 4 W)))\n",
+    "sha256": "f46bdbc0a5c0ee65745d76fbb37dc1dbc358a2ef2e6e0c1a72c226e3113b6f38"
+  }
+}
