@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T04:44:21.673472+00:00",
+  "run": "cfr-executable-trace-semantic-dev118-20261030T044242Z-67be22",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,169 @@
+✖ [2976/2976] Building CorruptedFieldRecovery.S010GoodTapeBilinearBalance (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.setup.json --json
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:11:27: Function expected at
+  BilinForm
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (ZMod 2)
+
+Hint: The identifier `BilinForm` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:28:6: don't know how to synthesize implicit argument `BilinForm`
+  @physicalThirdSlotBilinForm (?m.37 C E u z hz) (?m.38 C E u z hz) n C z
+context:
+n m : ℕ
+C : BinaryTensor n
+E : BinaryTensor m
+u : BinaryVector n →ₗ[ZMod 2] BinaryVector m
+z : BinaryVector n
+hz : u z ∈ (modeImage E).dualCoannihilator
+⊢ ?m.37 C E u z hz
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:28:6: don't know how to synthesize implicit argument
+  @physicalThirdSlotBilinForm (?m.37 C E u z hz) (?m.38 C E u z hz) n C z
+context:
+n m : ℕ
+C : BinaryTensor n
+E : BinaryTensor m
+u : BinaryVector n →ₗ[ZMod 2] BinaryVector m
+z : BinaryVector n
+hz : u z ∈ (modeImage E).dualCoannihilator
+⊢ Sort ?u.1312
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:27:4: don't know how to synthesize implicit argument `BilinForm`
+  @physicalThirdSlotBilinForm (?m.35 C E u z hz) (?m.36 C E u z hz) n (physicalPerturbedTensor C E u) z
+context:
+n m : ℕ
+C : BinaryTensor n
+E : BinaryTensor m
+u : BinaryVector n →ₗ[ZMod 2] BinaryVector m
+z : BinaryVector n
+hz : u z ∈ (modeImage E).dualCoannihilator
+⊢ ?m.35 C E u z hz
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:27:4: don't know how to synthesize implicit argument
+  @physicalThirdSlotBilinForm (?m.35 C E u z hz) (?m.36 C E u z hz) n (physicalPerturbedTensor C E u) z
+context:
+n m : ℕ
+C : BinaryTensor n
+E : BinaryTensor m
+u : BinaryVector n →ₗ[ZMod 2] BinaryVector m
+z : BinaryVector n
+hz : u z ∈ (modeImage E).dualCoannihilator
+⊢ Sort ?u.1304
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:45:8: Failed to infer type of binder `y`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:45:6: Failed to infer type of binder `x`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:42:14: Failed to infer type of binder `y`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:42:12: Failed to infer type of binder `x`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:49:6: Unknown identifier `physicalPerturbed_bilinForm_eq_clean_of_modeImage_coannihilator`
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:47:80: unsolved goals
+n m : ℕ
+C : BinaryTensor n
+E : BinaryTensor m
+u : BinaryVector n →ₗ[ZMod 2] BinaryVector m
+z : BinaryVector n
+hz : u z ∈ (modeImage E).dualCoannihilator
+T : Module.End (ZMod 2) (BinaryVector n)
+hC : ∀ (x : ?m.65 C E u z hz T) (y : ?m.66 C E u z hz T x), sorry = sorry
+x : ?m.68 C E u z hz T hC
+y : ?m.69 C E u z hz T hC x
+⊢ sorry = sorry
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:71:8: Failed to infer type of binder `y`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:71:6: Failed to infer type of binder `x`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:68:14: Failed to infer type of binder `y`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:68:12: Failed to infer type of binder `x`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:76:8: Unknown identifier `physicalPerturbed_balance_of_clean_slot`
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:75:32: unsolved goals
+⊢ {K : Type u_1} →
+    [inst : Field K] →
+      [inst_1 : Fintype K] →
+        [inst_2 : DecidableEq K] →
+          [inst_3 : Finite K] →
+            [inst_4 : Algebra BinaryField K] →
+              [inst_5 : FiniteDimensional BinaryField K] →
+                [inst_6 : CharP K 2] →
+                  [inst_7 : Algebra (ZMod (ringChar K)) K] →
+                    {s : ℕ} →
+                      (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K) →
+                        (E C : BinaryTensor (3 * s)) →
+                          (U : Submodule BinaryField (KTriple K)) →
+                            (b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K) →
+                              (tape : FiveWordTape s) →
+                                (htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b) →
+                                  (k : Fin 4) →
+                                    (T : Module.End (ZMod 2) (BinaryVector (3 * s))) →
+                                      (∀ (x : ?m.133 Q E C U b tape htape k T) (y : ?m.134 Q E C U b tape htape k T x),
+                                          sorry = sorry) →
+                                        Sort ?u.5466
+
+⊢ {K : Type u_1} →
+    [inst : Field K] →
+      [inst_1 : Fintype K] →
+        [inst_2 : DecidableEq K] →
+          [inst_3 : Finite K] →
+            [inst_4 : Algebra BinaryField K] →
+              [inst_5 : FiniteDimensional BinaryField K] →
+                [inst_6 : CharP K 2] →
+                  [inst_7 : Algebra (ZMod (ringChar K)) K] →
+                    {s : ℕ} →
+                      (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K) →
+                        (E C : BinaryTensor (3 * s)) →
+                          (U : Submodule BinaryField (KTriple K)) →
+                            (b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K) →
+                              (tape : FiveWordTape s) →
+                                (htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b) →
+                                  (k : Fin 4) →
+                                    (T : Module.End (ZMod 2) (BinaryVector (3 * s))) →
+                                      (hC :
+                                          ∀ (x : ?m.133 Q E C U b tape htape k T)
+                                            (y : ?m.134 Q E C U b tape htape k T x), sorry = sorry) →
+                                        ?m.136 Q E C U b tape htape k T hC → Sort ?u.5469
+
+⊢ {K : Type u_1} →
+    [inst : Field K] →
+      [inst_1 : Fintype K] →
+        [inst_2 : DecidableEq K] →
+          [inst_3 : Finite K] →
+            [inst_4 : Algebra BinaryField K] →
+              [inst_5 : FiniteDimensional BinaryField K] →
+                [inst_6 : CharP K 2] →
+                  [inst_7 : Algebra (ZMod (ringChar K)) K] →
+                    {s : ℕ} →
+                      (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K) →
+                        (E C : BinaryTensor (3 * s)) →
+                          (U : Submodule BinaryField (KTriple K)) →
+                            (b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K) →
+                              (tape : FiveWordTape s) →
+                                (htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b) →
+                                  (k : Fin 4) →
+                                    (T : Module.End (ZMod 2) (BinaryVector (3 * s))) →
+                                      (hC :
+                                          ∀ (x : ?m.133 Q E C U b tape htape k T)
+                                            (y : ?m.134 Q E C U b tape htape k T x), sorry = sorry) →
+                                        (x : ?m.136 Q E C U b tape htape k T hC) →
+                                          ?m.137 Q E C U b tape htape k T hC x → Sort u_3
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010GoodTapeBilinearBalance

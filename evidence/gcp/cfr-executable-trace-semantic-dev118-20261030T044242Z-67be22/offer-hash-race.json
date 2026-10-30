@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T04:42:55.171312+00:00",
+  "expected": "0bacf28cd7341db5c32e2e709fcfddbd6586592b756ae71f49203c7b2f475c7c",
+  "captured": "3d05a36410e2e91f878f0a211f8109a0f0ee3fe58b73965366f6891fd289242a",
+  "reason": "Author removed unused locals before capture acknowledgment and immediately offered updated hash; do not launch until full captured hash confirmed against offer."
+}
