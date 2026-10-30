@@ -1,0 +1,44 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinCheckListBitCosted_fst
+CorruptedFieldRecovery.rawRabinCheckListBitCosted_fst : ∀ (modulus : Nat) (indices : List.{0} Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawRabinCheckListBitCosted modulus indices).1
+    (List.all.{0} indices fun i =>
+      Decidable.decide
+        (Eq.{1}
+          (CorruptedFieldRecovery.rawPolynomialGcd modulus
+            (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus (HAdd.hAdd.{0, 0, 0} i 1) 2) 2))
+          1))
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinCheckListBitCosted_fst
+'CorruptedFieldRecovery.rawRabinCheckListBitCosted_fst' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_fst
+@CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_fst : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  Eq.{1} (CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted candidate).1
+    (CorruptedFieldRecovery.rawCandidateRabinCheck candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_fst
+'CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_fst' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinCheckListBitCosted_cost_le
+@CorruptedFieldRecovery.rawRabinCheckListBitCosted_cost_le : ∀ {modulus W q : Nat} (hmod : Ne.{1} modulus 0)
+  (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LE.le.{0} 2 W)
+  (indices : List.{0} Nat)
+  (hindices : ∀ (i : Nat) (a : Membership.mem.{0, 0} indices i), LE.le.{0} (HAdd.hAdd.{0, 0, 0} i 1) q),
+  LE.le.{0} (CorruptedFieldRecovery.rawRabinCheckListBitCosted modulus indices).2
+    (HMul.hMul.{0, 0, 0} (List.length.{0} indices) (CorruptedFieldRecovery.rawRabinScanUniformCharge W q))
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinCheckListBitCosted_cost_le
+'CorruptedFieldRecovery.rawRabinCheckListBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_cost_le
+@CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_cost_le : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hshape : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateShapeCheck candidate) Bool.true),
+  LE.le.{0} (CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted candidate).2
+    (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2)
+      (CorruptedFieldRecovery.rawRabinScanUniformCharge (HAdd.hAdd.{0, 0, 0} s 1) (HDiv.hDiv.{0, 0, 0} s 2)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_cost_le
+'CorruptedFieldRecovery.rawCandidateRabinCheckBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

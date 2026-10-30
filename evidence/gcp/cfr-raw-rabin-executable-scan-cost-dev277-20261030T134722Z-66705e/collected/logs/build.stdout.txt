@@ -1,0 +1,9 @@
+⚠ [2063/2063] Built CorruptedFieldRecovery.RawRabinScanExecutableCost (3.9s)
+warning: CorruptedFieldRecovery/RawRabinScanExecutableCost.lean:35:14: This simp argument is unused:
+  hpred
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵p̵r̵e̵d̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (2063 jobs).
