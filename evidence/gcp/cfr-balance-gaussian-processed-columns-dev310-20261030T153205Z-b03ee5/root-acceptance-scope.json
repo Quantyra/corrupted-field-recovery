@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T15:34:36.109945+00:00",
+  "accepted": "Pivot columns belong to input list; Nodup for Nodup input; processed nonpivot columns zero on finally unused rows",
+  "excluded": [
+    "full kernel basis",
+    "full solver",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
