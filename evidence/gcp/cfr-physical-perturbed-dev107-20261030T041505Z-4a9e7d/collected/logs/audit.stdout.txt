@@ -1,0 +1,29 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.physicalPerturbedContraction_apply
+@CorruptedFieldRecovery.physicalPerturbedContraction_apply : ∀ {n m : Nat} (C : CorruptedFieldRecovery.BinaryTensor n)
+  (E : CorruptedFieldRecovery.BinaryTensor m)
+  (u :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector m))
+  (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1}
+    ((CorruptedFieldRecovery.physicalBinaryContraction (CorruptedFieldRecovery.physicalPerturbedTensor C E u) x y) z)
+    (HAdd.hAdd.{0, 0, 0} (((C x) y) z) (((E (u x)) (u y)) (u z)))
+CFR_TYPE_END:CorruptedFieldRecovery.physicalPerturbedContraction_apply
+'CorruptedFieldRecovery.physicalPerturbedContraction_apply' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.physicalPerturbedContraction_eq_clean_on_modeImage_coannihilator
+@CorruptedFieldRecovery.physicalPerturbedContraction_eq_clean_on_modeImage_coannihilator : ∀ {n m : Nat}
+  (C : CorruptedFieldRecovery.BinaryTensor n) (E : CorruptedFieldRecovery.BinaryTensor m)
+  (u :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector m))
+  (x y z : CorruptedFieldRecovery.BinaryVector n)
+  (hz : Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)) (u z)),
+  Eq.{1}
+    ((CorruptedFieldRecovery.physicalBinaryContraction (CorruptedFieldRecovery.physicalPerturbedTensor C E u) x y) z)
+    (((C x) y) z)
+CFR_TYPE_END:CorruptedFieldRecovery.physicalPerturbedContraction_eq_clean_on_modeImage_coannihilator
+'CorruptedFieldRecovery.physicalPerturbedContraction_eq_clean_on_modeImage_coannihilator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

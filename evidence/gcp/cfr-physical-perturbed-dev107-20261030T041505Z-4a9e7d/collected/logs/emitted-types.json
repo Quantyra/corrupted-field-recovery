@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.physicalPerturbedContraction_apply": {
+    "emitted_type": "@CorruptedFieldRecovery.physicalPerturbedContraction_apply : \u2200 {n m : Nat} (C : CorruptedFieldRecovery.BinaryTensor n)\n  (E : CorruptedFieldRecovery.BinaryTensor m)\n  (u :\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector m))\n  (x y z : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1}\n    ((CorruptedFieldRecovery.physicalBinaryContraction (CorruptedFieldRecovery.physicalPerturbedTensor C E u) x y) z)\n    (HAdd.hAdd.{0, 0, 0} (((C x) y) z) (((E (u x)) (u y)) (u z)))\n",
+    "sha256": "67d4a4ade5822df6daacdc5eecbbe6cf76c628ddb18882da7efe4ab7cd5b7bbe"
+  },
+  "CorruptedFieldRecovery.physicalPerturbedContraction_eq_clean_on_modeImage_coannihilator": {
+    "emitted_type": "@CorruptedFieldRecovery.physicalPerturbedContraction_eq_clean_on_modeImage_coannihilator : \u2200 {n m : Nat}\n  (C : CorruptedFieldRecovery.BinaryTensor n) (E : CorruptedFieldRecovery.BinaryTensor m)\n  (u :\n    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)\n      (CorruptedFieldRecovery.BinaryVector m))\n  (x y z : CorruptedFieldRecovery.BinaryVector n)\n  (hz : Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)) (u z)),\n  Eq.{1}\n    ((CorruptedFieldRecovery.physicalBinaryContraction (CorruptedFieldRecovery.physicalPerturbedTensor C E u) x y) z)\n    (((C x) y) z)\n",
+    "sha256": "8e4b08945f08c522b5efeac9836502c8f35910fdf61dd6854aca7eac527509d2"
+  }
+}

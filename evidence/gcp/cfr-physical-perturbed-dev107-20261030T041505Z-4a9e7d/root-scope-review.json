@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Evaluation of physical contraction C plus pullback E, and equality to clean C at x,y,z when u z belongs to modeImage E dual coannihilator; C,E,u and clean hypothesis explicit.",
+  "remaining": "No actual support U correspondence, contraction matrix algorithm or full success claim.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}

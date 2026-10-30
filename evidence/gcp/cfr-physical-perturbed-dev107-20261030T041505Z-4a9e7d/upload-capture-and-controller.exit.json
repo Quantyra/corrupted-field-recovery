@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-30T04:18:37.423250+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-physical-perturbed-dev107-20261030T041505Z-4a9e7d\\inputs.tar.gz",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-physical-perturbed-dev107-20261030T041505Z-4a9e7d\\capture-manifest.json",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-physical-perturbed-dev107-20261030T041505Z-4a9e7d\\gcp_cfr_runner.py",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-physical-perturbed-dev107-20261030T041505Z-4a9e7d\\run.sh",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-physical-perturbed-dev107-20261030T041505Z-4a9e7d\\bootstrap-assets.json",
+    "quantyra-cfr-lean-builder-20261028a:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-physical-perturbed-dev107-20261030T041505Z-4a9e7d/",
+    "--tunnel-through-iap",
+    "--scp-flag=-hostkey",
+    "--scp-flag=SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

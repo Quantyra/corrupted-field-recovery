@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "fbb8842b712f0144af2c7e418e6ed8bf08b562863c480a636ab0b33a0ef742cb",
+  "staged_git_blob_sha256": "fbb8842b712f0144af2c7e418e6ed8bf08b562863c480a636ab0b33a0ef742cb",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010PhysicalPerturbedContraction.lean"
+}
