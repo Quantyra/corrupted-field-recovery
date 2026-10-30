@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "b72babde7b283ae710f71f18c8127ac461852cc0d0b753214196cfc622bf145f",
+  "staged_git_blob_sha256": "b72babde7b283ae710f71f18c8127ac461852cc0d0b753214196cfc622bf145f",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.lean"
+}

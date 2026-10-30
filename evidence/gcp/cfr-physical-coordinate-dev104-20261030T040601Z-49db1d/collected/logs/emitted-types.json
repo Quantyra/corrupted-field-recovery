@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawFieldTripleComponent": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldTripleComponent.{u_1} : {K : Type u_1} \u2192\n  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K) \u2192 (block : Fin 3) \u2192 K\n",
+    "sha256": "3799d7a293191ed217e243e98d996d45f9fef1b1df8de2641c81b6bb2fd0e249"
+  },
+  "CorruptedFieldRecovery.rawPhysicalBlockMask_eq_canonicalComponent": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPhysicalBlockMask_eq_canonicalComponent : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)\n  (w : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (block : Fin 3),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate (CorruptedFieldRecovery.rawPhysicalBlockMask w block))\n    (CorruptedFieldRecovery.rawFieldTripleComponent.{0}\n      ((LinearEquiv.symm.{0, 0, 0, 0}\n          (CorruptedFieldRecovery.rawFieldTripleToBinaryVector (CorruptedFieldRecovery.rawCandidateModulus candidate)\n            (CorruptedFieldRecovery.accepted_rawCandidateModulus_monic candidate hcheck)\n            (have hv := CorruptedFieldRecovery.accepted_rawFieldCandidateCheck candidate hcheck;\n            have hm := CorruptedFieldRecovery.rawFieldCandidateValid_modulus_polynomial candidate hv;\n            id.{0} (And.right hm))))\n        w)\n      block)\n",
+    "sha256": "dcef575fc88ca86a9f5cdb24cb664c4f8edee341ed444f139c2bda0885bb4fda"
+  }
+}
