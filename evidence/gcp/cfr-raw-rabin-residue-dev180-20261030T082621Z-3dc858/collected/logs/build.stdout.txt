@@ -1,0 +1,81 @@
+✖ [2049/2049] Building CorruptedFieldRecovery.RawRabinCoprimeResidue (2.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinCoprimeResidue.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinCoprimeResidue.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinCoprimeResidue.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinCoprimeResidue.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinCoprimeResidue.setup.json --json
+error: CorruptedFieldRecovery/RawRabinCoprimeResidue.lean:19:27: Application type mismatch: The argument
+  hcong
+has type
+  (mk (rawMaskPolynomial modulus)) (rawMaskPolynomial a) = (mk (rawMaskPolynomial modulus)) (rawMaskPolynomial b)
+but is expected to have type
+  (mk (rawMaskPolynomial modulus)) (rawMaskPolynomial b) = (mk (rawMaskPolynomial modulus)) (rawMaskPolynomial a)
+in the application
+  mk_eq_mk.mp hcong
+error: CorruptedFieldRecovery/RawRabinCoprimeResidue.lean:26:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rawMaskPolynomial b
+in the target expression
+  c ∣ rawMaskPolynomial a
+
+case mp
+modulus a b : ℕ
+hcong : (mk (rawMaskPolynomial modulus)) (rawMaskPolynomial a) = (mk (rawMaskPolynomial modulus)) (rawMaskPolynomial b)
+hdiv : rawMaskPolynomial modulus ∣ rawMaskPolynomial b - rawMaskPolynomial a
+ha : rawMaskPairCoprime modulus a
+c : (ZMod 2)[X]
+hcm : c ∣ rawMaskPolynomial modulus
+hca : c ∣ rawMaskPolynomial b
+hdiff : c ∣ rawMaskPolynomial b - rawMaskPolynomial a
+hadd : rawMaskPolynomial b = rawMaskPolynomial b - rawMaskPolynomial a + rawMaskPolynomial a
+⊢ c ∣ rawMaskPolynomial a
+error: CorruptedFieldRecovery/RawRabinCoprimeResidue.lean:33:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rawMaskPolynomial a
+in the target expression
+  c ∣ rawMaskPolynomial b
+
+case mpr
+modulus a b : ℕ
+hcong : (mk (rawMaskPolynomial modulus)) (rawMaskPolynomial a) = (mk (rawMaskPolynomial modulus)) (rawMaskPolynomial b)
+hdiv : rawMaskPolynomial modulus ∣ rawMaskPolynomial b - rawMaskPolynomial a
+hb : rawMaskPairCoprime modulus b
+c : (ZMod 2)[X]
+hcm : c ∣ rawMaskPolynomial modulus
+hcb : c ∣ rawMaskPolynomial a
+hdiff : c ∣ rawMaskPolynomial b - rawMaskPolynomial a
+hsub : rawMaskPolynomial a = rawMaskPolynomial b - (rawMaskPolynomial b - rawMaskPolynomial a)
+⊢ c ∣ rawMaskPolynomial b
+error: CorruptedFieldRecovery/RawRabinCoprimeResidue.lean:71:14: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (mk (rawCandidateModulus candidate)) (rawMaskPolynomial (rawCandidateFrobenius candidate d))
+in the target expression
+  (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)))
+        (rawMaskPolynomial (rawCandidateFrobenius candidate d)) +
+      (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) X =
+    (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d) +
+      (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) X
+
+s : ℕ
+candidate : RawFieldCandidate s
+d : ℕ
+hmodulus : rawFieldBitsToNat candidate.modulus ≠ 0
+h1 : rawMaskPolynomial 1 = 1
+hX : rawMaskPolynomial 2 = X
+hxor :
+  rawMaskPolynomial ((rawCandidateFrobenius candidate d).xor 2) =
+    rawMaskPolynomial (rawCandidateFrobenius candidate d) + X
+⊢ (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)))
+        (rawMaskPolynomial (rawCandidateFrobenius candidate d)) +
+      (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) X =
+    (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d) +
+      (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) X
+error: CorruptedFieldRecovery/RawRabinCoprimeResidue.lean:73:31: unsolved goals
+s : ℕ
+candidate : RawFieldCandidate s
+d : ℕ
+hmodulus : rawFieldBitsToNat candidate.modulus ≠ 0
+h1 : rawMaskPolynomial 1 = 1
+hX : rawMaskPolynomial 2 = X
+hxor :
+  rawMaskPolynomial ((rawCandidateFrobenius candidate d).xor 2) =
+    rawMaskPolynomial (rawCandidateFrobenius candidate d) + X
+⊢ (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d) +
+      (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) X =
+    (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d - X)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinCoprimeResidue
