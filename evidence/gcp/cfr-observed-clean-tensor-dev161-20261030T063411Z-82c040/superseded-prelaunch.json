@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T06:36:09.934607+00:00",
+  "never_submitted": true,
+  "compiled": false,
+  "reason": "Author moved bounded option before declaration doc comment after compiler static review to avoid prior parser failure pattern."
+}

@@ -1,0 +1,68 @@
+✖ [2045/2045] Building CorruptedFieldRecovery.RawRabinGcdCorrectness (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinGcdCorrectness.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdCorrectness.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdCorrectness.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinGcdCorrectness.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinGcdCorrectness.setup.json --json
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:26:53: Application type mismatch: The argument
+  Nat.pos_of_ne_zero hn
+has type
+  0 < n
+but is expected to have type
+  n ≠ 0
+in the application
+  Nat.log2_self_le (Nat.pos_of_ne_zero hn)
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:50:38: Application type mismatch: The argument
+  dvd_zero ?m.20
+has type
+  ?m.20 ∣ 0
+but is expected to have type
+  rawMaskPolynomial a ∣ rawMaskPolynomial 0
+in the application
+  h (rawMaskPolynomial a) dvd_rfl (dvd_zero ?m.20)
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:78:7: Application type mismatch: The argument
+  hmB
+has type
+  rawMaskPolynomial (rawBitsToNat (rawPolynomialBits c)) ∣ rawMaskPolynomial b
+but is expected to have type
+  rawMaskPolynomial (rawBitsToNat (rawPolynomialBits c)) ∣ rawMaskPolynomial a
+in the application
+  And.intro hmB
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:79:18: Type mismatch: After simplification, term
+  hpair.left
+ has type
+  c ∣ rawMaskPolynomial b
+but is expected to have type
+  c ∣ rawMaskPolynomial a
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:80:10: Type mismatch: After simplification, term
+  hpair.right
+ has type
+  c ∣ rawMaskPolynomial (rawPolynomialRemainder a b)
+but is expected to have type
+  c ∣ rawMaskPolynomial b
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:90:7: Application type mismatch: The argument
+  hmA
+has type
+  rawMaskPolynomial (rawBitsToNat (rawPolynomialBits c)) ∣ rawMaskPolynomial a
+but is expected to have type
+  rawMaskPolynomial (rawBitsToNat (rawPolynomialBits c)) ∣ rawMaskPolynomial b
+in the application
+  And.intro hmA
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:91:18: Type mismatch: After simplification, term
+  hpair.left
+ has type
+  c ∣ rawMaskPolynomial a
+but is expected to have type
+  c ∣ rawMaskPolynomial b
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:92:10: Type mismatch: After simplification, term
+  hpair.right
+ has type
+  c ∣ rawMaskPolynomial b
+but is expected to have type
+  c ∣ rawMaskPolynomial (rawPolynomialRemainder a b)
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:104:10: Type mismatch
+  rawMaskPairCoprime_zero_iff a
+has type
+  rawMaskPairCoprime a 0 ↔ a = 1
+but is expected to have type
+  a = 1 ↔ rawMaskPairCoprime a 0
+error: CorruptedFieldRecovery/RawRabinGcdCorrectness.lean:108:14: `simp` made no progress
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinGcdCorrectness
