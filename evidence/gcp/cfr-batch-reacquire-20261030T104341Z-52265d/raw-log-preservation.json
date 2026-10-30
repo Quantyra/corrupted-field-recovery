@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-30T10:45:53.832073+00:00",
+  "policy": "Retain raw gcloud stdout/stderr bytes including CRLF; do not normalize for whitespace checks. JSON parsed and controller Python syntax compiled as text only; no local Lean."
+}

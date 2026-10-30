@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-30T10:44:52.240882+00:00",
+  "actual_start": "2026-10-30T03:44:20.958000-07:00",
+  "STOP_ceiling": "2026-10-30T07:44:20.958000-07:00",
+  "latest_full_stage_launch": "2026-10-30T06:49:20.958000-07:00",
+  "conservative_last_submission_start": "2026-10-30T06:42:20.958000-07:00",
+  "no_timeout_extension": true
+}
