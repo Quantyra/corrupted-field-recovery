@@ -1,0 +1,77 @@
+{
+  "run": "cfr-uncompiled-scalar-range-bridge-preservation-20261030T161815Z-e5001a",
+  "archive_sha256": "a750a6177293a8305b439019c6b1ba337b90eaf17566ab6c322f69aa83a7b278",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianScalarRangeBridge.lean",
+  "source_sha256": "01AF6BD687769953407E66ED8C2F0D23941EF4AC3A57EF79B1FB6EB9BC542235",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean",
+      "sha256": "d42f28827dd7980699f5cebcf503ef4b174c849b883c53aa8a8f7d4089cf259d",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+      "sha256": "4429c93a112e2b8d210f072ec7d42186028e6febc8c256d9f594dbb089182b59",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+      "sha256": "7afb6f348edb61b610eb983096847e3ab60861b31568d42f7fddf6aa97685264",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled dev316 observed PASS; exact collection and acceptance pending"
+    }
+  ],
+  "accepted_direct_dependency": {
+    "source": "CorruptedFieldRecovery/S010ObservedHiddenBalance.lean",
+    "sha256": "77450aae69df3a1cd863ed9898e410b091e3e19c7cf96c7b2af73118dcdfde6e",
+    "accepted_run": "dev222"
+  },
+  "supplied_hypotheses": [
+    "K with explicit field/finite/characteristic/algebra instances",
+    "true linear equivalence Q",
+    "E",
+    "U",
+    "dependent basis b",
+    "actual good-tape membership",
+    "c nonzero",
+    "model decomposition of decodeRawArray raw",
+    "raw.size=(3*s)^3"
+  ],
+  "author_reported_array_refinement_gap": [
+    "GaussianRawMatrix is Matrix.reindex of computable entry-function matrix and scan runs directly on Matrix",
+    "Serializer is separate Array(Array(ZMod2)) from row/column lists",
+    "No proved rowList[r]=rowEquiv.symm r or columnList[c]=columnEquiv.symm c",
+    "No proved flattened Array cell equality with GaussianRawMatrix at Fin row/column",
+    "No scan implementation over those arrays"
+  ],
+  "scope": "Unvalidated draft scalar parameter extraction and candidate-range/spanning statements under supplied true K/Q and good-event/model hypotheses. Does not discover K/Q, prove array execution refinement, certify a solver, or establish runtime/space or recovery success."
+}
