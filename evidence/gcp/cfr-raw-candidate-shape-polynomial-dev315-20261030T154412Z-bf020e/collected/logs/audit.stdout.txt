@@ -1,0 +1,16 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_polynomial_bound
+@CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_polynomial_bound : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).2
+    (HMul.hMul.{0, 0, 0} 100
+      (HPow.hPow.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} s (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))
+            (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))
+          4)
+        2))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_polynomial_bound
+'CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_polynomial_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

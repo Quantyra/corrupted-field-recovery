@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T15:48:06.996519+00:00",
+  "accepted": "Unconditional declared shape-charge bound 100*(s+modulus.size+scalar.size+4)^2",
+  "excluded": [
+    "concrete machine",
+    "peak space",
+    "full candidate aggregate",
+    "recovery bound"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "theorem_local_heartbeat": 2000000
+}

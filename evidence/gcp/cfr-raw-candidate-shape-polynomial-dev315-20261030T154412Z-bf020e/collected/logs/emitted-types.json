@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_polynomial_bound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted_polynomial_bound : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).2\n    (HMul.hMul.{0, 0, 0} 100\n      (HPow.hPow.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0}\n          (HAdd.hAdd.{0, 0, 0}\n            (HAdd.hAdd.{0, 0, 0} s (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))\n            (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))\n          4)\n        2))\n",
+    "sha256": "7d76882f4421b7df0b55f3f873f65841471b6f2c7761ca957abd06ed90b0e644"
+  }
+}
