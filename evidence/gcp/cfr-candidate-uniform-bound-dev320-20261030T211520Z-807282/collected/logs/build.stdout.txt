@@ -1,0 +1,64 @@
+✖ [2070/2070] Building CorruptedFieldRecovery.RawCandidateVerifierUniformBound (22s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateVerifierUniformBound.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateVerifierUniformBound.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCandidateVerifierUniformBound.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCandidateVerifierUniformBound.setup.json --json
+error: CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean:23:4: Type mismatch
+  Nat.pow_le_pow_left h4
+has type
+  ∀ (i : ℕ), (4 * W + 4) ^ i ≤ (8 * r) ^ i
+but is expected to have type
+  (4 * W + 4) ^ 2 ≤ (8 * r) ^ 2
+error: CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean:25:4: Type mismatch
+  Nat.pow_le_pow_left h6
+has type
+  ∀ (i : ℕ), (6 * W + 6) ^ i ≤ (12 * r) ^ i
+but is expected to have type
+  (6 * W + 6) ^ 2 ≤ (12 * r) ^ 2
+error: CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean:47:26: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean:9:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean:76:38: Type mismatch
+  Nat.pow_le_pow_left hr
+has type
+  ∀ (i : ℕ), r ^ i ≤ (2 * b) ^ i
+but is expected to have type
+  r ^ 4 ≤ (2 * b) ^ 4
+error: CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean:89:31: Type mismatch
+  Nat.pow_le_pow_left hq
+has type
+  ∀ (i : ℕ), q ^ i ≤ b ^ i
+but is expected to have type
+  q ^ 2 ≤ b ^ 2
+error: CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean:96:2: linarith failed to find a contradiction
+case h
+s : ℕ
+candidate : RawFieldCandidate s
+q : ℕ := s / 2
+b : ℕ := s + Array.size candidate.modulus + Array.size candidate.scalar + 4
+r : ℕ := s + 1 + q + 1
+hb : 4 ≤ b
+hq : q ≤ b
+hr : r ≤ 2 * b
+hrpow : r ^ 4 ≤ (2 * b) ^ 4
+hcharge : rawRabinScanUniformCharge (s + 1) q ≤ 100000 * (s + 1 + q + 1) ^ 4
+hchargeMul : q * rawRabinScanUniformCharge (s + 1) q ≤ q * (100000 * (s + 1 + q + 1) ^ 4)
+hscan : q * rawRabinScanUniformCharge (s + 1) q ≤ 1600000 * b ^ 5
+hshape :
+  (rawFieldCandidateFastCheckFullBitCosted candidate).2 ≤
+    100 * (s + Array.size candidate.modulus + Array.size candidate.scalar + 4) ^ 2 + (s / 2) ^ 2 +
+      s / 2 * rawRabinScanUniformCharge (s + 1) (s / 2)
+hqSq : q ^ 2 ≤ b ^ 2
+hb2le5 : b ^ 2 ≤ b ^ 5
+hqSq5 : q ^ 2 ≤ b ^ 5
+hb2 : b ^ 2 ≤ b ^ 5
+a✝ : 2000000 * b ^ 5 < (rawFieldCandidateFastCheckFullBitCosted candidate).2
+⊢ False
+failed
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCandidateVerifierUniformBound
