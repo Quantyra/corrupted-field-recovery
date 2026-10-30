@@ -1,0 +1,38 @@
+{
+  "CorruptedFieldRecovery.rawPolynomialRemainder": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialRemainder : (dividend divisor : Nat) \u2192 Nat\n",
+    "sha256": "af13b9c171077a3565fe0b1e711000bdd7d58ffd87b32d2cf9681de46a507149"
+  },
+  "CorruptedFieldRecovery.rawPolynomialRemainder_lt": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialRemainder_lt : \u2200 {a b : Nat} (hb : Ne.{1} b 0),\n  LT.lt.{0} (CorruptedFieldRecovery.rawPolynomialRemainder a b) b\n",
+    "sha256": "a5859e354a50dab5504d5cb27bdd19a3fda02ac433a1a36d337d79d86bded1a3"
+  },
+  "CorruptedFieldRecovery.rawPolynomialRemainder_quotient_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialRemainder_quotient_sound : \u2200 {a b : Nat} (hb : Ne.{1} b 0),\n  Eq.{1}\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial b))\n      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawPolynomialRemainder a b)))\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial b)) (CorruptedFieldRecovery.rawMaskPolynomial a))\n",
+    "sha256": "c1528a1255bd47da39905824b0118d3379252baea24934aa4869c83679ee4bd4"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcd": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcd : (a a : Nat) \u2192 Nat\n",
+    "sha256": "842bc484420d8b2fd556eb1df21e22d073ba09b0862afbb341bf24515a5a39a9"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusAux": {
+    "emitted_type": "CorruptedFieldRecovery.rawCandidateFrobeniusAux : (modulus a a : Nat) \u2192 Nat\n",
+    "sha256": "41e78af5b433ace7b7df72705ff2206b733e2e0232fd2becc08ec8c6e8c1608b"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobenius": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobenius : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 (d : Nat) \u2192 Nat\n",
+    "sha256": "89608775888e77807f449b4b54d9832f0b48a4391ddb233ec50509d580f03957"
+  },
+  "CorruptedFieldRecovery.rawCandidateRabinCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateRabinCheck : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 Bool\n",
+    "sha256": "8ad95231072462f5a5bc1d79385458e43cee3433c8aacfd2522feb39d8fc0644"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateShapeCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateShapeCheck : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 Bool\n",
+    "sha256": "ba34eade9f69cc19b5995a8b814f90be27fc97828d5281ea0055357052f45880"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateFastCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateFastCheck : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192 Bool\n",
+    "sha256": "1f05b7c80d564dec502791a97c43095e215360274c83cedc20e44fcadf9a1503"
+  }
+}

@@ -65,22 +65,32 @@ decreasing_by
   exact rawPolynomialRemainder_lt (by omega)
 
 /-- Repeated quotient squaring computes the `d`th Frobenius power of a mask. -/
-def rawCandidateFrobeniusAux {s : Nat} (candidate : RawFieldCandidate s)
-    (hfield : rawFieldCandidateCheck candidate = true) : Nat → Nat → Nat
+def rawCandidateFrobeniusAux (modulus : Nat) : Nat → Nat → Nat
   | 0, x => x
-  | d + 1, x => rawCandidateFrobeniusAux candidate hfield d
-      (rawFieldMulBits candidate hfield x x)
+  | d + 1, x => rawCandidateFrobeniusAux modulus d
+      (rawPolynomialRemainder (rawPolyMul x x) modulus)
 
-def rawCandidateFrobenius {s : Nat} (candidate : RawFieldCandidate s)
-    (hfield : rawFieldCandidateCheck candidate = true) (d : Nat) : Nat :=
-  rawCandidateFrobeniusAux candidate hfield d 2
+def rawCandidateFrobenius {s : Nat} (candidate : RawFieldCandidate s) (d : Nat) : Nat :=
+  rawCandidateFrobeniusAux (rawFieldBitsToNat candidate.modulus) d 2
 
 /-- The executable low-degree Frobenius gcd checks: every possible proper
 irreducible factor degree is tested against `X^(2^d)-X`. -/
-def rawCandidateRabinCheck {s : Nat} (candidate : RawFieldCandidate s)
-    (hfield : rawFieldCandidateCheck candidate = true) : Bool :=
+def rawCandidateRabinCheck {s : Nat} (candidate : RawFieldCandidate s) : Bool :=
   (List.range (s / 2)).all fun i => decide
     (rawPolynomialGcd (rawFieldBitsToNat candidate.modulus)
-      (Nat.xor (rawCandidateFrobenius candidate hfield (i + 1)) 2) = 1)
+      (Nat.xor (rawCandidateFrobenius candidate (i + 1)) 2) = 1)
+
+/-- Shape gates which are independent of polynomial irreducibility and remain
+available before any quotient-field proof is constructed. -/
+def rawFieldCandidateShapeCheck {s : Nat} (candidate : RawFieldCandidate s) : Bool :=
+  decide (1 ≤ s) && decide (candidate.modulus.size = s + 1) &&
+    decide (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1) &&
+    decide (candidate.scalar.size = s) &&
+    decide (rawFieldBitsToNat candidate.scalar ≠ 0)
+
+/-- Standalone candidate gate: structural checks plus the bounded Rabin gcd
+scan, with no proof or call to the legacy exhaustive factor search. -/
+def rawFieldCandidateFastCheck {s : Nat} (candidate : RawFieldCandidate s) : Bool :=
+  rawFieldCandidateShapeCheck candidate && rawCandidateRabinCheck candidate
 
 end CorruptedFieldRecovery

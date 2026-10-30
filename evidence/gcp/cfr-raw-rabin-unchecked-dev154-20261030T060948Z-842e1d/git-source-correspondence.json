@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "547d7e6c815cabab50356cc2d6ca81ee5c6b71e082bd4438c5351db5fdd6b168",
+  "staged_git_blob_sha256": "547d7e6c815cabab50356cc2d6ca81ee5c6b71e082bd4438c5351db5fdd6b168",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/RawRabinIrreducibility.lean"
+}

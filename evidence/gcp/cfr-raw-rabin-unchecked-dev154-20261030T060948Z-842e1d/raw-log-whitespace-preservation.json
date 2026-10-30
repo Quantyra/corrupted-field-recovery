@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-30T06:16:30.003782+00:00",
+  "source_diff_check_passed": true,
+  "raw_log_check": "Raw captured compiler stdout has whitespace-only diagnostic lines at failed153 lines5 and7; bytes preserved for receipt hashes, not normalized."
+}

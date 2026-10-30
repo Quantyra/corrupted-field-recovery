@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Computable proof-free raw Frobenius via rawPolynomialRemainder/rawPolyMul, list-range gcd scan,shape/FastCheck Boolean definitions, and earlier remainder output bound/quotient soundness.",
+  "remaining": "No gcd refinement,irreducibility iff,short-circuit/runtime cost,or replacement of legacy verifier. Current accepted legacy verifier still uses exhaustive factor check.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}
