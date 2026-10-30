@@ -1,0 +1,1 @@
+cfr-collect-existing-arch | 10 kB |  10.7 kB/s | ETA: 00:00:00 | 100%

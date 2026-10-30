@@ -1,0 +1,6 @@
+{
+  "run": "cfr-balance-pivot-complete-dev272-20261030T131456Z-06588b",
+  "utc": "2026-10-30T13:22:27.697113+00:00",
+  "action": "Download existing terminal archive only after refused-key download; no auth changes/repackage/relaunch",
+  "archive_sha256": "5b850dee25491ff9f77fbb922649c742a2c194096d9ec6a19cf09132c963d230"
+}

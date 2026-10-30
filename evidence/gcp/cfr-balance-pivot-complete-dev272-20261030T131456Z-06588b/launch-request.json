@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T13:20:19.802756+00:00",
+  "run": "cfr-balance-pivot-complete-dev272-20261030T131456Z-06588b",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

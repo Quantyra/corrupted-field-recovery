@@ -1,0 +1,3 @@
+Server refused our key
+FATAL ERROR: No supported authentication methods available (server sent: publickey)
+ERROR: (gcloud.compute.scp) [C:\Users\dfred\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin\sdk\pscp.exe] exited with return code [1].
