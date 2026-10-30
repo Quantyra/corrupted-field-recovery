@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Derived ring-indexed input equivalence applied to x equals Q of dependent coordinate cast along ringChar K equals2, under supplied Q,CharP2 and algebra instances. Prior equivalence unchanged.",
+  "remaining": "No actual C or constructor conclusion.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

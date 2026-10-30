@@ -1,0 +1,33 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_inputEquiv_from_Q
+@CorruptedFieldRecovery.modeImage_inputEquiv_from_Q.{u_1} : {K : Type u_1} →
+  [inst : Field.{u_1} K] →
+    [inst_1 : CharP.{u_1} K 2] →
+      [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] →
+        [inst_3 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] →
+          {s : Nat} →
+            (Q :
+                LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+                  (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))
+                  (CorruptedFieldRecovery.FieldTriple.{u_1} K)) →
+              LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K)))
+                (CorruptedFieldRecovery.BinaryInput.{u_1} K (HMul.hMul.{0, 0, 0} 3 s))
+                (CorruptedFieldRecovery.FieldTriple.{u_1} K)
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_inputEquiv_from_Q
+'CorruptedFieldRecovery.modeImage_inputEquiv_from_Q' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_apply
+@CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_apply.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : CharP.{u_1} K 2] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (x : CorruptedFieldRecovery.BinaryInput.{u_1} K (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{u_1 + 1} ((CorruptedFieldRecovery.modeImage_inputEquiv_from_Q.{u_1} Q) x)
+    (Q
+      ((Equiv.cast.{1}
+          (congrArg.{1, 2} (fun p => (a : Fin (HMul.hMul.{0, 0, 0} 3 s)) → ZMod p) (ringChar.eq.{u_1} K 2)))
+        x))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_apply
+'CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_apply' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

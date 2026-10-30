@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "762a095e58cc468b41aa5b79f7acaf54bf2b61e65a87e222de2ee2814e40de3f",
+  "staged_git_blob_sha256": "762a095e58cc468b41aa5b79f7acaf54bf2b61e65a87e222de2ee2814e40de3f",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010QInputEquivalence.lean"
+}
