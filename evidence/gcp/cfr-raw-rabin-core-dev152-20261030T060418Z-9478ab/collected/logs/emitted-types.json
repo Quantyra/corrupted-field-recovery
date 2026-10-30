@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.rawPolynomialRemainder": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialRemainder : (dividend divisor : Nat) \u2192 Nat\n",
+    "sha256": "af13b9c171077a3565fe0b1e711000bdd7d58ffd87b32d2cf9681de46a507149"
+  },
+  "CorruptedFieldRecovery.rawPolynomialRemainder_lt": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialRemainder_lt : \u2200 {a b : Nat} (hb : Ne.{1} b 0),\n  LT.lt.{0} (CorruptedFieldRecovery.rawPolynomialRemainder a b) b\n",
+    "sha256": "a5859e354a50dab5504d5cb27bdd19a3fda02ac433a1a36d337d79d86bded1a3"
+  },
+  "CorruptedFieldRecovery.rawPolynomialRemainder_quotient_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialRemainder_quotient_sound : \u2200 {a b : Nat} (hb : Ne.{1} b 0),\n  Eq.{1}\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial b))\n      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawPolynomialRemainder a b)))\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial b)) (CorruptedFieldRecovery.rawMaskPolynomial a))\n",
+    "sha256": "c1528a1255bd47da39905824b0118d3379252baea24934aa4869c83679ee4bd4"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcd": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcd : (a a : Nat) \u2192 Nat\n",
+    "sha256": "842bc484420d8b2fd556eb1df21e22d073ba09b0862afbb341bf24515a5a39a9"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusAux": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobeniusAux : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192 (a a : Nat) \u2192 Nat\n",
+    "sha256": "02ac4547a816b5eb1d5e899b4ff39b3d6cc8e68dca6549e8a5ddeeaa1443e86e"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobenius": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobenius : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192 (d : Nat) \u2192 Nat\n",
+    "sha256": "3b4ffa8c1db5b8e2e9fd6c4ced8d5799a318c32d4361716915795886a4eca645"
+  },
+  "CorruptedFieldRecovery.rawCandidateRabinCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateRabinCheck : {s : Nat} \u2192\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192 Bool\n",
+    "sha256": "97f60ae234a34334e07f720cd94bc2bad0123cf347277d032469c7ce9d48b570"
+  }
+}

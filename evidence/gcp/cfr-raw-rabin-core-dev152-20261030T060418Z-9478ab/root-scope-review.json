@@ -1,0 +1,9 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Computable Nat remainder,gcd,Frobenius and list-gate definitions; remainder less than nonzero divisor and quotient-class preservation.",
+  "legacy_dependency": "Frobenius and Rabin gate explicitly require hfield from the LEGACY exhaustive exponential-size logical factor candidate check; this is not an independent efficient replacement.",
+  "remaining": "No gcd correctness,irreducibility iff,proof-free replacement,bit-cost or polynomial verifier.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

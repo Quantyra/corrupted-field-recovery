@@ -1,0 +1,41 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialRemainder
+CorruptedFieldRecovery.rawPolynomialRemainder : (dividend divisor : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialRemainder
+'CorruptedFieldRecovery.rawPolynomialRemainder' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialRemainder_lt
+@CorruptedFieldRecovery.rawPolynomialRemainder_lt : ∀ {a b : Nat} (hb : Ne.{1} b 0),
+  LT.lt.{0} (CorruptedFieldRecovery.rawPolynomialRemainder a b) b
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialRemainder_lt
+'CorruptedFieldRecovery.rawPolynomialRemainder_lt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialRemainder_quotient_sound
+@CorruptedFieldRecovery.rawPolynomialRemainder_quotient_sound : ∀ {a b : Nat} (hb : Ne.{1} b 0),
+  Eq.{1}
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial b))
+      (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawPolynomialRemainder a b)))
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial b)) (CorruptedFieldRecovery.rawMaskPolynomial a))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialRemainder_quotient_sound
+'CorruptedFieldRecovery.rawPolynomialRemainder_quotient_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcd
+CorruptedFieldRecovery.rawPolynomialGcd : (a a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcd
+'CorruptedFieldRecovery.rawPolynomialGcd' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusAux
+@CorruptedFieldRecovery.rawCandidateFrobeniusAux : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) → (a a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusAux
+'CorruptedFieldRecovery.rawCandidateFrobeniusAux' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobenius
+@CorruptedFieldRecovery.rawCandidateFrobenius : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) → (d : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobenius
+'CorruptedFieldRecovery.rawCandidateFrobenius' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateRabinCheck
+@CorruptedFieldRecovery.rawCandidateRabinCheck : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateRabinCheck
+'CorruptedFieldRecovery.rawCandidateRabinCheck' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
