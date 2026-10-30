@@ -1,0 +1,28 @@
+✖ [2988/2988] Building CorruptedFieldRecovery.S010BalanceRawInputLayout (2.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceRawInputLayout.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceRawInputLayout.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceRawInputLayout.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceRawInputLayout.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceRawInputLayout.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceRawInputLayout.lean:11:62: unsolved goals
+s : ℕ
+⊢ (List.ofFn ((fun a => 3 * s) ∘ fun i => i)).sum = 3 * s * (3 * s)
+warning: CorruptedFieldRecovery/S010BalanceRawInputLayout.lean:13:25: This simp argument is unused:
+  List.length_map
+
+Hint: Omit it from the simp argument list.
+  simp [actualBalanceColumnList, actualBalanceCoordinateList, L̵i̵s̵t̵.̵l̵e̵n̵g̵t̵h̵_̵f̵l̵a̵t̵M̵a̵p̵,̵ ̵L̵i̵s̵t̵.̵l̵e̵n̵g̵t̵h̵_̵m̵a̵p̵]̵L̲i̲s̲t̲.̲l̲e̲n̲g̲t̲h̲_̲f̲l̲a̲t̲M̲a̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceRawInputLayout.lean:16:63: unsolved goals
+s : ℕ
+⊢ (List.ofFn ((fun a => 3 * s) ∘ fun i => i)).sum +
+      ((List.ofFn ((fun a => 3 * s) ∘ fun i => i)).sum +
+        ((List.ofFn ((fun a => 3 * s) ∘ fun i => i)).sum + (List.ofFn ((fun a => 3 * s) ∘ fun i => i)).sum)) =
+    4 * (3 * s) * (3 * s)
+warning: CorruptedFieldRecovery/S010BalanceRawInputLayout.lean:18:25: This simp argument is unused:
+  List.length_map
+
+Hint: Omit it from the simp argument list.
+  simp [actualBalanceRowList, actualBalanceCoordinateList, L̵i̵s̵t̵.̵l̵e̵n̵g̵t̵h̵_̵f̵l̵a̵t̵M̵a̵p̵,̵ ̵L̵i̵s̵t̵.̵l̵e̵n̵g̵t̵h̵_̵m̵a̵p̵]̵L̲i̲s̲t̲.̲l̲e̲n̲g̲t̲h̲_̲f̲l̲a̲t̲M̲a̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceRawInputLayout

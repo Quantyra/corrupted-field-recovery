@@ -1,0 +1,23 @@
+{
+  "run": "cfr-raw-rabin-frobenius-cost-dev253-20261030T121211Z-6baf25",
+  "utc": "2026-10-30T12:15:58.898093+00:00",
+  "archive_sha256": "b085e5d4f71472b1eea74d6c4110c26349538043e13b8baefdd4b87381c1d875",
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "8078c9752d3598c61c16cc78125351edcf5102e64f9c62d9026af6fb788d1822",
+    "launch.log": "3e7f78f55901b3239f909e0770bb6254f47e01a9f62405136878243550541229",
+    "runner-pid": "29a9356705517ec1d5dbe9a2601089604bdb268cca266d409239c5ed0b680cf0",
+    "started-utc": "f634cab4bbcc7ebe9c6b6fe12e23ad1d546b2869dedf8f606b1abc3dd2f12693",
+    "terminal-receipt.json": "b85898637954ae4025ca3ef2978fd6abef34e4917ccd9d2bdb1095725b53d75c",
+    "logs/build.stderr.txt": "c4a27db198c4d8632369ee6102944ef46e83c20d685f7c17a6aaff9cfcfc710f",
+    "logs/build.stdout.txt": "f61132fef2e2c196231f6145c68ceb9943d789836d4d104a6c612ad3e8a367bc",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "e7d9bbdf34d5c14ecc812a1795ae881d3871531127f6666818ab8d5ff24d781c",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "99b0ef41104f70294dc711d542012027b5f78cb71449acb31b617621a09682ec",
+    "logs/runner.stdout.txt": "e55ec725b71754d86d5de4458f805b2e8a4e3e986650a4406b190b5e909b9c13"
+  }
+}
