@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-30T11:23:58.548262+00:00",
+  "review": "Root exact nine types/source",
+  "accepted": "Semantic physical-endomorphism residual linear map from supplied BinaryTensor A/tape with4(3s)^2 basis-pair rows; kernel iff arbitrary-x,y actualFourBilinearBalanced; Bool check iff kernel membership",
+  "excluded": [
+    "serialized raw matrix build",
+    "Gaussian solver",
+    "runtime",
+    "space",
+    "constructor completeness"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
