@@ -1,0 +1,18 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-30T23:26:17.370658+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "quantyra-cfr-lean-builder-20261028a:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-kernel-uniqueness-dev349-20261030T231951Z-0c8bf2/collected-evidence.tar.gz",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-kernel-uniqueness-dev349-20261030T231951Z-0c8bf2\\cfr-collect-20261030T232522Z-073bee-evidence.tar.gz",
+    "--tunnel-through-iap",
+    "--scp-flag=-hostkey",
+    "--scp-flag=SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}
