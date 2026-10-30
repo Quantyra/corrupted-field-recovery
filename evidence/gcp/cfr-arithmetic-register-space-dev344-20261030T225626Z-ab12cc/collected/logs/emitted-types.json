@@ -1,0 +1,46 @@
+{
+  "CorruptedFieldRecovery.RawArithmeticFrameKind": {
+    "emitted_type": "CorruptedFieldRecovery.RawArithmeticFrameKind : Type\n",
+    "sha256": "82839fecca5264613e7ff637863c6e52559af3559cd6cbd262e24ed2d5ec3f1e"
+  },
+  "CorruptedFieldRecovery.RawArithmeticFrame": {
+    "emitted_type": "CorruptedFieldRecovery.RawArithmeticFrame : Type\n",
+    "sha256": "7bf098254bdea89ea833633fe2ce0cd58d9f1a6275abce3b74d8d5eb214a1a94"
+  },
+  "CorruptedFieldRecovery.rawArithmeticMultiplyFrame": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticMultiplyFrame : (a b child shifted : Nat) \u2192\n  CorruptedFieldRecovery.RawArithmeticFrame\n",
+    "sha256": "fc26dfc67fa360e24a9eac9c550537a2844bd9798dad5d5d954d5578d0517e4f"
+  },
+  "CorruptedFieldRecovery.rawArithmeticReduceFrame": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticReduceFrame : (modulus degree fuel current shifted output : Nat) \u2192\n  CorruptedFieldRecovery.RawArithmeticFrame\n",
+    "sha256": "c479f8c3ef5750a9314031c0f108b46b68304587e52c2f04aa364eef52df2aad"
+  },
+  "CorruptedFieldRecovery.rawArithmeticGcdFrame": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticGcdFrame : (a b remainder child : Nat) \u2192 CorruptedFieldRecovery.RawArithmeticFrame\n",
+    "sha256": "f368adc124bdff2b80be54c6c218fee27491d4ecd5ed135ed4432769a391afdf"
+  },
+  "CorruptedFieldRecovery.rawArithmeticFrobeniusFrame": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticFrobeniusFrame : (modulus degree current square remainder : Nat) \u2192\n  CorruptedFieldRecovery.RawArithmeticFrame\n",
+    "sha256": "86edfd7c7cdcc041e62717e6396f383ee84ae18d36df9e75f735ca2724a15ab0"
+  },
+  "CorruptedFieldRecovery.rawArithmeticFrameLiveBits": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticFrameLiveBits : (frame : CorruptedFieldRecovery.RawArithmeticFrame) \u2192 Nat\n",
+    "sha256": "b082e04c3bfcf0392bba09b0e9054eb2b3f3b72b5852d8d0bd9eb4080bcea56b"
+  },
+  "CorruptedFieldRecovery.rawArithmeticStackLiveBits": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticStackLiveBits : (stack : CorruptedFieldRecovery.RawArithmeticStack) \u2192 Nat\n",
+    "sha256": "6dbf99c306477448a854e48840fb43f9ea1704c58bb267213de5421e87126f02"
+  },
+  "CorruptedFieldRecovery.rawArithmeticFrameLiveBits_le": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticFrameLiveBits_le : \u2200 (frame : CorruptedFieldRecovery.RawArithmeticFrame) (W : Nat)\n  (hwidth :\n    \u2200 (word : Nat) (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n      LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 W)),\n  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticFrameLiveBits frame)\n    (HAdd.hAdd.{0, 0, 0} 3 (HMul.hMul.{0, 0, 0} 6 (HAdd.hAdd.{0, 0, 0} W 1)))\n",
+    "sha256": "acbe5ab24e97b4070fa5cfc13893f7e8c4cc71e0a7caa90c58519e04a8f4638e"
+  },
+  "CorruptedFieldRecovery.rawArithmeticStackLiveBits_le": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticStackLiveBits_le : \u2200 (stack : CorruptedFieldRecovery.RawArithmeticStack) (F W : Nat)\n  (hframes : LE.le.{0} (List.length.{0} stack) F)\n  (hwidth :\n    \u2200 (frame : CorruptedFieldRecovery.RawArithmeticFrame) (a : Membership.mem.{0, 0} stack frame) (word : Nat)\n      (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n      LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 W)),\n  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticStackLiveBits stack)\n    (HMul.hMul.{0, 0, 0} F (HAdd.hAdd.{0, 0, 0} 3 (HMul.hMul.{0, 0, 0} 6 (HAdd.hAdd.{0, 0, 0} W 1))))\n",
+    "sha256": "8abc81137a16fff689098e24c5c95fbaeb991e2a8a1af5cd144cdcbb7f438e58"
+  },
+  "CorruptedFieldRecovery.rawArithmeticStackLiveBits_le_of_charge": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticStackLiveBits_le_of_charge : \u2200 (stack : CorruptedFieldRecovery.RawArithmeticStack)\n  (charge W offset : Nat) (hframes : LE.le.{0} (List.length.{0} stack) (HAdd.hAdd.{0, 0, 0} charge offset))\n  (hwidth :\n    \u2200 (frame : CorruptedFieldRecovery.RawArithmeticFrame) (a : Membership.mem.{0, 0} stack frame) (word : Nat)\n      (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n      LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 W)),\n  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticStackLiveBits stack)\n    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} charge offset)\n      (HAdd.hAdd.{0, 0, 0} 3 (HMul.hMul.{0, 0, 0} 6 (HAdd.hAdd.{0, 0, 0} W 1))))\n",
+    "sha256": "1ba50e0bfb2dd818daf6a97e2f70b8ce88cef742ee234e33f8747d0b846ff450"
+  }
+}

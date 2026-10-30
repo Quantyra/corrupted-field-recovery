@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T23:01:45.187506+00:00",
+  "run": "cfr-arithmetic-register-space-dev344-20261030T225626Z-ab12cc",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

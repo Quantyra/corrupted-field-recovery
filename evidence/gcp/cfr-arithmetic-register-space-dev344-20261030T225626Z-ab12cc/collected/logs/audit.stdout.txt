@@ -1,0 +1,73 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawArithmeticFrameKind
+CorruptedFieldRecovery.RawArithmeticFrameKind : Type
+CFR_TYPE_END:CorruptedFieldRecovery.RawArithmeticFrameKind
+'CorruptedFieldRecovery.RawArithmeticFrameKind' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawArithmeticFrame
+CorruptedFieldRecovery.RawArithmeticFrame : Type
+CFR_TYPE_END:CorruptedFieldRecovery.RawArithmeticFrame
+'CorruptedFieldRecovery.RawArithmeticFrame' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticMultiplyFrame
+CorruptedFieldRecovery.rawArithmeticMultiplyFrame : (a b child shifted : Nat) →
+  CorruptedFieldRecovery.RawArithmeticFrame
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticMultiplyFrame
+'CorruptedFieldRecovery.rawArithmeticMultiplyFrame' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticReduceFrame
+CorruptedFieldRecovery.rawArithmeticReduceFrame : (modulus degree fuel current shifted output : Nat) →
+  CorruptedFieldRecovery.RawArithmeticFrame
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticReduceFrame
+'CorruptedFieldRecovery.rawArithmeticReduceFrame' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticGcdFrame
+CorruptedFieldRecovery.rawArithmeticGcdFrame : (a b remainder child : Nat) → CorruptedFieldRecovery.RawArithmeticFrame
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticGcdFrame
+'CorruptedFieldRecovery.rawArithmeticGcdFrame' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticFrobeniusFrame
+CorruptedFieldRecovery.rawArithmeticFrobeniusFrame : (modulus degree current square remainder : Nat) →
+  CorruptedFieldRecovery.RawArithmeticFrame
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticFrobeniusFrame
+'CorruptedFieldRecovery.rawArithmeticFrobeniusFrame' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticFrameLiveBits
+CorruptedFieldRecovery.rawArithmeticFrameLiveBits : (frame : CorruptedFieldRecovery.RawArithmeticFrame) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticFrameLiveBits
+'CorruptedFieldRecovery.rawArithmeticFrameLiveBits' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticStackLiveBits
+CorruptedFieldRecovery.rawArithmeticStackLiveBits : (stack : CorruptedFieldRecovery.RawArithmeticStack) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticStackLiveBits
+'CorruptedFieldRecovery.rawArithmeticStackLiveBits' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticFrameLiveBits_le
+CorruptedFieldRecovery.rawArithmeticFrameLiveBits_le : ∀ (frame : CorruptedFieldRecovery.RawArithmeticFrame) (W : Nat)
+  (hwidth :
+    ∀ (word : Nat) (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),
+      LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 W)),
+  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticFrameLiveBits frame)
+    (HAdd.hAdd.{0, 0, 0} 3 (HMul.hMul.{0, 0, 0} 6 (HAdd.hAdd.{0, 0, 0} W 1)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticFrameLiveBits_le
+'CorruptedFieldRecovery.rawArithmeticFrameLiveBits_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticStackLiveBits_le
+CorruptedFieldRecovery.rawArithmeticStackLiveBits_le : ∀ (stack : CorruptedFieldRecovery.RawArithmeticStack) (F W : Nat)
+  (hframes : LE.le.{0} (List.length.{0} stack) F)
+  (hwidth :
+    ∀ (frame : CorruptedFieldRecovery.RawArithmeticFrame) (a : Membership.mem.{0, 0} stack frame) (word : Nat)
+      (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),
+      LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 W)),
+  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticStackLiveBits stack)
+    (HMul.hMul.{0, 0, 0} F (HAdd.hAdd.{0, 0, 0} 3 (HMul.hMul.{0, 0, 0} 6 (HAdd.hAdd.{0, 0, 0} W 1))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticStackLiveBits_le
+'CorruptedFieldRecovery.rawArithmeticStackLiveBits_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticStackLiveBits_le_of_charge
+CorruptedFieldRecovery.rawArithmeticStackLiveBits_le_of_charge : ∀ (stack : CorruptedFieldRecovery.RawArithmeticStack)
+  (charge W offset : Nat) (hframes : LE.le.{0} (List.length.{0} stack) (HAdd.hAdd.{0, 0, 0} charge offset))
+  (hwidth :
+    ∀ (frame : CorruptedFieldRecovery.RawArithmeticFrame) (a : Membership.mem.{0, 0} stack frame) (word : Nat)
+      (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),
+      LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 W)),
+  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticStackLiveBits stack)
+    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} charge offset)
+      (HAdd.hAdd.{0, 0, 0} 3 (HMul.hMul.{0, 0, 0} 6 (HAdd.hAdd.{0, 0, 0} W 1))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticStackLiveBits_le_of_charge
+'CorruptedFieldRecovery.rawArithmeticStackLiveBits_le_of_charge' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

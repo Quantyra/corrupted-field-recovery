@@ -1,0 +1,26 @@
+✖ [3002/3002] Building CorruptedFieldRecovery.S010BalanceGaussianKernelSpan (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean:80:27: Invalid projection: Type of
+  free
+is not known; cannot resolve projection `1`
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean:80:38: Invalid projection: Type of
+  free
+is not known; cannot resolve projection `1`
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean:67:71: unsolved goals
+m n : ℕ
+inst✝¹ : Fintype (Fin n)
+A : Matrix (Fin m) (Fin n) (ZMod 2)
+pivots : List (Fin m × Fin n)
+inst✝ : Fintype (balanceGaussianFreeIndex pivots)
+hker : ∀ (free : balanceGaussianFreeIndex pivots), A *ᵥ balanceGaussianFreeCandidateFamily A pivots free = 0
+hunique : ∀ (x : Fin n → ZMod 2), A *ᵥ x = 0 → (∀ (free : balanceGaussianFreeIndex pivots), x ↑free = 0) → x = 0
+x : Fin n → ZMod 2
+hx : A *ᵥ x = 0
+y : Fin n → ZMod 2 := ∑ free, x ↑free • balanceGaussianFreeCandidateFamily A pivots free
+L : (Fin n → ZMod 2) →ₗ[ZMod 2] Fin m → ZMod 2 := (Matrix.mulVecBilin (ZMod 2) (ZMod 2)) A
+hyL : L y = 0
+hy : A *ᵥ y = 0
+⊢ x = ∑ free, x ↑free • balanceGaussianFreeCandidateFamily A pivots free
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianKernelSpan
