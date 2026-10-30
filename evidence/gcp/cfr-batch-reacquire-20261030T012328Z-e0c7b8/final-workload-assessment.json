@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T04:21:23.621366+00:00",
+  "inventory_sha256": "0a5498f6891144077780404660fb3d4113a9dc06000241b09ef9a8f429e4073b",
+  "assessment": "Full process inventory inspected: kernel, OS/Google guest services and this task SSH only; no other acquired workload, Lean, Lake or proof runner. Initial inventory accidentally tested a different task-named lock; separate final-correct-campaign-lock verifies actual campaign lock.",
+  "safe_to_stop_task_builder": true
+}

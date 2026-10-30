@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-30T04:25:17.533311+00:00",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8",
+  "instance_id": "3335066512373302615",
+  "state": "TERMINATED",
+  "lastStartTimestamp": "2026-10-29T18:24:46.219-07:00",
+  "lastStopTimestamp": "2026-10-29T21:24:55.088-07:00",
+  "task_egress_removed": true,
+  "cache_and_disk_retained": true,
+  "shutdown_operation": "cfr-shutdown-20261030T042149Z-84d841",
+  "shutdown_handle": "cfr-physical-perturbed-dev107-20261030T041505Z-4a9e7d",
+  "single_stop": true,
+  "launched": 50,
+  "passed": 13,
+  "failed": 37,
+  "root_accepted": 13,
+  "all_terminal_hashes_verified": true,
+  "unaccepted_drafts": 4,
+  "unrelated_tmp_preserved": true,
+  "remaining": "Original-model good-event to constructor success, complete coefficient/certificate checker, and charged primitive-bit time/space costs remain open; no full theorem or manuscript release acceptance inferred."
+}

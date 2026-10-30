@@ -1,0 +1,410 @@
+{
+  "utc": "2026-10-30T04:22:40.469482+00:00",
+  "runs": [
+    {
+      "run": "cfr-canonical-frame-dev89-20261030T031954Z-2aa030",
+      "launch_utc": "2026-10-30T03:23:29.413478+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:23:55.302215+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-canonical-frame-dev91-20261030T032716Z-e51b3d",
+      "launch_utc": "2026-10-30T03:29:20.591613+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T03:29:51.648510+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-conditional-amplification-dev72-20261030T022128Z-af1c9c",
+      "launch_utc": "2026-10-30T02:24:17.792374+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:24:44.846251+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-conditional-amplification-dev74-20261030T022917Z-6cf0c8",
+      "launch_utc": "2026-10-30T02:30:37.396245+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:31:13.384047+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-conditional-amplification-dev76-20261030T023446Z-97461d",
+      "launch_utc": "2026-10-30T02:37:58.731405+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T02:38:41.590254+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-determinant-bits-dev62-20261030T014137Z-b869c2",
+      "launch_utc": "2026-10-30T01:43:47.369687+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T01:44:29.155678+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-determinant-bits-dev64-20261030T014804Z-f96b1c",
+      "launch_utc": "2026-10-30T01:51:59.149149+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T01:52:47.913128+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-determinant-bits-dev66-20261030T015653Z-933a48",
+      "launch_utc": "2026-10-30T02:02:15.825536+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:02:56.244177+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-determinant-bits-dev68-20261030T020643Z-fd1b1b",
+      "launch_utc": "2026-10-30T02:11:07.638318+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:11:52.348402+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-determinant-bits-dev70-20261030T021603Z-49b027",
+      "launch_utc": "2026-10-30T02:18:24.507367+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:18:48.935721+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-determinant-bits-dev71-20261030T022110Z-a0b4e8",
+      "launch_utc": "2026-10-30T02:22:21.052313+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:22:42.860066+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-determinant-bits-dev73-20261030T022442Z-459c8a",
+      "launch_utc": "2026-10-30T02:27:00.884139+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T02:27:31.659699+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev78-20261030T024524Z-aa72ce",
+      "launch_utc": "2026-10-30T02:47:24.202575+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:48:02.740109+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev80-20261030T025141Z-7704c5",
+      "launch_utc": "2026-10-30T02:54:26.027181+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:55:01.840461+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev82-20261030T025804Z-490b0f",
+      "launch_utc": "2026-10-30T03:00:47.725162+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:01:23.503862+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev84-20261030T030448Z-5c891d",
+      "launch_utc": "2026-10-30T03:07:30.311331+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:07:59.940929+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev86-20261030T031046Z-9c9835",
+      "launch_utc": "2026-10-30T03:13:06.340032+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T03:13:38.094413+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-modeimage-framebridge-dev101-20261030T035837Z-dd82f3",
+      "launch_utc": "2026-10-30T03:59:49.140470+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:00:14.309716+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-framebridge-dev103-20261030T040315Z-4f710c",
+      "launch_utc": "2026-10-30T04:05:04.551283+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T04:05:30.000362+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-modeimage-framebridge-dev93-20261030T033220Z-e01bf2",
+      "launch_utc": "2026-10-30T03:34:26.700087+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:35:40.250559+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-framebridge-dev95-20261030T033927Z-e977e9",
+      "launch_utc": "2026-10-30T03:40:33.007517+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:41:03.587963+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-framebridge-dev97-20261030T034411Z-372bb4",
+      "launch_utc": "2026-10-30T03:48:18.459464+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:49:16.104866+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-framebridge-dev99-20261030T035247Z-713ae7",
+      "launch_utc": "2026-10-30T03:55:15.987845+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:55:45.437262+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-rank-dev69-20261030T021356Z-fb135d",
+      "launch_utc": "2026-10-30T02:15:55.321946+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T02:16:40.216484+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev59-20261030T012423Z-88c03b",
+      "launch_utc": "2026-10-30T01:32:16.598098+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T01:33:10.875972+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev61-20261030T013642Z-b1652f",
+      "launch_utc": "2026-10-30T01:38:40.199426+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T01:39:33.223255+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev63-20261030T014202Z-730519",
+      "launch_utc": "2026-10-30T01:47:58.532205+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T01:48:59.241304+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev65-20261030T015305Z-c7a2f6",
+      "launch_utc": "2026-10-30T01:58:34.786424+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T01:59:36.189834+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev67-20261030T020300Z-a3ea1a",
+      "launch_utc": "2026-10-30T02:06:47.022322+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T02:08:01.025042+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-physical-coordinate-dev100-20261030T035542Z-dea9cc",
+      "launch_utc": "2026-10-30T03:57:55.171992+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:58:18.294494+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-coordinate-dev102-20261030T040143Z-be090e",
+      "launch_utc": "2026-10-30T04:03:02.771332+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:03:27.706873+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-coordinate-dev104-20261030T040601Z-49db1d",
+      "launch_utc": "2026-10-30T04:07:56.740812+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T04:08:33.295414+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-physical-coordinate-dev96-20261030T034157Z-610f72",
+      "launch_utc": "2026-10-30T03:45:02.773843+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:45:32.448408+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-coordinate-dev98-20261030T034914Z-4cddc4",
+      "launch_utc": "2026-10-30T03:52:25.734671+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:52:56.931505+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-perturbed-dev105-20261030T041032Z-087131",
+      "launch_utc": "2026-10-30T04:11:54.105749+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:12:24.560753+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-perturbed-dev107-20261030T041505Z-4a9e7d",
+      "launch_utc": "2026-10-30T04:18:56.985577+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T04:19:25.730756+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev79-20261030T024729Z-890f0a",
+      "launch_utc": "2026-10-30T02:50:55.394853+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:51:37.133124+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev81-20261030T025555Z-7332ef",
+      "launch_utc": "2026-10-30T02:57:23.320587+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:57:59.110473+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev83-20261030T030125Z-8f475a",
+      "launch_utc": "2026-10-30T03:04:06.159411+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:04:43.606384+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev85-20261030T030759Z-0af124",
+      "launch_utc": "2026-10-30T03:10:35.246323+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:11:09.487408+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev87-20261030T031350Z-b5d2d5",
+      "launch_utc": "2026-10-30T03:15:30.924338+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:15:55.447411+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev88-20261030T031953Z-b45b72",
+      "launch_utc": "2026-10-30T03:20:55.680273+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:21:20.400736+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev90-20261030T032458Z-b63590",
+      "launch_utc": "2026-10-30T03:26:36.032302+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:27:11.430340+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev92-20261030T032948Z-ec9f29",
+      "launch_utc": "2026-10-30T03:31:46.347511+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T03:32:22.664811+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev94-20261030T033457Z-edcb04",
+      "launch_utc": "2026-10-30T03:37:39.401747+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T03:38:08.993466+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-physical-trace-composition-dev106-20261030T041304Z-280dce",
+      "launch_utc": "2026-10-30T04:14:34.429710+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T04:15:03.992731+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-physical-trace-dev75-20261030T023322Z-75bc50",
+      "launch_utc": "2026-10-30T02:34:54.218854+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T02:35:26.971256+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-physical-trace-dev77-20261030T023839Z-b4b088",
+      "launch_utc": "2026-10-30T02:42:12.174070+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T02:43:02.278014+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-trace-basebit-dev58-20261030T012423Z-00130b",
+      "launch_utc": "2026-10-30T01:27:56.166381+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T01:29:51.102998+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-trace-basebit-dev60-20261030T013322Z-d3e07b",
+      "launch_utc": "2026-10-30T01:35:38.871501+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T01:36:12.445421+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    }
+  ],
+  "launched": 50,
+  "passed": 13,
+  "failed": 37,
+  "root_accepted": 13,
+  "all_launched_outcomes_collected": true
+}
