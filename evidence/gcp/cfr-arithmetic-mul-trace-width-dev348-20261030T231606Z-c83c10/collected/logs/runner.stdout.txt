@@ -1,0 +1,5 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-arithmetic-mul-trace-width-dev348-20261030T231606Z-c83c10/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build

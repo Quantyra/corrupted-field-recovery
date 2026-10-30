@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T23:20:08.706079+00:00",
+  "run": "cfr-arithmetic-mul-trace-width-dev348-20261030T231606Z-c83c10",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

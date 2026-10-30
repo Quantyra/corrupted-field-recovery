@@ -1,0 +1,138 @@
+✖ [2074/2074] Building CorruptedFieldRecovery.RawArithmeticMulTraceWidth (2.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticMulTraceWidth.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticMulTraceWidth.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticMulTraceWidth.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticMulTraceWidth.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:34:29: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case h.zero
+a W : ℕ
+ha✝ : a < 2 ^ W
+ha : RawArithmeticFrame
+ih :
+  ∀ m < 0,
+    ∀ {a W : ℕ},
+      a < 2 ^ W → m < 2 ^ W → ∀ frame ∈ rawPolyMulActivationTrace a m, ∀ word ∈ frame.registers, word < 2 ^ (2 * W + 1)
+hb✝ : 0 < 2 ^ W
+hb : ha ∈ rawPolyMulActivationTrace a 0
+frame : ℕ
+hframe : frame ∈ ha.registers
+⊢ frame < 2 ^ (2 * W + 1)
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:48:61: Application type mismatch: The argument
+  hb
+has type
+  ha ∈ rawPolyMulActivationTrace a (b + 1)
+but is expected to have type
+  b + 1 < 2 ^ W
+in the application
+  lt_of_le_of_lt (Nat.div_le_self (b + 1) 2) hb
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:54:56: Application type mismatch: The argument
+  ha
+has type
+  RawArithmeticFrame
+of sort `Type` but is expected to have type
+  a < 2 ^ W
+of sort `Prop` in the application
+  rawPolyMul_lt_pow W W a ((b + 1) / 2) ha
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:60:37: unsolved goals
+a W : ℕ
+ha✝ : a < 2 ^ W
+ha : RawArithmeticFrame
+b : ℕ
+ih :
+  ∀ m < b + 1,
+    ∀ {a W : ℕ},
+      a < 2 ^ W → m < 2 ^ W → ∀ frame ∈ rawPolyMulActivationTrace a m, ∀ word ∈ frame.registers, word < 2 ^ (2 * W + 1)
+hb✝ : b + 1 < 2 ^ W
+hb : ha ∈ rawPolyMulActivationTrace a (b + 1)
+hchildIndex : (b + 1) / 2 < b + 1
+hhalf : (b + 1) / 2 < 2 ^ W
+child : ℕ × ℕ := rawPolyMulBitCosted a ((b + 1) / 2)
+shifted : ℕ := 2 * child.1
+hchildValue : child.1 < 2 ^ (W + W)
+⊢ 2 * 2 ^ (W + W) = 2 ^ (W + W) * 2
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:69:29: Application type mismatch: The argument
+  ha
+has type
+  RawArithmeticFrame
+of sort `Type` but is expected to have type
+  a < ?m.387
+of sort `Prop` in the application
+  lt_trans ha
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:70:43: Application type mismatch: The argument
+  of_decide_eq_true (id (Eq.refl true))
+has type
+  0 < 2
+but is expected to have type
+  1 < 2
+in the application
+  Nat.pow_lt_pow_right (of_decide_eq_true (id (Eq.refl true)))
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:74:43: Application type mismatch: The argument
+  of_decide_eq_true (id (Eq.refl true))
+has type
+  0 < 2
+but is expected to have type
+  1 < 2
+in the application
+  Nat.pow_lt_pow_right (of_decide_eq_true (id (Eq.refl true)))
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:78:43: Application type mismatch: The argument
+  of_decide_eq_true (id (Eq.refl true))
+has type
+  0 < 2
+but is expected to have type
+  1 < 2
+in the application
+  Nat.pow_lt_pow_right (of_decide_eq_true (id (Eq.refl true)))
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:80:14: Tactic `subst` failed: did not find equation for eliminating 'word'
+
+case inr.inr.inr
+a W : ℕ
+ha✝ : a < 2 ^ W
+ha : RawArithmeticFrame
+b : ℕ
+ih :
+  ∀ m < b + 1,
+    ∀ {a W : ℕ},
+      a < 2 ^ W → m < 2 ^ W → ∀ frame ∈ rawPolyMulActivationTrace a m, ∀ word ∈ frame.registers, word < 2 ^ (2 * W + 1)
+hb✝ : b + 1 < 2 ^ W
+hb : ha ∈ rawPolyMulActivationTrace a (b + 1)
+hchildIndex : (b + 1) / 2 < b + 1
+hhalf : (b + 1) / 2 < 2 ^ W
+child : ℕ × ℕ := rawPolyMulBitCosted a ((b + 1) / 2)
+shifted : ℕ := 2 * child.1
+hchildValue : child.1 < 2 ^ (W + W)
+hshifted : shifted < 2 ^ (W + W + 1)
+word : ℕ
+hword : word = shifted ∨ word ∈ []
+⊢ word < 2 ^ (2 * W + 1)
+error: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:82:29: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case h.succ
+a W : ℕ
+ha✝ : a < 2 ^ W
+ha : RawArithmeticFrame
+b : ℕ
+ih :
+  ∀ m < b + 1,
+    ∀ {a W : ℕ},
+      a < 2 ^ W → m < 2 ^ W → ∀ frame ∈ rawPolyMulActivationTrace a m, ∀ word ∈ frame.registers, word < 2 ^ (2 * W + 1)
+hb✝ : b + 1 < 2 ^ W
+hb : ha ∈ rawPolyMulActivationTrace a (b + 1)
+hchildIndex : (b + 1) / 2 < b + 1
+hhalf : (b + 1) / 2 < 2 ^ W
+child : ℕ × ℕ := rawPolyMulBitCosted a ((b + 1) / 2)
+shifted : ℕ := 2 * child.1
+hchildValue : child.1 < 2 ^ (W + W)
+hshifted : shifted < 2 ^ (W + W + 1)
+hparent : ∀ word ∈ (rawArithmeticMultiplyFrame a (b + 1) child.1 shifted).registers, word < 2 ^ (2 * W + 1)
+frame : ℕ
+hframe : frame ∈ ha.registers
+⊢ frame < 2 ^ (2 * W + 1)
+warning: CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean:66:14: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [rawArithmeticMultiplyFrame, List.mem_cons,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵] at hword
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticMulTraceWidth
