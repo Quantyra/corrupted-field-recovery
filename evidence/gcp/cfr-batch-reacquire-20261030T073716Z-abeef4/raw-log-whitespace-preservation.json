@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-30T07:42:49.594556+00:00",
+  "check": "git diff --cached --check reports original CRLF gcloud stdout/stderr as trailing whitespace",
+  "resolution": "Preserve raw bytes unchanged; validate JSON parsing and controller Python syntax instead."
+}
