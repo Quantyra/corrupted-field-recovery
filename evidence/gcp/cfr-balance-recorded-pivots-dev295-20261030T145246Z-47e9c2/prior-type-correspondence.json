@@ -1,0 +1,6 @@
+{
+  "prior_run": "cfr-balance-pivot-invariant-dev291-20261030T144124Z-0fb588",
+  "declaration": "CorruptedFieldRecovery.balanceGaussianColumnScan_preserves_pivotColumn",
+  "identical": true,
+  "sha256": "36e4a930ed9d6b3d01efc3e8046d497fc0e9631492a04c6004aa5d9985858117"
+}

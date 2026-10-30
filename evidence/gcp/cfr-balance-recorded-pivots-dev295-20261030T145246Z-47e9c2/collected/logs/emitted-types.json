@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.balanceGaussianColumnScan_preserves_pivotColumn": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianColumnScan_preserves_pivotColumn : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (columns : List.{0} (Fin n)) (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (used : Finset.{0} (Fin m))\n  (pivotRow : Fin m) (pivotColumn : Fin n) (hused : Membership.mem.{0, 0} used pivotRow)\n  (hunit : \u2200 (i : Fin m), Eq.{1} (A i pivotColumn) (ite.{1} (Eq.{1} i pivotRow) 1 0)) (i : Fin m),\n  Eq.{1} ((CorruptedFieldRecovery.balanceGaussianColumnScan A used columns).1 i pivotColumn)\n    (ite.{1} (Eq.{1} i pivotRow) 1 0)\n",
+    "sha256": "36e4a930ed9d6b3d01efc3e8046d497fc0e9631492a04c6004aa5d9985858117"
+  },
+  "CorruptedFieldRecovery.balanceGaussianColumnScan_recordedPivots_unit": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianColumnScan_recordedPivots_unit : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (columns : List.{0} (Fin n)) (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (used : Finset.{0} (Fin m))\n  (pivot : Prod.{0, 0} (Fin m) (Fin n))\n  (hpivot : Membership.mem.{0, 0} (CorruptedFieldRecovery.balanceGaussianColumnScan A used columns).2 pivot)\n  (i : Fin m),\n  Eq.{1} ((CorruptedFieldRecovery.balanceGaussianColumnScan A used columns).1 i pivot.2)\n    (ite.{1} (Eq.{1} i pivot.1) 1 0)\n",
+    "sha256": "238cc603917878ee70b4d47262f9d6831302f0fdae10a56b47b1b8db859e4603"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T15:01:35.495528+00:00",
+  "accepted": "Every recorded pivot pair has its final scan column equal to its unit column; prior preservation type identical",
+  "excluded": [
+    "unpivoted-row zero",
+    "distinctness",
+    "kernel basis",
+    "full solver",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

@@ -58,4 +58,46 @@ theorem balanceGaussianColumnScan_preserves_pivotColumn {m n : Nat}
             ih (balanceGaussianPivotRow A row column) (insert row used)
               hused' hunit'
 
+theorem balanceGaussianColumnScan_recordedPivots_unit {m n : Nat}
+    [Fintype (Fin n)] (columns : List (Fin n))
+    (A : Matrix (Fin m) (Fin n) (ZMod 2)) (used : Finset (Fin m))
+    (pivot : Fin m × Fin n)
+    (hpivot : pivot ∈ (balanceGaussianColumnScan A used columns).2) :
+    ∀ i, (balanceGaussianColumnScan A used columns).1 i pivot.2 =
+      if i = pivot.1 then 1 else 0 := by
+  revert A used pivot hpivot
+  induction columns with
+  | nil =>
+      intro A used pivot hpivot
+      simp [balanceGaussianColumnScan] at hpivot
+  | cons column columns ih =>
+      intro A used pivot hpivot
+      cases h : balanceFirstUnusedPivotRow A column used with
+      | none =>
+          have hmem : pivot ∈ (balanceGaussianColumnScan A used columns).2 := by
+            simpa [balanceGaussianColumnScan, h] using hpivot
+          have htail := ih A used pivot hmem
+          simpa [balanceGaussianColumnScan, h] using htail
+      | some row =>
+          let rest := balanceGaussianColumnScan
+            (balanceGaussianPivotRow A row column) (insert row used) columns
+          have hmem : pivot = (row, column) ∨ pivot ∈ rest.2 := by
+            simpa [balanceGaussianColumnScan, h, rest] using hpivot
+          rcases hmem with hhead | htail
+          · subst pivot
+            have hunit : ∀ i,
+                balanceGaussianPivotRow A row column i column =
+                  if i = row then 1 else 0 := by
+              intro i
+              have hstep := balanceGaussianColumnStep_pivot_column
+                A column used h i
+              simpa [balanceGaussianColumnStep, h] using hstep
+            have hfinal := balanceGaussianColumnScan_preserves_pivotColumn
+              columns (balanceGaussianPivotRow A row column) (insert row used)
+              row column (by simp) hunit
+            simpa [balanceGaussianColumnScan, h, rest] using hfinal
+          · have htailUnit := ih
+              (balanceGaussianPivotRow A row column) (insert row used) pivot htail
+            simpa [balanceGaussianColumnScan, h, rest] using htailUnit
+
 end CorruptedFieldRecovery
