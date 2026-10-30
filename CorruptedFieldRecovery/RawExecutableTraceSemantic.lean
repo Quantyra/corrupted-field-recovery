@@ -50,4 +50,52 @@ theorem accepted_rawCandidatePhysicalCoordinates_symm_eq_powerBasisInverse
       ((accepted_rawCoordinateMatrixEquiv forward inverse hcoordinates).symm v) = _
   rw [accepted_rawCoordinateMatrixEquiv_symm_apply]
 
+/-- The evaluator's canonical field coefficient equals the established
+trace-determinant payload coefficient through the checked coordinate
+equivalence, including the serialized scalar polynomial. -/
+theorem rawPhysicalCanonicalTraceCoefficient_eq_payload {s : Nat}
+    (candidate : RawFieldCandidate s)
+    (hfield : rawFieldCandidateCheck candidate = true)
+    (forward inverse : RawCoordinateMatrix)
+    (hcoordinates : rawCoordinateMatrixCheck (n := 3 * s) forward inverse = true)
+    (t : IncreasingTriple (3 * s)) :
+    rawPhysicalCanonicalTraceCoefficient candidate hfield inverse t =
+      rawTraceDetPayload candidate hfield forward inverse hcoordinates t := by
+  have hv := accepted_rawFieldCandidateCheck candidate hfield
+  have hm := rawFieldCandidateValid_modulus_polynomial candidate hv
+  letI : Fact (Irreducible (rawCandidateModulus candidate)) :=
+    ⟨accepted_rawCandidateModulus_irreducible candidate hfield⟩
+  let K := AdjoinRoot (rawCandidateModulus candidate)
+  letI : Module.Finite (ZMod 2) K := by
+    simpa [rawCandidateModulus] using hm.1.finite_adjoinRoot
+  let coords := accepted_rawCandidatePhysicalCoordinates candidate hfield
+    forward inverse hcoordinates
+  have hscalar :
+      rawCandidateQuotientClass candidate (rawFieldBitsToNat candidate.scalar) =
+        AdjoinRoot.mk (rawCandidateModulus candidate) (rawCandidateScalar candidate) := by
+    rw [rawCandidateQuotientClass, rawCandidateScalar, rawFieldArrayPolynomial_eq_mask]
+  have hi := accepted_rawCandidatePhysicalCoordinates_symm_eq_powerBasisInverse
+    candidate hfield forward inverse hcoordinates
+    (coordinateVectorCode (increasingTripleI t))
+  have hj := accepted_rawCandidatePhysicalCoordinates_symm_eq_powerBasisInverse
+    candidate hfield forward inverse hcoordinates
+    (coordinateVectorCode (increasingTripleJ t))
+  have hk := accepted_rawCandidatePhysicalCoordinates_symm_eq_powerBasisInverse
+    candidate hfield forward inverse hcoordinates
+    (coordinateVectorCode (increasingTripleK t))
+  have hi' : rawPhysicalCanonicalTriple candidate hfield inverse
+      (coordinateVectorCode (increasingTripleI t)) = coords.symm
+        (coordinateVectorCode (increasingTripleI t)) := by
+    simpa [rawPhysicalCanonicalTriple, coords] using hi.symm
+  have hj' : rawPhysicalCanonicalTriple candidate hfield inverse
+      (coordinateVectorCode (increasingTripleJ t)) = coords.symm
+        (coordinateVectorCode (increasingTripleJ t)) := by
+    simpa [rawPhysicalCanonicalTriple, coords] using hj.symm
+  have hk' : rawPhysicalCanonicalTriple candidate hfield inverse
+      (coordinateVectorCode (increasingTripleK t)) = coords.symm
+        (coordinateVectorCode (increasingTripleK t)) := by
+    simpa [rawPhysicalCanonicalTriple, coords] using hk.symm
+  unfold rawPhysicalCanonicalTraceCoefficient rawTraceDetPayload
+  rw [hi', hj', hk', hscalar]
+
 end CorruptedFieldRecovery

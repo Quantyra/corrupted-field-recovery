@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Canonical per-coefficient trace equals existing rawTraceDetPayload under candidate and matrix checks. All31 audits standard axioms/zero warnings;30 prior accepted type blocks byte-identical.",
+  "remaining": "No combined all-vector verifier soundness, proof-free wrapper or cost claim.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}
