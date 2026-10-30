@@ -1,0 +1,41 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStepBitCosted_cost_le
+@CorruptedFieldRecovery.rawReduceStepBitCosted_cost_le : ∀ {degree modulus a W : Nat}
+  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} degree 1))) (hW : LT.lt.{0} 0 W)
+  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)),
+  LE.le.{0} (CorruptedFieldRecovery.rawReduceStepBitCosted modulus degree a).2
+    (HMul.hMul.{0, 0, 0} 20
+      (HPow.hPow.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} W degree) (CorruptedFieldRecovery.rawNatBitWidth degree)) 4)
+        2))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStepBitCosted_cost_le
+'CorruptedFieldRecovery.rawReduceStepBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuel_lt_two_pow_of_modulus_band
+@CorruptedFieldRecovery.rawReduceFuel_lt_two_pow_of_modulus_band : ∀ {degree modulus W fuel a : Nat}
+  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} degree 1))) (hdegree : LE.le.{0} degree W)
+  (hW : LT.lt.{0} 0 W) (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)),
+  LT.lt.{0} (CorruptedFieldRecovery.rawReduceFuel modulus degree fuel a) (HPow.hPow.{0, 0, 0} 2 W)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuel_lt_two_pow_of_modulus_band
+'CorruptedFieldRecovery.rawReduceFuel_lt_two_pow_of_modulus_band' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_le_of_modulus_band
+CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_le_of_modulus_band : ∀ (degree modulus W fuel a : Nat)
+  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} degree 1))) (hW : LT.lt.{0} 0 W)
+  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)),
+  LE.le.{0} (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel a).2
+    (HMul.hMul.{0, 0, 0} fuel
+      (HMul.hMul.{0, 0, 0} 40
+        (HPow.hPow.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} W degree) (CorruptedFieldRecovery.rawNatBitWidth degree)) 4)
+          2)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_le_of_modulus_band
+'CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_le_of_modulus_band' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
