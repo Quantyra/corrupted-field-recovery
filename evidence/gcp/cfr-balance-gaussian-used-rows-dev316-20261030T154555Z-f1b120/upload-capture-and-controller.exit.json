@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-30T15:47:59.293726+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-used-rows-dev316-20261030T154555Z-f1b120\\inputs.tar.gz",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-used-rows-dev316-20261030T154555Z-f1b120\\capture-manifest.json",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-used-rows-dev316-20261030T154555Z-f1b120\\gcp_cfr_runner.py",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-used-rows-dev316-20261030T154555Z-f1b120\\run.sh",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-used-rows-dev316-20261030T154555Z-f1b120\\bootstrap-assets.json",
+    "quantyra-cfr-lean-builder-20261028a:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-used-rows-dev316-20261030T154555Z-f1b120/",
+    "--tunnel-through-iap",
+    "--scp-flag=-hostkey",
+    "--scp-flag=SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

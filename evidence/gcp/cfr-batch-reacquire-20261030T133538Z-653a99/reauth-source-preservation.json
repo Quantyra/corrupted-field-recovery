@@ -1,0 +1,11 @@
+{
+  "preservation_run": "cfr-source-closeout-preservation-reauth-20261030T155126Z-c11aba",
+  "archive_sha256": "de65708397cf25f65d07d9de6c4c128d8be2962bd5728886f46c4e3bdf6ea4fe",
+  "never_submit": true,
+  "reason": "Root requested shutdown after cloud reauthentication failure",
+  "uncompiled_offered_draft": {
+    "source": "CorruptedFieldRecovery/RawCandidateVerifierEnvelope.lean",
+    "sha256": "a8ed63ec3d032fd5266b2ce97232c6f66d65a0e2948b04cf12c494aa4f17f0a9"
+  },
+  "observed_pass_not_yet_collected_run": "cfr-balance-gaussian-used-rows-dev316-20261030T154555Z-f1b120"
+}

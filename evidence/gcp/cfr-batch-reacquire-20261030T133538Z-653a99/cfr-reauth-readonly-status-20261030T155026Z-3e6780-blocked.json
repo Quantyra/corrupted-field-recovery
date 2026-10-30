@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-30T15:50:34.924281+00:00",
+  "new_submissions": false,
+  "identity_unchanged": true,
+  "awaiting_user_reauthentication": true,
+  "archive_run": "cfr-balance-gaussian-used-rows-dev316-20261030T154555Z-f1b120",
+  "archive_sha256": "8d2d822454f6e2ab981551c7391e40d9d99d92f26965f379fc3459871d15d118",
+  "automatic_stop_ceiling_utc": "2026-10-30T17:37:12.351Z"
+}
