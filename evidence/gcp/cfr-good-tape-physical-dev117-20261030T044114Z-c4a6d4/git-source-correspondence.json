@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "5657dd6f95c9d80ee39eb41af64e1e22aa94ee056215a85cb37a3148c573711b",
+  "staged_git_blob_sha256": "5657dd6f95c9d80ee39eb41af64e1e22aa94ee056215a85cb37a3148c573711b",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010GoodTapePhysicalContraction.lean"
+}

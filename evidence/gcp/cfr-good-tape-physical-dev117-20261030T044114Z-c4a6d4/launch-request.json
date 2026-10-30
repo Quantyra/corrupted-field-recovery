@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T04:42:38.398907+00:00",
+  "run": "cfr-good-tape-physical-dev117-20261030T044114Z-c4a6d4",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

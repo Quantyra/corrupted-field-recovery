@@ -1,0 +1,56 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_actual_good_tape_words_clean
+@CorruptedFieldRecovery.modeImage_actual_good_tape_words_clean.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Finite.{u_1 + 1} K]
+  [inst_4 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_5 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_6 : CharP.{u_1} K 2]
+  [inst_7 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K)
+  (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (htape :
+    Membership.mem.{0, 0}
+      (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) U b)
+      tape)
+  (i : Fin 4),
+  Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)) (tape.1 i)
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_actual_good_tape_words_clean
+'CorruptedFieldRecovery.modeImage_actual_good_tape_words_clean' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_actual_good_tape_perturbed_contraction_eq_clean
+@CorruptedFieldRecovery.modeImage_actual_good_tape_perturbed_contraction_eq_clean.{u_1} : ∀ {K : Type u_1}
+  [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Finite.{u_1 + 1} K]
+  [inst_4 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_5 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_6 : CharP.{u_1} K 2]
+  [inst_7 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E C : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K)
+  (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (htape :
+    Membership.mem.{0, 0}
+      (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) U b)
+      tape)
+  (i j k : Fin 4),
+  Eq.{1}
+    ((CorruptedFieldRecovery.physicalBinaryContraction
+        (CorruptedFieldRecovery.physicalPerturbedTensor C E LinearMap.id.{0, 0}) (tape.1 i) (tape.1 j))
+      (tape.1 k))
+    (((C (tape.1 i)) (tape.1 j)) (tape.1 k))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_actual_good_tape_perturbed_contraction_eq_clean
+'CorruptedFieldRecovery.modeImage_actual_good_tape_perturbed_contraction_eq_clean' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

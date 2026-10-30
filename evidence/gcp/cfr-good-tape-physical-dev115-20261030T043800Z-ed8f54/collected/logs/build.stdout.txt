@@ -1,0 +1,49 @@
+✖ [2975/2975] Building CorruptedFieldRecovery.S010GoodTapePhysicalContraction (2.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010GoodTapePhysicalContraction.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapePhysicalContraction.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapePhysicalContraction.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010GoodTapePhysicalContraction.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010GoodTapePhysicalContraction.setup.json --json
+error: CorruptedFieldRecovery/S010GoodTapePhysicalContraction.lean:54:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  fun i => Q (tape.1 i)
+in the target expression
+  Q (tape.1 i) ∈ A
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : Algebra BinaryField K
+inst✝² : FiniteDimensional BinaryField K
+inst✝¹ : CharP K 2
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+fr : (_ : (_ : FieldTriple K) × FieldTriple K) × FieldTriple K
+v : FieldTriple K
+hfr : fr ∈ cleanFrameSet (modeImageSemanticCleanFieldSet Q E)
+hv : v ∈ goodFourthFinset K (modeImageSemanticCleanFieldSet Q E) (nonGenerators K) fr
+hflat : (fun i => Q (tape.1 i)) = canonicalGoodFourFlatTuple K ⟨fr, v⟩
+right✝ :
+  (∀ (T : Module.End (ZMod (ringChar K)) (FieldTriple K)),
+      sampledFourBalanced K 1 (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) fr) v T ↔
+        T ∈ scalarTripleEndRange K) ∧
+    Module.finrank (ZMod (ringChar K)) ↥(scalarTripleEndRange K) = Module.finrank (ZMod (ringChar K)) K
+A : Finset (FieldTriple K) := modeImageSemanticCleanFieldSet Q E
+hframeParts :
+  fr.fst ∈ CorruptedFieldRecovery.cleanPairSet✝ (modeImageSemanticCleanFieldSet Q E) ∧
+    fr.snd ∈ {z ∈ modeImageSemanticCleanFieldSet Q E | z ∉ Submodule.span K ↑{fr.fst.fst, fr.fst.snd}}
+hframePair : fr.fst ∈ {x ∈ A | x ≠ 0}.sigma fun x => {y ∈ A | y ∉ Submodule.span K ↑{x}}
+hpairParts : fr.fst.fst ∈ {x ∈ A | x ≠ 0} ∧ fr.fst.snd ∈ {y ∈ A | y ∉ Submodule.span K ↑{fr.fst.fst}}
+hfirst : fr.fst.fst ∈ A
+hsecond : fr.fst.snd ∈ A
+hthird : fr.snd ∈ A
+hfourth : v ∈ A
+hflatA : ∀ (i : Fin 4), canonicalGoodFourFlatTuple K ⟨fr, v⟩ i ∈ A
+i : Fin 4
+⊢ Q (tape.1 i) ∈ A
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010GoodTapePhysicalContraction
