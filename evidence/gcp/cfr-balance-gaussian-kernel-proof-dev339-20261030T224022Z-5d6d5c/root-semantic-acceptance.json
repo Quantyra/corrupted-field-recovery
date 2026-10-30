@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+  "sha256": "0c09db9599835cc0c449d53b5664f9e8eb029c2c2196ed4d81e4121943839cd1",
+  "scope": "Free candidate kernel membership for supplied A/pivots/free under row Nodup, unit pivot columns, zero off-pivot rows and explicit free premise. No spanning or actual full-scan specialization follows directly.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}
