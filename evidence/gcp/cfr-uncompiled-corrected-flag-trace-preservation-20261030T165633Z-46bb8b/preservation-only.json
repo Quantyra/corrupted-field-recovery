@@ -1,0 +1,99 @@
+{
+  "run": "cfr-uncompiled-corrected-flag-trace-preservation-20261030T165633Z-46bb8b",
+  "archive_sha256": "d110a52d57614ea71e701629528a27628fba90a5ee981fe4c27c90ea3256085c",
+  "drafts": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean",
+      "sha256": "114E429B7A39E1F6C4EC757EA14BC016E62881D3F4A913F27047F0AC95D89ED3",
+      "compiled": false,
+      "audited": false,
+      "accepted": false
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean",
+      "sha256": "9F2005E1FB029FC6B29708906604B744679E05E3A17CF8FEE2E76EA739AD8C84",
+      "compiled": false,
+      "audited": false,
+      "accepted": false
+    }
+  ],
+  "never_submit": true,
+  "cloud_operation": false,
+  "dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayDeterministicScan.lean",
+      "sha256": "39871653b3814604a1ba1c67d3145d85f9f7b65fd6f667b64e1718fe2716ae54",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean",
+      "sha256": "e5ddc3a7ec48e73bb584817003f68616393284caf59d7125a5a2e134dd10bbbf",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean",
+      "sha256": "3b5c2c0c4bb2b7af0476fa9e7870caca67c9cc7b41aeea76a1685088582b5f63",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean",
+      "sha256": "aefd885c7dd441b825d1bd647ca501450c0122b152d282adcb1fd60df789fd39",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean",
+      "sha256": "d42f28827dd7980699f5cebcf503ef4b174c849b883c53aa8a8f7d4089cf259d",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+      "sha256": "4429c93a112e2b8d210f072ec7d42186028e6febc8c256d9f594dbb089182b59",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+      "sha256": "7afb6f348edb61b610eb983096847e3ab60861b31568d42f7fddf6aa97685264",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled dev316 observed PASS; exact collection and acceptance pending"
+    }
+  ],
+  "superseded_flag_scan_sha256": "C2FD8BB6D72D3474DCB092813FF45AE37D53A1F7979E049152E759B3DDA0D4DB",
+  "prior_preserved_archive": "cfr-uncompiled-array-flag-scan-preservation-20261030T164940Z-bd5f7b",
+  "undercount_corrections": [
+    "adds old-flag read upper charge for flag rebuild",
+    "charges one column scan step per column rather than only per successful pivot",
+    "raw wrapper includes initial flag-array allocation/write charges",
+    "proposed formula becomes 40*d^6+36*d^4+7*d^2 with d=3s; no validation claimed"
+  ],
+  "scope": "Unaudited corrected formula model plus branch-coupled flag selector/scan event trace and proposed result-projection refinements. The new trace file only documents the expected aggregate bound and intentionally does not state/prove its aggregate componentwise inequalities.",
+  "excluded_claims": [
+    "concrete primitive or compiled Lean/runtime refinement",
+    "headers/GC/stack and total peak memory",
+    "matrix/input decoding/serialization construction",
+    "downstream basis/field/Q construction or full recovery success/complexity"
+  ]
+}
