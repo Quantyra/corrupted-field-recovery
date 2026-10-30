@@ -373,6 +373,37 @@ theorem actual_good_tape_clean_balance_iff_hidden
               simpa [iota, Tin, sampledContraction4, hcoords, fr, frameData, v, A, B] using hh
         _ = _ := by simpa using hright.symm
 
+/-- The actual observed four-word balance reduces to the Q-aligned hidden
+sampled balance under the model's explicit clean-plus-defect decomposition
+promise. -/
+theorem actual_good_tape_observed_balance_iff_hidden
+    {K : Type*} [Field K] [Fintype K] [DecidableEq K] [Finite K]
+    [CharP K 2] [Algebra BinaryField K] [FiniteDimensional BinaryField K]
+    [Algebra (ZMod (ringChar K)) K]
+    {s : Nat}
+    (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K)
+    (E : BinaryTensor (3 * s))
+    (U : Submodule BinaryField (KTriple K))
+    (b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K)
+    (tape : FiveWordTape s)
+    (htape : tape ∈ actualFiveGoodTapeSet K Q
+      (modeImageSemanticCleanFieldSet Q E) U b)
+    (Ctotal : BinaryTensor (3 * s)) (c : K)
+    (hmodel : HasObservedTraceDeterminantDecomposition Ctotal E
+      LinearMap.id Q c)
+    (T : Module.End (ZMod 2) (BinaryVector (3 * s))) :
+    actualFourBilinearBalanced Ctotal tape T ↔
+      hiddenFourBalanced K (modeImage_inputEquiv_from_Q Q)
+        (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E)
+          ((modeImage_actual_good_tape_q_frame_coordinates
+            Q E U b tape htape).choose))
+        ((modeImage_actual_good_tape_q_frame_coordinates
+          Q E U b tape htape).choose_spec.choose)
+        c (physicalEndomorphismToInput (ringChar.eq K 2) T) := by
+  exact (actual_good_tape_observed_four_balance_iff_clean
+    Q E U b tape htape Ctotal c hmodel T).trans
+      (actual_good_tape_clean_balance_iff_hidden Q E U b tape htape c T)
+
 end
 
 end CorruptedFieldRecovery
