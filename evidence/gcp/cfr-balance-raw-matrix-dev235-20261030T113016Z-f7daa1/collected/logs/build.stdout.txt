@@ -1,0 +1,30 @@
+✖ [2983/2983] Building CorruptedFieldRecovery.S010BalanceRawMatrix (2.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceRawMatrix.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceRawMatrix.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceRawMatrix.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceRawMatrix.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceRawMatrix.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:8:4: Function expected at
+  Basis
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (Fin (3 * s) × Fin (3 * s))
+
+Hint: The identifier `Basis` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+warning: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:15:18: declaration uses `sorry`
+warning: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:23:4: declaration uses `sorry`
+warning: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:24:5: unused variable `T`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:26:6: unused variable `ij`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:33:46: expected token
+error: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:45:46: expected token
+warning: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:70:6: declaration uses `sorry`
+warning: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:65:8: declaration uses `sorry`
+warning: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:71:2: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+error: CorruptedFieldRecovery/S010BalanceRawMatrix.lean:77:48: expected token
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceRawMatrix
