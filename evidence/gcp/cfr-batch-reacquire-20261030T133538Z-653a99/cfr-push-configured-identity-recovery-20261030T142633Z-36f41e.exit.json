@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-30T14:27:00.746543+00:00",
+  "command": [
+    "git",
+    "-c",
+    "core.sshCommand=C:/Users/dfred/QuantyraTools/Git/usr/bin/ssh.exe -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=yes -o IdentitiesOnly=yes -i C:/Users/dfred/.ssh/id_quantyra_migration",
+    "push",
+    "origin",
+    "HEAD:main"
+  ],
+  "exit_code": 1,
+  "note": "Explicitly selected the same identity already named in SSH host configuration; no credential/config change"
+}

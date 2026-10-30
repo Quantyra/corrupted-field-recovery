@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T14:29:30.612921+00:00",
+  "accepted": "Alternative range builder output=List.range; declared append cell-copy charge<=length and range charge<=q^2; output length and element widths",
+  "excluded": [
+    "actual List.range implementation cost",
+    "peak live space",
+    "bit-machine refinement",
+    "verifier integration"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

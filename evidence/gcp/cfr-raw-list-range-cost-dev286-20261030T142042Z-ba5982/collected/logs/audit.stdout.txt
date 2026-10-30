@@ -1,0 +1,45 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawListAppendSingletonBitCosted_fst
+CorruptedFieldRecovery.rawListAppendSingletonBitCosted_fst : ∀ (xs : List.{0} Nat) (x : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawListAppendSingletonBitCosted xs x).1
+    (HAppend.hAppend.{0, 0, 0} xs (List.cons.{0} x List.nil.{0}))
+CFR_TYPE_END:CorruptedFieldRecovery.rawListAppendSingletonBitCosted_fst
+'CorruptedFieldRecovery.rawListAppendSingletonBitCosted_fst' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawListAppendSingletonBitCosted_cost_le
+CorruptedFieldRecovery.rawListAppendSingletonBitCosted_cost_le : ∀ (xs : List.{0} Nat) (x : Nat),
+  LE.le.{0} (CorruptedFieldRecovery.rawListAppendSingletonBitCosted xs x).2 (List.length.{0} xs)
+CFR_TYPE_END:CorruptedFieldRecovery.rawListAppendSingletonBitCosted_cost_le
+'CorruptedFieldRecovery.rawListAppendSingletonBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawListRangeBitCosted_fst
+CorruptedFieldRecovery.rawListRangeBitCosted_fst : ∀ (q : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawListRangeBitCosted q).1 (List.range q)
+CFR_TYPE_END:CorruptedFieldRecovery.rawListRangeBitCosted_fst
+'CorruptedFieldRecovery.rawListRangeBitCosted_fst' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawListRangeBitCosted_cost_le
+CorruptedFieldRecovery.rawListRangeBitCosted_cost_le : ∀ (q : Nat),
+  LE.le.{0} (CorruptedFieldRecovery.rawListRangeBitCosted q).2 (HMul.hMul.{0, 0, 0} q q)
+CFR_TYPE_END:CorruptedFieldRecovery.rawListRangeBitCosted_cost_le
+'CorruptedFieldRecovery.rawListRangeBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawListRangeBitCosted_element_width_le
+CorruptedFieldRecovery.rawListRangeBitCosted_element_width_le : ∀ (q i : Nat)
+  (hi : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawListRangeBitCosted q).1 i),
+  LE.le.{0} (CorruptedFieldRecovery.rawNatBitWidth i) (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth q) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawListRangeBitCosted_element_width_le
+'CorruptedFieldRecovery.rawListRangeBitCosted_element_width_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawListRangeBitCosted_space_shape
+CorruptedFieldRecovery.rawListRangeBitCosted_space_shape : ∀ (q : Nat),
+  And (Eq.{1} (List.length.{0} (CorruptedFieldRecovery.rawListRangeBitCosted q).1) q)
+    (∀ (i : Nat) (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawListRangeBitCosted q).1 i),
+      LE.le.{0} (CorruptedFieldRecovery.rawNatBitWidth i)
+        (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth q) 1))
+CFR_TYPE_END:CorruptedFieldRecovery.rawListRangeBitCosted_space_shape
+'CorruptedFieldRecovery.rawListRangeBitCosted_space_shape' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,26 @@
+{
+  "CorruptedFieldRecovery.rawListAppendSingletonBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawListAppendSingletonBitCosted_fst : \u2200 (xs : List.{0} Nat) (x : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawListAppendSingletonBitCosted xs x).1\n    (HAppend.hAppend.{0, 0, 0} xs (List.cons.{0} x List.nil.{0}))\n",
+    "sha256": "50db3e9e3d62db3a9b90117fadc3587752873291816697cf0d736bde475c3653"
+  },
+  "CorruptedFieldRecovery.rawListAppendSingletonBitCosted_cost_le": {
+    "emitted_type": "CorruptedFieldRecovery.rawListAppendSingletonBitCosted_cost_le : \u2200 (xs : List.{0} Nat) (x : Nat),\n  LE.le.{0} (CorruptedFieldRecovery.rawListAppendSingletonBitCosted xs x).2 (List.length.{0} xs)\n",
+    "sha256": "bb5c900583971e538c2c8f0821709cd9f81be358913f6e2701dc75708ece69b5"
+  },
+  "CorruptedFieldRecovery.rawListRangeBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawListRangeBitCosted_fst : \u2200 (q : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawListRangeBitCosted q).1 (List.range q)\n",
+    "sha256": "c627ef6344bc6452e73347a57fe611b368b5ee5a97bd9c6ddaa4fa07ed020e0e"
+  },
+  "CorruptedFieldRecovery.rawListRangeBitCosted_cost_le": {
+    "emitted_type": "CorruptedFieldRecovery.rawListRangeBitCosted_cost_le : \u2200 (q : Nat),\n  LE.le.{0} (CorruptedFieldRecovery.rawListRangeBitCosted q).2 (HMul.hMul.{0, 0, 0} q q)\n",
+    "sha256": "cab4963f82c988fbf57e866bc7ed8ea9f7879705ea1d9719238f0fa675be9c41"
+  },
+  "CorruptedFieldRecovery.rawListRangeBitCosted_element_width_le": {
+    "emitted_type": "CorruptedFieldRecovery.rawListRangeBitCosted_element_width_le : \u2200 (q i : Nat)\n  (hi : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawListRangeBitCosted q).1 i),\n  LE.le.{0} (CorruptedFieldRecovery.rawNatBitWidth i) (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth q) 1)\n",
+    "sha256": "4822ed5cdca877b15e90068c288815b1d4eb7f8c05800faeff1638185bcd8534"
+  },
+  "CorruptedFieldRecovery.rawListRangeBitCosted_space_shape": {
+    "emitted_type": "CorruptedFieldRecovery.rawListRangeBitCosted_space_shape : \u2200 (q : Nat),\n  And (Eq.{1} (List.length.{0} (CorruptedFieldRecovery.rawListRangeBitCosted q).1) q)\n    (\u2200 (i : Nat) (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawListRangeBitCosted q).1 i),\n      LE.le.{0} (CorruptedFieldRecovery.rawNatBitWidth i)\n        (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth q) 1))\n",
+    "sha256": "19074271e00ca0f1941ac762b7d8a37250559a8bba1a42a67c41a1b2779a76a0"
+  }
+}
