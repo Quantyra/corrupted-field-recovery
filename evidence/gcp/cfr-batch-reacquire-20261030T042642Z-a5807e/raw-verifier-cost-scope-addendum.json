@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-30T05:48:21.390511+00:00",
+  "affected_accepted_runs": [
+    "cfr-executable-trace-verifier-dev141-20261030T053304Z-8bb1d4",
+    "cfr-executable-trace-certificate-dev145-20261030T054052Z-901d4e"
+  ],
+  "functional_acceptance_preserved": true,
+  "gate": "CorruptedFieldRecovery.rawIrreducible / rawFieldCandidateCheck",
+  "exact_logical_pair_space": "floor(s/2) * 2^(s+1)",
+  "proof_status": "Source-derived algebraic count, explicitly enumerated in Python for s0..10; no Lean count proof or primitive-bit runtime theorem.",
+  "early_exit_caveat": "Candidate guards may reject before the irreducibility gate; factor matches may allow early rejection. This record does not infer exact executed tests or worst-case runtime from the logical count.",
+  "runtime_boundary": "Full search space exponential in s. Polynomial-time standalone verification is not certified by current functional soundness. Efficient Frobenius/gcd replacement remains proof work."
+}

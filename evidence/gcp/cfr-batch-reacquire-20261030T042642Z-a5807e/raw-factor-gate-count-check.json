@@ -1,0 +1,65 @@
+{
+  "source": "CorruptedFieldRecovery\\RawFieldCandidate.lean",
+  "source_sha256": "db13e2a12a1717d45c2ad5bb870445d98d072984a9f128c17a2059d4c6ce2e41",
+  "source_lines": "40-43,54-63",
+  "pair_space_formula": "floor(s/2) * 2^(s+1)",
+  "derivation": "For each d in 1..floor(s/2), g interval cardinality is 2^d and q range cardinality is 2^(s-d+1); their product is 2^(s+1).",
+  "checks": [
+    {
+      "s": 0,
+      "explicit_enumerated_factor_pairs": 0,
+      "formula": 0
+    },
+    {
+      "s": 1,
+      "explicit_enumerated_factor_pairs": 0,
+      "formula": 0
+    },
+    {
+      "s": 2,
+      "explicit_enumerated_factor_pairs": 8,
+      "formula": 8
+    },
+    {
+      "s": 3,
+      "explicit_enumerated_factor_pairs": 16,
+      "formula": 16
+    },
+    {
+      "s": 4,
+      "explicit_enumerated_factor_pairs": 64,
+      "formula": 64
+    },
+    {
+      "s": 5,
+      "explicit_enumerated_factor_pairs": 128,
+      "formula": 128
+    },
+    {
+      "s": 6,
+      "explicit_enumerated_factor_pairs": 384,
+      "formula": 384
+    },
+    {
+      "s": 7,
+      "explicit_enumerated_factor_pairs": 768,
+      "formula": 768
+    },
+    {
+      "s": 8,
+      "explicit_enumerated_factor_pairs": 2048,
+      "formula": 2048
+    },
+    {
+      "s": 9,
+      "explicit_enumerated_factor_pairs": 4096,
+      "formula": 4096
+    },
+    {
+      "s": 10,
+      "explicit_enumerated_factor_pairs": 10240,
+      "formula": 10240
+    }
+  ],
+  "scope": "Exact logical factor-pair search-space count from source; finite Python enumeration checks s=0..10. Not a Lean proof or a measured primitive-bit runtime theorem. Early rejection may skip pairs. The full logical search space is exponential in s; no polynomial primitive-bit runtime theorem follows. Actual evaluation/short-circuit behavior is not measured or proved here."
+}
