@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-30T04:27:11.118141+00:00",
+  "account": "dfredriksen@quantyra.org",
+  "initial_state": "TERMINATED",
+  "instance_id": "3335066512373302615",
+  "ingress": "IAP TCP22 and internal subnet only",
+  "no_task_egress_present": true
+}

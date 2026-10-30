@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-30T04:28:24.962140+00:00",
+  "inventory_sha256": "27a267a8e7e78fb1915b95ba196531dccf9df02c2d217fca51742daf501beceb",
+  "assessment": "Full inventory inspected: kernel/OS/Google guest startup apt update/packagekit and task SSH only. No competing Lean/Lake/runner, actual campaign lock free."
+}

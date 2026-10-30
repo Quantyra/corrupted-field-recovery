@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-30T04:27:43.336267+00:00",
+  "actual_start": "2026-10-29T21:27:22.892000-07:00",
+  "effective_STOP_ceiling": "2026-10-30T01:27:22.892000-07:00",
+  "latest_full_stage_launch": "2026-10-30T00:32:22.892000-07:00",
+  "last_submission_start": "2026-10-30T00:25:22.892000-07:00",
+  "rationale": "30 minute full stage, 25 minute preserve/stop reserve, 7 minute transfer margin"
+}
