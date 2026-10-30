@@ -1,0 +1,130 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.physicalEndomorphismToInput
+@CorruptedFieldRecovery.physicalEndomorphismToInput : {p n : Nat} →
+  (hp : Eq.{1} p 2) →
+    (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) →
+      Module.End.{0, 0} (ZMod p) ((a : Fin n) → ZMod p)
+CFR_TYPE_END:CorruptedFieldRecovery.physicalEndomorphismToInput
+'CorruptedFieldRecovery.physicalEndomorphismToInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.physicalEndomorphismToInput_apply
+@CorruptedFieldRecovery.physicalEndomorphismToInput_apply : ∀ {p n : Nat} (hp : Eq.{1} p 2)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (x : (a : Fin n) → ZMod p),
+  Eq.{1} ((CorruptedFieldRecovery.physicalEndomorphismToInput hp T) x)
+    (CorruptedFieldRecovery.binaryToInputCast✝ hp (T (CorruptedFieldRecovery.inputToBinaryCast✝ hp x)))
+CFR_TYPE_END:CorruptedFieldRecovery.physicalEndomorphismToInput_apply
+'CorruptedFieldRecovery.physicalEndomorphismToInput_apply' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism
+@CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism.{u_1} : ∀ {K : Type u_1}
+  [inst : Field.{u_1} K] [inst_1 : CharP.{u_1} K 2] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (x : CorruptedFieldRecovery.BinaryInput.{u_1} K (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{u_1 + 1}
+    ((CorruptedFieldRecovery.modeImage_inputEquiv_from_Q.{u_1} Q)
+      ((CorruptedFieldRecovery.physicalEndomorphismToInput (ringChar.eq.{u_1} K 2) T) x))
+    (Q (T (CorruptedFieldRecovery.modeImage_inputVectorToBinary.{u_1} x)))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism
+'CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.qTraceDeterminantTensor_apply
+@CorruptedFieldRecovery.qTraceDeterminantTensor_apply.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Finite.{u_1 + 1} K] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] {n : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector n) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (c : K) (x y z : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1} ((((CorruptedFieldRecovery.qTraceDeterminantTensor.{u_1} Q c) x) y) z)
+    ((Algebra.trace.{0, u_1} CorruptedFieldRecovery.BinaryField K)
+      (HMul.hMul.{u_1, u_1, u_1} c (CorruptedFieldRecovery.fieldDet3.{u_1} (Q x) (Q y) (Q z))))
+CFR_TYPE_END:CorruptedFieldRecovery.qTraceDeterminantTensor_apply
+'CorruptedFieldRecovery.qTraceDeterminantTensor_apply' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_actual_good_tape_q_frame_coordinates
+@CorruptedFieldRecovery.modeImage_actual_good_tape_q_frame_coordinates.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Finite.{u_1 + 1} K] [inst_4 : CharP.{u_1} K 2]
+  [inst_5 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_6 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_7 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K)
+  (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (htape :
+    Membership.mem.{0, 0}
+      (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) U b)
+      tape),
+  ∃ fr v,
+    And
+      (Membership.mem.{u_1, u_1}
+        (CorruptedFieldRecovery.cleanFrameSet.{u_1, u_1}
+          (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E))
+        fr)
+      (And
+        (Membership.mem.{u_1, u_1}
+          (CorruptedFieldRecovery.goodFourthFinset.{u_1} K
+            (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E)
+            (CorruptedFieldRecovery.nonGenerators.{u_1} K) fr)
+          v)
+        (And
+          (Eq.{u_1 + 1} (fun i => Q (tape.1 i))
+            (CorruptedFieldRecovery.canonicalGoodFourFlatTuple.{u_1} K (Sigma.mk.{u_1, u_1} fr v)))
+          (And
+            (∀ (i : Fin 3),
+              Eq.{u_1 + 1} (Q (tape.1 (Fin.castSucc i)))
+                ((CorruptedFieldRecovery.canonicalGoodFrameBasis.{u_1} K
+                    (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) fr)
+                  i))
+            (Eq.{u_1 + 1} (Q (tape.1 3)) v))))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_actual_good_tape_q_frame_coordinates
+'CorruptedFieldRecovery.modeImage_actual_good_tape_q_frame_coordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actual_good_tape_clean_balance_iff_hidden
+@CorruptedFieldRecovery.actual_good_tape_clean_balance_iff_hidden.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Finite.{u_1 + 1} K] [inst_4 : CharP.{u_1} K 2]
+  [inst_5 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_6 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_7 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K)
+  (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (htape :
+    Membership.mem.{0, 0}
+      (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) U b)
+      tape)
+  (c : K) (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),
+  Iff
+    (CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.qTraceDeterminantTensor.{u_1} Q c) tape
+      T)
+    (CorruptedFieldRecovery.hiddenFourBalanced.{u_1} K (CorruptedFieldRecovery.modeImage_inputEquiv_from_Q.{u_1} Q)
+      (CorruptedFieldRecovery.canonicalGoodFrameBasis.{u_1} K
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E)
+        (Exists.choose.{u_1 + 1}
+          (CorruptedFieldRecovery.modeImage_actual_good_tape_q_frame_coordinates.{u_1} Q E U b tape htape)))
+      (Exists.choose.{u_1 + 1}
+        (Exists.choose_spec.{u_1 + 1}
+          (CorruptedFieldRecovery.modeImage_actual_good_tape_q_frame_coordinates.{u_1} Q E U b tape htape)))
+      c (CorruptedFieldRecovery.physicalEndomorphismToInput (ringChar.eq.{u_1} K 2) T))
+CFR_TYPE_END:CorruptedFieldRecovery.actual_good_tape_clean_balance_iff_hidden
+'CorruptedFieldRecovery.actual_good_tape_clean_balance_iff_hidden' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
