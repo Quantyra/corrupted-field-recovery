@@ -1,0 +1,55 @@
+{
+  "run": "cfr-uncompiled-index-layout-bridge-preservation-20261030T162224Z-46e06f",
+  "archive_sha256": "caaaa70cdfe740d1d894767d7588d466be13ad0b47319f97a25cb7db302732a4",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean",
+  "source_sha256": "AEFD885C7DD441B825D1BD647CA501450C0122B152D282ADCB1FD60DF789FD39",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+      "sha256": "4429c93a112e2b8d210f072ec7d42186028e6febc8c256d9f594dbb089182b59",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+      "sha256": "7afb6f348edb61b610eb983096847e3ab60861b31568d42f7fddf6aa97685264",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled dev316 observed PASS; exact collection and acceptance pending"
+    }
+  ],
+  "accepted_direct_dependency": {
+    "source": "CorruptedFieldRecovery/S010BalanceRawInputLayout.lean",
+    "sha256": "51187b3c572fe5c79a2d38115f39041f1e5a0735d92225ebc6836830cbf50bd6",
+    "accepted_run": "dev265"
+  },
+  "other_direct_import": "Mathlib.Logic.Equiv.Fin.Basic under pinned capture manifest",
+  "scope": "Unaudited draft statements identify row/column lists with inverse Fin equivalences, establish optional lookups at finite indices and compare nested-array cells with the reindexed raw Gaussian matrix. No array-based Gaussian scan implementation or execution/cost refinement, certified solver, or claim that the correspondence gap is actually closed."
+}
