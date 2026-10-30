@@ -1,0 +1,12 @@
+{
+  "run": "cfr-uncompiled-kernel-proof-preservation-20261030T155803Z-bead5c",
+  "archive_sha256": "d0dcdedc527dad500596b7854fce48f0222a4e2bcfc1b638cdc092a265a5de3c",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+  "source_sha256": "C37B975D6EF7EC54BD514DB4E232FFEB01FF5597867E4235C8882A08DFEDF73E",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "purpose": "Explicitly uncompiled draft preservation only; no certification claim",
+  "cloud_operation": false
+}
