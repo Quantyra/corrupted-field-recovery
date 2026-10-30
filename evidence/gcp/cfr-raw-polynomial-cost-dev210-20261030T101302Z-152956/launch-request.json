@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T10:15:03.095607+00:00",
+  "run": "cfr-raw-polynomial-cost-dev210-20261030T101302Z-152956",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

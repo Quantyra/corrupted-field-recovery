@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-30T10:19:53.017083+00:00",
+  "review": "Root exact new type/source",
+  "accepted": "Actual good tape, explicit Q/E/U/b and observed Q/c trace+E identity promise with c!=0 imply counted frame/fourth/Q-images and for all physical BinaryField endomorphisms T, observed four bilinear balance iff exists k forall x T x=Q.symm(k smul Q x)",
+  "excluded": [
+    "executable balance solver",
+    "dimension calculation",
+    "field construction",
+    "constructor success",
+    "costs"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

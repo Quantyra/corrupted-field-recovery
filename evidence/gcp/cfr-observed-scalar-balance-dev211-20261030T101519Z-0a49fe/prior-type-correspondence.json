@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-30T10:19:53.019390+00:00",
+  "previous_run": "cfr-observed-hidden-balance-dev205-20261030T095913Z-584292",
+  "byte_identical_prior_types": [
+    "CorruptedFieldRecovery.physicalEndomorphismToInput",
+    "CorruptedFieldRecovery.physicalEndomorphismToInput_apply",
+    "CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism",
+    "CorruptedFieldRecovery.qTraceDeterminantTensor_apply",
+    "CorruptedFieldRecovery.modeImage_actual_good_tape_q_frame_coordinates",
+    "CorruptedFieldRecovery.actual_good_tape_clean_balance_iff_hidden",
+    "CorruptedFieldRecovery.actual_good_tape_observed_balance_iff_hidden"
+  ]
+}

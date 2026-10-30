@@ -404,6 +404,116 @@ theorem actual_good_tape_observed_balance_iff_hidden
     Q E U b tape htape Ctotal c hmodel T).trans
       (actual_good_tape_clean_balance_iff_hidden Q E U b tape htape c T)
 
+private theorem physical_scalar_conjugacy_iff_input
+    {K : Type*} [Field K] [Finite K] [CharP K 2]
+    [Algebra BinaryField K] [Algebra (ZMod (ringChar K)) K]
+    {s : Nat} (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K)
+    (T : Module.End (ZMod 2) (BinaryVector (3 * s))) :
+    (∃ k : K, ∀ x : BinaryVector (3 * s), T x = Q.symm (k • Q x)) ↔
+      ∃ k : K, ∀ x : BinaryInput K (3 * s),
+        physicalEndomorphismToInput (ringChar.eq K 2) T x =
+          (modeImage_inputEquiv_from_Q Q).symm
+            (k • modeImage_inputEquiv_from_Q Q x) := by
+  let iota : BinaryInput K (3 * s) ≃ₗ[ZMod (ringChar K)] FieldTriple K :=
+    modeImage_inputEquiv_from_Q Q
+  let hp := ringChar.eq K 2
+  let Tin : Module.End (ZMod (ringChar K)) (BinaryInput K (3 * s)) :=
+    physicalEndomorphismToInput hp T
+  have hinput (x : BinaryInput K (3 * s)) :
+      iota x = Q (modeImage_inputVectorToBinary (K := K) x) := by
+    simpa [iota] using modeImage_inputEquiv_from_Q_apply Q x
+  have hinputT (x : BinaryInput K (3 * s)) :
+      iota (Tin x) = Q (T (modeImage_inputVectorToBinary (K := K) x)) := by
+    simpa [iota, Tin, hp] using
+      modeImage_inputEquiv_from_Q_transport_endomorphism Q T x
+  constructor
+  · rintro ⟨k, hk⟩
+    refine ⟨k, ?_⟩
+    intro x
+    apply iota.injective
+    calc
+      iota (Tin x) = Q (T (modeImage_inputVectorToBinary (K := K) x)) := hinputT x
+      _ = k • Q (modeImage_inputVectorToBinary (K := K) x) := by
+        rw [hk]
+        exact Q.apply_symm_apply _
+      _ = k • iota x := congrArg (fun z : FieldTriple K => k • z) (hinput x).symm
+      _ = iota (iota.symm (k • iota x)) := by simp
+  · rintro ⟨k, hk⟩
+    refine ⟨k, ?_⟩
+    intro x
+    let xi := binaryToInputCast hp x
+    have hcast : modeImage_inputVectorToBinary (K := K) xi = x := by
+      change inputToBinaryCast hp (binaryToInputCast hp x) = x
+      exact inputCast_binaryCast_cancel hp x
+    apply Q.injective
+    calc
+      Q (T x) = Q (T (modeImage_inputVectorToBinary (K := K) xi)) := by
+        rw [hcast]
+      _ = iota (Tin xi) := (hinputT xi).symm
+      _ = iota (iota.symm (k • iota xi)) := congrArg iota (hk xi)
+      _ = k • iota xi := by simp
+      _ = k • Q x := by
+        apply congrArg (fun z : FieldTriple K => k • z)
+        rw [hinput xi, hcast]
+      _ = Q (Q.symm (k • Q x)) := by simp
+
+/-- Under the explicit observed-tensor decomposition and nonzero clean scale,
+the actual observed four-word physical balance is equivalent to physical
+scalar conjugacy by the same Q and tape-derived frame. -/
+theorem actual_good_tape_observed_balance_iff_scalar
+    {K : Type*} [Field K] [Fintype K] [DecidableEq K] [Finite K]
+    [CharP K 2] [Algebra BinaryField K] [FiniteDimensional BinaryField K]
+    [Algebra (ZMod (ringChar K)) K]
+    {s : Nat}
+    (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K)
+    (E : BinaryTensor (3 * s))
+    (U : Submodule BinaryField (KTriple K))
+    (b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K)
+    (tape : FiveWordTape s)
+    (htape : tape ∈ actualFiveGoodTapeSet K Q
+      (modeImageSemanticCleanFieldSet Q E) U b)
+    (Ctotal : BinaryTensor (3 * s)) (c : K)
+    (hmodel : HasObservedTraceDeterminantDecomposition Ctotal E
+      LinearMap.id Q c) (hc : c ≠ 0) :
+    ∃ fr : Σ _xy : (Σ _x : FieldTriple K, FieldTriple K), FieldTriple K,
+      ∃ v : FieldTriple K,
+        fr ∈ cleanFrameSet (K := K) (modeImageSemanticCleanFieldSet Q E) ∧
+        v ∈ goodFourthFinset K (modeImageSemanticCleanFieldSet Q E)
+          (nonGenerators K) fr ∧
+        (fun i => Q (tape.1 i)) = canonicalGoodFourFlatTuple K ⟨fr, v⟩ ∧
+        ∀ T : Module.End (ZMod 2) (BinaryVector (3 * s)),
+          actualFourBilinearBalanced Ctotal tape T ↔
+            ∃ k : K, ∀ x : BinaryVector (3 * s),
+              T x = Q.symm (k • Q x) := by
+  let coords := modeImage_actual_good_tape_q_frame_coordinates Q E U b tape htape
+  let fr : Σ _xy : (Σ _x : FieldTriple K, FieldTriple K), FieldTriple K :=
+    coords.choose
+  let frameData := coords.choose_spec
+  let v : FieldTriple K := frameData.choose
+  rcases frameData.choose_spec with ⟨hfr, hv, hflat, hslots, hslot3⟩
+  rcases modeImage_actual_good_tape_four_contraction_identification
+      Q E U b tape htape c hc with
+    ⟨fr', v', hfr', hv', hflat', hsampled⟩
+  have hpair : (⟨fr, v⟩ : Σ _fr :
+      Σ _xy : (Σ _x : FieldTriple K, FieldTriple K), FieldTriple K,
+      FieldTriple K) = ⟨fr', v'⟩ := by
+    apply canonicalGoodFourFlatTuple_injective K
+    exact hflat.symm.trans hflat'
+  cases hpair
+  let iota : BinaryInput K (3 * s) ≃ₗ[ZMod (ringChar K)] FieldTriple K :=
+    modeImage_inputEquiv_from_Q Q
+  let B : Module.Basis (Fin 3) K (FieldTriple K) :=
+    canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) fr
+  have hscalar := hidden_four_identification_of_sampled K iota B v c hsampled
+  refine ⟨fr, v, hfr, hv, hflat, ?_⟩
+  intro T
+  have hhidden := actual_good_tape_observed_balance_iff_hidden
+    Q E U b tape htape Ctotal c hmodel T
+  have hinputScalar := hscalar.1 (physicalEndomorphismToInput
+    (ringChar.eq K 2) T)
+  have hphysicalScalar := physical_scalar_conjugacy_iff_input Q T
+  exact hhidden.trans (hinputScalar.trans hphysicalScalar.symm)
+
 end
 
 end CorruptedFieldRecovery
