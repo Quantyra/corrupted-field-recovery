@@ -1,0 +1,22 @@
+✖ [2063/2063] Building CorruptedFieldRecovery.RawRabinScanExecutableCost (2.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinScanExecutableCost.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanExecutableCost.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanExecutableCost.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinScanExecutableCost.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinScanExecutableCost.setup.json --json
+error: CorruptedFieldRecovery/RawRabinScanExecutableCost.lean:37:9: unexpected token '/--'; expected ')', ',' or ':'
+error: CorruptedFieldRecovery/RawRabinScanExecutableCost.lean:33:10: Function expected at
+  is.all fun j => decide (rawPolynomialGcd modulus ((rawCandidateFrobeniusAux modulus (j + 1) 2).xor 2) = 1)
+but this term has type
+  Bool
+
+Note: Expected a function because this term is being applied to the argument
+  rw
+error: CorruptedFieldRecovery/RawRabinScanExecutableCost.lean:50:2: 'change' tactic failed, pattern
+  ((List.range (s / 2)).all fun i =>
+      decide
+        (rawPolynomialGcd (rawFieldBitsToNat candidate.modulus)
+            ((rawCandidateFrobeniusAux (rawFieldBitsToNat candidate.modulus) (i + 1) 2).xor 2) =
+          1)) =
+    ?m.32
+is not definitionally equal to target
+  (rawCandidateRabinCheckBitCosted candidate).1 = rawCandidateRabinCheck candidate
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinScanExecutableCost
