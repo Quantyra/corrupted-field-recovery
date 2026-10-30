@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T12:21:37.688565+00:00",
+  "accepted": "Costed Aux first projection matches actual loop; W-bit output for nonzero modulus and modulus,x<2^W; declared charge at most d*rawRabinFrobeniusStepCharge W for modulus>1,W>0,width bounds; zero iteration cost zero",
+  "excluded": [
+    "entire scan/candidate/verifier",
+    "concrete machine",
+    "space"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

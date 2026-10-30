@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.rawRabinFrobeniusStepCharge": {
+    "emitted_type": "CorruptedFieldRecovery.rawRabinFrobeniusStepCharge : (W : Nat) \u2192 Nat\n",
+    "sha256": "40fe4935ce9d0e354758197fcd5bcb210c87e62d3cfc89b55c9775fc76e59978"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted : (modulus a a : Nat) \u2192 Prod.{0, 0} Nat Nat\n",
+    "sha256": "1b220b84566632acc1f0d7ecf6631a696bc6985af41e4535a61fa174ac583ac8"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_fst : \u2200 (modulus d x : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).1\n    (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus d x)\n",
+    "sha256": "a8657517ea8ce224eaa152badc59e0f9638ada294edad3a91e526da189083818"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_lt_pow": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_lt_pow : \u2200 {modulus d x W : Nat} (hmod : Ne.{1} modulus 0)\n  (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)),\n  LT.lt.{0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).1 (HPow.hPow.{0, 0, 0} 2 W)\n",
+    "sha256": "995e477d11eca91afa18765984b5321e975ccac7396e165073cab0c3c34839ba"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_cost_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_cost_le : \u2200 {modulus d x W : Nat} (hmod : Ne.{1} modulus 0)\n  (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LT.lt.{0} 0 W)\n  (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)),\n  LE.le.{0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2\n    (HMul.hMul.{0, 0, 0} d (CorruptedFieldRecovery.rawRabinFrobeniusStepCharge W))\n",
+    "sha256": "afb73fede8432de3ecb8b32f48404ce79366bb7bf709c9459834b231b8fb3d22"
+  }
+}

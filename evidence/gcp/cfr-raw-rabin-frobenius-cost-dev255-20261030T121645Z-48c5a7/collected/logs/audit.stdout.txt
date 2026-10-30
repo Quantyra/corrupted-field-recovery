@@ -1,0 +1,32 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinFrobeniusStepCharge
+CorruptedFieldRecovery.rawRabinFrobeniusStepCharge : (W : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinFrobeniusStepCharge
+'CorruptedFieldRecovery.rawRabinFrobeniusStepCharge' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted
+CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted : (modulus a a : Nat) → Prod.{0, 0} Nat Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted
+'CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_fst
+CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_fst : ∀ (modulus d x : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).1
+    (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus d x)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_fst
+'CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_fst' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_lt_pow
+@CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_lt_pow : ∀ {modulus d x W : Nat} (hmod : Ne.{1} modulus 0)
+  (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)),
+  LT.lt.{0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).1 (HPow.hPow.{0, 0, 0} 2 W)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_lt_pow
+'CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_lt_pow' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_cost_le
+@CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_cost_le : ∀ {modulus d x W : Nat} (hmod : Ne.{1} modulus 0)
+  (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LT.lt.{0} 0 W)
+  (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)),
+  LE.le.{0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2
+    (HMul.hMul.{0, 0, 0} d (CorruptedFieldRecovery.rawRabinFrobeniusStepCharge W))
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_cost_le
+'CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
