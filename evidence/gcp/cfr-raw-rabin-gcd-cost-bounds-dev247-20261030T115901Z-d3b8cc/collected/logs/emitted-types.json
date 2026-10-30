@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.rawPolynomialGcdBitCosted_cost_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialGcdBitCosted_cost_le : \u2200 {a b A : Nat} (hA : LT.lt.{0} 0 A)\n  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 A)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 A)),\n  LE.le.{0} (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).2\n    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (Nat.log2 b) 2)\n      (HMul.hMul.{0, 0, 0}\n        (HMul.hMul.{0, 0, 0} 40 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 A) 6) 2))\n        (HAdd.hAdd.{0, 0, 0} A 1)))\n",
+    "sha256": "087c956d1203b49b1c689c66c9be69318ce4d25ae635233d012cde7b5511ade3"
+  }
+}

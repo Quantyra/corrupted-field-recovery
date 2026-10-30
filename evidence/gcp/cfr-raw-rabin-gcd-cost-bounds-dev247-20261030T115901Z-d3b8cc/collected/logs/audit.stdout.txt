@@ -1,0 +1,12 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdBitCosted_cost_le
+@CorruptedFieldRecovery.rawPolynomialGcdBitCosted_cost_le : ∀ {a b A : Nat} (hA : LT.lt.{0} 0 A)
+  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 A)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 A)),
+  LE.le.{0} (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).2
+    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (Nat.log2 b) 2)
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} 40 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 A) 6) 2))
+        (HAdd.hAdd.{0, 0, 0} A 1)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdBitCosted_cost_le
+'CorruptedFieldRecovery.rawPolynomialGcdBitCosted_cost_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T12:02:49.119810+00:00",
+  "accepted": "Declared instrumented GCD charge at most (log2 b+2)*40*(3A+6)^2*(A+1) for A>0,a,b<2^A",
+  "excluded": [
+    "concrete machine/runtime",
+    "space",
+    "full scan/verifier cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
