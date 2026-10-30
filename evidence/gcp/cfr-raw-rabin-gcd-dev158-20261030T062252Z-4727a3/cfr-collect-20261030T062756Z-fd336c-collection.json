@@ -1,0 +1,26 @@
+{
+  "run": "cfr-raw-rabin-gcd-dev158-20261030T062252Z-4727a3",
+  "utc": "2026-10-30T06:28:50.391149+00:00",
+  "archive_sha256": "9903f9f37cc785825c8bcadaeb92a47ac20405659b9c4dd5d8788d680b70b350",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "957341c4f6b57ddbba46d04a299d22405be703e4028592d1764f495543111dcc",
+    "launch.log": "ba608a83101f520f2381eff2444614c9993913c65e24fa7c90cf81a6c5b63ed3",
+    "runner-pid": "384ec78c5087ce194b261fc9871012c775f43061a34aacf02432db5d46a0bf32",
+    "started-utc": "03978ef7305352770c9965b124af490684572cf3ab2c8e50cd71efa7bb58fd61",
+    "terminal-receipt.json": "aa121068c8f6c55d88ff6632da4989ec57eef7a1c16b196d507c478ba7841bbc",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "6bb3e4198d0f2ae3664937935a359e37a2c24213258b36688ea42f993aa23aad",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "e1f17888326cdb2997e8b3b94d22ee23d2b3d77759b460439547a0ee2eeb0768",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/emitted-types.json": "a1728710a5a464147669718e305598140207b2513aa19bba9c53aaa8571fea05",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "ba608a83101f520f2381eff2444614c9993913c65e24fa7c90cf81a6c5b63ed3"
+  }
+}

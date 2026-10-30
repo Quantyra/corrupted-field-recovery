@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.rawPolynomialRemainder_commonDivisors": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialRemainder_commonDivisors : \u2200 {a b c : Nat} (hb : Ne.{1} b 0),\n  Iff\n    (And (Dvd.dvd.{0} (CorruptedFieldRecovery.rawMaskPolynomial c) (CorruptedFieldRecovery.rawMaskPolynomial a))\n      (Dvd.dvd.{0} (CorruptedFieldRecovery.rawMaskPolynomial c) (CorruptedFieldRecovery.rawMaskPolynomial b)))\n    (And (Dvd.dvd.{0} (CorruptedFieldRecovery.rawMaskPolynomial c) (CorruptedFieldRecovery.rawMaskPolynomial b))\n      (Dvd.dvd.{0} (CorruptedFieldRecovery.rawMaskPolynomial c)\n        (CorruptedFieldRecovery.rawMaskPolynomial (CorruptedFieldRecovery.rawPolynomialRemainder a b))))\n",
+    "sha256": "bf5562d3b213c802c74135e44072f43b2e1a2906ad6b8c47007537e12639fc31"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "For nonzero b, raw-mask common divisors of decoded a,b are exactly common divisors of decoded b,remainder a b.",
+  "remaining": "No raw gcd equals polynomial gcd/coprimality theorem,irreducibility iff,or cost.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

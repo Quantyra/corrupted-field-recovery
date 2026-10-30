@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "f9cc2e5ccfbb006b6e87434fbf873d705c0bbf947d6d51a77a492e692fb77ea5",
+  "staged_git_blob_sha256": "f9cc2e5ccfbb006b6e87434fbf873d705c0bbf947d6d51a77a492e692fb77ea5",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/RawRabinGcdRefinement.lean"
+}
