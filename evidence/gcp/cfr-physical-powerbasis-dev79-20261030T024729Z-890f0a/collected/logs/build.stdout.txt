@@ -1,0 +1,62 @@
+✖ [2031/2031] Building CorruptedFieldRecovery.RawPhysicalPowerBasis (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawPhysicalPowerBasis.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalPowerBasis.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalPowerBasis.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPhysicalPowerBasis.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawPhysicalPowerBasis.setup.json --json
+error: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:20:2: Unnecessary `generalizing` argument: Variable `bits` is generalized automatically
+error: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:27:6: Tactic `rfl` failed: equality lhs
+  C (if bits 0 = true then 1 else 0) + X * ∑ i, (monomial ↑i) (if bits i.succ = true then 1 else 0)
+is not definitionally equal to rhs
+  ∑ x, (monomial (↑x + 1)) (if bits x.succ = true then 1 else 0) + (monomial ↑0) (if bits 0 = true then 1 else 0)
+
+case succ
+s : ℕ
+ih :
+  ∀ (bits : Fin s → Bool), rawBoolListPolynomial (List.ofFn bits) = ∑ i, (monomial ↑i) (if bits i = true then 1 else 0)
+bits : Fin (s + 1) → Bool
+⊢ C (if bits 0 = true then 1 else 0) + X * ∑ i, (monomial ↑i) (if bits i.succ = true then 1 else 0) =
+    ∑ x, (monomial (↑x + 1)) (if bits x.succ = true then 1 else 0) + (monomial ↑0) (if bits 0 = true then 1 else 0)
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:25:17: This simp argument is unused:
+  Polynomial.monomial_zero_left
+
+Hint: Omit it from the simp argument list.
+  simp only [̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵o̵n̵o̵m̵i̵a̵l̵_̵z̵e̵r̵o̵_̵l̵e̵f̵t̵,̵ ̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵X̵_̵m̵u̵l̵_̵m̵o̵n̵o̵m̵i̵a̵l̵,̵[̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲X̲_̲m̲u̲l̲_̲m̲o̲n̲o̲m̲i̲a̲l̲,̲ Fin.val_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:25:48: This simp argument is unused:
+  Polynomial.X_mul_monomial
+
+Hint: Omit it from the simp argument list.
+  simp only [Polynomial.monomial_zero_left, P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵X̵_̵m̵u̵l̵_̵m̵o̵n̵o̵m̵i̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵Fin.val_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:36:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rawMaskPolynomial (rawBitsToNat ?bits)
+in the target expression
+  rawMaskPolynomial (rawPhysicalBlockMask v block) = ∑ i, (monomial ↑i) (v (finProdFinEquiv (block, i)))
+
+s : ℕ
+v : BinaryVector (3 * s)
+block : Fin 3
+⊢ rawMaskPolynomial (rawPhysicalBlockMask v block) = ∑ i, (monomial ↑i) (v (finProdFinEquiv (block, i)))
+error: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:69:4: Unknown identifier `Basis.equivFun_symm_apply`
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:68:8: Possibly looping simp theorem: `rawQuotientPowerCoordinates.eq_1`
+
+Note: Possibly caused by: `powerBasisAux'`, `monomial`, and `ofFinsupp_single`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:68:37: Possibly looping simp theorem: `powerBasisAux'.eq_1`
+
+Note: Possibly caused by: `monomial` and `ofFinsupp_single`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+warning: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:69:31: Possibly looping simp theorem: `monomial.eq_1`
+
+Note: Possibly caused by: `ofFinsupp_single` and `monomial`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+error: CorruptedFieldRecovery/RawPhysicalPowerBasis.lean:68:2: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawPhysicalPowerBasis

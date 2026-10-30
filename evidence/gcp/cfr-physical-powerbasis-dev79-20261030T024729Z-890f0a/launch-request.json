@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T02:50:55.394853+00:00",
+  "run": "cfr-physical-powerbasis-dev79-20261030T024729Z-890f0a",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

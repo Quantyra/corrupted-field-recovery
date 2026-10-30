@@ -1,0 +1,23 @@
+{
+  "run": "cfr-physical-powerbasis-dev79-20261030T024729Z-890f0a",
+  "utc": "2026-10-30T02:53:48.841093+00:00",
+  "archive_sha256": "56ae516193f65b7176b3ae93b20a55b7b1628a9e6cd1da35bb24aff149a22e92",
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "1fde15a4bba2fcfcb6a54b8b28f15a5a93c5ec87139129b821e847fbfa998012",
+    "launch.log": "b66fe0d257d1bb850818a541232021dd4a30fa2ea8d4a16ea83fd4429933ffe3",
+    "runner-pid": "d8f2742c5b0fa445f195a41a0c281334d49e04c0fc73ca2ffba99a0365125653",
+    "started-utc": "ef0efa0453fe91247ffd0a392dadf0a9537d253b3df2427103546e659ef77cda",
+    "terminal-receipt.json": "dfb28d8be9bcc55a840bd029c65abbf2641d282724d35151ebd94d610795ad2f",
+    "logs/build.stderr.txt": "c4a27db198c4d8632369ee6102944ef46e83c20d685f7c17a6aaff9cfcfc710f",
+    "logs/build.stdout.txt": "cb2af53f63c94fc63db675de1ae7dc1018f39f440668a9a07ce14f709ee4e397",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "0a51e25429f47199c13378095ca36706c60fe03fe010cc60f80a13c7f3871e98",
+    "logs/runner.stdout.txt": "b16b9becf1344674db4a98b5275cc4d38dc99387780935eb2c0d03943d4caf7b"
+  }
+}

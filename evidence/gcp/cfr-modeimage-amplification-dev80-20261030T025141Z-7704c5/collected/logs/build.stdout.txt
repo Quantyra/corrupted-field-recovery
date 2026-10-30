@@ -1,0 +1,35 @@
+✖ [2972/2972] Building CorruptedFieldRecovery.S010ModeImageAmplification (3.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ModeImageAmplification.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageAmplification.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageAmplification.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ModeImageAmplification.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ModeImageAmplification.setup.json --json
+error: CorruptedFieldRecovery/S010ModeImageAmplification.lean:15:4: mod_cast has type
+  (1 : ℕ) < C
+but is expected to have type
+  (0 : ℤ) < Int.subNatNat C 1
+error: CorruptedFieldRecovery/S010ModeImageAmplification.lean:38:32: Application type mismatch: The argument
+  hratio'
+has type
+  2 ≤ ↑C ^ C / (↑C - 1) ^ C
+but is expected to have type
+  ?m.286 / (↑C - 1) ^ C ≤ ?m.285
+in the application
+  (div_le_iff₀ hden).mp hratio'
+error: CorruptedFieldRecovery/S010ModeImageAmplification.lean:83:8: Type mismatch: After simplification, term
+  hstepN
+ has type
+  C ^ n * (Fintype.card α ^ n * (2 ^ h - 1)) ≤ Fintype.card α ^ n * ((C ^ n - (C - 1) ^ n) * 2 ^ h)
+but is expected to have type
+  C ^ n * (Fintype.card α ^ n * (2 ^ h - 1)) ≤ C ^ n * (Fintype.card α ^ n * ((C ^ n - (C - 1) ^ n) * 2 ^ h))
+error: CorruptedFieldRecovery/S010ModeImageAmplification.lean:85:8: Type mismatch: After simplification, term
+  hmul
+ has type
+  Fintype.card α ^ n * ((C ^ n - (C - 1) ^ n) * 2 ^ h) ≤ C ^ n * (2 ^ h * (repeatedSuccessSet S n).card)
+but is expected to have type
+  C ^ n * (Fintype.card α ^ n * ((C ^ n - (C - 1) ^ n) * 2 ^ h)) ≤ C ^ n * (2 ^ h * (repeatedSuccessSet S n).card)
+error: CorruptedFieldRecovery/S010ModeImageAmplification.lean:88:2: Type mismatch: After simplification, term
+  hcancel
+ has type
+  Fintype.card α ^ (C * h) * (2 ^ h - 1) ≤ 2 ^ h * (repeatedSuccessSet S (C * h)).card
+but is expected to have type
+  C ^ (C * h) * (Fintype.card α ^ (C * h) * (2 ^ h - 1)) ≤ C ^ (C * h) * (2 ^ h * (repeatedSuccessSet S (C * h)).card)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ModeImageAmplification
