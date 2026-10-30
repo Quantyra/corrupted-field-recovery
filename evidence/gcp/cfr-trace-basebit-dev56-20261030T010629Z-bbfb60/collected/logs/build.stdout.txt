@@ -1,0 +1,51 @@
+✖ [2023/2023] Building CorruptedFieldRecovery.RawFieldTraceBitValue (3.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawFieldTraceBitValue.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldTraceBitValue.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldTraceBitValue.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldTraceBitValue.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawFieldTraceBitValue.setup.json --json
+error: CorruptedFieldRecovery/RawFieldTraceBitValue.lean:26:28: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 1
+  a - c ≥ 1
+  2*a - b ≥ 1
+where
+ a := ↑2 ^ s
+ b := ↑n
+ c := ↑n.div2
+error: CorruptedFieldRecovery/RawFieldTraceBitValue.lean:58:4: unsolved goals
+case «0».h.a
+s : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+x : ℕ
+hx : x < 2 ^ s
+tr : ZMod 2 :=
+  (Algebra.trace (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate))) (rawCandidateQuotientClass candidate x)
+bit : ℕ := if tr = 0 then 0 else 1
+hs : 0 < s
+htraceClass :
+  rawCandidateQuotientClass candidate (rawFieldTraceBits candidate hcheck x) =
+    (of (rawCandidateModulus candidate))
+      ((Algebra.trace (ZMod 2) (AdjoinRoot (rawCandidateModulus candidate))) (rawCandidateQuotientClass candidate x))
+hv✝ : tr.val = 0
+hv : 0 < 2
+⊢ tr = 0
+error: CorruptedFieldRecovery/RawFieldTraceBitValue.lean:63:6: `simp` made no progress
+warning: CorruptedFieldRecovery/RawFieldTraceBitValue.lean:67:31: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: CorruptedFieldRecovery/RawFieldTraceBitValue.lean:60:12: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawFieldTraceBitValue.lean:68:26: This simp argument is unused:
+  htr0
+
+Hint: Omit it from the simp argument list.
+  simp [bit, tr, htr, h̵t̵r0̵,̵ ̵r̵awMaskPolynomial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawFieldTraceBitValue
