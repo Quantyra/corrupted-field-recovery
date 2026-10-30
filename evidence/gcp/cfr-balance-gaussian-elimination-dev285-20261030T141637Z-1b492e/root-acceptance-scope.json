@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T14:23:06.392153+00:00",
+  "accepted": "Chosen column becomes pivot unit column; each column step kernel iff; recursive supplied-column scan definition and kernel equivalence",
+  "excluded": [
+    "final reduced form",
+    "processed-column invariant",
+    "kernel basis",
+    "complete solver",
+    "costs"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

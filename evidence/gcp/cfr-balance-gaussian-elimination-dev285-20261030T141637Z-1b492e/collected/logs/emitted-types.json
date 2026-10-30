@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.balanceGaussianColumnStep_pivot_column": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianColumnStep_pivot_column : \u2200 {m n : Nat}\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (column : Fin n) (used : Finset.{0} (Fin m)) {row : Fin m}\n  (h : Eq.{1} (CorruptedFieldRecovery.balanceFirstUnusedPivotRow A column used) (Option.some.{0} row)) (i : Fin m),\n  Eq.{1} (CorruptedFieldRecovery.balanceGaussianColumnStep A column used i column) (ite.{1} (Eq.{1} i row) 1 0)\n",
+    "sha256": "e8fc5f171ca28460cac2c90439a6c7c4998220c6c76007872bbf7a130c3ac800"
+  },
+  "CorruptedFieldRecovery.balanceGaussianColumnStep_kernel_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianColumnStep_kernel_iff : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (column : Fin n) (used : Finset.{0} (Fin m))\n  (x : (a : Fin n) \u2192 ZMod 2),\n  Iff (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.balanceGaussianColumnStep A column used) x) 0)\n    (Eq.{1} (Matrix.mulVec.{0, 0, 0} A x) 0)\n",
+    "sha256": "03c9847375be4b7395c2a659308341794a8f7a7148d9d125de60b9b1a78c060f"
+  },
+  "CorruptedFieldRecovery.balanceGaussianColumnScan": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianColumnScan : {m n : Nat} \u2192\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) \u2192\n    (a : Finset.{0} (Fin m)) \u2192\n      (a : List.{0} (Fin n)) \u2192\n        Prod.{0, 0} (Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (List.{0} (Prod.{0, 0} (Fin m) (Fin n)))\n",
+    "sha256": "1bd457838af2b6e02685d32dd0a36c2aa65331dc5156af092badff0520b5752e"
+  },
+  "CorruptedFieldRecovery.balanceGaussianColumnScan_kernel_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianColumnScan_kernel_iff : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (columns : List.{0} (Fin n)) (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (used : Finset.{0} (Fin m))\n  (x : (a : Fin n) \u2192 ZMod 2),\n  Iff (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.balanceGaussianColumnScan A used columns).1 x) 0)\n    (Eq.{1} (Matrix.mulVec.{0, 0, 0} A x) 0)\n",
+    "sha256": "5161bd4e9eb399024a72e0ece8bf34be411ca121472aca972f85e11bf32d8ee5"
+  }
+}
