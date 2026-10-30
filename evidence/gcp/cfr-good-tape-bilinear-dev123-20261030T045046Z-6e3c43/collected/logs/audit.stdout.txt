@@ -1,0 +1,77 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.physicalPerturbed_bilinForm_eq_clean_of_modeImage_coannihilator
+@CorruptedFieldRecovery.physicalPerturbed_bilinForm_eq_clean_of_modeImage_coannihilator : ∀ {n m : Nat}
+  (C : CorruptedFieldRecovery.BinaryTensor n) (E : CorruptedFieldRecovery.BinaryTensor m)
+  (u :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector m))
+  (z : CorruptedFieldRecovery.BinaryVector n)
+  (hz : Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)) (u z)),
+  Eq.{1} (CorruptedFieldRecovery.physicalThirdSlotBilinForm (CorruptedFieldRecovery.physicalPerturbedTensor C E u) z)
+    (CorruptedFieldRecovery.physicalThirdSlotBilinForm C z)
+CFR_TYPE_END:CorruptedFieldRecovery.physicalPerturbed_bilinForm_eq_clean_of_modeImage_coannihilator
+'CorruptedFieldRecovery.physicalPerturbed_bilinForm_eq_clean_of_modeImage_coannihilator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.physicalPerturbed_balance_of_clean_slot
+@CorruptedFieldRecovery.physicalPerturbed_balance_of_clean_slot : ∀ {n m : Nat}
+  (C : CorruptedFieldRecovery.BinaryTensor n) (E : CorruptedFieldRecovery.BinaryTensor m)
+  (u :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector m))
+  (z : CorruptedFieldRecovery.BinaryVector n)
+  (hz : Membership.mem.{0, 0} (Submodule.dualCoannihilator.{0, 0} (CorruptedFieldRecovery.modeImage.{0, 0} E)) (u z))
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (hC :
+    ∀ (x y : CorruptedFieldRecovery.BinaryVector n),
+      Eq.{1} (((CorruptedFieldRecovery.physicalThirdSlotBilinForm C z) (T x)) y)
+        (((CorruptedFieldRecovery.physicalThirdSlotBilinForm C z) x) (T y)))
+  (x y : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1}
+    (((CorruptedFieldRecovery.physicalThirdSlotBilinForm (CorruptedFieldRecovery.physicalPerturbedTensor C E u) z)
+        (T x))
+      y)
+    (((CorruptedFieldRecovery.physicalThirdSlotBilinForm (CorruptedFieldRecovery.physicalPerturbedTensor C E u) z) x)
+      (T y))
+CFR_TYPE_END:CorruptedFieldRecovery.physicalPerturbed_balance_of_clean_slot
+'CorruptedFieldRecovery.physicalPerturbed_balance_of_clean_slot' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_actual_good_tape_balance_on_clean_slot
+@CorruptedFieldRecovery.modeImage_actual_good_tape_balance_on_clean_slot.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Finite.{u_1 + 1} K]
+  [inst_4 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_5 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_6 : CharP.{u_1} K 2]
+  [inst_7 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E C : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K)
+  (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (htape :
+    Membership.mem.{0, 0}
+      (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) U b)
+      tape)
+  (k : Fin 4) (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (hC :
+    ∀ (x y : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+      Eq.{1} (((CorruptedFieldRecovery.physicalThirdSlotBilinForm C (tape.1 k)) (T x)) y)
+        (((CorruptedFieldRecovery.physicalThirdSlotBilinForm C (tape.1 k)) x) (T y)))
+  (x y : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{1}
+    (((CorruptedFieldRecovery.physicalThirdSlotBilinForm
+          (CorruptedFieldRecovery.physicalPerturbedTensor C E LinearMap.id.{0, 0}) (tape.1 k))
+        (T x))
+      y)
+    (((CorruptedFieldRecovery.physicalThirdSlotBilinForm
+          (CorruptedFieldRecovery.physicalPerturbedTensor C E LinearMap.id.{0, 0}) (tape.1 k))
+        x)
+      (T y))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_actual_good_tape_balance_on_clean_slot
+'CorruptedFieldRecovery.modeImage_actual_good_tape_balance_on_clean_slot' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

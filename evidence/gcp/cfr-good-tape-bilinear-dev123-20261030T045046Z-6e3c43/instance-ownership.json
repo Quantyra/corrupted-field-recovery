@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-good-tape-bilinear-dev123-20261030T045046Z-6e3c43",
+  "utc": "2026-10-30T04:51:36.591129+00:00"
+}

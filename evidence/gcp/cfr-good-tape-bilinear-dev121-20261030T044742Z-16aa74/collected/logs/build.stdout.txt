@@ -1,0 +1,16 @@
+✖ [2976/2976] Building CorruptedFieldRecovery.S010GoodTapeBilinearBalance (3.1s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.setup.json --json
+error: CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean:30:2: Type mismatch
+  physicalPerturbedContraction_eq_clean_on_modeImage_coannihilator C E u (↑↑x) (↑↑y) z hz
+has type
+  (physicalBinaryContraction (physicalPerturbedTensor C E u) ↑↑x ↑↑y) z = ((C ↑↑x) ↑↑y) z
+but is expected to have type
+  ((physicalThirdSlotBilinForm (physicalPerturbedTensor C E u) z ∘ₗ LinearMap.single (ZMod 2) (fun i => ZMod 2) x) 1 ∘ₗ
+        LinearMap.single (ZMod 2) (fun i => ZMod 2) y)
+      1 =
+    ((physicalThirdSlotBilinForm C z ∘ₗ LinearMap.single (ZMod 2) (fun i => ZMod 2) x) 1 ∘ₗ
+        LinearMap.single (ZMod 2) (fun i => ZMod 2) y)
+      1
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010GoodTapeBilinearBalance
