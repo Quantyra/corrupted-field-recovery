@@ -1,0 +1,5 @@
+⚠ [2047/2047] Built CorruptedFieldRecovery.RawRabinFactorFrobenius (2.4s)
+warning: CorruptedFieldRecovery/RawRabinFactorFrobenius.lean:16:5: unused variable `hdegree`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (2047 jobs).

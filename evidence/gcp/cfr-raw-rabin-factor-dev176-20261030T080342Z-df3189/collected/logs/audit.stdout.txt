@@ -1,0 +1,10 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.irreducible_dvd_X_pow_two_pow_natDegree
+@CorruptedFieldRecovery.irreducible_dvd_X_pow_two_pow_natDegree : ∀ {q : Polynomial.{0} (ZMod 2)}
+  (hq : Irreducible.{0} q) (hmonic : Polynomial.Monic.{0} q),
+  Dvd.dvd.{0} q
+    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} 2 (Polynomial.natDegree.{0} q)))
+      Polynomial.X.{0})
+CFR_TYPE_END:CorruptedFieldRecovery.irreducible_dvd_X_pow_two_pow_natDegree
+'CorruptedFieldRecovery.irreducible_dvd_X_pow_two_pow_natDegree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

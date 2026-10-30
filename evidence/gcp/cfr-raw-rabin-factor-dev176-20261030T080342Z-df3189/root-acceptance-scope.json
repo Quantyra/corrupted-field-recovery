@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T08:11:44.936468+00:00",
+  "review": "Root inspected exact emitted type and source",
+  "accepted": "Monic irreducible q over ZMod2 divides X^(2^natDegree q)-X, no separate positive-degree premise; finite quotient cardinality proof",
+  "excluded": [
+    "scan iff",
+    "gcd criterion",
+    "verifier integration",
+    "costs"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

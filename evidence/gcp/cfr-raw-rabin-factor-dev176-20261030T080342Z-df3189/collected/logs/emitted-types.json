@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.irreducible_dvd_X_pow_two_pow_natDegree": {
+    "emitted_type": "@CorruptedFieldRecovery.irreducible_dvd_X_pow_two_pow_natDegree : \u2200 {q : Polynomial.{0} (ZMod 2)}\n  (hq : Irreducible.{0} q) (hmonic : Polynomial.Monic.{0} q),\n  Dvd.dvd.{0} q\n    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} 2 (Polynomial.natDegree.{0} q)))\n      Polynomial.X.{0})\n",
+    "sha256": "0c7c9f9e3088fdff83c332bfd229c8dcb4e6d87ce3235dc9dec5d090fa65b54c"
+  }
+}
