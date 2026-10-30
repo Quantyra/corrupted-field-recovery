@@ -1,0 +1,353 @@
+{
+  "utc": "2026-10-30T13:28:13.589769+00:00",
+  "launched": [
+    {
+      "run": "cfr-balance-basis-matrix-dev225-20261030T110404Z-4c5a7c",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-basis-matrix-dev227-20261030T110815Z-21d398",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-basis-matrix-dev229-20261030T111430Z-0b5d7b",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-basis-matrix-dev231-20261030T111812Z-4975f0",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-computable-matrix-dev240-20261030T114531Z-192e4a",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-computable-matrix-dev242-20261030T114816Z-d58481",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-computable-matrix-dev244-20261030T115233Z-f0a8ed",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-computable-matrix-dev246-20261030T115630Z-a38fcb",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-gaussian-core-dev257-20261030T122117Z-22919a",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-gaussian-core-dev268-20261030T124426Z-18abcd",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-gaussian-core-dev271-20261030T130628Z-5d9b02",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-gaussian-core-dev274-20261030T132036Z-c54f3f",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-pivot-complete-dev269-20261030T125018Z-699051",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-pivot-complete-dev272-20261030T131456Z-06588b",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-pivot-search-dev266-20261030T124237Z-6f01ee",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-layout-dev254-20261030T121507Z-ec9690",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-layout-dev256-20261030T121908Z-e01a61",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-layout-dev259-20261030T122403Z-8e9ec8",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-layout-dev261-20261030T123008Z-312a50",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-layout-dev263-20261030T123423Z-e32aec",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-layout-dev265-20261030T123858Z-f005ec",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-matrix-dev248-20261030T120330Z-e4ae0c",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-matrix-dev250-20261030T120617Z-eca66a",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-input-matrix-dev252-20261030T121011Z-99f00c",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-matrix-dev235-20261030T113016Z-f7daa1",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-matrix-dev236-20261030T113639Z-6a1aad",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-balance-raw-matrix-dev238-20261030T114116Z-784472",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-observed-balance-dimension-dev218-20261030T104424Z-556d90",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-observed-balance-dimension-dev220-20261030T104929Z-342173",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-observed-balance-dimension-dev222-20261030T105500Z-fb4698",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-executable-scan-cost-dev267-20261030T124324Z-271856",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-executable-scan-cost-dev270-20261030T130139Z-2877fb",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-executable-scan-cost-dev273-20261030T131824Z-8a48a4",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-frobenius-cost-dev249-20261030T120421Z-7c9b59",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-frobenius-cost-dev251-20261030T120818Z-752752",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-frobenius-cost-dev253-20261030T121211Z-6baf25",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-frobenius-cost-dev255-20261030T121645Z-48c5a7",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-bit-cost-dev233-20261030T112822Z-0eb797",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-bit-cost-dev237-20261030T113656Z-4aa024",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-cost-bounds-dev239-20261030T114316Z-29e1a8",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-cost-bounds-dev241-20261030T114603Z-bb9a79",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-cost-bounds-dev243-20261030T115149Z-397cf7",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-cost-bounds-dev245-20261030T115527Z-1be170",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-cost-bounds-dev247-20261030T115901Z-d3b8cc",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-remainder-cost-dev230-20261030T111752Z-ca3603",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-remainder-cost-dev232-20261030T112134Z-0a6062",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-scan-cost-dev258-20261030T122330Z-8aa096",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-scan-cost-dev260-20261030T122725Z-44d5c1",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-scan-cost-dev262-20261030T123159Z-7e5a5a",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-rabin-scan-cost-dev264-20261030T123628Z-21efe8",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-reduction-cost-bounds-dev221-20261030T105419Z-6a61d3",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-reduction-cost-bounds-dev223-20261030T105931Z-273047",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-reduction-cost-bounds-dev226-20261030T110421Z-d6eb18",
+      "exit_code": "1",
+      "accepted": false,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-reduction-cost-bounds-dev228-20261030T111012Z-dc62b4",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    },
+    {
+      "run": "cfr-raw-reduction-cost-dev219-20261030T104634Z-ea1da9",
+      "exit_code": "0",
+      "accepted": true,
+      "terminal_logs_hash_verified": true
+    }
+  ],
+  "never_launched": [
+    {
+      "run": "cfr-balance-constraint-map-dev224-20261030T110315Z-a9829c",
+      "never_launched": true,
+      "held_receipt": true
+    },
+    {
+      "run": "cfr-balance-raw-matrix-dev234-20261030T112954Z-6d0c8e",
+      "never_launched": true,
+      "held_receipt": true
+    }
+  ],
+  "counts": {
+    "launched": 55,
+    "accepted": 14,
+    "failed_or_warning_gated": 41,
+    "never_launched": 2
+  }
+}

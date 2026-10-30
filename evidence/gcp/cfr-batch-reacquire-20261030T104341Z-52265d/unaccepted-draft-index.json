@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-30T13:28:13.594730+00:00",
+  "drafts": [
+    {
+      "path": "CorruptedFieldRecovery/RawReductionBoundsExpanded.lean",
+      "sha256": "3d2f880066e46cbc78fd70098420415b40d9ccf937a29c44c9c5d79ffe798b32",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010BetaActual.lean",
+      "sha256": "cc1e057392b3b39f4ca6703133e2ab37bd81db5f078622d4c879904b78c81a7c",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010NumericTapeBridge.lean",
+      "sha256": "df56e3a358570d3a6248f89913eb03c411b77b86385ede9be9b4fbddbd121078",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010PhysicalFiveCount.lean",
+      "sha256": "1b885ab23035a04919e7c1cf63b2dee0f0c22da5c78596935220bb710f4d3c01",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010BalanceConstraintMatrix.lean",
+      "sha256": "f0f48b2751d39ecf8ef7afbbbb3bcaa0bf26e50290db3b747f10bf45c7c72340",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianCore.lean",
+      "sha256": "963781778015f9370ebeeb2b1a3cecdc8e4a0135a9e70a0e287ee8bce62b2798",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean",
+      "sha256": "0a8b7f64c1b0455bf6a2290446aaa1c52f2facca06d8fa50625bed93481e2283",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/RawRabinScanExecutableCost.lean",
+      "sha256": "a719a936719b0debfeaa0c0a930d6edb87db72338d2f9d0e2056c8fbfe8b13f4",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/RawListRangeBitCost.lean",
+      "sha256": "5783e018760d400e40d485730a90f6e3179e211cb1483d4c62c43031067ca08f",
+      "accepted": false
+    },
+    {
+      "path": "evidence/drafts/S010ObservedHiddenBalance.balance-dimension-uncompiled.lean",
+      "sha256": "edb6633d1714569a3c76ca11269a454499eef405ac8accd994f2f07551f53bac",
+      "accepted": false
+    }
+  ],
+  "notes": {
+    "S010BalanceGaussianCore": "Current exact bytes compiled failed274",
+    "S010BalanceGaussianPivotComplete": "0A8B successor uncompiled; failures269/272 retained",
+    "RawRabinScanExecutableCost": "A719 successor uncompiled; failures267/270/273 retained",
+    "RawListRangeBitCost": "5783 offer uncompiled, never submitted",
+    "dimension_scratch": "Author identifies modified scratch as superseded pre222 uncompiled; old failed217 archive is separate"
+  },
+  "unrelated_scratch_preserved": [
+    ".tmp-accepted211/",
+    ".tmp-canonical-restore/",
+    ".tmp-dev192/"
+  ]
+}

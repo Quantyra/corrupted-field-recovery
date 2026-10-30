@@ -1,0 +1,2 @@
+f172c80054f37d304a8199645a5737b3414ff9d492fee67d2cb60f5e07fd361b  collected-evidence.tar.gz
+CFR_HOME=/home/dfredriksen_quantyra_org

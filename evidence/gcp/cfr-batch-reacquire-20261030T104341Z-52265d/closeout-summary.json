@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-30T13:32:24.937794+00:00",
+  "batch_start_utc": "2026-10-30T10:44:20.958Z",
+  "stop_ceiling_utc": "2026-10-30T14:44:20.958Z",
+  "launched": 55,
+  "accepted": 14,
+  "failed_or_warning_gated": 41,
+  "all_terminal_logs_hash_verified": true,
+  "latest_accepted_sources_head_and_working_verified": 36,
+  "held_never_launched_runs": [
+    224,
+    234
+  ],
+  "preservation_only_capture": "cfr-source-closeout-preservation-20261030T132830Z-bc9517",
+  "stop_operation": "cfr-shutdown-20261030T132907Z-0e0b51",
+  "stop_issued_once": true,
+  "instance_id": "3335066512373302615",
+  "final_state": "TERMINATED",
+  "lastStopTimestamp": "2026-10-30T06:31:46.558-07:00",
+  "task_egress_absent": true,
+  "persistent_disk_cache_retained": true,
+  "no_local_lean_or_lake": true,
+  "full_process_inventory": "cfr-final-full-process-inventory-20261030T132837Z-eb1d06.stdout.txt",
+  "no_active_compiler_or_runner": true,
+  "task_lock_free": true,
+  "future_batch_rule": "Later authorized continuation only; inspect exact terminated VM/profile, effective ingress and saved stop receipt; one fresh start intent/result, ownership, actual start timestamp and 4-hour STOP ceiling; no restart during this closeout",
+  "remaining": [
+    "Actual executable Gaussian solver/kernel basis/field construction and constructor completeness",
+    "Short-circuit scan Bool refinement and aggregate charge successor remains uncompiled",
+    "Primitive bit-machine time/space and full verifier/recovery bound",
+    "Good-event to implemented constructor success and executable bounded repetition",
+    "Full manuscript scope update"
+  ]
+}
