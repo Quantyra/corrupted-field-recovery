@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-30T01:26:17.968251+00:00",
+  "full_inventory_sha256": "22040c5a56b59d8eb176d07ff092a4e00b588b29b58cc8674da46b4b475b6efa",
+  "assessment": "Only kernel, OS/Google guest services and task SSH observed; no unrelated acquired workload.",
+  "no_lean_lake_runner": true,
+  "task_lock_free": true
+}

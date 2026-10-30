@@ -1,0 +1,4 @@
+ERROR: (gcloud.auth.list) unrecognized arguments: --zone=us-central1-a 
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS

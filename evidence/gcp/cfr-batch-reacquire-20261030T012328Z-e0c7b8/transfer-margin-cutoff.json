@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-30T01:25:17.098280+00:00",
+  "actual_start": "2026-10-29T18:24:46.219000-07:00",
+  "STOP_ceiling": "2026-10-29T22:24:46.219000-07:00",
+  "latest_full_stage_launch": "2026-10-29T21:29:46.219000-07:00",
+  "last_submission_start": "2026-10-29T21:22:46.219000-07:00",
+  "transfer_margin_minutes": 7,
+  "stage_budget_minutes": 30,
+  "preserve_stop_margin_minutes": 25
+}
