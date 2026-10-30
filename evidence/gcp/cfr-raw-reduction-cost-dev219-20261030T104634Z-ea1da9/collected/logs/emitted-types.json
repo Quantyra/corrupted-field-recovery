@@ -1,0 +1,26 @@
+{
+  "CorruptedFieldRecovery.rawNatMulBitCharge": {
+    "emitted_type": "CorruptedFieldRecovery.rawNatMulBitCharge : (a b : Nat) \u2192 Nat\n",
+    "sha256": "812d8ba09558246e2c117237f0f4c1691a49a3610b3f935a2308e49ef69d61fc"
+  },
+  "CorruptedFieldRecovery.rawReduceStepBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStepBitCosted : (modulus degree a : Nat) \u2192 Prod.{0, 0} Nat Nat\n",
+    "sha256": "5ebc0844aff69234d08ac81699206c38cc39ec071e7e91a7068d9d9a0a3baf1a"
+  },
+  "CorruptedFieldRecovery.rawReduceStepBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStepBitCosted_fst : \u2200 (modulus degree a : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawReduceStepBitCosted modulus degree a).1\n    (CorruptedFieldRecovery.rawReduceStep modulus degree a)\n",
+    "sha256": "de0e21d5ae19470bd66952260508101bab45baecdbf8c8ab4614c00d8de16203"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelBitCosted : (modulus degree a a : Nat) \u2192 Prod.{0, 0} Nat Nat\n",
+    "sha256": "3145b9cd6bffe8d9f16db0c7f64c853d0b09a8c33d7a66e8f929aea899d28d90"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelBitCosted_fst : \u2200 (modulus degree fuel a : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel a).1\n    (CorruptedFieldRecovery.rawReduceFuel modulus degree fuel a)\n",
+    "sha256": "84fa513d9e7090f1bee1f91a36504b424ec2df7dc369a1d1381a385046b39852"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_eq": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_eq : \u2200 (modulus degree fuel a : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel a).2\n    (ite.{1} (Eq.{1} fuel 0) 0\n      (ite.{1} (LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 degree))\n        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth a) degree) 1)\n        (HAdd.hAdd.{0, 0, 0}\n          (HAdd.hAdd.{0, 0, 0}\n            (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth a) degree) 1)\n            (CorruptedFieldRecovery.rawReduceStepBitCosted modulus degree a).2)\n          (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree (HSub.hSub.{0, 0, 0} fuel 1)\n              (CorruptedFieldRecovery.rawReduceStepBitCosted modulus degree a).1).2)))\n",
+    "sha256": "da551f0858d86c636011ed14914b9731e294631b90d633ef28d5414f2895aeee"
+  }
+}

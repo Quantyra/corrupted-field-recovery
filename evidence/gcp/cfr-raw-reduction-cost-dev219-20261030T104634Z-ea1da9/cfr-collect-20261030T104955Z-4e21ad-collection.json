@@ -1,0 +1,26 @@
+{
+  "run": "cfr-raw-reduction-cost-dev219-20261030T104634Z-ea1da9",
+  "utc": "2026-10-30T10:50:16.458703+00:00",
+  "archive_sha256": "8dc81c3dc4d80547e2cbc3d506c34b639ea2e83ce8bf7384d1a7646446f28dfd",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "0bd5798fc26bdd3c32764bf673474726f206be3fd31ef3b191cb9fdb8170856f",
+    "launch.log": "9a87e76fb2dc77cb2f5cf66193447eb2547fab1e002d63d875548dc01cc4b3f1",
+    "runner-pid": "7bd5f06e303891936f9cfaa5234e2476b0ce426844a9d24642f243cd435389d6",
+    "started-utc": "f1dc68d035b0f8abc1a7dc34ff9643f4afdaf7d6a99db8ea7582574be53aa1e3",
+    "terminal-receipt.json": "08046b9b4dc3ced47753665f0ec9d47515c6c44289868477d31c9c73f2f89942",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "71887ea00a5386c63aab12f11fd73d6269f8711b3d653fff3f571ad6cbd9c3fc",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "c6bb514dbefcbbf5d3f7849770210198b0c495c793110f65f38f2cd85d097db9",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "e7d9bbdf34d5c14ecc812a1795ae881d3871531127f6666818ab8d5ff24d781c",
+    "logs/emitted-types.json": "41afad32c285f4bd14c512c22d498f8f2b210df37f15a67294fdd21f1a881ea2",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "9a87e76fb2dc77cb2f5cf66193447eb2547fab1e002d63d875548dc01cc4b3f1"
+  }
+}

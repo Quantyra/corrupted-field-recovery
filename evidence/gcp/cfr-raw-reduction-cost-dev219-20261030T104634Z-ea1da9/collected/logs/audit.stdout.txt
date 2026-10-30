@@ -1,0 +1,40 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawNatMulBitCharge
+CorruptedFieldRecovery.rawNatMulBitCharge : (a b : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawNatMulBitCharge
+'CorruptedFieldRecovery.rawNatMulBitCharge' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStepBitCosted
+CorruptedFieldRecovery.rawReduceStepBitCosted : (modulus degree a : Nat) → Prod.{0, 0} Nat Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStepBitCosted
+'CorruptedFieldRecovery.rawReduceStepBitCosted' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStepBitCosted_fst
+CorruptedFieldRecovery.rawReduceStepBitCosted_fst : ∀ (modulus degree a : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawReduceStepBitCosted modulus degree a).1
+    (CorruptedFieldRecovery.rawReduceStep modulus degree a)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStepBitCosted_fst
+'CorruptedFieldRecovery.rawReduceStepBitCosted_fst' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelBitCosted
+CorruptedFieldRecovery.rawReduceFuelBitCosted : (modulus degree a a : Nat) → Prod.{0, 0} Nat Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelBitCosted
+'CorruptedFieldRecovery.rawReduceFuelBitCosted' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelBitCosted_fst
+CorruptedFieldRecovery.rawReduceFuelBitCosted_fst : ∀ (modulus degree fuel a : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel a).1
+    (CorruptedFieldRecovery.rawReduceFuel modulus degree fuel a)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelBitCosted_fst
+'CorruptedFieldRecovery.rawReduceFuelBitCosted_fst' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_eq
+CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_eq : ∀ (modulus degree fuel a : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel a).2
+    (ite.{1} (Eq.{1} fuel 0) 0
+      (ite.{1} (LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 degree))
+        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth a) degree) 1)
+        (HAdd.hAdd.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth a) degree) 1)
+            (CorruptedFieldRecovery.rawReduceStepBitCosted modulus degree a).2)
+          (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree (HSub.hSub.{0, 0, 0} fuel 1)
+              (CorruptedFieldRecovery.rawReduceStepBitCosted modulus degree a).1).2)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_eq
+'CorruptedFieldRecovery.rawReduceFuelBitCosted_cost_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

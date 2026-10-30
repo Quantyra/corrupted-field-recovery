@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-30T10:51:37.676851+00:00",
+  "review": "Root exact six types/source",
+  "accepted": "Instrumented step/fuel first projections equal rawReduceStep/Fuel; exact declared cost recurrence and rawNatMulBitCharge",
+  "excluded": [
+    "proved charge upper bound",
+    "concrete machine refinement",
+    "space bound",
+    "full-verifier bound"
+  ],
+  "axioms": "None/propext for definitions and value refinements, standard three maximum for recurrence theorem"
+}

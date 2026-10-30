@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T10:49:22.688464+00:00",
+  "run": "cfr-raw-reduction-cost-dev219-20261030T104634Z-ea1da9",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
