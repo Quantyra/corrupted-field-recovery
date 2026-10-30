@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T14:07:22.844664+00:00",
+  "accepted": "Explicit F2 row update, mulVec formula, kernel preservation for one update and any supplied pivot sequence",
+  "excluded": [
+    "integrated pivot selection",
+    "reduced form",
+    "kernel basis",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

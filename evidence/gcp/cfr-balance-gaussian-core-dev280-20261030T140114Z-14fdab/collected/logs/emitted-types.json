@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.balanceGaussianPivotRow": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianPivotRow : {m n : Nat} \u2192\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) \u2192\n    (pivotRow : Fin m) \u2192 (pivotColumn : Fin n) \u2192 Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)\n",
+    "sha256": "2f9352a8898ce899d32aea487f5813e6aac2bf7bef86dae409618a6dd98a659e"
+  },
+  "CorruptedFieldRecovery.balanceGaussianPivotRow_mulVec_apply": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianPivotRow_mulVec_apply : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (pivotRow : Fin m) (pivotColumn : Fin n) (x : (a : Fin n) \u2192 ZMod 2)\n  (i : Fin m),\n  Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.balanceGaussianPivotRow A pivotRow pivotColumn) x i)\n    (ite.{1} (Eq.{1} i pivotRow) (Matrix.mulVec.{0, 0, 0} A x i)\n      (HAdd.hAdd.{0, 0, 0} (Matrix.mulVec.{0, 0, 0} A x i)\n        (HMul.hMul.{0, 0, 0} (A i pivotColumn) (Matrix.mulVec.{0, 0, 0} A x pivotRow))))\n",
+    "sha256": "9c141b398af57a64cbcf2667fb5458afd9bf5ed10ef00a06415e483c4f9e7d3f"
+  },
+  "CorruptedFieldRecovery.balanceGaussianPivotRow_mulVec_zero_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianPivotRow_mulVec_zero_iff : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (pivotRow : Fin m) (pivotColumn : Fin n) (x : (a : Fin n) \u2192 ZMod 2),\n  Iff (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.balanceGaussianPivotRow A pivotRow pivotColumn) x) 0)\n    (Eq.{1} (Matrix.mulVec.{0, 0, 0} A x) 0)\n",
+    "sha256": "1da15ae69fb4759d08519c6d0243aac37edac17a0407446cec479d2469b7b654"
+  },
+  "CorruptedFieldRecovery.balanceGaussianPivotSequence": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianPivotSequence : {m n : Nat} \u2192\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) \u2192\n    (a : List.{0} (Prod.{0, 0} (Fin m) (Fin n))) \u2192 Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)\n",
+    "sha256": "84ee5f2c3e43bc96242eddf831c86dce88ffd56e9eb5fddd8e5a3396f4e698ba"
+  },
+  "CorruptedFieldRecovery.balanceGaussianPivotSequence_kernel_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianPivotSequence_kernel_iff : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (steps : List.{0} (Prod.{0, 0} (Fin m) (Fin n))) (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2))\n  (x : (a : Fin n) \u2192 ZMod 2),\n  Iff (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.balanceGaussianPivotSequence A steps) x) 0)\n    (Eq.{1} (Matrix.mulVec.{0, 0, 0} A x) 0)\n",
+    "sha256": "833f2dd7b7a2030516c233cb2c14d151c55b5bffd9b4f8bc9a1d2ca05f7b081c"
+  }
+}
