@@ -1,0 +1,56 @@
+✖ [2057/2057] Building CorruptedFieldRecovery.RawRabinScanBitCost (3.2s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinScanBitCost.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanBitCost.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanBitCost.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinScanBitCost.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinScanBitCost.setup.json --json
+error: CorruptedFieldRecovery/RawRabinScanBitCost.lean:16:2: unsolved goals
+case hnm
+a b k : ℕ
+ha : a < 2 ^ k
+hb : b < 2 ^ k
+j : ℕ
+hj : k < j
+hpow : 2 ^ k ≤ 2 ^ j
+haAbove : a.testBit j = false
+hbAbove : b.testBit j = false
+⊢ (2 ^ k).testBit j = false
+error: CorruptedFieldRecovery/RawRabinScanBitCost.lean:97:20: don't know how to synthesize implicit argument `d`
+  @rawCandidateFrobeniusAuxBitCosted_cost_le modulus ?m.442 2 W hmod hmodOne hmodWidth
+    (Decidable.byContradiction fun a => rawRabinCheckIndexBitCosted_cost_le._proof_1_5 hW a) htwoW
+context:
+modulus d W : ℕ
+hmod : modulus ≠ 0
+hmodOne : 1 < modulus
+hmodWidth : modulus < 2 ^ W
+hW : 2 ≤ W
+frob : ℕ × ℕ := ⋯
+argument : ℕ := ⋯
+gcd : ℕ × ℕ := ⋯
+htwoW : 2 < 2 ^ W
+hfrobWidth : frob.1 < 2 ^ W
+hargWidth : argument < 2 ^ (2 * W)
+hmodWidth' : modulus < 2 ^ (2 * W)
+hgcdCost :
+  (rawPolynomialGcdBitCosted modulus argument).2 ≤ (argument.log2 + 2) * (40 * (3 * (2 * W) + 6) ^ 2 * (2 * W + 1))
+hlogArg : argument.log2 < 2 * W
+hgcdBound : gcd.2 ≤ (2 * W + 2) * (40 * (3 * (2 * W) + 6) ^ 2 * (2 * W + 1))
+⊢ ℕ
+error: CorruptedFieldRecovery/RawRabinScanBitCost.lean:97:7: failed to infer `have` declaration type
+error: CorruptedFieldRecovery/RawRabinScanBitCost.lean:63:38: unsolved goals
+modulus d W : ℕ
+hmod : modulus ≠ 0
+hmodOne : 1 < modulus
+hmodWidth : modulus < 2 ^ W
+hW : 2 ≤ W
+frob : ℕ × ℕ := rawCandidateFrobeniusAuxBitCosted modulus d 2
+argument : ℕ := frob.1.xor 2
+gcd : ℕ × ℕ := rawPolynomialGcdBitCosted modulus argument
+htwoW : 2 < 2 ^ W
+hfrobWidth : frob.1 < 2 ^ W
+hargWidth : argument < 2 ^ (2 * W)
+hmodWidth' : modulus < 2 ^ (2 * W)
+hgcdCost :
+  (rawPolynomialGcdBitCosted modulus argument).2 ≤ (argument.log2 + 2) * (40 * (3 * (2 * W) + 6) ^ 2 * (2 * W + 1))
+hlogArg : argument.log2 < 2 * W
+hgcdBound : gcd.2 ≤ (2 * W + 2) * (40 * (3 * (2 * W) + 6) ^ 2 * (2 * W + 1))
+⊢ (rawRabinCheckIndexBitCosted modulus d).2 ≤ rawRabinCheckIndexCharge W d
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinScanBitCost

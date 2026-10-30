@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T12:29:29.130874+00:00",
+  "run": "cfr-raw-rabin-scan-cost-dev260-20261030T122725Z-44d5c1",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
