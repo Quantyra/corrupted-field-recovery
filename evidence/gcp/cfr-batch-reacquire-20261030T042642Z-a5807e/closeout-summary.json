@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-30T07:34:36.953335+00:00",
+  "start_utc": "2026-10-30T04:27:22.892Z",
+  "ceiling_utc": "2026-10-30T08:27:22.892Z",
+  "last_stop_utc": "2026-10-30T07:30:40.440Z",
+  "shutdown_operation": "cfr-shutdown-20261030T072653Z-ae835f",
+  "single_stop": true,
+  "status": "TERMINATED",
+  "instance_id": "3335066512373302615",
+  "task_access_configs": [],
+  "cache_and_disk_retained": true,
+  "launched_runs": 62,
+  "accepted_runs": 18,
+  "failed_or_warning_gated": 44,
+  "all_terminal_log_hashes_verified": true,
+  "latest_accepted_sources_verified": 14,
+  "accepted171_commit": "93b81b6",
+  "unaccepted_drafts": 4,
+  "local_lean_or_lake_executed": false,
+  "preservation_capture": "cfr-source-closeout-preservation-20261030T072431Z-30ce35",
+  "cost_scope": "Legacy gate full logical factor-pair space floor(s/2)*2^(s+1); guards and early rejection caveat. No executed-runtime or polynomial verifier claim. Fast criterion and integration remain open."
+}

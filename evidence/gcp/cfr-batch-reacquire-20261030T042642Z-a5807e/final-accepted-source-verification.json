@@ -1,0 +1,91 @@
+{
+  "utc": "2026-10-30T07:28:45.504038+00:00",
+  "latest_accepted_sources": [
+    {
+      "source": "CorruptedFieldRecovery/S010ModeImageAlignedHiddenBalance.lean",
+      "sha256": "e01a0183381c27a5dbbc312278fe066a729a5e22fa8ddcd42af0f1c0b2af3768",
+      "accepted_run": "cfr-aligned-hidden-balance-dev149-20261030T055242Z-ba2a05",
+      "capture_utc": "2026-10-30T05:52:42.221831+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawExecutableTraceCertificate.lean",
+      "sha256": "6b706d72c346164c0ce3971162bc8fe337cc7654be61629d08028702b6f97c28",
+      "accepted_run": "cfr-executable-trace-certificate-dev145-20261030T054052Z-901d4e",
+      "capture_utc": "2026-10-30T05:40:53.125336+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawExecutableTraceVerifier.lean",
+      "sha256": "875cbe4e0bfa2739534bf01afdbfe101a00b9c859abf4c93917fec5725a6e2f4",
+      "accepted_run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "capture_utc": "2026-10-30T04:36:42.998722+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawExecutableTraceSemantic.lean",
+      "sha256": "8c1a09217125bb75c3916b8e39366bf0d9d76b12c8aadcd71a769ff1814ef400",
+      "accepted_run": "cfr-executable-trace-verifier-dev141-20261030T053304Z-8bb1d4",
+      "capture_utc": "2026-10-30T05:33:04.226912+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawFieldCoordinateBridge.lean",
+      "sha256": "1e3ccac5568f9a67dcf9cc3a22c69376ebc0187ceb4cd4e2e53fa65e71c60e95",
+      "accepted_run": "cfr-executable-trace-semantic-dev133-20261030T051431Z-9030f2",
+      "capture_utc": "2026-10-30T05:14:31.457323+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean",
+      "sha256": "ae0b6d13a2ab8051711a15cd5288f3783a7cefa2dc49863c684600912b2a5243",
+      "accepted_run": "cfr-good-tape-bilinear-dev123-20261030T045046Z-6e3c43",
+      "capture_utc": "2026-10-30T04:50:46.362888+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010GoodTapeHiddenBalance.lean",
+      "sha256": "8c08d692e6a5e74562ce3b84a847da26a27ef3f615f34a71cb004d2e01696709",
+      "accepted_run": "cfr-good-tape-hidden-balance-dev125-20261030T045510Z-2a2df6",
+      "capture_utc": "2026-10-30T04:55:10.783889+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010GoodTapePhysicalContraction.lean",
+      "sha256": "5657dd6f95c9d80ee39eb41af64e1e22aa94ee056215a85cb37a3148c573711b",
+      "accepted_run": "cfr-good-tape-physical-dev117-20261030T044114Z-c4a6d4",
+      "capture_utc": "2026-10-30T04:41:14.967368+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010ObservedCleanTensor.lean",
+      "sha256": "2788bf8584ca5fe01759a753bcf7817f5820f4f443f1eb363e445b9f7fc7f03e",
+      "accepted_run": "cfr-observed-good-tape-balance-dev170-20261030T070610Z-17e32d",
+      "capture_utc": "2026-10-30T07:06:10.941069+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010QInputEquivalence.lean",
+      "sha256": "762a095e58cc468b41aa5b79f7acaf54bf2b61e65a87e222de2ee2814e40de3f",
+      "accepted_run": "cfr-q-input-pointwise-dev147-20261030T054928Z-b676ff",
+      "capture_utc": "2026-10-30T05:49:28.734486+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawRabinIrreducibility.lean",
+      "sha256": "547d7e6c815cabab50356cc2d6ca81ee5c6b71e082bd4438c5351db5fdd6b168",
+      "accepted_run": "cfr-raw-rabin-unchecked-dev154-20261030T060948Z-842e1d",
+      "capture_utc": "2026-10-30T06:09:48.979498+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawRabinFrobenius.lean",
+      "sha256": "cfa5f68eeba877414c7d1dddfe576ae5ce8daef2b60476e996af754fb43b7f2e",
+      "accepted_run": "cfr-raw-rabin-frobenius-dev171-20261030T071414Z-179247",
+      "capture_utc": "2026-10-30T07:14:14.893616+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawRabinGcdCorrectness.lean",
+      "sha256": "aa3214c11e1ad366efb6cdbf631c53a4bc7fa3c6f546a111d8aab5b8936363c8",
+      "accepted_run": "cfr-raw-rabin-gcd-correctness-dev165-20261030T064554Z-3a43a9",
+      "capture_utc": "2026-10-30T06:45:55.504400+00:00"
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawRabinGcdRefinement.lean",
+      "sha256": "f9cc2e5ccfbb006b6e87434fbf873d705c0bbf947d6d51a77a492e692fb77ea5",
+      "accepted_run": "cfr-raw-rabin-gcd-dev158-20261030T062252Z-4727a3",
+      "capture_utc": "2026-10-30T06:22:53.119931+00:00"
+    }
+  ],
+  "all_HEAD_and_working_bytes_match": true,
+  "scope": "Latest accepted source per file from this batch; earlier accepted bytes retained at their focused commits."
+}

@@ -1,0 +1,508 @@
+{
+  "utc": "2026-10-30T07:26:11.253616+00:00",
+  "runs": [
+    {
+      "run": "cfr-aligned-hidden-balance-dev144-20261030T053918Z-5999a2",
+      "launch_utc": "2026-10-30T05:40:51.849741+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:41:15.309154+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-aligned-hidden-balance-dev146-20261030T054321Z-488444",
+      "launch_utc": "2026-10-30T05:45:32.784137+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:46:00.098648+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-aligned-hidden-balance-dev149-20261030T055242Z-ba2a05",
+      "launch_utc": "2026-10-30T05:54:33.489155+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T05:54:58.415906+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-certificate-dev143-20261030T053710Z-1c67b3",
+      "launch_utc": "2026-10-30T05:38:16.260615+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:38:42.614629+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-certificate-dev145-20261030T054052Z-901d4e",
+      "launch_utc": "2026-10-30T05:43:13.732505+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T05:43:37.945618+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-checker-dev110-20261030T042856Z-dd9df8",
+      "launch_utc": "2026-10-30T04:32:07.472982+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:32:25.796089+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-checker-dev112-20261030T043423Z-999393",
+      "launch_utc": "2026-10-30T04:35:03.542719+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:35:21.064505+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "launch_utc": "2026-10-30T04:38:04.052492+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T04:38:25.713840+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-payload-dev135-20261030T052137Z-8481cf",
+      "launch_utc": "2026-10-30T05:22:18.367404+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:22:40.707652+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-payload-dev137-20261030T052420Z-137eaf",
+      "launch_utc": "2026-10-30T05:25:50.809437+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:26:12.779633+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-payload-dev139-20261030T052730Z-579473",
+      "launch_utc": "2026-10-30T05:29:17.762860+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T05:29:40.507172+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev116-20261030T044040Z-1d6fce",
+      "launch_utc": "2026-10-30T04:41:18.170643+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:41:37.103469+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev118-20261030T044242Z-67be22",
+      "launch_utc": "2026-10-30T04:44:21.673472+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:44:42.436829+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev120-20261030T044602Z-c04839",
+      "launch_utc": "2026-10-30T04:47:36.236143+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:47:56.083848+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev122-20261030T044931Z-ae043e",
+      "launch_utc": "2026-10-30T04:50:42.152532+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:50:59.836847+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev124-20261030T045335Z-83e74c",
+      "launch_utc": "2026-10-30T04:54:16.410065+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:55:02.038139+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev127-20261030T045728Z-514df7",
+      "launch_utc": "2026-10-30T05:00:08.219811+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:00:42.652760+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev129-20261030T050252Z-c600ae",
+      "launch_utc": "2026-10-30T05:03:28.133472+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:03:59.895634+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev131-20261030T050555Z-7e995a",
+      "launch_utc": "2026-10-30T05:08:54.440199+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:11:52.201358+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev133-20261030T051431Z-9030f2",
+      "launch_utc": "2026-10-30T05:16:49.835551+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T05:17:32.866712+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-verifier-dev141-20261030T053304Z-8bb1d4",
+      "launch_utc": "2026-10-30T05:33:42.459893+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T05:34:04.681996+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-good-tape-bilinear-dev119-20261030T044442Z-ecd90a",
+      "launch_utc": "2026-10-30T04:46:00.655088+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:46:22.029908+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-bilinear-dev121-20261030T044742Z-16aa74",
+      "launch_utc": "2026-10-30T04:49:13.987926+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:49:33.329878+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-bilinear-dev123-20261030T045046Z-6e3c43",
+      "launch_utc": "2026-10-30T04:52:08.539100+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T04:52:33.531928+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-good-tape-hidden-balance-dev125-20261030T045510Z-2a2df6",
+      "launch_utc": "2026-10-30T04:56:56.366067+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T04:57:18.520929+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-good-tape-physical-dev108-20261030T042816Z-ebfc3a",
+      "launch_utc": "2026-10-30T04:29:08.853654+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:30:52.683749+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-physical-dev111-20261030T043237Z-4de481",
+      "launch_utc": "2026-10-30T04:33:34.726172+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:33:56.947386+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-physical-dev113-20261030T043527Z-2205ac",
+      "launch_utc": "2026-10-30T04:36:27.814030+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:36:48.228655+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-physical-dev115-20261030T043800Z-ed8f54",
+      "launch_utc": "2026-10-30T04:39:22.879159+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:39:42.443961+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-physical-dev117-20261030T044114Z-c4a6d4",
+      "launch_utc": "2026-10-30T04:42:38.398907+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T04:43:01.856333+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-clean-tensor-dev153-20261030T060659Z-82bb32",
+      "launch_utc": "2026-10-30T06:08:33.423912+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:09:11.677674+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-clean-tensor-dev155-20261030T061304Z-ba152d",
+      "launch_utc": "2026-10-30T06:15:32.478347+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:16:22.221335+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-clean-tensor-dev157-20261030T062020Z-ddba07",
+      "launch_utc": "2026-10-30T06:22:47.349930+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:23:36.604394+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-clean-tensor-dev159-20261030T062633Z-a717c7",
+      "launch_utc": "2026-10-30T06:29:52.268919+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:30:35.403208+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-clean-tensor-dev162-20261030T063611Z-c363f3",
+      "launch_utc": "2026-10-30T06:38:27.759442+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:39:43.107261+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-clean-tensor-dev164-20261030T064314Z-627d4a",
+      "launch_utc": "2026-10-30T06:45:55.894892+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:46:39.499913+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-clean-tensor-dev166-20261030T064952Z-f91214",
+      "launch_utc": "2026-10-30T06:53:03.927602+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T06:53:41.374121+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-good-tape-balance-dev168-20261030T065801Z-355468",
+      "launch_utc": "2026-10-30T07:00:44.151553+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T07:01:20.593261+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-good-tape-balance-dev170-20261030T070610Z-17e32d",
+      "launch_utc": "2026-10-30T07:08:41.676446+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T07:09:18.626393+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev126-20261030T045630Z-de71b2",
+      "launch_utc": "2026-10-30T04:58:33.531488+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T04:58:59.047474+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev128-20261030T050016Z-08e113",
+      "launch_utc": "2026-10-30T05:02:17.361124+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:02:35.056702+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev130-20261030T050402Z-da252c",
+      "launch_utc": "2026-10-30T05:06:31.516272+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:07:04.398888+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev132-20261030T050903Z-a89a72",
+      "launch_utc": "2026-10-30T05:13:52.169329+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:14:14.902658+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev134-20261030T051638Z-2aeb74",
+      "launch_utc": "2026-10-30T05:19:37.440440+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:19:58.764153+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev136-20261030T052225Z-ad5143",
+      "launch_utc": "2026-10-30T05:24:08.313635+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:24:28.831212+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev138-20261030T052613Z-dc7d1e",
+      "launch_utc": "2026-10-30T05:27:35.753596+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:27:54.354439+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev140-20261030T052913Z-de49c6",
+      "launch_utc": "2026-10-30T05:30:49.388772+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:31:08.966899+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev142-20261030T053331Z-4db7dc",
+      "launch_utc": "2026-10-30T05:35:32.899152+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T05:36:07.283766+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-q-input-pointwise-dev147-20261030T054928Z-b676ff",
+      "launch_utc": "2026-10-30T05:50:19.921211+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T05:50:44.675783+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-rabin-core-dev148-20261030T055019Z-6322d3",
+      "launch_utc": "2026-10-30T05:52:25.769777+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:52:45.747211+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-core-dev150-20261030T055552Z-4d2569",
+      "launch_utc": "2026-10-30T05:57:46.235742+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T05:58:17.668067+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-core-dev151-20261030T060047Z-5ef14a",
+      "launch_utc": "2026-10-30T06:02:00.075927+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:02:22.812373+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-core-dev152-20261030T060418Z-9478ab",
+      "launch_utc": "2026-10-30T06:05:18.783316+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T06:05:45.949370+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-rabin-frobenius-dev167-20261030T065429Z-4247d7",
+      "launch_utc": "2026-10-30T06:56:33.292379+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:57:07.872184+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-frobenius-dev169-20261030T070105Z-dee819",
+      "launch_utc": "2026-10-30T07:04:41.114532+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T07:05:09.126981+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-frobenius-dev171-20261030T071414Z-179247",
+      "launch_utc": "2026-10-30T07:17:16.650501+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T07:17:52.917799+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-correctness-dev160-20261030T063135Z-a0aed2",
+      "launch_utc": "2026-10-30T06:33:55.165954+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:34:28.839268+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-correctness-dev163-20261030T063911Z-8211b2",
+      "launch_utc": "2026-10-30T06:42:06.786613+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:42:38.345189+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-correctness-dev165-20261030T064554Z-3a43a9",
+      "launch_utc": "2026-10-30T06:49:57.829383+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T06:50:45.781508+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-dev156-20261030T061836Z-1bb9b7",
+      "launch_utc": "2026-10-30T06:20:08.657010+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T06:20:37.411951+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-gcd-dev158-20261030T062252Z-4727a3",
+      "launch_utc": "2026-10-30T06:26:06.971594+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T06:26:48.977823+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-rabin-unchecked-dev154-20261030T060948Z-842e1d",
+      "launch_utc": "2026-10-30T06:12:00.981219+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T06:12:31.010766+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    }
+  ],
+  "launched": 62,
+  "passed": 18,
+  "failed": 44,
+  "root_accepted": 18,
+  "all_launched_outcomes_collected": true,
+  "last_submission_start_cutoff": "2026-10-30T07:25:22.892Z",
+  "latest_launch_request": "2026-10-30T07:17:16.650501+00:00"
+}

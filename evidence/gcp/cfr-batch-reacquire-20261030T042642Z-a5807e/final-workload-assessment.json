@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T07:26:07.604865+00:00",
+  "inventory_sha256": "65e27d4233a99c23d5a28f491eaa0c6d6af39924910ee8df91f9d564a6aa6740",
+  "assessment": "Full process inventory inspected: kernel/OS/Google guest services and task SSH only; no unrelated acquired workload,Lean,Lake or runner. Actual campaign lock verified free.",
+  "safe_to_stop": true
+}
