@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T15:10:09.414828+00:00",
+  "accepted": "No pivot implies zero on currently unused rows; final-used function; supplied initially-zero column stays zero on finally unused rows",
+  "excluded": [
+    "all processed columns zero on final unused rows",
+    "basis",
+    "solver",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

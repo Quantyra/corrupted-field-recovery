@@ -1,0 +1,27 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceFirstUnusedPivotRow_none_zero
+@CorruptedFieldRecovery.balanceFirstUnusedPivotRow_none_zero : ∀ {m n : Nat}
+  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (column : Fin n) (used : Finset.{0} (Fin m))
+  (h : Eq.{1} (CorruptedFieldRecovery.balanceFirstUnusedPivotRow A column used) Option.none.{0}) {row : Fin m}
+  (hrow : row ∉ used), Eq.{1} (A row column) 0
+CFR_TYPE_END:CorruptedFieldRecovery.balanceFirstUnusedPivotRow_none_zero
+'CorruptedFieldRecovery.balanceFirstUnusedPivotRow_none_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceGaussianColumnScanUsed
+@CorruptedFieldRecovery.balanceGaussianColumnScanUsed : {m n : Nat} →
+  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) →
+    (a : Finset.{0} (Fin m)) → (a : List.{0} (Fin n)) → Finset.{0} (Fin m)
+CFR_TYPE_END:CorruptedFieldRecovery.balanceGaussianColumnScanUsed
+'CorruptedFieldRecovery.balanceGaussianColumnScanUsed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceGaussianColumnScan_zero_on_unusedRows
+@CorruptedFieldRecovery.balanceGaussianColumnScan_zero_on_unusedRows : ∀ {m n : Nat} (columns : List.{0} (Fin n))
+  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (used : Finset.{0} (Fin m)) (targetColumn : Fin n)
+  (hzero : ∀ (i : Fin m) (a : i ∉ used), Eq.{1} (A i targetColumn) 0) (i : Fin m)
+  (a : i ∉ CorruptedFieldRecovery.balanceGaussianColumnScanUsed A used columns),
+  Eq.{1} ((CorruptedFieldRecovery.balanceGaussianColumnScan A used columns).1 i targetColumn) 0
+CFR_TYPE_END:CorruptedFieldRecovery.balanceGaussianColumnScan_zero_on_unusedRows
+'CorruptedFieldRecovery.balanceGaussianColumnScan_zero_on_unusedRows' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

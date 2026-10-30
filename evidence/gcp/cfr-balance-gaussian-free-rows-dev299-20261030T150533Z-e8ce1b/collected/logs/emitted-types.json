@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.balanceFirstUnusedPivotRow_none_zero": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceFirstUnusedPivotRow_none_zero : \u2200 {m n : Nat}\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (column : Fin n) (used : Finset.{0} (Fin m))\n  (h : Eq.{1} (CorruptedFieldRecovery.balanceFirstUnusedPivotRow A column used) Option.none.{0}) {row : Fin m}\n  (hrow : row \u2209 used), Eq.{1} (A row column) 0\n",
+    "sha256": "687658e6f1fc0b4a90aa7e7d8111722adcb7e91ce833d748249adaeedd47c71c"
+  },
+  "CorruptedFieldRecovery.balanceGaussianColumnScanUsed": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianColumnScanUsed : {m n : Nat} \u2192\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) \u2192\n    (a : Finset.{0} (Fin m)) \u2192 (a : List.{0} (Fin n)) \u2192 Finset.{0} (Fin m)\n",
+    "sha256": "9af255cdc6e986434d5c64f5c3671ba40fe2e7af06dcde71929c0124d8386e8f"
+  },
+  "CorruptedFieldRecovery.balanceGaussianColumnScan_zero_on_unusedRows": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceGaussianColumnScan_zero_on_unusedRows : \u2200 {m n : Nat} (columns : List.{0} (Fin n))\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (used : Finset.{0} (Fin m)) (targetColumn : Fin n)\n  (hzero : \u2200 (i : Fin m) (a : i \u2209 used), Eq.{1} (A i targetColumn) 0) (i : Fin m)\n  (a : i \u2209 CorruptedFieldRecovery.balanceGaussianColumnScanUsed A used columns),\n  Eq.{1} ((CorruptedFieldRecovery.balanceGaussianColumnScan A used columns).1 i targetColumn) 0\n",
+    "sha256": "3e044b7428005bd09fc05f18309ed9a53cb994bf4e132f5e02179dbde3c98049"
+  }
+}
