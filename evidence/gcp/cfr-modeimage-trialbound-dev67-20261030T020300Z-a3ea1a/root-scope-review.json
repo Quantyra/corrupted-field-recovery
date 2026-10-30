@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Cross-multiplied actual five-good-tape event count bound 2^(4R+3)*card>=2^(13s), retaining field finrank s, s>=2R+5, rank r<=R and supplied E/Q/dependent basis b.",
+  "remaining": "Computed basis, constructor success, amplification and charged costs remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}

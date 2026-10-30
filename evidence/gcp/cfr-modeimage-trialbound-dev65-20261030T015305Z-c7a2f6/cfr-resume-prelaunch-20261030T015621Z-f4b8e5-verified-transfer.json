@@ -1,0 +1,11 @@
+{
+  "remote_home": "/home/dfredriksen_quantyra_org",
+  "sha256": {
+    "inputs.tar.gz": "16768b4946491e434c58a8fdbc0157283a51af2f89f91b7b7eed6f831bb77083",
+    "capture-manifest.json": "8e86d0d86f9617faba91d6d4d1114f8e8134819f1cddf6ae18c6199c835fc00c",
+    "gcp_cfr_runner.py": "b8b5779c34ff0d8da07916a6376f920949c9dd600019d19a878285d0172ec005",
+    "run.sh": "9203e3322e298d8a1db06c75ee956111958f35530980f6ebdd2355744f839d25",
+    "bootstrap-assets.json": "774cc6affdbaa980802d58c48c3d99e5a3badb61460fc9203ee656b3634cdc6b"
+  },
+  "utc": "2026-10-30T01:58:34.781819+00:00"
+}

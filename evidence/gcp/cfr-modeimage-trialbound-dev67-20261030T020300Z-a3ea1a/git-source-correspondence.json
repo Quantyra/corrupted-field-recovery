@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "6d5044acc76a59e8d82ae093253957f5251cc6aa33768313460981e17188d30a",
+  "staged_git_blob_sha256": "6d5044acc76a59e8d82ae093253957f5251cc6aa33768313460981e17188d30a",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ModeImageTrialBound.lean"
+}

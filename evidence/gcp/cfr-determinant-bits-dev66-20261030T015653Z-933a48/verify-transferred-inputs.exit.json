@@ -1,0 +1,18 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-30T02:02:15.821290+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "ssh",
+    "quantyra-cfr-lean-builder-20261028a",
+    "--tunnel-through-iap",
+    "--command=echo c2V0IC1ldQpjZCAiJEhPTUUvcXVhbnR5cmEtY2ZyLXJ1bnMvY2ZyLWRldGVybWluYW50LWJpdHMtZGV2NjYtMjAyNjEwMzBUMDE1NjUzWi05MzNhNDgiCnNoYTI1NnN1bSAtYyA8PCdDRlJfSEFTSEVTJwpjNmZlYThhZTcwNGQxYTYyOTNkZTU4YjFiODk1Yzk2OTM2ZDYwMDc3Yjc2NjBkYmU5M2M3NmFkYjQ4NzNmODRlICBpbnB1dHMudGFyLmd6CjNhYjA1YTUwNTgzM2JkY2JiMWRiZWRkYWQwZGYzNDRmYWI3MmIwYzdkMDc3NDAyNGFlM2YyNWMzMTU3YmZhMDEgIGNhcHR1cmUtbWFuaWZlc3QuanNvbgpiOGI1Nzc5YzM0ZmYwZDhkYTA3OTE2YTYzNzZmOTIwOTQ5YzlkZDYwMDAxOWQxOWE4NzgyODVkMDE3MmVjMDA1ICBnY3BfY2ZyX3J1bm5lci5weQoyNWRlMzNlNTc2MTFhOTlhNzE0Y2EzNTEyYTFmMzVjMWI3NWE4NGExOTQ2M2I4NGI2NDNkNWQ2OWZkNTEwZWY4ICBydW4uc2gKNzc0Y2M2YWZmZGJhYTk4MDgwMmQ1OGM0OGMzZDk5ZTVhM2JhZGI2MTQ2MGZjOTIwM2VlNjU2YjM2MzRjZGM2YiAgYm9vdHN0cmFwLWFzc2V0cy5qc29uCkNGUl9IQVNIRVMK | base64 -d | bash",
+    "--ssh-flag=-hostkey",
+    "--ssh-flag=SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}
