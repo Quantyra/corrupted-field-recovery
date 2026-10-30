@@ -1,0 +1,50 @@
+✖ [2056/2056] Building CorruptedFieldRecovery.RawCandidateShapeCost (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCandidateShapeCost.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapeCost.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapeCost.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCandidateShapeCost.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCandidateShapeCost.setup.json --json
+error: CorruptedFieldRecovery/RawCandidateShapeCost.lean:84:47: unsolved goals
+s : ℕ
+candidate : RawFieldCandidate s
+⊢ (if 1 ≤ s then
+        if Array.size candidate.modulus = s + 1 then
+          if rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1 then
+            if Array.size candidate.scalar = s then
+              (!decide (rawFieldBitsToNat candidate.scalar = 0),
+                rawShapeCompareCharge 1 s + rawShapeCompareCharge (Array.size candidate.modulus) (s + 1) +
+                        ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                              rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s) +
+                            rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2 +
+                          rawShapeCompareCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2) 1) +
+                      rawShapeCompareCharge (Array.size candidate.scalar) s +
+                    (rawFieldBitsToNatBitCosted candidate.scalar).2 +
+                  rawNatBitWidth (rawFieldBitsToNat candidate.scalar))
+            else
+              (false,
+                rawShapeCompareCharge 1 s + rawShapeCompareCharge (Array.size candidate.modulus) (s + 1) +
+                    ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                          rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s) +
+                        rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2 +
+                      rawShapeCompareCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2) 1) +
+                  rawShapeCompareCharge (Array.size candidate.scalar) s)
+          else
+            (false,
+              rawShapeCompareCharge 1 s + rawShapeCompareCharge (Array.size candidate.modulus) (s + 1) +
+                ((rawFieldBitsToNatBitCosted candidate.modulus).2 + s +
+                      rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus) (2 ^ s) +
+                    rawShapeDivisionCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s) 2 +
+                  rawShapeCompareCharge (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2) 1))
+        else (false, rawShapeCompareCharge 1 s + rawShapeCompareCharge (Array.size candidate.modulus) (s + 1))
+      else (false, rawShapeCompareCharge 1 s)).1 =
+    match
+      match
+        match
+          match decide (1 ≤ s) with
+          | false => false
+          | true => decide (Array.size candidate.modulus = s + 1) with
+        | false => false
+        | true => decide (rawFieldBitsToNat candidate.modulus / 2 ^ s % 2 = 1) with
+      | false => false
+      | true => decide (Array.size candidate.scalar = s) with
+    | false => false
+    | true => !decide (rawFieldBitsToNat candidate.scalar = 0)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCandidateShapeCost

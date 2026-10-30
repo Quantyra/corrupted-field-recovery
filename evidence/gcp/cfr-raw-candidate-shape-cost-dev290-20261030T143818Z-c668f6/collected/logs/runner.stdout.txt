@@ -1,0 +1,5 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-raw-candidate-shape-cost-dev290-20261030T143818Z-c668f6/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
