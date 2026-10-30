@@ -1,0 +1,39 @@
+✖ [2989/2989] Building CorruptedFieldRecovery.S010BalanceGaussianPivotComplete (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean:13:17: unsolved goals
+case cons
+α : Type
+p : α → Bool
+a : α
+as : List α
+ih : listFirstMatch as p = List.find? p as
+⊢ (if p a = true then some a else List.find? p as) = List.find? p (a :: as)
+error: CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean:23:34: Type mismatch: After simplification, term
+  ha
+ has type
+  a = x ∨ a ∈ xs
+but is expected to have type
+  a ∈ xs
+error: CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean:24:26: Function expected at
+  ih htail
+but this term has type
+  ∃ b, listFirstMatch xs p = some b
+
+Note: Expected a function because this term is being applied to the argument
+  hp
+error: CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean:24:15: Tactic `rcases` failed: `x✝ : ?m.57` is not an inductive datatype
+error: CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean:35:66: Application type mismatch: The argument
+  hrow
+has type
+  A row column = 1
+but is expected to have type
+  decide (decide (A row column = 1) = true) = true
+in the application
+  of_decide_eq_true hrow
+error: CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean:42:2: 'change' tactic failed, pattern
+  List.find? (fun i => decide (A i column = 1)) (List.ofFn fun i => i) = some picked
+is not definitionally equal to target
+  ∃ row, balanceFirstPivotRow A column = some row
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianPivotComplete

@@ -1,0 +1,6 @@
+{
+  "run": "cfr-balance-pivot-complete-dev269-20261030T125018Z-699051",
+  "utc": "2026-10-30T13:13:13.012657+00:00",
+  "action": "Download existing terminal archive only; no repackage/relaunch",
+  "archive_sha256": "ffd43b4f29fd7b4114932c7dd190d1b09c342e4addbe992c38feb0a2426f7607"
+}
