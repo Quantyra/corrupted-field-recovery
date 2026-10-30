@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery\\RawCandidateVerifierUniformBound.lean",
+  "sha256": "6b65ec00f9d7c54137bb845abbe1b4658a13a53e54379fa9694e345dd1c6b697",
+  "scope": "Unconditional quartic UniformCharge bound and degree-five full instrumented candidate declared-charge bound as exact types. No concrete machine runtime/peakspace/fullrecoverycost.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullcollected/hashverified zero warnings"
+}

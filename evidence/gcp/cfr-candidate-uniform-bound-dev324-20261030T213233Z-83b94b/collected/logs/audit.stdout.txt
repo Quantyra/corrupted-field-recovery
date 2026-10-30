@@ -1,0 +1,22 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinScanUniformCharge_le
+@CorruptedFieldRecovery.rawRabinScanUniformCharge_le : ∀ {W q : Nat},
+  LE.le.{0} (CorruptedFieldRecovery.rawRabinScanUniformCharge W q)
+    (HMul.hMul.{0, 0, 0} 100000 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} W q) 1) 4))
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinScanUniformCharge_le
+'CorruptedFieldRecovery.rawRabinScanUniformCharge_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_degree_five_bound
+@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_degree_five_bound : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted candidate).2
+    (HMul.hMul.{0, 0, 0} 2000000
+      (HPow.hPow.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} s (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))
+            (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))
+          4)
+        5))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_degree_five_bound
+'CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_degree_five_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

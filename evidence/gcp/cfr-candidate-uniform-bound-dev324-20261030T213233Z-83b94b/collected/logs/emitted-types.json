@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawRabinScanUniformCharge_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawRabinScanUniformCharge_le : \u2200 {W q : Nat},\n  LE.le.{0} (CorruptedFieldRecovery.rawRabinScanUniformCharge W q)\n    (HMul.hMul.{0, 0, 0} 100000 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} W q) 1) 4))\n",
+    "sha256": "f16bb3ed0c132597fb644f0f483a8f829f9f815644405fa3ebfb08a387aaad2c"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_degree_five_bound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_degree_five_bound : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted candidate).2\n    (HMul.hMul.{0, 0, 0} 2000000\n      (HPow.hPow.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0}\n          (HAdd.hAdd.{0, 0, 0}\n            (HAdd.hAdd.{0, 0, 0} s (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))\n            (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))\n          4)\n        5))\n",
+    "sha256": "8ab6d7c9f6f5f7c61ac16648a77581ea17a0d7ad7490b517b8f3f74e7260b20b"
+  }
+}
