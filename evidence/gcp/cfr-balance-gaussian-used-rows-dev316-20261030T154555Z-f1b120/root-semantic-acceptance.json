@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery\\S010BalanceGaussianUsedRows.lean",
+  "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+  "scope": "Final used set equals initial used union recorded pivot rows; empty-start corollary. No complete basis/solver result.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "root_review": "Exact recovered two types reviewed after archive hash verification; terminal PASS zero warnings."
+}
