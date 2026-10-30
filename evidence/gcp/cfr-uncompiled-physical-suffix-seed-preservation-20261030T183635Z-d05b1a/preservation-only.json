@@ -1,0 +1,130 @@
+{
+  "run": "cfr-uncompiled-physical-suffix-seed-preservation-20261030T183635Z-d05b1a",
+  "archive_sha256": "93167a614028af41b30e9d8db0e539d49f1d197b274a526f9a5b652a070dc90c",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianPhysicalSuffixSeedBridge.lean",
+  "source_sha256": "F7DCB362D56EEE0BA70B0312EE06971785B65BDE000BB9B7EE321456A2B8C510",
+  "superseded_uncaptured_offer": "2D4B8B44B3D69E7330105CCC6247A267853A6BA9C8D46B2C00A374343CCF7476",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianOrderedSeedIndex.lean",
+      "sha256": "2ce468d88ed557038067c8d3d152f53ed4c9e8062e3be931da4489b91eebb9d0",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean",
+      "sha256": "c570e8331cac2c348f1cbfca136d03a3d4eeef34839863d79e84d84a26666a11",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianScalarRangeBridge.lean",
+      "sha256": "01af6bd687769953407e66ed8c2f0d23941ef4ac3a57ef79b1fb6eb9bc542235",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean",
+      "sha256": "50b74c9b9a064979a3b2010a764e62381fafe5beb275f6bec3a8ec510d4e267a",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagKernelOutputBridge.lean",
+      "sha256": "2ae5bc6b91e81ad572f38ab40da4f132c54b52e91d3f550a358fde54689549d6",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean",
+      "sha256": "d42f28827dd7980699f5cebcf503ef4b174c849b883c53aa8a8f7d4089cf259d",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+      "sha256": "4429c93a112e2b8d210f072ec7d42186028e6febc8c256d9f594dbb089182b59",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+      "sha256": "7afb6f348edb61b610eb983096847e3ab60861b31568d42f7fddf6aa97685264",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean",
+      "sha256": "4ec1f14e3940323b57f27f47f24960b2b3c45f6fa5e213e9ca11225e088c7e4b",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean",
+      "sha256": "db3f52259766552243d6ebe108575c983e34010362858dfa0451eb60784bd2ed",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayDeterministicScan.lean",
+      "sha256": "39871653b3814604a1ba1c67d3145d85f9f7b65fd6f667b64e1718fe2716ae54",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean",
+      "sha256": "e5ddc3a7ec48e73bb584817003f68616393284caf59d7125a5a2e134dd10bbbf",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean",
+      "sha256": "3b5c2c0c4bb2b7af0476fa9e7870caca67c9cc7b41aeea76a1685088582b5f63",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean",
+      "sha256": "aefd885c7dd441b825d1bd647ca501450c0122b152d282adcb1fd60df789fd39",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled dev316 observed PASS; exact collection and acceptance pending"
+    }
+  ],
+  "existing_direct_dependency": {
+    "source": "CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.lean",
+    "sha256": "67bb217bb8f7e2c7f18ded202215bba760e528ee589c44f939d2cd49f4179d6c",
+    "new_audit": false
+  },
+  "scope": "Unaudited prefix-only raw matrix/scan/selector invariance and model physical suffix?computed coefficient seed via true Q/b scalar decoding and endomorphism coordinates; proposed selected-scalar equality, primitive/full goodFifth event iff and suffix/seed bijection.",
+  "hypotheses": [
+    "generic fixed-seed selector invariance supplies both free-index cardinality=s proofs",
+    "bridge supplies true K/Q,E/U/dependent b,full good reference five-word tape,c nonzero,decoded model,dense raw size,field finrank=s",
+    "arbitrary suffix is decoded in b of the fixed reference first-four words"
+  ],
+  "conditional_gap": [
+    "full good reference tape is a premise; no first-four-only hypothesis establishes that such reference exists",
+    "new full goodFifth iff remains conditional on that full-reference/model context",
+    "no conditional uniform probability/fair-bit count implementation or integration certified",
+    "conversion uses supplied hidden-model Q/K/b, not discovered observable-data parameters"
+  ],
+  "limits": [
+    "all new statements and ordered-seed/random-selection dependencies uncompiled/unaudited",
+    "no full constructor/recovery success, sampler randomness cost or primitive runtime/space bound"
+  ]
+}
