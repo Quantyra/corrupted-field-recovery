@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T11:56:34.887773+00:00",
+  "run": "cfr-raw-rabin-gcd-cost-bounds-dev245-20261030T115527Z-1be170",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-balance-computable-matrix-dev246-20261030T115630Z-a38fcb",
+  "utc": "2026-10-30T11:58:04.514540+00:00"
+}

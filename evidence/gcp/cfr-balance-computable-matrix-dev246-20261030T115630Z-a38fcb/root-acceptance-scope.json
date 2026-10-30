@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T12:01:02.859883+00:00",
+  "accepted": "Computable matrix units and coefficient function equal semantic matrix from supplied BinaryTensor A/tape; mulVec repr residual; explicit lists and serialized array definition; outer size=row-list length",
+  "excluded": [
+    "raw input array evaluator",
+    "array entry/order correctness",
+    "all sizes",
+    "Gaussian elimination",
+    "complexity"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

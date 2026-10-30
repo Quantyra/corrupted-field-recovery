@@ -1,0 +1,46 @@
+{
+  "CorruptedFieldRecovery.actualBalanceMatrixUnitEnd": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceMatrixUnitEnd : {n : Nat} \u2192\n  (p q : Fin n) \u2192 Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)\n",
+    "sha256": "3cbfb400008cad977a50d75a6d2946b3279dd40311499242f6201d929f71d42c"
+  },
+  "CorruptedFieldRecovery.actualBalanceMatrixEntry": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceMatrixEntry : {n : Nat} \u2192\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) \u2192 (p q : Fin n) \u2192 ZMod 2\n",
+    "sha256": "fd5ba04734d824ce21c6a23262903ee106558db612fc04a430d39c59cef082ce"
+  },
+  "CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix : {s : Nat} \u2192\n  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) \u2192\n    (tape : CorruptedFieldRecovery.FiveWordTape s) \u2192\n      Matrix.{0, 0, 0} (CorruptedFieldRecovery.ActualBalanceBasisRow s)\n        (Prod.{0, 0} (Fin (HMul.hMul.{0, 0, 0} 3 s)) (Fin (HMul.hMul.{0, 0, 0} 3 s))) (ZMod 2)\n",
+    "sha256": "393698855db8137cfc0ef3c55d8524d46f8be126b04242ccfbdcfe53a14ee951"
+  },
+  "CorruptedFieldRecovery.actualBalanceMatrixUnitEnd_eq_basis": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceMatrixUnitEnd_eq_basis : \u2200 {s : Nat} (p q : Fin (HMul.hMul.{0, 0, 0} 3 s)),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceMatrixUnitEnd p q)\n    ((CorruptedFieldRecovery.actualBalanceEndBasis s) (Prod.mk.{0, 0} p q))\n",
+    "sha256": "a7f7059486c03c80c5c92941982d813f3181178bec1f8ea59ac19d41d94acf3f"
+  },
+  "CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix_eq_raw": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix_eq_raw : \u2200 {s : Nat}\n  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix A tape)\n    (CorruptedFieldRecovery.actualBalanceRawCoefficientMatrix A tape)\n",
+    "sha256": "001d5c2593d6a0323d41e7ce7a872bbec516f9f7540388c4dffb0d01d8022d0a"
+  },
+  "CorruptedFieldRecovery.actualBalanceComputableMatrix_mulVec_residuals": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceComputableMatrix_mulVec_residuals : \u2200 {s : Nat}\n  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),\n  Eq.{1}\n    (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceComputableCoefficientMatrix A tape)\n      \u21d1((Module.Basis.repr.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceEndBasis s)) T))\n    fun row => CorruptedFieldRecovery.actualBalanceBasisResidual A tape T row\n",
+    "sha256": "0253734dc479027af3bb60985040cc16a4c79db12f1dfefda7d8ec20ad4c278a"
+  },
+  "CorruptedFieldRecovery.actualBalanceCoordinateList": {
+    "emitted_type": "CorruptedFieldRecovery.actualBalanceCoordinateList : (n : Nat) \u2192 List.{0} (Fin n)\n",
+    "sha256": "d64cd40adc62abf7e6890a40812c4fab00bd395dae1260c0b20ea2e9b57a353a"
+  },
+  "CorruptedFieldRecovery.actualBalanceRowList": {
+    "emitted_type": "CorruptedFieldRecovery.actualBalanceRowList : (s : Nat) \u2192 List.{0} (CorruptedFieldRecovery.ActualBalanceBasisRow s)\n",
+    "sha256": "261d3a258cd213c1ac820283724aaef8c49e0191a0728baf81b6dc43c9e33c13"
+  },
+  "CorruptedFieldRecovery.actualBalanceColumnList": {
+    "emitted_type": "CorruptedFieldRecovery.actualBalanceColumnList : (s : Nat) \u2192\n  List.{0} (Prod.{0, 0} (Fin (HMul.hMul.{0, 0, 0} 3 s)) (Fin (HMul.hMul.{0, 0, 0} 3 s)))\n",
+    "sha256": "0c874fb2bca96dfc608ee74fe1a20e545155af37c1bcc3e75703c29cd5329f46"
+  },
+  "CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix : {s : Nat} \u2192\n  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) \u2192\n    (tape : CorruptedFieldRecovery.FiveWordTape s) \u2192 Array.{0} (Array.{0} (ZMod 2))\n",
+    "sha256": "f081ec95f6b4f6bd0155efda14db188e3b8bec7727808b0a29bbef70fedbaecd"
+  },
+  "CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_size": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix_size : \u2200 {s : Nat}\n  (A : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s)) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix A tape))\n    (List.length.{0} (CorruptedFieldRecovery.actualBalanceRowList s))\n",
+    "sha256": "cef7b68018952c0972c34be0ba096b44f60533257ce9f63dcd0b8e7e4c06dda2"
+  }
+}

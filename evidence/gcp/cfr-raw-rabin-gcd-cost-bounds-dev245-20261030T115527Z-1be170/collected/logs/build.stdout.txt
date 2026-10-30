@@ -1,0 +1,65 @@
+✖ [2052/2052] Building CorruptedFieldRecovery.RawRabinGcdBitCostBounds (7.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.setup.json --json
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:56:49: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  m ≥ 1
+  l ≥ 2
+  j ≥ 0
+  i - j ≥ 1
+  i - l ≥ 1
+  h ≥ 1
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  d - e ≥ 1
+  d - f ≥ 1
+  c ≥ 1
+where
+ c := ↑A
+ d := ↑2 ^ A
+ e := ↑a
+ f := ↑b
+ g := ↑k
+ h := ↑width
+ i := ↑2 ^ width
+ j := ↑x
+ l := ↑y
+ m := ↑(40 * (3 * width + 6) ^ 2) * ↑(width + 1)
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:66:37: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  o ≥ 0
+  n - o ≥ 1
+  m ≥ 0
+  l ≥ 1
+  j ≥ 0
+  i - j ≥ 1
+  i - m ≥ 3
+  h ≥ 1
+  h ≥ 1
+  g ≥ 0
+  f ≥ 0
+  e - f ≥ 1
+  e - g ≥ 1
+  c ≥ 1
+where
+ c := ↑A
+ e := ↑2 ^ A
+ f := ↑a
+ g := ↑b
+ h := ↑width
+ i := ↑2 ^ width
+ j := ↑x
+ l := ↑(40 * (3 * width + 6) ^ 2) * ↑(width + 1)
+ m := ↑d
+ n := ↑2 ^ (d + 2).log2
+ o := ↑rem.1
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:105:60: Type mismatch
+  hfactor
+has type
+  width * (40 * (3 * width + 6) ^ 2) + width ≤ 40 * (3 * width + 6) ^ 2 * (width + 1)
+but is expected to have type
+  width + width * (40 * (3 * width + 6) ^ 2) ≤ 40 * (3 * width + 6) ^ 2 * (width + 1)
+error: CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean:112:10: `dsimp` made no progress
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinGcdBitCostBounds
