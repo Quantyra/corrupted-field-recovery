@@ -1,0 +1,16 @@
+⚠ [3000/3000] Built CorruptedFieldRecovery.S010BalanceGaussianKernelCandidates (2.9s)
+warning: CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean:39:12: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean:40:12: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (3000 jobs).
