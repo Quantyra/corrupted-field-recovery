@@ -1,0 +1,34 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le_all
+@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le_all : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted candidate).2
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).2
+        (HPow.hPow.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 2))
+      (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2)
+        (CorruptedFieldRecovery.rawRabinScanUniformCharge (HAdd.hAdd.{0, 0, 0} s 1) (HDiv.hDiv.{0, 0, 0} s 2))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le_all
+'CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le_all' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_polynomial_envelope
+@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_polynomial_envelope : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted candidate).2
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} 100
+          (HPow.hPow.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0}
+              (HAdd.hAdd.{0, 0, 0}
+                (HAdd.hAdd.{0, 0, 0} s (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))
+                (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))
+              4)
+            2))
+        (HPow.hPow.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 2))
+      (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2)
+        (CorruptedFieldRecovery.rawRabinScanUniformCharge (HAdd.hAdd.{0, 0, 0} s 1) (HDiv.hDiv.{0, 0, 0} s 2))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_polynomial_envelope
+'CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_polynomial_envelope' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery\\RawCandidateVerifierEnvelope.lean",
+  "sha256": "a8ed63ec3d032fd5266b2ce97232c6f66d65a0e2948b04cf12c494aa4f17f0a9",
+  "scope": "All-candidate full instrumented fast check declared-charge bound; polynomial envelope replacing shape charge by100*(s+modulus.size+scalar.size+4)^2. UniformCharge remains abstract declared charge. No concrete machine/peakspace/whole recovery cost.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS; full logs/hash verified; zero warnings"
+}

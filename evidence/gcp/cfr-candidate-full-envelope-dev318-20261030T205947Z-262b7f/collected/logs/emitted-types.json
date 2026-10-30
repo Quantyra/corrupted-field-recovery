@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le_all": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_cost_le_all : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted candidate).2\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawFieldCandidateShapeCheckBitCosted candidate).2\n        (HPow.hPow.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 2))\n      (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2)\n        (CorruptedFieldRecovery.rawRabinScanUniformCharge (HAdd.hAdd.{0, 0, 0} s 1) (HDiv.hDiv.{0, 0, 0} s 2))))\n",
+    "sha256": "517b6222cec626455be1e564ce4034126c5ceebb535218f7c0fc33b08fccde6a"
+  },
+  "CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_polynomial_envelope": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted_polynomial_envelope : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  LE.le.{0} (CorruptedFieldRecovery.rawFieldCandidateFastCheckFullBitCosted candidate).2\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0}\n        (HMul.hMul.{0, 0, 0} 100\n          (HPow.hPow.{0, 0, 0}\n            (HAdd.hAdd.{0, 0, 0}\n              (HAdd.hAdd.{0, 0, 0}\n                (HAdd.hAdd.{0, 0, 0} s (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))\n                (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))\n              4)\n            2))\n        (HPow.hPow.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 2))\n      (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2)\n        (CorruptedFieldRecovery.rawRabinScanUniformCharge (HAdd.hAdd.{0, 0, 0} s 1) (HDiv.hDiv.{0, 0, 0} s 2))))\n",
+    "sha256": "dc336b5fa135de9cabb1f20572fbe9a4cd3f7fb54f6a34ae1112e913c0edbcfd"
+  }
+}
