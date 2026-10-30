@@ -1,0 +1,41 @@
+--- 
++++ 
+@@ -4,7 +4,8 @@
+ 
+ /-- The counted selector evaluates no more row predicates than there are row
+ indices. Every evaluated predicate reads one flag; only a fresh row evaluates
+-the coefficient-array view. -/
++the coefficient-array view. The charge counts these designated events; it is
++not a complete Lean source-instruction or evaluator-cost count. -/
+ theorem actualBalanceGaussianFlagCountedFindUnusedRow_trace_bounds
+     {m n : Nat} (cells : Array (Array (ZMod 2))) (flags : Array Bool)
+     (column : Fin n) (rows : List (Fin m)) :
+@@ -115,9 +116,9 @@
+           simp only [hsearch, htail]
+           omega
+ 
+-/-- The source-level operation charge of the generic instrumented scan is
+-bounded using the actual pivot count `p`; list cells for the caller-supplied
+-column list are not included here. -/
++/-- The declared primitive charge of the generic instrumented scan is bounded
++using the actual pivot count `p`; list cells for the caller-supplied column
++list are not included here. -/
+ theorem actualBalanceGaussianFlagColumnScanInstrumented_sourceUpper
+     {m n : Nat} (cells : Array (Array (ZMod 2))) (flags : Array Bool)
+     (columns : List (Fin n)) :
+@@ -159,9 +160,13 @@
+   rw [htranscript]
+   exact actualBalanceGaussianFlagColumnScan_pivotCount_le cells flags columns
+ 
+-/-- Polynomial source-charge theorem for the raw flag scan. Its trace comes
++/-- Polynomial declared-charge theorem for the raw flag scan. Its trace comes
+ from the instrumented execution, including the initial false-flag allocation
+-and construction of the column list. -/
++and construction of the column list. This bounds only the primitive categories
++in `ActualBalanceGaussianFlagExecutionTrace.sourceOperationUpper`; it does not
++bound Fin-index arithmetic inside `List.ofFn`, loop/branch/call overhead,
++implicit array bounds/default machinery beyond the explicitly charged views,
++Lean runtime allocation headers, GC, stack space, or bit complexity. -/
+ theorem actualBalanceGaussianSerializedArrayFlagScanInstrumented_sourceUpper
+     {s : Nat} (raw : RawCoefficientArray) (tape : FiveWordTape s) :
+     (actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).2.sourceOperationUpper ≤

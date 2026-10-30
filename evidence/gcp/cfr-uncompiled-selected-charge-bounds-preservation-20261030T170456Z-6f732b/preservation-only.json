@@ -1,0 +1,103 @@
+{
+  "run": "cfr-uncompiled-selected-charge-bounds-preservation-20261030T170456Z-6f732b",
+  "archive_sha256": "d4808164cbc0aa14d4a715de94e24eaeb37b568a59200ff9ca9974406a2b7671",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean",
+  "source_sha256": "5A41FAF707DCC7F4D49D027B694B91C20A5FE4609390A113CEA167FF7220D9FE",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean",
+      "sha256": "df64399143c01a922c26801aa868dcc83e03878e4cb1817fbf132223cd3754a9",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean",
+      "sha256": "db3f52259766552243d6ebe108575c983e34010362858dfa0451eb60784bd2ed",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayDeterministicScan.lean",
+      "sha256": "39871653b3814604a1ba1c67d3145d85f9f7b65fd6f667b64e1718fe2716ae54",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean",
+      "sha256": "e5ddc3a7ec48e73bb584817003f68616393284caf59d7125a5a2e134dd10bbbf",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean",
+      "sha256": "3b5c2c0c4bb2b7af0476fa9e7870caca67c9cc7b41aeea76a1685088582b5f63",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean",
+      "sha256": "aefd885c7dd441b825d1bd647ca501450c0122b152d282adcb1fd60df789fd39",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean",
+      "sha256": "d42f28827dd7980699f5cebcf503ef4b174c849b883c53aa8a8f7d4089cf259d",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+      "sha256": "4429c93a112e2b8d210f072ec7d42186028e6febc8c256d9f594dbb089182b59",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+      "sha256": "7afb6f348edb61b610eb983096847e3ab60861b31568d42f7fddf6aa97685264",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled dev316 observed PASS; exact collection and acceptance pending"
+    }
+  ],
+  "scope": "Unaudited selected-primitive charge statements only, not complete Lean source instructions, evaluator work, machine time or total space. Revision clarifies comments without a compilation/audit claim.",
+  "limits": [
+    "declared unit source charge only, not bit-machine or compiled evaluator/runtime refinement",
+    "per-pivot coefficient/flag update counters remain conservative formula upper charges",
+    "input decoding/coefficient serializer construction excluded",
+    "object headers, closures, stack, GC and total peak memory excluded",
+    "downstream basis/field/Q construction, full verifier and recovery complexity/success not validated",
+    "all imported array/solver refinement drafts uncompiled/unaudited"
+  ],
+  "prior_preserved_archive": "cfr-uncompiled-flag-trace-bounds-preservation-20261030T170302Z-0ec3ee",
+  "superseded_sha256": "50B98482E17CB6996271BCBB832A6B70A7EE6D11DA8DCE47A30D5401E9870D88",
+  "explicit_exclusions": [
+    "Fin-index arithmetic inside List.ofFn",
+    "loop/branch/call overhead",
+    "implicit array bounds/default machinery beyond explicitly charged views",
+    "Lean runtime allocation headers, GC and stack space",
+    "bit complexity",
+    "input decoding and coefficient serialization",
+    "downstream basis/field/Q construction and full recovery"
+  ]
+}
