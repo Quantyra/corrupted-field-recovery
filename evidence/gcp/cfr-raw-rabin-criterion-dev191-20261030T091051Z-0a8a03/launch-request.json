@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T09:11:45.443726+00:00",
+  "run": "cfr-raw-rabin-criterion-dev191-20261030T091051Z-0a8a03",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

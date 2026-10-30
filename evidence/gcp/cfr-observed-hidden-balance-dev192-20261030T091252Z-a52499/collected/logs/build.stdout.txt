@@ -1,0 +1,158 @@
+✖ [2981/2981] Building CorruptedFieldRecovery.S010ObservedHiddenBalance (8.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.setup.json --json
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:167:6: Type mismatch
+  (Algebra.trace (ZMod (ringChar K)) K)
+    (c * fieldDet3 ((modeImage_inputEquiv_from_Q Q) xi) ((modeImage_inputEquiv_from_Q Q) yi) slot)
+has type
+  ZMod (ringChar K)
+but is expected to have type
+  ZMod 2
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:170:9: Type mismatch
+  (Algebra.trace BinaryField K) (c * fieldDet3 (Q x) (Q y) (Q z)) = ?m.127
+has type
+  Prop
+of sort `Type` but is expected to have type
+  Sort u_2
+of sort `Type u_2`
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:227:17: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  iota (binaryToInputCast hp ?x)
+in the target expression
+  Q (T (modeImage_inputVectorToBinary (binaryToInputCast hp x))) = Q (T x)
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+hcoords : ∃ fr v,
+  fr ∈ cleanFrameSet (modeImageSemanticCleanFieldSet Q E) ∧
+    v ∈ goodFourthFinset K (modeImageSemanticCleanFieldSet Q E) (nonGenerators K) fr ∧
+      (fun i => Q (tape.1 i)) = canonicalGoodFourFlatTuple K ⟨fr, v⟩ ∧
+        (∀ (i : Fin 3), Q (tape.1 i.castSucc) = (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) fr) i) ∧
+          Q (tape.1 3) = v :=
+  modeImage_actual_good_tape_q_frame_coordinates Q E U b tape htape
+fr : (_ : (_ : FieldTriple K) × FieldTriple K) × FieldTriple K := hcoords.choose
+frameData : ∃ v,
+  hcoords.choose ∈ cleanFrameSet (modeImageSemanticCleanFieldSet Q E) ∧
+    v ∈ goodFourthFinset K (modeImageSemanticCleanFieldSet Q E) (nonGenerators K) hcoords.choose ∧
+      (fun i => Q (tape.1 i)) = canonicalGoodFourFlatTuple K ⟨hcoords.choose, v⟩ ∧
+        (∀ (i : Fin 3),
+            Q (tape.1 i.castSucc) = (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) hcoords.choose) i) ∧
+          Q (tape.1 3) = v :=
+  Exists.choose_spec hcoords
+v : FieldTriple K := frameData.choose
+hfr : hcoords.choose ∈ cleanFrameSet (modeImageSemanticCleanFieldSet Q E)
+hv : frameData.choose ∈ goodFourthFinset K (modeImageSemanticCleanFieldSet Q E) (nonGenerators K) hcoords.choose
+hflat : (fun i => Q (tape.1 i)) = canonicalGoodFourFlatTuple K ⟨hcoords.choose, frameData.choose⟩
+hslots :
+  ∀ (i : Fin 3),
+    Q (tape.1 i.castSucc) = (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) hcoords.choose) i
+hslot3 : Q (tape.1 3) = frameData.choose
+A : Finset (FieldTriple K) := modeImageSemanticCleanFieldSet Q E
+B : Module.Basis (Fin 3) K (FieldTriple K) := canonicalGoodFrameBasis K A fr
+iota : BinaryInput K (3 * s) ≃ₗ[ZMod (ringChar K)] FieldTriple K := modeImage_inputEquiv_from_Q Q
+hp : ringChar K = 2 := ringChar.eq K 2
+Tin : Module.End (ZMod (ringChar K)) (Fin (3 * s) → ZMod (ringChar K)) := physicalEndomorphismToInput hp T
+hinput : ∀ (x : BinaryInput K (3 * s)), iota x = Q (modeImage_inputVectorToBinary x)
+hinputT : ∀ (x : BinaryInput K (3 * s)), iota (Tin x) = Q (T (modeImage_inputVectorToBinary x))
+hback : ∀ (x : BinaryVector (3 * s)), iota (binaryToInputCast hp x) = Q x
+x : BinaryVector (3 * s)
+⊢ Q (T (modeImage_inputVectorToBinary (binaryToInputCast hp x))) = Q (T x)
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:228:38: Type mismatch: After simplification, term
+  hslots 0
+ has type
+  Q (tape.1 0) = (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) ⋯.choose) 0
+but is expected to have type
+  Q (tape.1 0) = (canonicalGoodFrameBasis K A fr) 0
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:229:38: Type mismatch: After simplification, term
+  hslots 1
+ has type
+  Q (tape.1 1) = (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) ⋯.choose) 1
+but is expected to have type
+  Q (tape.1 1) = (canonicalGoodFrameBasis K A fr) 1
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:230:38: Type mismatch: After simplification, term
+  hslots 2
+ has type
+  Q (tape.1 2) = (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) ⋯.choose) 2
+but is expected to have type
+  Q (tape.1 2) = (canonicalGoodFrameBasis K A fr) 2
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:289:28: Application type mismatch: The argument
+  hbackT x
+has type
+  iota (Tin (binaryToInputCast hp x)) = Q (T x)
+but is expected to have type
+  (modeImage_inputEquiv_from_Q Q) (Tin xi) = Q (T x)
+in the application
+  qCleanSampleOnSlot Q c (tape.1 0) (B 0) hs0 (T x) y (Tin xi) yi ⋯
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:291:28: Application type mismatch: The argument
+  hback x
+has type
+  iota (binaryToInputCast hp x) = Q x
+but is expected to have type
+  (modeImage_inputEquiv_from_Q Q) xi = Q x
+in the application
+  qCleanSampleOnSlot Q c (tape.1 0) (B 0) hs0 x (T y) xi (Tin yi) ⋯
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:298:28: Application type mismatch: The argument
+  hbackT x
+has type
+  iota (Tin (binaryToInputCast hp x)) = Q (T x)
+but is expected to have type
+  (modeImage_inputEquiv_from_Q Q) (Tin xi) = Q (T x)
+in the application
+  qCleanSampleOnSlot Q c (tape.1 1) (B 1) hs1 (T x) y (Tin xi) yi ⋯
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:300:28: Application type mismatch: The argument
+  hback x
+has type
+  iota (binaryToInputCast hp x) = Q x
+but is expected to have type
+  (modeImage_inputEquiv_from_Q Q) xi = Q x
+in the application
+  qCleanSampleOnSlot Q c (tape.1 1) (B 1) hs1 x (T y) xi (Tin yi) ⋯
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:307:28: Application type mismatch: The argument
+  hbackT x
+has type
+  iota (Tin (binaryToInputCast hp x)) = Q (T x)
+but is expected to have type
+  (modeImage_inputEquiv_from_Q Q) (Tin xi) = Q (T x)
+in the application
+  qCleanSampleOnSlot Q c (tape.1 2) (B 2) hs2 (T x) y (Tin xi) yi ⋯
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:309:28: Application type mismatch: The argument
+  hback x
+has type
+  iota (binaryToInputCast hp x) = Q x
+but is expected to have type
+  (modeImage_inputEquiv_from_Q Q) xi = Q x
+in the application
+  qCleanSampleOnSlot Q c (tape.1 2) (B 2) hs2 x (T y) xi (Tin yi) ⋯
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:316:28: Application type mismatch: The argument
+  hbackT x
+has type
+  iota (Tin (binaryToInputCast hp x)) = Q (T x)
+but is expected to have type
+  (modeImage_inputEquiv_from_Q Q) (Tin xi) = Q (T x)
+in the application
+  qCleanSampleOnSlot Q c (tape.1 3) v hs3 (T x) y (Tin xi) yi ⋯
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:318:28: Application type mismatch: The argument
+  hback x
+has type
+  iota (binaryToInputCast hp x) = Q x
+but is expected to have type
+  (modeImage_inputEquiv_from_Q Q) xi = Q x
+in the application
+  qCleanSampleOnSlot Q c (tape.1 3) v hs3 x (T y) xi (Tin yi) ⋯
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ObservedHiddenBalance
