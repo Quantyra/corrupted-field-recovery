@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "e01a0183381c27a5dbbc312278fe066a729a5e22fa8ddcd42af0f1c0b2af3768",
+  "staged_git_blob_sha256": "e01a0183381c27a5dbbc312278fe066a729a5e22fa8ddcd42af0f1c0b2af3768",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ModeImageAlignedHiddenBalance.lean"
+}
