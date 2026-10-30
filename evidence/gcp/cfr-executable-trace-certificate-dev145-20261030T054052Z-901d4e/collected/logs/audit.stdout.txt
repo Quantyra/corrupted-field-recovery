@@ -1,0 +1,65 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_pullback_finrank_le_supportDimension
+@CorruptedFieldRecovery.modeImage_pullback_finrank_le_supportDimension : ∀ {n d R : Nat}
+  (E : CorruptedFieldRecovery.BinaryTensor d)
+  (u :
+    LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2)) (CorruptedFieldRecovery.BinaryVector n)
+      (CorruptedFieldRecovery.BinaryVector d))
+  (hd : LE.le.{0} d R),
+  LE.le.{0}
+    (Module.finrank.{0, 0} (ZMod 2)
+      ↥(CorruptedFieldRecovery.modeImage.{0, 0} (CorruptedFieldRecovery.pullback.{0, 0, 0} E u)))
+    R
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_pullback_finrank_le_supportDimension
+'CorruptedFieldRecovery.modeImage_pullback_finrank_le_supportDimension' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawExecutableTraceCertificate_sound
+@CorruptedFieldRecovery.accepted_rawExecutableTraceCertificate_sound : ∀ {s R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R)
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawExecutableTraceVerifier p candidate forward inverse) Bool.true),
+  ∃ (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) (hcoordinates :
+    Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),
+    And
+      (Eq.{1} (Nat.card.{0} (AdjoinRoot.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)))
+        (HPow.hPow.{0, 0, 0} 2 s))
+      (And
+        (Ne.{1}
+          ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+            (CorruptedFieldRecovery.rawCandidateScalar candidate))
+          0)
+        (And
+          (LE.le.{0}
+            (Module.finrank.{0, 0} (ZMod 2)
+              ↥(CorruptedFieldRecovery.modeImage.{0, 0}
+                  (CorruptedFieldRecovery.pullback.{0, 0, 0}
+                    (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))
+                    (CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))))
+            R)
+          (And
+            (∀ (v : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+              Eq.{1}
+                ((LinearEquiv.symm.{0, 0, 0, 0}
+                    (CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates candidate hfield forward inverse
+                      hcoordinates))
+                  v)
+                ((LinearEquiv.symm.{0, 0, 0, 0}
+                    (CorruptedFieldRecovery.accepted_rawCandidatePowerBasisCoordinates candidate hfield))
+                  ((CorruptedFieldRecovery.rawCoordinateMatrixMap inverse) v)))
+            (∀ (x y z : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+              Eq.{1}
+                ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.input p)) x) y) z)
+                (HAdd.hAdd.{0, 0, 0}
+                  ((((CorruptedFieldRecovery.rawTraceDetTensor candidate hfield forward inverse hcoordinates) x) y) z)
+                  ((((CorruptedFieldRecovery.pullback.{0, 0, 0}
+                          (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))
+                          (CorruptedFieldRecovery.rawSupportMap
+                            (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))
+                        x)
+                      y)
+                    z))))))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawExecutableTraceCertificate_sound
+'CorruptedFieldRecovery.accepted_rawExecutableTraceCertificate_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

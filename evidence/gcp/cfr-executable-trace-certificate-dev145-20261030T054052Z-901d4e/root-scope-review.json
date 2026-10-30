@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Generic pullback modeImage finrank at most R from support dimension bound. Checked proof-free verifier yields quotient Nat.card 2^s, scalar residue nonzero, pullback residual modeImage rank at most R, checked coordinate inverse correspondence and all-vector trace tensor plus factored residual identity. Field/matrix witnesses existential from Boolean check.",
+  "remaining": "Field construction from prior irreducibility; no uniqueness, constructor completeness or runtime claim.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

@@ -1,0 +1,23 @@
+{
+  "run": "cfr-executable-trace-certificate-dev143-20261030T053710Z-1c67b3",
+  "utc": "2026-10-30T05:40:07.658084+00:00",
+  "archive_sha256": "217a9082e1f3f9e87408872db0f80021ab3370bb3a8fb7fe67d02144021a6cab",
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "7ee816f8fd9afe0f3022b61d13b9f68ce7b31710217b2094cc385f5e48e20a7d",
+    "launch.log": "06972433bd04757636009e11207e260e13247f4b240125ff0c3f1f4149963514",
+    "runner-pid": "ec421bc86fa4bf2632174fcdeb039ee2539dbaf0129768784dd04067d9c05a0e",
+    "started-utc": "60062fe199d1cf16f61ea1adf1cd2dfe22aebe2e2add92d385ef213576237129",
+    "terminal-receipt.json": "c918a1999461aeab78d330096a105b9dc2d1a658614c07c60549a718aaf12df8",
+    "logs/build.stderr.txt": "c4a27db198c4d8632369ee6102944ef46e83c20d685f7c17a6aaff9cfcfc710f",
+    "logs/build.stdout.txt": "8eaccedd464a2db1a96b2c256d87f7e7acaa3a11df4f261891edd765c31e8e49",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "2aa87fb217d7cb57b7281cd30942f95a87d4517ac5866b148ab5572e31735842",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "35c263353af89b36e209ec6b1df8fc82d47966bcf7d458c10e4ac67ee77f2e1a",
+    "logs/runner.stdout.txt": "2b0ae1730af72c9205ccba155d38ad698ba57af30c2dd1984b6150ce958d1d84"
+  }
+}
