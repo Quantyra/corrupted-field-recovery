@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "2788bf8584ca5fe01759a753bcf7817f5820f4f443f1eb363e445b9f7fc7f03e",
+  "staged_git_blob_sha256": "2788bf8584ca5fe01759a753bcf7817f5820f4f443f1eb363e445b9f7fc7f03e",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ObservedCleanTensor.lean"
+}

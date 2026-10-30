@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T07:00:44.151553+00:00",
+  "run": "cfr-observed-good-tape-balance-dev168-20261030T065801Z-355468",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

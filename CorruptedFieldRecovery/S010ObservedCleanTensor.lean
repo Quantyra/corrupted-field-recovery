@@ -203,6 +203,53 @@ theorem originalObserved_bilinForm_eq_clean_on_coannihilator
   exact physicalPerturbed_bilinForm_eq_clean_of_modeImage_coannihilator
     (qTraceDeterminantTensor Q c) E u z hz
 
+/-- Full physical four-slot balance on the four observed words, with the first
+two contraction arguments arbitrary. -/
+def actualFourBilinearBalanced {s : Nat} (A : BinaryTensor (3 * s))
+    (tape : FiveWordTape s)
+    (T : Module.End (ZMod 2) (BinaryVector (3 * s))) : Prop :=
+  ∀ i : Fin 4, ∀ x y : BinaryVector (3 * s),
+    physicalThirdSlotBilinForm A (tape.1 i) (T x) y =
+      physicalThirdSlotBilinForm A (tape.1 i) x (T y)
+
+/-- Under the model's explicit C_total = C_clean + E input promise, the
+original observed tensor has the same complete four-word physical balance
+predicate as the Q-derived clean trace-determinant tensor. The actual good
+tape event supplies each required E-mode-image coannihilator condition; no
+balance condition is assumed. -/
+theorem actual_good_tape_observed_four_balance_iff_clean
+    {K : Type*} [Field K] [Fintype K] [DecidableEq K] [Finite K]
+    [CharP K 2] [Algebra BinaryField K] [FiniteDimensional BinaryField K]
+    [Algebra (ZMod (ringChar K)) K]
+    {s : Nat}
+    (Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K)
+    (E : BinaryTensor (3 * s))
+    (U : Submodule BinaryField (KTriple K))
+    (b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K)
+    (tape : FiveWordTape s)
+    (htape : tape ∈ actualFiveGoodTapeSet K Q
+      (modeImageSemanticCleanFieldSet Q E) U b)
+    (Ctotal : BinaryTensor (3 * s)) (c : K)
+    (hmodel : HasObservedTraceDeterminantDecomposition Ctotal E
+      LinearMap.id Q c)
+    (T : Module.End (ZMod 2) (BinaryVector (3 * s))) :
+    actualFourBilinearBalanced Ctotal tape T ↔
+      actualFourBilinearBalanced (qTraceDeterminantTensor Q c) tape T := by
+  constructor
+  · intro h i x y
+    have hform := originalObserved_bilinForm_eq_clean_on_coannihilator
+      Ctotal E LinearMap.id Q c hmodel (tape.1 i)
+      (modeImage_actual_good_tape_words_clean Q E U b tape htape i)
+    have hxy := h i x y
+    rw [hform] at hxy
+    exact hxy
+  · intro h i x y
+    have hform := originalObserved_bilinForm_eq_clean_on_coannihilator
+      Ctotal E LinearMap.id Q c hmodel (tape.1 i)
+      (modeImage_actual_good_tape_words_clean Q E U b tape htape i)
+    rw [hform]
+    exact h i x y
+
 end
 
 end CorruptedFieldRecovery

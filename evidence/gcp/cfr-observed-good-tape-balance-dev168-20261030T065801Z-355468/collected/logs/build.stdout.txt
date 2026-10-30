@@ -1,0 +1,67 @@
+✖ [2978/2978] Building CorruptedFieldRecovery.S010ObservedCleanTensor (4.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ObservedCleanTensor.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedCleanTensor.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedCleanTensor.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedCleanTensor.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedCleanTensor.setup.json --json
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:240:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  physicalThirdSlotBilinForm Ctotal (tape.1 i)
+in the target expression
+  ((physicalThirdSlotBilinForm (qTraceDeterminantTensor Q c) (tape.1 i)) (T x)) y =
+    ((physicalThirdSlotBilinForm (qTraceDeterminantTensor Q c) (tape.1 i)) x) (T y)
+
+case mp
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+Ctotal : BinaryTensor (3 * s)
+c : K
+hmodel : HasObservedTraceDeterminantDecomposition Ctotal E LinearMap.id Q c
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+h : actualFourBilinearBalanced Ctotal tape T
+i : Fin 4
+x y : BinaryVector (3 * s)
+⊢ ((physicalThirdSlotBilinForm (qTraceDeterminantTensor Q c) (tape.1 i)) (T x)) y =
+    ((physicalThirdSlotBilinForm (qTraceDeterminantTensor Q c) (tape.1 i)) x) (T y)
+error: CorruptedFieldRecovery/S010ObservedCleanTensor.lean:245:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  physicalThirdSlotBilinForm Ctotal (tape.1 i)
+in the target expression
+  actualFourBilinearBalanced (qTraceDeterminantTensor Q c) tape T
+
+case mpr
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+Ctotal : BinaryTensor (3 * s)
+c : K
+hmodel : HasObservedTraceDeterminantDecomposition Ctotal E LinearMap.id Q c
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+h : actualFourBilinearBalanced (qTraceDeterminantTensor Q c) tape T
+i : Fin 4
+x y : BinaryVector (3 * s)
+⊢ ((physicalThirdSlotBilinForm Ctotal (tape.1 i)) (T x)) y = ((physicalThirdSlotBilinForm Ctotal (tape.1 i)) x) (T y)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ObservedCleanTensor
