@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T04:02:10.879716+00:00",
+  "attempted_run": "cfr-physical-coordinate-dev102-20261030T040134Z-PLACEHOLDER",
+  "result": "Controller rejected missing immutable capture before any cloud action; corrected to exact captured run",
+  "cloud_launch_occurred": false
+}

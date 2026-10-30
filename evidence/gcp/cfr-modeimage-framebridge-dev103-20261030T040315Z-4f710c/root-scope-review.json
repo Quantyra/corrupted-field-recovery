@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Clean canonical frame and good fourth identify sampledFourBalanced with scalarTripleEndRange and its finrank; actual good tape unpacks frame/fourth and equality of four Q-images, with the same semantic conclusion. Explicit Q/E/U/b,c!=0,field/CharP/algebra instances retained.",
+  "remaining": "Original perturbed-tensor contraction algorithm and full success remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}

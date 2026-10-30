@@ -1,0 +1,5 @@
+⚠ [2973/2973] Built CorruptedFieldRecovery.S010ModeImageFrameBridge (3.7s)
+warning: CorruptedFieldRecovery/S010ModeImageFrameBridge.lean:32:5: unused variable `hfr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (2973 jobs).

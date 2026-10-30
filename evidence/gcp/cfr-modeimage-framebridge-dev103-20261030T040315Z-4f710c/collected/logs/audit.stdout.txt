@@ -1,0 +1,79 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.canonicalGoodFrame_fourth_identification
+CorruptedFieldRecovery.canonicalGoodFrame_fourth_identification.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Finite.{u_1 + 1} K] [inst_4 : CharP.{u_1} K 2]
+  [inst_5 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_6 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_7 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K]
+  (A : Finset.{u_1} (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (fr :
+    (_ : (_ : CorruptedFieldRecovery.FieldTriple.{u_1} K) × CorruptedFieldRecovery.FieldTriple.{u_1} K) ×
+      CorruptedFieldRecovery.FieldTriple.{u_1} K)
+  (hfr : Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.cleanFrameSet.{u_1, u_1} A) fr)
+  (v : CorruptedFieldRecovery.FieldTriple.{u_1} K)
+  (hv :
+    Membership.mem.{u_1, u_1}
+      (CorruptedFieldRecovery.goodFourthFinset.{u_1} K A (CorruptedFieldRecovery.nonGenerators.{u_1} K) fr) v)
+  (c : K) (hc : Ne.{u_1 + 1} c 0),
+  And
+    (∀ (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+      Iff
+        (CorruptedFieldRecovery.sampledFourBalanced.{u_1} K c
+          (CorruptedFieldRecovery.canonicalGoodFrameBasis.{u_1} K A fr) v T)
+        (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K) T))
+    (Eq.{1} (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) ↥(CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K))
+      (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) K))
+CFR_TYPE_END:CorruptedFieldRecovery.canonicalGoodFrame_fourth_identification
+'CorruptedFieldRecovery.canonicalGoodFrame_fourth_identification' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_actual_good_tape_four_contraction_identification
+@CorruptedFieldRecovery.modeImage_actual_good_tape_four_contraction_identification.{u_1} : ∀ {K : Type u_1}
+  [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K] [inst_3 : Finite.{u_1 + 1} K]
+  [inst_4 : CharP.{u_1} K 2] [inst_5 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_6 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_7 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (U : Submodule.{0, u_1} CorruptedFieldRecovery.BinaryField (CorruptedFieldRecovery.KTriple.{u_1} K))
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K)
+  (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (htape :
+    Membership.mem.{0, 0}
+      (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) U b)
+      tape)
+  (c : K) (hc : Ne.{u_1 + 1} c 0),
+  ∃ fr v,
+    And
+      (Membership.mem.{u_1, u_1}
+        (CorruptedFieldRecovery.cleanFrameSet.{u_1, u_1}
+          (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E))
+        fr)
+      (And
+        (Membership.mem.{u_1, u_1}
+          (CorruptedFieldRecovery.goodFourthFinset.{u_1} K
+            (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E)
+            (CorruptedFieldRecovery.nonGenerators.{u_1} K) fr)
+          v)
+        (And
+          (Eq.{u_1 + 1} (fun i => Q (tape.1 i))
+            (CorruptedFieldRecovery.canonicalGoodFourFlatTuple.{u_1} K (Sigma.mk.{u_1, u_1} fr v)))
+          (And
+            (∀ (T : Module.End.{0, u_1} (ZMod (ringChar.{u_1} K)) (CorruptedFieldRecovery.FieldTriple.{u_1} K)),
+              Iff
+                (CorruptedFieldRecovery.sampledFourBalanced.{u_1} K c
+                  (CorruptedFieldRecovery.canonicalGoodFrameBasis.{u_1} K
+                    (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E) fr)
+                  v T)
+                (Membership.mem.{u_1, u_1} (CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K) T))
+            (Eq.{1}
+              (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) ↥(CorruptedFieldRecovery.scalarTripleEndRange.{u_1} K))
+              (Module.finrank.{0, u_1} (ZMod (ringChar.{u_1} K)) K)))))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_actual_good_tape_four_contraction_identification
+'CorruptedFieldRecovery.modeImage_actual_good_tape_four_contraction_identification' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

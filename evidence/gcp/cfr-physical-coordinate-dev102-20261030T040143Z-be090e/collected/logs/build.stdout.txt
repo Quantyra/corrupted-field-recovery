@@ -1,0 +1,11 @@
+⚠ [2032/2032] Built CorruptedFieldRecovery.RawPhysicalCoordinateCorrespondence (3.0s)
+warning: CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.lean:43:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.lean:43:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.lean:43:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (2032 jobs).

@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "5e77f3de6bd2f64cc55672d89e182b989476759b03b0b3e504a65de75f93b4c0",
+  "staged_git_blob_sha256": "5e77f3de6bd2f64cc55672d89e182b989476759b03b0b3e504a65de75f93b4c0",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ModeImageFrameBridge.lean"
+}

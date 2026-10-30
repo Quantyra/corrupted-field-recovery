@@ -1,0 +1,25 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldTripleComponent
+@CorruptedFieldRecovery.rawFieldTripleComponent.{u_1} : {K : Type u_1} →
+  (x : CorruptedFieldRecovery.FieldTriple.{u_1} K) → (block : Fin 3) → K
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldTripleComponent
+'CorruptedFieldRecovery.rawFieldTripleComponent' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPhysicalBlockMask_eq_canonicalComponent
+@CorruptedFieldRecovery.rawPhysicalBlockMask_eq_canonicalComponent : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (w : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (block : Fin 3),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCandidateQuotientClass candidate (CorruptedFieldRecovery.rawPhysicalBlockMask w block))
+    (CorruptedFieldRecovery.rawFieldTripleComponent.{0}
+      ((LinearEquiv.symm.{0, 0, 0, 0}
+          (CorruptedFieldRecovery.rawFieldTripleToBinaryVector (CorruptedFieldRecovery.rawCandidateModulus candidate)
+            (CorruptedFieldRecovery.accepted_rawCandidateModulus_monic candidate hcheck)
+            (have hv := CorruptedFieldRecovery.accepted_rawFieldCandidateCheck candidate hcheck;
+            have hm := CorruptedFieldRecovery.rawFieldCandidateValid_modulus_polynomial candidate hv;
+            id.{0} (And.right hm))))
+        w)
+      block)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPhysicalBlockMask_eq_canonicalComponent
+'CorruptedFieldRecovery.rawPhysicalBlockMask_eq_canonicalComponent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
