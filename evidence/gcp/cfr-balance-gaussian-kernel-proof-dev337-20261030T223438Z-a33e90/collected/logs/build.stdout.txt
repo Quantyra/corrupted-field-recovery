@@ -1,0 +1,5 @@
+⚠ [3001/3001] Built CorruptedFieldRecovery.S010BalanceGaussianKernelProof (3.8s)
+warning: CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean:16:5: unused variable `hfree`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3001 jobs).
