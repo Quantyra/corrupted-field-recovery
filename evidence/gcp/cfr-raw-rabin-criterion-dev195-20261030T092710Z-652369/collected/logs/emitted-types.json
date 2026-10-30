@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.monic_irreducible_iff_frobenius_coprime": {
+    "emitted_type": "@CorruptedFieldRecovery.monic_irreducible_iff_frobenius_coprime : \u2200 {f : Polynomial.{0} (ZMod 2)}\n  (hmonic : Polynomial.Monic.{0} f) (s : Nat) (hdegree : Eq.{1} (Polynomial.natDegree.{0} f) s) (hs : LE.le.{0} 1 s),\n  Iff (Irreducible.{0} f)\n    (\u2200 (d : Nat) (a : LE.le.{0} 1 d) (a : LE.le.{0} d (HDiv.hDiv.{0, 0, 0} s 2)),\n      CorruptedFieldRecovery.rawPolynomialCoprime f\n        (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} 2 d)) Polynomial.X.{0}))\n",
+    "sha256": "dda165dac993df38d5022fcf212803d329368376bcb799aaaa26121ae84b076b"
+  }
+}

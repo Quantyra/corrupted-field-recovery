@@ -1,0 +1,11 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.monic_irreducible_iff_frobenius_coprime
+@CorruptedFieldRecovery.monic_irreducible_iff_frobenius_coprime : ∀ {f : Polynomial.{0} (ZMod 2)}
+  (hmonic : Polynomial.Monic.{0} f) (s : Nat) (hdegree : Eq.{1} (Polynomial.natDegree.{0} f) s) (hs : LE.le.{0} 1 s),
+  Iff (Irreducible.{0} f)
+    (∀ (d : Nat) (a : LE.le.{0} 1 d) (a : LE.le.{0} d (HDiv.hDiv.{0, 0, 0} s 2)),
+      CorruptedFieldRecovery.rawPolynomialCoprime f
+        (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} 2 d)) Polynomial.X.{0}))
+CFR_TYPE_END:CorruptedFieldRecovery.monic_irreducible_iff_frobenius_coprime
+'CorruptedFieldRecovery.monic_irreducible_iff_frobenius_coprime' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

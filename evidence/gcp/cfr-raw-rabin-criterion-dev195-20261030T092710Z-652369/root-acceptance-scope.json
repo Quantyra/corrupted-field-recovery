@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T09:31:46.037339+00:00",
+  "review": "Root exact type/source",
+  "accepted": "Monic binary polynomial f, natDegree f=s and1<=s: Irreducible f iff universal common-divisor coprimality with X^(2^d)-X for all d in[1,s/2]",
+  "excluded": [
+    "executable scan iff",
+    "gate replacement",
+    "runtime"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
