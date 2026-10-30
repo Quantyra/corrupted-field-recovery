@@ -1,0 +1,11 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-30T17:47:13.773686+00:00",
+  "command": [
+    "gcloud",
+    "auth",
+    "list",
+    "--filter=status:ACTIVE",
+    "--format=json"
+  ]
+}
