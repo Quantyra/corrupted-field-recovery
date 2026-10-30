@@ -1,0 +1,18 @@
+{
+  "run": "cfr-source-closeout-numeric-drafts-20261030T155438Z-6a3677",
+  "archive_sha256": "7c6544006bb54cb6e1f913537c3b989405dd787314e32d6a9f603d5ed98137f8",
+  "never_submit": true,
+  "drafts": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200C1114C6C38E408BB972B658D51413FA2FEFAE263846B278D2A2DB4E5A05",
+      "status": "uncompiled never-launched unaccepted"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "D5B3089A458AE95DE2F574B75CB7AE1AC0D4152AF0C613DAA06D500F60D9B881",
+      "status": "uncompiled never-launched unaccepted"
+    }
+  ],
+  "used_rows_provenance": "5FAFA4AF source launched as316 observed PASS; collection/review pending, not uncompiled"
+}
