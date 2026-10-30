@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.modeImage_inputEquiv_from_Q": {
+    "emitted_type": "@CorruptedFieldRecovery.modeImage_inputEquiv_from_Q.{u_1} : {K : Type u_1} \u2192\n  [inst : Field.{u_1} K] \u2192\n    [inst_1 : CharP.{u_1} K 2] \u2192\n      [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K] \u2192\n        [inst_3 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] \u2192\n          {s : Nat} \u2192\n            (Q :\n                LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)\n                  (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))\n                  (CorruptedFieldRecovery.FieldTriple.{u_1} K)) \u2192\n              LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} (ZMod (ringChar.{u_1} K)))\n                (CorruptedFieldRecovery.BinaryInput.{u_1} K (HMul.hMul.{0, 0, 0} 3 s))\n                (CorruptedFieldRecovery.FieldTriple.{u_1} K)\n",
+    "sha256": "77cf35b96ac5bd1323e595c601193940159290d438f247c22bf055c5843cbeb4"
+  }
+}

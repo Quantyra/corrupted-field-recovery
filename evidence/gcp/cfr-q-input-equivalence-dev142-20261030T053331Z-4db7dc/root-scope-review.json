@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Noncomputable construction of ringChar-indexed BinaryInput to FieldTriple linear equivalence from supplied binary Q under CharP2 and explicit algebras, using Q.toEquiv.",
+  "remaining": "No standalone pointwise identity or original C/algorithm result audited.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}
