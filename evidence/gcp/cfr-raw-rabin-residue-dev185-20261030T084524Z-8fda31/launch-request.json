@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T08:46:31.730586+00:00",
+  "run": "cfr-raw-rabin-residue-dev185-20261030T084524Z-8fda31",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

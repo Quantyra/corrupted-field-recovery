@@ -1,0 +1,82 @@
+✖ [2981/2981] Building CorruptedFieldRecovery.S010ObservedHiddenBalance (4.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.setup.json --json
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:117:19: Type mismatch
+  fr.fst.fst.1
+has type
+  K
+but is expected to have type
+  FieldTriple K
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:121:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  canonicalGoodFrameBasis K A fr
+in the target expression
+  B 1 = fr.fst.snd
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+fr : (_ : (_ : FieldTriple K) × FieldTriple K) × FieldTriple K
+v : FieldTriple K
+hfr : fr ∈ cleanFrameSet (modeImageSemanticCleanFieldSet Q E)
+hv : v ∈ goodFourthFinset K (modeImageSemanticCleanFieldSet Q E) (nonGenerators K) fr
+hflat : (fun i => Q (tape.1 i)) = canonicalGoodFourFlatTuple K ⟨fr, v⟩
+right✝ :
+  (∀ (T : Module.End (ZMod (ringChar K)) (FieldTriple K)),
+      sampledFourBalanced K 1 (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) fr) v T ↔
+        T ∈ scalarTripleEndRange K) ∧
+    Module.finrank (ZMod (ringChar K)) ↥(scalarTripleEndRange K) = Module.finrank (ZMod (ringChar K)) K
+A : Finset (FieldTriple K) := modeImageSemanticCleanFieldSet Q E
+B : Module.Basis (Fin 3) K (FieldTriple K) := canonicalGoodFrameBasis K A fr
+hB0 : sorry
+⊢ B 1 = fr.fst.snd
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:124:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  canonicalGoodFrameBasis K A fr
+in the target expression
+  B 2 = fr.snd
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+fr : (_ : (_ : FieldTriple K) × FieldTriple K) × FieldTriple K
+v : FieldTriple K
+hfr : fr ∈ cleanFrameSet (modeImageSemanticCleanFieldSet Q E)
+hv : v ∈ goodFourthFinset K (modeImageSemanticCleanFieldSet Q E) (nonGenerators K) fr
+hflat : (fun i => Q (tape.1 i)) = canonicalGoodFourFlatTuple K ⟨fr, v⟩
+right✝ :
+  (∀ (T : Module.End (ZMod (ringChar K)) (FieldTriple K)),
+      sampledFourBalanced K 1 (canonicalGoodFrameBasis K (modeImageSemanticCleanFieldSet Q E) fr) v T ↔
+        T ∈ scalarTripleEndRange K) ∧
+    Module.finrank (ZMod (ringChar K)) ↥(scalarTripleEndRange K) = Module.finrank (ZMod (ringChar K)) K
+A : Finset (FieldTriple K) := modeImageSemanticCleanFieldSet Q E
+B : Module.Basis (Fin 3) K (FieldTriple K) := canonicalGoodFrameBasis K A fr
+hB0 : sorry
+hB1 : B 1 = fr.fst.snd
+⊢ B 2 = fr.snd
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ObservedHiddenBalance
