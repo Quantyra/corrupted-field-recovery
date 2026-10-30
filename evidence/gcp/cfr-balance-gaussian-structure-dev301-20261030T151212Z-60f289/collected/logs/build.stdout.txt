@@ -1,0 +1,34 @@
+✖ [2996/2996] Building CorruptedFieldRecovery.S010BalanceGaussianStructure (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianStructure.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianStructure.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianStructure.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianStructure.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianStructure.setup.json --json
+warning: CorruptedFieldRecovery/S010BalanceGaussianStructure.lean:60:54: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+error: CorruptedFieldRecovery/S010BalanceGaussianStructure.lean:62:10: Tactic `apply` failed: could not unify the conclusion of `List.nodup_cons.mpr`
+  (?m.166 :: ?m.167).Nodup
+with the goal
+  (List.map Prod.fst (balanceGaussianColumnScan A used (column :: columns)).2).Nodup
+
+Note: The full type of `List.nodup_cons.mpr` is
+  ?m.166 ∉ ?m.167 ∧ List.Nodup ?m.167 → (?m.166 :: ?m.167).Nodup
+
+case cons.some
+m n : ℕ
+column : Fin n
+columns : List (Fin n)
+ih :
+  ∀ (A : Matrix (Fin m) (Fin n) (ZMod 2)) (used : Finset (Fin m)),
+    (List.map Prod.fst (balanceGaussianColumnScan A used columns).2).Nodup
+A : Matrix (Fin m) (Fin n) (ZMod 2)
+used : Finset (Fin m)
+row : Fin m
+h : balanceFirstUnusedPivotRow A column used = some row
+rest : Matrix (Fin m) (Fin n) (ZMod 2) × List (Fin m × Fin n) :=
+  balanceGaussianColumnScan (balanceGaussianPivotRow A row column) (insert row used) columns
+htail :
+  (List.map Prod.fst
+      (balanceGaussianColumnScan (balanceGaussianPivotRow A row column) (insert row used) columns).2).Nodup
+hhead : row ∉ List.map Prod.fst rest.2
+⊢ (List.map Prod.fst (balanceGaussianColumnScan A used (column :: columns)).2).Nodup
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianStructure
