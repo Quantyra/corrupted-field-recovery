@@ -1,0 +1,9 @@
+⚠ [2995/2995] Built CorruptedFieldRecovery.S010BalanceGaussianFreeRows (3.6s)
+warning: CorruptedFieldRecovery/S010BalanceGaussianFreeRows.lean:26:10: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵]̵ ̵at hpivot
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (2995 jobs).
