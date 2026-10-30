@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+  "sha256": "43fc8e5c0259d1426ecd9c605000c268e1a30770f73d97da1ba414ad67cbb7ca",
+  "scope": "Generic zero-free uniqueness under row Nodup/unit columns; conditional reconstruction under candidate-kernel; actual full-scan candidate linear independence and reconstruction for FINAL scan matrix kernel with explicit Fintype instance. Does not itself state original A kernel, serialized solver, or complexity.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}

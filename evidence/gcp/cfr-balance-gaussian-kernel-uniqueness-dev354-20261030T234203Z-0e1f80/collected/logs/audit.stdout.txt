@@ -1,0 +1,79 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceGaussianKernel_zero_of_freeCoordinates_zero
+@CorruptedFieldRecovery.balanceGaussianKernel_zero_of_freeCoordinates_zero : ∀ {m n : Nat} [inst : Fintype.{0} (Fin n)]
+  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) (pivots : List.{0} (Prod.{0, 0} (Fin m) (Fin n)))
+  (x : (a : Fin n) → ZMod 2) (hrows : List.Nodup.{0} (List.map.{0, 0} Prod.fst.{0, 0} pivots))
+  (hunit :
+    ∀ (pivot : Prod.{0, 0} (Fin m) (Fin n)) (a : Membership.mem.{0, 0} pivots pivot) (i : Fin m),
+      Eq.{1} (A i pivot.2) (ite.{1} (Eq.{1} i pivot.1) 1 0))
+  (hfreezero : ∀ (column : Fin n) (a : column ∉ List.map.{0, 0} Prod.snd.{0, 0} pivots), Eq.{1} (x column) 0)
+  (hker : Eq.{1} (Matrix.mulVec.{0, 0, 0} A x) 0), Eq.{1} x 0
+CFR_TYPE_END:CorruptedFieldRecovery.balanceGaussianKernel_zero_of_freeCoordinates_zero
+'CorruptedFieldRecovery.balanceGaussianKernel_zero_of_freeCoordinates_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_reconstruct_of_pivotRows
+@CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_reconstruct_of_pivotRows : ∀ {m n : Nat}
+  [inst : Fintype.{0} (Fin n)] (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2))
+  (pivots : List.{0} (Prod.{0, 0} (Fin m) (Fin n)))
+  [inst_1 : Fintype.{0} (CorruptedFieldRecovery.balanceGaussianFreeIndex pivots)]
+  (hrows : List.Nodup.{0} (List.map.{0, 0} Prod.fst.{0, 0} pivots))
+  (hunit :
+    ∀ (pivot : Prod.{0, 0} (Fin m) (Fin n)) (a : Membership.mem.{0, 0} pivots pivot) (i : Fin m),
+      Eq.{1} (A i pivot.2) (ite.{1} (Eq.{1} i pivot.1) 1 0))
+  (hcandidate :
+    ∀ (free : CorruptedFieldRecovery.balanceGaussianFreeIndex pivots),
+      Eq.{1} (Matrix.mulVec.{0, 0, 0} A (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily A pivots free)) 0)
+  (x : (a : Fin n) → ZMod 2) (a : Eq.{1} (Matrix.mulVec.{0, 0, 0} A x) 0),
+  Eq.{1} x
+    (∑ free, HSMul.hSMul.{0, 0, 0} (x ↑free) (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily A pivots free))
+CFR_TYPE_END:CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_reconstruct_of_pivotRows
+'CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily_reconstruct_of_pivotRows' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceGaussianFullColumnScan_candidates_linearIndependent
+@CorruptedFieldRecovery.balanceGaussianFullColumnScan_candidates_linearIndependent : ∀ {m n : Nat}
+  [inst : Fintype.{0} (Fin n)] (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2))
+  [inst :
+    Fintype.{0}
+      (CorruptedFieldRecovery.balanceGaussianFreeIndex
+        (CorruptedFieldRecovery.balanceGaussianColumnScan A EmptyCollection.emptyCollection.{0}
+            (List.ofFn.{0} fun j => j)).2)],
+  LinearIndependent.{0, 0, 0} (ZMod 2)
+    (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily
+      (CorruptedFieldRecovery.balanceGaussianColumnScan A EmptyCollection.emptyCollection.{0}
+          (List.ofFn.{0} fun j => j)).1
+      (CorruptedFieldRecovery.balanceGaussianColumnScan A EmptyCollection.emptyCollection.{0}
+          (List.ofFn.{0} fun j => j)).2)
+CFR_TYPE_END:CorruptedFieldRecovery.balanceGaussianFullColumnScan_candidates_linearIndependent
+'CorruptedFieldRecovery.balanceGaussianFullColumnScan_candidates_linearIndependent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.balanceGaussianFullColumnScan_candidates_reconstruct
+@CorruptedFieldRecovery.balanceGaussianFullColumnScan_candidates_reconstruct : ∀ {m n : Nat}
+  [inst : Fintype.{0} (Fin n)] (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2))
+  [inst_1 :
+    Fintype.{0}
+      (CorruptedFieldRecovery.balanceGaussianFreeIndex
+        (CorruptedFieldRecovery.balanceGaussianColumnScan A EmptyCollection.emptyCollection.{0}
+            (List.ofFn.{0} fun j => j)).2)]
+  (x : (a : Fin n) → ZMod 2)
+  (a :
+    Eq.{1}
+      (Matrix.mulVec.{0, 0, 0}
+        (CorruptedFieldRecovery.balanceGaussianColumnScan A EmptyCollection.emptyCollection.{0}
+            (List.ofFn.{0} fun j => j)).1
+        x)
+      0),
+  Eq.{1} x
+    (∑ free,
+      HSMul.hSMul.{0, 0, 0} (x ↑free)
+        (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily
+          (CorruptedFieldRecovery.balanceGaussianColumnScan A EmptyCollection.emptyCollection.{0}
+              (List.ofFn.{0} fun j => j)).1
+          (CorruptedFieldRecovery.balanceGaussianColumnScan A EmptyCollection.emptyCollection.{0}
+              (List.ofFn.{0} fun j => j)).2
+          free))
+CFR_TYPE_END:CorruptedFieldRecovery.balanceGaussianFullColumnScan_candidates_reconstruct
+'CorruptedFieldRecovery.balanceGaussianFullColumnScan_candidates_reconstruct' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
