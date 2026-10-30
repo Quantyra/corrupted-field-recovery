@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T05:30:49.388772+00:00",
+  "run": "cfr-q-input-equivalence-dev140-20261030T052913Z-de49c6",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

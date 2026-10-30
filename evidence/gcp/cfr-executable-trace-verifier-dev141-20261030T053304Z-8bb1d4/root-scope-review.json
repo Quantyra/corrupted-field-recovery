@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Proof-free rawExecutableTraceVerifier Boolean dependent-if candidate check; acceptance yields candidate and matrix checks, support dimension at most R, nonzero quotient scalar, and all-vector decoded input equals rawTraceDetTensor plus pullback residual.",
+  "remaining": "Explicit cardinality/field-coordinate certificate corollary, serialized input wellformed semantics if relevant, constructor completeness and primitive costs remain open. No broad complete theorem claim.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}
