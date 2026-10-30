@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-candidate-uniform-bound-dev320-20261030T211520Z-807282",
+  "utc": "2026-10-30T21:16:52.525145+00:00"
+}

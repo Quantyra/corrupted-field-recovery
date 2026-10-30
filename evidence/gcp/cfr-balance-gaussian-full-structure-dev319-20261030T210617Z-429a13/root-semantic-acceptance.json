@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery\\S010BalanceGaussianFullStructure.lean",
+  "sha256": "a76fc90dc5c8c730936f6604963c95e3fe2efebb8ccd325b86c9c625c26141e7",
+  "scope": "After full List.ofFn column scan from empty used set, row not in recorded pivot rows is zero in every column. No basis extraction/full solver/cost.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hashverified zero warnings"
+}
