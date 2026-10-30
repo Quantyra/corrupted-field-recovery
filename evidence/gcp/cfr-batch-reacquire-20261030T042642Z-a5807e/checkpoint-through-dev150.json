@@ -1,0 +1,262 @@
+{
+  "utc": "2026-10-30T06:01:22.483243+00:00",
+  "runs": [
+    {
+      "run": "cfr-aligned-hidden-balance-dev144-20261030T053918Z-5999a2",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-aligned-hidden-balance-dev146-20261030T054321Z-488444",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-aligned-hidden-balance-dev149-20261030T055242Z-ba2a05",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-certificate-dev143-20261030T053710Z-1c67b3",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-certificate-dev145-20261030T054052Z-901d4e",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-checker-dev110-20261030T042856Z-dd9df8",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-checker-dev112-20261030T043423Z-999393",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-payload-dev135-20261030T052137Z-8481cf",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-payload-dev137-20261030T052420Z-137eaf",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-payload-dev139-20261030T052730Z-579473",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev116-20261030T044040Z-1d6fce",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev118-20261030T044242Z-67be22",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev120-20261030T044602Z-c04839",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev122-20261030T044931Z-ae043e",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev124-20261030T045335Z-83e74c",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev127-20261030T045728Z-514df7",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev129-20261030T050252Z-c600ae",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev131-20261030T050555Z-7e995a",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-executable-trace-semantic-dev133-20261030T051431Z-9030f2",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-executable-trace-verifier-dev141-20261030T053304Z-8bb1d4",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-good-tape-bilinear-dev119-20261030T044442Z-ecd90a",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-bilinear-dev121-20261030T044742Z-16aa74",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-bilinear-dev123-20261030T045046Z-6e3c43",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-good-tape-hidden-balance-dev125-20261030T045510Z-2a2df6",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-good-tape-physical-dev108-20261030T042816Z-ebfc3a",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-physical-dev111-20261030T043237Z-4de481",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-physical-dev113-20261030T043527Z-2205ac",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-physical-dev115-20261030T043800Z-ed8f54",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-good-tape-physical-dev117-20261030T044114Z-c4a6d4",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev126-20261030T045630Z-de71b2",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev128-20261030T050016Z-08e113",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev130-20261030T050402Z-da252c",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev132-20261030T050903Z-a89a72",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev134-20261030T051638Z-2aeb74",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev136-20261030T052225Z-ad5143",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev138-20261030T052613Z-dc7d1e",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev140-20261030T052913Z-de49c6",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-q-input-equivalence-dev142-20261030T053331Z-4db7dc",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-q-input-pointwise-dev147-20261030T054928Z-b676ff",
+      "status": "passed",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-rabin-core-dev148-20261030T055019Z-6322d3",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-core-dev150-20261030T055552Z-4d2569",
+      "status": "failed",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    }
+  ],
+  "collected": 42,
+  "passed": 11,
+  "failed": 31,
+  "active_submission": "cfr-raw-rabin-core-dev151-20261030T060047Z-5ef14a",
+  "cost_boundary": "Raw legacy factor gate logical pairs floor(s/2)*2^(s+1); no polynomial primitive-bit runtime certified."
+}
