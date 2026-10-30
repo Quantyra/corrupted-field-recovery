@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T01:51:59.149149+00:00",
+  "run": "cfr-determinant-bits-dev64-20261030T014804Z-f96b1c",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
