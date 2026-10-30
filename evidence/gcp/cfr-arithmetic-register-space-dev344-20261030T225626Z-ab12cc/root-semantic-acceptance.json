@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.lean",
+  "sha256": "72cf41fbe72d9bf2f0caa60f3dbbd7082c20470c0264b4527360d70518daea42",
+  "scope": "Abstract frame/stack definitions and live-bit bounds conditional on supplied stack length and per-register width. No execution/evaluator reachability, width invariant, heap, or full verifier-space theorem follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}
