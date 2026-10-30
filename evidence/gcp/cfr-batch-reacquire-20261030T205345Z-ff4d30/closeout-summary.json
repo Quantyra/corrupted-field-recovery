@@ -1,0 +1,16 @@
+{
+  "status": "safely_closed",
+  "actual_start_utc": "2026-10-30T20:54:44.324Z",
+  "verified_stop_utc": "2026-10-30T23:52:04.756Z",
+  "fresh_launched": 38,
+  "root_accepted_fresh": 11,
+  "recovered_run316_accepted": true,
+  "all_launched_collected": true,
+  "latest_accepted_source_hashes_verified": 62,
+  "task_egress_removed": true,
+  "retained_disk_gb": 100,
+  "full_process_inventory_reviewed": true,
+  "unrelated_workload_present": false,
+  "no_local_lean_or_lake": true,
+  "next_batch_controls": "A later authorized continuation must read this stop receipt, verify the same account/exact VM/profile/effective ingress, record one fresh bounded start, verify task egress absence before any task-only add, and preserve a new deadline/process lock guard. Never-submit preservation archives remain ineligible for submission; create fresh exact audit captures. No duplicate start/stop or launch is authorized by a transport uncertainty."
+}

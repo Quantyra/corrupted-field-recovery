@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-30T23:48:09.598406+00:00",
+  "receipt": "cfr-final-full-process-guard-20261030T234630Z-d8e07b",
+  "full_inventory_inspected": true,
+  "unrelated_workload_present": false,
+  "active_lean_or_lake": false,
+  "campaign_lock_free": true,
+  "observed_process_scope": "Kernel workers, system services, and the read-only guard SSH/ps session only."
+}
