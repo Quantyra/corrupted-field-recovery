@@ -1,0 +1,100 @@
+✖ [1843/1843] Building CorruptedFieldRecovery.RawReductionBitCostBounds (7.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawReductionBitCostBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBitCostBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBitCostBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionBitCostBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionBitCostBounds.setup.json --json
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:38:14: Unknown constant `Nat.mul_lt_mul`
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:40:40: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  j ≥ 0
+  i ≥ 0
+  i + j ≤ 0
+  h ≥ 0
+  g - h ≥ 1
+  f ≥ 1
+  e - f ≥ 1
+  d ≥ 1
+  c - d ≥ 1
+where
+ c := ↑2 ^ rawNatBitWidth a
+ d := ↑a
+ e := ↑2 ^ rawNatBitWidth b
+ f := ↑b
+ g := ↑2 ^ (rawNatBitWidth a + rawNatBitWidth b)
+ h := ↑a * ↑b
+ i := ↑(rawNatBitWidth a)
+ j := ↑(rawNatBitWidth b)
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:42:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  m ≥ 0
+  l ≥ 0
+  k ≥ 0
+  k - l - m ≥ 3
+  j ≥ 0
+  i ≥ 0
+  i + j - k ≥ 1
+  h ≥ 0
+  g - h ≥ 1
+  f ≥ 1
+  e - f ≥ 1
+  d ≥ 1
+  c - d ≥ 1
+where
+ c := ↑2 ^ rawNatBitWidth a
+ d := ↑a
+ e := ↑2 ^ rawNatBitWidth b
+ f := ↑b
+ g := ↑2 ^ (rawNatBitWidth a + rawNatBitWidth b)
+ h := ↑a * ↑b
+ i := ↑(rawNatBitWidth a)
+ j := ↑(rawNatBitWidth b)
+ k := ↑(a * b).log2
+ l := ↑a.log2
+ m := ↑b.log2
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:59:31: Unknown constant `Nat.log2_pow`
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:60:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  g ≥ 0
+  g + i ≥ 0
+  f ≥ 0
+  e - f ≥ 1
+  d ≥ 1
+  d - g ≥ 0
+  d - g - i ≥ 1
+  d - h ≤ -1
+  b ≥ 0
+  b - 2*c ≤ -1
+  b - c ≥ 0
+where
+ b := ↑modulus
+ c := ↑2 ^ degree
+ d := ↑W
+ e := ↑2 ^ W
+ f := ↑a
+ g := ↑(a.log2 - degree)
+ h := ↑(2 ^ shift).log2
+ i := ↑degree
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:101:31: Application type mismatch: The argument
+  LT.lt.le hlog
+has type
+  a.log2 ≤ W
+but is expected to have type
+  ?m.82 > 0
+in the application
+  @Nat.pow_le_pow_right ?m.82 (LT.lt.le hlog)
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:117:42: unsolved goals
+case ha
+degree modulus W : ℕ
+hmodLower : 2 ^ degree ≤ modulus
+hmodUpper : modulus < 2 ^ (degree + 1)
+hdegree : degree ≤ W
+hW : 0 < W
+fuel : ℕ
+ih : ∀ {a : ℕ}, a < 2 ^ W → rawReduceFuel modulus degree fuel a < 2 ^ W
+a : ℕ
+ha : a < 2 ^ W
+hsmall : a < 2 ^ degree
+⊢ 1 ≤ 2
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawReductionBitCostBounds

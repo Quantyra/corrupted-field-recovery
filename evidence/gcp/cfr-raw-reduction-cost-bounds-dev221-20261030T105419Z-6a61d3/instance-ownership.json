@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-raw-reduction-cost-bounds-dev221-20261030T105419Z-6a61d3",
+  "utc": "2026-10-30T10:54:30.680369+00:00"
+}
