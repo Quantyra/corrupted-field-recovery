@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Executable increasing-slot Nat-mask trace loop equals canonical semantic coefficients. Combined Boolean gate includes field/matrix/decomposition; acceptance implies support bound, decoded input equals compatible plus pullback, and stored coefficients match evaluator.",
+  "remaining": "hfield proof supplied; no extraction of matrix check or proof that compatible decoded tensor equals literal trace tensor; full standalone checker, soundness and costs remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

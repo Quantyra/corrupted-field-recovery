@@ -1,0 +1,101 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawExecutableTraceCoefficient
+@CorruptedFieldRecovery.rawExecutableTraceCoefficient : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+      (inverse : CorruptedFieldRecovery.RawCoordinateMatrix) →
+        (t : CorruptedFieldRecovery.IncreasingTriple (HMul.hMul.{0, 0, 0} 3 s)) → ZMod 2
+CFR_TYPE_END:CorruptedFieldRecovery.rawExecutableTraceCoefficient
+'CorruptedFieldRecovery.rawExecutableTraceCoefficient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPhysicalCanonicalTraceCoefficient
+@CorruptedFieldRecovery.rawPhysicalCanonicalTraceCoefficient : {s : Nat} →
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+    (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+      (inverse : CorruptedFieldRecovery.RawCoordinateMatrix) →
+        (t : CorruptedFieldRecovery.IncreasingTriple (HMul.hMul.{0, 0, 0} 3 s)) → ZMod 2
+CFR_TYPE_END:CorruptedFieldRecovery.rawPhysicalCanonicalTraceCoefficient
+'CorruptedFieldRecovery.rawPhysicalCanonicalTraceCoefficient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawExecutableTraceCoefficient_eq_semantic
+@CorruptedFieldRecovery.rawExecutableTraceCoefficient_eq_semantic : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (t : CorruptedFieldRecovery.IncreasingTriple (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{1} (CorruptedFieldRecovery.rawExecutableTraceCoefficient candidate hfield inverse t)
+    (CorruptedFieldRecovery.rawPhysicalCanonicalTraceCoefficient candidate hfield inverse t)
+CFR_TYPE_END:CorruptedFieldRecovery.rawExecutableTraceCoefficient_eq_semantic
+'CorruptedFieldRecovery.rawExecutableTraceCoefficient_eq_semantic' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawExecutableTraceCompatibleCheck
+@CorruptedFieldRecovery.rawExecutableTraceCompatibleCheck : {s : Nat} →
+  (compatible : CorruptedFieldRecovery.RawBinaryArray) →
+    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+      (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+        (inverse : CorruptedFieldRecovery.RawCoordinateMatrix) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawExecutableTraceCompatibleCheck
+'CorruptedFieldRecovery.rawExecutableTraceCompatibleCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawExecutableTraceCompatibleCheck
+@CorruptedFieldRecovery.accepted_rawExecutableTraceCompatibleCheck : ∀ {s : Nat}
+  (compatible : CorruptedFieldRecovery.RawBinaryArray) (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcheck :
+    Eq.{1} (CorruptedFieldRecovery.rawExecutableTraceCompatibleCheck compatible candidate hfield inverse) Bool.true)
+  (t : CorruptedFieldRecovery.IncreasingTriple (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{1}
+    (GetElem?.getElem!.{0, 0, 0} compatible
+      (CorruptedFieldRecovery.rawCoefficientOffset (HMul.hMul.{0, 0, 0} 3 s)
+        (CorruptedFieldRecovery.increasingTripleI t) (CorruptedFieldRecovery.increasingTripleJ t)
+        (CorruptedFieldRecovery.increasingTripleK t)))
+    (CorruptedFieldRecovery.rawExecutableTraceCoefficient candidate hfield inverse t)
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawExecutableTraceCompatibleCheck
+'CorruptedFieldRecovery.accepted_rawExecutableTraceCompatibleCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawExecutableTraceDecompositionCheck
+@CorruptedFieldRecovery.rawExecutableTraceDecompositionCheck : {s R : Nat} →
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R) →
+    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+      (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+        (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawExecutableTraceDecompositionCheck
+'CorruptedFieldRecovery.rawExecutableTraceDecompositionCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawExecutableTraceDecompositionCheck
+@CorruptedFieldRecovery.accepted_rawExecutableTraceDecompositionCheck : ∀ {s R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R)
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true)
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcheck :
+    Eq.{1} (CorruptedFieldRecovery.rawExecutableTraceDecompositionCheck p candidate hfield forward inverse) Bool.true),
+  And (LE.le.{0} (CorruptedFieldRecovery.RawDecomposition.supportDimension p) R)
+    (And
+      (∀ (x y z : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+        Eq.{1} ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.input p)) x) y) z)
+          (HAdd.hAdd.{0, 0, 0}
+            ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.compatible p)) x) y) z)
+            ((((CorruptedFieldRecovery.pullback.{0, 0, 0}
+                    (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))
+                    (CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))
+                  x)
+                y)
+              z)))
+      (∀ (t : CorruptedFieldRecovery.IncreasingTriple (HMul.hMul.{0, 0, 0} 3 s)),
+        Eq.{1}
+          (GetElem?.getElem!.{0, 0, 0} (CorruptedFieldRecovery.RawDecomposition.compatible p)
+            (CorruptedFieldRecovery.rawCoefficientOffset (HMul.hMul.{0, 0, 0} 3 s)
+              (CorruptedFieldRecovery.increasingTripleI t) (CorruptedFieldRecovery.increasingTripleJ t)
+              (CorruptedFieldRecovery.increasingTripleK t)))
+          (CorruptedFieldRecovery.rawExecutableTraceCoefficient candidate hfield inverse t)))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawExecutableTraceDecompositionCheck
+'CorruptedFieldRecovery.accepted_rawExecutableTraceDecompositionCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
