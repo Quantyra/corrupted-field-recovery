@@ -1,0 +1,6 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-raw-trace-fast-verifier-dev203-20261030T094846Z-e03dc9/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
+STAGE=audit

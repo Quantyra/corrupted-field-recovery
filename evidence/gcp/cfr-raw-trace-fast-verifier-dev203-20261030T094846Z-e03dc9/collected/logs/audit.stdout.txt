@@ -1,0 +1,72 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof
+@CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true),
+  Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true
+CFR_TYPE_END:CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof
+'CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawExecutableTraceFastCore
+@CorruptedFieldRecovery.rawExecutableTraceFastCore : {s R : Nat} →
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R) →
+    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+      (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) →
+        (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawExecutableTraceFastCore
+'CorruptedFieldRecovery.rawExecutableTraceFastCore' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawExecutableTraceFastVerifier
+@CorruptedFieldRecovery.rawExecutableTraceFastVerifier : {s R : Nat} →
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R) →
+    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) →
+      (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawExecutableTraceFastVerifier
+'CorruptedFieldRecovery.rawExecutableTraceFastVerifier' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawExecutableTraceFastVerifier_eq_core
+@CorruptedFieldRecovery.rawExecutableTraceFastVerifier_eq_core : ∀ {s R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R)
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true),
+  Eq.{1} (CorruptedFieldRecovery.rawExecutableTraceFastVerifier p candidate forward inverse)
+    (CorruptedFieldRecovery.rawExecutableTraceFastCore p candidate
+      (CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof candidate hfast) forward inverse)
+CFR_TYPE_END:CorruptedFieldRecovery.rawExecutableTraceFastVerifier_eq_core
+'CorruptedFieldRecovery.rawExecutableTraceFastVerifier_eq_core' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawExecutableTraceFastVerifier_sound
+@CorruptedFieldRecovery.accepted_rawExecutableTraceFastVerifier_sound : ∀ {s R : Nat}
+  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R)
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)
+  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawExecutableTraceFastVerifier p candidate forward inverse) Bool.true),
+  ∃ (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true) (hcoordinates :
+    Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),
+    And (LE.le.{0} (CorruptedFieldRecovery.RawDecomposition.supportDimension p) R)
+      (And
+        (Ne.{1}
+          ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+            (CorruptedFieldRecovery.rawCandidateScalar candidate))
+          0)
+        (∀ (x y z : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+          Eq.{1} ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.input p)) x) y) z)
+            (HAdd.hAdd.{0, 0, 0}
+              ((((CorruptedFieldRecovery.rawTraceDetTensor candidate
+                      (CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof candidate hfast) forward inverse
+                      hcoordinates)
+                    x)
+                  y)
+                z)
+              ((((CorruptedFieldRecovery.pullback.{0, 0, 0}
+                      (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))
+                      (CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))
+                    x)
+                  y)
+                z))))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawExecutableTraceFastVerifier_sound
+'CorruptedFieldRecovery.accepted_rawExecutableTraceFastVerifier_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

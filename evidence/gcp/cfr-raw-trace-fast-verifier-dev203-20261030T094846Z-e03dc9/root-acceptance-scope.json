@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-30T09:53:18.833746+00:00",
+  "review": "Root exact types and source",
+  "accepted": "Proof-free fast Bool gate followed by decomposition/matrix/coefficient core; acceptance yields fast/matrix witnesses, support dimension<=R, nonzero scalar and all-vector trace+pullback identity. Legacy bridge occurs in Prop argument, no explicit legacy Bool gate in core",
+  "excluded": [
+    "compiled execution cost",
+    "kernel reduction cost",
+    "constructor completeness",
+    "primitive bit/space/runtime bounds",
+    "runtime erasure benchmark"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

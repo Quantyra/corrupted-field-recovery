@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true),\n  Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true\n",
+    "sha256": "1dcc489c99fcbd3acf417347a1aa96fcadcf0ee96da4f3bfd1acc14d98921ee7"
+  },
+  "CorruptedFieldRecovery.rawExecutableTraceFastCore": {
+    "emitted_type": "@CorruptedFieldRecovery.rawExecutableTraceFastCore : {s R : Nat} \u2192\n  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R) \u2192\n    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n      (hfield : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateCheck candidate) Bool.true) \u2192\n        (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192 Bool\n",
+    "sha256": "0c9c5d4a59d24e41e0f871d593e39012a355a8ef62a36ec59e5512cfe330632f"
+  },
+  "CorruptedFieldRecovery.rawExecutableTraceFastVerifier": {
+    "emitted_type": "@CorruptedFieldRecovery.rawExecutableTraceFastVerifier : {s R : Nat} \u2192\n  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R) \u2192\n    (candidate : CorruptedFieldRecovery.RawFieldCandidate s) \u2192\n      (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix) \u2192 Bool\n",
+    "sha256": "73c326e8fdcd1e8f486a6b10b4737549f9d8d1df2f3270fa9a98ba4e86a9f98c"
+  },
+  "CorruptedFieldRecovery.rawExecutableTraceFastVerifier_eq_core": {
+    "emitted_type": "@CorruptedFieldRecovery.rawExecutableTraceFastVerifier_eq_core : \u2200 {s R : Nat}\n  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R)\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)\n  (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true),\n  Eq.{1} (CorruptedFieldRecovery.rawExecutableTraceFastVerifier p candidate forward inverse)\n    (CorruptedFieldRecovery.rawExecutableTraceFastCore p candidate\n      (CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof candidate hfast) forward inverse)\n",
+    "sha256": "1eaa75399bc30f5141a99531a2bd27bb0230ef40adf463c2b7ce3bb0de28ae6a"
+  },
+  "CorruptedFieldRecovery.accepted_rawExecutableTraceFastVerifier_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawExecutableTraceFastVerifier_sound : \u2200 {s R : Nat}\n  (p : CorruptedFieldRecovery.RawDecomposition (HMul.hMul.{0, 0, 0} 3 s) R)\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (forward inverse : CorruptedFieldRecovery.RawCoordinateMatrix)\n  (hcheck : Eq.{1} (CorruptedFieldRecovery.rawExecutableTraceFastVerifier p candidate forward inverse) Bool.true),\n  \u2203 (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true) (hcoordinates :\n    Eq.{1} (CorruptedFieldRecovery.rawCoordinateMatrixCheck forward inverse) Bool.true),\n    And (LE.le.{0} (CorruptedFieldRecovery.RawDecomposition.supportDimension p) R)\n      (And\n        (Ne.{1}\n          ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n            (CorruptedFieldRecovery.rawCandidateScalar candidate))\n          0)\n        (\u2200 (x y z : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),\n          Eq.{1} ((((CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.input p)) x) y) z)\n            (HAdd.hAdd.{0, 0, 0}\n              ((((CorruptedFieldRecovery.rawTraceDetTensor candidate\n                      (CorruptedFieldRecovery.rawFieldCandidateFastCheck_to_legacyProof candidate hfast) forward inverse\n                      hcoordinates)\n                    x)\n                  y)\n                z)\n              ((((CorruptedFieldRecovery.pullback.{0, 0, 0}\n                      (CorruptedFieldRecovery.decodeRawArray (CorruptedFieldRecovery.RawDecomposition.residual p))\n                      (CorruptedFieldRecovery.rawSupportMap (CorruptedFieldRecovery.RawDecomposition.supportMatrix p)))\n                    x)\n                  y)\n                z))))\n",
+    "sha256": "a7160b880998991c07df544abeb2224ccfbf8de48d520a37562a99d1bb164d17"
+  }
+}
