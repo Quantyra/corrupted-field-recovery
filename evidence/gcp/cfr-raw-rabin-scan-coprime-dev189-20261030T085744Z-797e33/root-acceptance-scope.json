@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T09:08:09.436226+00:00",
+  "review": "Root exact type/source",
+  "accepted": "For nonzero candidate modulus scan true iff rawMaskPairCoprime of modulus and encoded X^(2^d)-X for all d in[1,s/2]. Encoding proof may be noncomputable; executable scan remains raw",
+  "excluded": [
+    "irreducibility iff",
+    "costs"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
