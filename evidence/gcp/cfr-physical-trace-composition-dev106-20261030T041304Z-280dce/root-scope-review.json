@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Canonical triple from candidate and supplied inverse; extracted mask quotient triple equals canonical triple; executable physical trace-det bit equals algebraic trace on those triples under candidate check.",
+  "remaining": "No inverse matrix check hypothesis; full representation equivalence, coefficient checker and costs remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}
