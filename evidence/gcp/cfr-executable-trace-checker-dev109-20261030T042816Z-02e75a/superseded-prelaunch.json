@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T04:28:56.444545+00:00",
+  "never_submitted": true,
+  "compiled": false,
+  "reason": "Author offered strengthened Boolean candidate/matrix gate before capture acknowledgement; preserve old exact capture and select fresh successor."
+}
