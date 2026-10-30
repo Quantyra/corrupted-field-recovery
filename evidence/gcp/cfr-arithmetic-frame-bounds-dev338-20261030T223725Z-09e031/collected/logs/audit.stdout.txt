@@ -1,0 +1,46 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMulBitCostedFrames
+CorruptedFieldRecovery.rawPolyMulBitCostedFrames : (a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMulBitCostedFrames
+'CorruptedFieldRecovery.rawPolyMulBitCostedFrames' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMulBitCostedFrames_le_charge
+CorruptedFieldRecovery.rawPolyMulBitCostedFrames_le_charge : ∀ (a b : Nat),
+  LE.le.{0} (CorruptedFieldRecovery.rawPolyMulBitCostedFrames b) (CorruptedFieldRecovery.rawPolyMulBitCosted a b).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMulBitCostedFrames_le_charge
+'CorruptedFieldRecovery.rawPolyMulBitCostedFrames_le_charge' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames
+CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames : (a a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames
+'CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames_le_charge
+CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames_le_charge : ∀ (a b : Nat),
+  LE.le.{0} (CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames a b)
+    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames_le_charge
+'CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames_le_charge' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelBitCostedFrames
+CorruptedFieldRecovery.rawReduceFuelBitCostedFrames : (modulus degree a a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelBitCostedFrames
+'CorruptedFieldRecovery.rawReduceFuelBitCostedFrames' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelBitCostedFrames_le_charge_add_one
+CorruptedFieldRecovery.rawReduceFuelBitCostedFrames_le_charge_add_one : ∀ (modulus degree fuel a : Nat),
+  LE.le.{0} (CorruptedFieldRecovery.rawReduceFuelBitCostedFrames modulus degree fuel a)
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel a).2 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelBitCostedFrames_le_charge_add_one
+'CorruptedFieldRecovery.rawReduceFuelBitCostedFrames_le_charge_add_one' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames
+CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames : (a a a : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames
+'CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames_le_charge_add_one
+CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames_le_charge_add_one : ∀ (modulus d x : Nat),
+  LE.le.{0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames modulus d x)
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames_le_charge_add_one
+'CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames_le_charge_add_one' depends on axioms: [propext,
+ Quot.sound.{u}]

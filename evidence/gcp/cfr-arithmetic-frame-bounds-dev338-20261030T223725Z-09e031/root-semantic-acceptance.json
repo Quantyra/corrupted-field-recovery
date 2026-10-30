@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticFrameBounds.lean",
+  "sha256": "6ea3632c70da3ea800b6739bb3a64f6e2ea5f6ff9c229a9aa28f2af925b1ffb4",
+  "scope": "Four logical frame recurrences and bounds by respective declared charge, plus one for reduction and Frobenius, for all inputs. No actual evaluator frames, live registers, heap, or total space theorem.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}

@@ -1,0 +1,34 @@
+{
+  "CorruptedFieldRecovery.rawPolyMulBitCostedFrames": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolyMulBitCostedFrames : (a : Nat) \u2192 Nat\n",
+    "sha256": "7a4bbd460fbf420c002820d95f7318e9d9e5b71f8885e2f0d626f90a184cdbe2"
+  },
+  "CorruptedFieldRecovery.rawPolyMulBitCostedFrames_le_charge": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolyMulBitCostedFrames_le_charge : \u2200 (a b : Nat),\n  LE.le.{0} (CorruptedFieldRecovery.rawPolyMulBitCostedFrames b) (CorruptedFieldRecovery.rawPolyMulBitCosted a b).2\n",
+    "sha256": "61287e747ff58da3ffca900e977aa53e347bb05fed200f548fba5becc79725f3"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames : (a a : Nat) \u2192 Nat\n",
+    "sha256": "05b368064e98d054f6eb2bfcde4c8d5150ed69a30b2870cb366372508a7d85fa"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames_le_charge": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames_le_charge : \u2200 (a b : Nat),\n  LE.le.{0} (CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames a b)\n    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).2\n",
+    "sha256": "5c6825d4dab24d6dfedf8eaa8282d0859b065bec89fb5306ac47b178216651ea"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelBitCostedFrames": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelBitCostedFrames : (modulus degree a a : Nat) \u2192 Nat\n",
+    "sha256": "ac1dadc57aa84008b25f7559e3afe961f344e6e856297ab07d2710b67b509102"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelBitCostedFrames_le_charge_add_one": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelBitCostedFrames_le_charge_add_one : \u2200 (modulus degree fuel a : Nat),\n  LE.le.{0} (CorruptedFieldRecovery.rawReduceFuelBitCostedFrames modulus degree fuel a)\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel a).2 1)\n",
+    "sha256": "159b94071cd250f9c2849e8f8831c513a9044f6f84d8c413ec9388eda69054a0"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames": {
+    "emitted_type": "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames : (a a a : Nat) \u2192 Nat\n",
+    "sha256": "94f3daed059e721f4b86fcbd2e67490a168396aea5c7a23d51cbb417444f39b3"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames_le_charge_add_one": {
+    "emitted_type": "CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames_le_charge_add_one : \u2200 (modulus d x : Nat),\n  LE.le.{0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames modulus d x)\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)\n",
+    "sha256": "83d479ffc1e8763ea1c92bc54a0108e08b6d112b01c3aa14ac6c4eec2093fdb6"
+  }
+}
