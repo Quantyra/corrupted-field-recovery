@@ -1,0 +1,46 @@
+{
+  "run": "cfr-uncompiled-kernel-uniqueness-preservation-20261030T160247Z-ad3438",
+  "archive_sha256": "48942b7d36083f7ff071331c157bf2a1535c4cbcff8c8b684e48974793c979de",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+  "source_sha256": "7AFB6F348EDB61B610EB983096847E3AB60861B31568D42F7FDDF6AA97685264",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "superseded_offer_sha256": "2903E09328AA19F81BB25A0169858CBC4FE348471A75D0E6C28255EC3F529C1F",
+  "superseded_offer_captured": false,
+  "dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled as316 observed PASS, exact evidence collection and acceptance pending"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean",
+      "sha256": "9e41e9b989dedde533a8c2bb02f8882f93a6ff9c2e3ae9de94797cf1955e03a6",
+      "status": "accepted dev310; checkpoint9626b72"
+    }
+  ],
+  "scope": "Unaudited draft pivot-row uniqueness/reconstruction under explicit row-distinctness, unit-column and candidate-kernel hypotheses; actual full-scan specializations rely on the listed uncompiled dependency chain. No kernel basis, solver, certification or complexity result validated."
+}
