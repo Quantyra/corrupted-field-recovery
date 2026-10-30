@@ -1,0 +1,17 @@
+⚠ [2067/2067] Built CorruptedFieldRecovery.RawCandidateShapeCostBounds (2.5s)
+warning: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:34:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:37:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:40:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:42:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean:44:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (2067 jobs).
