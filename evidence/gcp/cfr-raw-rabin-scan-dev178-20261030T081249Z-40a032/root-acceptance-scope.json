@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T08:25:56.102735+00:00",
+  "review": "Root exact type/source",
+  "accepted": "rawCandidateRabinCheck true iff every raw gcd equals1 for d in[1,s/2], no hfield",
+  "excluded": [
+    "polynomial coprimality",
+    "irreducibility",
+    "costs"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

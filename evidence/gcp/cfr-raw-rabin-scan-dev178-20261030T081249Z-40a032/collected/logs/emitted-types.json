@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  Iff (Eq.{1} (CorruptedFieldRecovery.rawCandidateRabinCheck candidate) Bool.true)\n    (\u2200 (d : Nat) (a : LE.le.{0} 1 d) (a : LE.le.{0} d (HDiv.hDiv.{0, 0, 0} s 2)),\n      Eq.{1}\n        (CorruptedFieldRecovery.rawPolynomialGcd\n          (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))\n          (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobenius candidate d) 2))\n        1)\n",
+    "sha256": "73a16de725829ed18c7f3233e797dd6c0a588d1b88302ff97966b65940cd3f1a"
+  }
+}

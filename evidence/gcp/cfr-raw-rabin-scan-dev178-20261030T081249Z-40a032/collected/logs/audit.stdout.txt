@@ -1,0 +1,14 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff
+@CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  Iff (Eq.{1} (CorruptedFieldRecovery.rawCandidateRabinCheck candidate) Bool.true)
+    (∀ (d : Nat) (a : LE.le.{0} 1 d) (a : LE.le.{0} d (HDiv.hDiv.{0, 0, 0} s 2)),
+      Eq.{1}
+        (CorruptedFieldRecovery.rawPolynomialGcd
+          (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))
+          (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobenius candidate d) 2))
+        1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff
+'CorruptedFieldRecovery.rawCandidateRabinCheck_eq_true_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
