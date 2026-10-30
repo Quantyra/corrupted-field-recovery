@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T14:46:56.310241+00:00",
+  "accepted": "An already-unit pivot column whose pivot row belongs to used is preserved across an arbitrary supplied column scan",
+  "excluded": [
+    "all recorded pivots invariant",
+    "final reduced form",
+    "kernel basis",
+    "cost"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
