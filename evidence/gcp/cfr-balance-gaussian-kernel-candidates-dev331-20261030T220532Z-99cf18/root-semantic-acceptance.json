@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery\\S010BalanceGaussianKernelCandidates.lean",
+  "sha256": "ea3cecb12bf1fa5980bf642cbca8c63e55a1563119d9153e4a2ec445fb84fe8b",
+  "scope": "Finite-sum candidate definition and identity coordinate on any nonpivotcolumn. No kernel membership/completeness/basis.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}
