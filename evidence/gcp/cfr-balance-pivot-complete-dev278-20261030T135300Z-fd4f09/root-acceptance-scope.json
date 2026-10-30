@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T14:00:35.525197+00:00",
+  "accepted": "Any row with entry1 in requested column implies balanceFirstPivotRow returns some row",
+  "excluded": [
+    "firstness",
+    "unused-row restriction",
+    "solver"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
