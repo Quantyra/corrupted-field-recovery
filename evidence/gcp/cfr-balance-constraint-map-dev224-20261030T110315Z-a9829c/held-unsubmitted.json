@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T11:03:25.048549+00:00",
+  "never_submitted": true,
+  "reason": "Root steered from exhaustive all-vector rows to polynomial-size standard-basis pairs. Author requested hold launch; immutable interim capture retained.",
+  "source_sha256": "f0f48b2751d39ecf8ef7afbbbb3bcaa0bf26e50290db3b747f10bf45c7c72340"
+}

@@ -1,0 +1,86 @@
+✖ [1843/1843] Building CorruptedFieldRecovery.RawReductionBitCostBounds (7.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawReductionBitCostBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBitCostBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBitCostBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionBitCostBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionBitCostBounds.setup.json --json
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:40:26: Application type mismatch: The argument
+  h2
+has type
+  a * b < a * 2 ^ rawNatBitWidth b
+but is expected to have type
+  2 ^ rawNatBitWidth a * b < 2 ^ rawNatBitWidth a * 2 ^ rawNatBitWidth b
+in the application
+  lt_trans h1 h2
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:47:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  m ≥ 0
+  l ≥ 0
+  k ≥ 0
+  k - l - m ≥ 3
+  j ≥ 0
+  i ≥ 0
+  i + j ≥ 1
+  i + j - k ≥ 1
+  h ≥ 0
+  g - h ≥ 1
+  f ≥ 1
+  e - f ≥ 1
+  d ≥ 1
+  c - d ≥ 1
+where
+ c := ↑2 ^ rawNatBitWidth a
+ d := ↑a
+ e := ↑2 ^ rawNatBitWidth b
+ f := ↑b
+ g := ↑2 ^ (rawNatBitWidth a + rawNatBitWidth b)
+ h := ↑a * ↑b
+ i := ↑(rawNatBitWidth a)
+ j := ↑(rawNatBitWidth b)
+ k := ↑(a * b).log2
+ l := ↑a.log2
+ m := ↑b.log2
+error: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:83:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  j - k ≥ -2
+  i ≥ 0
+  i + k - l ≥ -1
+  g ≥ 0
+  g ≥ 0
+  g + j ≥ 0
+  f ≥ 0
+  e - f ≥ 1
+  2*e - h ≥ 1
+  d ≥ 1
+  d - g ≥ 0
+  d - g - j ≥ 1
+  d - i ≥ -2
+  d - i + j + m ≥ -4
+  d + j - k + m ≥ -4
+  d + j - l + m ≤ -5
+  d + j ≥ -4
+  d + j + m - n ≥ -4
+  b ≥ 0
+  b - 2*c ≤ -1
+  b - c ≥ 0
+where
+ b := ↑modulus
+ c := ↑2 ^ degree
+ d := ↑W
+ e := ↑2 ^ W
+ f := ↑a
+ g := ↑(a.log2 - degree)
+ h := ↑2 ^ shift
+ i := ↑(rawNatBitWidth power)
+ j := ↑degree
+ k := ↑(rawNatBitWidth modulus)
+ l := ↑(rawNatBitWidth (modulus * power))
+ m := ↑(rawNatBitWidth degree)
+ n := ↑(rawNatBitWidth a)
+warning: CorruptedFieldRecovery/RawReductionBitCostBounds.lean:124:52: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawReductionBitCostBounds
