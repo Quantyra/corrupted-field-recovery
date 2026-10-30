@@ -1,0 +1,17 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism
+@CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism.{u_1} : ∀ {K : Type u_1}
+  [inst : Field.{u_1} K] [inst_1 : CharP.{u_1} K 2] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_3 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (x : CorruptedFieldRecovery.BinaryInput.{u_1} K (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{u_1 + 1}
+    ((CorruptedFieldRecovery.modeImage_inputEquiv_from_Q.{u_1} Q)
+      ((CorruptedFieldRecovery.physicalEndomorphismToInput✝ (ringChar.eq.{u_1} K 2) T) x))
+    (Q (T (CorruptedFieldRecovery.modeImage_inputVectorToBinary.{u_1} x)))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism
+'CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T08:41:48.215550+00:00",
+  "review": "Root exact type/source",
+  "accepted": "For explicit Q,T,x and CharP/algebras, Q-derived input equiv applied to transported physical endomorphism equals Q(T(coordinatecast x)); private helper in type",
+  "excluded": [
+    "sampled balance",
+    "inverse transport",
+    "algorithm success",
+    "costs"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

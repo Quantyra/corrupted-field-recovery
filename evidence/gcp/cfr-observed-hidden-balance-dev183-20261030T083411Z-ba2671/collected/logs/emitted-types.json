@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism": {
+    "emitted_type": "@CorruptedFieldRecovery.modeImage_inputEquiv_from_Q_transport_endomorphism.{u_1} : \u2200 {K : Type u_1}\n  [inst : Field.{u_1} K] [inst_1 : CharP.{u_1} K 2] [inst_2 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]\n  [inst_3 : Algebra.{0, u_1} (ZMod (ringChar.{u_1} K)) K] {s : Nat}\n  (Q :\n    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)\n      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n  (x : CorruptedFieldRecovery.BinaryInput.{u_1} K (HMul.hMul.{0, 0, 0} 3 s)),\n  Eq.{u_1 + 1}\n    ((CorruptedFieldRecovery.modeImage_inputEquiv_from_Q.{u_1} Q)\n      ((CorruptedFieldRecovery.physicalEndomorphismToInput\u271d (ringChar.eq.{u_1} K 2) T) x))\n    (Q (T (CorruptedFieldRecovery.modeImage_inputVectorToBinary.{u_1} x)))\n",
+    "sha256": "223899f73b18f9863942485379726d3f54700ddeb684dcd618d4280348dcafdf"
+  }
+}
