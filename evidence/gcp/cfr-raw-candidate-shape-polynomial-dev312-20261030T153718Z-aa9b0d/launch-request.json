@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T15:38:07.602743+00:00",
+  "run": "cfr-raw-candidate-shape-polynomial-dev312-20261030T153718Z-aa9b0d",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
