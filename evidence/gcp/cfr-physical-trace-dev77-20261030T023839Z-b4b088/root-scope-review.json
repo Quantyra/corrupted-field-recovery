@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Block-mask/inverse-matrix evaluator definition, checked matrix left inverse, literal trace-bit equality over quotient classes of extracted masks for supplied inverse and checked candidate. Trace equality itself does not assume a matrix check.",
+  "remaining": "Power-basis correspondence, complete verifier and cost remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}
