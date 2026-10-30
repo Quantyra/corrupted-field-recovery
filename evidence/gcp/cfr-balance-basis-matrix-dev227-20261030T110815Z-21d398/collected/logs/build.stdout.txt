@@ -1,0 +1,59 @@
+✖ [2982/2982] Building CorruptedFieldRecovery.S010BalanceBasisMatrix (3.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceBasisMatrix.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceBasisMatrix.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceBasisMatrix.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceBasisMatrix.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceBasisMatrix.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceBasisMatrix.lean:41:75: Unknown identifier `n`
+error: CorruptedFieldRecovery/S010BalanceBasisMatrix.lean:45:76: Unknown identifier `n`
+error: CorruptedFieldRecovery/S010BalanceBasisMatrix.lean:39:4: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ?m.47
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.3655} {β : α → Sort ?u.3654} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+s : ℕ
+A : BinaryTensor (3 * s)
+tape : FiveWordTape s
+T S : Module.End (ZMod 2) (BinaryVector (3 * s))
+⊢ ?m.47
+error: CorruptedFieldRecovery/S010BalanceBasisMatrix.lean:43:4: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ?m.54
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.3737} {β : α → Sort ?u.3736} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+s : ℕ
+A : BinaryTensor (3 * s)
+tape : FiveWordTape s
+a : ZMod 2
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+⊢ ?m.54
+error: CorruptedFieldRecovery/S010BalanceBasisMatrix.lean:47:0: Not a definitional equality: the left-hand side
+  (actualBalanceBasisMatrix A tape) T (i, j, k)
+is not definitionally equal to the right-hand side
+  ((physicalThirdSlotBilinForm A (tape.1 i)) (T (actualBalanceUnitVector j))) (actualBalanceUnitVector k) -
+    ((physicalThirdSlotBilinForm A (tape.1 i)) (actualBalanceUnitVector j)) (T (actualBalanceUnitVector k))
+error: CorruptedFieldRecovery/S010BalanceBasisMatrix.lean:55:71: Type mismatch
+  rfl
+has type
+  ?m.60 = ?m.60
+but is expected to have type
+  (actualBalanceBasisMatrix A tape) T (i, j, k) =
+    ((physicalThirdSlotBilinForm A (tape.1 i)) (T (actualBalanceUnitVector j))) (actualBalanceUnitVector k) -
+      ((physicalThirdSlotBilinForm A (tape.1 i)) (actualBalanceUnitVector j)) (T (actualBalanceUnitVector k))
+error: CorruptedFieldRecovery/S010BalanceBasisMatrix.lean:128:4: Type mismatch
+  h row
+has type
+  actualBalanceBasisResidual A tape T row = 0
+but is expected to have type
+  (actualBalanceBasisMatrix A tape) T row = 0 row
+error: CorruptedFieldRecovery/S010BalanceBasisMatrix.lean:132:4: Type mismatch
+  congrFun hzero row
+has type
+  (actualBalanceBasisMatrix A tape) T row = 0 row
+but is expected to have type
+  actualBalanceBasisResidual A tape T row = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceBasisMatrix

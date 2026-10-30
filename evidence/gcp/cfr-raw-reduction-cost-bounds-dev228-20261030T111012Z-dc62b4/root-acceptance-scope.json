@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T11:16:37.964590+00:00",
+  "review": "Root exact three types/source",
+  "accepted": "Step declared-charge bound under modulus upper band,W>0,a<2^W; fuel preserves W bound under full band and degree<=W; fuel declared-charge<=fuel*40(W+degree+width degree+4)^2 under full band,W>0,a bound, with no degree<=W in last theorem",
+  "excluded": [
+    "concrete machine refinement",
+    "full verifier cost",
+    "runtime",
+    "space bound"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
