@@ -117,6 +117,18 @@ noncomputable def rawFieldTripleToBinaryVector {s : Nat}
 /-- A checked raw square matrix, after the canonical power-basis coordinate
 identification, gives an equivalence from quotient-field triples to the
 physical `3*s`-bit vector space. -/
+noncomputable def accepted_rawCandidatePowerBasisCoordinates {s : Nat}
+    (candidate : RawFieldCandidate s)
+    (hcheck : rawFieldCandidateCheck candidate = true) :
+    FieldTriple (AdjoinRoot (rawCandidateModulus candidate)) ≃ₗ[ZMod 2]
+      BinaryVector (3 * s) := by
+  have hvalid := accepted_rawFieldCandidateCheck candidate hcheck
+  have hmod := rawFieldCandidateValid_modulus_polynomial candidate hvalid
+  letI : Fact (Irreducible (rawCandidateModulus candidate)) :=
+    ⟨accepted_rawCandidateModulus_irreducible candidate hcheck⟩
+  exact rawFieldTripleToBinaryVector (rawCandidateModulus candidate) hmod.1
+    (by simpa [rawCandidateModulus] using hmod.2)
+
 noncomputable def accepted_rawCandidatePhysicalCoordinates {s : Nat}
     (candidate : RawFieldCandidate s)
     (hcheck : rawFieldCandidateCheck candidate = true)
@@ -124,14 +136,7 @@ noncomputable def accepted_rawCandidatePhysicalCoordinates {s : Nat}
     (hmatrix : rawCoordinateMatrixCheck (n := 3 * s) forward inverse = true) :
     FieldTriple (AdjoinRoot (rawCandidateModulus candidate)) ≃ₗ[ZMod 2]
       BinaryVector (3 * s) := by
-  have hvalid := accepted_rawFieldCandidateCheck candidate hcheck
-  rcases hvalid with ⟨hs, hsize, htop, hscalarSize, hscalarNonzero, hirred⟩
-  have hmod := rawFieldCandidateValid_modulus_polynomial candidate
-    ⟨hs, hsize, htop, hscalarSize, hscalarNonzero, hirred⟩
-  letI : Fact (Irreducible (rawCandidateModulus candidate)) :=
-    ⟨accepted_rawCandidateModulus_irreducible candidate hcheck⟩
-  exact (rawFieldTripleToBinaryVector (rawCandidateModulus candidate) hmod.1
-    (by simpa [rawCandidateModulus] using hmod.2)).trans
-      (accepted_rawCoordinateMatrixEquiv forward inverse hmatrix)
+  exact (accepted_rawCandidatePowerBasisCoordinates candidate hcheck).trans
+    (accepted_rawCoordinateMatrixEquiv forward inverse hmatrix)
 
 end CorruptedFieldRecovery

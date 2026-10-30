@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "source": "CorruptedFieldRecovery/RawFieldCoordinateBridge.lean",
+      "audited_sha256": "1e3ccac5568f9a67dcf9cc3a22c69376ebc0187ceb4cd4e2e53fa65e71c60e95",
+      "staged_git_blob_sha256": "1e3ccac5568f9a67dcf9cc3a22c69376ebc0187ceb4cd4e2e53fa65e71c60e95",
+      "identical_bytes": true,
+      "staged_from": "immutable capture archive",
+      "working_successor_preserved": true
+    },
+    {
+      "source": "CorruptedFieldRecovery/RawExecutableTraceSemantic.lean",
+      "audited_sha256": "1d17a419e160a71fafcfba365ce8992f332596b26e683aefb9b714106f9dcfa5",
+      "staged_git_blob_sha256": "1d17a419e160a71fafcfba365ce8992f332596b26e683aefb9b714106f9dcfa5",
+      "identical_bytes": true,
+      "staged_from": "immutable capture archive",
+      "working_successor_preserved": true
+    }
+  ]
+}

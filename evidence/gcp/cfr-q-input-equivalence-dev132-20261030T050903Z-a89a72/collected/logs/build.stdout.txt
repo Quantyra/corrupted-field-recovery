@@ -1,0 +1,26 @@
+✖ [2947/2947] Building CorruptedFieldRecovery.S010QInputEquivalence (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010QInputEquivalence.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010QInputEquivalence.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010QInputEquivalence.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010QInputEquivalence.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010QInputEquivalence.setup.json --json
+error: CorruptedFieldRecovery/S010QInputEquivalence.lean:24:2: Type mismatch: After simplification, term
+  Q
+ has type
+  @LinearEquiv (ZMod 2) (ZMod 2) Field.toSemifield.toDivisionSemiring.toSemiring
+    Field.toSemifield.toDivisionSemiring.toSemiring (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ ⋯ (BinaryVector n)
+    (FieldTriple K) Pi.addCommMonoid Prod.instAddCommMonoid (Pi.Function.module (Fin n) (ZMod 2) (ZMod 2))
+    (@Prod.instModule (ZMod 2) K (K × K) Field.toSemifield.toDivisionSemiring.toSemiring
+      CommRing.toNonUnitalCommRing.toNonUnitalNonAssocCommRing.toNonUnitalNonAssocSemiring.toAddCommMonoid
+      Prod.instAddCommMonoid
+      (@Algebra.toModule BinaryField K Field.toSemifield.toCommSemiring Field.toSemifield.toDivisionSemiring.toSemiring
+        inst✝¹)
+      Prod.instModule)
+but is expected to have type
+  @LinearEquiv (ZMod 2) (ZMod 2) CommRing.toCommSemiring.toSemiring CommRing.toCommSemiring.toSemiring
+    (RingHom.id (ZMod 2)) (RingHom.id (ZMod 2)) ⋯ ⋯ (Fin n → ZMod 2) (FieldTriple K) Pi.addCommMonoid
+    Prod.instAddCommMonoid (Pi.Function.module (Fin n) (ZMod 2) (ZMod 2))
+    (@Prod.instModule (ZMod 2) K (K × K) CommRing.toCommSemiring.toSemiring
+      CommRing.toNonUnitalCommRing.toNonUnitalNonAssocCommRing.toNonUnitalNonAssocSemiring.toAddCommMonoid
+      Prod.instAddCommMonoid
+      (@Algebra.toModule (ZMod 2) K CommRing.toCommSemiring Field.toSemifield.toDivisionSemiring.toSemiring inst✝)
+      Prod.instModule)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010QInputEquivalence

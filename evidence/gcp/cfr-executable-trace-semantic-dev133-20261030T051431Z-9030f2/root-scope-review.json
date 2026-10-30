@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Named canonical power-basis extraction; checked matrix inverse equals raw inverse; checked physical coordinate inverse equals power-basis inverse after raw inverse, under field/matrix checks. Joint accepted-definition refactor and all30 audited declarations reviewed.",
+  "remaining": "12 prior explicit type blocks byte-identical;18 lack prior comparable accepted block. No full verifier, loop soundness or cost inference.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T042642Z-a5807e"
+}

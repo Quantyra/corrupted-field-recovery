@@ -1,0 +1,180 @@
+{
+  "utc": "2026-10-30T05:19:57.985575+00:00",
+  "comparison": [
+    {
+      "declaration": "CorruptedFieldRecovery.rawQuotientPowerCoordinates",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "198c90b5d21be46bf5736ed81965ad6f9554d6fddd23598b6e70f475b6c4569d"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawFieldTriplePowerCoordinates",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "93df1196a04bdefb0a75ed114300af1bd880a9125b62d700ea155bfc7bf3c68e"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawFieldTripleToBinaryVector",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "561331f6e61c548a8c42dfd66ed083c46e8172290a58c703f9ecda401387f976"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "aa46d68ad598409a9a2254415a2b90c76975b0e28eec8d623db772aec635d4af"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawZModTwo_boolValue",
+      "prior_run": "cfr-physical-powerbasis-dev94-20261030T033457Z-edcb04",
+      "prior_type_sha256": "25aae03f0b3de15002485b48f9d92426c2598ff487149106d776292d72d9191e",
+      "current_type_sha256": "25aae03f0b3de15002485b48f9d92426c2598ff487149106d776292d72d9191e",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawBoolListPolynomial_ofFn",
+      "prior_run": "cfr-physical-powerbasis-dev94-20261030T033457Z-edcb04",
+      "prior_type_sha256": "5c97b8529439bdbd28c63a7b79b1c0a06d691813a75c1211323b94756b694f4c",
+      "current_type_sha256": "5c97b8529439bdbd28c63a7b79b1c0a06d691813a75c1211323b94756b694f4c",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawPhysicalBlockMask_polynomial",
+      "prior_run": "cfr-physical-powerbasis-dev94-20261030T033457Z-edcb04",
+      "prior_type_sha256": "728674cb02b92c28cd084eaf8f33606439a7cb3c920b7bf3a5e8f0ee9741b6a7",
+      "current_type_sha256": "728674cb02b92c28cd084eaf8f33606439a7cb3c920b7bf3a5e8f0ee9741b6a7",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawPhysicalBlockMask_quotient",
+      "prior_run": "cfr-physical-powerbasis-dev94-20261030T033457Z-edcb04",
+      "prior_type_sha256": "e3a6eb3b7c38c615114ade88a2142b8c610d4f0aac56ad431ecbc95cf51c896c",
+      "current_type_sha256": "e3a6eb3b7c38c615114ade88a2142b8c610d4f0aac56ad431ecbc95cf51c896c",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawPhysicalBlockMask_eq_powerCoordinates",
+      "prior_run": "cfr-physical-powerbasis-dev94-20261030T033457Z-edcb04",
+      "prior_type_sha256": "602fa4c1d80ff0da58d2119d0d44c4c81bf851020bfb1618b8e3bdb2d6f8387a",
+      "current_type_sha256": "602fa4c1d80ff0da58d2119d0d44c4c81bf851020bfb1618b8e3bdb2d6f8387a",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.traceDeterminantTensor",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "c61b5d41d598fa341283e3b5893375a74dd43cccdc6d324dce70d7ca4153d601"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.traceDeterminantTensor_apply",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "0b8413b128e92012210f149d1662e8248f4d90988521903f7c487f8cb4de8d39"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.traceDeterminantTensor_alternating",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "c13f76058b1fdef0d21c01581ed5710edfedb084e92146e918943cc47164d0f7"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawTraceDetPayload",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "2a3dc6d8715fd39150d3446d6876e9f16545a009fd30cbeb5573d3543385f8e9"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawTraceDetTensor",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "94e83f60645002608bc37d0db32d5b3a75ceba4ae56d39019d53a434d5d069d5"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawTraceDetTensor_alternating",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "f78a1fc9c4d7682aaa96d21c93ecb74c50c3f48c89cca27d2aa88cd937ba7b39"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawTraceDetPayload_eq_encode",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "8b32a4fd9fa9fdd7ec13d57c64c987a3a54de696f5a0fb58dc183576afcf9819"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawTraceCompatibleCheck",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "b8b787a60ff85bd5734da2c6dc1c8c0fd4c7bd87e75850dde9b50e72bc92bad3"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.accepted_rawTraceCompatibleCheck",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "397d9e0c02865cc2044b101b3a770ff2dff014acd0a209b767b6f3c015809d90"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawTraceDecompositionCheck",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "3e5dfa6a6cc6928dae4cdecec872b87c016584554fea1fa4e62b3af58a9fa4fc"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.accepted_rawTraceDecompositionCheck_sound",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "9fd30baf7f4708f36848c61d6338a80b1cb2123654d3381adc66d4b79dfaf457"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawExecutableTraceCoefficient",
+      "prior_run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "prior_type_sha256": "951d0b5098d4e143d6e85e0ece7b0b94a4b858af50acf128b3bc20ecf6289e54",
+      "current_type_sha256": "951d0b5098d4e143d6e85e0ece7b0b94a4b858af50acf128b3bc20ecf6289e54",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawPhysicalCanonicalTraceCoefficient",
+      "prior_run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "prior_type_sha256": "793b59d2ab9e20b04562476239fc72908d6e7b064df590353465782160c03d88",
+      "current_type_sha256": "793b59d2ab9e20b04562476239fc72908d6e7b064df590353465782160c03d88",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawExecutableTraceCoefficient_eq_semantic",
+      "prior_run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "prior_type_sha256": "0f6710be525e987f1348b1745c75b9992a38d6c705d012f2a4afdbfe16361c57",
+      "current_type_sha256": "0f6710be525e987f1348b1745c75b9992a38d6c705d012f2a4afdbfe16361c57",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawExecutableTraceCompatibleCheck",
+      "prior_run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "prior_type_sha256": "46e18940e2b4900cbe53c1ba6f5a106cb938b7b71c421980f5af0cc926e38180",
+      "current_type_sha256": "46e18940e2b4900cbe53c1ba6f5a106cb938b7b71c421980f5af0cc926e38180",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.accepted_rawExecutableTraceCompatibleCheck",
+      "prior_run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "prior_type_sha256": "00eb15d16aed01ce317986a9c9cae5237c9f4553a3db523b9842b6e05e8ec1fb",
+      "current_type_sha256": "00eb15d16aed01ce317986a9c9cae5237c9f4553a3db523b9842b6e05e8ec1fb",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.rawExecutableTraceDecompositionCheck",
+      "prior_run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "prior_type_sha256": "3d076f9211bb9a8208a65fa6ba4decfd980c443aab264e673c0fc0cfe8b89522",
+      "current_type_sha256": "3d076f9211bb9a8208a65fa6ba4decfd980c443aab264e673c0fc0cfe8b89522",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.accepted_rawExecutableTraceDecompositionCheck",
+      "prior_run": "cfr-executable-trace-checker-dev114-20261030T043642Z-96f16b",
+      "prior_type_sha256": "65f97f4aa6597a107c432847afbceeb50f6f79885253308961c049bb2a95da78",
+      "current_type_sha256": "65f97f4aa6597a107c432847afbceeb50f6f79885253308961c049bb2a95da78",
+      "identical_type_block": true
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.accepted_rawCoordinateMatrixEquiv_symm_apply",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "28ccbe1d9f1528def8392467c8346c77ef84c3322a1ed417efd6258e82c8710a"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.accepted_rawCandidatePhysicalCoordinates_symm_eq_powerBasisInverse",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "d0ddf28e1984cb87f96b9fb0b9e9ca72ae7f27271b3dc6f6a82802bf4b441298"
+    },
+    {
+      "declaration": "CorruptedFieldRecovery.accepted_rawCandidatePowerBasisCoordinates",
+      "prior_accepted_type_block_found": false,
+      "current_type_sha256": "a99543cb4b714dd5cd158d38262883924ed5ac142e32e994884cc8ceb7f05117"
+    }
+  ],
+  "policy": "Byte comparisons are evidence, not semantic equivalence; Root reviews new exact types/source."
+}

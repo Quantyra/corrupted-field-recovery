@@ -1,0 +1,8 @@
+✔ [2035/2041] Built CorruptedFieldRecovery.RawFieldCoordinateBridge (3.9s)
+✔ [2036/2041] Built CorruptedFieldRecovery.RawPhysicalPowerBasis (2.8s)
+✔ [2037/2041] Built CorruptedFieldRecovery.RawTraceDecomposition (5.1s)
+✔ [2038/2041] Built CorruptedFieldRecovery.RawPhysicalCoordinateCorrespondence (2.4s)
+✔ [2039/2041] Built CorruptedFieldRecovery.RawPhysicalTraceComposition (2.1s)
+✔ [2040/2041] Built CorruptedFieldRecovery.RawExecutableTraceVerifier (2.4s)
+✔ [2041/2041] Built CorruptedFieldRecovery.RawExecutableTraceSemantic (2.1s)
+Build completed successfully (2041 jobs).
