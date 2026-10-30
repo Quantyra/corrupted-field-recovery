@@ -1,0 +1,8 @@
+{
+  "runner_sha256": "b8b5779c34ff0d8da07916a6376f920949c9dd600019d19a878285d0172ec005",
+  "shell_sha256": "515a1262ab3a881c83d8e5d3a8241c249d1bc72d9d1a2319d1b07e1d4bc3241f",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "controller_sha256": "03c634fa908d3e0151e6e184c54664712cf298cc550e0c1ed44cdf4473fd85e8",
+  "stage_timeout_seconds": 1800,
+  "ownership_policy": "Stop task-started VM only after outcomes retained and no other work."
+}

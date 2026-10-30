@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T21:56:47.723760+00:00",
+  "run": "cfr-candidate-space-model-dev328-20261030T215107Z-5b1c5d",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
