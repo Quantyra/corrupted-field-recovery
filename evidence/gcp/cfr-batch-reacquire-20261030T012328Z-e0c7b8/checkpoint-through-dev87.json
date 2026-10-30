@@ -1,0 +1,217 @@
+{
+  "utc": "2026-10-30T03:18:58.128308+00:00",
+  "runs": [
+    {
+      "run": "cfr-trace-basebit-dev58-20261030T012423Z-00130b",
+      "launch_utc": "2026-10-30T01:27:56.166381+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev59-20261030T012423Z-88c03b",
+      "launch_utc": "2026-10-30T01:32:16.598098+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-trace-basebit-dev60-20261030T013322Z-d3e07b",
+      "launch_utc": "2026-10-30T01:35:38.871501+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev61-20261030T013642Z-b1652f",
+      "launch_utc": "2026-10-30T01:38:40.199426+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-determinant-bits-dev62-20261030T014137Z-b869c2",
+      "launch_utc": "2026-10-30T01:43:47.369687+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev63-20261030T014202Z-730519",
+      "launch_utc": "2026-10-30T01:47:58.532205+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-determinant-bits-dev64-20261030T014804Z-f96b1c",
+      "launch_utc": "2026-10-30T01:51:59.149149+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev65-20261030T015305Z-c7a2f6",
+      "launch_utc": "2026-10-30T01:58:34.786424+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-determinant-bits-dev66-20261030T015653Z-933a48",
+      "launch_utc": "2026-10-30T02:02:15.825536+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-trialbound-dev67-20261030T020300Z-a3ea1a",
+      "launch_utc": "2026-10-30T02:06:47.022322+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-determinant-bits-dev68-20261030T020643Z-fd1b1b",
+      "launch_utc": "2026-10-30T02:11:07.638318+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-rank-dev69-20261030T021356Z-fb135d",
+      "launch_utc": "2026-10-30T02:15:55.321946+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-determinant-bits-dev70-20261030T021603Z-49b027",
+      "launch_utc": "2026-10-30T02:18:24.507367+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-determinant-bits-dev71-20261030T022110Z-a0b4e8",
+      "launch_utc": "2026-10-30T02:22:21.052313+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-conditional-amplification-dev72-20261030T022128Z-af1c9c",
+      "launch_utc": "2026-10-30T02:24:17.792374+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-determinant-bits-dev73-20261030T022442Z-459c8a",
+      "launch_utc": "2026-10-30T02:27:00.884139+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-conditional-amplification-dev74-20261030T022917Z-6cf0c8",
+      "launch_utc": "2026-10-30T02:30:37.396245+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-physical-trace-dev75-20261030T023322Z-75bc50",
+      "launch_utc": "2026-10-30T02:34:54.218854+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-conditional-amplification-dev76-20261030T023446Z-97461d",
+      "launch_utc": "2026-10-30T02:37:58.731405+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-physical-trace-dev77-20261030T023839Z-b4b088",
+      "launch_utc": "2026-10-30T02:42:12.174070+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev78-20261030T024524Z-aa72ce",
+      "launch_utc": "2026-10-30T02:47:24.202575+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev79-20261030T024729Z-890f0a",
+      "launch_utc": "2026-10-30T02:50:55.394853+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev80-20261030T025141Z-7704c5",
+      "launch_utc": "2026-10-30T02:54:26.027181+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev81-20261030T025555Z-7332ef",
+      "launch_utc": "2026-10-30T02:57:23.320587+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev82-20261030T025804Z-490b0f",
+      "launch_utc": "2026-10-30T03:00:47.725162+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev83-20261030T030125Z-8f475a",
+      "launch_utc": "2026-10-30T03:04:06.159411+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev84-20261030T030448Z-5c891d",
+      "launch_utc": "2026-10-30T03:07:30.311331+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev85-20261030T030759Z-0af124",
+      "launch_utc": "2026-10-30T03:10:35.246323+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    },
+    {
+      "run": "cfr-modeimage-amplification-dev86-20261030T031046Z-9c9835",
+      "launch_utc": "2026-10-30T03:13:06.340032+00:00",
+      "status": "passed",
+      "root_accepted": true,
+      "collected": true
+    },
+    {
+      "run": "cfr-physical-powerbasis-dev87-20261030T031350Z-b5d2d5",
+      "launch_utc": "2026-10-30T03:15:30.924338+00:00",
+      "status": "failed",
+      "root_accepted": false,
+      "collected": true
+    }
+  ],
+  "all_launched_collected": true,
+  "session_remains_active": true
+}
