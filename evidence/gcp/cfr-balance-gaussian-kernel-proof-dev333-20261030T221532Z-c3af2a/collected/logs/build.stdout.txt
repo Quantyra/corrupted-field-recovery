@@ -1,0 +1,65 @@
+✖ [3001/3001] Building CorruptedFieldRecovery.S010BalanceGaussianKernelProof (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelProof.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelProof.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianKernelProof.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianKernelProof.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean:41:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  A i pivot.2
+in the target expression
+  A pivot.1 free • A.col pivot.2 i = if i = pivot.1 then A pivot.1 free else 0
+
+m n : ℕ
+inst✝ : Fintype (Fin n)
+A : Matrix (Fin m) (Fin n) (ZMod 2)
+pivots : List (Fin m × Fin n)
+free : Fin n
+hfree : free ∉ List.map Prod.snd pivots
+hrows : (List.map Prod.fst pivots).Nodup
+hunit : ∀ pivot ∈ pivots, ∀ (i : Fin m), A i pivot.2 = if i = pivot.1 then 1 else 0
+hzero : ∀ i ∉ List.map Prod.fst pivots, A i free = 0
+P : Finset (Fin m × Fin n) := pivots.toFinset
+L : (Fin n → ZMod 2) →ₗ[ZMod 2] Fin m → ZMod 2 := (Matrix.mulVecBilin (ZMod 2) (ZMod 2)) A
+hcalc : A *ᵥ balanceGaussianFreeKernelCandidate A pivots free = A.col free + ∑ pivot ∈ P, A pivot.1 free • A.col pivot.2
+i : Fin m
+pivot : Fin m × Fin n
+hpivot : pivot ∈ P
+hpivot' : pivot ∈ pivots
+⊢ A pivot.1 free • A.col pivot.2 i = if i = pivot.1 then A pivot.1 free else 0
+error: CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean:48:16: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ pivot ∈ P, A pivot.1 free • A.col pivot.2 ?i
+in the target expression
+  A i free + ∑ x ∈ P, A x.1 free • A i x.2 = 0 i
+
+case h
+m n : ℕ
+inst✝ : Fintype (Fin n)
+A : Matrix (Fin m) (Fin n) (ZMod 2)
+pivots : List (Fin m × Fin n)
+free : Fin n
+hfree : free ∉ List.map Prod.snd pivots
+hrows : (List.map Prod.fst pivots).Nodup
+hunit : ∀ pivot ∈ pivots, ∀ (i : Fin m), A i pivot.2 = if i = pivot.1 then 1 else 0
+hzero : ∀ i ∉ List.map Prod.fst pivots, A i free = 0
+P : Finset (Fin m × Fin n) := pivots.toFinset
+L : (Fin n → ZMod 2) →ₗ[ZMod 2] Fin m → ZMod 2 := (Matrix.mulVecBilin (ZMod 2) (ZMod 2)) A
+hcalc : A *ᵥ balanceGaussianFreeKernelCandidate A pivots free = A.col free + ∑ pivot ∈ P, A pivot.1 free • A.col pivot.2
+hsumRewrite :
+  ∀ (i : Fin m), ∑ pivot ∈ P, A pivot.1 free • A.col pivot.2 i = ∑ pivot ∈ P, if i = pivot.1 then A pivot.1 free else 0
+i : Fin m
+hrowCalc : (A *ᵥ balanceGaussianFreeKernelCandidate A pivots free) i = A i free + ∑ x ∈ P, A x.1 free • A i x.2
+⊢ A i free + ∑ x ∈ P, A x.1 free • A i x.2 = 0 i
+warning: CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean:32:39: This simp argument is unused:
+  Matrix.mulVec_smul
+
+Hint: Omit it from the simp argument list.
+  simp [L, Matrix.mulVecBilin_apply, M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵V̵e̵c̵_̵s̵m̵u̵l̵,̵Matrix.mulVec_single_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean:33:6: This simp argument is unused:
+  Matrix.mulVec_single_one
+
+Hint: Omit it from the simp argument list.
+  simp [L, Matrix.mulVecBilin_apply, Matrix.mulVec_smul,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵V̵e̵c̵_̵s̵i̵n̵g̵l̵e̵_̵o̵n̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianKernelProof
