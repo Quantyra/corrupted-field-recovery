@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-30T13:35:58.813283+00:00",
+  "instance_id": "3335066512373302615",
+  "initial_state": "TERMINATED",
+  "lastStopTimestamp": "2026-10-30T06:31:46.558-07:00",
+  "account": "dfredriksen@quantyra.org",
+  "task_egress_absent": true,
+  "profile": {
+    "profile": "cfr-isolated-20261028a",
+    "project": "quantyra-lean-cert-20260915",
+    "instance": "quantyra-cfr-lean-builder-20261028a",
+    "zone": "us-central1-a",
+    "account": "dfredriksen@quantyra.org",
+    "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+    "toolchain_bin": "/opt/quantyra/lean-4.30.0-linux/bin",
+    "machine_type": "e2-highmem-8",
+    "boot_disk_gb": 100,
+    "max_run_duration_seconds": 14400,
+    "idle_shutdown": false,
+    "ephemeral_external_ip": "Outbound only; effective ingress restricted to IAP SSH and internal subnet. Remove after preserving outcomes.",
+    "ssh_host_key_fingerprint": "SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "ownership": "Dedicated CFR builder explicitly requested by Dan; no shared disk or cache"
+  },
+  "prior_stop_receipt": "cfr-balance-gaussian-core-dev274-20261030T132036Z-c54f3f/cfr-shutdown-20261030T132907Z-0e0b51-result.json"
+}

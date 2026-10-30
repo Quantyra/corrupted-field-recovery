@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-30T13:37:29.038972+00:00",
+  "actual_start_utc": "2026-10-30T13:37:12.351000+00:00",
+  "stop_ceiling_utc": "2026-10-30T17:37:12.351000+00:00",
+  "latest_full_stage_launch_utc": "2026-10-30T16:42:12.351000+00:00",
+  "conservative_last_submission_start_utc": "2026-10-30T16:35:12.351000+00:00",
+  "stage_timeout_seconds": 1800,
+  "shutdown_collection_reserve_seconds": 1500,
+  "transfer_reserve_seconds": 420
+}

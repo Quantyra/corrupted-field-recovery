@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-30T13:38:32.281824+00:00",
+  "receipt": "cfr-initial-full-process-inventory-20261030T133811Z-1e820b",
+  "full_process_inventory_retained": true,
+  "no_active_lean_lake_runner": true,
+  "actual_campaign_lock_free": true
+}
