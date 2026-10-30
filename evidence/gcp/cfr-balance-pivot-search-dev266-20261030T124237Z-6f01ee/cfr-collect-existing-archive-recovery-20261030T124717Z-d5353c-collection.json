@@ -1,0 +1,27 @@
+{
+  "run": "cfr-balance-pivot-search-dev266-20261030T124237Z-6f01ee",
+  "utc": "2026-10-30T12:48:16.632617+00:00",
+  "archive_sha256": "c6ae91e9e5d08a210ef0ee27161c785c7294ae8cf5c118031b9446484b4bf4eb",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "fb1653fecb61926ff24fd2dd436d5d70e7ec7ebcc9510b0407380b014e5cbd78",
+    "launch.log": "2182f936a8e51b5a684b01ef52b2f3d37547755ae823f6b322826bf335c42a62",
+    "runner-pid": "8d26fde482532e1d0105c502d55f8697b656eb62a55609cecd7c7f133ac94d7c",
+    "started-utc": "15e5a14b6c79af19f31f40ce4a087921ca2cfc8ee2aac29ab88684f9d5771b13",
+    "terminal-receipt.json": "c00ebdd79134caa8bb15ae5a6ecf35b487234929250880bee4ecde6bdcfac9f4",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "efee397af85038d65e2feecddef54c603b2c000212c999d2bffcd419f4b0d66c",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "854d75dc2a7b61df37cc63b5c22d560ced86b621f9e92e498e31627a674dff5b",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "e7d9bbdf34d5c14ecc812a1795ae881d3871531127f6666818ab8d5ff24d781c",
+    "logs/emitted-types.json": "d29e6449051d62dc8f69a011489e2b12b8c03b2d3e60bd312d98d1a2f177564f",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "2182f936a8e51b5a684b01ef52b2f3d37547755ae823f6b322826bf335c42a62"
+  },
+  "recovered_existing_archive": true
+}

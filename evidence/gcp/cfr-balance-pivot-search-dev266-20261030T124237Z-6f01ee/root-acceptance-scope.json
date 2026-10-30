@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T12:49:20.829230+00:00",
+  "accepted": "Pivot-search definition; return some row implies A row column=1",
+  "excluded": [
+    "completeness",
+    "firstness",
+    "solver"
+  ],
+  "axioms_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "collection": "Existing terminal archive downloaded after package transport failure, exact SHA and all stage logs verified"
+}

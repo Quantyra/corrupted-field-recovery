@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.balanceFirstPivotRow": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceFirstPivotRow : {m n : Nat} \u2192\n  (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)) \u2192 (column : Fin n) \u2192 Option.{0} (Fin m)\n",
+    "sha256": "a5042d1f4e89f5b6876fe866fe63c77199f556e2faf2d494f2841dbb6623f933"
+  },
+  "CorruptedFieldRecovery.balanceFirstPivotRow_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.balanceFirstPivotRow_sound : \u2200 {m n : Nat} (A : Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2))\n  (column : Fin n) {row : Fin m}\n  (h : Eq.{1} (CorruptedFieldRecovery.balanceFirstPivotRow A column) (Option.some.{0} row)), Eq.{1} (A row column) 1\n",
+    "sha256": "a26dd172ad8d05de58229aa92ac4199964e93f66301458ce8b86f44799b2bac2"
+  }
+}

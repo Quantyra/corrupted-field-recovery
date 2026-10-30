@@ -1,0 +1,6 @@
+{
+  "run": "cfr-balance-pivot-search-dev266-20261030T124237Z-6f01ee",
+  "utc": "2026-10-30T12:47:17.978700+00:00",
+  "action": "Download existing terminal archive only; no repackage/relaunch",
+  "archive_sha256": "c6ae91e9e5d08a210ef0ee27161c785c7294ae8cf5c118031b9446484b4bf4eb"
+}
