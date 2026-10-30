@@ -1,0 +1,375 @@
+{
+  "utc": "2026-10-30T10:36:29.639718+00:00",
+  "runs": [
+    {
+      "run": "cfr-raw-rabin-factor-dev172-20261030T074153Z-52c236",
+      "launch_utc": "2026-10-30T07:44:55.878707+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T07:46:40.440569+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev173-20261030T074348Z-aada9a",
+      "launch_utc": "2026-10-30T07:57:29.229481+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T07:58:05.344669+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-factor-dev174-20261030T075145Z-c3f1f8",
+      "launch_utc": "2026-10-30T08:01:28.371647+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:02:00.112874+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev175-20261030T080120Z-8b8ab2",
+      "launch_utc": "2026-10-30T08:04:39.470937+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:05:01.287632+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-factor-dev176-20261030T080342Z-df3189",
+      "launch_utc": "2026-10-30T08:07:48.480671+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T08:08:13.484462+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev177-20261030T080754Z-812e63",
+      "launch_utc": "2026-10-30T08:11:58.790846+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:12:25.358057+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-scan-dev178-20261030T081249Z-40a032",
+      "launch_utc": "2026-10-30T08:15:03.112979+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T08:15:30.837874+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev179-20261030T081439Z-f4f523",
+      "launch_utc": "2026-10-30T08:19:51.104212+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:20:12.922112+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-residue-dev180-20261030T082621Z-3dc858",
+      "launch_utc": "2026-10-30T08:27:28.831353+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:27:52.608715+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev181-20261030T082739Z-4e1a9d",
+      "launch_utc": "2026-10-30T08:31:02.562913+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:31:28.761479+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-residue-dev182-20261030T083118Z-3fade5",
+      "launch_utc": "2026-10-30T08:34:22.602646+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:34:46.311041+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev183-20261030T083411Z-ba2671",
+      "launch_utc": "2026-10-30T08:38:18.464819+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T08:38:48.789512+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-rabin-residue-dev184-20261030T083816Z-ce210d",
+      "launch_utc": "2026-10-30T08:42:08.973327+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:42:33.964352+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-residue-dev185-20261030T084524Z-8fda31",
+      "launch_utc": "2026-10-30T08:46:31.730586+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:46:55.675478+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev186-20261030T084813Z-b6eb11",
+      "launch_utc": "2026-10-30T08:50:17.206465+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:50:45.784343+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-residue-dev187-20261030T084904Z-0b18da",
+      "launch_utc": "2026-10-30T08:53:28.522027+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T08:53:51.702855+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev188-20261030T085333Z-54caed",
+      "launch_utc": "2026-10-30T08:56:58.746292+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T08:57:24.949226+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-scan-coprime-dev189-20261030T085744Z-797e33",
+      "launch_utc": "2026-10-30T08:59:37.737669+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T08:59:58.280388+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev190-20261030T090631Z-13a1b6",
+      "launch_utc": "2026-10-30T09:07:55.904387+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T09:08:22.233100+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-rabin-criterion-dev191-20261030T091051Z-0a8a03",
+      "launch_utc": "2026-10-30T09:11:45.443726+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:12:05.296441+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev192-20261030T091252Z-a52499",
+      "launch_utc": "2026-10-30T09:14:42.794307+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:15:10.210065+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-criterion-dev193-20261030T091448Z-50545c",
+      "launch_utc": "2026-10-30T09:24:15.112854+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:24:33.973365+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev194-20261030T092610Z-51dcf6",
+      "launch_utc": "2026-10-30T09:26:54.778599+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:27:19.376790+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-criterion-dev195-20261030T092710Z-652369",
+      "launch_utc": "2026-10-30T09:29:30.296956+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T09:29:52.894055+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev196-20261030T092943Z-bc06e2",
+      "launch_utc": "2026-10-30T09:31:43.711595+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:32:23.424222+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-candidate-dev197-20261030T093337Z-047811",
+      "launch_utc": "2026-10-30T09:34:21.334884+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:34:38.409306+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev198-20261030T093458Z-5dd467",
+      "launch_utc": "2026-10-30T09:36:59.842211+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:37:48.748732+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-rabin-candidate-dev199-20261030T093706Z-f6cae1",
+      "launch_utc": "2026-10-30T09:40:07.146031+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T09:40:31.679719+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev200-20261030T094045Z-98d3da",
+      "launch_utc": "2026-10-30T09:42:51.436892+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:43:20.652600+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-trace-fast-verifier-dev201-20261030T094424Z-2d6f5a",
+      "launch_utc": "2026-10-30T09:45:01.580556+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:45:25.337359+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev202-20261030T094548Z-f5bb58",
+      "launch_utc": "2026-10-30T09:47:35.613024+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T09:48:01.484519+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-trace-fast-verifier-dev203-20261030T094846Z-e03dc9",
+      "launch_utc": "2026-10-30T09:50:17.016653+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T09:50:38.197426+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev204-20261030T094940Z-a9e323",
+      "launch_utc": "2026-10-30T09:53:25.184731+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T09:53:58.621274+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-hidden-balance-dev205-20261030T095913Z-584292",
+      "launch_utc": "2026-10-30T09:59:51.342509+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T10:00:22.398189+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-polynomial-cost-dev206-20261030T095957Z-c0d428",
+      "launch_utc": "2026-10-30T10:03:39.468441+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:03:55.956245+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-scalar-balance-dev207-20261030T100526Z-a23089",
+      "launch_utc": "2026-10-30T10:06:09.295746+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:06:37.471705+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-polynomial-cost-dev208-20261030T100634Z-9c291a",
+      "launch_utc": "2026-10-30T10:09:26.614247+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:09:46.777843+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-scalar-balance-dev209-20261030T100929Z-2c108b",
+      "launch_utc": "2026-10-30T10:12:26.061583+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:12:53.380186+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-polynomial-cost-dev210-20261030T101302Z-152956",
+      "launch_utc": "2026-10-30T10:15:03.095607+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:15:20.068464+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-scalar-balance-dev211-20261030T101519Z-0a49fe",
+      "launch_utc": "2026-10-30T10:17:19.629022+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T10:17:51.734779+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-raw-polynomial-cost-dev212-20261030T101822Z-baa8ba",
+      "launch_utc": "2026-10-30T10:19:48.634864+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:20:10.289024+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-balance-dimension-dev213-20261030T102215Z-9efce8",
+      "launch_utc": "2026-10-30T10:22:53.494948+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:23:22.304510+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-polynomial-cost-dev214-20261030T102357Z-3ee2a5",
+      "launch_utc": "2026-10-30T10:25:34.661462+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:25:57.927473+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-observed-balance-dimension-dev215-20261030T102611Z-8b4430",
+      "launch_utc": "2026-10-30T10:28:33.272780+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:29:01.345925+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    },
+    {
+      "run": "cfr-raw-polynomial-cost-dev216-20261030T102748Z-cfa803",
+      "launch_utc": "2026-10-30T10:31:02.479330+00:00",
+      "status": "passed",
+      "finished_utc": "2026-10-30T10:31:29.003771+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": true
+    },
+    {
+      "run": "cfr-observed-balance-dimension-dev217-20261030T103108Z-38e0b9",
+      "launch_utc": "2026-10-30T10:34:06.178541+00:00",
+      "status": "failed",
+      "finished_utc": "2026-10-30T10:34:34.673635+00:00",
+      "all_log_hashes_verified": true,
+      "root_accepted": false
+    }
+  ],
+  "launched_runs": 46,
+  "accepted": 13
+}

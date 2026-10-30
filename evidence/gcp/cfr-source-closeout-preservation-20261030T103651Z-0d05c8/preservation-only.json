@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-30T10:36:51.920347+00:00",
+  "never_submitted": true,
+  "purpose": "Archive only; no new proof compilation/acceptance",
+  "parent_batch": "cfr-batch-reacquire-20261030T073716Z-abeef4",
+  "unaccepted_sources": [
+    "CorruptedFieldRecovery/RawReductionBoundsExpanded.lean",
+    "CorruptedFieldRecovery/S010BetaActual.lean",
+    "CorruptedFieldRecovery/S010NumericTapeBridge.lean",
+    "CorruptedFieldRecovery/S010PhysicalFiveCount.lean"
+  ]
+}

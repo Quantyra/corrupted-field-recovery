@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-30T10:41:02.938051+00:00",
+  "actual_start_utc": "2026-10-30T07:39:09.828Z",
+  "STOP_ceiling_utc": "2026-10-30T11:39:09.828Z",
+  "conservative_last_submission_start": "2026-10-30T10:37:09.828Z",
+  "last_stop_utc": "2026-10-30T10:39:53.677000+00:00",
+  "shutdown_operation": "cfr-shutdown-20261030T103721Z-16f882",
+  "single_stop": true,
+  "instance_id": "3335066512373302615",
+  "status": "TERMINATED",
+  "task_access_configs": [],
+  "disk_cache_retained": true,
+  "launched_runs": 46,
+  "root_accepted": 13,
+  "failed_or_warning_gated": 33,
+  "all_terminal_log_hashes_verified": true,
+  "latest_accepted_sources_verified": 23,
+  "head_and_working_bytes_match": true,
+  "preservation_capture": "cfr-source-closeout-preservation-20261030T103651Z-0d05c8",
+  "never_submitted_archive": true,
+  "old_unaccepted_drafts": 4,
+  "failed_dimension_draft": "Exact dev217 bytes preserved in evidence/drafts; not accepted and not never-compiled",
+  "unrelated_scratch_retained": [
+    ".tmp-canonical-restore/",
+    ".tmp-dev192/",
+    ".tmp-accepted211/"
+  ],
+  "local_lean_or_lake_executed": false,
+  "scope": "Functional fast candidate gate/verifier and observed scalar-balance characterization accepted; declared carryless multiplication charge accepted; no complete constructor/solver/runtime/space theorem",
+  "remaining_obligations": "remaining-proof-obligations.json"
+}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-30T10:36:30.916401+00:00",
+  "path": "evidence/drafts/S010ObservedHiddenBalance.balance-dimension-uncompiled.lean",
+  "sha256": "454f5d76df17b4f0e54ec72650f4d617b77012c17e2aff20cdd79ddf5e939ca0",
+  "status": "Exact failed dev217 source; NOT a never-compiled draft despite filename",
+  "failed_run": "cfr-observed-balance-dimension-dev217-20261030T103108Z-38e0b9",
+  "accepted_source_restored_from": "dev211",
+  "accepted_source_sha256": "298b6565581015654afaf0cb4ebb9568e96d052644153911c9dcc0e8c6f539ea"
+}

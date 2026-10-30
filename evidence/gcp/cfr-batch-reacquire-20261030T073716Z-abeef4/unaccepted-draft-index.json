@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-30T10:37:55.825372+00:00",
+  "preservation_capture": "cfr-source-closeout-preservation-20261030T103651Z-0d05c8",
+  "drafts": [
+    {
+      "source": "CorruptedFieldRecovery/RawReductionBoundsExpanded.lean",
+      "sha256": "3d2f880066e46cbc78fd70098420415b40d9ccf937a29c44c9c5d79ffe798b32",
+      "status": "Preserved old unaccepted draft; not accepted by this batch"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BetaActual.lean",
+      "sha256": "cc1e057392b3b39f4ca6703133e2ab37bd81db5f078622d4c879904b78c81a7c",
+      "status": "Preserved old unaccepted draft; not accepted by this batch"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010NumericTapeBridge.lean",
+      "sha256": "df56e3a358570d3a6248f89913eb03c411b77b86385ede9be9b4fbddbd121078",
+      "status": "Preserved old unaccepted draft; not accepted by this batch"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010PhysicalFiveCount.lean",
+      "sha256": "1b885ab23035a04919e7c1cf63b2dee0f0c22da5c78596935220bb710f4d3c01",
+      "status": "Preserved old unaccepted draft; not accepted by this batch"
+    }
+  ],
+  "unrelated_scratch_preserved": [
+    ".tmp-canonical-restore/",
+    ".tmp-dev192/"
+  ],
+  "failed_dimension_draft_index": "failed-dimension-draft-index.json"
+}

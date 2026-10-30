@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-30T10:39:33.538300+00:00",
+  "accepted_physical_scope": "Good tape and explicit Q/E/U/b/observed trace-plus-E model, c nonzero: observed physical balance iff Q-conjugated scalar multiplication",
+  "open": [
+    "formal range/subspace dimension increment failed in dev217",
+    "computed balance solver and dimension computation",
+    "field construction and executable constructor completeness",
+    "actual good event implies executable constructor success",
+    "executable bounded repetition",
+    "full primitive-bit/time/space and runtime/erasure costs",
+    "full recovery audit and manuscript update"
+  ],
+  "failed_dimension_diagnostic": "Outer map_smul needs explicit vector-action goal before scalar-map reasoning; author described possible repair but none compiled this batch",
+  "cost_scope": "Declared charge for exact carryless multiplication recurrence accepted; not a concrete machine/full-verifier runtime bound"
+}
