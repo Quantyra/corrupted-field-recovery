@@ -1,0 +1,140 @@
+✖ [2072/2072] Building CorruptedFieldRecovery.RawArithmeticFrameBounds (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticFrameBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrameBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrameBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrameBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrameBounds.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:14:2: Type mismatch
+  fun x => ?m.3
+has type
+  (x : ?m.1) → ?m.4 x
+but is expected to have type
+  ℕ
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:16:0: unused termination hints, function is not recursive
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:24:13: unsolved goals
+case h.zero
+a : ℕ
+ih : ∀ m < 0, rawPolyMulBitCostedFrames m ≤ (rawPolyMulBitCosted a m).2
+⊢ sorry () ≤ 1
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:24:22: declaration uses `sorry`
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:39:0: 2 parameters bound in `termination_by`, but the body of CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames only binds one parameter.
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:49:13: unsolved goals
+case h.zero
+a : ℕ
+ih : ∀ m < 0, ∀ (a : ℕ), rawPolynomialGcdBitCostedFrames a m ≤ (rawPolynomialGcdBitCosted a m).2
+⊢ rawPolynomialGcdBitCostedFrames a 0 ≤ 1
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:53:17: unsolved goals
+case h.succ.zero
+a : ℕ
+ih : ∀ m < 0 + 1, ∀ (a : ℕ), rawPolynomialGcdBitCostedFrames a m ≤ (rawPolynomialGcdBitCosted a m).2
+⊢ rawPolynomialGcdBitCostedFrames a 1 ≤ Nat.log2 1 + 1
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:66:14: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 1
+  g - h + i + j ≤ -1
+  f ≥ 0
+  e ≥ 0
+  e - f ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ -1
+where
+ c := ↑b
+ d := ↑rem.1
+ e := ↑(rawPolynomialGcdBitCosted (b + 2) rem.1).2
+ f := ↑(rawPolynomialGcdBitCostedFrames (b + 2) rem.1)
+ g := ↑(rawNatBitWidth (b + 2))
+ h := ↑(rawPolynomialGcdBitCostedFrames a (b + 1 + 1))
+ i := ↑(rawPolynomialRemainderBitCosted a (b + 2)).2
+ j := ↑(rawPolynomialGcdBitCosted (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1).2
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:49:22: This simp argument is unused:
+  rawPolynomialGcdBitCostedFrames
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵a̵w̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵G̵c̵d̵B̵i̵t̵C̵o̵s̵t̵e̵d̵F̵r̵a̵m̵e̵s̵,̵ ̵r̵a̵w̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵G̵c̵d̵B̵i̵t̵C̵o̵s̵t̵e̵d̵,̵[̲r̲a̲w̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲G̲c̲d̲B̲i̲t̲C̲o̲s̲t̲e̲d̲,̲ rawNatBitWidth]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:53:26: This simp argument is unused:
+  rawPolynomialGcdBitCostedFrames
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵a̵w̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵G̵c̵d̵B̵i̵t̵C̵o̵s̵t̵e̵d̵F̵r̵a̵m̵e̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵r̵a̵w̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵G̵c̵d̵B̵i̵t̵C̵o̵s̵t̵e̵d̵,̵[̲r̲a̲w̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲G̲c̲d̲B̲i̲t̲C̲o̲s̲t̲e̲d̲,̲ rawNatBitWidth]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:61:25: This simp argument is unused:
+  rawPolynomialGcdBitCostedFrames
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵a̵w̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵G̵c̵d̵B̵i̵t̵C̵o̵s̵t̵e̵d̵F̵r̵a̵m̵e̵s̵,̵ ̵r̵a̵w̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵G̵c̵d̵B̵i̵t̵C̵o̵s̵t̵e̵d̵,̵[̲r̲a̲w̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲G̲c̲d̲B̲i̲t̲C̲o̲s̲t̲e̲d̲,̲ rem]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:62:16: This simp argument is unused:
+  rem
+
+Hint: Omit it from the simp argument list.
+  simp only [rawPolynomialGcdBitCostedFrames, rawPolynomialGcdBitCosted,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵r̵e̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:97:0: 3 parameters bound in `termination_by`, but the body of CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCostedFrames only binds 2 parameters.
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:105:9: unsolved goals
+case zero
+modulus x : ℕ
+⊢ rawCandidateFrobeniusAuxBitCostedFrames modulus 0 x ≤ 1
+error: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:116:6: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  c ≥ 1
+  c - e + f + g + h + i ≤ -2
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ -1
+where
+ a := ↑(rawCandidateFrobeniusAuxBitCosted modulus d rem.1).2
+ b := ↑(rawCandidateFrobeniusAuxBitCostedFrames modulus d rem.1)
+ c := ↑(rawNatBitWidth modulus)
+ e := ↑(rawCandidateFrobeniusAuxBitCostedFrames modulus (d + 1) x)
+ f := ↑(rawPolyMulBitCosted x x).2
+ g := ↑(rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).2
+ h := ↑(rawNatBitWidth x)
+ i := ↑(rawCandidateFrobeniusAuxBitCosted modulus d
+      (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1).2
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:105:18: This simp argument is unused:
+  rawCandidateFrobeniusAuxBitCostedFrames
+
+Hint: Omit it from the simp argument list.
+  simp [rawCandidateFrobeniusAuxBitCostedF̵r̵a̵m̵e̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵r̵a̵w̵C̵a̵n̵d̵i̵d̵a̵t̵e̵F̵r̵o̵b̵e̵n̵i̵u̵s̵A̵u̵x̵B̵i̵t̵C̵o̵s̵t̵e̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:114:17: This simp argument is unused:
+  rawCandidateFrobeniusAuxBitCostedFrames
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵a̵w̵C̵a̵n̵d̵i̵d̵a̵t̵e̵F̵r̵o̵b̵e̵n̵i̵u̵s̵A̵u̵x̵B̵i̵t̵C̵o̵s̵t̵e̵d̵F̵r̵a̵m̵e̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵r̵a̵w̵C̵a̵n̵d̵i̵d̵a̵t̵e̵F̵r̵o̵b̵e̵n̵i̵u̵s̵A̵u̵x̵B̵i̵t̵C̵o̵s̵t̵e̵d̵,̵[̲r̲a̲w̲C̲a̲n̲d̲i̲d̲a̲t̲e̲F̲r̲o̲b̲e̲n̲i̲u̲s̲A̲u̲x̲B̲i̲t̲C̲o̲s̲t̲e̲d̲,̲ square, rem]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:115:43: This simp argument is unused:
+  square
+
+Hint: Omit it from the simp argument list.
+  simp only [rawCandidateFrobeniusAuxBitCostedFrames,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵rawCandidateFrobeniusAuxBitCosted, s̵q̵u̵a̵re,̵ ̵r̵e̵m]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawArithmeticFrameBounds.lean:115:51: This simp argument is unused:
+  rem
+
+Hint: Omit it from the simp argument list.
+  simp only [rawCandidateFrobeniusAuxBitCostedFrames,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵rawCandidateFrobeniusAuxBitCosted, square,̵ ̵r̵e̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticFrameBounds
