@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-raw-rabin-frobenius-cost-dev249-20261030T120421Z-7c9b59",
+  "utc": "2026-10-30T12:05:38.102200+00:00"
+}
