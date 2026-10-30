@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-30T10:34:29.157965+00:00",
+  "review": "Root exact types/source",
+  "accepted": "Instrumented actual rawPolyMul recurrence first projection equals rawPolyMul; declared width=log2+1 charge bounded by8(r+k+2)(k+1) for a<2^r,b<2^k",
+  "excluded": [
+    "demonstrated concrete bit-machine implementation",
+    "full verifier cost",
+    "runtime",
+    "space bound"
+  ],
+  "axioms": "width none; costed definition/refinement propext,Quot.sound; charge theorem standard three"
+}

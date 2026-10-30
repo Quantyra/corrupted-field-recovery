@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawNatBitWidth": {
+    "emitted_type": "CorruptedFieldRecovery.rawNatBitWidth : (n : Nat) \u2192 Nat\n",
+    "sha256": "91914cfb3f78f0aff2afddd3cedd2cc79f1e7ada580c1006e272114a098bb861"
+  },
+  "CorruptedFieldRecovery.rawPolyMulBitCosted": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolyMulBitCosted : (a a : Nat) \u2192 Prod.{0, 0} Nat Nat\n",
+    "sha256": "5db23b34db077bc43b333f3a691d8288c76f74b7fefcb39a34a1e3ac80bd6443"
+  },
+  "CorruptedFieldRecovery.rawPolyMulBitCosted_fst": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolyMulBitCosted_fst : \u2200 (a b : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawPolyMulBitCosted a b).1 (CorruptedFieldRecovery.rawPolyMul a b)\n",
+    "sha256": "e4284f55ecd415f7bed39488d173dba95e34f9478d11f3d3e1c6e93ffc5c8482"
+  },
+  "CorruptedFieldRecovery.rawPolyMulBitCosted_cost_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolyMulBitCosted_cost_le : \u2200 {r k a b : Nat} (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 r))\n  (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 k)),\n  LE.le.{0} (CorruptedFieldRecovery.rawPolyMulBitCosted a b).2\n    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 8 (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} r k) 2))\n      (HAdd.hAdd.{0, 0, 0} k 1))\n",
+    "sha256": "3196ac2e53e0afe26f72c6b4f42e6a8d35fc8a84fe575e4cd509438bebb0454b"
+  }
+}

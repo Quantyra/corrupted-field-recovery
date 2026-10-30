@@ -1,0 +1,21 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawNatBitWidth
+CorruptedFieldRecovery.rawNatBitWidth : (n : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawNatBitWidth
+'CorruptedFieldRecovery.rawNatBitWidth' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMulBitCosted
+CorruptedFieldRecovery.rawPolyMulBitCosted : (a a : Nat) → Prod.{0, 0} Nat Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMulBitCosted
+'CorruptedFieldRecovery.rawPolyMulBitCosted' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMulBitCosted_fst
+CorruptedFieldRecovery.rawPolyMulBitCosted_fst : ∀ (a b : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawPolyMulBitCosted a b).1 (CorruptedFieldRecovery.rawPolyMul a b)
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMulBitCosted_fst
+'CorruptedFieldRecovery.rawPolyMulBitCosted_fst' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolyMulBitCosted_cost_le
+@CorruptedFieldRecovery.rawPolyMulBitCosted_cost_le : ∀ {r k a b : Nat} (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 r))
+  (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 k)),
+  LE.le.{0} (CorruptedFieldRecovery.rawPolyMulBitCosted a b).2
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 8 (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} r k) 2))
+      (HAdd.hAdd.{0, 0, 0} k 1))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolyMulBitCosted_cost_le
+'CorruptedFieldRecovery.rawPolyMulBitCosted_cost_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
