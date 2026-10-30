@@ -1,0 +1,106 @@
+{
+  "run": "cfr-uncompiled-good-event-nonempty-preservation-20261030T172748Z-5bc8b0",
+  "archive_sha256": "a9278bfe52fdc6142490f8772cbf62bcfb42f706fa2aa67d2ac8b232f347c495",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean",
+  "source_sha256": "50B74C9B9A064979A3B2010A764E62381FAFE5BEB275F6BEC3A8EC510D4E267A",
+  "compiled": false,
+  "audited": false,
+  "accepted": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagKernelOutputBridge.lean",
+      "sha256": "2ae5bc6b91e81ad572f38ab40da4f132c54b52e91d3f550a358fde54689549d6",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean",
+      "sha256": "d42f28827dd7980699f5cebcf503ef4b174c849b883c53aa8a8f7d4089cf259d",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+      "sha256": "4429c93a112e2b8d210f072ec7d42186028e6febc8c256d9f594dbb089182b59",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+      "sha256": "7afb6f348edb61b610eb983096847e3ab60861b31568d42f7fddf6aa97685264",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean",
+      "sha256": "4ec1f14e3940323b57f27f47f24960b2b3c45f6fa5e213e9ca11225e088c7e4b",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean",
+      "sha256": "db3f52259766552243d6ebe108575c983e34010362858dfa0451eb60784bd2ed",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayDeterministicScan.lean",
+      "sha256": "39871653b3814604a1ba1c67d3145d85f9f7b65fd6f667b64e1718fe2716ae54",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean",
+      "sha256": "e5ddc3a7ec48e73bb584817003f68616393284caf59d7125a5a2e134dd10bbbf",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean",
+      "sha256": "3b5c2c0c4bb2b7af0476fa9e7870caca67c9cc7b41aeea76a1685088582b5f63",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean",
+      "sha256": "aefd885c7dd441b825d1bd647ca501450c0122b152d282adcb1fd60df789fd39",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled dev316 observed PASS; exact collection and acceptance pending"
+    }
+  ],
+  "accepted_direct_dependency": {
+    "source": "CorruptedFieldRecovery/S010ObservedHiddenBalance.lean",
+    "sha256": "77450aae69df3a1cd863ed9898e410b091e3e19c7cf96c7b2af73118dcdfde6e",
+    "accepted_run": "dev222"
+  },
+  "scope": "Unaudited draft nonempty free-candidate list from a nonzero balanced witness, specialized to supplied Q-conjugate scalar1 under actual good-event/model hypotheses; deterministic list.head? selector and conditional checker soundness.",
+  "supplied_hypotheses": [
+    "generic nonempty lemma requires nonzero balanced endomorphism witness",
+    "good-model specialization supplies K/field finite characteristic and algebra instances, true Q,E,U,dependent b,good-tape membership,c?0,explicit model decomposition of decoded raw tensor",
+    "nonempty/isSome statements do not impose dense raw size",
+    "checker soundness separately requires raw.size=(3s)^3 and selector=some T"
+  ],
+  "limits": [
+    "no compiled or audited statement",
+    "no field/Q discovery or manuscript recovery-constructor identification",
+    "checker acceptance concerns finite balance equations, not full recovery certificate",
+    "no proven whole constructor success, repetition or runtime/space bound"
+  ]
+}
