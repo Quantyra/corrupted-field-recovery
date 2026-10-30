@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-30T01:16:35.982269+00:00",
+  "reviewer": "sole compiler",
+  "full_process_inventory_sha256": "b03e71fd281f1c67d43147e248275584902e52276b3ececc14355f3e019ce491",
+  "assessment": "Only kernel, OS and Google guest services plus the task inventory SSH were observed; no unrelated acquired workload.",
+  "no_lean_lake_runner": true,
+  "task_lock_free": true,
+  "all_launched_outcomes_collected": true,
+  "failed_initial_inventory_preserved": "final-full-workload.exit.json"
+}

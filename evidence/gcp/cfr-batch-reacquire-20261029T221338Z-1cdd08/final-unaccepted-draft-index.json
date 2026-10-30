@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-30T01:16:21.165257+00:00",
+  "drafts": [
+    {
+      "path": "CorruptedFieldRecovery/RawFieldTraceBitValue.lean",
+      "sha256": "8f223176e54c6d9028434e6296daf97bcbf804c027b5a0dd2f2e48d56b48b24d",
+      "archive": "cfr-trace-basebit-dev57-20261030T011237Z-1487dc/inputs.tar.gz",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/RawReductionBoundsExpanded.lean",
+      "sha256": "3d2f880066e46cbc78fd70098420415b40d9ccf937a29c44c9c5d79ffe798b32",
+      "archive": "cfr-trace-basebit-dev57-20261030T011237Z-1487dc/inputs.tar.gz",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010BetaActual.lean",
+      "sha256": "cc1e057392b3b39f4ca6703133e2ab37bd81db5f078622d4c879904b78c81a7c",
+      "archive": "cfr-trace-basebit-dev57-20261030T011237Z-1487dc/inputs.tar.gz",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010ModeImageTrialBound.lean",
+      "sha256": "f368b4ca3151661a69d2b0abb64458b4f5e36918157e25e30b27c0f5f6635463",
+      "archive": "cfr-trace-basebit-dev57-20261030T011237Z-1487dc/inputs.tar.gz",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010NumericTapeBridge.lean",
+      "sha256": "df56e3a358570d3a6248f89913eb03c411b77b86385ede9be9b4fbddbd121078",
+      "archive": "cfr-trace-basebit-dev57-20261030T011237Z-1487dc/inputs.tar.gz",
+      "accepted": false
+    },
+    {
+      "path": "CorruptedFieldRecovery/S010PhysicalFiveCount.lean",
+      "sha256": "1b885ab23035a04919e7c1cf63b2dee0f0c22da5c78596935220bb710f4d3c01",
+      "archive": "cfr-trace-basebit-dev57-20261030T011237Z-1487dc/inputs.tar.gz",
+      "accepted": false
+    }
+  ],
+  "note": "All current untracked proof drafts match final immutable capture57; none accepted or submitted beyond final57."
+}
