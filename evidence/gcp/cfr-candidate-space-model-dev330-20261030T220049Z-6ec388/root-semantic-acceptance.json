@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery\\RawCandidateVerifierSpaceModel.lean",
+  "sha256": "bf17a1f209b52f979333e98cdb14eed416701b2c9d17067b5001370ecba0cb18",
+  "scope": "Declared logical peak-frame list/candidate bounds,indexwidth,space-model outputBoolrefinement and earlier chargebound projection. No returnedspace bound; arbitrary arithmeticWorkspace, no evaluator heap/live memory refinement.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}

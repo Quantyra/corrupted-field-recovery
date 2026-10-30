@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.rawRabinCheckListPeakFrames_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawRabinCheckListPeakFrames_le : \u2200 {modulus : Nat} (indices : List.{0} Nat),\n  LE.le.{0} (CorruptedFieldRecovery.rawRabinCheckListPeakFrames modulus indices)\n    (HAdd.hAdd.{0, 0, 0} (List.length.{0} indices) 1)\n",
+    "sha256": "3db256ad0e0ae3de08c15ae401add1b93c0ba81df7635bd44d44faf66d76af2a"
+  },
+  "CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_output": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_output : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (arithmeticWorkspace : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawCandidateVerifierSpaceModel candidate arithmeticWorkspace).1\n    (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate)\n",
+    "sha256": "ad83f9e32d63f9161fa5a022176d93f16bb8fe304988c1d0cde81240696aa07f"
+  },
+  "CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_charge_bound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_charge_bound : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (arithmeticWorkspace : Nat),\n  LE.le.{0} (CorruptedFieldRecovery.rawCandidateVerifierSpaceModel candidate arithmeticWorkspace).2.1\n    (HMul.hMul.{0, 0, 0} 2000000\n      (HPow.hPow.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0}\n          (HAdd.hAdd.{0, 0, 0}\n            (HAdd.hAdd.{0, 0, 0} s (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))\n            (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))\n          4)\n        5))\n",
+    "sha256": "8b034a3d58c9ec3b9252c6de56f377e000780062941ace97e31f3e9871916864"
+  },
+  "CorruptedFieldRecovery.rawListRangeIndex_payload_width_le": {
+    "emitted_type": "CorruptedFieldRecovery.rawListRangeIndex_payload_width_le : \u2200 (q i : Nat)\n  (hi : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawListRangeBitCosted q).1 i),\n  LE.le.{0} (CorruptedFieldRecovery.rawNatBitWidth i) (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth q) 1)\n",
+    "sha256": "ad90e1c33839beb9aad8dc81d29f2fa824e89368b4796e11cb26405706fa9da6"
+  },
+  "CorruptedFieldRecovery.rawCandidateRabinScan_peak_frames_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateRabinScan_peak_frames_le : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),\n  LE.le.{0}\n    (CorruptedFieldRecovery.rawRabinCheckListPeakFrames\n      (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))\n      (List.range (HDiv.hDiv.{0, 0, 0} s 2)))\n    (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 1)\n",
+    "sha256": "8a5c179b7305737cb2936dde773bcd915c12cd48aa84c856e7aad8a52e3dcfec"
+  }
+}

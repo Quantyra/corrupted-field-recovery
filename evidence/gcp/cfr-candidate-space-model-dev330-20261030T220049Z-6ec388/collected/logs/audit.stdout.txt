@@ -1,0 +1,53 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinCheckListPeakFrames_le
+@CorruptedFieldRecovery.rawRabinCheckListPeakFrames_le : ∀ {modulus : Nat} (indices : List.{0} Nat),
+  LE.le.{0} (CorruptedFieldRecovery.rawRabinCheckListPeakFrames modulus indices)
+    (HAdd.hAdd.{0, 0, 0} (List.length.{0} indices) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinCheckListPeakFrames_le
+'CorruptedFieldRecovery.rawRabinCheckListPeakFrames_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_output
+@CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_output : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (arithmeticWorkspace : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawCandidateVerifierSpaceModel candidate arithmeticWorkspace).1
+    (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_output
+'CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_output' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_charge_bound
+@CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_charge_bound : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (arithmeticWorkspace : Nat),
+  LE.le.{0} (CorruptedFieldRecovery.rawCandidateVerifierSpaceModel candidate arithmeticWorkspace).2.1
+    (HMul.hMul.{0, 0, 0} 2000000
+      (HPow.hPow.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} s (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)))
+            (Array.size.{0} (CorruptedFieldRecovery.RawFieldCandidate.scalar candidate)))
+          4)
+        5))
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_charge_bound
+'CorruptedFieldRecovery.rawCandidateVerifierSpaceModel_charge_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawListRangeIndex_payload_width_le
+CorruptedFieldRecovery.rawListRangeIndex_payload_width_le : ∀ (q i : Nat)
+  (hi : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawListRangeBitCosted q).1 i),
+  LE.le.{0} (CorruptedFieldRecovery.rawNatBitWidth i) (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawNatBitWidth q) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawListRangeIndex_payload_width_le
+'CorruptedFieldRecovery.rawListRangeIndex_payload_width_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateRabinScan_peak_frames_le
+@CorruptedFieldRecovery.rawCandidateRabinScan_peak_frames_le : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s),
+  LE.le.{0}
+    (CorruptedFieldRecovery.rawRabinCheckListPeakFrames
+      (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate))
+      (List.range (HDiv.hDiv.{0, 0, 0} s 2)))
+    (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} s 2) 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateRabinScan_peak_frames_le
+'CorruptedFieldRecovery.rawCandidateRabinScan_peak_frames_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
