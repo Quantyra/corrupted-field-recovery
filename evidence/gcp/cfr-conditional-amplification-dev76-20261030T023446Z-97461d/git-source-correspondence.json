@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "e38e8c7f20308ac13f8f929e4c8f069ab52924f562e0b60209c74658e39f87f3",
+  "staged_git_blob_sha256": "e38e8c7f20308ac13f8f929e4c8f069ab52924f562e0b60209c74658e39f87f3",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ConditionalAmplification.lean"
+}

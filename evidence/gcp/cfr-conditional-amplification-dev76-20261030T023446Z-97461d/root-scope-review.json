@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "Generic repeated-success exact cardinality and cross-multiplied amplification; actual tape success count only under explicit good-event subset Success and supplied Q/E/r/b/size assumptions.",
+  "remaining": "Constructor success,1-2^-h bound and executable repetition remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}
