@@ -1,0 +1,22 @@
+✖ [2981/2981] Building CorruptedFieldRecovery.S010ObservedHiddenBalance (3.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010ObservedHiddenBalance.setup.json --json
+error: CorruptedFieldRecovery/S010ObservedHiddenBalance.lean:72:17: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (Equiv.cast ⋯) ?y
+in the target expression
+  T (inputToBinaryCast ⋯ x) = T (modeImage_inputVectorToBinary x)
+
+K : Type u_1
+inst✝³ : Field K
+inst✝² : CharP K 2
+inst✝¹ : Algebra BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+x : BinaryInput K (3 * s)
+hcancel : ∀ (y : BinaryVector (3 * s)), modeImage_inputVectorToBinary (binaryToInputCast ⋯ y) = y
+hcast : ∀ (y : BinaryInput K (3 * s)), (Equiv.cast ⋯) y = modeImage_inputVectorToBinary y
+⊢ T (inputToBinaryCast ⋯ x) = T (modeImage_inputVectorToBinary x)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010ObservedHiddenBalance

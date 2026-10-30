@@ -1,0 +1,61 @@
+✖ [2049/2049] Building CorruptedFieldRecovery.RawRabinCoprimeResidue (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawRabinCoprimeResidue.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinCoprimeResidue.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinCoprimeResidue.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinCoprimeResidue.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawRabinCoprimeResidue.setup.json --json
+error: CorruptedFieldRecovery/RawRabinCoprimeResidue.lean:81:58: unsolved goals
+case pos
+s : ℕ
+candidate : RawFieldCandidate s
+d : ℕ
+hmodulus : rawFieldBitsToNat candidate.modulus ≠ 0
+h1 : rawMaskPolynomial 1 = 1
+hX : rawMaskPolynomial 2 = X
+hxor :
+  rawMaskPolynomial ((rawCandidateFrobenius candidate d).xor 2) =
+    rawMaskPolynomial (rawCandidateFrobenius candidate d) + X
+hFrob :
+  (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)))
+      (rawMaskPolynomial (rawCandidateFrobenius candidate d)) =
+    (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d)
+n : ℕ
+hn : n = 1
+⊢ 1 + 1 = 0
+
+case neg
+s : ℕ
+candidate : RawFieldCandidate s
+d : ℕ
+hmodulus : rawFieldBitsToNat candidate.modulus ≠ 0
+h1 : rawMaskPolynomial 1 = 1
+hX : rawMaskPolynomial 2 = X
+hxor :
+  rawMaskPolynomial ((rawCandidateFrobenius candidate d).xor 2) =
+    rawMaskPolynomial (rawCandidateFrobenius candidate d) + X
+hFrob :
+  (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)))
+      (rawMaskPolynomial (rawCandidateFrobenius candidate d)) =
+    (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d)
+n : ℕ
+hn : ¬n = 1
+⊢ ((if 1 = n then 1 else 0) + if 1 = n then 1 else 0) = 0
+error: CorruptedFieldRecovery/RawRabinCoprimeResidue.lean:87:47: No goals to be solved
+error: CorruptedFieldRecovery/RawRabinCoprimeResidue.lean:80:31: unsolved goals
+s : ℕ
+candidate : RawFieldCandidate s
+d : ℕ
+hmodulus : rawFieldBitsToNat candidate.modulus ≠ 0
+h1 : rawMaskPolynomial 1 = 1
+hX : rawMaskPolynomial 2 = X
+hxor :
+  rawMaskPolynomial ((rawCandidateFrobenius candidate d).xor 2) =
+    rawMaskPolynomial (rawCandidateFrobenius candidate d) + X
+hFrob :
+  (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus)))
+      (rawMaskPolynomial (rawCandidateFrobenius candidate d)) =
+    (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d)
+hxx : X + X = 0
+hneg : -X = X
+⊢ (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d) +
+      (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) X =
+    (mk (rawMaskPolynomial (rawFieldBitsToNat candidate.modulus))) (X ^ 2 ^ d - X)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawRabinCoprimeResidue
