@@ -1,0 +1,6 @@
+{
+  "audited_sha256": "cc426349e2c58207630db28419f6ff69d69ea60e039a6f2188153c52c43fe785",
+  "staged_git_blob_sha256": "cc426349e2c58207630db28419f6ff69d69ea60e039a6f2188153c52c43fe785",
+  "identical_bytes": true,
+  "source": "CorruptedFieldRecovery/S010ModeImageAmplification.lean"
+}

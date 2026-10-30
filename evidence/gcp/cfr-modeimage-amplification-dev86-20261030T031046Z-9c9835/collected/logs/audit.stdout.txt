@@ -1,0 +1,65 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.twice_sub_pow_le_pow
+CorruptedFieldRecovery.twice_sub_pow_le_pow : ∀ (C : Nat) (hC : LE.le.{0} 2 C),
+  LE.le.{0} (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} (HSub.hSub.{0, 0, 0} C 1) C)) (HPow.hPow.{0, 0, 0} C C)
+CFR_TYPE_END:CorruptedFieldRecovery.twice_sub_pow_le_pow
+'CorruptedFieldRecovery.twice_sub_pow_le_pow' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.repeatedSuccessSet_block_amplification
+@CorruptedFieldRecovery.repeatedSuccessSet_block_amplification.{u_1} : ∀ {α : Type u_1} [inst : Fintype.{u_1} α]
+  [inst_1 : DecidableEq.{u_1 + 1} α] (S : Finset.{u_1} α) (C h : Nat) (hC : LE.le.{0} 2 C)
+  (htrial : GE.ge.{0} (HMul.hMul.{0, 0, 0} C (Finset.card.{u_1} S)) (Fintype.card.{u_1} α)),
+  GE.ge.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 h) (HPow.hPow.{0, 0, 0} C (HMul.hMul.{0, 0, 0} C h)))
+      (Finset.card.{u_1} (CorruptedFieldRecovery.repeatedSuccessSet.{u_1} S (HMul.hMul.{0, 0, 0} C h))))
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 h) 1)
+        (HPow.hPow.{0, 0, 0} C (HMul.hMul.{0, 0, 0} C h)))
+      (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} α) (HMul.hMul.{0, 0, 0} C h)))
+CFR_TYPE_END:CorruptedFieldRecovery.repeatedSuccessSet_block_amplification
+'CorruptedFieldRecovery.repeatedSuccessSet_block_amplification' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.modeImage_actual_success_amplification
+@CorruptedFieldRecovery.modeImage_actual_success_amplification.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  [inst_1 : Fintype.{u_1} K] [inst_2 : DecidableEq.{u_1 + 1} K]
+  [inst_3 : Algebra.{0, u_1} CorruptedFieldRecovery.BinaryField K]
+  [inst_4 : FiniteDimensional.{0, u_1} CorruptedFieldRecovery.BinaryField K] [inst_5 : Finite.{u_1 + 1} K]
+  {s R r h : Nat} (hs : Eq.{1} (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField K) s)
+  (hsize : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 R) 5) s) (hrR : LE.le.{0} r R)
+  (Q :
+    LinearEquiv.{0, 0, 0, u_1} (RingHom.id.{0} CorruptedFieldRecovery.BinaryField)
+      (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (CorruptedFieldRecovery.FieldTriple.{u_1} K))
+  (E : CorruptedFieldRecovery.BinaryTensor (HMul.hMul.{0, 0, 0} 3 s))
+  (hr :
+    Eq.{1}
+      (Module.finrank.{0, u_1} CorruptedFieldRecovery.BinaryField
+        ↥(CorruptedFieldRecovery.modeImageSemanticSupport.{u_1} Q E))
+      r)
+  (b :
+    (a : (a : Fin 4) → CorruptedFieldRecovery.FieldTriple.{u_1} K) →
+      Module.Basis.{0, 0, u_1} (Fin s) CorruptedFieldRecovery.BinaryField K)
+  (Success : Finset.{0} (CorruptedFieldRecovery.FiveWordTape s))
+  (hgoodSuccess :
+    HasSubset.Subset.{0}
+      (CorruptedFieldRecovery.actualFiveGoodTapeSet.{u_1} K Q
+        (CorruptedFieldRecovery.modeImageSemanticCleanFieldSet.{u_1} Q E)
+        (CorruptedFieldRecovery.modeImageSemanticSupport.{u_1} Q E) b)
+      Success),
+  GE.ge.{0}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 h)
+        (HPow.hPow.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 R) 3))
+          (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 R) 3)) h)))
+      (Finset.card.{0}
+        (CorruptedFieldRecovery.repeatedSuccessSet.{0} Success
+          (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 R) 3)) h))))
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 h) 1)
+        (HPow.hPow.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 R) 3))
+          (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 R) 3)) h)))
+      (HPow.hPow.{0, 0, 0} (Fintype.card.{0} (CorruptedFieldRecovery.FiveWordTape s))
+        (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 R) 3)) h)))
+CFR_TYPE_END:CorruptedFieldRecovery.modeImage_actual_success_amplification
+'CorruptedFieldRecovery.modeImage_actual_success_amplification' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,8 @@
+{
+  "reviewer": "Root",
+  "accepted": true,
+  "scope": "2(C-1)^C<=C^C and cross-multiplied1-2^-h repetition cardinality at C*h; actual specialization C=2^(4R+3) retains good-set subset supplied Success, Q/E/r/b/size, and extra positive C^n factor.",
+  "remaining": "Constructor success and executable early-stop behavior remain open.",
+  "evidence": "collected/logs/emitted-types.json",
+  "batch": "cfr-batch-reacquire-20261030T012328Z-e0c7b8"
+}
