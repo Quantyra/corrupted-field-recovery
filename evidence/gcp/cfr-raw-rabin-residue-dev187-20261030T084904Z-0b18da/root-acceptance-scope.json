@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T08:57:02.308938+00:00",
+  "review": "Root exact types/source",
+  "accepted": "rawMaskPairCoprime congruence for quotient-equal raw operands; candidate XOR-Frobenius operand quotient equals X^(2^d)-X for nonzero modulus",
+  "excluded": [
+    "scan polynomial condition",
+    "irreducibility equivalence",
+    "fast verifier",
+    "costs"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawMaskPairCoprime_quotient_congruent": {
+    "emitted_type": "CorruptedFieldRecovery.rawMaskPairCoprime_quotient_congruent : \u2200 (modulus a b : Nat)\n  (hcong :\n    Eq.{1}\n      ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))\n        (CorruptedFieldRecovery.rawMaskPolynomial a))\n      ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))\n        (CorruptedFieldRecovery.rawMaskPolynomial b))),\n  Iff (CorruptedFieldRecovery.rawMaskPairCoprime modulus a) (CorruptedFieldRecovery.rawMaskPairCoprime modulus b)\n",
+    "sha256": "690b3af93e1c286837d2e5fe7587ebe1b4f0a8a71cb9b08d18c311e5552ceaa4"
+  },
+  "CorruptedFieldRecovery.rawCandidateRabinOperand_quotient_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateRabinOperand_quotient_sound : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (d : Nat)\n  (hmodulus :\n    Ne.{1} (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)) 0),\n  Eq.{1}\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n      (CorruptedFieldRecovery.rawMaskPolynomial (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobenius candidate d) 2)))\n    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n      (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} 2 d)) Polynomial.X.{0}))\n",
+    "sha256": "7edd939fad2990360631f1198b8a83c0b4c7197fb88ebc236cd5153275f04881"
+  }
+}

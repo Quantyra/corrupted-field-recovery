@@ -1,0 +1,27 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawMaskPairCoprime_quotient_congruent
+CorruptedFieldRecovery.rawMaskPairCoprime_quotient_congruent : ∀ (modulus a b : Nat)
+  (hcong :
+    Eq.{1}
+      ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))
+        (CorruptedFieldRecovery.rawMaskPolynomial a))
+      ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawMaskPolynomial modulus))
+        (CorruptedFieldRecovery.rawMaskPolynomial b))),
+  Iff (CorruptedFieldRecovery.rawMaskPairCoprime modulus a) (CorruptedFieldRecovery.rawMaskPairCoprime modulus b)
+CFR_TYPE_END:CorruptedFieldRecovery.rawMaskPairCoprime_quotient_congruent
+'CorruptedFieldRecovery.rawMaskPairCoprime_quotient_congruent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateRabinOperand_quotient_sound
+@CorruptedFieldRecovery.rawCandidateRabinOperand_quotient_sound : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (d : Nat)
+  (hmodulus :
+    Ne.{1} (CorruptedFieldRecovery.rawFieldBitsToNat (CorruptedFieldRecovery.RawFieldCandidate.modulus candidate)) 0),
+  Eq.{1}
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      (CorruptedFieldRecovery.rawMaskPolynomial (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobenius candidate d) 2)))
+    ((AdjoinRoot.mk.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} 2 d)) Polynomial.X.{0}))
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateRabinOperand_quotient_sound
+'CorruptedFieldRecovery.rawCandidateRabinOperand_quotient_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
