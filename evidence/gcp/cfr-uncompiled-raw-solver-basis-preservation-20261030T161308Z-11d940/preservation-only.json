@@ -1,0 +1,62 @@
+{
+  "run": "cfr-uncompiled-raw-solver-basis-preservation-20261030T161308Z-11d940",
+  "archive_sha256": "38689107c7328743af3decb8ec39b483b5e60bcc66aa1f68b4003a4c132be06d",
+  "drafts": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+      "sha256": "4429C93A112E2B8D210F072EC7D42186028E6FEBC8C256D9F594DBB089182B59",
+      "compiled": false,
+      "audited": false,
+      "accepted": false
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean",
+      "sha256": "D42F28827DD7980699F5CEBCF503EF4B174C849B883C53AA8A8F7D4089CF259D",
+      "compiled": false,
+      "audited": false,
+      "accepted": false
+    }
+  ],
+  "superseded_basis_offer_sha256": "F48CF386F0BBF26E1517D99482E69C36181E9E73988E486BCCB00153264908C4",
+  "superseded_offer_captured": false,
+  "never_submit": true,
+  "cloud_operation": false,
+  "unaudited_dependency_chain": [
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean",
+      "sha256": "7afb6f348edb61b610eb983096847e3ab60861b31568d42f7fddf6aa97685264",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean",
+      "sha256": "52e046a4d4698910bc8566cebb6890b08ae97560e17dde7c23ba4c7b1180a672",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean",
+      "sha256": "c37b975d6ef7ec54bd514db4e232ffeb01ff5597867e4235c8882a08dfedf73e",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean",
+      "sha256": "d5b3089a458ae95de2f574b75cb7ae1ac0d4152af0c613daa06d500f60d9b881",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean",
+      "sha256": "19200c1114c6c38e408bb972b658d51413fa2fefae263846b278d2a2db4e5a05",
+      "status": "uncompiled unaudited unaccepted draft"
+    },
+    {
+      "source": "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean",
+      "sha256": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+      "status": "compiled dev316 observed PASS; exact collection and acceptance pending"
+    }
+  ],
+  "accepted_direct_dependency": {
+    "source": "CorruptedFieldRecovery/S010BalanceRawInputMatrix.lean",
+    "accepted_run": "dev252",
+    "sha256": "58cb0cf0efba16394118968cdac8fe70dfb19453efbf5f27088c4d47030bf703"
+  },
+  "scope": "Drafts propose reindexing the decoded raw balance matrix, full-column scan/free candidates, conversion to physical endomorphisms, candidate balance and reconstruction/independence. Checker statements retain explicit dense-array size conditions where written. All statements depend on the uncompiled chain and are unvalidated; no certified kernel basis, Gaussian runtime/space, constructor success or full recovery theorem."
+}
