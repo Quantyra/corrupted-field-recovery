@@ -1,0 +1,10 @@
+⚠ [2998/2998] Built CorruptedFieldRecovery.S010BalanceGaussianUsedRows (3.9s)
+warning: CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean:28:15: This simp argument is unused:
+  rest
+
+Hint: Omit it from the simp argument list.
+  simp [balanceGaussianColumnScanUsed, balanceGaussianColumnScan, h, r̵e̵s̵t̵,̵ ̵htail,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲Finset.mem_union, Finset.mem_insert]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (2998 jobs).

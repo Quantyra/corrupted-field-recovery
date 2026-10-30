@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-used-rows-dev314-20261030T154250Z-8cb835/gcp_cfr_runner.py", line 294, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-used-rows-dev314-20261030T154250Z-8cb835/gcp_cfr_runner.py", line 248, in main
+    assert set(warnings) <= set(receipt['frozen_warning_baseline']['warnings']), 'New owned warning headers'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: New owned warning headers
