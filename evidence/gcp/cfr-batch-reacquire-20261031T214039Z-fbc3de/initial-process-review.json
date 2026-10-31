@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-31T21:45:22.765919+00:00",
+  "reviewed_entire_raw_inventory": true,
+  "raw_inventory": "cfr-initial-full-process-guard-20261031T214403Z-ad50be.stdout.txt",
+  "sha256": "2803fe71a3516e4666bd3ea7561f2065997172b3ef5eeae7d367dec3970807a7",
+  "assessment": "System/kernel services including standard packagekitd and task-owned inventory SSH only. No unrelated workload, Lean or Lake; campaign lock free.",
+  "safe_for_single_compiler": true
+}
