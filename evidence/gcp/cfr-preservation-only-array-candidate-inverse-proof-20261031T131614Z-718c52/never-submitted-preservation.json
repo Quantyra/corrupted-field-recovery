@@ -1,0 +1,26 @@
+{
+  "status": "never-submitted preservation-only",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateInverseProof.lean",
+  "sha256": "020cca0de1c64f91c387344fc67c4f47999989bd8959d5bfe81e1a96c2534684",
+  "archive_sha256": "60f39e7787cfc2c6e85e39e27cec1e316f2fe2bc09d9d40e6ed67706a8878d9c",
+  "utf8_no_bom_verified": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateInverse.lean": "d42d3704af8eaa2f833e3a433576f1fc03b605792a6ff093b19a130bb8e2585f",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolution.lean": "90e681e9c88b31e10055a304d4a88488cb9b95d982c0ba6c601abc70d4fcefd6",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitRun.lean": "e453084656f03f57924c35ee5a48add52f3de6f3d0fdd800905e6ab13b289f52",
+    "CorruptedFieldRecovery/RawReductionPrimitiveLedger.lean": "da6d9bf6cbcfc4df0d38e4f31aed95b54f5ecf7cdb30cf1fc3a6a64993c30a74"
+  },
+  "dependency_status": {
+    "CandidateInverse": "uncompiledD42D draft",
+    "CandidateSolution": "uncompiled90E681 draft",
+    "ArrayOrbitRun": "accepted460"
+  },
+  "scope": "Uncompiled two-sided product identity attempts for selected candidate matrix under exact array length and full-span premises, plus conditional three-pass corollary. Raw square reindexing and serialization remain separate; no audited inverse/full constructor/cost.",
+  "source_audit": {
+    "ledger_sha256": "da6d9bf6cbcfc4df0d38e4f31aed95b54f5ecf7cdb30cf1fc3a6a64993c30a74",
+    "review_kind": "Static source inspection only, no Lean",
+    "finding": "Ledger constructors record Nat operation inputs/results and assigned charges; functions call existing Nat/source operations and list those events. No event-validity semantics, instruction-state transition relation, primitive execution existence/progress or bit-level implementation theorem is provided. Claimed trace/output/charge equalities are bookkeeping proof attempts, not primitive semantics or new operational progress."
+  },
+  "no_lean_build_audit_cloud_or_stop_operation": true,
+  "prior_archives_unchanged": true
+}
