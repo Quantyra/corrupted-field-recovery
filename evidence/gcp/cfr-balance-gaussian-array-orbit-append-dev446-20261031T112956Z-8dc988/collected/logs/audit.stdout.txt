@@ -1,0 +1,66 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayColumnFamily
+@CorruptedFieldRecovery.actualGreedyArrayColumnFamily : {m : Nat} →
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)) → (a : Fin (Array.size.{0} columns)) → (a : Fin m) → ZMod 2
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayColumnFamily
+'CorruptedFieldRecovery.actualGreedyArrayColumnFamily' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule_eq_span
+@CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule_eq_span : ∀ {m : Nat}
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)),
+  Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns)
+    (Submodule.span.{0, 0} (ZMod 2) (Set.range.{0, 1} (CorruptedFieldRecovery.actualGreedyArrayColumnFamily columns)))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule_eq_span
+'CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule_eq_span' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayAppendColumnSubmodule
+@CorruptedFieldRecovery.actualGreedyArrayAppendColumnSubmodule : ∀ {m : Nat}
+  (left right : Array.{0} ((a : Fin m) → ZMod 2)),
+  Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule (HAppend.hAppend.{0, 0, 0} left right))
+    (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule left ⊔
+      CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule right)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayAppendColumnSubmodule
+'CorruptedFieldRecovery.actualGreedyArrayAppendColumnSubmodule' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitColumns
+@CorruptedFieldRecovery.actualGreedyArrayOrbitColumns : {n s : Nat} →
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) →
+    (v : CorruptedFieldRecovery.BinaryVector n) → Array.{0} (CorruptedFieldRecovery.BinaryVector n)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitColumns
+'CorruptedFieldRecovery.actualGreedyArrayOrbitColumns' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_family
+@CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_family : ∀ {n s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualGreedyArrayColumnFamily (CorruptedFieldRecovery.actualGreedyArrayOrbitColumns T v))
+    fun i =>
+    CorruptedFieldRecovery.actualGreedyOrbitFamily T v (CorruptedFieldRecovery.actualGreedyArrayOrbitIndex T v i)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_family
+'CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_family' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_span
+@CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_span : ∀ {n s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule (CorruptedFieldRecovery.actualGreedyArrayOrbitColumns T v))
+    (CorruptedFieldRecovery.actualGreedyOrbitSpan T v)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_span
+'CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_span' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayAppendOrbit_span
+@CorruptedFieldRecovery.actualGreedyArrayAppendOrbit_span : ∀ {s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (columns : Array.{0} (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (v : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule
+      (HAppend.hAppend.{0, 0, 0} columns (CorruptedFieldRecovery.actualGreedyArrayOrbitColumns T v)))
+    (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns ⊔ CorruptedFieldRecovery.actualGreedyOrbitSpan T v)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayAppendOrbit_span
+'CorruptedFieldRecovery.actualGreedyArrayAppendOrbit_span' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

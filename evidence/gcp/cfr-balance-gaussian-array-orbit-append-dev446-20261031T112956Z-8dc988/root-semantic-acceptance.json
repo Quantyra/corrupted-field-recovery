@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts actual array append column submodule equals sup, orbit array family/span, and appended orbit span equality. No three-pass/full constructor or cost result.",
+    "source":  "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean",
+    "accepted":  true,
+    "sha256":  "8254f028d4f10d47b452b770d77f7fe4da7da094ad99b44569850ef9868f3e8b",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}

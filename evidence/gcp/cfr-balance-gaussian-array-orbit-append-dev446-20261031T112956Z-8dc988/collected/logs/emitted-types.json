@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.actualGreedyArrayColumnFamily": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayColumnFamily : {m : Nat} \u2192\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)) \u2192 (a : Fin (Array.size.{0} columns)) \u2192 (a : Fin m) \u2192 ZMod 2\n",
+    "sha256": "5c610fd6fef50924a7215987f81047cde79de94a30cea9096e684c3dba8552ce"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule_eq_span": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule_eq_span : \u2200 {m : Nat}\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)),\n  Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns)\n    (Submodule.span.{0, 0} (ZMod 2) (Set.range.{0, 1} (CorruptedFieldRecovery.actualGreedyArrayColumnFamily columns)))\n",
+    "sha256": "d2a1c7e4b4bb9846f2c6a68c6ca01f88059d28fca5d5d1d613f668baffc7a75e"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayAppendColumnSubmodule": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayAppendColumnSubmodule : \u2200 {m : Nat}\n  (left right : Array.{0} ((a : Fin m) \u2192 ZMod 2)),\n  Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule (HAppend.hAppend.{0, 0, 0} left right))\n    (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule left \u2294\n      CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule right)\n",
+    "sha256": "a0611760932958d7de20399d2bd12c98dc96403d01eeb30c8c440bbfacca2e82"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayOrbitColumns": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayOrbitColumns : {n s : Nat} \u2192\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) \u2192\n    (v : CorruptedFieldRecovery.BinaryVector n) \u2192 Array.{0} (CorruptedFieldRecovery.BinaryVector n)\n",
+    "sha256": "98c2d2d2db9397ded91a0abe700533e8ef01d86b2d52d4285f50df618fd716e5"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_family": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_family : \u2200 {n s : Nat}\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualGreedyArrayColumnFamily (CorruptedFieldRecovery.actualGreedyArrayOrbitColumns T v))\n    fun i =>\n    CorruptedFieldRecovery.actualGreedyOrbitFamily T v (CorruptedFieldRecovery.actualGreedyArrayOrbitIndex T v i)\n",
+    "sha256": "44c5fc18736bc444756c1f7f5ca4b372fef51d5026138eeeb65feecf62d75ae1"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_span": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayOrbitColumns_span : \u2200 {n s : Nat}\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule (CorruptedFieldRecovery.actualGreedyArrayOrbitColumns T v))\n    (CorruptedFieldRecovery.actualGreedyOrbitSpan T v)\n",
+    "sha256": "9fcb50230fd410e572e05cc060897ae85c3b79a74ffb535ed0d1f23521b49682"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayAppendOrbit_span": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayAppendOrbit_span : \u2200 {s : Nat}\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n  (columns : Array.{0} (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n  (v : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule\n      (HAppend.hAppend.{0, 0, 0} columns (CorruptedFieldRecovery.actualGreedyArrayOrbitColumns T v)))\n    (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns \u2294 CorruptedFieldRecovery.actualGreedyOrbitSpan T v)\n",
+    "sha256": "eaa0143e6fee45341ec41bd1e3037783c0411986de4d127c68ceedf30f7b6334"
+  }
+}
