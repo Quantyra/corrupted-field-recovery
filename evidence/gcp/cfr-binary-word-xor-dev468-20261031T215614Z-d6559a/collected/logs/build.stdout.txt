@@ -1,0 +1,18 @@
+✖ [1837/1837] Building CorruptedFieldRecovery.RawBinaryWordXor (2.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawBinaryWordXor.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawBinaryWordXor.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawBinaryWordXor.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawBinaryWordXor.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawBinaryWordXor.setup.json --json
+error: CorruptedFieldRecovery/RawBinaryWordXor.lean:57:40: Unknown identifier `ih`
+error: CorruptedFieldRecovery/RawBinaryWordXor.lean:55:18: unsolved goals
+case nil.cons
+b : Bool
+bs : List Bool
+tail_ih✝ : rawBitsToNat (rawBinaryWordXor [] bs) = (rawBitsToNat []).xor (rawBitsToNat bs)
+⊢ Nat.bit b (rawBitsToNat (rawBinaryWordXor [] bs)) = rawBitsToNat [] ^^^ Nat.bit b (rawBitsToNat bs)
+error: CorruptedFieldRecovery/RawBinaryWordXor.lean:60:12: unsolved goals
+case cons.nil
+a : Bool
+as : List Bool
+ih : ∀ (right : List Bool), rawBitsToNat (rawBinaryWordXor as right) = (rawBitsToNat as).xor (rawBitsToNat right)
+⊢ Nat.bit a (rawBitsToNat as ^^^ rawBitsToNat []) = Nat.bit a (rawBitsToNat as) ^^^ rawBitsToNat []
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawBinaryWordXor
