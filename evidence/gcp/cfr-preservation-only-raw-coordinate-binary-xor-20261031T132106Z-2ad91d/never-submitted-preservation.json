@@ -1,0 +1,29 @@
+{
+  "status": "never-submitted preservation-only",
+  "sources": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean": "f8af91207fba98a73227c968ccba9e60f89c058b42a80776d7e8f92dabb5062d",
+    "CorruptedFieldRecovery/RawBinaryWordXor.lean": "5550f058980cb58cd608ff753af5156f5e68592d19429384835db0f0aa9cdf0c"
+  },
+  "archive_sha256": "91381a92e8fca9bff062ea1e301f27ea93b018add894e85acbc7ce00712d6f68",
+  "utf8_no_bom_verified": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateInverseProof.lean": "020cca0de1c64f91c387344fc67c4f47999989bd8959d5bfe81e1a96c2534684",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateInverse.lean": "d42d3704af8eaa2f833e3a433576f1fc03b605792a6ff093b19a130bb8e2585f",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolution.lean": "90e681e9c88b31e10055a304d4a88488cb9b95d982c0ba6c601abc70d4fcefd6",
+    "CorruptedFieldRecovery/RawCoordinateEquivalence.lean": "093ef27f4be9fee363c45c638adaaa8652a579e9fa8ad87b451ba08433eb240e",
+    "CorruptedFieldRecovery/RawFieldArrayPolynomial.lean": "8ff0cad3c71544454c3f23659cecf238acfc984cedbe3a0354e1dd13b6ea324c",
+    "CorruptedFieldRecovery/RawExecutableQuotient.lean": "09fc2e78ad20cd0e0cc0952ede3de2817a971f799440d3d2fb64df5268e728d8"
+  },
+  "dependency_status": {
+    "CandidateInverseProof": "uncompiled020CCA",
+    "CandidateInverse": "uncompiledD42D",
+    "CandidateSolution": "uncompiled90E681",
+    "other_direct_imports": "Exact existing source hashes captured; no new audit or acceptance inferred in this preservation operation."
+  },
+  "scope": {
+    "raw_coordinate": "Uncompiled attempt to reindex actual candidate inverse product identities to square physical coordinates, serialize row-major checker arrays and derive checks under size/full-span and conditional run hypotheses. Depends on uncompiled inverse proof chain; no accepted inverse/certificate/full recovery result.",
+    "binary_xor": "Uncompiled concrete little-endian Boolean-list XOR semantic/refinement proof attempts to Nat.xor, output width and Boolean XOR gate count, plus reducer one-step wrapper. Gate count excludes list traversal/addressing/allocation/conversions/evaluator stack; no full primitive execution/runtime/heap claim."
+  },
+  "no_lean_build_audit_cloud_or_stop_operation": true,
+  "prior_archives_unchanged": true
+}
