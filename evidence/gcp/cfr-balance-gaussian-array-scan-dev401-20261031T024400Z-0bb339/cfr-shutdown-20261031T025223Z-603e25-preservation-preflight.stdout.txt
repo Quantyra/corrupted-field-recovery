@@ -1,0 +1,460 @@
+{
+  "run": "cfr-balance-gaussian-array-scan-dev401-20261031T024400Z-0bb339",
+  "source_sha256": {
+    "CorruptedFieldRecovery.lean": "5bb695b100945569e6a9d98bdb8f0c70e01ed890c3c8ac73be4ff736aef4e80c",
+    "CorruptedFieldRecovery/BinaryFieldTransport.lean": "053a8a6e34e5ef576604aa1b8f1b329577f638153096d7ce0517240913d02888",
+    "CorruptedFieldRecovery/BinaryTensor.lean": "a98590adf42e2389358ea56ac4664db5ce5a8ae7fe62db27178daa2791296cc7",
+    "CorruptedFieldRecovery/BitCostPrototype.lean": "840b63401089874dd48979333623a714730e00073be82940946cf4511fd55278",
+    "CorruptedFieldRecovery/Bridge.lean": "b20ef169e4123db1ac6aa61c4f22fb50a0bac6f8d6221e0dff57708614e21a8b",
+    "CorruptedFieldRecovery/CertificateSoundness.lean": "4dcc2a71b47b6bbd5042dfa879e3aae4d6a14e0145956706c2b252e29fb5b610",
+    "CorruptedFieldRecovery/ConditionalCounts.lean": "14639802a7d648ddf0c916d38d4f074c992a21ebdf513f5b02eef27f0ed19cda",
+    "CorruptedFieldRecovery/Defect.lean": "12a92e387a360cde83ec27b885103bd65ccb0eb7593c9a57143ea261b09c08c6",
+    "CorruptedFieldRecovery/DenseInput.lean": "8f7b424beea9bc14735c9bc3a962c40508e1c50368be3ee5cfd08cd0839545c0",
+    "CorruptedFieldRecovery/ExecutableCertificate.lean": "a754b12ac17bfee8c7a76ec83ab41f545cdce4dd18cfa8a2b65918fb62e818d6",
+    "CorruptedFieldRecovery/FourContractions.lean": "d05c0fbe41a0125a1b4f3121317b481d1eb34bc547cedcf29b4a05251040aa04",
+    "CorruptedFieldRecovery/HiddenDualSupportTransport.lean": "48d0140b2b7ced04ea4eb3677868aa2baa116c555329151487f92a1482a4bb23",
+    "CorruptedFieldRecovery/Independent.lean": "1e051f2e7d19c748242db1a091c9aa42c4ec532f69467796e81487f7b53f3baf",
+    "CorruptedFieldRecovery/ProbabilityActualTapeBridge.lean": "17530bc966bf82da94306f30c1a814793ce57f588e9c3eeb83f2de83eb1f7d2c",
+    "CorruptedFieldRecovery/ProbabilityAssembly.lean": "e0a21f51f9674b0ed3145cd1baa291d443fb553966ed70b2322e5c3ec372126b",
+    "CorruptedFieldRecovery/ProbabilityBasisTransport.lean": "ed9841e242a5beb9ce83de0f7c9ede3d692a761e9858dc64ada4bd7288bec3bd",
+    "CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.lean": "43e229e148a842d6133f65ee2b34db4912d015701556aab6cd9c32f6c3435e51",
+    "CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean": "1e9101e79746b0257eec982c2fb200a727e305fa95ffe714d8573a336e51c48f",
+    "CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.lean": "67bb217bb8f7e2c7f18ded202215bba760e528ee589c44f939d2cd49f4179d6c",
+    "CorruptedFieldRecovery/ProbabilityFlatTupleBridge.lean": "4c677a435c9a0c709dadaf198fed6c7b3f02617dbb09bb881dd89348e53d5d49",
+    "CorruptedFieldRecovery/ProbabilityFourTupleCount.lean": "dce0af1409ca56db0a4bb7607afef13419e48024dc95b6ec9f67d8b8c8638fe2",
+    "CorruptedFieldRecovery/ProperSubfieldCounts.lean": "c5bfaad9154f1349d3f50132015378e2ce7c30d64fd79ac3594abe9d4cd0916d",
+    "CorruptedFieldRecovery/RawArithmeticFrameBounds.lean": "6ea3632c70da3ea800b6739bb3a64f6e2ea5f6ff9c229a9aa28f2af925b1ffb4",
+    "CorruptedFieldRecovery/RawArithmeticFrobeniusTraceWidth.lean": "135088b625cd17ec75663ae47f56276772e95bd25c668d32e6df7bd786866512",
+    "CorruptedFieldRecovery/RawArithmeticGcdNestedChargeSpace.lean": "25ee5e7c9bf2ca5b40dfe4cb27d623094a51b84bbb973fb8b912c4b213fc36b5",
+    "CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean": "e5933475a775d100645138a339828539b3ee8d4cdfa59039d5ce2412de24e94c",
+    "CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean": "e69d6d0706a9cbbdde80bc252b1bf1e7fbacece569f5227f88455e54fbc15c4d",
+    "CorruptedFieldRecovery/RawArithmeticMulTraceWidth.lean": "f3b03bf3d28584702c377f1cb7edaae974bb0ba34e8361725f7dce226b3e04dd",
+    "CorruptedFieldRecovery/RawArithmeticReduceTraceWidth.lean": "92b174470a95233878a312aa47a0b31333924b43973387f287b32567e2aff07c",
+    "CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.lean": "72cf41fbe72d9bf2f0caa60f3dbbd7082c20470c0264b4527360d70518daea42",
+    "CorruptedFieldRecovery/RawArithmeticTraceSpaceBounds.lean": "672d575f3aa356da75ea4de061f3392d95682ce8d725d58805a257f70c2bd913",
+    "CorruptedFieldRecovery/RawCandidateShapeCost.lean": "04e8adce8a9becee177d35c83a69602b7ea504e2199b52e89eb4150a81351589",
+    "CorruptedFieldRecovery/RawCandidateShapeCostBounds.lean": "927ad6eca9a19ac421fc5cae7c08476d97889e7da648464c2b2ef294887a508b",
+    "CorruptedFieldRecovery/RawCandidateShapePolynomialBound.lean": "ac8586c311c473f6bbc67f213713046670cd479fa2e17dd199301333ee21c7de",
+    "CorruptedFieldRecovery/RawCandidateVerifierCost.lean": "cb9f963a64bb1a22113f76ab566fadfb4022950699fc1f4a3b853ec627f2d560",
+    "CorruptedFieldRecovery/RawCandidateVerifierEnvelope.lean": "a8ed63ec3d032fd5266b2ce97232c6f66d65a0e2948b04cf12c494aa4f17f0a9",
+    "CorruptedFieldRecovery/RawCandidateVerifierSpaceModel.lean": "bf17a1f209b52f979333e98cdb14eed416701b2c9d17067b5001370ecba0cb18",
+    "CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean": "6b65ec00f9d7c54137bb845abbe1b4658a13a53e54379fa9694e345dd1c6b697",
+    "CorruptedFieldRecovery/RawCertificate.lean": "d9cc55dfdfd5a2d2a1ba0dfd832fcc62ba792b9810bebe16fac55f7c259aa1c1",
+    "CorruptedFieldRecovery/RawCoefficientFitAffineExtraction.lean": "5b9cddde4551b3b72d8614f5af752d4e5507fd4e859e6abad50d1b3c3a6bf198",
+    "CorruptedFieldRecovery/RawCoefficientFitAugmentedSolverBridge.lean": "1468c4b70d4703ac0dc4096dc61835d84148f56552b8eed8b470bbd1bc051d61",
+    "CorruptedFieldRecovery/RawCoefficientFitCertificateConstruction.lean": "efdaa3fc2732610bb970b11046eb260386e56bc66c3e76865998df81e590bfa3",
+    "CorruptedFieldRecovery/RawCoefficientFitCleanSeparation.lean": "a2d7212f2c45e57a9cc3823b6f88f5dcd013934363a5bebed35b35a3a945e1e1",
+    "CorruptedFieldRecovery/RawCoefficientFitColumns.lean": "8c7d413248a3516e623463dc67396a339339539c20f5e36eefaac8fd4dd98b6f",
+    "CorruptedFieldRecovery/RawCoefficientFitCompactFinMatrix.lean": "e57f354a5197a04134601961b09a3bfdfd526a32402b83fa131d676e833f26af",
+    "CorruptedFieldRecovery/RawCoefficientFitCompactProjection.lean": "a0a3e8eca14eeb39fcf11dcb1139b85783a0afe86b0cae24f91b63d79dc89705",
+    "CorruptedFieldRecovery/RawCoefficientFitFlattening.lean": "05210015b661f8220fac14ac6659461ad621cad4da63df2a1490939f7abaebf0",
+    "CorruptedFieldRecovery/RawCoefficientFitModelConsistency.lean": "66b4bc6a5eea48589fe7c6771cac8879c1dc00449df4fdbd9a9be7b63d799a6d",
+    "CorruptedFieldRecovery/RawCoefficientFitOutputBridge.lean": "633abf1ddf58dd5d455970fc9eb02112fe64bc90e2405d5ef3491239a0606a58",
+    "CorruptedFieldRecovery/RawCoefficientFitPaddedProjectionProof.lean": "674987588459b9c144a805b7e8fed279892a3988fb149da55dea956a98249ce7",
+    "CorruptedFieldRecovery/RawCoefficientFitScalarResidue.lean": "d3e9439217be49a59cbb56178e5b18d40d64865316e648d15bbe6efad4e9b871",
+    "CorruptedFieldRecovery/RawCoefficientFitScalarTensorBridge.lean": "240feb72a5cbb1d774498cf40f2c0c956bec9991a59171d3870222b93046d2b1",
+    "CorruptedFieldRecovery/RawCoefficientFitTraceExpansion.lean": "e577828540a17fdf1af71ce3865901647d43f201bdbcec2f89e0eac0e7d25cd4",
+    "CorruptedFieldRecovery/RawCoordinateEquivalence.lean": "093ef27f4be9fee363c45c638adaaa8652a579e9fa8ad87b451ba08433eb240e",
+    "CorruptedFieldRecovery/RawExecutableQuotient.lean": "09fc2e78ad20cd0e0cc0952ede3de2817a971f799440d3d2fb64df5268e728d8",
+    "CorruptedFieldRecovery/RawExecutableTraceCertificate.lean": "6b706d72c346164c0ce3971162bc8fe337cc7654be61629d08028702b6f97c28",
+    "CorruptedFieldRecovery/RawExecutableTraceFastVerifier.lean": "531d22f1d4e34eb46641814cbc82e802c249a807738371accb324bbcc24e9b64",
+    "CorruptedFieldRecovery/RawExecutableTraceSemantic.lean": "8c1a09217125bb75c3916b8e39366bf0d9d76b12c8aadcd71a769ff1814ef400",
+    "CorruptedFieldRecovery/RawExecutableTraceVerifier.lean": "875cbe4e0bfa2739534bf01afdbfe101a00b9c859abf4c93917fec5725a6e2f4",
+    "CorruptedFieldRecovery/RawFieldArrayPolynomial.lean": "8ff0cad3c71544454c3f23659cecf238acfc984cedbe3a0354e1dd13b6ea324c",
+    "CorruptedFieldRecovery/RawFieldCandidate.lean": "db13e2a12a1717d45c2ad5bb870445d98d072984a9f128c17a2059d4c6ce2e41",
+    "CorruptedFieldRecovery/RawFieldCoordinateBridge.lean": "1e3ccac5568f9a67dcf9cc3a22c69376ebc0187ceb4cd4e2e53fa65e71c60e95",
+    "CorruptedFieldRecovery/RawFieldDeterminantBits.lean": "03efedf912f58cbff621ff5bae82809af19298225631e3c3b798ba48ef65e103",
+    "CorruptedFieldRecovery/RawFieldPolynomialBridge.lean": "3556d28950becbb051811b4b4e70c72d94c56f470d1c73ed20f85115c9506d84",
+    "CorruptedFieldRecovery/RawFieldQuotient.lean": "e049fee786be5e3ac0ae447aaf105c12d6259d56654c44465ce784aebdc96c1e",
+    "CorruptedFieldRecovery/RawFieldTraceAlgebra.lean": "d8d71d7829b1d87b80e3ad5218371e2861500e4f93d4c4897dfa6c729dcadbe2",
+    "CorruptedFieldRecovery/RawFieldTraceBitValue.lean": "f9e41d29a94e99ea3a60db29620e223cfaf7be06218b35856d78bbeb5f6a3378",
+    "CorruptedFieldRecovery/RawFieldTraceBits.lean": "e6bfede629fe2e9cf1ddc8ff10de8430a4ab42bc41713d95d718b69e22aa0649",
+    "CorruptedFieldRecovery/RawGreedyModuleBasis.lean": "79fbf8833b9dc0c7b9263598b331426b2aacb7a29438f05987374aae91d33b71",
+    "CorruptedFieldRecovery/RawListRangeBitCost.lean": "bcf1fa6e48125395a818901aafaa8eecfd43b993e005cf3da16494eadd73e902",
+    "CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.lean": "b72babde7b283ae710f71f18c8127ac461852cc0d0b753214196cfc622bf145f",
+    "CorruptedFieldRecovery/RawPhysicalPowerBasis.lean": "8f46ce0d9a715d49de54fa19c200f450ce62229bae9a7be3ab88dbb50060006b",
+    "CorruptedFieldRecovery/RawPhysicalTraceBits.lean": "c6ad99a93330a2151d387518b2fdc59e49ca43758ee834a456414c88eec1f997",
+    "CorruptedFieldRecovery/RawPhysicalTraceComposition.lean": "bfcdebb7a5c3fe511e2543374a503584c49c9613889b86a17bb5c7e3785f9a6a",
+    "CorruptedFieldRecovery/RawPolyMulBounds.lean": "e1a9a53dfaa47def62e06f79da7aeefdcdf8c4861f681b757c9c585ec4aed868",
+    "CorruptedFieldRecovery/RawPolynomialBitCost.lean": "bb03e603f4d8cbe70a3e1d4f89dd005b0a6197fa61e738cf4100959c34e7ffaf",
+    "CorruptedFieldRecovery/RawPolynomialIrreducibility.lean": "540675217822f5f9722ed2a8b539ad9947251854e4bee42db777ca8c897856f5",
+    "CorruptedFieldRecovery/RawPolynomialMaskCompleteness.lean": "a015983d5b3205d64a0c093d40ec3a0f9961b766c76d8f0da4b006a3387801a9",
+    "CorruptedFieldRecovery/RawRabinCandidateCorrectness.lean": "6f7f0a9321c73a818f700c9dacd9ebede2838e2271b14f0a2d7357f2c6fcfae0",
+    "CorruptedFieldRecovery/RawRabinCoprimeResidue.lean": "a08fba38d517fc9fdfd6e173a5c253a98c30fd6407e09438b0983d5420e08acb",
+    "CorruptedFieldRecovery/RawRabinFactorFrobenius.lean": "797998b72cde68fc0aa815a0516e6aed864c59e9d7e7f2b707488070450f2318",
+    "CorruptedFieldRecovery/RawRabinFrobenius.lean": "cfa5f68eeba877414c7d1dddfe576ae5ce8daef2b60476e996af754fb43b7f2e",
+    "CorruptedFieldRecovery/RawRabinFrobeniusBitCost.lean": "e785f0403ad87cfa24c3475bf7e1031474f689ead27571708ccad5f22b6ad046",
+    "CorruptedFieldRecovery/RawRabinGcdBitCost.lean": "813bf264e8656e2ce1080e3cf2664c85eaf4e247e85af2043a596856143e7b41",
+    "CorruptedFieldRecovery/RawRabinGcdBitCostBounds.lean": "a437a961037a99a96197925a20bc60439fdc92a7ff518f7448b7a6fe196e326a",
+    "CorruptedFieldRecovery/RawRabinGcdCorrectness.lean": "aa3214c11e1ad366efb6cdbf631c53a4bc7fa3c6f546a111d8aab5b8936363c8",
+    "CorruptedFieldRecovery/RawRabinGcdRefinement.lean": "f9cc2e5ccfbb006b6e87434fbf873d705c0bbf947d6d51a77a492e692fb77ea5",
+    "CorruptedFieldRecovery/RawRabinIrreducibility.lean": "547d7e6c815cabab50356cc2d6ca81ee5c6b71e082bd4438c5351db5fdd6b168",
+    "CorruptedFieldRecovery/RawRabinIrreducibleCriterion.lean": "fe4a31dd86dce8c2a1d7a6a940f9df0bb944b938c898166a15733814f8d785a9",
+    "CorruptedFieldRecovery/RawRabinRemainderCost.lean": "423aa7955d6ac15c3e9fabf2a5dada4e4c8e5f941b8050722473d60422a9f8cc",
+    "CorruptedFieldRecovery/RawRabinScan.lean": "51ea74fda2974d1cb00170529f763d065fe4cc2cb30d2143bf5d104e3240ee9b",
+    "CorruptedFieldRecovery/RawRabinScanBitCost.lean": "7d21e3da9236d32d77616b3fb16397ed40f411c6db388921d183c1c8c3b3d9db",
+    "CorruptedFieldRecovery/RawRabinScanCoprime.lean": "fcca08ec4ffd8629c1dd256939bf812079aca993b7d2f3dc5dc796871466d6d3",
+    "CorruptedFieldRecovery/RawRabinScanExecutableCost.lean": "813b4e240b07b1a0b97af7e67b946395f4fe52f56fafed72d8e135555210c0db",
+    "CorruptedFieldRecovery/RawReductionBitCost.lean": "13b049c438fd8b2645fba7029edd5bbdab39a1419d4aa139cee8cccd5670e3c3",
+    "CorruptedFieldRecovery/RawReductionBitCostBounds.lean": "6cb116bbda501ac778a8bdc87b0e281d0e6c328db6901d126e1e7faeb364261b",
+    "CorruptedFieldRecovery/RawReductionBounds.lean": "0823f494ed2f75027cca66b036b4d883dd871a69f153ab92b85fc3990799c27a",
+    "CorruptedFieldRecovery/RawReductionBoundsExpanded.lean": "3d2f880066e46cbc78fd70098420415b40d9ccf937a29c44c9c5d79ffe798b32",
+    "CorruptedFieldRecovery/RawReductionInterval.lean": "6134d442184fa88d2441c0668acd0b5491bb335bc2e441988c6bab4d0e8204bb",
+    "CorruptedFieldRecovery/RawReductionLogFuel.lean": "923a3d868319991d0df94cc56e2096087eb69b7f7d66703be6e48bfa98afd938",
+    "CorruptedFieldRecovery/RawTraceDecomposition.lean": "79b403f99c050391b7ee3fa723cfcd7c78b65268a83a8f87d9f14b9c24b89f6b",
+    "CorruptedFieldRecovery/RawVerifier.lean": "b10fd068081978e5b2166378cc189bd943402468471336d95c81ffd40d424402",
+    "CorruptedFieldRecovery/S010ActualScalarBounds.lean": "38292f61f4b2c7c6f600a2858e92b0b00b2f110c734d622ccc56a4a3d7433824",
+    "CorruptedFieldRecovery/S010BalanceBasisMatrix.lean": "454e20297f736c56d7ff4bc3f954b50d2d509bf392d06e482160e5d05df86b37",
+    "CorruptedFieldRecovery/S010BalanceComputableMatrix.lean": "57d2afb4949f4adfab1f2eaaca92e87cffe3fa9a492d3abadbcebabe4783c4a4",
+    "CorruptedFieldRecovery/S010BalanceConstraintMatrix.lean": "f0f48b2751d39ecf8ef7afbbbb3bcaa0bf26e50290db3b747f10bf45c7c72340",
+    "CorruptedFieldRecovery/S010BalanceGaussianAffineOutput.lean": "3161e0f5cb620e37de955ce54b061d48a88c32b31a0dc3ae49842b24e188ae03",
+    "CorruptedFieldRecovery/S010BalanceGaussianAffinePowerSolve.lean": "6b02d8a0e212806898609fa8c9aabf8ef99e56f518a9500cd1938e5224536fdd",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayDeterministicScan.lean": "0293406fe00c42ce1bfd139559491f94d6efcce955f24ee294506f5aecb10288",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean": "10ff74cfadada24aa184daae79260a68211ee60cbd7ef9a4d757ffd1e9f40992",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean": "4ec1f14e3940323b57f27f47f24960b2b3c45f6fa5e213e9ca11225e088c7e4b",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean": "50b74c9b9a064979a3b2010a764e62381fafe5beb275f6bec3a8ec510d4e267a",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagKernelOutputBridge.lean": "2ae5bc6b91e81ad572f38ab40da4f132c54b52e91d3f550a358fde54689549d6",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagOwnershipTransitions.lean": "cffe1d6697473733a5c2fdde625018a0d40e03fbef976fa8c06607aa687abad1",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagPeakOwnership.lean": "995e5b7d286b95a5c5620fbe3701bdfa4dcdd08d1ca99d22dce2739c3f4292b8",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean": "db3f52259766552243d6ebe108575c983e34010362858dfa0451eb60784bd2ed",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean": "5a41faf707dcc7f4d49d027b694b91c20a5fe4609390a113cea167ff7220d9fe",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayInstrumentedScan.lean": "b4ca6701115168b75ffa4a6568b9c2970c89447cc23900207f864eb1bafe469b",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean": "e21cd7721b41bc909fab40d63e94993df00b08a93cd0dc9597479e347144e580",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayResources.lean": "d0ed7f0d66b2d6b89aec062c3163233405e99ad326b6e451280d7fd0c17176d8",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayScanRefinement.lean": "7b10fe6df000cda975ba56853b8324c6a773935375f6db73b90da053d4f47ead",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayTraceBounds.lean": "3cc96d9036b9f36e0704545b168528ac5debbb5cd048f94a22d18c54bd99f22c",
+    "CorruptedFieldRecovery/S010BalanceGaussianCore.lean": "f4ecfc9caa9e6393a3ac47879224aa52ee1cd3fa09a9550e3b1eb27770387e3d",
+    "CorruptedFieldRecovery/S010BalanceGaussianDynamicSpan.lean": "8b6298a0276a51fdb967c37f6ffbf5b985226ab0c3127a51f0c7cd7727599443",
+    "CorruptedFieldRecovery/S010BalanceGaussianElimination.lean": "23b6ffdba00eb258b186316eb5bf7f38e7092333f491b4764dc53295a8ddda2f",
+    "CorruptedFieldRecovery/S010BalanceGaussianFreeRows.lean": "9783199295380de94f2f30140b932e6d483a54427b509e771a6fc701189d5c18",
+    "CorruptedFieldRecovery/S010BalanceGaussianFullStructure.lean": "a76fc90dc5c8c730936f6604963c95e3fe2efebb8ccd325b86c9c625c26141e7",
+    "CorruptedFieldRecovery/S010BalanceGaussianGeneratorFastCheck.lean": "9eb93173126551f8774ad6c7c658b9b74b269c397e5fe29f9358ef2e6a1906ee",
+    "CorruptedFieldRecovery/S010BalanceGaussianGreedyCoordinateInverse.lean": "442a7829ee60590596d09f6d92c0abda57a995b0b96c2cd6c659ebd6dd2a7093",
+    "CorruptedFieldRecovery/S010BalanceGaussianGreedyCoordinateSerialization.lean": "a7531f4e89519df47a39a6053a57605bc983d45abd036c8818e19fec0094479c",
+    "CorruptedFieldRecovery/S010BalanceGaussianGreedyRun.lean": "d72092651aa7f427486a79e72ebb32038d86466dfbb85f3a019f18b218e35174",
+    "CorruptedFieldRecovery/S010BalanceGaussianGreedySelection.lean": "38da7e24e183ac136f38dd27784259b51264c12ac0d69c9dd18c7ce874233711",
+    "CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean": "9d76533626c7ef47263f42459aa2ef7b94c9470650757b53396399f9a9741493",
+    "CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.lean": "ea3cecb12bf1fa5980bf642cbca8c63e55a1563119d9153e4a2ec445fb84fe8b",
+    "CorruptedFieldRecovery/S010BalanceGaussianKernelProof.lean": "0c09db9599835cc0c449d53b5664f9e8eb029c2c2196ed4d81e4121943839cd1",
+    "CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.lean": "0f7333f3fbf38dc3e1f9d8f461aa42726b271ecff4cafa3b080ba933ee7a0ea9",
+    "CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.lean": "43fc8e5c0259d1426ecd9c605000c268e1a30770f73d97da1ba414ad67cbb7ca",
+    "CorruptedFieldRecovery/S010BalanceGaussianOrbitGrowth.lean": "35a79fbddfaa56444e692b7e1b1aa93b607d4d282d7df32b1a16b47dc27f0dee",
+    "CorruptedFieldRecovery/S010BalanceGaussianOrderedSeedIndex.lean": "2ce468d88ed557038067c8d3d152f53ed4c9e8062e3be931da4489b91eebb9d0",
+    "CorruptedFieldRecovery/S010BalanceGaussianOriginalKernelBridge.lean": "5b44f8549b87353aa4532fe844bf58e2de2f5ded5807868df10d7fbe94bd6c5c",
+    "CorruptedFieldRecovery/S010BalanceGaussianPhysicalSuffixSeedBridge.lean": "f7dcb362d56eee0ba70b0312ee06971785b65bde000bb9b7ee321456a2b8c510",
+    "CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.lean": "97e222a0a986a79078fde9ba2562b6bd0d56bcc97d3ba1270735e4ff2fbc1d70",
+    "CorruptedFieldRecovery/S010BalanceGaussianPivotInvariant.lean": "73cada2b594f1c173646e9f392bdabe8f3fd4d10f4deefb36a734428e873fdb0",
+    "CorruptedFieldRecovery/S010BalanceGaussianPivotSearch.lean": "d7fd18aa12ad7cbb0b8f674bf627e1c550f2e9cb1c812da1f4cab9f93174400a",
+    "CorruptedFieldRecovery/S010BalanceGaussianPrimitivePowerIndependence.lean": "ec2e64501f96a8e4515194bec8883069bacb4f0b1b26a2df06f9531166c5c116",
+    "CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedCounting.lean": "c0ece1a85e1c8821442bf631e6e90e59c0d9200894958f1dc7d9923c1ccd81c4",
+    "CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedLowerBound.lean": "e6cd7cbe98f1a7dd6e7657a3fbf5e895f59339dcb331f01082075559bea01ccf",
+    "CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedPositiveBound.lean": "24ec55f6d7d4dce1c466f0a6161b54b38e811825cf3c2b4489287adb16330bda",
+    "CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.lean": "9e41e9b989dedde533a8c2bb02f8882f93a6ff9c2e3ae9de94797cf1955e03a6",
+    "CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitBezout.lean": "8e012514fceb0cd7e559eb33453c3ba779d58c9bb1d92c78342e0490aa6eb4a4",
+    "CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitIndependence.lean": "5dfb993a21797f22c8aa409b97d0a9763def9c0e1ec26d2782684ec5d99737ba",
+    "CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitProof.lean": "b645bfb323552d03f3d0ec83deb23198491541b63893e109f4589b8a65b2c2a1",
+    "CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean": "c570e8331cac2c348f1cbfca136d03a3d4eeef34839863d79e84d84a26666a11",
+    "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean": "11998a3c01e259b88ade3957f9658c71b5462708a141c7b2834759156d072995",
+    "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean": "43ddfcb2de7143b5461887782ec8efbc2d5c04cd8b7d41d24d86010ead3b8c91",
+    "CorruptedFieldRecovery/S010BalanceGaussianRecurrenceSerializer.lean": "94fdf3936707246f6f98081845abdfec1a1f6316a922f463a23a340a42944733",
+    "CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean": "ff961784ad55adf7a5d77526676df9990a22fcd1dcbd29744f53721a081df169",
+    "CorruptedFieldRecovery/S010BalanceGaussianScalarRangeBridge.lean": "01af6bd687769953407e66ed8c2f0d23941ef4ac3a57ef79b1fb6eb9bc542235",
+    "CorruptedFieldRecovery/S010BalanceGaussianStructure.lean": "7a7256a3ec287d5662619023f6ddad3fe251395131ed059badf6b2d5044b2e3b",
+    "CorruptedFieldRecovery/S010BalanceGaussianUnusedPivot.lean": "c352e002ffac659bb440a39ede40aeec75d168a300ee221e8b9fbeaddd3f56c3",
+    "CorruptedFieldRecovery/S010BalanceGaussianUsedRows.lean": "5fafa4afee994ebab06ce1431f52f9b1c9d3c33613c32c6876ee7cf468d08aa9",
+    "CorruptedFieldRecovery/S010BalanceRawInputLayout.lean": "51187b3c572fe5c79a2d38115f39041f1e5a0735d92225ebc6836830cbf50bd6",
+    "CorruptedFieldRecovery/S010BalanceRawInputMatrix.lean": "58cb0cf0efba16394118968cdac8fe70dfb19453efbf5f27088c4d47030bf703",
+    "CorruptedFieldRecovery/S010BalanceRawMatrix.lean": "c2880623e2b2cce79fbd446842ae50c59159b85391626684a3d308d400854a20",
+    "CorruptedFieldRecovery/S010BetaActual.lean": "cc1e057392b3b39f4ca6703133e2ab37bd81db5f078622d4c879904b78c81a7c",
+    "CorruptedFieldRecovery/S010BetaArithmetic.lean": "c25514ed31099670a61d5e87bce35a6c39f0393cf8ef33675f7e05cfe638b0fa",
+    "CorruptedFieldRecovery/S010CleanLossBounds.lean": "783d61981b7bff91b7551f5334ed76715d4000346311f58f747da0d02a10d306",
+    "CorruptedFieldRecovery/S010CleanSupportCardinality.lean": "40b3dbbf3eff345d912db017a9170c3f896c2e5b3e89479610beb8efc18fb019",
+    "CorruptedFieldRecovery/S010ConditionalAmplification.lean": "e38e8c7f20308ac13f8f929e4c8f069ab52924f562e0b60209c74658e39f87f3",
+    "CorruptedFieldRecovery/S010CountProduct.lean": "6229add40bac95bf759b621ef2253512ab9c329068329f50d0fd026925f01faf",
+    "CorruptedFieldRecovery/S010GoodPrefixReferenceTape.lean": "837c0cc01d2a52247f78d1888efa84c9dd7904cbbea58b5f82e88f60bf7c9b5d",
+    "CorruptedFieldRecovery/S010GoodTapeBilinearBalance.lean": "ae0b6d13a2ab8051711a15cd5288f3783a7cefa2dc49863c684600912b2a5243",
+    "CorruptedFieldRecovery/S010GoodTapeComputedFilterAcceptance.lean": "cac5829fcab9469c749e52cd8bf165259f20bdcd6587636cc0e5b7a0bda36f24",
+    "CorruptedFieldRecovery/S010GoodTapeHiddenBalance.lean": "8c08d692e6a5e74562ce3b84a847da26a27ef3f615f34a71cb004d2e01696709",
+    "CorruptedFieldRecovery/S010GoodTapePhysicalContraction.lean": "5657dd6f95c9d80ee39eb41af64e1e22aa94ee056215a85cb37a3148c573711b",
+    "CorruptedFieldRecovery/S010ModeImageAlignedHiddenBalance.lean": "e01a0183381c27a5dbbc312278fe066a729a5e22fa8ddcd42af0f1c0b2af3768",
+    "CorruptedFieldRecovery/S010ModeImageAmplification.lean": "cc426349e2c58207630db28419f6ff69d69ea60e039a6f2188153c52c43fe785",
+    "CorruptedFieldRecovery/S010ModeImageFiveCount.lean": "a3f32ea1ed0343bfa58a120ea8fd4ea4b1783edc388dd57e19e5f74a3dd5c027",
+    "CorruptedFieldRecovery/S010ModeImageFrameBridge.lean": "5e77f3de6bd2f64cc55672d89e182b989476759b03b0b3e504a65de75f93b4c0",
+    "CorruptedFieldRecovery/S010ModeImageRank.lean": "8b0c7f9445386ca5d60502c7f5e839d093bb2432659314098c3b5822d7c94107",
+    "CorruptedFieldRecovery/S010ModeImageTraceTransport.lean": "8ee5b7be51adf7fd5cfefb3ba52ad368cf223f4b0749381e0473daddefa40cdb",
+    "CorruptedFieldRecovery/S010ModeImageTrialBound.lean": "6d5044acc76a59e8d82ae093253957f5251cc6aa33768313460981e17188d30a",
+    "CorruptedFieldRecovery/S010NumericTapeBridge.lean": "df56e3a358570d3a6248f89913eb03c411b77b86385ede9be9b4fbddbd121078",
+    "CorruptedFieldRecovery/S010ObservedCleanTensor.lean": "2788bf8584ca5fe01759a753bcf7817f5820f4f443f1eb363e445b9f7fc7f03e",
+    "CorruptedFieldRecovery/S010ObservedHiddenBalance.lean": "77450aae69df3a1cd863ed9898e410b091e3e19c7cf96c7b2af73118dcdfde6e",
+    "CorruptedFieldRecovery/S010PhysicalFiveCount.lean": "1b885ab23035a04919e7c1cf63b2dee0f0c22da5c78596935220bb710f4d3c01",
+    "CorruptedFieldRecovery/S010PhysicalPerturbedContraction.lean": "fbb8842b712f0144af2c7e418e6ed8bf08b562863c480a636ab0b33a0ef742cb",
+    "CorruptedFieldRecovery/S010PhysicalSupportTransport.lean": "8d79303f480843efe18b947151da77c1051ec23f13e0a0c7c42bac1be2797dca",
+    "CorruptedFieldRecovery/S010ProductBounds.lean": "7f5e578e008cd17773b503e654db58d3a262d124256844f350c48cd4e7ba9283",
+    "CorruptedFieldRecovery/S010ProperDegreeArithmetic.lean": "2187e2c9dad141068aec59a044b71d6616a196494baf39fbf84170bc12880078",
+    "CorruptedFieldRecovery/S010QInputEquivalence.lean": "762a095e58cc468b41aa5b79f7acaf54bf2b61e65a87e222de2ee2814e40de3f",
+    "CorruptedFieldRecovery/S010SizeArithmetic.lean": "0c5828ffb95570a64c8cdfaaf4f209d5a958e899bd6de771ce84de06d76842a6",
+    "CorruptedFieldRecovery/SamplingCounts.lean": "22510a882dfc9a5c69a6d3f4c904c33e171c76beeb5ffcdd7e41b566f28eab05",
+    "CorruptedFieldRecovery/Support.lean": "da1830b86b627d87b915c47c44ee9f3afd6c8e9729ebfdb65d0b38c143a0a686",
+    "CorruptedFieldRecovery/TraceDualTranslateBridge.lean": "3f4fdc1a490a809183372fddbeaee5e229dd0dfa726612b30080f9577dc45398",
+    "CorruptedFieldRecovery/TranslateScalarCounts.lean": "54008b81f85f2592c28e5ef7d75ab06712a7b24c8d8505e1d07e3a237fd6cd5d",
+    "checks/Audit.lean": "3b1b3e1737b3621b4e5a401819d10001fcf67f9f440f6a62ffcdddb6c4eb40b3",
+    "checks/CaptureAudit.lean": "8529a0e9ff29ec159edc22b791523935bcc323eac416fc9d8eaa24a5b546e744",
+    "lake-manifest.json": "5e95294fc479a9e41d6fb269dddbb1372127d716e01fa74017656e3c0b6bd4a0",
+    "lakefile.toml": "46ac718eb654678ceea6d9f0a19f6944af19e4e513b01b91f89f0dc94373f8ce",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+  },
+  "dependencies": [
+    {
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "name": "mathlib",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "inherited": false,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/plausible",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a456461b368b71d2accd95234832cd9c174b5437",
+      "name": "plausible",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "name": "LeanSearchClient",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/import-graph",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "515cf9d0c00ece5e661f6de4326a53dedc1e8ea1",
+      "name": "importGraph",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a84b3e2475d5c5ab979567b1ad8aea21b764bcf8",
+      "name": "proofwidgets",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v0.0.99",
+      "inherited": true,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/aesop",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "558915ae105bfd8074e22d597613d1961822adc2",
+      "name": "aesop",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/quote4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "a6e6c34c4ef182f83b219a3a5a385f51f44bdc4c",
+      "name": "Qq",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/batteries",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "32dc18cde3684679f3c003de608743b57498c56f",
+      "name": "batteries",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover/lean4-cli",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover",
+      "rev": "6b907cf12b2e445ccb7c24bc208ef04a1f39e84c",
+      "name": "Cli",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.30.0",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    }
+  ],
+  "targets": [
+    "CorruptedFieldRecovery.S010BalanceGaussianArrayDeterministicScan"
+  ],
+  "utc": "2026-10-31T02:46:33.619046+00:00"
+}
+TASK_CACHE_RETAINED
+4ca2e76990de19f69ac2eb3b33765cf06ae7c582bfc4d46598f0ddd4a4ff1d21  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery.olean
+12d868ddbd3489108db97dbc71cdde637c62f5dac8cad1f43564833d3afe9028  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/BinaryFieldTransport.olean
+8f0259b57dfa3d8e9d035e20e00ed69f2f93a398bef6aefb00ada5e330d2ba14  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/BinaryTensor.olean
+9f796ac2f917cdeb693b1b050d80c6346b3efcb025c26381d01c889e104e97c5  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/BitCostPrototype.olean
+fe36ff6837c43f58bbe86528c5c7c6f8e0369d4cf7285346a0ef64b0c8347fe5  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Bridge.olean
+3552b822e9bb890741518e8d1fa89670b0a141bb3fb8b25322f79f139402cbaf  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/CertificateSoundness.olean
+fcc1caec7579f0145d023656740152589b0abcb517fa3f6d01dd6b6217be9813  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ConditionalCounts.olean
+588979d520077a93235e0ce98361d54116f0600a887d1a5fc4e618e4e6d577d0  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Defect.olean
+89e3b06e9d99cbb916a34cd42a83490cdb74ae5e469d981c9a976b01dffc9120  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/DenseInput.olean
+e7768594cebe3554caacb1affbed3704bb9b7a01bb38dc6a93bfb138939440ab  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ExecutableCertificate.olean
+50754ac66af2cf4d26bc9522fa6275b98597f8d2237abc056fbb012764943165  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/FourContractions.olean
+171923c78a1e9c557e556c081da3476a7af954b976de002b92c05cd15f646e4b  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/HiddenDualSupportTransport.olean
+bc1d1302471c0d2104fd616fd49af2a8e1f6b746c69cebe9bfd8e8518f2fef1c  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Independent.olean
+a7a9380f3c9820e8d1c19f64ce0ff2be3a7528703845cd942fa58f354d2ce6d7  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityActualTapeBridge.olean
+4a4ae422fd67dffe7259e09d1eb06fbd429950b25c3ffe605d1493a8e201df58  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityAssembly.olean
+9159fdaac99f2276e51a8427b1f70142e2d678d7964a087afc0e608fbb362458  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityBasisTransport.olean
+00a6a0b01fb675c0153589fed9cf164d61df1703275094ea7909771e6f4847e0  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityCanonicalFlatTupleBridge.olean
+3cc20f7cfb5952e6f17adc99952a6f7ea366dc326147eb223f418b0eac557ffb  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.olean
+a3073c9b80703a4f416779e1da1a2e9edd9f73a6cf77629024dc96d616741bc7  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProbabilityFiveTupleAssembly.olean
+0dabeb5d48713681b97932988d48d34560c4d43bd81a82c55ff56ab4ac93e47c  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/ProperSubfieldCounts.olean
+1e588eb7010fad1839614d04b1034fe13d02c982d678568bba707544a6293309  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrameBounds.olean
+6829a188acf9788cb80292eb41fa92ea1c1107a08f567246723ef6dfae15a1a3  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusTraceWidth.olean
+5f15f7115fefa9fae70a316a5b76eda333349ba1f15a09efad3605e8ffb16a0e  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdNestedChargeSpace.olean
+ad36df20c19109389433928979b94a4948aec313deb6f9add278ed145cf5688b  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.olean
+a8bed0cb343aad146a48860c94fe30e0451d1a8b62a27fcaaef5026d15f17ec1  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.olean
+23dae4839014cefaff8ba7fb255ca91403b66295075650a417c735cf3f420ad5  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticMulTraceWidth.olean
+bb09c566a6654847f87284df0f2976b9a5351e9afadfc2ee700df27c0924f6ce  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticReduceTraceWidth.olean
+b379faa960eb0f5975706ef40c7a36b1e473e07d42a97c2f850dceaceda3872a  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticRegisterSpaceModel.olean
+832b1a62c304ecf81f45974158d1a3449bb04c66d18a52b8899d89f39f71fe4a  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticTraceSpaceBounds.olean
+3f3429e607e0cbd7b48653358def4c87342e0596dff4a48ae728dbc70fa11fd6  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapeCost.olean
+12757b03957b2dd46bea4e41cb51a3b33572d1a1348c2e88befbe8892e06c0ed  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapeCostBounds.olean
+882e62d788ae5910b3c219e49359018de230cf7df6733eb3c93ffa1568b7f897  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateShapePolynomialBound.olean
+6ad22e29a3a7d7ba15e22ba087a6ab320a40e503ce1a01e8137eda6fe6981bfb  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateVerifierCost.olean
+718f142309f8ff6a00c9e1a03abd71e2c34cc484870235b0e064c5d101bc4278  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateVerifierEnvelope.olean
+dc3c0912ce2af666e2eec7e61f02b6ede0f84522e9385759629b11f2ff6045fa  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateVerifierSpaceModel.olean
+90992748fb6c0096bbf149b443d2125660d99bab0817df99eec96e1dfe9532df  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCandidateVerifierUniformBound.olean
+4ad2b11405cd50893220b8be249869a035eb719ebf07e5d1beaf9eece0d75179  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCertificate.olean
+f0fbd0262f15729569b04b4a4a6ba46991c4c60593fce09ed8a5210661457255  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCoordinateEquivalence.olean
+82def55a042e5164a025cce73edb6716c0b9de0d5b2cbc9330c4a501200ede26  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableQuotient.olean
+182368a00a15cce20d4a26819dbb69fecf00ac8aba6c2531eab98bf1ab17c915  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableTraceCertificate.olean
+53042d1b8d96980dd20b52da4ef13a7d0566f22a34bdec0c69718f2462118e0f  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableTraceFastVerifier.olean
+88105ead5c7ba39f9a324bf7a6c9e9895de9f003942f4044b754e035107819e0  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableTraceSemantic.olean
+94acfd1b315e5f317dbdc5e9f11ef1a972b3add436fb896c99ef4048f1f498c8  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawExecutableTraceVerifier.olean
+ed42d6cf18c2fb98455a7eb14e288e1269e3b56fab5f2318ea161b78bdb67dd9  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldArrayPolynomial.olean
+85e3a1427035b6cc5a07a5813f5964401083f152420feab3268468ff0e5c384a  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldCandidate.olean
+7d3644a2460ee2704909725e2bf938f28d6ba7f5af856ba1352aec0a586af400  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldCoordinateBridge.olean
+f39b98a7386a01cea0ebfa024d930f15074de9ad176c19750dcf043f33bf6499  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldDeterminantBits.olean
+82dc5621b7ff734def6229860a6ce4ac82350698ba5f3f74075535c02a8a2560  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldPolynomialBridge.olean
+18b190fbf9efd14a1e5cc0f3f7405bade17d693fc8777489c173a12ed6d048ac  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldQuotient.olean
+b91456c305b5153c3bd675f021e0f03621ad222c6e6049bd507b24d116e4e988  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldTraceAlgebra.olean
+75ba88714265f74f90df394cbf01d214b998d15a9784e1fe9d1c2c1e35f8467c  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldTraceBitValue.olean
+570ed33fb19866e9c77a5a423b55c41b45b661435ab6145da598576d3c7e953c  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawFieldTraceBits.olean
+62324b01027f5d9eb3d0385d3628a682f2d33c828eadc8450b7f4eae4451f9dd  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawListRangeBitCost.olean
+28cdc66ba3ad360e509370ac696001e6e2fb9966eecfa97fb56c76b4fdce58ef  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalCoordinateCorrespondence.olean
+9fd53f7c84d2b6a539a0e0598e7351ea524ef51975f3f6942f5a29c05d31c970  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalPowerBasis.olean
+723ed771d9bbf9290608ae78cfc073cebce783e1221c3329c91c7312e589d0bc  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalTraceBits.olean
+b0a62a620958c87562e0de8e9817a4d5e3778f5cb8c7280077eefabae29c8792  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPhysicalTraceComposition.olean
+8912261cd8e32de6abfc803faa87e14c2d00c3df089fdaa781be0cf529521d88  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolyMulBounds.olean
+808c0bf1c7f167982e5b35bf276c77c18b5b9466bd213310721e208526863b9d  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialBitCost.olean
+223474b8a36deb0aa5aed66814eedc3a28910a8a969af81bbdbc175c5f2e5990  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialIrreducibility.olean
+fa77f354cf78e719758ac2986c06dbbd524220cfa53a1fd01819e36d6c809935  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawPolynomialMaskCompleteness.olean
+bf4941c2721be9dc39e9e6923062aa09b1e5946df535d252faff2699eff4f22b  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinCandidateCorrectness.olean
+55247772ea84b239d5b7c8fd102acff4c941828800edd2cc685f1454ce0fec43  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinCoprimeResidue.olean
+a9ff35ce903d02ea06803b7211cd7c9c41144ab46d13a48a1b11318558c2c95e  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinFactorFrobenius.olean
+87f4589132bcaac95d2f9a683ea290510168bd42e36205dd48ff82ca1681ba91  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinFrobenius.olean
+b284028d10543978999aa03631254c06e0fcd0b8c7bef15512d6c073b9f37bff  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinFrobeniusBitCost.olean
+01243ee9e26d807a4335472c3c5f739a885df0a5f48144db7c17e2ec1dee31af  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdBitCost.olean
+9918ba5d4b70865d7f36c88118bf3a8b8a72ef851a4ed496d4a78bf7ebddec50  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdBitCostBounds.olean
+688366a8b79e7f8faf7cd394cff7aeac3540fbbdeaf067358af7954641f4720d  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdCorrectness.olean
+f87549a0c2df7ab8afc7d8ca45cd8ff6d524ea78ec1179aec6ff8618d04625d3  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinGcdRefinement.olean
+0f285c5df4173ec43261f3c3c05159f6c46626fe7b320ef723b602606ac9bf21  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinIrreducibility.olean
+ac52bcd8ec6027fc7b330cb2d3dc5c5c6bc8c5f50735443bb3c04c5df25c3fcf  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinIrreducibleCriterion.olean
+3ec19b9379f35e1ef94e09a6bc7825124b96e21b853fb01edf61ea02e56b571f  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinRemainderCost.olean
+bd3197a97a6a684310d37e8a072ee6ba803189ad01ad843a5fdd259cc98d7ca6  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScan.olean
+c134127e2e5337e24dc83c03d976834bd2902cc25ba036b3e782714b60036367  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanBitCost.olean
+c1b6d4177446c65a38755f6c0b05b108502b98aeae444e228882093874f625ba  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanCoprime.olean
+e880b739d428c14c8b8cbac5782d057994fd0b60dbe7163733de9fb19844cdfe  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawRabinScanExecutableCost.olean
+1441ca5534f8e3bd906df0a06385b79e72f3c52ba790876eff9810ca21b9c61e  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBitCost.olean
+e680be31da7748cc61c80993326f54ab56bd9c94d9c09de622a4b7ebde42b6f7  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBitCostBounds.olean
+b8e29e5402b193d61e080ee8cf571f5c918560c2dd2786dd05feac91771a54e1  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionBounds.olean
+9a5d2efb82ae12a2d049a5901a6a22d0ea6307cfbcc78776f4dfa7e43c6abb30  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionInterval.olean
+3639ad2ee7b770588b2f9d4c2ed8fb019c4aac1b6159a3ac3585276afd9a1eb7  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionLogFuel.olean
+38ea24fe4a14c6116a1e0da796e260604d3153f925c1430bd6d190d765c0bac9  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawTraceDecomposition.olean
+526adcdd9573993d87f6afb8874e95c7fe256ec4da0f31d3616c7b51c05d007a  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawVerifier.olean
+7662abff30adc472244cbaa83bda9aaeb61b8fe6dd5516391d066dbcb2a26883  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ActualScalarBounds.olean
+e0fb88502a37e1d00300b105cfa333fdad1d290cdec5efa90db4d86ab07e8c5c  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceBasisMatrix.olean
+2c4a9fac1e1dd230986fa601c467b71a7315f5e4043ae08894f415ea1b2ccf01  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceComputableMatrix.olean
+ddd4558b6fe3ac96b9ce9fa06acae895980bdf3cfed1801e46e6d4b13100e3f3  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayDeterministicScan.olean
+02f5ebf7c7cdd6f82fdc17893ec1d07ab57e7c931dd589422954c8f4fcc82a0a  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.olean
+b2ca6e195d8cb85ee9545d3ab62bfb2dc494e920e73ddf7cc7a4f212a037bd3c  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.olean
+fc351d05dec68848290ab247fc3e43155cb03b515f2163fa710240376b275f8b  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianCore.olean
+327bbbdbc2cf9904e2e713da0703639edef24fd9947fa605c2b9f47eac7e4ecf  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianElimination.olean
+db5726dadca6d1aa0aabe5bd33f912e9a213218d0f229053581e1495810f0489  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianFreeRows.olean
+a7736aef6b632224f4ed54295549ad5efd3ceeca7e4411542d19712688559fb1  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianFullStructure.olean
+c31562023725ccd59faa36e6f58ae404ee018279e1b485d373dde7a3326cf160  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.olean
+5ab976c9278263b7bf0232ed766d7649de64d9165dfbaa18aac038efbb3fd38f  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelCandidates.olean
+8a73878d5af6f92287f978c6222c9f8a4e197bcc362627d6463993c42b5c2c5c  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelProof.olean
+1f066ff4cc5e0a5e4fbb5efde7df10adc2d2f30f8ef88f2b407a28f50febeba2  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelSpan.olean
+44a72eed02a4be81ff67fad1700e2cea6e90c700d714d80d8fbdc7e7afd8b78a  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianKernelUniqueness.olean
+4424f131637b64ab547f2b8e828ca138e0f050a84fea45e4128e46a6ca9e2017  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianOriginalKernelBridge.olean
+be1866e053a11c2ec98e4eacf617785bdae056cee23d1af29ea5a8caf8a6538f  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianPivotComplete.olean
+f483128f14494fdc42eefb108e57d4ca7dab19affffb00968fcf4f881dd6649d  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianPivotInvariant.olean
+5326201540755d64afccb6645eebd40ca0fcd1a9a082cc12381cf762f97578bb  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianPivotSearch.olean
+98acabbbdacca43700d9a97f31b85b09b6fe9e5af25e6c70ebdb4b06e757764b  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianProcessedColumns.olean
+f8ae621c4c26dd3cbbebb8a56b101d516e9bf35fc067064488331977d8c7370e  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.olean
+47ade937419685d052323223aeb79c69ab224c58aa5c932fe52234b78d743714  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.olean
+462b36d4b88d8672d734c6153bebfd8592472d490d471121c0184e6d85c6b461  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianStructure.olean
+e393e6e6893d169ea8cf4e1a59bd956f4f0a56a6446b7ecab928778366e05a0e  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianUnusedPivot.olean
+6c9bd26353aec9096bc581ad30d9f36f0b4e4376233d3c9edd9d16aa8b5f39dc  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianUsedRows.olean
+6ebffe9d24518b7fc72d8e01e032682240fe0a0793e51d862864c79119a2e6f5  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceRawInputLayout.olean
+288a2658b2150c8bf491d61adf7b09f4ff32ec1debc171b42b27952165e3c00e  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceRawInputMatrix.olean
+c8778608935041b672c67bd4d0a42287cd9dc13979d4fda7013001c7446007d1  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceRawMatrix.olean
+efc750eb38167f2a34d8cbd68c3055b161f7a3fbccc5aa060d1497c442ed3e1d  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BetaArithmetic.olean
+de8e8f00b04899289681b2b419bc44ad11461550ed9e310df64c77f011fde6c2  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010CleanLossBounds.olean
+f2d1a45d80e0ef610931f42f12ebc324df3985e82cbc175a350461449ec65197  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010CleanSupportCardinality.olean
+a95d829abee21eacfa9e959b43e9b2ab704f748b1978a59be7047a2316eed527  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ConditionalAmplification.olean
+106c1c8fd7b01571d2e84d81d24de1435635c854fbe429e674ef2f8313531fde  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010CountProduct.olean
+4122cf4ca7c6b20beb3aad9b819d2ee4977028527936c08888e22e29a69f33a5  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapeBilinearBalance.olean
+e68ae8c381421bceb8936a45744704c13be873b5a6cff7f634c167c8ace69c42  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapeHiddenBalance.olean
+fab551d6fcadc5407b8b9cdaa5954d45d46981741293a99cfdf06eb60a7b58df  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010GoodTapePhysicalContraction.olean
+be5afc7676e0e7aa1a6cc80936b2df23aee3d2262f3657dae141a4f56ff8f56b  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageAlignedHiddenBalance.olean
+a95bf316af5e3fdd1de0ea699e3d494f6e2beea2ca0f58d52888d2fbfe4abc28  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageAmplification.olean
+2c21c902d435601f160df4428fc9b15735bbda3d029a336e9ea73fd98abd6fb3  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageFiveCount.olean
+da6572c7f1a6ae3ef2f5dc7a472f7f00ec5219f54c25cb2e4d3d04ad10628b84  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageFrameBridge.olean
+97f5a8b53363964981124e3bbc4ef168829c229495b749f3b0317336fa40ed5c  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageRank.olean
+80533d7918419dd3772157ff1b809642eb8844ad58e003c78c86090b9fd52e86  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageTraceTransport.olean
+6b19ae46d0d0d60ab0a6a094d5a41f3f5626eb0f9384915532726dd7bba9badb  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ModeImageTrialBound.olean
+e26ab04ef7d05ffe1b0f95028ac9b1f1da876d73b949ee9e49fbc8aeb36089db  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedCleanTensor.olean
+2fc8486f2e6efc0085ca082848372ff1f32321a5dd73267abdc80f314b5a6671  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ObservedHiddenBalance.olean
+c9834614f1b5059cc96a3cf529d40fd942899f109d60dda4b72907eb001c05f2  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010PhysicalPerturbedContraction.olean
+dd3feab78a4cf3c0db78714200e339a4294d4547f7da530dd026ed5aa47f073d  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010PhysicalSupportTransport.olean
+a6bc636d0525b36eb662ea21053e9888f891451fcaed08d1235b044f6e7339d2  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ProductBounds.olean
+9c1538f300b36d980588a2febf17c2cc72f57c18224202f9c2cbf9f0bc209832  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010ProperDegreeArithmetic.olean
+dd6e36f6a5d760eca1133447d02069c7a969054679577fc700e6ed6570de6587  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010QInputEquivalence.olean
+6bd4d7b7ba79eaf0aef8220f282bbcb61ae361f175fa1cc68618861b7d32fd9a  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010SizeArithmetic.olean
+d4db530c4c7cbaea257847dd6cfd23b0b3593af4181df310cbc6340d24864e0e  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/SamplingCounts.olean
+a29f0a8dd39c33f4295d2904cc20b3812c17fece3c2c9d0a1aa4b3891045fa4a  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/Support.olean
+e392e8bb5a4bb142ac2deaa581abd9b72bbe64250cb3b97d0e1eb9ebd0680f38  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/TraceDualTranslateBridge.olean
+3bb1aa9c4e8533db3086661f4761fefba1c3facacbeea9a005f0a2b068004a8e  /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/TranslateScalarCounts.olean
