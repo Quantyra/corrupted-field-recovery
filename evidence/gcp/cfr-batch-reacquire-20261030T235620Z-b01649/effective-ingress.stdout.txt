@@ -1,0 +1,68 @@
+{
+  "firewalls": [
+    {
+      "allowed": [
+        {
+          "IPProtocol": "tcp",
+          "ports": [
+            "22"
+          ]
+        }
+      ],
+      "creationTimestamp": "2026-09-15T15:55:54.396-07:00",
+      "description": "IAP-only OS Login SSH for dedicated Quantyra Lean builder",
+      "direction": "INGRESS",
+      "disabled": false,
+      "id": "650613314149446165",
+      "kind": "compute#firewall",
+      "logConfig": {
+        "enable": false
+      },
+      "name": "allow-iap-ssh-lean-builder",
+      "network": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/global/networks/default",
+      "priority": 1000,
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/global/firewalls/allow-iap-ssh-lean-builder",
+      "sourceRanges": [
+        "35.235.240.0/20"
+      ],
+      "targetServiceAccounts": [
+        "1013064480488-compute@developer.gserviceaccount.com"
+      ]
+    },
+    {
+      "allowed": [
+        {
+          "IPProtocol": "tcp",
+          "ports": [
+            "0-65535"
+          ]
+        },
+        {
+          "IPProtocol": "udp",
+          "ports": [
+            "0-65535"
+          ]
+        },
+        {
+          "IPProtocol": "icmp"
+        }
+      ],
+      "creationTimestamp": "2026-09-15T14:40:15.026-07:00",
+      "description": "Allow internal traffic on the default network",
+      "direction": "INGRESS",
+      "disabled": false,
+      "id": "8959038947657516496",
+      "kind": "compute#firewall",
+      "logConfig": {
+        "enable": false
+      },
+      "name": "default-allow-internal",
+      "network": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/global/networks/default",
+      "priority": 65534,
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/global/firewalls/default-allow-internal",
+      "sourceRanges": [
+        "10.128.0.0/9"
+      ]
+    }
+  ]
+}

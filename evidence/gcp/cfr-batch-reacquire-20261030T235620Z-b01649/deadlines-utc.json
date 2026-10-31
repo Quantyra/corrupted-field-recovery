@@ -1,0 +1,9 @@
+{
+  "actual_start_utc": "2026-10-30T23:58:41.114000+00:00",
+  "submission_cutoff_utc": "2026-10-31T02:58:41.114000+00:00",
+  "full_stage_launch_cutoff_utc": "2026-10-31T03:03:41.114000+00:00",
+  "automatic_stop_ceiling_utc": "2026-10-31T03:58:41.114000+00:00",
+  "stage_timeout_seconds": 1800,
+  "minimum_closeout_margin_after_launch_seconds": 3300,
+  "note": "Normalized UTC copy; original deadlines.json retains GCE timestamp offset."
+}

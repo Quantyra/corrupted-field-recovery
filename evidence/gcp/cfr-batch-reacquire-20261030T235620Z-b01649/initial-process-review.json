@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-31T00:00:27.750019+00:00",
+  "receipt": "cfr-initial-full-process-guard-20261030T235936Z-eae3d9",
+  "full_inventory_inspected": true,
+  "unrelated_workload_present": false,
+  "active_lean_or_lake": false,
+  "campaign_lock_free": true,
+  "system_services_only": true,
+  "ready_for_serialized_audits": true
+}

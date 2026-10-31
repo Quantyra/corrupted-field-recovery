@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-30T23:57:41.906285+00:00",
+  "same_account": "dfredriksen@quantyra.org",
+  "instance_id": "3335066512373302615",
+  "status": "TERMINATED",
+  "machine_type": "e2-highmem-8",
+  "max_run_duration_seconds": 14400,
+  "stop_action": "STOP",
+  "task_egress_absent": true,
+  "effective_ingress_unchanged": true,
+  "previous_stop_receipt": "../cfr-batch-reacquire-20261030T205345Z-ff4d30/final-lifecycle-verification.json"
+}
