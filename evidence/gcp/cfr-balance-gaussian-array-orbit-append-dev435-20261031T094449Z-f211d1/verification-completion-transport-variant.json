@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-31T09:48:46.453180+00:00",
+  "run": "cfr-balance-gaussian-array-orbit-append-dev435-20261031T094449Z-f211d1",
+  "wrapper_sha256": "bce367f334021bc42269dcd7683bf6f7a7d989e553bf99554ec7bd2881ddec91",
+  "controller_sha256": "c0151fb3e8483a38f1e20c9d08fbe73eec391e7bc63808617792b54c6fd9cd72",
+  "scope": "Read-only verification marker and one-second SSH terminal grace only.",
+  "guards_and_hashes_unchanged": true,
+  "immutable_inputs_unchanged": true,
+  "runner_timeout_unchanged": true,
+  "launch_once_rule_unchanged": true,
+  "evidence": "Prior425 and430 completion-marker recoveries succeeded;435 verification printed all five hashes OK then client failed before launch intent"
+}
