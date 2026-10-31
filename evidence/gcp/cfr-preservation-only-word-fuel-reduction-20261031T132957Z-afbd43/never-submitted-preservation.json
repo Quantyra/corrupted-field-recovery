@@ -1,0 +1,28 @@
+{
+  "status": "never-submitted preservation-only",
+  "source": "CorruptedFieldRecovery/RawBinaryWordReduction.lean",
+  "sha256": "49ffc4b580ae278f78b3fd658f597e021c33d6c0f250ecc37432e8f927dc440b",
+  "archive_sha256": "41c9dfba47896fcb56e7a69d61bf739d7a67f0938f835f776a62908dfe4a0a30",
+  "encoding_errors": [
+    "CorruptedFieldRecovery/RawBinaryWordReduction.lean: UTF-8 BOM",
+    "CorruptedFieldRecovery/RawBinaryWordReduction.lean: suspected mathematical glyph corruption"
+  ],
+  "dependencies": {
+    "CorruptedFieldRecovery/RawBinaryWordXor.lean": "0f9ac329cc334d9ba65d625af53bb7c73255739d8c8690d465ffee906d253ee8",
+    "CorruptedFieldRecovery/S010BalanceGaussianAffineOutput.lean": "3161e0f5cb620e37de955ce54b061d48a88c32b31a0dc3ae49842b24e188ae03",
+    "CorruptedFieldRecovery/S010BalanceGaussianRecurrenceSerializer.lean": "94fdf3936707246f6f98081845abdfec1a1f6316a922f463a23a340a42944733",
+    "CorruptedFieldRecovery/S010BalanceGaussianGeneratorFastCheck.lean": "9eb93173126551f8774ad6c7c658b9b74b269c397e5fe29f9358ef2e6a1906ee"
+  },
+  "dependency_status": {
+    "RawBinaryWordXor": "uncompiled corrected0F9AC",
+    "candidate_annihilator_chain": "AffineOutput/RecurrenceSerializer/GeneratorFastCheck are uncompiled preservation drafts"
+  },
+  "scope": "Uncompiled functional bit-list threshold/leading-one/shift/XOR fuel-reduction refinement attempts. No charged traversal, allocation, conversion, control storage, total live space, primitive step progress or runtime certification. Exact mojibake-bearing bytes preserved; no normalization substituted.",
+  "numeric_source_review": {
+    "provenance": "Root relayed numeric source inspection, no compiler validation",
+    "candidate_annihilator_gap": "Accepted460 assumes a monic irreducible degree-s polynomial annihilating T. Deriving it from the actual sampled candidate requires unaudited actual affine output, recurrence serializer and fast-check primitive/minpoly bridge. No unconditional candidate-derived annihilator established.",
+    "coefficient_gap": "Separate nonzero/length assumptions on scalarBits for candidate.scalar have not been proved to encode the model clean coefficient c. Do not identify sampled generator scalar, candidate.scalar and planted c without the required bridge."
+  },
+  "no_lean_build_audit_cloud_or_stop_operation": true,
+  "prior_archives_unchanged": true
+}
