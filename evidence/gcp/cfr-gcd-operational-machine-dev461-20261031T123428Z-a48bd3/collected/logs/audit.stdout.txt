@@ -1,0 +1,49 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawGcdMachineStep
+CorruptedFieldRecovery.RawGcdMachineStep : (a : CorruptedFieldRecovery.RawGcdMachineState) →
+  (a : Nat) → (a : CorruptedFieldRecovery.RawGcdMachineState) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.RawGcdMachineStep
+'CorruptedFieldRecovery.RawGcdMachineStep' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawGcdMachineExec
+CorruptedFieldRecovery.RawGcdMachineExec : (a : CorruptedFieldRecovery.RawGcdMachineState) → (a a : Nat) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.RawGcdMachineExec
+'CorruptedFieldRecovery.RawGcdMachineExec' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawGcdMachineExec_sound
+@CorruptedFieldRecovery.rawGcdMachineExec_sound : ∀ {state : CorruptedFieldRecovery.RawGcdMachineState}
+  {output charge : Nat} (hexec : CorruptedFieldRecovery.RawGcdMachineExec state output charge),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted (CorruptedFieldRecovery.RawGcdMachineState.dividend state)
+      (CorruptedFieldRecovery.RawGcdMachineState.divisor state))
+    (Prod.mk.{0, 0} output charge)
+CFR_TYPE_END:CorruptedFieldRecovery.rawGcdMachineExec_sound
+'CorruptedFieldRecovery.rawGcdMachineExec_sound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawGcdMachineExec_exists
+CorruptedFieldRecovery.rawGcdMachineExec_exists : ∀ (dividend divisor : Nat),
+  CorruptedFieldRecovery.RawGcdMachineExec { dividend := dividend, divisor := divisor }
+    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted dividend divisor).1
+    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted dividend divisor).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawGcdMachineExec_exists
+'CorruptedFieldRecovery.rawGcdMachineExec_exists' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawGcdMachineExec_refines_rawPolynomialGcd
+@CorruptedFieldRecovery.rawGcdMachineExec_refines_rawPolynomialGcd : ∀
+  {state : CorruptedFieldRecovery.RawGcdMachineState} {output charge : Nat}
+  (hexec : CorruptedFieldRecovery.RawGcdMachineExec state output charge),
+  Eq.{1} output
+    (CorruptedFieldRecovery.rawPolynomialGcd (CorruptedFieldRecovery.RawGcdMachineState.dividend state)
+      (CorruptedFieldRecovery.RawGcdMachineState.divisor state))
+CFR_TYPE_END:CorruptedFieldRecovery.rawGcdMachineExec_refines_rawPolynomialGcd
+'CorruptedFieldRecovery.rawGcdMachineExec_refines_rawPolynomialGcd' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawGcdMachineExec_charge_le
+@CorruptedFieldRecovery.rawGcdMachineExec_charge_le : ∀ {state : CorruptedFieldRecovery.RawGcdMachineState}
+  {output charge A : Nat} (hA : LT.lt.{0} 0 A)
+  (ha : LT.lt.{0} (CorruptedFieldRecovery.RawGcdMachineState.dividend state) (HPow.hPow.{0, 0, 0} 2 A))
+  (hb : LT.lt.{0} (CorruptedFieldRecovery.RawGcdMachineState.divisor state) (HPow.hPow.{0, 0, 0} 2 A))
+  (hexec : CorruptedFieldRecovery.RawGcdMachineExec state output charge),
+  LE.le.{0} charge
+    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (Nat.log2 (CorruptedFieldRecovery.RawGcdMachineState.divisor state)) 2)
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} 40 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 A) 6) 2))
+        (HAdd.hAdd.{0, 0, 0} A 1)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawGcdMachineExec_charge_le
+'CorruptedFieldRecovery.rawGcdMachineExec_charge_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

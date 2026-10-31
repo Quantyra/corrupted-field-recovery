@@ -1,0 +1,26 @@
+{
+  "CorruptedFieldRecovery.RawGcdMachineStep": {
+    "emitted_type": "CorruptedFieldRecovery.RawGcdMachineStep : (a : CorruptedFieldRecovery.RawGcdMachineState) \u2192\n  (a : Nat) \u2192 (a : CorruptedFieldRecovery.RawGcdMachineState) \u2192 Prop\n",
+    "sha256": "39c53eef85740da50eb472839a6567cbd038270a6d0b1954fc2851bbdb7816da"
+  },
+  "CorruptedFieldRecovery.RawGcdMachineExec": {
+    "emitted_type": "CorruptedFieldRecovery.RawGcdMachineExec : (a : CorruptedFieldRecovery.RawGcdMachineState) \u2192 (a a : Nat) \u2192 Prop\n",
+    "sha256": "d519c2507e99b9e8f70f61bf71a948ca32a72468e8b5860b5709440f977d90f0"
+  },
+  "CorruptedFieldRecovery.rawGcdMachineExec_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawGcdMachineExec_sound : \u2200 {state : CorruptedFieldRecovery.RawGcdMachineState}\n  {output charge : Nat} (hexec : CorruptedFieldRecovery.RawGcdMachineExec state output charge),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted (CorruptedFieldRecovery.RawGcdMachineState.dividend state)\n      (CorruptedFieldRecovery.RawGcdMachineState.divisor state))\n    (Prod.mk.{0, 0} output charge)\n",
+    "sha256": "1fd01e5c181725a4c0f66b34a7571d5e014bca1c04dd89aa82647fdf1cf345be"
+  },
+  "CorruptedFieldRecovery.rawGcdMachineExec_exists": {
+    "emitted_type": "CorruptedFieldRecovery.rawGcdMachineExec_exists : \u2200 (dividend divisor : Nat),\n  CorruptedFieldRecovery.RawGcdMachineExec { dividend := dividend, divisor := divisor }\n    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted dividend divisor).1\n    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted dividend divisor).2\n",
+    "sha256": "db880e278e2fe38e53679c6ebc875f9037c9330cbcdab550d08aced46cd65212"
+  },
+  "CorruptedFieldRecovery.rawGcdMachineExec_refines_rawPolynomialGcd": {
+    "emitted_type": "@CorruptedFieldRecovery.rawGcdMachineExec_refines_rawPolynomialGcd : \u2200\n  {state : CorruptedFieldRecovery.RawGcdMachineState} {output charge : Nat}\n  (hexec : CorruptedFieldRecovery.RawGcdMachineExec state output charge),\n  Eq.{1} output\n    (CorruptedFieldRecovery.rawPolynomialGcd (CorruptedFieldRecovery.RawGcdMachineState.dividend state)\n      (CorruptedFieldRecovery.RawGcdMachineState.divisor state))\n",
+    "sha256": "76fc1fbdb4dfe7795177d11ed257c444304ec94490e5fe2489356135317295ad"
+  },
+  "CorruptedFieldRecovery.rawGcdMachineExec_charge_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawGcdMachineExec_charge_le : \u2200 {state : CorruptedFieldRecovery.RawGcdMachineState}\n  {output charge A : Nat} (hA : LT.lt.{0} 0 A)\n  (ha : LT.lt.{0} (CorruptedFieldRecovery.RawGcdMachineState.dividend state) (HPow.hPow.{0, 0, 0} 2 A))\n  (hb : LT.lt.{0} (CorruptedFieldRecovery.RawGcdMachineState.divisor state) (HPow.hPow.{0, 0, 0} 2 A))\n  (hexec : CorruptedFieldRecovery.RawGcdMachineExec state output charge),\n  LE.le.{0} charge\n    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (Nat.log2 (CorruptedFieldRecovery.RawGcdMachineState.divisor state)) 2)\n      (HMul.hMul.{0, 0, 0}\n        (HMul.hMul.{0, 0, 0} 40 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 A) 6) 2))\n        (HAdd.hAdd.{0, 0, 0} A 1)))\n",
+    "sha256": "c3bafed39f0d4658ebca93775cf131223a09a2f95741d2f1b2a1a9ff56791cb1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawGcdOperationalMachine.lean",
+  "sha256": "63eafb2536342bc298ddcb4e9d04b2ea2a00773f7cfd6480eef8795f3ffc3c53",
+  "scope": "Root accepts abstract GCD execution soundness, existence for all inputs, output refinement, and declared-charge bound under A>0 and both inputs<2^A. Model incorporates reducer execution. No concrete bit implementation, actual runtime or whole verifier complexity.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}
