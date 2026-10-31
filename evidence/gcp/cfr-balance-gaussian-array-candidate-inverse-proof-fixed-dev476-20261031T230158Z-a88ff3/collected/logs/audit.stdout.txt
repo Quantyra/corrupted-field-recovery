@@ -1,0 +1,42 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_two_sided_of_top
+@CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_two_sided_of_top : ∀ {m : Nat}
+  (columns : Array.{0} (CorruptedFieldRecovery.BinaryVector m)) (hsize : Eq.{1} (Array.size.{0} columns) m)
+  (hspan : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}),
+  And
+    (Eq.{1}
+      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySpanMatrix columns)
+        (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix columns))
+      1)
+    (Eq.{1}
+      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix columns)
+        (CorruptedFieldRecovery.actualGreedyArraySpanMatrix columns))
+      1)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_two_sided_of_top
+'CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_two_sided_of_top' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse_two_sided
+@CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse_two_sided : ∀ {s : Nat}
+  (hs : LE.le.{0} 1 s) (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (p : Polynomial.{0} (ZMod 2)) (hp : Irreducible.{0} p) (hmonic : Polynomial.Monic.{0} p)
+  (hdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0),
+  ∃ outColumns outSelected,
+    And
+      (Eq.{1}
+        (CorruptedFieldRecovery.actualGreedyArrayOrbitRun T 3 (List.toArray.{0} List.nil.{0})
+          (List.toArray.{0} List.nil.{0}))
+        (Option.some.{0} (Prod.mk.{0, 0} outColumns outSelected)))
+      (And (Eq.{1} (Array.size.{0} outColumns) (HMul.hMul.{0, 0, 0} 3 s))
+        (And
+          (Eq.{1}
+            (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySpanMatrix outColumns)
+              (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix outColumns))
+            1)
+          (Eq.{1}
+            (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix outColumns)
+              (CorruptedFieldRecovery.actualGreedyArraySpanMatrix outColumns))
+            1)))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse_two_sided
+'CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse_two_sided' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

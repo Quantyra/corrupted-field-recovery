@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-balance-gaussian-array-candidate-inverse-proof-fixed-dev475-20261031T225754Z-94a846",
+  "utc": "2026-10-31T22:58:31.157915+00:00"
+}
