@@ -1,0 +1,8 @@
+{
+    "utc":  "2026-10-31T11:10:11.6293532Z",
+    "superseded_uncaptured_offer_sha256":  "2E2FF34926D475CFBB647BB31FE65F2252CC6F5B207088E4A9A7B9C7A92CBACB",
+    "superseded_offer_captured":  false,
+    "superseded_offer_submitted":  false,
+    "captured_successor_sha256":  "3F25187F2E5B537F76A1CA2E86B291D7446037EFDE58FBAA4BB8EB47949321F8",
+    "reason":  "Full442 diagnostics required composition application unfolding in addition to prior planned cast fix."
+}
