@@ -1,0 +1,125 @@
+✖ [3015/3015] Building CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitStep (5.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:56:19: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (?f + ?g) ?i
+in the target expression
+  ((Polynomial.aeval T) p + (Polynomial.aeval T) q) x ∈ M
+
+case add
+n : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+hT : ∀ x ∈ M, T x ∈ M
+x : BinaryVector n
+hx : x ∈ M
+hpow : ∀ (k : ℕ), ∀ y ∈ M, (T ^ k) y ∈ M
+p q : Polynomial (ZMod 2)
+hp : ((Polynomial.aeval T) p) x ∈ M
+hq : ((Polynomial.aeval T) q) x ∈ M
+⊢ ((Polynomial.aeval T) p + (Polynomial.aeval T) q) x ∈ M
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:106:18: Unknown identifier `Coprime`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:107:33: Tactic `rcases` failed: `x✝ : ?m.68` is not an inductive datatype
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:137:6: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  (∀ (x : ?α), ?f x = ?g x) → ?f = ?g
+with the goal
+  ∀ (i : Fin s), coeff i = 0
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.9901.3273} {β : α → Sort ?u.9901.3272} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hs : 1 ≤ s
+hpdeg : p.natDegree = s
+hirr : Irreducible p
+hroot : (Polynomial.aeval T) p = 0
+hT : ∀ x ∈ M, T x ∈ M
+hv : v ∉ M
+coeff : Fin s → ZMod 2
+hrel : ∑ i, coeff i • actualGreedyQuotientOrbitFamily T M v i = 0
+hcoeff : ¬∀ (i : Fin s), coeff i = 0
+hnone : ¬∃ j, coeff j ≠ 0
+⊢ ∀ (i : Fin s), coeff i = 0
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:144:10: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `q` is a value of type
+  Polynomial (ZMod 2)
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:208:29: failed to synthesize instance of type class
+  Max Type
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:216:29: failed to synthesize instance of type class
+  Max Type
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:218:74: unsolved goals
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hquot : LinearIndependent (ZMod 2) (actualGreedyQuotientOrbitFamily T M v)
+hLI : LinearIndependent (ZMod 2) (actualGreedyOrbitFamily T v)
+hdim : Module.finrank (ZMod 2) ↥(actualGreedyOrbitSpan T v) = s
+hdisj : Disjoint M (actualGreedyOrbitSpan T v)
+⊢ sorry = Module.finrank (ZMod 2) ↥(M ⊔ actualGreedyOrbitSpan T v)
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:249:10: Unknown constant `Finset.sum_mem`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:250:10: No goals to be solved
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:256:61: Application type mismatch: The argument
+  hvsum
+has type
+  ∑ i ∈ Finset.range s, p.coeff i • (T ^ i) v + (T ^ s) v = 0
+but is expected to have type
+  (T ^ s) v + ∑ i ∈ Finset.range s, p.coeff i • (T ^ i) v = 0
+in the application
+  eq_neg_of_add_eq_zero_left hvsum
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:268:8: failed to elaborate eliminator, expected type is not available
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:269:2: No goals to be solved
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:303:11: failed to synthesize instance of type class
+  Max Type
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:329:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  a + b
+in the target expression
+  T x ∈ actualGreedyArrayColumnSubmodule columns ⊔ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i)
+
+s : ℕ
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+columns : Array (BinaryVector (3 * s))
+p : Polynomial (ZMod 2)
+hs : 1 ≤ s
+hpdeg : p.natDegree = s
+hirr : Irreducible p
+hmonic : p.Monic
+hroot : (Polynomial.aeval T) p = 0
+hT : ∀ x ∈ actualGreedyArrayColumnSubmodule columns, T x ∈ actualGreedyArrayColumnSubmodule columns
+hproper : actualGreedyArrayColumnSubmodule columns ≠ ⊤
+i : Fin (3 * s)
+hselected : actualGreedyArrayFirstUnitOutside? columns = some i
+houtside : actualGreedyArrayUnitVector i ∉ actualGreedyArrayColumnSubmodule columns
+hquot :
+  LinearIndependent (ZMod 2)
+      (actualGreedyQuotientOrbitFamily T (actualGreedyArrayColumnSubmodule columns) (actualGreedyArrayUnitVector i)) ∧
+    Module.finrank (ZMod 2)
+        ↥(Submodule.span (ZMod 2)
+            (Set.range
+              (actualGreedyQuotientOrbitFamily T (actualGreedyArrayColumnSubmodule columns)
+                (actualGreedyArrayUnitVector i)))) =
+      s
+hlast : (T ^ s) (actualGreedyArrayUnitVector i) ∈ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i)
+hdim : sorry = Module.finrank (ZMod 2) ↥(actualGreedyArrayColumnSubmodule columns) + s
+horbitInv :
+  ∀ x ∈ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i),
+    T x ∈ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i)
+x : Fin (3 * s) → ZMod 2
+hx : x ∈ actualGreedyArrayColumnSubmodule columns ⊔ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i)
+a : Fin (3 * s) → ZMod 2
+ha : a ∈ actualGreedyArrayColumnSubmodule columns
+b : Fin (3 * s) → ZMod 2
+hb : b ∈ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i)
+hab : a + b = x
+⊢ T x ∈ actualGreedyArrayColumnSubmodule columns ⊔ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitStep

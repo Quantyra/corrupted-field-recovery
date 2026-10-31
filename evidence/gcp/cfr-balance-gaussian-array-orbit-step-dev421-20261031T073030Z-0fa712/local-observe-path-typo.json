@@ -1,0 +1,8 @@
+{
+    "action":  "Correct local path and observe existing421 handle.",
+    "attempted_local_script":  "tools=gcp_cfr.py",
+    "failure":  "Local Python file not found; typo before any controller or cloud operation.",
+    "cloud_operation_occurred":  false,
+    "utc":  "2026-10-31T07:37:37.8061101Z",
+    "duplicate_launch":  false
+}
