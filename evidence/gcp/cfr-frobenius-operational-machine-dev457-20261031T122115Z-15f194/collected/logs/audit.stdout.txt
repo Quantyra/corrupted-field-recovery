@@ -1,0 +1,52 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawFrobeniusMachineStep
+CorruptedFieldRecovery.RawFrobeniusMachineStep : (modulus : Nat) →
+  (a : CorruptedFieldRecovery.RawFrobeniusMachineState) →
+    (a : Nat) → (a : CorruptedFieldRecovery.RawFrobeniusMachineState) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.RawFrobeniusMachineStep
+'CorruptedFieldRecovery.RawFrobeniusMachineStep' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawFrobeniusMachineExec
+CorruptedFieldRecovery.RawFrobeniusMachineExec : (modulus : Nat) →
+  (a : CorruptedFieldRecovery.RawFrobeniusMachineState) → (a a : Nat) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.RawFrobeniusMachineExec
+'CorruptedFieldRecovery.RawFrobeniusMachineExec' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFrobeniusMachineExec_sound
+@CorruptedFieldRecovery.rawFrobeniusMachineExec_sound : ∀ {modulus output charge : Nat}
+  {state : CorruptedFieldRecovery.RawFrobeniusMachineState}
+  (hexec : CorruptedFieldRecovery.RawFrobeniusMachineExec modulus state output charge),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus
+      (CorruptedFieldRecovery.RawFrobeniusMachineState.iterations state)
+      (CorruptedFieldRecovery.RawFrobeniusMachineState.current state))
+    (Prod.mk.{0, 0} output charge)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFrobeniusMachineExec_sound
+'CorruptedFieldRecovery.rawFrobeniusMachineExec_sound' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFrobeniusMachineExec_exists
+CorruptedFieldRecovery.rawFrobeniusMachineExec_exists : ∀ (modulus iterations current : Nat)
+  (hmodOne : LT.lt.{0} 1 modulus),
+  CorruptedFieldRecovery.RawFrobeniusMachineExec modulus { iterations := iterations, current := current }
+    (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus iterations current).1
+    (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus iterations current).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawFrobeniusMachineExec_exists
+'CorruptedFieldRecovery.rawFrobeniusMachineExec_exists' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFrobeniusMachineExec_refines_rawCandidateFrobeniusAux
+@CorruptedFieldRecovery.rawFrobeniusMachineExec_refines_rawCandidateFrobeniusAux : ∀
+  {modulus iterations current output charge : Nat}
+  (hexec :
+    CorruptedFieldRecovery.RawFrobeniusMachineExec modulus { iterations := iterations, current := current } output
+      charge),
+  Eq.{1} output (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus iterations current)
+CFR_TYPE_END:CorruptedFieldRecovery.rawFrobeniusMachineExec_refines_rawCandidateFrobeniusAux
+'CorruptedFieldRecovery.rawFrobeniusMachineExec_refines_rawCandidateFrobeniusAux' depends on axioms: [propext,
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawFrobeniusMachineExec_charge_le
+@CorruptedFieldRecovery.rawFrobeniusMachineExec_charge_le : ∀ {modulus iterations current output charge W : Nat}
+  (hmod : Ne.{1} modulus 0) (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W))
+  (hW : LT.lt.{0} 0 W) (hcurrent : LT.lt.{0} current (HPow.hPow.{0, 0, 0} 2 W))
+  (hexec :
+    CorruptedFieldRecovery.RawFrobeniusMachineExec modulus { iterations := iterations, current := current } output
+      charge),
+  LE.le.{0} charge (HMul.hMul.{0, 0, 0} iterations (CorruptedFieldRecovery.rawRabinFrobeniusStepCharge W))
+CFR_TYPE_END:CorruptedFieldRecovery.rawFrobeniusMachineExec_charge_le
+'CorruptedFieldRecovery.rawFrobeniusMachineExec_charge_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

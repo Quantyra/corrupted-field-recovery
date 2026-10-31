@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawFrobeniusOperationalMachine.lean",
+  "sha256": "28af58da625cbd9a4a6ae023f4f40bd437fbc669d491e25a23116ef39ddf976f",
+  "scope": "Root accepts abstract Frobenius Exec soundness to costed recurrence, existence for modulus>1, output refinement and declared-charge bound under explicit nonzero/modulus>1/width conditions. Reducer execution is embedded; multiplication remains a costed primitive. No concrete runtime, heap or full recovery claim.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

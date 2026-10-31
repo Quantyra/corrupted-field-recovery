@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-31T12:25:21.285511+00:00",
+  "run": "cfr-frobenius-operational-machine-dev457-20261031T122115Z-15f194",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

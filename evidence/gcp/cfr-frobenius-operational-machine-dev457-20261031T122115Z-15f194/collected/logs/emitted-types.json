@@ -1,0 +1,26 @@
+{
+  "CorruptedFieldRecovery.RawFrobeniusMachineStep": {
+    "emitted_type": "CorruptedFieldRecovery.RawFrobeniusMachineStep : (modulus : Nat) \u2192\n  (a : CorruptedFieldRecovery.RawFrobeniusMachineState) \u2192\n    (a : Nat) \u2192 (a : CorruptedFieldRecovery.RawFrobeniusMachineState) \u2192 Prop\n",
+    "sha256": "bcf280e059fa882311d54fce995632069a5ae5edf5b372247085507c625f07b8"
+  },
+  "CorruptedFieldRecovery.RawFrobeniusMachineExec": {
+    "emitted_type": "CorruptedFieldRecovery.RawFrobeniusMachineExec : (modulus : Nat) \u2192\n  (a : CorruptedFieldRecovery.RawFrobeniusMachineState) \u2192 (a a : Nat) \u2192 Prop\n",
+    "sha256": "3b23a74100d2b8d9e041d652eaac45f20cd303bacd72c3fb612f986874c062ad"
+  },
+  "CorruptedFieldRecovery.rawFrobeniusMachineExec_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFrobeniusMachineExec_sound : \u2200 {modulus output charge : Nat}\n  {state : CorruptedFieldRecovery.RawFrobeniusMachineState}\n  (hexec : CorruptedFieldRecovery.RawFrobeniusMachineExec modulus state output charge),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus\n      (CorruptedFieldRecovery.RawFrobeniusMachineState.iterations state)\n      (CorruptedFieldRecovery.RawFrobeniusMachineState.current state))\n    (Prod.mk.{0, 0} output charge)\n",
+    "sha256": "47fee5e58a2c7d0c39dffb7dd208078ef3a51828c7710f148f17f54f71fdc4e2"
+  },
+  "CorruptedFieldRecovery.rawFrobeniusMachineExec_exists": {
+    "emitted_type": "CorruptedFieldRecovery.rawFrobeniusMachineExec_exists : \u2200 (modulus iterations current : Nat)\n  (hmodOne : LT.lt.{0} 1 modulus),\n  CorruptedFieldRecovery.RawFrobeniusMachineExec modulus { iterations := iterations, current := current }\n    (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus iterations current).1\n    (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus iterations current).2\n",
+    "sha256": "89fab652d4fc84bfc9d07a8defd81ff1c3dbe23c325d41686a4c42cba6a10591"
+  },
+  "CorruptedFieldRecovery.rawFrobeniusMachineExec_refines_rawCandidateFrobeniusAux": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFrobeniusMachineExec_refines_rawCandidateFrobeniusAux : \u2200\n  {modulus iterations current output charge : Nat}\n  (hexec :\n    CorruptedFieldRecovery.RawFrobeniusMachineExec modulus { iterations := iterations, current := current } output\n      charge),\n  Eq.{1} output (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus iterations current)\n",
+    "sha256": "0367687d9d4ef4f616e0d4cacd147e2d118761d910a416bbfad136b52ea50ba9"
+  },
+  "CorruptedFieldRecovery.rawFrobeniusMachineExec_charge_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawFrobeniusMachineExec_charge_le : \u2200 {modulus iterations current output charge W : Nat}\n  (hmod : Ne.{1} modulus 0) (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W))\n  (hW : LT.lt.{0} 0 W) (hcurrent : LT.lt.{0} current (HPow.hPow.{0, 0, 0} 2 W))\n  (hexec :\n    CorruptedFieldRecovery.RawFrobeniusMachineExec modulus { iterations := iterations, current := current } output\n      charge),\n  LE.le.{0} charge (HMul.hMul.{0, 0, 0} iterations (CorruptedFieldRecovery.rawRabinFrobeniusStepCharge W))\n",
+    "sha256": "7cf0d8167248546f43d53fb6b76cca1981e70b30bae510aff2d04eafa5c8a3df"
+  }
+}
