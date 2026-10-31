@@ -1,0 +1,58 @@
+✖ [2076/2076] Building CorruptedFieldRecovery.RawArithmeticGcdTraceWidth (2.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:53:51: Application type mismatch: The argument
+  hb
+has type
+  b + 1 + 1 < 2 ^ W
+but is expected to have type
+  rem.1 < 2 ^ W
+in the application
+  ih rem.1 hrem ?m.253 hb
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:53:44: Type mismatch
+  b + 2
+has type
+  ℕ
+of sort `outParam Type` but is expected to have type
+  ?m.246 < 2 ^ W
+of sort `Prop`
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:74:18: Unknown identifier `rawArithmetic_width_lt_parameter`
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:77:18: Unknown identifier `word`
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:79:10: No goals to be solved
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:85:14: `simp` made no progress
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:114:24: Unknown identifier `rawArithmetic_width_lt_parameter`
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:116:24: Unknown identifier `rawArithmetic_width_lt_parameter`
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:118:24: Unknown identifier `rawArithmetic_width_lt_parameter`
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:120:24: Unknown identifier `rawArithmetic_width_lt_parameter`
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:126:44: Application type mismatch: The argument
+  hb
+has type
+  b + 1 + 1 < 2 ^ W
+but is expected to have type
+  rem.1 < 2 ^ W
+in the application
+  ih rem.1 hrem ?m.420 hb
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:126:37: Type mismatch
+  b + 2
+has type
+  ℕ
+of sort `outParam Type` but is expected to have type
+  ?m.413 < 2 ^ W
+of sort `Prop`
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:153:16: Type mismatch: After simplification, term
+  Nat.add_le_add_left hchild 1
+ has type
+  (rawPolynomialGcdActivationTrace (k + 2) (rawPolynomialRemainderBitCosted x (k + 2)).1).length ≤
+    rawPolynomialGcdBitCostedFrames (k + 2) (rawPolynomialRemainderBitCosted x (k + 2)).1
+but is expected to have type
+  (rawPolynomialGcdActivationTrace (k + 2) (rawPolynomialRemainderBitCosted x (k + 2)).1).length <
+    1 + rawPolynomialGcdBitCostedFrames (k + 2) (rawPolynomialRemainderBitCosted x (k + 2)).1
+warning: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:140:45: This simp argument is unused:
+  rawNatBitWidth
+
+Hint: Omit it from the simp argument list.
+  simp [rawPolynomialGcdActivationTrace, r̵a̵w̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵G̵c̵d̵B̵i̵t̵C̵o̵s̵t̵e̵d̵F̵r̵a̵m̵e̵s̵,̵ ̵r̵a̵w̵N̵a̵t̵B̵i̵t̵W̵i̵d̵t̵h̵]̵r̲a̲w̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲G̲c̲d̲B̲i̲t̲C̲o̲s̲t̲e̲d̲F̲r̲a̲m̲e̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticGcdTraceWidth
