@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticGcdNestedChargeSpace.lean",
+  "sha256": "25ee5e7c9bf2ca5b40dfe4cb27d623094a51b84bbb973fb8b912c4b213fc36b5",
+  "scope": "Root accepts declared-GCD-charge bounds on length and abstract live bits of every custom nested GCD/reducer snapshot under W>0 and a,b<2^W. No new evaluator/heap/recovery cost follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

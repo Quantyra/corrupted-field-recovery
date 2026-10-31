@@ -1,0 +1,25 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_length_le_charge
+@CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_length_le_charge : ∀ {a b W : Nat} (hW : LT.lt.{0} 0 W)
+  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))
+  (stack : CorruptedFieldRecovery.RawArithmeticStack)
+  (a_1 : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace a b) stack),
+  LE.le.{0} (List.length.{0} stack)
+    (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).2 (HAdd.hAdd.{0, 0, 0} W 2))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_length_le_charge
+'CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_length_le_charge' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_live_bits_le_charge
+@CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_live_bits_le_charge : ∀ {a b W : Nat} (hW : LT.lt.{0} 0 W)
+  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))
+  (stack : CorruptedFieldRecovery.RawArithmeticStack)
+  (a_1 : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace a b) stack),
+  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticStackLiveBits stack)
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).2 (HAdd.hAdd.{0, 0, 0} W 2))
+      (HAdd.hAdd.{0, 0, 0} 3
+        (HMul.hMul.{0, 0, 0} 6 (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawArithmeticParameterWidth W) 1))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_live_bits_le_charge
+'CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_live_bits_le_charge' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
