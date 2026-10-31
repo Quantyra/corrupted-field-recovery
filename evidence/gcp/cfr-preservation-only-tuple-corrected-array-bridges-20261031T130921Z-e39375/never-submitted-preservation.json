@@ -1,0 +1,30 @@
+{
+  "status": "never-submitted preservation-only",
+  "sources": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitBasisRunFixed.lean": "0165cddebf7003b1cbaaeddf0451b60dccee39c468f7bde1b1e5001c1fdab468",
+    "CorruptedFieldRecovery/S010BalanceGaussianArraySquareMatrixFixed.lean": "91795c29329f4e4ab539ee862a098d7c9105e53fcb001152851efcf39ffaf932"
+  },
+  "archive_sha256": "5b8c9f3914be69db4578a27ec937574bb2357bd1df75e1863f85f01fb9b97f39",
+  "utf8_no_bom_verified": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitBasis.lean": "ca0e8defab242d179d37ba6a6406062e0c4672899eeb963288d7a2b8fddc16d6",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitRun.lean": "e453084656f03f57924c35ee5a48add52f3de6f3d0fdd800905e6ab13b289f52",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitBasisRun.lean": "b8be1e869131ae9133530544f9b741ae7b1bed9d3dd941eed8c0ec582c1a5b61",
+    "CorruptedFieldRecovery/S010BalanceGaussianArraySquareMatrix.lean": "276679a8097142077f2073b89fed8e824779bb17a511101e20c440c4cce4f44f"
+  },
+  "dependency_status": {
+    "ArrayOrbitBasis": "uncompiledCA0E8D preservation draft",
+    "ArrayOrbitRun": "accepted460"
+  },
+  "original_local_copies_verified": {
+    "evidence/drafts/array-orbit-bridge-originals/S010BalanceGaussianArrayOrbitBasisRun.pre-tuple-repair.lean": "b8be1e869131ae9133530544f9b741ae7b1bed9d3dd941eed8c0ec582c1a5b61",
+    "evidence/drafts/array-orbit-bridge-originals/S010BalanceGaussianArraySquareMatrix.pre-tuple-repair.lean": "276679a8097142077f2073b89fed8e824779bb17a511101e20c440c4cce4f44f"
+  },
+  "original_provenance": {
+    "basis_run": "B8BE original archived85a86bb",
+    "square_matrix": "276679 original archived7745e0c"
+  },
+  "scope": "Distinct Fixed files correct destructuring to accepted threePass tuple order. Both remain uncompiled/unaudited proof attempts; basis depends on uncompiled basis draft. No inverse, serialization, full constructor or cost claim.",
+  "no_lean_build_audit_cloud_or_stop_operation": true,
+  "prior_archives_and_main_originals_unchanged": true
+}
