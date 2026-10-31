@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawPolynomialGcdRemainderUsesReducer": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialGcdRemainderUsesReducer : \u2200 {dividend divisor : Nat}\n  (hdivisor : LT.lt.{0} 1 divisor),\n  Eq.{1} (CorruptedFieldRecovery.rawPolynomialRemainderBitCosted dividend divisor).1\n    (CorruptedFieldRecovery.rawReduceFuelBitCosted divisor (Nat.log2 divisor)\n        (HAdd.hAdd.{0, 0, 0} (Nat.log2 dividend) 1) dividend).1\n",
+    "sha256": "0b84867fba59c35e2fdb76dbeb380104c960ee2fd1a5524778cb2e3013e654fd"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_registers_lt": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_registers_lt : \u2200 {a b W : Nat} (hW : LT.lt.{0} 0 W)\n  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))\n  (stack : CorruptedFieldRecovery.RawArithmeticStack)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace a b) stack)\n  (frame : CorruptedFieldRecovery.RawArithmeticFrame) (a : Membership.mem.{0, 0} stack frame) (word : Nat)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (CorruptedFieldRecovery.rawArithmeticParameterWidth W))\n",
+    "sha256": "b25ecedd2585a72048c1ea77e977f3e653cde80c0fa057c088b1f5a84d7b0b7f"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_length_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_length_le : \u2200 {a b W : Nat} (hW : LT.lt.{0} 0 W)\n  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))\n  (stack : CorruptedFieldRecovery.RawArithmeticStack)\n  (a_1 : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace a b) stack),\n  LE.le.{0} (List.length.{0} stack)\n    (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames a b) (HAdd.hAdd.{0, 0, 0} W 2))\n",
+    "sha256": "f71778adf16400364497c0acc07d4c98ecf9347cb22efd57cd5f29826f79fe15"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_live_bits_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace_live_bits_le : \u2200 {a b W : Nat} (hW : LT.lt.{0} 0 W)\n  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))\n  (stack : CorruptedFieldRecovery.RawArithmeticStack)\n  (a_1 : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolynomialGcdNestedStackTrace a b) stack),\n  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticStackLiveBits stack)\n    (HMul.hMul.{0, 0, 0}\n      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.rawPolynomialGcdBitCostedFrames a b) (HAdd.hAdd.{0, 0, 0} W 2))\n      (HAdd.hAdd.{0, 0, 0} 3\n        (HMul.hMul.{0, 0, 0} 6 (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawArithmeticParameterWidth W) 1))))\n",
+    "sha256": "18cd8633052f82c69c9ccb9c4297e1c0bdd836fc15a5460382da608270aed0cb"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean",
+  "sha256": "e5933475a775d100645138a339828539b3ee8d4cdfa59039d5ce2412de24e94c",
+  "scope": "Root accepts remainder first projection equals reducer under divisor>1; custom nested GCD/reducer stack snapshot register,length and abstract live-bit bounds under W>0 and a,b<2^W. No evaluator reachability/heap or whole verifier space follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings; failed observation transport preserved and same-run collection succeeded"
+}

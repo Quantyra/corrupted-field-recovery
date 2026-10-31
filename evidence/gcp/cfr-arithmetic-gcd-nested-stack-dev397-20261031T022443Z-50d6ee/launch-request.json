@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-31T02:26:52.022755+00:00",
+  "run": "cfr-arithmetic-gcd-nested-stack-dev397-20261031T022443Z-50d6ee",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
