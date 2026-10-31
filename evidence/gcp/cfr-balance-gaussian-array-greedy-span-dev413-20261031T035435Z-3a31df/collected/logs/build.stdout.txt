@@ -1,0 +1,94 @@
+✖ [3011/3011] Building CorruptedFieldRecovery.S010BalanceGaussianArrayGreedySpan (3.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:101:21: unsolved goals
+case «0»
+⊢ 0 = 0 ∨ 0 = 1
+
+case «1»
+⊢ 1 = 0 ∨ 1 = 1
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:258:18: Unknown identifier `hscanPivots`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:258:43: Application type mismatch: The argument
+  x
+has type
+  Fin m
+of sort `Type` but is expected to have type
+  j ∈ List.map Prod.snd run.2
+of sort `Prop` in the application
+  hfree x
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:260:17: Application type mismatch: The argument
+  hfree'
+has type
+  ∀ (x : Fin m), (x, j) ∉ pivots
+but is expected to have type
+  j ∉ List.map Prod.snd pivots
+in the application
+  balanceGaussianFreeKernelCandidate_mem_ker ?m.357 pivots j hfree'
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:268:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (actualBalanceGaussianArrayView (actualGreedyArrayAugmentedScan columns target).1,
+      (actualGreedyArrayAugmentedScan columns target).2).1
+in the target expression
+  actualBalanceGaussianArrayView run.1 *ᵥ
+      balanceGaussianFreeKernelCandidate (actualBalanceGaussianArrayView run.1) run.2 j =
+    0
+
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+j : Fin (columns.size + 1)
+h : actualGreedyArraySpanWitness? columns target = some j
+run : Array (Array (ZMod 2)) × List (Fin m × Fin (columns.size + 1)) := actualGreedyArrayAugmentedScan columns target
+htest : actualGreedyArraySpanCandidateTest run j = true
+hparts :
+  decide (j ∉ List.map Prod.snd run.2) = true ∧
+    decide
+        (balanceGaussianFreeKernelCandidate (actualBalanceGaussianArrayView run.1) run.2 j (Fin.last columns.size) =
+          1) =
+      true
+hfree : j ∉ List.map Prod.snd run.2
+hlast : balanceGaussianFreeKernelCandidate (actualBalanceGaussianArrayView run.1) run.2 j (Fin.last columns.size) = 1
+hscan :
+  (actualBalanceGaussianArrayView (actualGreedyArrayAugmentedScan columns target).1,
+      (actualGreedyArrayAugmentedScan columns target).2) =
+    balanceGaussianColumnScan (actualGreedyArrayAugmentedMatrix columns target) ∅ (List.ofFn fun col => col)
+hmatrix :
+  (actualBalanceGaussianArrayView (actualGreedyArrayAugmentedScan columns target).1,
+        (actualGreedyArrayAugmentedScan columns target).2).1 =
+    (balanceGaussianColumnScan (actualGreedyArrayAugmentedMatrix columns target) ∅ (List.ofFn fun col => col)).1
+hpivots :
+  (actualBalanceGaussianArrayView (actualGreedyArrayAugmentedScan columns target).1,
+        (actualGreedyArrayAugmentedScan columns target).2).2 =
+    (balanceGaussianColumnScan (actualGreedyArrayAugmentedMatrix columns target) ∅ (List.ofFn fun col => col)).2
+A : Matrix (Fin m) (Fin (columns.size + 1)) (ZMod 2) := actualGreedyArrayAugmentedMatrix columns target
+pivots : List (Fin m × Fin (columns.size + 1)) := (balanceGaussianColumnScan A ∅ (List.ofFn fun col => col)).2
+hrows : (List.map Prod.fst pivots).Nodup
+hunit :
+  ∀ pivot ∈ pivots,
+    ∀ (i : Fin m), (balanceGaussianColumnScan A ∅ (List.ofFn fun col => col)).1 i pivot.2 = if i = pivot.1 then 1 else 0
+hzero : ∀ i ∉ List.map Prod.fst pivots, (balanceGaussianColumnScan A ∅ (List.ofFn fun col => col)).1 i = 0
+hcandidateKernel :
+  (balanceGaussianColumnScan A ∅ (List.ofFn fun col => col)).1 *ᵥ
+      balanceGaussianFreeKernelCandidate (balanceGaussianColumnScan A ∅ (List.ofFn fun col => col)).1 pivots j =
+    0
+⊢ actualBalanceGaussianArrayView run.1 *ᵥ
+      balanceGaussianFreeKernelCandidate (actualBalanceGaussianArrayView run.1) run.2 j =
+    0
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:390:10: Unknown identifier `hmatrix`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:448:40: Unknown identifier `Basis`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:448:84: unsolved goals
+case h.h
+n : ℕ
+M : Submodule (ZMod 2) (Fin n → ZMod 2)
+hproper : M ≠ ⊤
+i j : Fin n
+⊢ (if j = i then 1 else 0) = sorry () i j
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:536:38: Unknown identifier `Basis`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:535:8: unsolved goals
+case h.h
+n : ℕ
+columns : Array (Fin n → ZMod 2)
+hnone : actualGreedyArrayFirstUnitOutside? columns = none
+i j : Fin n
+⊢ (if j = i then 1 else 0) = sorry () i j
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayGreedySpan
