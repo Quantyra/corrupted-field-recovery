@@ -1,0 +1,30 @@
+{
+  "status": "never-submitted preservation-only",
+  "no_build_or_audit": true,
+  "no_cloud_or_lifecycle_operation": true,
+  "immutable_archive_sha256": "bc99334075897646c75de029057079864d032b4823871372858f2016e06c9c28",
+  "sources": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitBasis.lean": "ca0e8defab242d179d37ba6a6406062e0c4672899eeb963288d7a2b8fddc16d6",
+    "CorruptedFieldRecovery/RawRabinIndexOperationalMachine.lean": "7455a9e794562db3f77180996ee96cd1df5406287baa23bd2c6d77486602da13"
+  },
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitRun.lean": "e453084656f03f57924c35ee5a48add52f3de6f3d0fdd800905e6ab13b289f52",
+    "CorruptedFieldRecovery/RawFrobeniusOperationalMachine.lean": "28af58da625cbd9a4a6ae023f4f40bd437fbc669d491e25a23116ef39ddf976f",
+    "CorruptedFieldRecovery/RawGcdOperationalMachine.lean": "63eafb2536342bc298ddcb4e9d04b2ea2a00773f7cfd6480eef8795f3ffc3c53",
+    "CorruptedFieldRecovery/RawRabinScanBitCost.lean": "7d21e3da9236d32d77616b3fb16397ed40f411c6db388921d183c1c8c3b3d9db"
+  },
+  "dependency_acceptance": {
+    "ArrayOrbitRun": "Root-accepted460",
+    "RawFrobeniusOperationalMachine": "Root-accepted457",
+    "RawGcdOperationalMachine": "Root-accepted461",
+    "RawRabinScanBitCost": "accepted264"
+  },
+  "encoding_errors": [
+    "CorruptedFieldRecovery/RawRabinIndexOperationalMachine.lean: UTF-8 BOM"
+  ],
+  "scope": {
+    "basis": "Uncompiled successor to failed464: attempts size/full-span implies LI and noncomputable proof-level Basis plus matrix-column identity. Requires explicit size=ambient dimension and full-span premises; no computed inverse or full constructor.",
+    "rabin_index": "Uncompiled composed one-index execution from Frobenius and GCD abstract machines, intended soundness/existence/predicate/declared-charge transfer. No surrounding range/short-circuit scan, primitive multiply implementation, Lean runtime or heap claim."
+  },
+  "limitations": "Neither offered source was compiled or audited. BOM-bearing Rabin index bytes preserved exactly; encoding preflight failure retained and no successor substituted. Earlier464 archive and batch preservation receipts remain unchanged."
+}
