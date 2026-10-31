@@ -1,0 +1,313 @@
+✖ [3015/3015] Building CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitStep (13s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:29:27: don't know how to synthesize implicit argument `ι`
+  @Set.range (BinaryVector n) (Fin (?m.21 T v)) (actualGreedyOrbitFamily T v)
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:29:38: don't know how to synthesize implicit argument `s`
+  @actualGreedyOrbitFamily n (?m.21 T v) T v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:36:11: Unknown constant `Submodule.Quotient.mkQ`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:56:19: Unknown constant `Module.End.add_apply`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:60:8: Unknown constant `Algebra.algebraMap_end_apply`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:91:11: Unknown constant `Module.End.add_apply`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:106:20: Invalid field `Coprime`: The environment does not contain `Polynomial.Coprime`, so it is not possible to project the field `Coprime` from an expression
+  p
+of type `Polynomial (ZMod 2)`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:107:33: Tactic `rcases` failed: `x✝ : ?m.68` is not an inductive datatype
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:127:11: don't know how to synthesize implicit argument `ι`
+  @Set.range (BinaryVector n ⧸ M) (Fin (?m.69 T M v p hs hpdeg hirr hroot hT hv))
+    (actualGreedyQuotientOrbitFamily T M v)
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hs : 1 ≤ s
+hpdeg : p.natDegree = s
+hirr : Irreducible p
+hroot : (Polynomial.aeval T) p = 0
+hT : ∀ x ∈ M, T x ∈ M
+hv : v ∉ M
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:127:22: don't know how to synthesize implicit argument `s`
+  @actualGreedyQuotientOrbitFamily n (?m.69 T M v p hs hpdeg hirr hroot hT hv) T M v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hs : 1 ≤ s
+hpdeg : p.natDegree = s
+hirr : Irreducible p
+hroot : (Polynomial.aeval T) p = 0
+hT : ∀ x ∈ M, T x ∈ M
+hv : v ∉ M
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:124:4: don't know how to synthesize implicit argument `ι`
+  @LinearIndependent (Fin (?m.68 T M v p hs hpdeg hirr hroot hT hv)) (ZMod 2) (BinaryVector n ⧸ M)
+    (actualGreedyQuotientOrbitFamily T M v) Field.toSemifield.toDivisionSemiring.toSemiring
+    (Submodule.Quotient.addCommMonoid M) (Submodule.Quotient.module M)
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hs : 1 ≤ s
+hpdeg : p.natDegree = s
+hirr : Irreducible p
+hroot : (Polynomial.aeval T) p = 0
+hT : ∀ x ∈ M, T x ∈ M
+hv : v ∉ M
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:124:32: don't know how to synthesize implicit argument `s`
+  @actualGreedyQuotientOrbitFamily n (?m.68 T M v p hs hpdeg hirr hroot hT hv) T M v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hs : 1 ≤ s
+hpdeg : p.natDegree = s
+hirr : Irreducible p
+hroot : (Polynomial.aeval T) p = 0
+hT : ∀ x ∈ M, T x ∈ M
+hv : v ∉ M
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:127:70: unsolved goals
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hs : 1 ≤ s
+hpdeg : p.natDegree = s
+hirr : Irreducible p
+hroot : (Polynomial.aeval T) p = 0
+hT : ∀ x ∈ M, T x ∈ M
+hv : v ∉ M
+⊢ LinearIndependent (ZMod 2) (actualGreedyQuotientOrbitFamily T M v) ∧
+    Module.finrank (ZMod 2) ↥(Submodule.span (ZMod 2) (Set.range (actualGreedyQuotientOrbitFamily T M v))) = s
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:176:4: don't know how to synthesize implicit argument `ι`
+  @LinearIndependent (Fin (?m.30 T M v hquot)) (ZMod 2) (BinaryVector n) (actualGreedyOrbitFamily T v)
+    Field.toSemifield.toDivisionSemiring.toSemiring Pi.addCommMonoid (Pi.Function.module (Fin n) (ZMod 2) (ZMod 2))
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hquot : LinearIndependent (ZMod 2) (actualGreedyQuotientOrbitFamily T M v)
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:176:32: don't know how to synthesize implicit argument `s`
+  @actualGreedyOrbitFamily n (?m.30 T M v hquot) T v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hquot : LinearIndependent (ZMod 2) (actualGreedyQuotientOrbitFamily T M v)
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:174:13: don't know how to synthesize implicit argument `ι`
+  @LinearIndependent (Fin (?m.29 T M v)) (ZMod 2) (BinaryVector n ⧸ M) (actualGreedyQuotientOrbitFamily T M v)
+    Field.toSemifield.toDivisionSemiring.toSemiring (Submodule.Quotient.addCommMonoid M) (Submodule.Quotient.module M)
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:175:7: don't know how to synthesize implicit argument `s`
+  @actualGreedyQuotientOrbitFamily n (?m.29 T M v) T M v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:177:35: Unknown constant `Submodule.Quotient.mkQ`
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:178:34: declaration uses `sorry`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:187:16: don't know how to synthesize implicit argument `s`
+  @actualGreedyOrbitSpan n (?m.26 T M v hquot) T v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hquot : LinearIndependent (ZMod 2) (actualGreedyQuotientOrbitFamily T M v)
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:185:13: don't know how to synthesize implicit argument `ι`
+  @LinearIndependent (Fin (?m.25 T M v)) (ZMod 2) (BinaryVector n ⧸ M) (actualGreedyQuotientOrbitFamily T M v)
+    Field.toSemifield.toDivisionSemiring.toSemiring (Submodule.Quotient.addCommMonoid M) (Submodule.Quotient.module M)
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:186:7: don't know how to synthesize implicit argument `s`
+  @actualGreedyQuotientOrbitFamily n (?m.25 T M v) T M v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:188:6: Unknown identifier `disjoint_def`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:187:46: unsolved goals
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hquot : LinearIndependent (ZMod 2) (actualGreedyQuotientOrbitFamily T M v)
+⊢ Disjoint M (actualGreedyOrbitSpan T v)
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:208:29: failed to synthesize instance of type class
+  Max Type
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:210:14: Unknown identifier `actualGreedyOrbit_linearIndependent_of_quotient`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:209:39: unsolved goals
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hquot : LinearIndependent (ZMod 2) (actualGreedyQuotientOrbitFamily T M v)
+⊢ sorry = Module.finrank (ZMod 2) ↥M + s
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:230:16: don't know how to synthesize implicit argument `s`
+  @actualGreedyOrbitSpan n (?m.33 T v p hmonic hdeg hroot) T v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdeg : p.natDegree = s
+hroot : (Polynomial.aeval T) p = 0
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:239:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  p.natDegree
+in the target expression
+  ∑ i ∈ Finset.range (s + 1), p.coeff i • T ^ i = 0
+
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdeg : p.natDegree = s
+hroot : ∑ i ∈ Finset.range (s + 1), p.coeff i • T ^ i = 0
+hcoeff : p.coeff s = 1
+⊢ ∑ i ∈ Finset.range s, p.coeff i • T ^ i + T ^ s = 0
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:245:11: Unknown constant `Module.End.add_apply`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:245:33: Unknown constant `Module.End.smul_apply`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:230:45: unsolved goals
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+p : Polynomial (ZMod 2)
+hmonic : p.Monic
+hdeg : p.natDegree = s
+hroot : (Polynomial.aeval T) p = 0
+hcoeff : p.coeff s = 1
+hsum : ∑ i ∈ Finset.range s, p.coeff i • T ^ i + T ^ s = 0
+hvsum : ∑ i ∈ Finset.range s, p.coeff i • (T ^ i) v + (T ^ s) v = 0
+⊢ (T ^ s) v ∈ actualGreedyOrbitSpan T v
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:266:12: don't know how to synthesize implicit argument `s`
+  @actualGreedyOrbitSpan n (?m.32 T v hlast x) T v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hlast : (T ^ s) v ∈ actualGreedyOrbitSpan T v
+x : BinaryVector n
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:265:13: don't know how to synthesize implicit argument `s`
+  @actualGreedyOrbitSpan n (?m.31 T v hlast x) T v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hlast : (T ^ s) v ∈ actualGreedyOrbitSpan T v
+x : BinaryVector n
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:264:25: don't know how to synthesize implicit argument `s`
+  @actualGreedyOrbitSpan n (?m.30 T v) T v
+context:
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:268:8: failed to elaborate eliminator, expected type is not available
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:270:16: Unknown identifier `T`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:270:37: Unknown identifier `T`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:270:42: Unknown identifier `i.val`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:280:2: No goals to be solved
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:303:11: failed to synthesize instance of type class
+  Max Type
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:312:16: Unknown identifier `actualGreedyQuotientOrbit_independent`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:309:70: unsolved goals
+s : ℕ
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+columns : Array (BinaryVector (3 * s))
+p : Polynomial (ZMod 2)
+hs : 1 ≤ s
+hpdeg : p.natDegree = s
+hirr : Irreducible p
+hmonic : p.Monic
+hroot : (Polynomial.aeval T) p = 0
+hT : ∀ x ∈ actualGreedyArrayColumnSubmodule columns, T x ∈ actualGreedyArrayColumnSubmodule columns
+hproper : actualGreedyArrayColumnSubmodule columns ≠ ⊤
+i : Fin (3 * s)
+hselected : actualGreedyArrayFirstUnitOutside? columns = some i
+houtside : actualGreedyArrayUnitVector i ∉ actualGreedyArrayColumnSubmodule columns
+⊢ ∃ i,
+    actualGreedyArrayFirstUnitOutside? columns = some i ∧
+      actualGreedyArrayUnitVector i ∉ actualGreedyArrayColumnSubmodule columns ∧
+        sorry = Module.finrank (ZMod 2) ↥(actualGreedyArrayColumnSubmodule columns) + s ∧
+          ∀ x ∈ actualGreedyArrayColumnSubmodule columns ⊔ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i),
+            T x ∈ actualGreedyArrayColumnSubmodule columns ⊔ actualGreedyOrbitSpan T (actualGreedyArrayUnitVector i)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitStep
