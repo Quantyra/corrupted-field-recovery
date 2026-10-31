@@ -1,0 +1,22 @@
+✖ [1845/1845] Building CorruptedFieldRecovery.RawReductionOperationalRefinement (2.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawReductionOperationalRefinement.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionOperationalRefinement.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawReductionOperationalRefinement.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionOperationalRefinement.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawReductionOperationalRefinement.setup.json --json
+error: CorruptedFieldRecovery/RawReductionOperationalRefinement.lean:18:2: Invalid target: Index in target's type is not a variable (consider using the `cases` tactic instead)
+  { fuel := fuel, current := current }
+error: CorruptedFieldRecovery/RawReductionOperationalRefinement.lean:37:21: Application type mismatch: The argument
+  Eq.symm e₂
+has type
+  (output₂, charge₂) = rawReduceFuelBitCosted modulus degree fuel current
+but is expected to have type
+  (output₁, charge₁) = ?m.26
+in the application
+  Eq.trans e₁ (Eq.symm e₂)
+error: CorruptedFieldRecovery/RawReductionOperationalRefinement.lean:34:45: unsolved goals
+modulus degree fuel current output₁ output₂ charge₁ charge₂ : ℕ
+h₁ : RawReductionMachineExec modulus degree { fuel := fuel, current := current } output₁ charge₁
+h₂ : RawReductionMachineExec modulus degree { fuel := fuel, current := current } output₂ charge₂
+e₁ : rawReduceFuelBitCosted modulus degree fuel current = (output₁, charge₁)
+e₂ : rawReduceFuelBitCosted modulus degree fuel current = (output₂, charge₂)
+⊢ output₁ = output₂ ∧ charge₁ = charge₂
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawReductionOperationalRefinement
