@@ -1,0 +1,6 @@
+{
+  "stage": "capture encoding preflight",
+  "failure": "Target source UTF-8 BOM",
+  "never_launched": true,
+  "author_notified": true
+}
