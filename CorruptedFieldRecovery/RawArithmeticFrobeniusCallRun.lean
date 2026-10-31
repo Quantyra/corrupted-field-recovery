@@ -61,20 +61,45 @@ theorem rawCandidateFrobeniusCallRun_map_stack_eq_nestedTrace
 
 /-- Each event in the ordered schedule refines to a state in the accepted
 abstract call-tree reachability relation. -/
+theorem rawCandidateFrobeniusCallRun_mem_reachable_exact
+    (modulus d x : Nat) {state : RawArithmeticCallState}
+    (hstate : state ∈ rawCandidateFrobeniusCallRun modulus d x) :
+    RawCandidateFrobeniusCallReachable modulus d x state := by
+  induction d generalizing x state with
+  | zero =>
+      simp only [rawCandidateFrobeniusCallRun, List.mem_singleton] at hstate
+      subst state
+      exact RawCandidateFrobeniusCallReachable.base x
+  | succ d ih =>
+      let rem := rawPolynomialRemainderBitCosted
+        (rawPolyMulBitCosted x x).1 modulus
+      simp only [rawCandidateFrobeniusCallRun, List.mem_append] at hstate
+      rcases hstate with hbeforeChild | hchild
+      · rcases hbeforeChild with hbeforeReduce | hreduce
+        · rcases hbeforeReduce with hroot | hmul
+          · simp only [List.mem_singleton] at hroot
+            subst state
+            exact RawCandidateFrobeniusCallReachable.parent d x
+          · simp only [List.mem_map] at hmul
+            rcases hmul with ⟨stack, hstack, rfl⟩
+            exact RawCandidateFrobeniusCallReachable.multiplyPrefix
+              d x stack hstack
+        · simp only [List.mem_map] at hreduce
+          rcases hreduce with ⟨stack, hstack, rfl⟩
+          exact RawCandidateFrobeniusCallReachable.reducePrefix
+            d x stack hstack
+      · simp only [List.mem_map] at hchild
+        rcases hchild with ⟨childState, hchild, rfl⟩
+        exact RawCandidateFrobeniusCallReachable.child d x childState
+          (ih rem.1 hchild)
+
 theorem rawCandidateFrobeniusCallRun_mem_reachable
     (modulus d x : Nat) {state : RawArithmeticCallState}
     (hstate : state ∈ rawCandidateFrobeniusCallRun modulus d x) :
     ∃ phase, RawCandidateFrobeniusCallReachable modulus d x
       ⟨phase, state.stack⟩ := by
-  have hstack : state.stack ∈
-      rawCandidateFrobeniusNestedStackTrace modulus d x := by
-    have hmap : state.stack ∈
-        (rawCandidateFrobeniusCallRun modulus d x).map
-          RawArithmeticCallState.stack :=
-      List.mem_map.mpr ⟨state, hstate, rfl⟩
-    rw [rawCandidateFrobeniusCallRun_map_stack_eq_nestedTrace] at hmap
-    exact hmap
-  exact (rawCandidateFrobeniusCallReachable_iff_trace modulus d x state.stack).2 hstack
+  exact ⟨state.phase,
+    rawCandidateFrobeniusCallRun_mem_reachable_exact modulus d x hstate⟩
 
 /-- Ordered abstract run events inherit the declared-cost stack-depth bound.
 This is call-event depth, not machine instruction count. -/

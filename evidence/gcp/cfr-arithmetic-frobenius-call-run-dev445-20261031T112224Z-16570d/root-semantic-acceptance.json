@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts same-phase-and-stack abstract call-tree reachability for each custom call-run member, plus previously accepted projection and depth results. No adjacency, primitive execution or Lean runtime refinement.",
+    "source":  "CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.lean",
+    "accepted":  true,
+    "sha256":  "8ed08d64e5fcbfb22e9aff06cd4b4e443f0e82e68c9477c7aa58a316de628041",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}
