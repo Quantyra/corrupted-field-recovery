@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitRun.lean",
+  "sha256": "e453084656f03f57924c35ee5a48add52f3de6f3d0fdd800905e6ab13b289f52",
+  "scope": "Root accepts actual Option three-pass run returns three selections and 3s columns whose span has dimension 3s and T invariance, under s>=1 and a monic irreducible degree-s polynomial annihilating T. General summary retains explicit invariant and budget. No explicit linear independence, basis, inverse, candidate-derived polynomial, full constructor or cost.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

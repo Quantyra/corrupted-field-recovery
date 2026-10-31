@@ -1,0 +1,62 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitRun
+@CorruptedFieldRecovery.actualGreedyArrayOrbitRun : {s : Nat} →
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) →
+    (a : Nat) →
+      (a : Array.{0} (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) →
+        (a : Array.{0} (Fin (HMul.hMul.{0, 0, 0} 3 s))) →
+          Option.{0}
+            (Prod.{0, 0} (Array.{0} (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+              (Array.{0} (Fin (HMul.hMul.{0, 0, 0} 3 s))))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitRun
+'CorruptedFieldRecovery.actualGreedyArrayOrbitRun' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.ActualGreedyArrayOrbitRunSummary
+@CorruptedFieldRecovery.ActualGreedyArrayOrbitRunSummary : {s k : Nat} →
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) →
+    (columns : Array.{0} (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) →
+      (selected : Array.{0} (Fin (HMul.hMul.{0, 0, 0} 3 s))) →
+        (M : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) →
+          (d : Nat) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.ActualGreedyArrayOrbitRunSummary
+'CorruptedFieldRecovery.ActualGreedyArrayOrbitRunSummary' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_summary
+@CorruptedFieldRecovery.actualGreedyArrayOrbitRun_summary : ∀ {s k d : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (columns : Array.{0} (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (selected : Array.{0} (Fin (HMul.hMul.{0, 0, 0} 3 s)))
+  (M : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) (hs : LE.le.{0} 1 s)
+  (p : Polynomial.{0} (ZMod 2)) (hp : Irreducible.{0} p) (hmonic : Polynomial.Monic.{0} p)
+  (hdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0)
+  (hspan : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) M)
+  (hdim : Eq.{1} (Module.finrank.{0, 0} (ZMod 2) ↥M) d)
+  (hT :
+    ∀ (x : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)) (a : Membership.mem.{0, 0} M x),
+      Membership.mem.{0, 0} M (T x))
+  (hbudget : LE.le.{0} (HAdd.hAdd.{0, 0, 0} d (HMul.hMul.{0, 0, 0} k s)) (HMul.hMul.{0, 0, 0} 3 s)),
+  CorruptedFieldRecovery.ActualGreedyArrayOrbitRunSummary T columns selected M d
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_summary
+'CorruptedFieldRecovery.actualGreedyArrayOrbitRun_summary' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass
+@CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass : ∀ {s : Nat} (hs : LE.le.{0} 1 s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (p : Polynomial.{0} (ZMod 2)) (hp : Irreducible.{0} p) (hmonic : Polynomial.Monic.{0} p)
+  (hdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0),
+  ∃ outColumns outSelected outSpan,
+    And
+      (Eq.{1}
+        (CorruptedFieldRecovery.actualGreedyArrayOrbitRun T 3 (List.toArray.{0} List.nil.{0})
+          (List.toArray.{0} List.nil.{0}))
+        (Option.some.{0} (Prod.mk.{0, 0} outColumns outSelected)))
+      (And (Eq.{1} (Array.size.{0} outSelected) 3)
+        (And (Eq.{1} (Array.size.{0} outColumns) (HMul.hMul.{0, 0, 0} 3 s))
+          (And (Eq.{1} (Module.finrank.{0, 0} (ZMod 2) ↥outSpan) (HMul.hMul.{0, 0, 0} 3 s))
+            (And (Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule outColumns) outSpan)
+              (∀ (x : CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))
+                (a : Membership.mem.{0, 0} outSpan x), Membership.mem.{0, 0} outSpan (T x))))))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass
+'CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
