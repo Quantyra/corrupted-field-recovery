@@ -1,0 +1,96 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianArrayView
+@CorruptedFieldRecovery.actualBalanceGaussianArrayView : {m n : Nat} →
+  (cells : Array.{0} (Array.{0} (ZMod 2))) → Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianArrayView
+'CorruptedFieldRecovery.actualBalanceGaussianArrayView' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayView_eq_rawMatrix
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayView_eq_rawMatrix : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+      (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix (CorruptedFieldRecovery.decodeRawArray raw)
+        tape))
+    (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayView_eq_rawMatrix
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayView_eq_rawMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan : {s : Nat} →
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) →
+    (tape : CorruptedFieldRecovery.FiveWordTape s) →
+      Prod.{0, 0}
+        (Matrix.{0, 0, 0}
+          (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))
+          (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) (ZMod 2))
+        (List.{0}
+          (Prod.{0, 0}
+            (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))
+            (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s)))))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_eq_rawScan
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_eq_rawScan : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape)
+    (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_eq_rawScan
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_eq_rawScan' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_reconstruct
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_reconstruct : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (x : (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) → ZMod 2)
+  (a :
+    Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).1 x) 0),
+  Eq.{1} x
+    (∑ free,
+      HSMul.hSMul.{0, 0, 0} (x ↑free)
+        (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily
+          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).1
+          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2 free))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_reconstruct
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_reconstruct' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_balanced
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_balanced : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (free :
+    CorruptedFieldRecovery.balanceGaussianFreeIndex
+      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2),
+  CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.decodeRawArray raw) tape
+    (CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates
+      (CorruptedFieldRecovery.balanceGaussianFreeKernelCandidate
+        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).1
+        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2 ↑free))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_balanced
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_balanced' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_check_true
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_check_true : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (hsize :
+    Eq.{1} (Array.size.{0} raw)
+      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))
+        (HMul.hMul.{0, 0, 0} 3 s)))
+  (free :
+    CorruptedFieldRecovery.balanceGaussianFreeIndex
+      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck raw tape
+      (CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates
+        (CorruptedFieldRecovery.balanceGaussianFreeKernelCandidate
+          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).1
+          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2 ↑free)))
+    Bool.true
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_check_true
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_check_true' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

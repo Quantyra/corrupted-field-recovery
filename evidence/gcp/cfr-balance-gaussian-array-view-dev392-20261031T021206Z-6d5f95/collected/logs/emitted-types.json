@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayView": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayView : {m n : Nat} \u2192\n  (cells : Array.{0} (Array.{0} (ZMod 2))) \u2192 Matrix.{0, 0, 0} (Fin m) (Fin n) (ZMod 2)\n",
+    "sha256": "d86d87a08967b70f5622e1a99332546dc963b07774f45c8a2fc8b2ff5ec742e1"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayView_eq_rawMatrix": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayView_eq_rawMatrix : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n      (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix (CorruptedFieldRecovery.decodeRawArray raw)\n        tape))\n    (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape)\n",
+    "sha256": "075bd67ac426341c0d2ced0d170fbb4a99c34c0dbd83c95cabc4592e458727cd"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan : {s : Nat} \u2192\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) \u2192\n    (tape : CorruptedFieldRecovery.FiveWordTape s) \u2192\n      Prod.{0, 0}\n        (Matrix.{0, 0, 0}\n          (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))\n          (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) (ZMod 2))\n        (List.{0}\n          (Prod.{0, 0}\n            (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))\n            (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s)))))\n",
+    "sha256": "3807961680e0cab208503aea78ef5ae3d85d73d7a923f6b0f6f4bf1f8545ca74"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_eq_rawScan": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_eq_rawScan : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape)\n    (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape)\n",
+    "sha256": "2fdc4444e9cf0c3ca7062a95254814d5b2537768069dc182625db6aa93f89bcb"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_reconstruct": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan_reconstruct : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (x : (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) \u2192 ZMod 2)\n  (a :\n    Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).1 x) 0),\n  Eq.{1} x\n    (\u2211 free,\n      HSMul.hSMul.{0, 0, 0} (x \u2191free)\n        (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily\n          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).1\n          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2 free))\n",
+    "sha256": "21af3702f89a7f7dca4638f026e096afaa916baeaceaec36c95994a17946b5d8"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_balanced": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_balanced : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (free :\n    CorruptedFieldRecovery.balanceGaussianFreeIndex\n      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2),\n  CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.decodeRawArray raw) tape\n    (CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates\n      (CorruptedFieldRecovery.balanceGaussianFreeKernelCandidate\n        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).1\n        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2 \u2191free))\n",
+    "sha256": "8e1526721b352864d4b16328f6ca1da1249fb09798355ddbce1e316fa5768406"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_check_true": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayCandidate_check_true : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (hsize :\n    Eq.{1} (Array.size.{0} raw)\n      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))\n        (HMul.hMul.{0, 0, 0} 3 s)))\n  (free :\n    CorruptedFieldRecovery.balanceGaussianFreeIndex\n      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck raw tape\n      (CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates\n        (CorruptedFieldRecovery.balanceGaussianFreeKernelCandidate\n          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).1\n          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayScan raw tape).2 \u2191free)))\n    Bool.true\n",
+    "sha256": "9af1e855fe665604bc0addd425b811ee167261d418e8ff5c920243b635d1ddcf"
+  }
+}

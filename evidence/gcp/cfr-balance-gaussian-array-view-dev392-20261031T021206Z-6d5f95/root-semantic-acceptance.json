@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean",
+  "sha256": "10ff74cfadada24aa184daae79260a68211ee60cbd7ef9a4d757ffd1e9f40992",
+  "scope": "Root accepts total nested-array matrix view, serialized view=raw matrix, existing Matrix scan over view=raw scan, final-scan-kernel reconstruction, candidate physical balance and Boolean check under raw.size=(3s)^3. No nested-array row-update execution, actual machine cost or full recovery follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}
