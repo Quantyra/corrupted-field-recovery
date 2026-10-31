@@ -1,0 +1,31 @@
+{
+  "status": "never-submitted preservation-only",
+  "sources": {
+    "CorruptedFieldRecovery/RawBinaryWordReduction.lean": "f873678cdfcb8d52a04e14212c995243d3d363b16aeb045fec5fb3c2b7db391c",
+    "CorruptedFieldRecovery/S010BalanceGaussianAffineArrayOutputRefinement.lean": "0717565fa1b7f6f4989995e9591a9a798f87e2e8a5ac975ad9bde60d6f28afc0"
+  },
+  "archive_sha256": "aae24a81560df1be07ff307ad4de148f007f336775f70c25f049bf4e209cc58f",
+  "utf8_no_bom_verified": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/RawBinaryWordXor.lean": "0f9ac329cc334d9ba65d625af53bb7c73255739d8c8690d465ffee906d253ee8",
+    "CorruptedFieldRecovery/S010BalanceGaussianAffinePowerSolve.lean": "6b02d8a0e212806898609fa8c9aabf8ef99e56f518a9500cd1938e5224536fdd"
+  },
+  "dependency_status": {
+    "RawBinaryWordXor": "uncompiled0F9AC",
+    "AffinePowerSolve": "uncompiled6B02 preservation draft"
+  },
+  "scope": {
+    "word_reducer": "Corrected distinct successor to encoding-rejected49FFC4. Uncompiled functional threshold/leading-one/shift/XOR fuel refinement; no charged traversal/allocation/conversion/control storage/total live-space result.",
+    "affine_refinement": "Uncompiled intended equality of selector/recurrence outputs: array scan final matrix view and pivot transcript feed existing ordered free-column list and matrix candidate-vector predicate. This is matrix-view search, not a separate nested-array implementation of candidate-vector arithmetic, nor resource bound."
+  },
+  "static_source_review": {
+    "kind": "Read-only full source inspection, no Lean validation",
+    "issues": [
+      "RecurrenceValue applies candidate vector at Fin.last s then applies resulting scalar to Fin.castSucc j; appears to contain an extra application.",
+      "Direct equality between Options indexed by array and matrix pivot-dependent free-index subtype may require explicit dependent transport; rewrite/cases remains unaudited."
+    ],
+    "claims": "No selector/recurrence refinement accepted; exact bytes preserved for later diagnostics."
+  },
+  "no_lean_build_audit_cloud_or_stop_operation": true,
+  "prior_archives_unchanged": true
+}
