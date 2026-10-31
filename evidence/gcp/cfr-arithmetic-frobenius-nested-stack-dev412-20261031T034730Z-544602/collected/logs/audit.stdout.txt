@@ -1,0 +1,12 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_registers_lt
+@CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_registers_lt : ∀ {modulus d x W : Nat}
+  (hmod : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LT.lt.{0} 0 W)
+  (hd : LE.le.{0} d W) (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)) (stack : CorruptedFieldRecovery.RawArithmeticStack)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace modulus d x) stack)
+  (frame : CorruptedFieldRecovery.RawArithmeticFrame) (a : Membership.mem.{0, 0} stack frame) (word : Nat)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),
+  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (CorruptedFieldRecovery.rawArithmeticParameterWidth (HMul.hMul.{0, 0, 0} 2 W)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_registers_lt
+'CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_registers_lt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

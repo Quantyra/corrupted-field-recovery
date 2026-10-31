@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_registers_lt": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_registers_lt : \u2200 {modulus d x W : Nat}\n  (hmod : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LT.lt.{0} 0 W)\n  (hd : LE.le.{0} d W) (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)) (stack : CorruptedFieldRecovery.RawArithmeticStack)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace modulus d x) stack)\n  (frame : CorruptedFieldRecovery.RawArithmeticFrame) (a : Membership.mem.{0, 0} stack frame) (word : Nat)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (CorruptedFieldRecovery.rawArithmeticParameterWidth (HMul.hMul.{0, 0, 0} 2 W)))\n",
+    "sha256": "1fa7e8e8b7a641f7e3ff760b8e81782ce657912e311f64afb62f75973e0e84c4"
+  }
+}

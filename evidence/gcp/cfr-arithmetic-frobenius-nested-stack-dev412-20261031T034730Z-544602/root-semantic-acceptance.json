@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts custom nested Frobenius stack register-word width under modulus\u003e1, modulus and x\u003c2^W, W\u003e0, d\u003c=W. No evaluator reachability, stack length, actual heap or whole computation space.",
+    "source":  "CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean",
+    "accepted":  true,
+    "sha256":  "120dddcf3de9154228637e5dc9a35bb11eead3c45882f06466ebc5cf309415c4",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}
