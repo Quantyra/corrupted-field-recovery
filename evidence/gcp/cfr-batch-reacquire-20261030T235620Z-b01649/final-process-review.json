@@ -1,0 +1,9 @@
+﻿{
+    "campaign_lock_free":  true,
+    "active_lean_lake_absent":  true,
+    "stdout_sha256":  "BF23013962A349C1243C65E821E8B2DC0E87B1EA34F9FC33AD531BAB4EF77C30",
+    "full_inventory_reviewed":  true,
+    "unrelated_workload_absent":  true,
+    "utc":  "2026-10-31T02:51:36.6315546Z",
+    "stdout":  "evidence\\gcp\\cfr-batch-reacquire-20261030T235620Z-b01649\\cfr-final-full-process-guard-20261031T024833Z-d5e641.stdout.txt"
+}
