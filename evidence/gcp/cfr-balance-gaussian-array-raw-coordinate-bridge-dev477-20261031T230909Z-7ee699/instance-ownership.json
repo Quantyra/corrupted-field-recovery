@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-balance-gaussian-array-raw-coordinate-bridge-dev477-20261031T230909Z-7ee699",
+  "utc": "2026-10-31T23:09:26.322101+00:00"
+}

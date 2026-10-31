@@ -1,0 +1,91 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySquareCoordinateMatrices_two_sided
+@CorruptedFieldRecovery.actualGreedyArraySquareCoordinateMatrices_two_sided : ∀ {m : Nat}
+  (columns : Array.{0} (CorruptedFieldRecovery.BinaryVector m)) (hsize : Eq.{1} (Array.size.{0} columns) m)
+  (hleft :
+    Eq.{1}
+      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySpanMatrix columns)
+        (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix columns))
+      1)
+  (hright :
+    Eq.{1}
+      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix columns)
+        (CorruptedFieldRecovery.actualGreedyArraySpanMatrix columns))
+      1),
+  And
+    (Eq.{1}
+      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySquareForward columns hsize)
+        (CorruptedFieldRecovery.actualGreedyArraySquareInverse columns hsize))
+      1)
+    (Eq.{1}
+      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySquareInverse columns hsize)
+        (CorruptedFieldRecovery.actualGreedyArraySquareForward columns hsize))
+      1)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySquareCoordinateMatrices_two_sided
+'CorruptedFieldRecovery.actualGreedyArraySquareCoordinateMatrices_two_sided' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_size
+@CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_size : ∀ {n : Nat}
+  (A : Matrix.{0, 0, 0} (Fin n) (Fin n) (ZMod 2)),
+  Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix A)) (HMul.hMul.{0, 0, 0} n n)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_size
+'CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_size' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_entry
+@CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_entry : ∀ {n : Nat}
+  (A : Matrix.{0, 0, 0} (Fin n) (Fin n) (ZMod 2)) (i j : Fin n),
+  Eq.{1}
+    (GetElem?.getElem!.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix A)
+      (CorruptedFieldRecovery.rawCoordinateMatrixOffset n i j))
+    (A i j)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_entry
+'CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_entry' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCoordinateMatrixMap_actualGreedyArraySerialize_eq_mulVec
+@CorruptedFieldRecovery.rawCoordinateMatrixMap_actualGreedyArraySerialize_eq_mulVec : ∀ {n : Nat}
+  (A : Matrix.{0, 0, 0} (Fin n) (Fin n) (ZMod 2)) (x : CorruptedFieldRecovery.BinaryVector n),
+  Eq.{1}
+    ((CorruptedFieldRecovery.rawCoordinateMatrixMap (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix A))
+      x)
+    (Matrix.mulVec.{0, 0, 0} A x)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCoordinateMatrixMap_actualGreedyArraySerialize_eq_mulVec
+'CorruptedFieldRecovery.rawCoordinateMatrixMap_actualGreedyArraySerialize_eq_mulVec' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCoordinateMatrixCheck_true_of_actual_array_two_sided
+@CorruptedFieldRecovery.rawCoordinateMatrixCheck_true_of_actual_array_two_sided : ∀ {n : Nat}
+  (A B : Matrix.{0, 0, 0} (Fin n) (Fin n) (ZMod 2)) (hAB : Eq.{1} (HMul.hMul.{0, 0, 0} A B) 1)
+  (hBA : Eq.{1} (HMul.hMul.{0, 0, 0} B A) 1),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawCoordinateMatrixCheck (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix A)
+      (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix B))
+    Bool.true
+CFR_TYPE_END:CorruptedFieldRecovery.rawCoordinateMatrixCheck_true_of_actual_array_two_sided
+'CorruptedFieldRecovery.rawCoordinateMatrixCheck_true_of_actual_array_two_sided' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_rawCoordinateCheck
+@CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_rawCoordinateCheck : ∀ {s : Nat} (hs : LE.le.{0} 1 s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (p : Polynomial.{0} (ZMod 2)) (hp : Irreducible.{0} p) (hmonic : Polynomial.Monic.{0} p)
+  (hdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0),
+  ∃ outColumns outSelected,
+    And
+      (Eq.{1}
+        (CorruptedFieldRecovery.actualGreedyArrayOrbitRun T 3 (List.toArray.{0} List.nil.{0})
+          (List.toArray.{0} List.nil.{0}))
+        (Option.some.{0} (Prod.mk.{0, 0} outColumns outSelected)))
+      (∃ (houtColumnsSize : Eq.{1} (Array.size.{0} outColumns) (HMul.hMul.{0, 0, 0} 3 s)),
+        Eq.{1}
+          (CorruptedFieldRecovery.rawCoordinateMatrixCheck
+            (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix
+              (CorruptedFieldRecovery.actualGreedyArraySquareForward outColumns houtColumnsSize))
+            (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix
+              (CorruptedFieldRecovery.actualGreedyArraySquareInverse outColumns houtColumnsSize)))
+          Bool.true)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_rawCoordinateCheck
+'CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_rawCoordinateCheck' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

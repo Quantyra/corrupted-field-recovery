@@ -1,0 +1,106 @@
+✖ [3032/3032] Building CorruptedFieldRecovery.S010BalanceGaussianArrayRawCoordinateBridge (3.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:80:12: Type mismatch
+  Equiv.injective e.symm
+has type
+  Function.Injective ⇑e.symm
+but is expected to have type
+  e.symm row = e.symm col → row = col
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:83:8: `simp` made no progress
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:104:39: unexpected token '!'; expected ':=', 'where' or '|'
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:103:4: Function expected at
+  actualGreedyArraySerializeSquareMatrix A
+but this term has type
+  RawCoordinateMatrix
+
+Note: Expected a function because this term is being applied to the argument
+  [rawCoordinateMatrixOffset n i j]
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:123:63: unsolved goals
+case h
+n : ℕ
+A : Matrix (Fin n) (Fin n) (ZMod 2)
+x : BinaryVector n
+i : Fin n
+⊢ ∑ j, (actualGreedyArraySerializeSquareMatrix A)[rawCoordinateMatrixOffset n i j]! * x j = ∑ x_1, A i x_1 * x x_1
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:126:4: This simp argument is unused:
+  actualGreedyArraySerializeSquareMatrix_entry
+
+Hint: Omit it from the simp argument list.
+  simp [rawCoordinateMatrixMap, Matrix.mulVec, dotProduct,̵
+  ̵ ̵ ̵ ̵ ̵a̵c̵t̵u̵a̵l̵G̵r̵e̵e̵d̵y̵A̵r̵r̵a̵y̵S̵e̵r̵i̵a̵l̵i̵z̵e̵S̵q̵u̵a̵r̵e̵M̵a̵t̵r̵i̵x̵_̵e̵n̵t̵r̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:133:4: don't know how to synthesize implicit argument `n`
+  @rawCoordinateMatrixCheck (?m.23 A B hAB hBA) (actualGreedyArraySerializeSquareMatrix A)
+    (actualGreedyArraySerializeSquareMatrix B)
+context:
+n : ℕ
+A B : Matrix (Fin n) (Fin n) (ZMod 2)
+hAB : A * B = 1
+hBA : B * A = 1
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:135:59: unsolved goals
+n : ℕ
+A B : Matrix (Fin n) (Fin n) (ZMod 2)
+hAB : A * B = 1
+hBA : B * A = 1
+hleft :
+  ∀ (i : Fin n),
+    (rawCoordinateMatrixMap (actualGreedyArraySerializeSquareMatrix B))
+        ((rawCoordinateMatrixMap (actualGreedyArraySerializeSquareMatrix A)) (rawCoordinateUnitVector i)) =
+      rawCoordinateUnitVector i
+hright :
+  ∀ (i : Fin n),
+    (rawCoordinateMatrixMap (actualGreedyArraySerializeSquareMatrix A))
+        ((rawCoordinateMatrixMap (actualGreedyArraySerializeSquareMatrix B)) (rawCoordinateUnitVector i)) =
+      rawCoordinateUnitVector i
+⊢ (n * n = ?m.23 A B hAB hBA * ?m.23 A B hAB hBA ∧
+      ∀ (i : Fin (?m.23 A B hAB hBA)),
+        (rawCoordinateMatrixMap (actualGreedyArraySerializeSquareMatrix B))
+            ((rawCoordinateMatrixMap (actualGreedyArraySerializeSquareMatrix A)) (rawCoordinateUnitVector i)) =
+          rawCoordinateUnitVector i) ∧
+    ∀ (i : Fin (?m.23 A B hAB hBA)),
+      (rawCoordinateMatrixMap (actualGreedyArraySerializeSquareMatrix A))
+          ((rawCoordinateMatrixMap (actualGreedyArraySerializeSquareMatrix B)) (rawCoordinateUnitVector i)) =
+        rawCoordinateUnitVector i
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:169:4: This simp argument is unused:
+  hleft
+
+Hint: Omit it from the simp argument list.
+  simp [rawCoordinateMatrixCheck, actualGreedyArraySerializeSquareMatrix_size,
+  ̵  ̵ ̵ ̵hl̵e̵f̵t̵,̵ ̵h̵right]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:169:11: This simp argument is unused:
+  hright
+
+Hint: Omit it from the simp argument list.
+  simp [rawCoordinateMatrixCheck, actualGreedyArraySerializeSquareMatrix_size,
+  ̵  ̵ ̵ ̵hleft,̵ ̵h̵r̵i̵g̵h̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:184:6: don't know how to synthesize implicit argument `n`
+  @rawCoordinateMatrixCheck (?m.74 hs T p hp hmonic hdeg hroot outColumns outSelected houtColumnsSize)
+    (actualGreedyArraySerializeSquareMatrix (actualGreedyArraySquareForward outColumns houtColumnsSize))
+    (actualGreedyArraySerializeSquareMatrix (actualGreedyArraySquareInverse outColumns houtColumnsSize))
+context:
+s : ℕ
+hs : 1 ≤ s
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+p : Polynomial (ZMod 2)
+hp : Irreducible p
+hmonic : p.Monic
+hdeg : p.natDegree = s
+hroot : (Polynomial.aeval T) p = 0
+outColumns : Array (BinaryVector (3 * s))
+outSelected : Array (Fin (3 * s))
+houtColumnsSize : outColumns.size = 3 * s
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean:195:8: Unknown identifier `rawCoordinateMatrixCheck_true_of_actual_array_two_sided`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayRawCoordinateBridge

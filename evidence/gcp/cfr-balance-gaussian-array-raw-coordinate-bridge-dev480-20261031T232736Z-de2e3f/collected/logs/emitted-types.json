@@ -1,0 +1,26 @@
+{
+  "CorruptedFieldRecovery.actualGreedyArraySquareCoordinateMatrices_two_sided": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySquareCoordinateMatrices_two_sided : \u2200 {m : Nat}\n  (columns : Array.{0} (CorruptedFieldRecovery.BinaryVector m)) (hsize : Eq.{1} (Array.size.{0} columns) m)\n  (hleft :\n    Eq.{1}\n      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySpanMatrix columns)\n        (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix columns))\n      1)\n  (hright :\n    Eq.{1}\n      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix columns)\n        (CorruptedFieldRecovery.actualGreedyArraySpanMatrix columns))\n      1),\n  And\n    (Eq.{1}\n      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySquareForward columns hsize)\n        (CorruptedFieldRecovery.actualGreedyArraySquareInverse columns hsize))\n      1)\n    (Eq.{1}\n      (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySquareInverse columns hsize)\n        (CorruptedFieldRecovery.actualGreedyArraySquareForward columns hsize))\n      1)\n",
+    "sha256": "c6253a61623113ca884b5b31ce73e24efbf924a1f521dd756ab2116c69c2ff96"
+  },
+  "CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_size": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_size : \u2200 {n : Nat}\n  (A : Matrix.{0, 0, 0} (Fin n) (Fin n) (ZMod 2)),\n  Eq.{1} (Array.size.{0} (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix A)) (HMul.hMul.{0, 0, 0} n n)\n",
+    "sha256": "40a4546f6ac84cd7d5c3282025175759e6d26c0d091e929468346901279dd2db"
+  },
+  "CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_entry": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix_entry : \u2200 {n : Nat}\n  (A : Matrix.{0, 0, 0} (Fin n) (Fin n) (ZMod 2)) (i j : Fin n),\n  Eq.{1}\n    (GetElem?.getElem!.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix A)\n      (CorruptedFieldRecovery.rawCoordinateMatrixOffset n i j))\n    (A i j)\n",
+    "sha256": "2237685530fed10638236c81e46e7e0581da2ac00b4234540808329941fcb021"
+  },
+  "CorruptedFieldRecovery.rawCoordinateMatrixMap_actualGreedyArraySerialize_eq_mulVec": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCoordinateMatrixMap_actualGreedyArraySerialize_eq_mulVec : \u2200 {n : Nat}\n  (A : Matrix.{0, 0, 0} (Fin n) (Fin n) (ZMod 2)) (x : CorruptedFieldRecovery.BinaryVector n),\n  Eq.{1}\n    ((CorruptedFieldRecovery.rawCoordinateMatrixMap (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix A))\n      x)\n    (Matrix.mulVec.{0, 0, 0} A x)\n",
+    "sha256": "087b0ecb3364310172c258e6968669c1c427859d75b09c59992a373ba65c5d45"
+  },
+  "CorruptedFieldRecovery.rawCoordinateMatrixCheck_true_of_actual_array_two_sided": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCoordinateMatrixCheck_true_of_actual_array_two_sided : \u2200 {n : Nat}\n  (A B : Matrix.{0, 0, 0} (Fin n) (Fin n) (ZMod 2)) (hAB : Eq.{1} (HMul.hMul.{0, 0, 0} A B) 1)\n  (hBA : Eq.{1} (HMul.hMul.{0, 0, 0} B A) 1),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawCoordinateMatrixCheck (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix A)\n      (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix B))\n    Bool.true\n",
+    "sha256": "fe670c2622c7b27f60deba8289d02c3feb0e4c40231b93f9463d2df357802806"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_rawCoordinateCheck": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_rawCoordinateCheck : \u2200 {s : Nat} (hs : LE.le.{0} 1 s)\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n  (p : Polynomial.{0} (ZMod 2)) (hp : Irreducible.{0} p) (hmonic : Polynomial.Monic.{0} p)\n  (hdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0),\n  \u2203 outColumns outSelected,\n    And\n      (Eq.{1}\n        (CorruptedFieldRecovery.actualGreedyArrayOrbitRun T 3 (List.toArray.{0} List.nil.{0})\n          (List.toArray.{0} List.nil.{0}))\n        (Option.some.{0} (Prod.mk.{0, 0} outColumns outSelected)))\n      (\u2203 (houtColumnsSize : Eq.{1} (Array.size.{0} outColumns) (HMul.hMul.{0, 0, 0} 3 s)),\n        Eq.{1}\n          (CorruptedFieldRecovery.rawCoordinateMatrixCheck\n            (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix\n              (CorruptedFieldRecovery.actualGreedyArraySquareForward outColumns houtColumnsSize))\n            (CorruptedFieldRecovery.actualGreedyArraySerializeSquareMatrix\n              (CorruptedFieldRecovery.actualGreedyArraySquareInverse outColumns houtColumnsSize)))\n          Bool.true)\n",
+    "sha256": "9613f624ea57463752b2da2c576af6e12102fcafb5255a662d1f12d0e2a74433"
+  }
+}

@@ -3,3 +3,4 @@
 *.png binary
 evidence/gcp/** -text
 CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed2.lean -text
+CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean -text
