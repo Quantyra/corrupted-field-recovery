@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticTraceSpaceBounds.lean",
+  "sha256": "672d575f3aa356da75ea4de061f3392d95682ce8d725d58805a257f70c2bd913",
+  "scope": "Root accepts abstract stack-live-bit bounds for generated GCD trace under W/input width hypotheses and generated Frobenius trace under nonzero modulus,width,d<=W hypotheses; Frobenius trace length<=d+1 all inputs. No nested execution, actual evaluator heap/stack reachability or total workspace follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}
