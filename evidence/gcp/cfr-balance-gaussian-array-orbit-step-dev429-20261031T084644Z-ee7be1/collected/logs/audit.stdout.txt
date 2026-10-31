@@ -1,0 +1,145 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyInvariant_aeval_mem
+@CorruptedFieldRecovery.actualGreedyInvariant_aeval_mem : ∀ {n : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (M : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (hT : ∀ (x : CorruptedFieldRecovery.BinaryVector n) (a : Membership.mem.{0, 0} M x), Membership.mem.{0, 0} M (T x))
+  (x : CorruptedFieldRecovery.BinaryVector n) (hx : Membership.mem.{0, 0} M x) (q : Polynomial.{0} (ZMod 2)),
+  Membership.mem.{0, 0} M (((Polynomial.aeval.{0, 0} T) q) x)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyInvariant_aeval_mem
+'CorruptedFieldRecovery.actualGreedyInvariant_aeval_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyBezout_forces_mem
+@CorruptedFieldRecovery.actualGreedyBezout_forces_mem : ∀ {n : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (M : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (hT : ∀ (x : CorruptedFieldRecovery.BinaryVector n) (a : Membership.mem.{0, 0} M x), Membership.mem.{0, 0} M (T x))
+  (v : CorruptedFieldRecovery.BinaryVector n) (hv : v ∉ M) (a b q p : Polynomial.{0} (ZMod 2))
+  (hbezout : Eq.{1} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} a q) (HMul.hMul.{0, 0, 0} b p)) 1)
+  (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0)
+  (hqv : Membership.mem.{0, 0} M (((Polynomial.aeval.{0, 0} T) q) v)), False
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyBezout_forces_mem
+'CorruptedFieldRecovery.actualGreedyBezout_forces_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyLowerDegree_bezout
+@CorruptedFieldRecovery.actualGreedyLowerDegree_bezout : ∀ {p q : Polynomial.{0} (ZMod 2)} {s : Nat}
+  (hirr : Irreducible.{0} p) (hpdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hqne : Ne.{1} q 0)
+  (hqdeg : LT.lt.{0} (Polynomial.natDegree.{0} q) s),
+  ∃ a b, Eq.{1} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} a q) (HMul.hMul.{0, 0, 0} b p)) 1
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyLowerDegree_bezout
+'CorruptedFieldRecovery.actualGreedyLowerDegree_bezout' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyQuotientOrbit_independent
+@CorruptedFieldRecovery.actualGreedyQuotientOrbit_independent : ∀ {n s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (M : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n)
+  (p : Polynomial.{0} (ZMod 2)) (hs : LE.le.{0} 1 s) (hpdeg : Eq.{1} (Polynomial.natDegree.{0} p) s)
+  (hirr : Irreducible.{0} p) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0)
+  (hT : ∀ (x : CorruptedFieldRecovery.BinaryVector n) (a : Membership.mem.{0, 0} M x), Membership.mem.{0, 0} M (T x))
+  (hv : v ∉ M),
+  And (LinearIndependent.{0, 0, 0} (ZMod 2) (CorruptedFieldRecovery.actualGreedyQuotientOrbitFamily T M v))
+    (Eq.{1}
+      (Module.finrank.{0, 0} (ZMod 2)
+        ↥(Submodule.span.{0, 0} (ZMod 2)
+            (Set.range.{0, 1} (CorruptedFieldRecovery.actualGreedyQuotientOrbitFamily T M v))))
+      s)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyQuotientOrbit_independent
+'CorruptedFieldRecovery.actualGreedyQuotientOrbit_independent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyOrbit_linearIndependent_of_quotient
+@CorruptedFieldRecovery.actualGreedyOrbit_linearIndependent_of_quotient : ∀ {n s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (M : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n)
+  (hquot : LinearIndependent.{0, 0, 0} (ZMod 2) (CorruptedFieldRecovery.actualGreedyQuotientOrbitFamily T M v)),
+  LinearIndependent.{0, 0, 0} (ZMod 2) (CorruptedFieldRecovery.actualGreedyOrbitFamily T v)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyOrbit_linearIndependent_of_quotient
+'CorruptedFieldRecovery.actualGreedyOrbit_linearIndependent_of_quotient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyOrbitSpan_disjoint_of_quotient
+@CorruptedFieldRecovery.actualGreedyOrbitSpan_disjoint_of_quotient : ∀ {n s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (M : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n)
+  (hquot : LinearIndependent.{0, 0, 0} (ZMod 2) (CorruptedFieldRecovery.actualGreedyQuotientOrbitFamily T M v)),
+  Disjoint.{0} M (CorruptedFieldRecovery.actualGreedyOrbitSpan T v)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyOrbitSpan_disjoint_of_quotient
+'CorruptedFieldRecovery.actualGreedyOrbitSpan_disjoint_of_quotient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyOrbitAppend_finrank
+@CorruptedFieldRecovery.actualGreedyOrbitAppend_finrank : ∀ {n s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n))
+  (M : Submodule.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n)
+  (hquot : LinearIndependent.{0, 0, 0} (ZMod 2) (CorruptedFieldRecovery.actualGreedyQuotientOrbitFamily T M v)),
+  Eq.{1}
+    (Module.finrank.{0, 0} (ZMod 2)
+      (have this := M ⊔ CorruptedFieldRecovery.actualGreedyOrbitSpan T v;
+      ↥this))
+    (HAdd.hAdd.{0, 0, 0} (Module.finrank.{0, 0} (ZMod 2) ↥M) s)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyOrbitAppend_finrank
+'CorruptedFieldRecovery.actualGreedyOrbitAppend_finrank' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyOrbit_last_mem_span
+@CorruptedFieldRecovery.actualGreedyOrbit_last_mem_span : ∀ {n s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n)
+  (p : Polynomial.{0} (ZMod 2)) (hmonic : Polynomial.Monic.{0} p) (hdeg : Eq.{1} (Polynomial.natDegree.{0} p) s)
+  (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0),
+  Membership.mem.{0, 0} (CorruptedFieldRecovery.actualGreedyOrbitSpan T v) ((HPow.hPow.{0, 0, 0} T s) v)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyOrbit_last_mem_span
+'CorruptedFieldRecovery.actualGreedyOrbit_last_mem_span' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyOrbitSpan_invariant
+@CorruptedFieldRecovery.actualGreedyOrbitSpan_invariant : ∀ {n s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector n)) (v : CorruptedFieldRecovery.BinaryVector n)
+  (hlast : Membership.mem.{0, 0} (CorruptedFieldRecovery.actualGreedyOrbitSpan T v) ((HPow.hPow.{0, 0, 0} T s) v))
+  (x : CorruptedFieldRecovery.BinaryVector n)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.actualGreedyOrbitSpan T v) x),
+  Membership.mem.{0, 0} (CorruptedFieldRecovery.actualGreedyOrbitSpan T v) (T x)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyOrbitSpan_invariant
+'CorruptedFieldRecovery.actualGreedyOrbitSpan_invariant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySelectedOrbit_step
+@CorruptedFieldRecovery.actualGreedyArraySelectedOrbit_step : ∀ {s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (columns : Array.{0} (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) (p : Polynomial.{0} (ZMod 2))
+  (hs : LE.le.{0} 1 s) (hpdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hirr : Irreducible.{0} p)
+  (hmonic : Polynomial.Monic.{0} p) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0)
+  (hT :
+    ∀ (x : (a : Fin (HMul.hMul.{0, 0, 0} 3 s)) → ZMod 2)
+      (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) x),
+      Membership.mem.{0, 0} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) (T x))
+  (hproper : Ne.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}),
+  ∃ i,
+    And (Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? columns) (Option.some.{0} i))
+      (And
+        (CorruptedFieldRecovery.actualGreedyArrayUnitVector i ∉
+          CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns)
+        (And
+          (Eq.{1}
+            (Module.finrank.{0, 0} (ZMod 2)
+              (have this :=
+                CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns ⊔
+                  CorruptedFieldRecovery.actualGreedyOrbitSpan T (CorruptedFieldRecovery.actualGreedyArrayUnitVector i);
+              ↥this))
+            (HAdd.hAdd.{0, 0, 0}
+              (Module.finrank.{0, 0} (ZMod 2) ↥(CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns)) s))
+          (∀ (x : (a : Fin (HMul.hMul.{0, 0, 0} 3 s)) → ZMod 2)
+            (a :
+              Membership.mem.{0, 0}
+                (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns ⊔
+                  CorruptedFieldRecovery.actualGreedyOrbitSpan T (CorruptedFieldRecovery.actualGreedyArrayUnitVector i))
+                x),
+            Membership.mem.{0, 0}
+              (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns ⊔
+                CorruptedFieldRecovery.actualGreedyOrbitSpan T (CorruptedFieldRecovery.actualGreedyArrayUnitVector i))
+              (T x))))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySelectedOrbit_step
+'CorruptedFieldRecovery.actualGreedyArraySelectedOrbit_step' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

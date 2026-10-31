@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts quotient orbit independence and finite dimension under s\u003e=1, irreducible degree-s annihilator, invariant M and v outside M; with monicity, selected physical unit gives abstract sup growth +s and invariance assuming proper span. No actual array append or three-pass result, or proof of polynomial/annihilator from a candidate.",
+    "source":  "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean",
+    "accepted":  true,
+    "sha256":  "a4ccfb5925ac4d0bd2ebb9df820f86f139f2a3e10747a5bd8327477c21bad050",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}
