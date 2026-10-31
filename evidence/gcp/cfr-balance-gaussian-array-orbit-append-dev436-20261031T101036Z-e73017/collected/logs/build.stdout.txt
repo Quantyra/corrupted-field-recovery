@@ -1,0 +1,45 @@
+✖ [3016/3016] Building CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitAppend (44s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:37:6: Type mismatch
+  Fin.addCases (motive := fun x => Fin m → ZMod 2) f g
+has type
+  Fin (left.size + right.size) → Fin m → ZMod 2
+but is expected to have type
+  Fin (left ++ right).size → Fin m → ZMod 2
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:39:4: `simp` made no progress
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:51:35: Application type mismatch: The argument
+  rfl
+has type
+  ?m.105 = ?m.105
+but is expected to have type
+  f j = Fin.addCases (motive := fun x => Fin m → ZMod 2) f g (Fin.castAdd right.size j)
+in the application
+  Exists.intro j rfl
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:52:36: Application type mismatch: The argument
+  rfl
+has type
+  ?m.115 = ?m.115
+but is expected to have type
+  g j = Fin.addCases (motive := fun x => Fin m → ZMod 2) f g (Fin.natAdd left.size j)
+in the application
+  Exists.intro j rfl
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:81:6: Unknown constant `Array.getElem!_pos`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:78:56: unsolved goals
+case h
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+i : Fin (actualGreedyArrayOrbitColumns T v).size
+⊢ (Array.ofFn (actualGreedyOrbitFamily T v))[↑i]! = actualGreedyOrbitFamily T v (actualGreedyArrayOrbitIndex T v i)
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:101:6: Type mismatch
+  congrFun (actualGreedyArrayOrbitColumns_family T v) i
+has type
+  actualGreedyArrayColumnFamily (actualGreedyArrayOrbitColumns T v) i =
+    actualGreedyOrbitFamily T v (actualGreedyArrayOrbitIndex T v i)
+but is expected to have type
+  actualGreedyOrbitFamily T v (actualGreedyArrayOrbitIndex T v i) =
+    actualGreedyArrayColumnFamily (actualGreedyArrayOrbitColumns T v) i
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:114:10: No goals to be solved
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitAppend
