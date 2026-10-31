@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts all-input custom snapshot length \u003c= custom nested charge, and abstract live-bit bound under modulus\u003e1, W-width and d hypotheses. No actual execution/heap/time-space result.",
+    "source":  "CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.lean",
+    "accepted":  true,
+    "sha256":  "fc6fbc724df4c218bba096dfc4b555e0d7f2c7620ad3a09fc60f3145eb6faf38",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}
