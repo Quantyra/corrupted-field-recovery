@@ -1,0 +1,22 @@
+{
+  "status": "never-submitted preservation-only",
+  "source": "CorruptedFieldRecovery/RawBinaryWordXor.lean",
+  "sha256": "0f9ac329cc334d9ba65d625af53bb7c73255739d8c8690d465ffee906d253ee8",
+  "archive_sha256": "a23849c40cb33c354a1cc0fc1aafdd1dd8ed3af38042c38c858ae947ca9985c2",
+  "utf8_no_bom_verified": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/RawFieldArrayPolynomial.lean": "8ff0cad3c71544454c3f23659cecf238acfc984cedbe3a0354e1dd13b6ea324c",
+    "CorruptedFieldRecovery/RawExecutableQuotient.lean": "09fc2e78ad20cd0e0cc0952ede3de2817a971f799440d3d2fb64df5268e728d8",
+    "CorruptedFieldRecovery/RawPolynomialIrreducibility.lean": "540675217822f5f9722ed2a8b539ad9947251854e4bee42db777ca8c897856f5",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean": "f8af91207fba98a73227c968ccba9e60f89c058b42a80776d7e8f92dabb5062d"
+  },
+  "scope": "Corrected uncompiled bit-list XOR successor to5550, adds exact imported polynomial irreducibility helper and source proof repairs. Only intended XOR semantics/gate-count refinement; excluded traversal, addressing, allocation, Nat conversions, stack and whole reducer/runtime costs remain excluded.",
+  "coordinate_static_review": {
+    "source_sha256": "f8af91207fba98a73227c968ccba9e60f89c058b42a80776d7e8f92dabb5062d",
+    "read_entire_source": true,
+    "scope": "Attempts reindexing supplied rectangular two-sided products by finCongr, row-major serialization via finProdFinEquiv, lookup/map identity and raw coordinate checker; final corollary composes actual run with uncompiled inverse proof020CCA under explicit s>=1, irreducible monic degree-s p and p(T)=0. Not an accepted inverse, constructor, candidate-derived annihilator or complexity result.",
+    "risks": "Elaboration/API/proof obligations untested; serializer references Array.getElem!_pos, an API already problematic in earlier captures, and finite-sum/cast normalization remains unaudited. No new mathematical/Lean validation is claimed."
+  },
+  "no_lean_build_audit_cloud_or_stop_operation": true,
+  "prior_archives_unchanged": true
+}
