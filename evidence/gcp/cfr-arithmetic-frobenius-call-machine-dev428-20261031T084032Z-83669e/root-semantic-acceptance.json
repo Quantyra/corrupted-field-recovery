@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts inductive call-tree membership equivalence to the custom snapshot trace and inherited depth/live-bit bounds. Child constructors presuppose prefix trace membership. No step-order transition semantics or refinement to actual implementation or Lean runtime.",
+    "source":  "CorruptedFieldRecovery/RawArithmeticFrobeniusCallMachine.lean",
+    "accepted":  true,
+    "sha256":  "ef308ac608eb7b6f4e9f940d0762ce4b1e219950641d0c1de12270df046afd5a",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}
