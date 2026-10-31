@@ -1,0 +1,186 @@
+✖ [3011/3011] Building CorruptedFieldRecovery.S010BalanceGaussianArrayGreedySpan (3.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:40:57: unsolved goals
+case a
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+row : Fin m
+col : Fin (columns.size + 1)
+⊢ (Array.ofFn fun col => actualGreedyArrayAugmentedMatrix columns target row col)[↑col]?.getD 0 =
+    actualGreedyArrayAugmentedMatrix columns target row col
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:47:2: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianArrayColumnScan (?m.11 columns target) (columns.size + 1)
+    (actualGreedyArrayAugmentedCells columns target) ∅ (List.ofFn fun col => col)
+context:
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:48:53: don't know how to synthesize implicit argument `α`
+  @EmptyCollection.emptyCollection (Finset (Fin (?m.11 columns target))) Finset.instEmptyCollection
+context:
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:45:4: Failed to infer type of definition `actualGreedyArrayAugmentedScan`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:57:9: Function expected at
+  actualGreedyArrayAugmentedScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  columns
+
+Hint: The identifier `actualGreedyArrayAugmentedScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:58:7: Function expected at
+  actualGreedyArrayAugmentedScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  columns
+
+Hint: The identifier `actualGreedyArrayAugmentedScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:62:9: Tactic `unfold` failed: Local variable `actualGreedyArrayAugmentedScan` has no definition
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:81:13: Unknown identifier `actualGreedyArrayAugmentedScan`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:104:43: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Submodule.span ?m.30 (Set.range (Matrix.col ?M))
+in the target expression
+  (∃ coeff, actualGreedyArraySpanMatrix columns *ᵥ coeff = target) ↔
+    target ∈ Submodule.span (ZMod 2) (Set.range fun j => columns[↑j]!)
+
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+⊢ (∃ coeff, actualGreedyArraySpanMatrix columns *ᵥ coeff = target) ↔
+    target ∈ Submodule.span (ZMod 2) (Set.range fun j => columns[↑j]!)
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:124:2: No goals to be solved
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:123:4: This simp argument is unused:
+  Fin.val_castSucc
+
+Hint: Omit it from the simp argument list.
+  simp [actualGreedyArrayAugmentedMatrix, actualGreedyArraySpanMatrix,
+  ̵  ̵ ̵ ̵Matrix.mulVec, dotProduct,
+      Fin.sum_univ_castSucc, Fin.snoc_castSucc, Fin.snoc_last,
+  ̵  ̵ ̵ ̵Fin.val_c̵a̵s̵t̵S̵u̵c̵c̵,̵ ̵F̵i̵n̵.̵v̵a̵l_̵l̵ast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:123:22: This simp argument is unused:
+  Fin.val_last
+
+Hint: Omit it from the simp argument list.
+  simp [actualGreedyArrayAugmentedMatrix, actualGreedyArraySpanMatrix,
+  ̵  ̵ ̵ ̵Matrix.mulVec, dotProduct,
+      Fin.sum_univ_castSucc, Fin.snoc_castSucc, Fin.snoc_last,
+  ̵  ̵ ̵ ̵Fin.val_castSucc,̵ ̵F̵i̵n̵.̵v̵a̵l̵_̵l̵a̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:149:8: Tactic `rfl` failed: The left-hand side
+  z j.castSucc
+is not definitionally equal to the right-hand side
+  Fin.snoc coeff 1 j.castSucc
+
+case h.refine_2
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+z : Fin (columns.size + 1) → ZMod 2
+hz : actualGreedyArrayAugmentedMatrix columns target *ᵥ z = 0
+hlast : z (Fin.last columns.size) = 1
+coeff : Fin columns.size → ZMod 2 := fun j => z j.castSucc
+i : Fin (columns.size + 1)
+j : Fin columns.size
+⊢ z j.castSucc = Fin.snoc coeff 1 j.castSucc
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:162:68: No goals to be solved
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:165:35: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (actualGreedyArraySpanMatrix columns *ᵥ coeff + target) row
+in the target expression
+  (actualGreedyArraySpanMatrix columns *ᵥ coeff) row + target row + target row = 0 + target row
+
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+z : Fin (columns.size + 1) → ZMod 2
+hz : actualGreedyArrayAugmentedMatrix columns target *ᵥ z = 0
+hlast : z (Fin.last columns.size) = 1
+coeff : Fin columns.size → ZMod 2 := fun j => z j.castSucc
+hzdecomp : z = Fin.snoc coeff 1
+hsum : actualGreedyArraySpanMatrix columns *ᵥ coeff + target = 0
+row : Fin m
+hrow : (actualGreedyArraySpanMatrix columns *ᵥ coeff + target) row = 0 row
+⊢ (actualGreedyArraySpanMatrix columns *ᵥ coeff) row + target row + target row = 0 + target row
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:189:13: Unknown identifier `actualGreedyArrayAugmentedScan`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:187:58: unsolved goals
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+j : Fin (columns.size + 1)
+h : actualGreedyArraySpanWitness? columns target = some j
+⊢ actualGreedyArrayColumnSpanContains columns target
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:259:4: unexpected token '⟨'; expected command
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:287:13: Unknown identifier `actualGreedyArrayAugmentedScan`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:285:66: unsolved goals
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+hspan : actualGreedyArrayColumnSpanContains columns target
+⊢ ∃ j, actualGreedyArraySpanWitness? columns target = some j
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:397:40: Unknown identifier `Basis`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:397:84: unsolved goals
+case h.h
+n : ℕ
+M : Submodule (ZMod 2) (Fin n → ZMod 2)
+hproper : M ≠ ⊤
+i j : Fin n
+⊢ (if j = i then 1 else 0) = sorry () i j
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:406:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:399:39: This simp argument is unused:
+  Pi.basisFun
+
+Hint: Omit it from the simp argument list.
+  simp [actualGreedyArrayUnitVector,̵ ̵P̵i̵.̵b̵a̵s̵i̵s̵F̵u̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:424:42: Application type mismatch: The argument
+  h
+has type
+  actualGreedyArrayFirstUnitOutside? columns = some i
+but is expected to have type
+  List.find? not ?m.20 =
+    some (decide ((actualGreedyArraySpanWitness? columns (actualGreedyArrayUnitVector i)).isSome = true))
+in the application
+  actualGreedyArrayFindTest_of_some not ?m.20 h
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:419:80: unsolved goals
+n : ℕ
+columns : Array (Fin n → ZMod 2)
+i : Fin n
+h : actualGreedyArrayFirstUnitOutside? columns = some i
+⊢ actualGreedyArrayUnitVector i ∉ actualGreedyArrayColumnSubmodule columns
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:466:36: Application type mismatch: The argument
+  htest
+has type
+  (!decide ((actualGreedyArraySpanWitness? columns (actualGreedyArrayUnitVector i)).isSome = true)) = true
+but is expected to have type
+  (fun j => !(actualGreedyArraySpanWitness? columns (actualGreedyArrayUnitVector j)).isSome) i = true
+in the application
+  ⟨List.mem_ofFn.mpr (Exists.intro i rfl), htest⟩
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean:479:2: Tactic `apply` failed: could not unify the type of `Submodule.span_le.mpr`
+  ?m.24 ⊆ ↑?m.25 → Submodule.span ?m.19 ?m.24 ≤ ?m.25
+with the goal
+  ⊤ ≤ actualGreedyArrayColumnSubmodule columns
+
+n : ℕ
+columns : Array (Fin n → ZMod 2)
+hnone : actualGreedyArrayFirstUnitOutside? columns = none
+⊢ ⊤ ≤ actualGreedyArrayColumnSubmodule columns
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayGreedySpan
