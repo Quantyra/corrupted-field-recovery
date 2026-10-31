@@ -1,0 +1,140 @@
+✖ [2079/2079] Building CorruptedFieldRecovery.RawArithmeticGcdNestedStackTrace (2.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:112:14: `simp` made no progress
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:136:19: unsolved goals
+W : ℕ
+hW : 0 < W
+a : ℕ
+ha : a < 2 ^ W
+b : ℕ
+ih :
+  ∀ m < b + 1 + 1,
+    ∀ {a : ℕ},
+      a < 2 ^ W →
+        m < 2 ^ W →
+          ∀ stack ∈ rawPolynomialGcdNestedStackTrace a m,
+            ∀ frame ∈ stack, ∀ word ∈ frame.registers, word < 2 ^ rawArithmeticParameterWidth W
+hb : b + 1 + 1 < 2 ^ W
+rem : ℕ × ℕ := rawPolynomialRemainderBitCosted a (b + 2)
+rest : ℕ × ℕ := rawPolynomialGcdBitCosted (b + 2) rem.1
+parent : RawArithmeticFrame := rawArithmeticGcdActivationFrame a (b + 2) rem.1 rest.1
+reducerTrace : List RawArithmeticFrame := rawReduceFuelActivationTrace (b + 2) (b + 2).log2 (a.log2 + 1) a
+hrem : rem.1 < b + 2
+hremWidth : rem.1 < 2 ^ W
+⊢ rawArithmeticGcdActivationFrame a (b + 2) rem.1 rest.1 =
+      rawArithmeticGcdActivationFrame a (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1
+        (rawPolynomialGcdBitCosted (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1).1 ∨
+    rawArithmeticGcdActivationFrame a (b + 2) rem.1 rest.1 ∈
+      rawPolynomialGcdActivationTrace (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:158:16: `simp` made no progress
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:164:25: Unknown identifier `hreduceStack`
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:164:43: Tactic `rcases` failed: `x✝ : ?m.497` is not an inductive datatype
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:173:60: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  hcstack.length ≤ 6
+
+case h.succ.succ.inr.cons
+W : ℕ
+hW : 0 < W
+a : ℕ
+ha : a < 2 ^ W
+b : ℕ
+ih :
+  ∀ m < b + 1 + 1,
+    ∀ {a : ℕ},
+      a < 2 ^ W →
+        m < 2 ^ W →
+          ∀ stack ∈ rawPolynomialGcdNestedStackTrace a m,
+            ∀ frame ∈ stack, ∀ word ∈ frame.registers, word < 2 ^ rawArithmeticParameterWidth W
+hb : b + 1 + 1 < 2 ^ W
+rem : ℕ × ℕ := rawPolynomialRemainderBitCosted a (b + 2)
+rest : ℕ × ℕ := rawPolynomialGcdBitCosted (b + 2) rem.1
+parent : RawArithmeticFrame := rawArithmeticGcdActivationFrame a (b + 2) rem.1 rest.1
+reducerTrace : List RawArithmeticFrame := rawReduceFuelActivationTrace (b + 2) (b + 2).log2 (a.log2 + 1) a
+hrem : rem.1 < b + 2
+hremWidth : rem.1 < 2 ^ W
+hparent : ∀ word ∈ parent.registers, word < 2 ^ rawArithmeticParameterWidth W
+hdivisorZero : b + 2 ≠ 0
+hmodLower : 2 ^ (b + 2).log2 ≤ b + 2
+hmodUpper : b + 2 < 2 ^ ((b + 2).log2 + 1)
+hdegree : (b + 2).log2 < W
+hfuel : a.log2 + 1 ≤ W
+hreduce : ∀ rframe ∈ reducerTrace, ∀ rword ∈ rframe.registers, rword < 2 ^ rawArithmeticParameterWidth W
+hchild :
+  ∀ stack ∈ rawPolynomialGcdNestedStackTrace (b + 2) rem.1,
+    ∀ frame ∈ stack, ∀ word ∈ frame.registers, word < 2 ^ rawArithmeticParameterWidth W
+stack : RawArithmeticStack
+frame : RawArithmeticFrame
+hframe : frame ∈ stack
+word : ℕ
+hword : word ∈ frame.registers
+tail✝ : List RawArithmeticFrame
+cstack : RawArithmeticFrameKind
+hcstack : List ℕ
+register_count_le✝ : hcstack.length ≤ 6
+h✝ :
+  { kind := cstack, registers := hcstack, register_count_le := register_count_le✝ } :: tail✝ ∈
+      rawPolynomialGcdNestedStackTrace (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1 ∧
+    rawArithmeticGcdActivationFrame a (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1
+          (rawPolynomialGcdBitCosted (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1).1 ::
+        { kind := cstack, registers := hcstack, register_count_le := register_count_le✝ } :: tail✝ =
+      stack
+⊢ word < 2 ^ rawArithmeticParameterWidth W
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:198:14: `simp` made no progress
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:223:56: Application type mismatch: The argument
+  hW
+has type
+  0 < W
+but is expected to have type
+  b + 2 < 2 ^ W
+in the application
+  ih rem.1 hrem hW
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:226:32: `simp` made no progress
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:231:16: `simp` made no progress
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:236:25: Unknown identifier `hreduceStack`
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:236:43: Tactic `rcases` failed: `x✝ : ?m.397` is not an inductive datatype
+error: CorruptedFieldRecovery/RawArithmeticGcdNestedStackTrace.lean:244:60: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  hcstack.length ≤ 6
+
+case h.succ.succ.inr.cons
+W : ℕ
+hW : 0 < W
+a : ℕ
+ha : a < 2 ^ W
+b : ℕ
+ih :
+  ∀ m < b + 1 + 1,
+    ∀ {a : ℕ},
+      a < 2 ^ W →
+        m < 2 ^ W →
+          ∀ stack ∈ rawPolynomialGcdNestedStackTrace a m,
+            List.length stack ≤ rawPolynomialGcdBitCostedFrames a m * (W + 2)
+hb : b + 1 + 1 < 2 ^ W
+rem : ℕ × ℕ := rawPolynomialRemainderBitCosted a (b + 2)
+rest : ℕ × ℕ := rawPolynomialGcdBitCosted (b + 2) rem.1
+parent : RawArithmeticFrame := rawArithmeticGcdActivationFrame a (b + 2) rem.1 rest.1
+reducerTrace : List RawArithmeticFrame := rawReduceFuelActivationTrace (b + 2) (b + 2).log2 (a.log2 + 1) a
+hrem : rem.1 < b + 2
+hfuel : a.log2 + 1 ≤ W
+hredLen : (rawReduceFuelActivationTrace (b + 2) (b + 2).log2 (a.log2 + 1) a).length ≤ a.log2 + 1 + 1
+hprefix : ∀ stack ∈ rawArithmeticPrefixStackTrace reducerTrace, List.length stack ≤ a.log2 + 2
+hremWidth : rem.1 < 2 ^ W
+hchild :
+  sorry ∈ rawPolynomialGcdNestedStackTrace (b + 2) rem.1 →
+    List.length sorry ≤ rawPolynomialGcdBitCostedFrames (b + 2) rem.1 * (W + 2)
+hchildFrames : 1 ≤ rawPolynomialGcdBitCostedFrames (b + 2) rem.1
+stack : RawArithmeticStack
+tail✝ : List RawArithmeticFrame
+cstack : RawArithmeticFrameKind
+hcstack : List ℕ
+register_count_le✝ : hcstack.length ≤ 6
+h✝ :
+  { kind := cstack, registers := hcstack, register_count_le := register_count_le✝ } :: tail✝ ∈
+      rawPolynomialGcdNestedStackTrace (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1 ∧
+    rawArithmeticGcdActivationFrame a (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1
+          (rawPolynomialGcdBitCosted (b + 2) (rawPolynomialRemainderBitCosted a (b + 2)).1).1 ::
+        { kind := cstack, registers := hcstack, register_count_le := register_count_le✝ } :: tail✝ =
+      stack
+⊢ List.length stack ≤ rawPolynomialGcdBitCostedFrames a (b + 1 + 1) * (W + 2)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticGcdNestedStackTrace
