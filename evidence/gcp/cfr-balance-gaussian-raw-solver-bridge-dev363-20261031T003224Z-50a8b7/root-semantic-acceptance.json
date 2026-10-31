@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean",
+  "sha256": "43ddfcb2de7143b5461887782ec8efbc2d5c04cd8b7d41d24d86010ead3b8c91",
+  "scope": "Root accepts explicit row/column equivalences, raw matrix/coordinate reindexing and mulVec identity; Gaussian solution iff physical four-balance of decoded array and iff raw Boolean check under size=(3s)^3. Scan/free/candidate declarations are definitions only. No serialized array execution, kernel basis correctness, model success or cost follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

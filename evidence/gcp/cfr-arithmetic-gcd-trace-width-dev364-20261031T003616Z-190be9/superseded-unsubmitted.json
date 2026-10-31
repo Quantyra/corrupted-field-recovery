@@ -1,0 +1,6 @@
+{
+  "status": "superseded-unsubmitted",
+  "source_sha256": "236FF80CB8D93497E66FAC5CE3B1F7AC1D2E2E3C31F5C3B3D0B2872A72082803",
+  "successor_sha256": "C648CFB35B20BC20AA51EC47A5C1F9F5A290DBB462A4431D4D8AC302AE866E9C",
+  "reason": "Author offered further full-log repair after immutable capture; no launch intent exists. Preserve exact earlier bytes without a compiler claim."
+}

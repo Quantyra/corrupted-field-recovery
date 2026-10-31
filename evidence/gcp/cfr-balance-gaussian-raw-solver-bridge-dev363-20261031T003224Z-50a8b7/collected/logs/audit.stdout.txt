@@ -1,0 +1,123 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRowEquiv
+CorruptedFieldRecovery.actualBalanceGaussianRowEquiv : (s : Nat) →
+  Equiv.{1, 1} (CorruptedFieldRecovery.ActualBalanceBasisRow s)
+    (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRowEquiv
+'CorruptedFieldRecovery.actualBalanceGaussianRowEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv
+CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv : (s : Nat) →
+  Equiv.{1, 1} (Prod.{0, 0} (Fin (HMul.hMul.{0, 0, 0} 3 s)) (Fin (HMul.hMul.{0, 0, 0} 3 s)))
+    (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s)))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv
+'CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRawMatrix
+@CorruptedFieldRecovery.actualBalanceGaussianRawMatrix : {s : Nat} →
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) →
+    (tape : CorruptedFieldRecovery.FiveWordTape s) →
+      Matrix.{0, 0, 0}
+        (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))
+        (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) (ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRawMatrix
+'CorruptedFieldRecovery.actualBalanceGaussianRawMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates
+@CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates : {s : Nat} →
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))) →
+    (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) → ZMod 2
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates
+'CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates_pair
+@CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates_pair : ∀ {s : Nat}
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),
+  Eq.{1}
+    (fun pair =>
+      CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates T
+        ((CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv s) pair))
+    ⇑((Module.Basis.repr.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceEndBasis s)) T)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates_pair
+'CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates_pair' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRawMatrix_mulVec_eq_reindexed
+@CorruptedFieldRecovery.actualBalanceGaussianRawMatrix_mulVec_eq_reindexed : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (x : (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) → ZMod 2),
+  Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape) x) fun row =>
+    Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceRawInputCoefficientMatrix raw tape)
+      (fun pair => x ((CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv s) pair))
+      ((Equiv.symm.{1, 1} (CorruptedFieldRecovery.actualBalanceGaussianRowEquiv s)) row)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRawMatrix_mulVec_eq_reindexed
+'CorruptedFieldRecovery.actualBalanceGaussianRawMatrix_mulVec_eq_reindexed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRawMatrix_solution_iff
+@CorruptedFieldRecovery.actualBalanceGaussianRawMatrix_solution_iff : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),
+  Iff
+    (Eq.{1}
+      (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape)
+        (CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates T))
+      0)
+    (CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.decodeRawArray raw) tape T)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRawMatrix_solution_iff
+'CorruptedFieldRecovery.actualBalanceGaussianRawMatrix_solution_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRawScan
+@CorruptedFieldRecovery.actualBalanceGaussianRawScan : {s : Nat} →
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) →
+    (tape : CorruptedFieldRecovery.FiveWordTape s) →
+      Prod.{0, 0}
+        (Matrix.{0, 0, 0}
+          (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))
+          (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) (ZMod 2))
+        (List.{0}
+          (Prod.{0, 0}
+            (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))
+            (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s)))))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRawScan
+'CorruptedFieldRecovery.actualBalanceGaussianRawScan' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRawFreeColumns
+@CorruptedFieldRecovery.actualBalanceGaussianRawFreeColumns : {s : Nat} →
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) →
+    (tape : CorruptedFieldRecovery.FiveWordTape s) →
+      List.{0} (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s)))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRawFreeColumns
+'CorruptedFieldRecovery.actualBalanceGaussianRawFreeColumns' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRawKernelCandidates
+@CorruptedFieldRecovery.actualBalanceGaussianRawKernelCandidates : {s : Nat} →
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) →
+    (tape : CorruptedFieldRecovery.FiveWordTape s) →
+      List.{0} ((a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) → ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRawKernelCandidates
+'CorruptedFieldRecovery.actualBalanceGaussianRawKernelCandidates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRawCheck_iff
+@CorruptedFieldRecovery.actualBalanceGaussianRawCheck_iff : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (hsize :
+    Eq.{1} (Array.size.{0} raw)
+      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))
+        (HMul.hMul.{0, 0, 0} 3 s))),
+  Iff
+    (Eq.{1}
+      (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape)
+        (CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates T))
+      0)
+    (Eq.{1} (CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck raw tape T) Bool.true)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRawCheck_iff
+'CorruptedFieldRecovery.actualBalanceGaussianRawCheck_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
