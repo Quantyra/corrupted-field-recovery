@@ -1,0 +1,49 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix
+@CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix : {m : Nat} →
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)) → Matrix.{0, 0, 0} (Fin (Array.size.{0} columns)) (Fin m) (ZMod 2)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix
+'CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_some_of_top
+@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_some_of_top : ∀ {m : Nat}
+  (columns : Array.{0} ((a : Fin m) → ZMod 2))
+  (hspan : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}) (rhsIndex : Fin m),
+  ∃ free,
+    Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns (Pi.single.{0, 0} rhsIndex 1))
+      (Option.some.{0} free)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_some_of_top
+'CorruptedFieldRecovery.actualGreedyArraySpanWitness?_some_of_top' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_no_default_of_top
+@CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_no_default_of_top : ∀ {m : Nat}
+  (columns : Array.{0} ((a : Fin m) → ZMod 2))
+  (hspan : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}) (rhsIndex : Fin m),
+  ∃ free,
+    Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns (Pi.single.{0, 0} rhsIndex 1))
+      (Option.some.{0} free)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_no_default_of_top
+'CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_no_default_of_top' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse
+@CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse : ∀ {s : Nat} (hs : LE.le.{0} 1 s)
+  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (p : Polynomial.{0} (ZMod 2)) (hp : Irreducible.{0} p) (hmonic : Polynomial.Monic.{0} p)
+  (hdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0),
+  ∃ outColumns outSelected,
+    And
+      (Eq.{1}
+        (CorruptedFieldRecovery.actualGreedyArrayOrbitRun T 3 (List.toArray.{0} List.nil.{0})
+          (List.toArray.{0} List.nil.{0}))
+        (Option.some.{0} (Prod.mk.{0, 0} outColumns outSelected)))
+      (And (Eq.{1} (Array.size.{0} outColumns) (HMul.hMul.{0, 0, 0} 3 s))
+        (∀ (rhsIndex : Fin (HMul.hMul.{0, 0, 0} 3 s)),
+          ∃ free,
+            Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? outColumns (Pi.single.{0, 0} rhsIndex 1))
+              (Option.some.{0} free)))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse
+'CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

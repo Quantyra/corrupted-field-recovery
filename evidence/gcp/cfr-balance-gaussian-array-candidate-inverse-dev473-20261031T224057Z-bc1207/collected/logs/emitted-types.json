@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix : {m : Nat} \u2192\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)) \u2192 Matrix.{0, 0, 0} (Fin (Array.size.{0} columns)) (Fin m) (ZMod 2)\n",
+    "sha256": "df4503191fd21495a89c8b03ae186921df9ca28a11f0d35795ea599d32ed40c2"
+  },
+  "CorruptedFieldRecovery.actualGreedyArraySpanWitness?_some_of_top": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_some_of_top : \u2200 {m : Nat}\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2))\n  (hspan : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}) (rhsIndex : Fin m),\n  \u2203 free,\n    Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns (Pi.single.{0, 0} rhsIndex 1))\n      (Option.some.{0} free)\n",
+    "sha256": "a5aea40219553b11c0784e1a8c5e25f033a5d94aa178632d2b0c2caa092602eb"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_no_default_of_top": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix_no_default_of_top : \u2200 {m : Nat}\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2))\n  (hspan : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}) (rhsIndex : Fin m),\n  \u2203 free,\n    Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns (Pi.single.{0, 0} rhsIndex 1))\n      (Option.some.{0} free)\n",
+    "sha256": "c1688c16afe3df3c01290610574cd516d495c3d5236fef3e0d9288912ea9e86e"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse : \u2200 {s : Nat} (hs : LE.le.{0} 1 s)\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n  (p : Polynomial.{0} (ZMod 2)) (hp : Irreducible.{0} p) (hmonic : Polynomial.Monic.{0} p)\n  (hdeg : Eq.{1} (Polynomial.natDegree.{0} p) s) (hroot : Eq.{1} ((Polynomial.aeval.{0, 0} T) p) 0),\n  \u2203 outColumns outSelected,\n    And\n      (Eq.{1}\n        (CorruptedFieldRecovery.actualGreedyArrayOrbitRun T 3 (List.toArray.{0} List.nil.{0})\n          (List.toArray.{0} List.nil.{0}))\n        (Option.some.{0} (Prod.mk.{0, 0} outColumns outSelected)))\n      (And (Eq.{1} (Array.size.{0} outColumns) (HMul.hMul.{0, 0, 0} 3 s))\n        (\u2200 (rhsIndex : Fin (HMul.hMul.{0, 0, 0} 3 s)),\n          \u2203 free,\n            Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? outColumns (Pi.single.{0, 0} rhsIndex 1))\n              (Option.some.{0} free)))\n",
+    "sha256": "26e7f1e8ca1614900ed63b664a6958cf0f5c45e5a2e1f2f0bfca3c0e5a4ae039"
+  }
+}
