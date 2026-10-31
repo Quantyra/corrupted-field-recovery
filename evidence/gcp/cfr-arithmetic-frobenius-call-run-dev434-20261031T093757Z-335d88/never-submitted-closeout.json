@@ -1,0 +1,9 @@
+{
+    "utc":  "2026-10-31T09:43:27.5777124Z",
+    "run":  "cfr-arithmetic-frobenius-call-run-dev434-20261031T093757Z-335d88",
+    "never_submitted":  true,
+    "never_launched":  true,
+    "source":  "CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.lean",
+    "sha256":  "C4A453CF3F29BE7C5B176285E2987699A35598375DADAE643D21D1982500EE94",
+    "reason":  "Preserved uncompiled to prioritize final focused array-append repair and full guarded closeout before fixed cutoff; no certification claim."
+}
