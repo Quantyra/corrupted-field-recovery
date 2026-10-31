@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-31T08:21:11.559971+00:00",
+  "run": "cfr-balance-gaussian-array-orbit-step-dev425-20261031T075637Z-a6ce3e",
+  "wrapper_sha256": "0e6ded991307f5eceeb5dd02567d44da417492ecc31d8f961561f331e807a8cc",
+  "controller_sha256": "c0151fb3e8483a38f1e20c9d08fbe73eec391e7bc63808617792b54c6fd9cd72",
+  "scope": "Read-only verification marker and one-second SSH terminal grace only.",
+  "guards_and_hashes_unchanged": true,
+  "immutable_inputs_unchanged": true,
+  "runner_timeout_unchanged": true,
+  "launch_once_rule_unchanged": true,
+  "evidence": "read-only transfer completion probe exited zero with all five hashes and marker verified"
+}
