@@ -1,0 +1,20 @@
+{
+  "status": "never-submitted preservation-only",
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianAffineArrayOutputRefinementFixed.lean",
+  "sha256": "988470cf9c5080ecb0a45ffcd191dce85ea1d0ff19d4bab56e5dba6298f623e1",
+  "archive_sha256": "f1cf17fcec591317e5ac7d47e368889ffc8e57e004fd2cf864914ac645fb2cb5",
+  "utf8_no_bom_verified": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianAffinePowerSolve.lean": "6b02d8a0e212806898609fa8c9aabf8ef99e56f518a9500cd1938e5224536fdd",
+    "CorruptedFieldRecovery/S010BalanceGaussianAffineArrayOutputRefinement.lean": "0717565fa1b7f6f4989995e9591a9a798f87e2e8a5ac975ad9bde60d6f28afc0"
+  },
+  "dependency_status": {
+    "AffinePowerSolve": "uncompiled6B02 preservation draft"
+  },
+  "original_provenance": "071756 original immutable archive cfr-preservation-only-word-reducer-affine-array-refinement-20261031T133256Z-c5cc29, technicalb1d6201",
+  "confirmed_original_flaw": "FreeCandidateFamily returns Fin(s+1)->ZMod2. Original applied it at Fin.last s to get a scalar and then applied that scalar to Fin.castSucc j. Fixed source extracts a single coefficient coordinate instead.",
+  "dependent_option_correction": "Compares selector Options after map Subtype.val, erasing the pivot-dependent membership proof. Compares recurrence outputs in fixed Option(Fin s->ZMod2), not heterogeneous subtype Options.",
+  "scope": "Uncompiled matrix-view search refinement attempt only: actual array scan final view/pivots feed existing free-column enumeration and finite-matrix candidate arithmetic. No separate array candidate-vector implementation, compiled correctness, resource bound, candidate-derived annihilator or full recovery.",
+  "no_lean_build_audit_cloud_or_stop_operation": true,
+  "prior_bytes_unchanged": true
+}
