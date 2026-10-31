@@ -1,0 +1,60 @@
+✖ [3012/3012] Building CorruptedFieldRecovery.S010BalanceGaussianArrayCandidateSolutionFixed (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed.lean:82:4: Type mismatch: After simplification, term
+  balanceGaussianColumnScan_pivotRows_nodup allColumns A ∅
+ has type
+  (List.map Prod.fst
+      (balanceGaussianColumnScan (actualGreedyArrayAugmentedMatrix columns target) ∅
+          (0 :: List.ofFn fun i => i.succ)).2).Nodup
+but is expected to have type
+  (List.map Prod.fst scan.2).Nodup
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed.lean:131:6: Tactic `rfl` failed: The left-hand side
+  candidate j.castSucc
+is not definitionally equal to the right-hand side
+  Fin.snoc coeff 1 j.castSucc
+
+case h.refine_2
+m : ℕ
+columns : Array (Fin m → ZMod 2)
+target : Fin m → ZMod 2
+free : Fin (columns.size + 1)
+hfound : actualGreedyArraySpanWitness? columns target = some free
+run : Array (Array (ZMod 2)) × List (Fin m × Fin (columns.size + 1)) := actualGreedyArrayAugmentedScan columns target
+A : Matrix (Fin m) (Fin (columns.size + 1)) (ZMod 2) := actualGreedyArrayAugmentedMatrix columns target
+allColumns : List (Fin (columns.size + 1)) := List.ofFn fun col => col
+scan : Matrix (Fin m) (Fin (columns.size + 1)) (ZMod 2) × List (Fin m × Fin (columns.size + 1)) :=
+  balanceGaussianColumnScan A ∅ allColumns
+pivots : List (Fin m × Fin (columns.size + 1)) := scan.2
+candidate : Fin (columns.size + 1) → ZMod 2 :=
+  balanceGaussianFreeKernelCandidate (actualBalanceGaussianArrayView run.1) run.2 free
+htest : actualGreedyArraySpanCandidateTest run free = true
+hparts :
+  decide (free ∉ List.map Prod.snd run.2) = true ∧
+    decide
+        (balanceGaussianFreeKernelCandidate (actualBalanceGaussianArrayView run.1) run.2 free (Fin.last columns.size) =
+          1) =
+      true
+hfree : free ∉ List.map Prod.snd run.2
+hlast : candidate (Fin.last columns.size) = 1
+hscanPair :
+  (actualBalanceGaussianArrayView (actualGreedyArrayAugmentedScan columns target).1,
+      (actualGreedyArrayAugmentedScan columns target).2) =
+    balanceGaussianColumnScan (actualGreedyArrayAugmentedMatrix columns target) ∅ (List.ofFn fun col => col)
+hmatrix : actualBalanceGaussianArrayView (actualGreedyArrayAugmentedScan columns target).1 = scan.1
+hpivots : run.2 = pivots
+hrows : (List.map Prod.fst pivots).Nodup
+hunit : ∀ pivot ∈ pivots, ∀ (i : Fin m), scan.1 i pivot.2 = if i = pivot.1 then 1 else 0
+hzero : ∀ i ∉ List.map Prod.fst pivots, scan.1 i = 0
+hcandidateKernel : scan.1 *ᵥ balanceGaussianFreeKernelCandidate scan.1 pivots free = 0
+hkernelArray : actualBalanceGaussianArrayView run.1 *ᵥ candidate = 0
+hkernelInput : actualBalanceGaussianArrayView (actualGreedyArrayAugmentedCells columns target) *ᵥ candidate = 0
+hinputMatrix : actualBalanceGaussianArrayView (actualGreedyArrayAugmentedCells columns target) = A
+haug : A *ᵥ candidate = 0
+coeff : Fin columns.size → ZMod 2 := fun i => candidate i.castSucc
+i : Fin (columns.size + 1)
+j : Fin columns.size
+⊢ candidate j.castSucc = Fin.snoc coeff 1 j.castSucc
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed.lean:144:68: No goals to be solved
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayCandidateSolutionFixed
