@@ -1,0 +1,45 @@
+✖ [3016/3016] Building CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitAppend (2.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:51:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Fin.cast ⋯ (Fin.cast hsize (Fin.castAdd right.size j))
+in the target expression
+  actualGreedyArrayColumnFamily (left ++ right) (Fin.cast hsize (Fin.castAdd right.size j)) =
+    (h ∘ Fin.cast ⋯) (Fin.cast hsize (Fin.castAdd right.size j))
+
+case h.left
+m : ℕ
+left right : Array (Fin m → ZMod 2)
+f : Fin left.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily left
+g : Fin right.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily right
+hsize : left.size + right.size = (left ++ right).size
+h : Fin (left.size + right.size) → Fin m → ZMod 2 := Fin.addCases (motive := fun x => Fin m → ZMod 2) f g
+i : Fin (left ++ right).size
+j✝ : Fin (left.size + right.size) := Fin.cast ⋯ i
+hj : Fin.cast hsize j✝ = i
+j : Fin left.size
+hcast : Fin.cast ⋯ (Fin.cast hsize (Fin.castAdd right.size j)) = Fin.castAdd right.size j
+⊢ actualGreedyArrayColumnFamily (left ++ right) (Fin.cast hsize (Fin.castAdd right.size j)) =
+    (h ∘ Fin.cast ⋯) (Fin.cast hsize (Fin.castAdd right.size j))
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:63:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Fin.cast ⋯ (Fin.cast hsize (Fin.natAdd left.size j))
+in the target expression
+  actualGreedyArrayColumnFamily (left ++ right) (Fin.cast hsize (Fin.natAdd left.size j)) =
+    (h ∘ Fin.cast ⋯) (Fin.cast hsize (Fin.natAdd left.size j))
+
+case h.right
+m : ℕ
+left right : Array (Fin m → ZMod 2)
+f : Fin left.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily left
+g : Fin right.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily right
+hsize : left.size + right.size = (left ++ right).size
+h : Fin (left.size + right.size) → Fin m → ZMod 2 := Fin.addCases (motive := fun x => Fin m → ZMod 2) f g
+i : Fin (left ++ right).size
+j✝ : Fin (left.size + right.size) := Fin.cast ⋯ i
+hj : Fin.cast hsize j✝ = i
+j : Fin right.size
+hcast : Fin.cast ⋯ (Fin.cast hsize (Fin.natAdd left.size j)) = Fin.natAdd left.size j
+⊢ actualGreedyArrayColumnFamily (left ++ right) (Fin.cast hsize (Fin.natAdd left.size j)) =
+    (h ∘ Fin.cast ⋯) (Fin.cast hsize (Fin.natAdd left.size j))
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitAppend
