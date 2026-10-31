@@ -1,0 +1,110 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayAugmentedCells_view
+@CorruptedFieldRecovery.actualGreedyArrayAugmentedCells_view : ∀ {m : Nat} (columns : Array.{0} ((a : Fin m) → ZMod 2))
+  (target : (a : Fin m) → ZMod 2),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+      (CorruptedFieldRecovery.actualGreedyArrayAugmentedCells columns target))
+    (CorruptedFieldRecovery.actualGreedyArrayAugmentedMatrix columns target)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayAugmentedCells_view
+'CorruptedFieldRecovery.actualGreedyArrayAugmentedCells_view' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayAugmentedScan_refines
+@CorruptedFieldRecovery.actualGreedyArrayAugmentedScan_refines : ∀ {m : Nat}
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)) (target : (a : Fin m) → ZMod 2),
+  Eq.{1}
+    (Prod.mk.{0, 0}
+      (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+        (CorruptedFieldRecovery.actualGreedyArrayAugmentedScan columns target).1)
+      (CorruptedFieldRecovery.actualGreedyArrayAugmentedScan columns target).2)
+    (CorruptedFieldRecovery.balanceGaussianColumnScan
+      (CorruptedFieldRecovery.actualGreedyArrayAugmentedMatrix columns target) EmptyCollection.emptyCollection.{0}
+      (List.ofFn.{0} fun col => col))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayAugmentedScan_refines
+'CorruptedFieldRecovery.actualGreedyArrayAugmentedScan_refines' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayColumnSpan_iff_augmentedKernel
+@CorruptedFieldRecovery.actualGreedyArrayColumnSpan_iff_augmentedKernel : ∀ {m : Nat}
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)) (target : (a : Fin m) → ZMod 2),
+  Iff (CorruptedFieldRecovery.actualGreedyArrayColumnSpanContains columns target)
+    (∃ z,
+      And
+        (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArrayAugmentedMatrix columns target) z) 0)
+        (Eq.{1} (z (Fin.last (Array.size.{0} columns))) 1))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayColumnSpan_iff_augmentedKernel
+'CorruptedFieldRecovery.actualGreedyArrayColumnSpan_iff_augmentedKernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySpanWitness?
+@CorruptedFieldRecovery.actualGreedyArraySpanWitness? : {m : Nat} →
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)) →
+    (target : (a : Fin m) → ZMod 2) → Option.{0} (Fin (HAdd.hAdd.{0, 0, 0} (Array.size.{0} columns) 1))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySpanWitness?
+'CorruptedFieldRecovery.actualGreedyArraySpanWitness?' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_sound
+@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_sound : ∀ {m : Nat} (columns : Array.{0} ((a : Fin m) → ZMod 2))
+  (target : (a : Fin m) → ZMod 2) {j : Fin (HAdd.hAdd.{0, 0, 0} (Array.size.{0} columns) 1)}
+  (h : Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns target) (Option.some.{0} j)),
+  CorruptedFieldRecovery.actualGreedyArrayColumnSpanContains columns target
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_sound
+'CorruptedFieldRecovery.actualGreedyArraySpanWitness?_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_complete
+@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_complete : ∀ {m : Nat}
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)) (target : (a : Fin m) → ZMod 2)
+  (hspan : CorruptedFieldRecovery.actualGreedyArrayColumnSpanContains columns target),
+  ∃ j, Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns target) (Option.some.{0} j)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_complete
+'CorruptedFieldRecovery.actualGreedyArraySpanWitness?_complete' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_isSome_iff
+@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_isSome_iff : ∀ {m : Nat}
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)) (target : (a : Fin m) → ZMod 2),
+  Iff (Eq.{1} (Option.isSome.{0} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns target)) Bool.true)
+    (CorruptedFieldRecovery.actualGreedyArrayColumnSpanContains columns target)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_isSome_iff
+'CorruptedFieldRecovery.actualGreedyArraySpanWitness?_isSome_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?
+@CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? : {n : Nat} →
+  (columns : Array.{0} ((a : Fin n) → ZMod 2)) → Option.{0} (Fin n)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?
+'CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_sound
+@CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_sound : ∀ {n : Nat}
+  (columns : Array.{0} ((a : Fin n) → ZMod 2)) {i : Fin n}
+  (h : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? columns) (Option.some.{0} i)),
+  CorruptedFieldRecovery.actualGreedyArrayUnitVector i ∉ CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_sound
+'CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_some_of_proper
+@CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_some_of_proper : ∀ {n : Nat}
+  (columns : Array.{0} ((a : Fin n) → ZMod 2))
+  (hproper : Ne.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}),
+  ∃ i,
+    And (Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? columns) (Option.some.{0} i))
+      (CorruptedFieldRecovery.actualGreedyArrayUnitVector i ∉
+        CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns)
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_some_of_proper
+'CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_some_of_proper' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_none_implies_top
+@CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_none_implies_top : ∀ {n : Nat}
+  (columns : Array.{0} ((a : Fin n) → ZMod 2))
+  (hnone : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? columns) Option.none.{0}),
+  Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_none_implies_top
+'CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_none_implies_top' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

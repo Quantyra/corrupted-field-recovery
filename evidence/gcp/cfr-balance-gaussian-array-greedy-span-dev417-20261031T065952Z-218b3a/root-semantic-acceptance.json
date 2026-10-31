@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts augmented-array scan refinement; candidate-index Option isSome iff target lies in semantic column span; returned unit outside span, proper span implies some, none implies top. Option returns candidate index, not explicit coefficients. No orbit growth/full constructor/cost.",
+    "source":  "CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean",
+    "accepted":  true,
+    "sha256":  "7d498f2e33f05c72eb65e0454fc46638cdec562a548df3253f942d05f81cdf35",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}

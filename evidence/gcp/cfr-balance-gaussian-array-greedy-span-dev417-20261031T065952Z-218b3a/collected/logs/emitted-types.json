@@ -1,0 +1,46 @@
+{
+  "CorruptedFieldRecovery.actualGreedyArrayAugmentedCells_view": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayAugmentedCells_view : \u2200 {m : Nat} (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2))\n  (target : (a : Fin m) \u2192 ZMod 2),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n      (CorruptedFieldRecovery.actualGreedyArrayAugmentedCells columns target))\n    (CorruptedFieldRecovery.actualGreedyArrayAugmentedMatrix columns target)\n",
+    "sha256": "43e0bd4fb1435dd39a6ae26aa8818f9ebc57531834db541f2ef7a5c510b5791f"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayAugmentedScan_refines": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayAugmentedScan_refines : \u2200 {m : Nat}\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)) (target : (a : Fin m) \u2192 ZMod 2),\n  Eq.{1}\n    (Prod.mk.{0, 0}\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n        (CorruptedFieldRecovery.actualGreedyArrayAugmentedScan columns target).1)\n      (CorruptedFieldRecovery.actualGreedyArrayAugmentedScan columns target).2)\n    (CorruptedFieldRecovery.balanceGaussianColumnScan\n      (CorruptedFieldRecovery.actualGreedyArrayAugmentedMatrix columns target) EmptyCollection.emptyCollection.{0}\n      (List.ofFn.{0} fun col => col))\n",
+    "sha256": "f143e0fc011c94ba22b20753e5fc763a3536c386d7390f320918aff144ec0cf1"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayColumnSpan_iff_augmentedKernel": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayColumnSpan_iff_augmentedKernel : \u2200 {m : Nat}\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)) (target : (a : Fin m) \u2192 ZMod 2),\n  Iff (CorruptedFieldRecovery.actualGreedyArrayColumnSpanContains columns target)\n    (\u2203 z,\n      And\n        (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArrayAugmentedMatrix columns target) z) 0)\n        (Eq.{1} (z (Fin.last (Array.size.{0} columns))) 1))\n",
+    "sha256": "0c61f08d310cd5fa8b89bea87ac1fdb2b9c1be713a21ffc962b6dbbf3902ec00"
+  },
+  "CorruptedFieldRecovery.actualGreedyArraySpanWitness?": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySpanWitness? : {m : Nat} \u2192\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)) \u2192\n    (target : (a : Fin m) \u2192 ZMod 2) \u2192 Option.{0} (Fin (HAdd.hAdd.{0, 0, 0} (Array.size.{0} columns) 1))\n",
+    "sha256": "2aca4c4fa6a9c6a653ce709bf8b2ddf327196728a54e306177f40448100286d5"
+  },
+  "CorruptedFieldRecovery.actualGreedyArraySpanWitness?_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_sound : \u2200 {m : Nat} (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2))\n  (target : (a : Fin m) \u2192 ZMod 2) {j : Fin (HAdd.hAdd.{0, 0, 0} (Array.size.{0} columns) 1)}\n  (h : Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns target) (Option.some.{0} j)),\n  CorruptedFieldRecovery.actualGreedyArrayColumnSpanContains columns target\n",
+    "sha256": "6c12e39fe864076de8f6cda593360b746a885923fc750df8fb33ad4f09daa184"
+  },
+  "CorruptedFieldRecovery.actualGreedyArraySpanWitness?_complete": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_complete : \u2200 {m : Nat}\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)) (target : (a : Fin m) \u2192 ZMod 2)\n  (hspan : CorruptedFieldRecovery.actualGreedyArrayColumnSpanContains columns target),\n  \u2203 j, Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns target) (Option.some.{0} j)\n",
+    "sha256": "3b9bcdca5ce72266a0a67418ba7ae99306b9930393f13f437751e5399e12c6dc"
+  },
+  "CorruptedFieldRecovery.actualGreedyArraySpanWitness?_isSome_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_isSome_iff : \u2200 {m : Nat}\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)) (target : (a : Fin m) \u2192 ZMod 2),\n  Iff (Eq.{1} (Option.isSome.{0} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns target)) Bool.true)\n    (CorruptedFieldRecovery.actualGreedyArrayColumnSpanContains columns target)\n",
+    "sha256": "f1931536405b6d1112670f4354bfe7aaa401a13f53627c4e846e58bf6c895854"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? : {n : Nat} \u2192\n  (columns : Array.{0} ((a : Fin n) \u2192 ZMod 2)) \u2192 Option.{0} (Fin n)\n",
+    "sha256": "5264fc2fb96e8663d4f1c2c3ff65e716d4517e610eb031491a54c427eddf5430"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_sound : \u2200 {n : Nat}\n  (columns : Array.{0} ((a : Fin n) \u2192 ZMod 2)) {i : Fin n}\n  (h : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? columns) (Option.some.{0} i)),\n  CorruptedFieldRecovery.actualGreedyArrayUnitVector i \u2209 CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns\n",
+    "sha256": "20d6397c37ad319828f4dd9071a1dafa4f5595c30d6ca9a80e8052a86426821b"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_some_of_proper": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_some_of_proper : \u2200 {n : Nat}\n  (columns : Array.{0} ((a : Fin n) \u2192 ZMod 2))\n  (hproper : Ne.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}),\n  \u2203 i,\n    And (Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? columns) (Option.some.{0} i))\n      (CorruptedFieldRecovery.actualGreedyArrayUnitVector i \u2209\n        CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns)\n",
+    "sha256": "2e51d63378289d937ea9aed05cfb6007f2c5defa921cdc6fbd95d3725d8a551b"
+  },
+  "CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_none_implies_top": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside?_none_implies_top : \u2200 {n : Nat}\n  (columns : Array.{0} ((a : Fin n) \u2192 ZMod 2))\n  (hnone : Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayFirstUnitOutside? columns) Option.none.{0}),\n  Eq.{1} (CorruptedFieldRecovery.actualGreedyArrayColumnSubmodule columns) Top.top.{0}\n",
+    "sha256": "23054a9a4081aea9f5b6da359a01b040478f7de138e1b1c2f17a1f3c167eb095"
+  }
+}
