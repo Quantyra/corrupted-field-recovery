@@ -2,3 +2,4 @@
 *.pdf binary
 *.png binary
 evidence/gcp/** -text
+CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed2.lean -text
