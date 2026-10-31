@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "utc": "2026-10-31T11:23:35.334648+00:00",
+  "command": [
+    "gcloud",
+    "compute",
+    "scp",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-array-orbit-append-dev444-20261031T110945Z-87ce60\\inputs.tar.gz",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-array-orbit-append-dev444-20261031T110945Z-87ce60\\capture-manifest.json",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-array-orbit-append-dev444-20261031T110945Z-87ce60\\gcp_cfr_runner.py",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-array-orbit-append-dev444-20261031T110945Z-87ce60\\run.sh",
+    "C:\\Users\\dfred\\Desktop\\Projects\\IGH\\corrupted-field-recovery\\evidence\\gcp\\cfr-balance-gaussian-array-orbit-append-dev444-20261031T110945Z-87ce60\\bootstrap-assets.json",
+    "quantyra-cfr-lean-builder-20261028a:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-array-orbit-append-dev444-20261031T110945Z-87ce60/",
+    "--tunnel-through-iap",
+    "--scp-flag=-hostkey",
+    "--scp-flag=SHA256:Les1S05ccHusfwihOtXx3CRG5Z+qJ9U7oJkyPhd2yOQ",
+    "--project=quantyra-lean-cert-20260915",
+    "--zone=us-central1-a",
+    "--account=dfredriksen@quantyra.org",
+    "--quiet"
+  ]
+}

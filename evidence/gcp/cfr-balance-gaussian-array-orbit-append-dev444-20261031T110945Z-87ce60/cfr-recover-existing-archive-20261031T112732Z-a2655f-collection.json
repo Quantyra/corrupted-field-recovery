@@ -1,0 +1,8 @@
+{
+  "run": "cfr-balance-gaussian-array-orbit-append-dev444-20261031T110945Z-87ce60",
+  "utc": "2026-10-31T11:28:16.517302+00:00",
+  "archive_sha256": "48b7f854bdc8ca2869810bdd62696eda2325a62472f6eb6558db8b7e932574a0",
+  "recovered_existing_remote_archive": true,
+  "no_repackage": true,
+  "all_terminal_log_hashes_verified": true
+}
