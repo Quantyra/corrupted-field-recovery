@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean",
+  "sha256": "e21cd7721b41bc909fab40d63e94993df00b08a93cd0dc9597479e347144e580",
+  "scope": "Root accepts nested-array pivot update and supplied pivot sequence view refinement and kernel equivalence, including raw serialized one-step. No deterministic array pivot selection, full scan, cost or recovery follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

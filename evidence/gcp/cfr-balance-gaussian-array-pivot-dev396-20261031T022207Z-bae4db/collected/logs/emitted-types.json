@@ -1,0 +1,26 @@
+{
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow : {m n : Nat} \u2192\n  (cells : Array.{0} (Array.{0} (ZMod 2))) \u2192 (pivotRow : Fin m) \u2192 (pivotColumn : Fin n) \u2192 Array.{0} (Array.{0} (ZMod 2))\n",
+    "sha256": "377d4b78f63c5dbfef6b635cbb4aee322f648abecd1f50deaa0023568fa11b38"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow_view_eq": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow_view_eq : \u2200 {m n : Nat}\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (pivotRow : Fin m) (pivotColumn : Fin n),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow cells pivotRow pivotColumn))\n    (CorruptedFieldRecovery.balanceGaussianPivotRow (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells)\n      pivotRow pivotColumn)\n",
+    "sha256": "a67fc1981b7be058c96019a21f9483f8ff2998da506e8ee6d370a0a7508fc1de"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence : {m n : Nat} \u2192\n  (cells : Array.{0} (Array.{0} (ZMod 2))) \u2192\n    (a : List.{0} (Prod.{0, 0} (Fin m) (Fin n))) \u2192 Array.{0} (Array.{0} (ZMod 2))\n",
+    "sha256": "e492bb8789b664bb7c9fafc385e8d518667a54baaf2003ae2a4696232a37fc68"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_view_eq": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_view_eq : \u2200 {m n : Nat}\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (steps : List.{0} (Prod.{0, 0} (Fin m) (Fin n))),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence cells steps))\n    (CorruptedFieldRecovery.balanceGaussianPivotSequence (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells)\n      steps)\n",
+    "sha256": "47b3bb168901838e1f6a8ae6fb8624f6d8d1a320dd13e6360e314fc7a1009884"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_kernel_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_kernel_iff : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (steps : List.{0} (Prod.{0, 0} (Fin m) (Fin n))) (x : (a : Fin n) \u2192 ZMod 2),\n  Iff\n    (Eq.{1}\n      (Matrix.mulVec.{0, 0, 0}\n        (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n          (CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence cells steps))\n        x)\n      0)\n    (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells) x) 0)\n",
+    "sha256": "389045f4e8de5b987460666754fa231b0655714c6a8e6ace7253a9bd4ca9ca2b"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayPivotRow_refines": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayPivotRow_refines : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (pivotRow : Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))\n  (pivotColumn : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow\n        (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix (CorruptedFieldRecovery.decodeRawArray raw)\n          tape)\n        pivotRow pivotColumn))\n    (CorruptedFieldRecovery.balanceGaussianPivotRow (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape)\n      pivotRow pivotColumn)\n",
+    "sha256": "10e5a21d97029767adcf3423ec389620adeeb15ae3366775f602098bb4a6bff1"
+  }
+}

@@ -1,0 +1,71 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow
+@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow : {m n : Nat} →
+  (cells : Array.{0} (Array.{0} (ZMod 2))) → (pivotRow : Fin m) → (pivotColumn : Fin n) → Array.{0} (Array.{0} (ZMod 2))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow
+'CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow_view_eq
+@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow_view_eq : ∀ {m n : Nat}
+  (cells : Array.{0} (Array.{0} (ZMod 2))) (pivotRow : Fin m) (pivotColumn : Fin n),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+      (CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow cells pivotRow pivotColumn))
+    (CorruptedFieldRecovery.balanceGaussianPivotRow (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells)
+      pivotRow pivotColumn)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow_view_eq
+'CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow_view_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence
+@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence : {m n : Nat} →
+  (cells : Array.{0} (Array.{0} (ZMod 2))) →
+    (a : List.{0} (Prod.{0, 0} (Fin m) (Fin n))) → Array.{0} (Array.{0} (ZMod 2))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence
+'CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_view_eq
+@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_view_eq : ∀ {m n : Nat}
+  (cells : Array.{0} (Array.{0} (ZMod 2))) (steps : List.{0} (Prod.{0, 0} (Fin m) (Fin n))),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+      (CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence cells steps))
+    (CorruptedFieldRecovery.balanceGaussianPivotSequence (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells)
+      steps)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_view_eq
+'CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_view_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_kernel_iff
+@CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_kernel_iff : ∀ {m n : Nat} [inst : Fintype.{0} (Fin n)]
+  (cells : Array.{0} (Array.{0} (ZMod 2))) (steps : List.{0} (Prod.{0, 0} (Fin m) (Fin n))) (x : (a : Fin n) → ZMod 2),
+  Iff
+    (Eq.{1}
+      (Matrix.mulVec.{0, 0, 0}
+        (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+          (CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence cells steps))
+        x)
+      0)
+    (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells) x) 0)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_kernel_iff
+'CorruptedFieldRecovery.actualBalanceGaussianArrayPivotSequence_kernel_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayPivotRow_refines
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayPivotRow_refines : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (pivotRow : Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))
+  (pivotColumn : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))),
+  Eq.{1}
+    (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+      (CorruptedFieldRecovery.actualBalanceGaussianArrayPivotRow
+        (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix (CorruptedFieldRecovery.decodeRawArray raw)
+          tape)
+        pivotRow pivotColumn))
+    (CorruptedFieldRecovery.balanceGaussianPivotRow (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape)
+      pivotRow pivotColumn)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayPivotRow_refines
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayPivotRow_refines' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
