@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan_kernel_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan_kernel_iff : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (used : Finset.{0} (Fin m)) (columns : List.{0} (Fin n))\n  (x : (a : Fin n) \u2192 ZMod 2),\n  Iff\n    (Eq.{1}\n      (Matrix.mulVec.{0, 0, 0}\n        (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n          (CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan cells used columns).1)\n        x)\n      0)\n    (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells) x) 0)\n",
+    "sha256": "df1696bad0a9ef4a0f215e5039b00e2084345656534ce95e1dd1cca87a0184a2"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayFullColumnScan_kernel_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayFullColumnScan_kernel_iff : \u2200 {m n : Nat} [inst : Fintype.{0} (Fin n)]\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (x : (a : Fin n) \u2192 ZMod 2),\n  Iff\n    (Eq.{1}\n      (Matrix.mulVec.{0, 0, 0}\n        (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n          (CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan cells EmptyCollection.emptyCollection.{0}\n              (List.ofFn.{0} fun column => column)).1)\n        x)\n      0)\n    (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells) x) 0)\n",
+    "sha256": "55ea95fed2d2c2667bbe99d39b83faf6874a10590cb73e37d56b15c716a854e7"
+  }
+}

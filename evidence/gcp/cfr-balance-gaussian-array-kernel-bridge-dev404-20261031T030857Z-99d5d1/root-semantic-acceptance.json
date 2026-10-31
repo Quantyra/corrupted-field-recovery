@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts kernel iff for arbitrary nested-array column scan and full scan with Fintype Fin n. No span witness or recovery result.",
+    "source":  "CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.lean",
+    "accepted":  true,
+    "sha256":  "82d9eeabbc02285a27862632049e6ece9ce57018cf91b7acf64459717f58a056",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}

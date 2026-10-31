@@ -1,0 +1,32 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan_kernel_iff
+@CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan_kernel_iff : ∀ {m n : Nat} [inst : Fintype.{0} (Fin n)]
+  (cells : Array.{0} (Array.{0} (ZMod 2))) (used : Finset.{0} (Fin m)) (columns : List.{0} (Fin n))
+  (x : (a : Fin n) → ZMod 2),
+  Iff
+    (Eq.{1}
+      (Matrix.mulVec.{0, 0, 0}
+        (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+          (CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan cells used columns).1)
+        x)
+      0)
+    (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells) x) 0)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan_kernel_iff
+'CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan_kernel_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianArrayFullColumnScan_kernel_iff
+@CorruptedFieldRecovery.actualBalanceGaussianArrayFullColumnScan_kernel_iff : ∀ {m n : Nat} [inst : Fintype.{0} (Fin n)]
+  (cells : Array.{0} (Array.{0} (ZMod 2))) (x : (a : Fin n) → ZMod 2),
+  Iff
+    (Eq.{1}
+      (Matrix.mulVec.{0, 0, 0}
+        (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+          (CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan cells EmptyCollection.emptyCollection.{0}
+              (List.ofFn.{0} fun column => column)).1)
+        x)
+      0)
+    (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells) x) 0)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianArrayFullColumnScan_kernel_iff
+'CorruptedFieldRecovery.actualBalanceGaussianArrayFullColumnScan_kernel_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
