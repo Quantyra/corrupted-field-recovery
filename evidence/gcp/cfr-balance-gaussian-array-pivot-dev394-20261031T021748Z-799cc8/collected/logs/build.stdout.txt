@@ -1,0 +1,98 @@
+✖ [3008/3008] Building CorruptedFieldRecovery.S010BalanceGaussianArrayPivot (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean:74:6: don't know how to synthesize implicit argument `α`
+  @Eq (Fin (?m.28 cells steps x) → ZMod 2) (actualBalanceGaussianArrayView cells *ᵥ x) 0
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+steps : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean:74:50: don't know how to synthesize implicit argument
+  @OfNat.ofNat (Fin (?m.28 cells steps x) → ZMod 2) 0 Zero.toOfNat0
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+steps : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+⊢ OfNat (Fin (?m.28 cells steps x) → ZMod 2) 0
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean:74:6: don't know how to synthesize implicit argument `m`
+  @Matrix.mulVec (Fin (?m.28 cells steps x)) (Fin n) (ZMod 2)
+    CommRing.toNonUnitalCommRing.toNonUnitalNonAssocCommRing.toNonUnitalNonAssocSemiring inst✝
+    (actualBalanceGaussianArrayView cells) x
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+steps : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean:74:6: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianArrayView (?m.28 cells steps x) n cells
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+steps : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean:72:4: don't know how to synthesize implicit argument `α`
+  @Eq (Fin (?m.27 cells steps x) → ZMod 2)
+    (actualBalanceGaussianArrayView (actualBalanceGaussianArrayPivotSequence cells steps) *ᵥ x) 0
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+steps : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean:73:69: don't know how to synthesize implicit argument
+  @OfNat.ofNat (Fin (?m.27 cells steps x) → ZMod 2) 0 Zero.toOfNat0
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+steps : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+⊢ OfNat (Fin (?m.27 cells steps x) → ZMod 2) 0
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean:72:4: don't know how to synthesize implicit argument `m`
+  @Matrix.mulVec (Fin (?m.27 cells steps x)) (Fin n) (ZMod 2)
+    CommRing.toNonUnitalCommRing.toNonUnitalNonAssocCommRing.toNonUnitalNonAssocSemiring inst✝
+    (actualBalanceGaussianArrayView (actualBalanceGaussianArrayPivotSequence cells steps)) x
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+steps : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayPivot.lean:72:4: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianArrayView (?m.27 cells steps x) n (actualBalanceGaussianArrayPivotSequence cells steps)
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+steps : List (Fin m × Fin n)
+x : Fin n → ZMod 2
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayPivot
