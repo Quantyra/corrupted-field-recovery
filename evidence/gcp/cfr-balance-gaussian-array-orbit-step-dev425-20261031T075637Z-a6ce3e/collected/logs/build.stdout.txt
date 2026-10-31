@@ -1,0 +1,28 @@
+✖ [3015/3015] Building CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitStep (6.1s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:225:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Module.finrank (ZMod 2) ↥(M ⊔ actualGreedyOrbitSpan T v) + Module.finrank (ZMod 2) ↥(M ⊓ actualGreedyOrbitSpan T v)
+in the target expression
+  Module.finrank (ZMod 2)
+      (have this := M ⊔ actualGreedyOrbitSpan T v;
+      ↥this) =
+    Module.finrank (ZMod 2) ↥M + Module.finrank (ZMod 2) ↥(actualGreedyOrbitSpan T v)
+
+n s : ℕ
+T : Module.End (ZMod 2) (BinaryVector n)
+M : Submodule (ZMod 2) (BinaryVector n)
+v : BinaryVector n
+hquot : LinearIndependent (ZMod 2) (actualGreedyQuotientOrbitFamily T M v)
+hLI : LinearIndependent (ZMod 2) (actualGreedyOrbitFamily T v)
+hdim : Module.finrank (ZMod 2) ↥(actualGreedyOrbitSpan T v) = s
+hdisj : Disjoint M (actualGreedyOrbitSpan T v)
+⊢ Module.finrank (ZMod 2)
+      (have this := M ⊔ actualGreedyOrbitSpan T v;
+      ↥this) =
+    Module.finrank (ZMod 2) ↥M + Module.finrank (ZMod 2) ↥(actualGreedyOrbitSpan T v)
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitStep.lean:287:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitStep
