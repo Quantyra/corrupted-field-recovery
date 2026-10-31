@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawArithmeticParameterWidth": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticParameterWidth : (W : Nat) \u2192 Nat\n",
+    "sha256": "ccff4315a30f825f6f0375bdb96edaa75dabecf13bccd34d55d982f02b758417"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelActivationTrace": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelActivationTrace : (modulus degree a a : Nat) \u2192\n  List.{0} CorruptedFieldRecovery.RawArithmeticFrame\n",
+    "sha256": "9b028e2fcd46e3b17086bdf4a93b579ca8686fa58518346c5bfe584a3a3edcbb"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelActivationTrace_registers_lt": {
+    "emitted_type": "@CorruptedFieldRecovery.rawReduceFuelActivationTrace_registers_lt : \u2200 {modulus degree fuel a W : Nat}\n  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) modulus)\n  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} degree 1))) (hdegree : LT.lt.{0} degree W)\n  (hW : LT.lt.{0} 0 W) (hfuel : LE.le.{0} fuel W) (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W))\n  (frame : CorruptedFieldRecovery.RawArithmeticFrame)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawReduceFuelActivationTrace modulus degree fuel a) frame)\n  (word : Nat) (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (CorruptedFieldRecovery.rawArithmeticParameterWidth W))\n",
+    "sha256": "38cf25e3324f21d7cefbdc15f78515578849bad4126cf606db55cbb82a860978"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelActivationTrace_length_le": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelActivationTrace_length_le : \u2200 (modulus degree fuel a : Nat),\n  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.rawReduceFuelActivationTrace modulus degree fuel a))\n    (HAdd.hAdd.{0, 0, 0} fuel 1)\n",
+    "sha256": "8f43f9364acdd8b9faa8489e7eab19f5e676c6f7d3e09d50e0a0c77669e730e0"
+  }
+}

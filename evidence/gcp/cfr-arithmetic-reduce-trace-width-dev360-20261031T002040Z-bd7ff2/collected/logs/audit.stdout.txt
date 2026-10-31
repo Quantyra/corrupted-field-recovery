@@ -1,0 +1,30 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticParameterWidth
+CorruptedFieldRecovery.rawArithmeticParameterWidth : (W : Nat) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticParameterWidth
+'CorruptedFieldRecovery.rawArithmeticParameterWidth' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelActivationTrace
+CorruptedFieldRecovery.rawReduceFuelActivationTrace : (modulus degree a a : Nat) →
+  List.{0} CorruptedFieldRecovery.RawArithmeticFrame
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelActivationTrace
+'CorruptedFieldRecovery.rawReduceFuelActivationTrace' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelActivationTrace_registers_lt
+@CorruptedFieldRecovery.rawReduceFuelActivationTrace_registers_lt : ∀ {modulus degree fuel a W : Nat}
+  (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} degree 1))) (hdegree : LT.lt.{0} degree W)
+  (hW : LT.lt.{0} 0 W) (hfuel : LE.le.{0} fuel W) (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W))
+  (frame : CorruptedFieldRecovery.RawArithmeticFrame)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawReduceFuelActivationTrace modulus degree fuel a) frame)
+  (word : Nat) (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),
+  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (CorruptedFieldRecovery.rawArithmeticParameterWidth W))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelActivationTrace_registers_lt
+'CorruptedFieldRecovery.rawReduceFuelActivationTrace_registers_lt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelActivationTrace_length_le
+CorruptedFieldRecovery.rawReduceFuelActivationTrace_length_le : ∀ (modulus degree fuel a : Nat),
+  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.rawReduceFuelActivationTrace modulus degree fuel a))
+    (HAdd.hAdd.{0, 0, 0} fuel 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelActivationTrace_length_le
+'CorruptedFieldRecovery.rawReduceFuelActivationTrace_length_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticReduceTraceWidth.lean",
+  "sha256": "92b174470a95233878a312aa47a0b31333924b43973387f287b32567e2aff07c",
+  "scope": "Custom reducer activation trace and register bound under full modulus band, degree<W, W>0, fuel<=W and input<2^W; trace length<=fuel+1 for all inputs. No actual evaluator stack/heap or full verifier workspace claim.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}

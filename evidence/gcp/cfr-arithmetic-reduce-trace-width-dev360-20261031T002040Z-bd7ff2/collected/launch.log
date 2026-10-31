@@ -1,0 +1,6 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-arithmetic-reduce-trace-width-dev360-20261031T002040Z-bd7ff2/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
+STAGE=audit
