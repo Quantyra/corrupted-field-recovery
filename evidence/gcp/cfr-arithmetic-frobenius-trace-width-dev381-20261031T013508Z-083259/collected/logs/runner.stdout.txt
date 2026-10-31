@@ -1,0 +1,5 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-arithmetic-frobenius-trace-width-dev381-20261031T013508Z-083259/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
