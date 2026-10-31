@@ -1,0 +1,22 @@
+✖ [2081/2081] Building CorruptedFieldRecovery.RawArithmeticFrobeniusNestedChargeSpace (2.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.lean:65:58: Type mismatch
+  rfl
+has type
+  ?m.95 = ?m.95
+but is expected to have type
+  rawCandidateFrobeniusNestedCharge modulus (d + 1) x =
+    1 + (rawPolyMulBitCosted x x).2 + ((rawPolyMulBitCosted x x).1.log2 + 2) +
+      rawCandidateFrobeniusNestedCharge modulus d
+        (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1
+warning: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.lean:53:12: This simp argument is unused:
+  rawCandidateFrobeniusNestedStackTrace
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵a̵w̵C̵a̵n̵d̵i̵d̵a̵t̵e̵F̵r̵o̵b̵e̵n̵i̵u̵s̵N̵e̵s̵t̵e̵d̵S̵t̵a̵c̵k̵T̵r̵a̵c̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵r̵a̵w̵C̵a̵n̵d̵i̵d̵a̵t̵e̵F̵r̵o̵b̵e̵n̵i̵u̵s̵N̵e̵s̵t̵e̵d̵C̵h̵a̵r̵g̵e̵]̵[̲r̲a̲w̲C̲a̲n̲d̲i̲d̲a̲t̲e̲F̲r̲o̲b̲e̲n̲i̲u̲s̲N̲e̲s̲t̲e̲d̲C̲h̲a̲r̲g̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticFrobeniusNestedChargeSpace
