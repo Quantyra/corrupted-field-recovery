@@ -1,0 +1,12 @@
+{
+    "source":  "CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.lean",
+    "uncompiled":  true,
+    "dependency":  "Accepted RawArithmeticFrobeniusNestedStackTrace dev412; this successor remains uncompiled.",
+    "utc":  "2026-10-31T04:10:07.2568003Z",
+    "run":  "cfr-arithmetic-frobenius-nested-charge-space-dev416-20261031T040643Z-3eefae",
+    "sha256":  "FC6FBC724DF4C218BBA096DFC4B555E0D7F2C7620AD3A09FC60F3145EB6FAF38",
+    "never_launched":  true,
+    "unaudited":  true,
+    "reason":  "User requested handoff to Grok due to rate limits; Root directed no further submissions and safe builder closeout.",
+    "never_submitted":  true
+}
