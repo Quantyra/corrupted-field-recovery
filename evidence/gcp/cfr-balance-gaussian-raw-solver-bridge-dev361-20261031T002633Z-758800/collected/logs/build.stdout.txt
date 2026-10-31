@@ -1,0 +1,25 @@
+✖ [3004/3004] Building CorruptedFieldRecovery.S010BalanceGaussianRawSolverBridge (4.4s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianRawSolverBridge.lean:74:2: Type mismatch: After simplification, term
+  Equiv.sum_comp (actualBalanceGaussianColumnEquiv s).symm fun pair =>
+    actualBalanceRawInputCoefficientMatrix raw tape ((actualBalanceGaussianRowEquiv s).symm row) pair *
+      x ((actualBalanceGaussianColumnEquiv s) pair)
+ has type
+  ∑ i,
+      actualBalanceRawInputCoefficientMatrix raw tape ((actualBalanceGaussianRowEquiv s).symm row)
+          ((actualBalanceGaussianColumnEquiv s).symm i) *
+        x ((actualBalanceGaussianColumnEquiv s) ((actualBalanceGaussianColumnEquiv s).symm i)) =
+    ∑ i,
+      actualBalanceRawInputCoefficientMatrix raw tape ((actualBalanceGaussianRowEquiv s).symm row) i *
+        x ((actualBalanceGaussianColumnEquiv s) i)
+but is expected to have type
+  ∑ x_1,
+      actualBalanceRawInputCoefficientMatrix raw tape ((actualBalanceGaussianRowEquiv s).symm row)
+          ((actualBalanceGaussianColumnEquiv s).symm x_1) *
+        x x_1 =
+    ∑ x_1,
+      actualBalanceRawInputCoefficientMatrix raw tape ((actualBalanceGaussianRowEquiv s).symm row) x_1 *
+        x ((actualBalanceGaussianColumnEquiv s) x_1)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianRawSolverBridge
