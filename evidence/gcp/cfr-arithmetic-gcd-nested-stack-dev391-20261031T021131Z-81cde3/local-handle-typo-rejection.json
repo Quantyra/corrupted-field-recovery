@@ -1,0 +1,8 @@
+{
+  "attempted_handle": "cfr-arithmetic-gcd-nested-stack-dev391-20261031T021148Z-000000",
+  "reason": "Missing immutable capture",
+  "stage": "local run_directory validation before cloud operations",
+  "cloud_operation": false,
+  "launched": false,
+  "actual_handle": "cfr-arithmetic-gcd-nested-stack-dev391-20261031T021131Z-81cde3"
+}

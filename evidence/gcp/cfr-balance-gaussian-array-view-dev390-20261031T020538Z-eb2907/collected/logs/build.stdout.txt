@@ -1,0 +1,58 @@
+✖ [3007/3007] Building CorruptedFieldRecovery.S010BalanceGaussianArrayExecution (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:82:6: Tactic `rewrite` failed: motive is not type correct:
+  fun _a =>
+    actualFourBilinearBalanced (decodeRawArray raw) tape
+      (actualBalanceGaussianEndFromCoordinates (balanceGaussianFreeKernelCandidate _a.1 _a.2 ↑free))
+Error: Application type mismatch: The argument
+  free
+has type
+  balanceGaussianFreeIndex (actualBalanceGaussianSerializedArrayScan raw tape).2
+but is expected to have type
+  { column // column ∉ List.map Prod.snd _a.2 }
+in the application
+  ↑free
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+free : balanceGaussianFreeIndex (actualBalanceGaussianSerializedArrayScan raw tape).2
+⊢ actualFourBilinearBalanced (decodeRawArray raw) tape
+    (actualBalanceGaussianEndFromCoordinates
+      (balanceGaussianFreeKernelCandidate (actualBalanceGaussianSerializedArrayScan raw tape).1
+        (actualBalanceGaussianSerializedArrayScan raw tape).2 ↑free))
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:97:6: Tactic `rewrite` failed: motive is not type correct:
+  fun _a =>
+    actualBalanceRawInputConstraintCheck raw tape
+        (actualBalanceGaussianEndFromCoordinates (balanceGaussianFreeKernelCandidate _a.1 _a.2 ↑free)) =
+      true
+Error: Application type mismatch: The argument
+  free
+has type
+  balanceGaussianFreeIndex (actualBalanceGaussianSerializedArrayScan raw tape).2
+but is expected to have type
+  { column // column ∉ List.map Prod.snd _a.2 }
+in the application
+  ↑free
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+hsize : Array.size raw = 3 * s * (3 * s) * (3 * s)
+free : balanceGaussianFreeIndex (actualBalanceGaussianSerializedArrayScan raw tape).2
+⊢ actualBalanceRawInputConstraintCheck raw tape
+      (actualBalanceGaussianEndFromCoordinates
+        (balanceGaussianFreeKernelCandidate (actualBalanceGaussianSerializedArrayScan raw tape).1
+          (actualBalanceGaussianSerializedArrayScan raw tape).2 ↑free)) =
+    true
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayExecution
