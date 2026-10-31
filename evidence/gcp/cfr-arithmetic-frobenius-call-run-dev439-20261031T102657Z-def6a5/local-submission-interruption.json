@@ -1,0 +1,8 @@
+{
+    "utc":  "2026-10-31T10:34:49.7408550Z",
+    "local_session":  87709,
+    "observed_local_exit_code":  1,
+    "last_saved_cloud_stage":  "submission-preflight exit0",
+    "launch_intent_absent":  true,
+    "note":  "Local submission process ended without further diagnostics after successful preflight; preserve and resume only same prelaunch handle."
+}

@@ -1,0 +1,61 @@
+✖ [2083/2083] Building CorruptedFieldRecovery.RawArithmeticFrobeniusCallRun (2.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.lean:42:14: unsolved goals
+case succ
+modulus d : ℕ
+ih :
+  ∀ (x : ℕ),
+    List.map RawArithmeticCallState.stack (rawCandidateFrobeniusCallRun modulus d x) =
+      rawCandidateFrobeniusNestedStackTrace modulus d x
+x : ℕ
+rem : ℕ × ℕ := rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus
+parent : RawArithmeticFrame := rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1 rem.1
+hchild :
+  List.map (fun state => parent :: state.stack) (rawCandidateFrobeniusCallRun modulus d rem.1) =
+    List.map (fun stack => parent :: stack) (rawCandidateFrobeniusNestedStackTrace modulus d rem.1)
+⊢ List.map RawArithmeticCallState.stack
+            [{ phase := RawArithmeticCallPhase.frobenius,
+                stack :=
+                  [rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1
+                      (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1] }] ++
+          List.map
+            (fun x_1 =>
+              rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1
+                  (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1 ::
+                x_1)
+            (rawArithmeticPrefixStackTrace (rawPolyMulActivationTrace x x)) ++
+        List.map
+          (fun x_1 =>
+            rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1
+                (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1 ::
+              x_1)
+          (rawArithmeticPrefixStackTrace
+            (rawReduceFuelActivationTrace modulus modulus.log2 ((rawPolyMulBitCosted x x).1.log2 + 1)
+              (rawPolyMulBitCosted x x).1)) ++
+      List.map (fun stack => parent :: stack) (rawCandidateFrobeniusNestedStackTrace modulus d rem.1) =
+    [[rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1
+                (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1]] ++
+          List.map
+            (fun stack =>
+              rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1
+                  (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1 ::
+                stack)
+            (rawArithmeticPrefixStackTrace (rawPolyMulActivationTrace x x)) ++
+        List.map
+          (fun stack =>
+            rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1
+                (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1 ::
+              stack)
+          (rawArithmeticPrefixStackTrace
+            (rawReduceFuelActivationTrace modulus modulus.log2 ((rawPolyMulBitCosted x x).1.log2 + 1)
+              (rawPolyMulBitCosted x x).1)) ++
+      List.map
+        (fun stack =>
+          rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1
+              (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1 ::
+            stack)
+        (rawCandidateFrobeniusNestedStackTrace modulus d
+          (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticFrobeniusCallRun
