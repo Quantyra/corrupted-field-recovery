@@ -1,0 +1,12 @@
+﻿{
+    "scope":  "Root accepts every abstract reducer Exec agrees with the costed recurrence, deterministic output and charge, and declared-charge bound under modulus band, W\u003e0 and input width. No concrete primitive/runtime or whole verifier complexity.",
+    "source":  "CorruptedFieldRecovery/RawReductionOperationalRefinement.lean",
+    "accepted":  true,
+    "sha256":  "6222ab02266549392f612e93101d054cbfd077b5ed3d8312037fa24eb5061980",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}

@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.rawReductionMachineExec_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawReductionMachineExec_sound : \u2200 {modulus degree output charge : Nat}\n  {state : CorruptedFieldRecovery.RawReductionMachineState}\n  (hexec : CorruptedFieldRecovery.RawReductionMachineExec modulus degree state output charge),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree\n      (CorruptedFieldRecovery.RawReductionMachineState.fuel state)\n      (CorruptedFieldRecovery.RawReductionMachineState.current state))\n    (Prod.mk.{0, 0} output charge)\n",
+    "sha256": "7a61d86f3b8cdda522be6080a13326390f4845a00e727e4ddb86efc085cc5b0e"
+  },
+  "CorruptedFieldRecovery.rawReductionMachineExec_deterministic": {
+    "emitted_type": "@CorruptedFieldRecovery.rawReductionMachineExec_deterministic : \u2200\n  {modulus degree fuel current output\u2081 output\u2082 charge\u2081 charge\u2082 : Nat}\n  (h\u2081 :\n    CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current } output\u2081 charge\u2081)\n  (h\u2082 :\n    CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current } output\u2082 charge\u2082),\n  And (Eq.{1} output\u2081 output\u2082) (Eq.{1} charge\u2081 charge\u2082)\n",
+    "sha256": "8fc5dea51e0c961ab111a1c3271846e3770dae724cc9421a16da31fb2e3b6025"
+  },
+  "CorruptedFieldRecovery.rawReductionMachineExec_charge_le_of_modulus_band": {
+    "emitted_type": "@CorruptedFieldRecovery.rawReductionMachineExec_charge_le_of_modulus_band : \u2200\n  {modulus degree W fuel current output charge : Nat} (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) modulus)\n  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} degree 1))) (hW : LT.lt.{0} 0 W)\n  (hcurrent : LT.lt.{0} current (HPow.hPow.{0, 0, 0} 2 W))\n  (hexec :\n    CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current } output charge),\n  LE.le.{0} charge\n    (HMul.hMul.{0, 0, 0} fuel\n      (HMul.hMul.{0, 0, 0} 40\n        (HPow.hPow.{0, 0, 0}\n          (HAdd.hAdd.{0, 0, 0}\n            (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} W degree) (CorruptedFieldRecovery.rawNatBitWidth degree)) 4)\n          2)))\n",
+    "sha256": "b9c3c054a5f5176f6adca5d824d1759517df420baa99b146cf0a6eb18062b87f"
+  }
+}

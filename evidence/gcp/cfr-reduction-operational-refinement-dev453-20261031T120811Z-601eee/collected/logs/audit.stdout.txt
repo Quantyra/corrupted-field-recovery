@@ -1,0 +1,39 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReductionMachineExec_sound
+@CorruptedFieldRecovery.rawReductionMachineExec_sound : ∀ {modulus degree output charge : Nat}
+  {state : CorruptedFieldRecovery.RawReductionMachineState}
+  (hexec : CorruptedFieldRecovery.RawReductionMachineExec modulus degree state output charge),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree
+      (CorruptedFieldRecovery.RawReductionMachineState.fuel state)
+      (CorruptedFieldRecovery.RawReductionMachineState.current state))
+    (Prod.mk.{0, 0} output charge)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReductionMachineExec_sound
+'CorruptedFieldRecovery.rawReductionMachineExec_sound' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReductionMachineExec_deterministic
+@CorruptedFieldRecovery.rawReductionMachineExec_deterministic : ∀
+  {modulus degree fuel current output₁ output₂ charge₁ charge₂ : Nat}
+  (h₁ :
+    CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current } output₁ charge₁)
+  (h₂ :
+    CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current } output₂ charge₂),
+  And (Eq.{1} output₁ output₂) (Eq.{1} charge₁ charge₂)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReductionMachineExec_deterministic
+'CorruptedFieldRecovery.rawReductionMachineExec_deterministic' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReductionMachineExec_charge_le_of_modulus_band
+@CorruptedFieldRecovery.rawReductionMachineExec_charge_le_of_modulus_band : ∀
+  {modulus degree W fuel current output charge : Nat} (hmodLower : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) modulus)
+  (hmodUpper : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 (HAdd.hAdd.{0, 0, 0} degree 1))) (hW : LT.lt.{0} 0 W)
+  (hcurrent : LT.lt.{0} current (HPow.hPow.{0, 0, 0} 2 W))
+  (hexec :
+    CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current } output charge),
+  LE.le.{0} charge
+    (HMul.hMul.{0, 0, 0} fuel
+      (HMul.hMul.{0, 0, 0} 40
+        (HPow.hPow.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} W degree) (CorruptedFieldRecovery.rawNatBitWidth degree)) 4)
+          2)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReductionMachineExec_charge_le_of_modulus_band
+'CorruptedFieldRecovery.rawReductionMachineExec_charge_le_of_modulus_band' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
