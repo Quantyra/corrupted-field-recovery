@@ -1,0 +1,24 @@
+{
+  "status": "never-submitted preservation-only",
+  "sources": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolution.lean": "90e681e9c88b31e10055a304d4a88488cb9b95d982c0ba6c601abc70d4fcefd6",
+    "CorruptedFieldRecovery/RawReductionPrimitiveLedger.lean": "da6d9bf6cbcfc4df0d38e4f31aed95b54f5ecf7cdb30cf1fc3a6a64993c30a74"
+  },
+  "archive_sha256": "df6b0ce2c08bce0616c1cab8cbb57edaa97c7abfa3e2c236cb3116d0bfaf0a3d",
+  "utf8_no_bom_verified": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean": "7d498f2e33f05c72eb65e0454fc46638cdec562a548df3253f942d05f81cdf35",
+    "CorruptedFieldRecovery/RawReductionOperationalRefinement.lean": "6222ab02266549392f612e93101d054cbfd077b5ed3d8312037fa24eb5061980"
+  },
+  "dependency_status": {
+    "ArrayGreedySpan": "accepted417",
+    "RawReductionOperationalRefinement": "accepted453"
+  },
+  "scope": {
+    "candidate_solution": "Uncompiled proof attempt that exact selected free-kernel candidate restricted to original columns solves target affine system, deriving final coordinate one from selector; no substituted existential coefficient witness, inverse identity or full recovery claim.",
+    "primitive_ledger": "Uncompiled explicit Nat-operation event ledger and exact declared-charge sum attempt for reducer recurrence. Abstract compare/log/subtract/power/multiply/XOR primitives only; no bit-array implementation, processor/runtime/allocation/heap claim."
+  },
+  "no_lean_build_audit_cloud_or_stop_operation": true,
+  "prior_archives_unchanged": true,
+  "certification_claim": false
+}
