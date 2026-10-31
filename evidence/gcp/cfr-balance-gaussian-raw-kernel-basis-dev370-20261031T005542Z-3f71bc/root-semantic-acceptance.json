@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianRawKernelBasis.lean",
+  "sha256": "11998a3c01e259b88ade3957f9658c71b5462708a141c7b2834759156d072995",
+  "scope": "Root accepts coordinate/end inverse and linear map; full-scan free candidates final kernel and physical four-balance; reconstruction of any balanced endomorphism; candidate family linear independence; list members balanced; checker true under raw.size=(3s)^3. Classical finite subtype is proof-level. No serialized array execution/refinement, field discovery, constructor success or complexity follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

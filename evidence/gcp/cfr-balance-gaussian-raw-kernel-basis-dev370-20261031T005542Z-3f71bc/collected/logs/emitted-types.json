@@ -1,0 +1,66 @@
+{
+  "CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates : {s : Nat} \u2192\n  (x : (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) \u2192 ZMod 2) \u2192\n    Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))\n",
+    "sha256": "8b3cfa293c37cc5d41d7fe64e41ad96aa8465f4a98b7ff77640e14c0c668373d"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates_endFromCoordinates": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates_endFromCoordinates : \u2200 {s : Nat}\n  (x : (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) \u2192 ZMod 2),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates\n      (CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates x))\n    x\n",
+    "sha256": "4ac380aef517ed7a6cd83228c55168ffc985be4b5424027c5da8d9fa1bc0e557"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates_injective": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates_injective : \u2200 {s : Nat}\n  {x y : (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) \u2192 ZMod 2}\n  (h :\n    Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates x)\n      (CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates y)),\n  Eq.{1} x y\n",
+    "sha256": "365f0cd33dc950bf6677ced93602ea588203185d4e6dec3e3ac073c0c81162d8"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinatesLinearMap": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinatesLinearMap : {s : Nat} \u2192\n  LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (ZMod 2))\n    ((a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) \u2192 ZMod 2)\n    (Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n",
+    "sha256": "0bae484fb0a80c9dad23404ab271bd8e815618819111cd3b44c49ddb37ea001d"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates_inputCoordinates": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates_inputCoordinates : \u2200 {s : Nat}\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceGaussianEndFromCoordinates\n      (CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates T))\n    T\n",
+    "sha256": "c0fd0dd48cc53d98fdeafb729eb257073dd4ba32b647ea1482dbb6abcce02c3e"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawCandidateFamily": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawCandidateFamily : {s : Nat} \u2192\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) \u2192\n    (tape : CorruptedFieldRecovery.FiveWordTape s) \u2192\n      (a :\n          CorruptedFieldRecovery.balanceGaussianFreeIndex\n            (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).2) \u2192\n        Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))\n",
+    "sha256": "14110f67580299d1d995dd10d07679ae46d564a8ba7d4134edcf3880a26349e0"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawCandidate_mem_ker": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawCandidate_mem_ker : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (free :\n    CorruptedFieldRecovery.balanceGaussianFreeIndex (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).2),\n  Eq.{1}\n    (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).1\n      (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily\n        (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).1\n        (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).2 free))\n    0\n",
+    "sha256": "4b80a071a2999e0b72af9e0a7168fd29bbfe7201eac9c1488fbcb1b4e72ce469"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawCandidate_balanced": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawCandidate_balanced : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (free :\n    CorruptedFieldRecovery.balanceGaussianFreeIndex (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).2),\n  CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.decodeRawArray raw) tape\n    (CorruptedFieldRecovery.actualBalanceGaussianRawCandidateFamily raw tape free)\n",
+    "sha256": "7ca28881eedf693b40568964275d81cba1b618d7b2e5b915222c123027542a26"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawScan_reconstruct": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawScan_reconstruct : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (x : (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) \u2192 ZMod 2)\n  (a : Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).1 x) 0),\n  Eq.{1} x\n    (\u2211 free,\n      HSMul.hSMul.{0, 0, 0} (x \u2191free)\n        (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily\n          (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).1\n          (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).2 free))\n",
+    "sha256": "97a561e7ac53c0893d17ffba85e65194d3c94f7aa0c7967ea7cd34dccf9a4247"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawBalanced_coordinates_reconstruct": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawBalanced_coordinates_reconstruct : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n  (hbalanced : CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.decodeRawArray raw) tape T),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates T)\n    (\u2211 free,\n      HSMul.hSMul.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates T \u2191free)\n        (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily\n          (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).1\n          (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).2 free))\n",
+    "sha256": "b4f35ee90efdf480edaf2a762eaa1f4783ecb91755570849b1fb98e0e62cd10b"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawBalanced_endomorphism_reconstruct": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawBalanced_endomorphism_reconstruct : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n  (hbalanced : CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.decodeRawArray raw) tape T),\n  Eq.{1} T\n    (\u2211 free,\n      HSMul.hSMul.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianInputCoordinates T \u2191free)\n        (CorruptedFieldRecovery.actualBalanceGaussianRawCandidateFamily raw tape free))\n",
+    "sha256": "15f2c16ad748c5e62bbe21ffdcb064453b12f0f36eb0c33ab34a618f078c6367"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawCandidate_checker_true": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawCandidate_checker_true : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (hsize :\n    Eq.{1} (Array.size.{0} raw)\n      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))\n        (HMul.hMul.{0, 0, 0} 3 s)))\n  (free :\n    CorruptedFieldRecovery.balanceGaussianFreeIndex (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).2),\n  Eq.{1}\n    (CorruptedFieldRecovery.actualBalanceRawInputConstraintCheck raw tape\n      (CorruptedFieldRecovery.actualBalanceGaussianRawCandidateFamily raw tape free))\n    Bool.true\n",
+    "sha256": "cb178c74caaed22fc3f804851a52590a475a5f3f09c1999a8847786adc5468ab"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawCandidateEndList": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawCandidateEndList : {s : Nat} \u2192\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) \u2192\n    (tape : CorruptedFieldRecovery.FiveWordTape s) \u2192\n      List.{0} (Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))\n",
+    "sha256": "bb0de74747588db7b6c2317072de67bbebc238210e9875f191e53891d4c9af6a"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawCandidateEndList_balanced": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawCandidateEndList_balanced : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  {T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s))}\n  (hT : Membership.mem.{0, 0} (CorruptedFieldRecovery.actualBalanceGaussianRawCandidateEndList raw tape) T),\n  CorruptedFieldRecovery.actualFourBilinearBalanced (CorruptedFieldRecovery.decodeRawArray raw) tape T\n",
+    "sha256": "5a6d2b23322e3184ab5ab76d11ea24e58dfbae4ebc31926f7c9cfb1cf99e8353"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawCandidates_linearIndependent": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawCandidates_linearIndependent : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  LinearIndependent.{0, 0, 0} (ZMod 2)\n    (CorruptedFieldRecovery.balanceGaussianFreeCandidateFamily\n      (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).1\n      (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape).2)\n",
+    "sha256": "a9485ab0aae5836c17179a20e04bb57648a8b1d132296ef58b1d04dd5cdcc0c7"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRawCandidateFamily_linearIndependent": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianRawCandidateFamily_linearIndependent : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  LinearIndependent.{0, 0, 0} (ZMod 2) (CorruptedFieldRecovery.actualBalanceGaussianRawCandidateFamily raw tape)\n",
+    "sha256": "52540ef10539e1e0845ef3598689797d77129d70402155923df3da8204605943"
+  }
+}
