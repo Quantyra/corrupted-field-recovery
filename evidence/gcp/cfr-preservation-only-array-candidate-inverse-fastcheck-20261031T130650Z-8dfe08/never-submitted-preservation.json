@@ -1,0 +1,37 @@
+{
+  "status": "never-submitted preservation-only",
+  "sources": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateInverse.lean": "d42d3704af8eaa2f833e3a433576f1fc03b605792a6ff093b19a130bb8e2585f",
+    "CorruptedFieldRecovery/RawCandidateFastCheckOperationalMachine.lean": "3403dafc7aa739b968b2b9d335bdbe8f2b60b81d8e275a7e97abe0e7bc066ce7"
+  },
+  "archive_sha256": "95462e916058c2db30107e9f01dce9c621206de4ba4986a105c5591ad96c3e0e",
+  "utf8_no_bom_verified": true,
+  "no_compiler_audit_cloud_or_lifecycle_operation": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean": "7d498f2e33f05c72eb65e0454fc46638cdec562a548df3253f942d05f81cdf35",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitRun.lean": "e453084656f03f57924c35ee5a48add52f3de6f3d0fdd800905e6ab13b289f52",
+    "CorruptedFieldRecovery/RawRabinListOperationalMachine.lean": "2d0f97514ddc3dae5fb59f501180f75872fb492b7a94e20c0931e6b014a96af9",
+    "CorruptedFieldRecovery/RawRabinIndexOperationalMachine.lean": "d744c011658f859b81ced1f978222d2a6b6bf90d66c0819215f97a62233e9c2e",
+    "CorruptedFieldRecovery/RawCandidateVerifierUniformBound.lean": "6b65ec00f9d7c54137bb845abbe1b4658a13a53e54379fa9694e345dd1c6b697"
+  },
+  "dependency_status": {
+    "ArrayGreedySpan": "accepted417",
+    "ArrayOrbitRun": "accepted460",
+    "RawRabinListOperationalMachine": "uncompiled2D0F draft",
+    "RawRabinIndexOperationalMachine": "uncompiledD744 draft",
+    "RawCandidateVerifierUniformBound": "accepted324"
+  },
+  "scope": {
+    "inverse_candidate": "Computes a candidate coefficient matrix from actual selected free-kernel indices, with full-span no-default proof attempts and conditional three-pass output linkage. Candidate-specific kernel-to-affine correctness remains missing; no inverse identity or serialized certificate claim.",
+    "fast_check": "Uncompiled shape-gated range/list-machine composition attempts soundness/existence/fast-check/validity/declared-charge bounds. Depends on uncompiled Rabin list/index chain; no concrete primitive runtime/heap/whole recovery result."
+  },
+  "prior_tuple_order_errors": {
+    "affected_preserved_drafts": [
+      "S010BalanceGaussianArrayOrbitBasisRun.lean B8BE1E",
+      "S010BalanceGaussianArraySquareMatrix.lean276679"
+    ],
+    "detail": "Their destructuring used the general summary tuple order against accepted threePass theorem. Keep prior bytes immutable and treat those results as uncompiled attempts. Current inverse draft uses threePass order: output arrays/span, run equality, selected size, column size, span dimension, span equality, invariance; still unaudited."
+  },
+  "prior_archives_unchanged": true,
+  "certification_claim": false
+}
