@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean",
+  "sha256": "e69d6d0706a9cbbdde80bc252b1bf1e7fbacece569f5227f88455e54fbc15c4d",
+  "scope": "Root accepts custom GCD frame/activation trace definitions, register bound under W>0 and a,b<2^W, and all-input trace length at most declared GCD charge. No evaluator stack/heap, complete workspace or recovery space follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings; failed observation transport preserved, same-run collection succeeded"
+}

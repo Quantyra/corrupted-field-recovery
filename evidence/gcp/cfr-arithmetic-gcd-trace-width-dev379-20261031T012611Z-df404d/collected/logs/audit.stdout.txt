@@ -1,0 +1,31 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawArithmeticGcdActivationFrame
+CorruptedFieldRecovery.rawArithmeticGcdActivationFrame : (a b remainder output : Nat) →
+  CorruptedFieldRecovery.RawArithmeticFrame
+CFR_TYPE_END:CorruptedFieldRecovery.rawArithmeticGcdActivationFrame
+'CorruptedFieldRecovery.rawArithmeticGcdActivationFrame' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdActivationTrace
+CorruptedFieldRecovery.rawPolynomialGcdActivationTrace : (a a : Nat) →
+  List.{0} CorruptedFieldRecovery.RawArithmeticFrame
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdActivationTrace
+'CorruptedFieldRecovery.rawPolynomialGcdActivationTrace' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_registers_lt
+@CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_registers_lt : ∀ {a b W : Nat} (hW : LT.lt.{0} 0 W)
+  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))
+  (frame : CorruptedFieldRecovery.RawArithmeticFrame)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolynomialGcdActivationTrace a b) frame) (word : Nat)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),
+  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (CorruptedFieldRecovery.rawArithmeticParameterWidth W))
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_registers_lt
+'CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_registers_lt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_length_le_charge
+CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_length_le_charge : ∀ (a b : Nat),
+  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.rawPolynomialGcdActivationTrace a b))
+    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_length_le_charge
+'CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_length_le_charge' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

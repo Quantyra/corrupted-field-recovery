@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.rawArithmeticGcdActivationFrame": {
+    "emitted_type": "CorruptedFieldRecovery.rawArithmeticGcdActivationFrame : (a b remainder output : Nat) \u2192\n  CorruptedFieldRecovery.RawArithmeticFrame\n",
+    "sha256": "261112ea263cdce5dc37fd6c9c9cb8ee7cb363ebe2d74d1e78ba64759028980c"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdActivationTrace": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcdActivationTrace : (a a : Nat) \u2192\n  List.{0} CorruptedFieldRecovery.RawArithmeticFrame\n",
+    "sha256": "d9f6f10f656fc86cd36df47e2d9a5a3db86670a13ed2b76823906fcae98ef47b"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_registers_lt": {
+    "emitted_type": "@CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_registers_lt : \u2200 {a b W : Nat} (hW : LT.lt.{0} 0 W)\n  (ha : LT.lt.{0} a (HPow.hPow.{0, 0, 0} 2 W)) (hb : LT.lt.{0} b (HPow.hPow.{0, 0, 0} 2 W))\n  (frame : CorruptedFieldRecovery.RawArithmeticFrame)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawPolynomialGcdActivationTrace a b) frame) (word : Nat)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (CorruptedFieldRecovery.rawArithmeticParameterWidth W))\n",
+    "sha256": "b13fe2dc80c2e0c66974ffd0a5677331f3ef1b33c5b09937febd80b822ba756c"
+  },
+  "CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_length_le_charge": {
+    "emitted_type": "CorruptedFieldRecovery.rawPolynomialGcdActivationTrace_length_le_charge : \u2200 (a b : Nat),\n  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.rawPolynomialGcdActivationTrace a b))\n    (CorruptedFieldRecovery.rawPolynomialGcdBitCosted a b).2\n",
+    "sha256": "e266cf2771f428fde7f61b63e9414d7bda6959c09c89e9239bca007bc2a628b7"
+  }
+}
