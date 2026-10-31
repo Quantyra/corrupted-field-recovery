@@ -1,0 +1,8 @@
+{
+  "run": "cfr-balance-gaussian-raw-kernel-basis-dev368-20261031T004912Z-77677d",
+  "utc": "2026-10-31T00:54:01.940133+00:00",
+  "archive_sha256": "25baea607cf27ededf0103f6796c70aa286176dcd07dbbd84f307436c6c54b75",
+  "recovered_existing_remote_archive": true,
+  "no_repackage": true,
+  "all_terminal_log_hashes_verified": true
+}

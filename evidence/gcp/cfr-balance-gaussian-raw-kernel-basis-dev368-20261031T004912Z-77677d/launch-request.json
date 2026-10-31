@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-31T00:52:03.987678+00:00",
+  "run": "cfr-balance-gaussian-raw-kernel-basis-dev368-20261031T004912Z-77677d",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

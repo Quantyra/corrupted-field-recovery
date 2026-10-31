@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-arithmetic-gcd-trace-width-dev369-20261031T005140Z-0c22ac",
+  "utc": "2026-10-31T00:54:15.590317+00:00"
+}
