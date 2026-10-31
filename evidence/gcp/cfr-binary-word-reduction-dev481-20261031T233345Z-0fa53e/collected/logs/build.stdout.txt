@@ -1,0 +1,89 @@
+✖ [1838/1838] Building CorruptedFieldRecovery.RawBinaryWordReduction (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawBinaryWordReduction.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawBinaryWordReduction.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawBinaryWordReduction.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawBinaryWordReduction.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawBinaryWordReduction.setup.json --json
+warning: CorruptedFieldRecovery/RawBinaryWordReduction.lean:31:66: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: CorruptedFieldRecovery/RawBinaryWordReduction.lean:31:66: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+error: CorruptedFieldRecovery/RawBinaryWordReduction.lean:60:8: unsolved goals
+case pos.true
+tail : List Bool
+ih : rawBitsToNat tail ≠ 0 → rawBinaryWordLeadingOne tail = some (rawBitsToNat tail).log2
+htail : rawBitsToNat tail = 0
+hne : rawBitsToNat (true :: tail) ≠ 0
+⊢ (match rawBinaryWordLeadingOne tail with
+    | some index => some (index + 1)
+    | none => some 0) =
+    some (Nat.log2 1)
+warning: CorruptedFieldRecovery/RawBinaryWordReduction.lean:59:16: This simp argument is unused:
+  rawBinaryWordLeadingOne
+
+Hint: Omit it from the simp argument list.
+  simp [rawBin̵a̵r̵y̵W̵o̵r̵d̵L̵e̵a̵d̵i̵n̵g̵O̵n̵e̵,̵ ̵r̵a̵w̵B̵i̵tsToNat, htail] at hne
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawBinaryWordReduction.lean:70:45: This simp argument is unused:
+  htail
+
+Hint: Omit it from the simp argument list.
+  simp [rawBinaryWordLeadingOne, hrec, ht̵a̵i̵l,̵ ̵h̵l̵og]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/RawBinaryWordReduction.lean:119:20: unused variable `word`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: CorruptedFieldRecovery/RawBinaryWordReduction.lean:131:12: Tactic `rfl` failed: The left-hand side
+  rawBitsToNat (rawReduceFuelWordFromBits modulusWord degree 0 currentWord)
+is not definitionally equal to the right-hand side
+  rawReduceFuel (rawBitsToNat modulusWord) degree 0 (rawBitsToNat currentWord)
+
+case zero
+modulusWord : List Bool
+degree : ℕ
+currentWord : List Bool
+⊢ rawBitsToNat (rawReduceFuelWordFromBits modulusWord degree 0 currentWord) =
+    rawReduceFuel (rawBitsToNat modulusWord) degree 0 (rawBitsToNat currentWord)
+error: CorruptedFieldRecovery/RawBinaryWordReduction.lean:141:14: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `hsmall ?a✝` is a proof of
+  False
+error: CorruptedFieldRecovery/RawBinaryWordReduction.lean:149:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rawBitsToNat (rawReduceStepWordFromBits modulusWord degree currentWord)
+in the target expression
+  rawBitsToNat
+      (if false = true then currentWord
+      else
+        rawReduceFuelWordFromBits modulusWord degree fuel (rawReduceStepWordFromBits modulusWord degree currentWord)) =
+    rawReduceFuel (rawBitsToNat modulusWord) degree fuel
+      (rawReduceStep (rawBitsToNat modulusWord) degree (rawBitsToNat currentWord))
+
+case neg
+modulusWord : List Bool
+degree fuel : ℕ
+ih :
+  ∀ (currentWord : List Bool),
+    rawBitsToNat (rawReduceFuelWordFromBits modulusWord degree fuel currentWord) =
+      rawReduceFuel (rawBitsToNat modulusWord) degree fuel (rawBitsToNat currentWord)
+currentWord : List Bool
+hsmall : ¬rawBinaryWordBelowPowTwo degree currentWord = true
+hlargeNat : ¬rawBitsToNat currentWord < 2 ^ degree
+hactive : 2 ^ degree ≤ rawBitsToNat currentWord
+hstep :
+  rawBitsToNat (rawReduceStepWordFromBits modulusWord degree currentWord) =
+    rawReduceStep (rawBitsToNat modulusWord) degree (rawBitsToNat currentWord)
+⊢ rawBitsToNat
+      (if false = true then currentWord
+      else
+        rawReduceFuelWordFromBits modulusWord degree fuel (rawReduceStepWordFromBits modulusWord degree currentWord)) =
+    rawReduceFuel (rawBitsToNat modulusWord) degree fuel
+      (rawReduceStep (rawBitsToNat modulusWord) degree (rawBitsToNat currentWord))
+warning: CorruptedFieldRecovery/RawBinaryWordReduction.lean:147:54: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [rawReduceFuelWordFromBits, hsmall, i̵f̵_̵f̵a̵l̵s̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵rawReduceFuel, if_neg hlargeNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawBinaryWordReduction

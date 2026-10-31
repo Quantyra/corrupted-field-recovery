@@ -1,0 +1,66 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordBelowPowTwo
+CorruptedFieldRecovery.rawBinaryWordBelowPowTwo : (degree : Nat) → (a : List.{0} Bool) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordBelowPowTwo
+'CorruptedFieldRecovery.rawBinaryWordBelowPowTwo' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordBelowPowTwo_spec
+CorruptedFieldRecovery.rawBinaryWordBelowPowTwo_spec : ∀ (degree : Nat) (word : List.{0} Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBinaryWordBelowPowTwo degree word)
+    (Decidable.decide (LT.lt.{0} (CorruptedFieldRecovery.rawBitsToNat word) (HPow.hPow.{0, 0, 0} 2 degree)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordBelowPowTwo_spec
+'CorruptedFieldRecovery.rawBinaryWordBelowPowTwo_spec' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordLeadingOne
+CorruptedFieldRecovery.rawBinaryWordLeadingOne : (a : List.{0} Bool) → Option.{0} Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordLeadingOne
+'CorruptedFieldRecovery.rawBinaryWordLeadingOne' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordLeadingOne_eq_none_of_zero
+CorruptedFieldRecovery.rawBinaryWordLeadingOne_eq_none_of_zero : ∀ (word : List.{0} Bool)
+  (hzero : Eq.{1} (CorruptedFieldRecovery.rawBitsToNat word) 0),
+  Eq.{1} (CorruptedFieldRecovery.rawBinaryWordLeadingOne word) Option.none.{0}
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordLeadingOne_eq_none_of_zero
+'CorruptedFieldRecovery.rawBinaryWordLeadingOne_eq_none_of_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordLeadingOne_spec
+CorruptedFieldRecovery.rawBinaryWordLeadingOne_spec : ∀ (word : List.{0} Bool)
+  (hne : Ne.{1} (CorruptedFieldRecovery.rawBitsToNat word) 0),
+  Eq.{1} (CorruptedFieldRecovery.rawBinaryWordLeadingOne word)
+    (Option.some.{0} (Nat.log2 (CorruptedFieldRecovery.rawBitsToNat word)))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordLeadingOne_spec
+'CorruptedFieldRecovery.rawBinaryWordLeadingOne_spec' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStepWordFromBits
+CorruptedFieldRecovery.rawReduceStepWordFromBits : (modulusWord : List.{0} Bool) →
+  (degree : Nat) → (currentWord : List.{0} Bool) → List.{0} Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStepWordFromBits
+'CorruptedFieldRecovery.rawReduceStepWordFromBits' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStepWordFromBits_refines
+CorruptedFieldRecovery.rawReduceStepWordFromBits_refines : ∀ (modulusWord : List.{0} Bool) (degree : Nat)
+  (currentWord : List.{0} Bool)
+  (hactive : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) (CorruptedFieldRecovery.rawBitsToNat currentWord)),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawBitsToNat
+      (CorruptedFieldRecovery.rawReduceStepWordFromBits modulusWord degree currentWord))
+    (CorruptedFieldRecovery.rawReduceStep (CorruptedFieldRecovery.rawBitsToNat modulusWord) degree
+      (CorruptedFieldRecovery.rawBitsToNat currentWord))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStepWordFromBits_refines
+'CorruptedFieldRecovery.rawReduceStepWordFromBits_refines' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelWordFromBits
+CorruptedFieldRecovery.rawReduceFuelWordFromBits : (modulusWord : List.{0} Bool) →
+  (degree a : Nat) → (a : List.{0} Bool) → List.{0} Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelWordFromBits
+'CorruptedFieldRecovery.rawReduceFuelWordFromBits' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelWordFromBits_refines
+CorruptedFieldRecovery.rawReduceFuelWordFromBits_refines : ∀ (modulusWord currentWord : List.{0} Bool)
+  (degree fuel : Nat),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawBitsToNat
+      (CorruptedFieldRecovery.rawReduceFuelWordFromBits modulusWord degree fuel currentWord))
+    (CorruptedFieldRecovery.rawReduceFuel (CorruptedFieldRecovery.rawBitsToNat modulusWord) degree fuel
+      (CorruptedFieldRecovery.rawBitsToNat currentWord))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelWordFromBits_refines
+'CorruptedFieldRecovery.rawReduceFuelWordFromBits_refines' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

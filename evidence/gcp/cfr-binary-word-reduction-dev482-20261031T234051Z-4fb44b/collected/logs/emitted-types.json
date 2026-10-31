@@ -1,0 +1,38 @@
+{
+  "CorruptedFieldRecovery.rawBinaryWordBelowPowTwo": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordBelowPowTwo : (degree : Nat) \u2192 (a : List.{0} Bool) \u2192 Bool\n",
+    "sha256": "8abe6c497bba4c6b7a180b2575075d091f7a5f1c68f3d015ceda1e0073917154"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordBelowPowTwo_spec": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordBelowPowTwo_spec : \u2200 (degree : Nat) (word : List.{0} Bool),\n  Eq.{1} (CorruptedFieldRecovery.rawBinaryWordBelowPowTwo degree word)\n    (Decidable.decide (LT.lt.{0} (CorruptedFieldRecovery.rawBitsToNat word) (HPow.hPow.{0, 0, 0} 2 degree)))\n",
+    "sha256": "5f0d333e4d900194fc297fdae7b3096fc849678e3455b07b3c69e5da78dbc4db"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordLeadingOne": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordLeadingOne : (a : List.{0} Bool) \u2192 Option.{0} Nat\n",
+    "sha256": "10885f58d0cdc2a7c66936d64645721118ae474e0fceb40f16facf96a8b735ab"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordLeadingOne_eq_none_of_zero": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordLeadingOne_eq_none_of_zero : \u2200 (word : List.{0} Bool)\n  (hzero : Eq.{1} (CorruptedFieldRecovery.rawBitsToNat word) 0),\n  Eq.{1} (CorruptedFieldRecovery.rawBinaryWordLeadingOne word) Option.none.{0}\n",
+    "sha256": "548b31fbf622abf339ac423d43fe4d070b0f1c9fa068ff7ed4e9b4be2cbc88e5"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordLeadingOne_spec": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordLeadingOne_spec : \u2200 (word : List.{0} Bool)\n  (hne : Ne.{1} (CorruptedFieldRecovery.rawBitsToNat word) 0),\n  Eq.{1} (CorruptedFieldRecovery.rawBinaryWordLeadingOne word)\n    (Option.some.{0} (Nat.log2 (CorruptedFieldRecovery.rawBitsToNat word)))\n",
+    "sha256": "68c86850a62a84c2778dc1ce62370846bd26d253bc4359e920e777bc12ab14d1"
+  },
+  "CorruptedFieldRecovery.rawReduceStepWordFromBits": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStepWordFromBits : (modulusWord : List.{0} Bool) \u2192\n  (degree : Nat) \u2192 (currentWord : List.{0} Bool) \u2192 List.{0} Bool\n",
+    "sha256": "13cae18d10b794505df302f9a82307851075a1119ca5d00af3be35173847af19"
+  },
+  "CorruptedFieldRecovery.rawReduceStepWordFromBits_refines": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStepWordFromBits_refines : \u2200 (modulusWord : List.{0} Bool) (degree : Nat)\n  (currentWord : List.{0} Bool)\n  (hactive : LE.le.{0} (HPow.hPow.{0, 0, 0} 2 degree) (CorruptedFieldRecovery.rawBitsToNat currentWord)),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawBitsToNat\n      (CorruptedFieldRecovery.rawReduceStepWordFromBits modulusWord degree currentWord))\n    (CorruptedFieldRecovery.rawReduceStep (CorruptedFieldRecovery.rawBitsToNat modulusWord) degree\n      (CorruptedFieldRecovery.rawBitsToNat currentWord))\n",
+    "sha256": "e7973b5afe1e7051fbffa107836790d8696848da974a14e68de8022ae13c015a"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelWordFromBits": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelWordFromBits : (modulusWord : List.{0} Bool) \u2192\n  (degree a : Nat) \u2192 (a : List.{0} Bool) \u2192 List.{0} Bool\n",
+    "sha256": "0e64a300f76539794e7907f0a4c5a949d3d39d6279088e5c71d28fd0dab5b617"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelWordFromBits_refines": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelWordFromBits_refines : \u2200 (modulusWord currentWord : List.{0} Bool)\n  (degree fuel : Nat),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawBitsToNat\n      (CorruptedFieldRecovery.rawReduceFuelWordFromBits modulusWord degree fuel currentWord))\n    (CorruptedFieldRecovery.rawReduceFuel (CorruptedFieldRecovery.rawBitsToNat modulusWord) degree fuel\n      (CorruptedFieldRecovery.rawBitsToNat currentWord))\n",
+    "sha256": "a6649d797b20da9bc89a7c8f2d2229729cd523cfbbca11b4afea37cd6369fde9"
+  }
+}
