@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianOriginalKernelBridge.lean",
+  "sha256": "5b44f8549b87353aa4532fe844bf58e2de2f5ded5807868df10d7fbe94bd6c5c",
+  "scope": "Reconstruction of any original F2 matrix kernel vector as computed full-scan candidate combination, with explicit Fintype on scanned free indices. Does not itself show serialized implementation, complete construction, or complexity.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS fullhashverified zero warnings"
+}
