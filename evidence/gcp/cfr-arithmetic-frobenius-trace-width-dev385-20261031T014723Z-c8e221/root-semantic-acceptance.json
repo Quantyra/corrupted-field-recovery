@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawArithmeticFrobeniusTraceWidth.lean",
+  "sha256": "135088b625cd17ec75663ae47f56276772e95bd25c668d32e6df7bd786866512",
+  "scope": "Root accepts generated Frobenius activation-trace register bound under nonzero modulus, modulus and x <2^W, W>0 and d<=W; all-input trace length at most declared auxiliary charge+1. No evaluator stack/heap or full workspace follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawCandidateFrobeniusActivationTrace_registers_lt": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobeniusActivationTrace_registers_lt : \u2200 {modulus d x W : Nat}\n  (hmod : Ne.{1} modulus 0) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LT.lt.{0} 0 W)\n  (hd : LE.le.{0} d W) (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)) (frame : CorruptedFieldRecovery.RawArithmeticFrame)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusActivationTrace modulus d x) frame)\n  (word : Nat) (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.RawArithmeticFrame.registers frame) word),\n  LT.lt.{0} word (HPow.hPow.{0, 0, 0} 2 (CorruptedFieldRecovery.rawArithmeticParameterWidth (HMul.hMul.{0, 0, 0} 2 W)))\n",
+    "sha256": "4f35d08cd6fedf0183b83ef4ffe8049b056ea8441bf032f58127489f9c5a120a"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusActivationTrace_length_le_charge": {
+    "emitted_type": "CorruptedFieldRecovery.rawCandidateFrobeniusActivationTrace_length_le_charge : \u2200 (modulus d x : Nat),\n  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.rawCandidateFrobeniusActivationTrace modulus d x))\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)\n",
+    "sha256": "dfec99fd6ce9209b8bc843bc97348428001f788b0449f4f995df3832bba445b1"
+  }
+}
