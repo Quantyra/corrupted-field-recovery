@@ -1,0 +1,8 @@
+{
+  "run": "cfr-arithmetic-frobenius-call-machine-dev426-20261031T081014Z-b8df07",
+  "utc": "2026-10-31T08:37:34.204459+00:00",
+  "archive_sha256": "7dfd3a90faaa2a42d2ba0c6ed39ee9ab20de94ab08cde4b73acfeef5ad5acc87",
+  "recovered_existing_remote_archive": true,
+  "no_repackage": true,
+  "all_terminal_log_hashes_verified": true
+}
