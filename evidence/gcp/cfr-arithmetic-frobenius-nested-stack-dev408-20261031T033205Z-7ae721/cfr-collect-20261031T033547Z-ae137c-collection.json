@@ -1,0 +1,23 @@
+{
+  "run": "cfr-arithmetic-frobenius-nested-stack-dev408-20261031T033205Z-7ae721",
+  "utc": "2026-10-31T03:36:41.776311+00:00",
+  "archive_sha256": "3d57e243c42af03312576af1ec87c16f9eaff6029b171ca9e20dcc5a8867b571",
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "bf45fb55b701febad1cfbebb12771abcc5036952d69fc09dbbd9a33ed2bafe9a",
+    "launch.log": "261980713b4eb9c80dbc9b1f0d56cc5eb25f2b9668e2b55b21b02f43532285dd",
+    "runner-pid": "2e37e2f6d78906f916d4caf280163acf250492c323e272b9502f3b132b3ef579",
+    "started-utc": "945608b501760e920cb3f24b877f1ddffb0bbd9561e58c0b1c905a0f375b21fb",
+    "terminal-receipt.json": "9aada46934c5db772538eaa242fdae23b78a6735f3e2ef1343251ff12cc77d2d",
+    "logs/build.stderr.txt": "c4a27db198c4d8632369ee6102944ef46e83c20d685f7c17a6aaff9cfcfc710f",
+    "logs/build.stdout.txt": "b657f2169784ca53feb9c2044580fc5b7345bb60f655731ed89f9ecebfbf95d0",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "7aa4fbbe373b71134eacf97c82e954e802e6b912d85604f7840fc7a3ea2e3336",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "69f511261a8061a076b78823f867f7fbb95d45250d7fee5039f0d2857050b9fa",
+    "logs/runner.stdout.txt": "83d38469c6273e4b26640b4c63e222a64b2e5d4c159e8fc31f6308eded2a0aab"
+  }
+}

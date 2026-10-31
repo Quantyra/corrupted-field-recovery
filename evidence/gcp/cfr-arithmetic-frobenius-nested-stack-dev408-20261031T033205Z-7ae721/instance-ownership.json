@@ -1,0 +1,9 @@
+{
+  "initial_state": "RUNNING",
+  "started_for_task": false,
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "run": "cfr-arithmetic-frobenius-nested-stack-dev408-20261031T033205Z-7ae721",
+  "utc": "2026-10-31T03:32:55.831706+00:00"
+}
