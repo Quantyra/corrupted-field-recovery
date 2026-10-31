@@ -1,0 +1,9 @@
+{
+    "entire_raw_inventory_reviewed":  true,
+    "active_lean_lake_absent":  true,
+    "stdout_sha256":  "BE7CEDBA3CD1AA372293A62939D3197815B0747365DF981791EA0783A2005795",
+    "conclusion":  "Only system/kernel boot services and this SSH inventory session.",
+    "campaign_lock_free":  true,
+    "unrelated_workload_absent":  true,
+    "utc":  "2026-10-31T06:59:13.7130899Z"
+}
