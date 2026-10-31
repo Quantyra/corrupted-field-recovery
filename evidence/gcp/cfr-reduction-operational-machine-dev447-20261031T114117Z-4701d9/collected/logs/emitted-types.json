@@ -1,0 +1,18 @@
+{
+  "CorruptedFieldRecovery.RawReductionMachineStep": {
+    "emitted_type": "CorruptedFieldRecovery.RawReductionMachineStep : (modulus degree : Nat) \u2192\n  (a : CorruptedFieldRecovery.RawReductionMachineState) \u2192\n    (a : Nat) \u2192 (a : CorruptedFieldRecovery.RawReductionMachineState) \u2192 Prop\n",
+    "sha256": "76236a386b096973636b5b9e6ff7ea9822c93ba233a073569ce1c130e3a261d8"
+  },
+  "CorruptedFieldRecovery.RawReductionMachineExec": {
+    "emitted_type": "CorruptedFieldRecovery.RawReductionMachineExec : (modulus degree : Nat) \u2192\n  (a : CorruptedFieldRecovery.RawReductionMachineState) \u2192 (a a : Nat) \u2192 Prop\n",
+    "sha256": "f337bd02e1889981248cc83e324a8603af76fdd5c3bcc82a952cf97380823e37"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelBitCosted_has_machine_execution": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelBitCosted_has_machine_execution : \u2200 (modulus degree fuel current : Nat),\n  CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current }\n    (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel current).1\n    (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel current).2\n",
+    "sha256": "26baa40e0f9b40cc6558c2280eb72165d0fd23b8417a7357a8682b6183e9e946"
+  },
+  "CorruptedFieldRecovery.rawReduceFuelBitCosted_machine_refines_rawReduceFuel": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceFuelBitCosted_machine_refines_rawReduceFuel : \u2200 (modulus degree fuel current : Nat),\n  CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current }\n    (CorruptedFieldRecovery.rawReduceFuel modulus degree fuel current)\n    (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel current).2\n",
+    "sha256": "063be7c8e90763ddbc2d8526581344fc4ada6e51aff0861069341069e8aeaf16"
+  }
+}

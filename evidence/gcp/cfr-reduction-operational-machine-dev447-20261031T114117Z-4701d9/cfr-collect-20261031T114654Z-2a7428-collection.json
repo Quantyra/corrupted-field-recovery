@@ -1,0 +1,26 @@
+{
+  "run": "cfr-reduction-operational-machine-dev447-20261031T114117Z-4701d9",
+  "utc": "2026-10-31T11:47:58.434806+00:00",
+  "archive_sha256": "11f954e246afe06f11259cb01fdaa6c22ded87cc51693480a1cfc7c5421426b5",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "5711b453cdec837feb1006707a683f264053ea7e1d4709fc8bd22b1715842021",
+    "launch.log": "23165059f36a357983b5eb2d4a8de87c473c911aa769030c3bdea392b03389ec",
+    "runner-pid": "1ed7cb138c4065bc1ee4882f72e983d71b9714bf5d5941e0a5ad0dd0709e6651",
+    "started-utc": "a1f825cd13dbe49f80602cd01e7c393da2c673caa41c11f57fb4b8f9499ec4c0",
+    "terminal-receipt.json": "780c92dbf5885aa366587a325de98389b0cf63b8c6dfe9af2073154e6f4be312",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "00115d1444fe6ef80eccec590446110bb79836a132055828ea010d5775c6e870",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "7a207c7d52795e315451393783c7ca154102ed0fa6a614af69aeab3d279abebd",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "7aa4fbbe373b71134eacf97c82e954e802e6b912d85604f7840fc7a3ea2e3336",
+    "logs/emitted-types.json": "20b943d1d6c01ea7d08f2c64e3860fb6869d2e2961616be8a2e7853d26dc250f",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "23165059f36a357983b5eb2d4a8de87c473c911aa769030c3bdea392b03389ec"
+  }
+}

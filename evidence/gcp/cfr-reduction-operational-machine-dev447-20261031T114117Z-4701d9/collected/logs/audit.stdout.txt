@@ -1,0 +1,25 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawReductionMachineStep
+CorruptedFieldRecovery.RawReductionMachineStep : (modulus degree : Nat) →
+  (a : CorruptedFieldRecovery.RawReductionMachineState) →
+    (a : Nat) → (a : CorruptedFieldRecovery.RawReductionMachineState) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.RawReductionMachineStep
+'CorruptedFieldRecovery.RawReductionMachineStep' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.RawReductionMachineExec
+CorruptedFieldRecovery.RawReductionMachineExec : (modulus degree : Nat) →
+  (a : CorruptedFieldRecovery.RawReductionMachineState) → (a a : Nat) → Prop
+CFR_TYPE_END:CorruptedFieldRecovery.RawReductionMachineExec
+'CorruptedFieldRecovery.RawReductionMachineExec' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelBitCosted_has_machine_execution
+CorruptedFieldRecovery.rawReduceFuelBitCosted_has_machine_execution : ∀ (modulus degree fuel current : Nat),
+  CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current }
+    (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel current).1
+    (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel current).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelBitCosted_has_machine_execution
+'CorruptedFieldRecovery.rawReduceFuelBitCosted_has_machine_execution' depends on axioms: [propext]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceFuelBitCosted_machine_refines_rawReduceFuel
+CorruptedFieldRecovery.rawReduceFuelBitCosted_machine_refines_rawReduceFuel : ∀ (modulus degree fuel current : Nat),
+  CorruptedFieldRecovery.RawReductionMachineExec modulus degree { fuel := fuel, current := current }
+    (CorruptedFieldRecovery.rawReduceFuel modulus degree fuel current)
+    (CorruptedFieldRecovery.rawReduceFuelBitCosted modulus degree fuel current).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceFuelBitCosted_machine_refines_rawReduceFuel
+'CorruptedFieldRecovery.rawReduceFuelBitCosted_machine_refines_rawReduceFuel' depends on axioms: [propext]

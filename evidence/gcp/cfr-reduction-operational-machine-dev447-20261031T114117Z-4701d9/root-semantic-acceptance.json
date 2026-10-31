@@ -1,0 +1,10 @@
+{
+    "scope":  "Root accepts existence of abstract fuel-bounded reduction execution with recurrence output and identical declared cost. Cancellation labels use bit-costed primitives wholesale. No uniqueness/completeness of all executions, primitive implementation, actual runtime or full recovery cost.",
+    "source":  "CorruptedFieldRecovery/RawReductionOperationalMachine.lean",
+    "accepted":  true,
+    "sha256":  "e00cf7618508eb29cd419a05cffce6c5df201b0a04ba3b14bd182c7f40bb4f0b",
+    "axioms":  [
+                   "propext"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}
