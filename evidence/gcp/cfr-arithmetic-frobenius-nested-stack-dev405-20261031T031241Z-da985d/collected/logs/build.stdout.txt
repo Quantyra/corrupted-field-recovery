@@ -1,0 +1,49 @@
+✖ [2080/2080] Building CorruptedFieldRecovery.RawArithmeticFrobeniusNestedStackTrace (2.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:92:10: Type mismatch
+  rawCandidateFrobeniusActivationTrace_registers_lt hmodNe hmodWidth2 hW2
+    (Decidable.byContradiction fun a => rawCandidateFrobeniusNestedStackTrace_registers_lt._proof_1_7 hW a) hx2
+    (rawArithmeticFrobeniusFrame modulus 0 x x 0) hparent word hword
+has type
+  word < 2 ^ rawArithmeticParameterWidth (2 * (2 * W))
+but is expected to have type
+  word < 2 ^ rawArithmeticParameterWidth (2 * W)
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:117:40: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  e - f ≥ 1
+  e - h ≥ 1
+  c ≥ 1
+  c - g ≥ 1
+  2*c - j ≤ -1
+  b - f ≥ 1
+  b - i ≥ 1
+  a ≥ 2
+  a - b ≤ -1
+  a - e ≤ -1
+where
+ a := ↑modulus
+ b := ↑2 ^ W
+ c := ↑W
+ e := ↑2 ^ (2 * W)
+ f := ↑x
+ g := ↑d
+ h := ↑square.1
+ i := ↑rem.1
+ j := ↑?m.400
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:121:16: `simp` made no progress
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:148:41: Application type mismatch: The argument
+  hrem
+has type
+  rem.1 < 2 ^ W
+but is expected to have type
+  d ≤ W
+in the application
+  ih d ?m.611 hrem
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticFrobeniusNestedStackTrace
