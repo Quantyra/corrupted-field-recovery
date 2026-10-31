@@ -1,0 +1,89 @@
+✖ [3016/3016] Building CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitAppend (2.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:50:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (left ++ ?m.127)[↑j]?
+in the target expression
+  (left ++ right)[↑(Fin.cast hsize (Fin.castAdd right.size j))]?.getD default =
+    (Fin.addCases (motive := fun x => Fin m → ZMod 2) f g ∘ Fin.cast ⋯) (Fin.cast hsize (Fin.castAdd right.size j))
+
+case h.left
+m : ℕ
+left right : Array (Fin m → ZMod 2)
+f : Fin left.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily left
+g : Fin right.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily right
+hsize : left.size + right.size = (left ++ right).size
+h : Fin (left.size + right.size) → Fin m → ZMod 2 := Fin.addCases (motive := fun x => Fin m → ZMod 2) f g
+i : Fin (left ++ right).size
+j✝ : Fin (left.size + right.size) := Fin.cast ⋯ i
+hj : Fin.cast hsize j✝ = i
+j : Fin left.size
+⊢ (left ++ right)[↑(Fin.cast hsize (Fin.castAdd right.size j))]?.getD default =
+    (Fin.addCases (motive := fun x => Fin m → ZMod 2) f g ∘ Fin.cast ⋯) (Fin.cast hsize (Fin.castAdd right.size j))
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:55:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (left ++ ?m.136)[left.size + ↑j]?
+in the target expression
+  (left ++ right)[↑(Fin.cast hsize (Fin.natAdd left.size j))]?.getD default =
+    (Fin.addCases (motive := fun x => Fin m → ZMod 2) f g ∘ Fin.cast ⋯) (Fin.cast hsize (Fin.natAdd left.size j))
+
+case h.right
+m : ℕ
+left right : Array (Fin m → ZMod 2)
+f : Fin left.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily left
+g : Fin right.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily right
+hsize : left.size + right.size = (left ++ right).size
+h : Fin (left.size + right.size) → Fin m → ZMod 2 := Fin.addCases (motive := fun x => Fin m → ZMod 2) f g
+i : Fin (left ++ right).size
+j✝ : Fin (left.size + right.size) := Fin.cast ⋯ i
+hj : Fin.cast hsize j✝ = i
+j : Fin right.size
+⊢ (left ++ right)[↑(Fin.cast hsize (Fin.natAdd left.size j))]?.getD default =
+    (Fin.addCases (motive := fun x => Fin m → ZMod 2) f g ∘ Fin.cast ⋯) (Fin.cast hsize (Fin.natAdd left.size j))
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:88:23: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Set.range (actualGreedyArrayColumnFamily (left ++ right))
+in the target expression
+  Submodule.span (ZMod 2) (Set.range h) =
+    Submodule.span (ZMod 2) (Set.range (actualGreedyArrayColumnFamily left)) ⊔
+      Submodule.span (ZMod 2) (Set.range (actualGreedyArrayColumnFamily right))
+
+m : ℕ
+left right : Array (Fin m → ZMod 2)
+f : Fin left.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily left
+g : Fin right.size → Fin m → ZMod 2 := actualGreedyArrayColumnFamily right
+hsize : left.size + right.size = (left ++ right).size
+h : Fin (left.size + right.size) → Fin m → ZMod 2 := Fin.addCases (motive := fun x => Fin m → ZMod 2) f g
+hfamily : actualGreedyArrayColumnFamily (left ++ right) = h ∘ Fin.cast ⋯
+hcastRange :
+  Set.range (actualGreedyArrayColumnFamily (left ++ right)) =
+    Set.range (actualGreedyArrayColumnFamily (left ++ right) ∘ Fin.cast hsize)
+hcomp : actualGreedyArrayColumnFamily (left ++ right) ∘ Fin.cast hsize = h
+hrange✝ : Set.range h = Set.range f ∪ Set.range g
+hrange : Set.range (actualGreedyArrayColumnFamily (left ++ right)) = Set.range f ∪ Set.range g
+⊢ Submodule.span (ZMod 2) (Set.range h) =
+    Submodule.span (ZMod 2) (Set.range (actualGreedyArrayColumnFamily left)) ⊔
+      Submodule.span (ZMod 2) (Set.range (actualGreedyArrayColumnFamily right))
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:48:22: This simp argument is unused:
+  Fin.addCases
+
+Hint: Omit it from the simp argument list.
+  simp only [h, F̵i̵n̵.̵a̵d̵d̵C̵a̵s̵e̵s̵,̵ ̵actualGreedyArrayColumnFamily, Array.getElem!_eq_getD,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲Array.getD_eq_getD_getElem?]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:53:22: This simp argument is unused:
+  Fin.addCases
+
+Hint: Omit it from the simp argument list.
+  simp only [h, F̵i̵n̵.̵a̵d̵d̵C̵a̵s̵e̵s̵,̵ ̵actualGreedyArrayColumnFamily, Array.getElem!_eq_getD,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲Array.getD_eq_getD_getElem?]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitAppend.lean:113:8: This simp argument is unused:
+  Array.getElem?_ofFn
+
+Hint: Omit it from the simp argument list.
+  simp [A̵r̵r̵a̵y̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵o̵f̵F̵n̵,̵ ̵hi, actualGreedyArrayOrbitIndex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayOrbitAppend
