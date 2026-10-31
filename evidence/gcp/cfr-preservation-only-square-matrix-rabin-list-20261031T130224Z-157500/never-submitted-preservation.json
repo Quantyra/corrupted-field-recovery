@@ -1,0 +1,28 @@
+{
+  "status": "never-submitted preservation-only",
+  "sources": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArraySquareMatrix.lean": "276679a8097142077f2073b89fed8e824779bb17a511101e20c440c4cce4f44f",
+    "CorruptedFieldRecovery/RawRabinListOperationalMachine.lean": "2d0f97514ddc3dae5fb59f501180f75872fb492b7a94e20c0931e6b014a96af9"
+  },
+  "archive_sha256": "7e95e514c3a418d5fdbaf80202936b5ba510b7b65811bc72fc66067b7b841b5b",
+  "utf8_no_bom_verified": true,
+  "no_build_audit_cloud_or_lifecycle_operation": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitRun.lean": "e453084656f03f57924c35ee5a48add52f3de6f3d0fdd800905e6ab13b289f52",
+    "CorruptedFieldRecovery/RawRabinIndexOperationalMachine.lean": "d744c011658f859b81ced1f978222d2a6b6bf90d66c0819215f97a62233e9c2e",
+    "CorruptedFieldRecovery/RawRabinScanExecutableCost.lean": "813b4e240b07b1a0b97af7e67b946395f4fe52f56fafed72d8e135555210c0db",
+    "CorruptedFieldRecovery/RawListRangeBitCost.lean": "bcf1fa6e48125395a818901aafaa8eecfd43b993e005cf3da16494eadd73e902"
+  },
+  "dependency_status": {
+    "ArrayOrbitRun": "accepted460",
+    "RawRabinIndexOperationalMachine": "Uncompiled no-BOM D744 preservation successor, not cloud accepted",
+    "RawRabinScanExecutableCost": "accepted279",
+    "RawListRangeBitCost": "accepted286"
+  },
+  "scope": {
+    "square_matrix": "Uncompiled direct array square-matrix and column-family/range/full-span proof attempts, composed with accepted conditional three-pass run. Requires exact array length and explicit irreducible monic annihilator premises. No computed inverse or certificate serialization.",
+    "rabin_list": "Uncompiled short-circuit list execution composition, attempted soundness/existence/predicate/charge/range-fast-check bridges. Depends on uncompiled index draft. Library List.range construction, primitive multiply implementation, runtime and heap bounds excluded."
+  },
+  "prior_archives_unchanged": true,
+  "certification_claim": false
+}
