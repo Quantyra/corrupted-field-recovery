@@ -1,0 +1,25 @@
+✖ [3005/3005] Building CorruptedFieldRecovery.S010BalanceGaussianIndexLayoutBridge (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean:13:55: unsolved goals
+s : ℕ
+⊢ List.flatMap (fun j => List.ofFn ((fun k => (0, j, k)) ∘ fun i => i)) (List.ofFn fun i => i) ++
+      (List.flatMap (fun j => List.ofFn ((fun k => (1, j, k)) ∘ fun i => i)) (List.ofFn fun i => i) ++
+        (List.flatMap (fun j => List.ofFn ((fun k => (2, j, k)) ∘ fun i => i)) (List.ofFn fun i => i) ++
+          List.flatMap (fun j => List.ofFn ((fun k => (3, j, k)) ∘ fun i => i)) (List.ofFn fun i => i))) =
+    (List.ofFn fun j => (⟨↑j, ⋯⟩.divNat, ⟨↑j, ⋯⟩.modNat.divNat, ⟨↑j, ⋯⟩.modNat.modNat)) ++
+      ((List.ofFn fun j =>
+          (⟨3 * s * (3 * s) + ↑j, ⋯⟩.divNat, ⟨3 * s * (3 * s) + ↑j, ⋯⟩.modNat.divNat,
+            ⟨3 * s * (3 * s) + ↑j, ⋯⟩.modNat.modNat)) ++
+        ((List.ofFn fun j =>
+            (⟨2 * (3 * s * (3 * s)) + ↑j, ⋯⟩.divNat, ⟨2 * (3 * s * (3 * s)) + ↑j, ⋯⟩.modNat.divNat,
+              ⟨2 * (3 * s * (3 * s)) + ↑j, ⋯⟩.modNat.modNat)) ++
+          List.ofFn fun j =>
+            (⟨3 * (3 * s * (3 * s)) + ↑j, ⋯⟩.divNat, ⟨3 * (3 * s * (3 * s)) + ↑j, ⋯⟩.modNat.divNat,
+              ⟨3 * (3 * s * (3 * s)) + ↑j, ⋯⟩.modNat.modNat)))
+error: CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean:24:58: unsolved goals
+s : ℕ
+⊢ List.flatMap (fun p => List.ofFn ((fun q => (p, q)) ∘ fun i => i)) (List.ofFn fun i => i) =
+    (List.ofFn fun i => List.ofFn fun j => (⟨↑i * (3 * s) + ↑j, ⋯⟩.divNat, ⟨↑i * (3 * s) + ↑j, ⋯⟩.modNat)).flatten
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianIndexLayoutBridge
