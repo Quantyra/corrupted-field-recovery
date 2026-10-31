@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-31T09:12:33.163331+00:00",
+  "run": "cfr-arithmetic-frobenius-call-run-dev430-20261031T085743Z-43435c",
+  "wrapper_sha256": "f9ffe7eb7fc1cd8b99cba4b78f2ff963a315e97352f21724c334ed7c4c7f3b03",
+  "controller_sha256": "c0151fb3e8483a38f1e20c9d08fbe73eec391e7bc63808617792b54c6fd9cd72",
+  "scope": "Read-only verification marker and one-second SSH terminal grace only.",
+  "guards_and_hashes_unchanged": true,
+  "immutable_inputs_unchanged": true,
+  "runner_timeout_unchanged": true,
+  "launch_once_rule_unchanged": true,
+  "evidence": "Prior425 read-only transfer-completion probe succeeded;430 normal verification failed twice after printing all five hashes OK, with no launch intent"
+}
