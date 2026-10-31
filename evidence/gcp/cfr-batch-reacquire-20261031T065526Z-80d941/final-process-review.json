@@ -1,0 +1,8 @@
+{
+    "utc":  "2026-10-31T09:55:46.2150183Z",
+    "raw_stdout":  "evidence/gcp/cfr-batch-reacquire-20261031T065526Z-80d941/cfr-final-full-process-guard-20261031T095434Z-aaf133.stdout.txt",
+    "raw_stdout_sha256":  "a0402ef55025302fd3c68e6c2abeaaf614fecd286e7aad55b08018fa1f09ae1e",
+    "entire_process_inventory_read":  true,
+    "findings":  "Only system/kernel services and this inventory SSH session; no unrelated workload, no Lean/Lake, campaign lock free.",
+    "safe_for_separately_guarded_stop":  true
+}
