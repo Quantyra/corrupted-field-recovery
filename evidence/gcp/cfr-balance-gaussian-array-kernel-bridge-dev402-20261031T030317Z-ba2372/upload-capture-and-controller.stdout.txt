@@ -1,0 +1,5 @@
+inputs.tar.gz             | 4 kB |   4.0 kB/s | ETA: 00:01:01 |   1%inputs.tar.gz             | 248 kB | 249.0 kB/s | ETA: 00:00:00 | 100%
+capture-manifest.json     | 4 kB |   4.0 kB/s | ETA: 00:00:06 |  12%capture-manifest.json     | 30 kB |  30.9 kB/s | ETA: 00:00:00 | 100%
+gcp_cfr_runner.py         | 4 kB |   4.0 kB/s | ETA: 00:00:02 |  26%gcp_cfr_runner.py         | 15 kB |  15.3 kB/s | ETA: 00:00:00 | 100%
+run.sh                    | 0 kB |   0.7 kB/s | ETA: 00:00:00 | 100%
+bootstrap-assets.json     | 0 kB |   0.2 kB/s | ETA: 00:00:00 | 100%

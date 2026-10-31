@@ -1,0 +1,59 @@
+✖ [3010/3010] Building CorruptedFieldRecovery.S010BalanceGaussianArrayKernelBridge (53s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.lean:26:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (actualBalanceGaussianArrayView (actualBalanceGaussianArrayColumnScan cells used columns).1,
+      (actualBalanceGaussianArrayColumnScan cells used columns).2).1
+in the target expression
+  actualBalanceGaussianArrayView (actualBalanceGaussianArrayColumnScan cells used columns).1 *ᵥ x = 0 ↔
+    actualBalanceGaussianArrayView cells *ᵥ x = 0
+
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+used : Finset (Fin m)
+columns : List (Fin n)
+x : Fin n → ZMod 2
+hscan :
+  (actualBalanceGaussianArrayView (actualBalanceGaussianArrayColumnScan cells used columns).1,
+      (actualBalanceGaussianArrayColumnScan cells used columns).2) =
+    balanceGaussianColumnScan (actualBalanceGaussianArrayView cells) used columns
+hmatrix :
+  (actualBalanceGaussianArrayView (actualBalanceGaussianArrayColumnScan cells used columns).1,
+        (actualBalanceGaussianArrayColumnScan cells used columns).2).1 =
+    (balanceGaussianColumnScan (actualBalanceGaussianArrayView cells) used columns).1
+⊢ actualBalanceGaussianArrayView (actualBalanceGaussianArrayColumnScan cells used columns).1 *ᵥ x = 0 ↔
+    actualBalanceGaussianArrayView cells *ᵥ x = 0
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.lean:38:8: don't know how to synthesize implicit argument `β`
+  @Prod.fst (Array (Array (ZMod 2))) (List (Fin (?m.29 cells x) × Fin n))
+    (actualBalanceGaussianArrayColumnScan cells ∅ (List.ofFn fun column => column))
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+x : Fin n → ZMod 2
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.lean:38:9: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianArrayColumnScan (?m.29 cells x) n cells ∅ (List.ofFn fun column => column)
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+x : Fin n → ZMod 2
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayKernelBridge.lean:38:52: don't know how to synthesize implicit argument `α`
+  @EmptyCollection.emptyCollection (Finset (Fin (?m.29 cells x))) Finset.instEmptyCollection
+context:
+m n : ℕ
+inst✝ : Fintype (Fin n)
+cells : Array (Array (ZMod 2))
+x : Fin n → ZMod 2
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayKernelBridge
