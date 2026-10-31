@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-31T01:19:02.991936+00:00",
+  "run": "cfr-balance-gaussian-index-layout-dev376-20261031T011706Z-c04c99",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
