@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-31T12:52:16.927112+00:00",
+  "single_start_utc": "2026-10-31T10:07:52.082Z",
+  "single_stop_command": "cfr-shutdown-20261031T124846Z-e32666-stop-task-instance",
+  "stop_command_exit": 1,
+  "stop_failure": "Same-account token refresh requires reauthentication while gcloud polls stop operation",
+  "last_successful_independent_state": "STOPPING",
+  "task_egress_removed": true,
+  "final_termination_verified": false,
+  "automatic_stop_ceiling": "2026-10-31T14:07:52.082Z",
+  "duplicate_mutations": false,
+  "next_action": "Reauthenticate dfredriksen@quantyra.org, then read-only exact VM/disk verification; do not repeat stop mutation"
+}
