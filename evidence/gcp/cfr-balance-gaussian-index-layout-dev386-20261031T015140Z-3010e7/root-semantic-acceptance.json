@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianIndexLayoutBridge.lean",
+  "sha256": "9d76533626c7ef47263f42459aa2ef7b94c9470650757b53396399f9a9741493",
+  "scope": "Root accepts row/column lists as inverse-equivalence ofFn enumerations, corresponding getElem? results, and nested serialized-array cell equality to raw Gaussian matrix for all Fin row/column; no raw-size premise. No array elimination, machine cost or full recovery follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings; prior384 harness-only audit-name failure preserved"
+}

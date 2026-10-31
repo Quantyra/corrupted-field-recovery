@@ -1,0 +1,22 @@
+{
+  "CorruptedFieldRecovery.actualBalanceGaussianRowList_eq_ofFn_symm": {
+    "emitted_type": "CorruptedFieldRecovery.actualBalanceGaussianRowList_eq_ofFn_symm : \u2200 (s : Nat),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceRowList s)\n    (List.ofFn.{0} fun row => (Equiv.symm.{1, 1} (CorruptedFieldRecovery.actualBalanceGaussianRowEquiv s)) row)\n",
+    "sha256": "773f7356f937876dadfeb3a2242e3c02aa76eef429ad1cf50bb0db9f29851ef8"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianColumnList_eq_ofFn_symm": {
+    "emitted_type": "CorruptedFieldRecovery.actualBalanceGaussianColumnList_eq_ofFn_symm : \u2200 (s : Nat),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceColumnList s)\n    (List.ofFn.{0} fun col => (Equiv.symm.{1, 1} (CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv s)) col)\n",
+    "sha256": "178c0d1f21958bdc1e6468cdf462d6a80b3f6026dd7f73b2a1b243be4cee4573"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianRowList_getElem?_equiv": {
+    "emitted_type": "CorruptedFieldRecovery.actualBalanceGaussianRowList_getElem?_equiv : \u2200 (s : Nat)\n  (row : Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s)))),\n  Eq.{1} (GetElem?.getElem?.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceRowList s) \u2191row)\n    (Option.some.{0} ((Equiv.symm.{1, 1} (CorruptedFieldRecovery.actualBalanceGaussianRowEquiv s)) row))\n",
+    "sha256": "e9db0508716085b0f5f479a9fb749cd239da1d993fe0b4ffd498c2e11ebae682"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianColumnList_getElem?_equiv": {
+    "emitted_type": "CorruptedFieldRecovery.actualBalanceGaussianColumnList_getElem?_equiv : \u2200 (s : Nat)\n  (col : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))),\n  Eq.{1} (GetElem?.getElem?.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceColumnList s) \u2191col)\n    (Option.some.{0} ((Equiv.symm.{1, 1} (CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv s)) col))\n",
+    "sha256": "6d4319f2d28c9295452c07e98fb8fcefde94347d2946eaed448da553e1f2a1d5"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedCell_eq_rawMatrix": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedCell_eq_rawMatrix : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (row : Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))\n  (col : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))),\n  Eq.{1}\n    (Option.bind.{0, 0}\n      (GetElem?.getElem?.{0, 0, 0}\n        (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix (CorruptedFieldRecovery.decodeRawArray raw)\n          tape)\n        \u2191row)\n      fun rowArray => GetElem?.getElem?.{0, 0, 0} rowArray \u2191col)\n    (Option.some.{0} (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape row col))\n",
+    "sha256": "29c5fedf7a6043f6bb2163b8327998780422f93177262e368e66b38bf74abd14"
+  }
+}
