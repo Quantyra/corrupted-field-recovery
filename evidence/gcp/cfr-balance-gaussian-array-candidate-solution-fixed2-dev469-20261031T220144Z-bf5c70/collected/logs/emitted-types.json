@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.actualGreedyArraySpanWitness?_selectedCandidate_solves": {
+    "emitted_type": "@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_selectedCandidate_solves : \u2200 {m : Nat}\n  (columns : Array.{0} ((a : Fin m) \u2192 ZMod 2)) (target : (a : Fin m) \u2192 ZMod 2)\n  {free : Fin (HAdd.hAdd.{0, 0, 0} (Array.size.{0} columns) 1)}\n  (hfound : Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns target) (Option.some.{0} free)),\n  have run := CorruptedFieldRecovery.actualGreedyArrayAugmentedScan columns target;\n  have candidate :=\n    CorruptedFieldRecovery.balanceGaussianFreeKernelCandidate\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayView run.1) run.2 free;\n  Eq.{1}\n    (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySpanMatrix columns) fun i =>\n      candidate (Fin.castSucc i))\n    target\n",
+    "sha256": "7d04b4b5f240f053f97be057e36412a7d974735d90be7cb1af079e685a91be23"
+  }
+}

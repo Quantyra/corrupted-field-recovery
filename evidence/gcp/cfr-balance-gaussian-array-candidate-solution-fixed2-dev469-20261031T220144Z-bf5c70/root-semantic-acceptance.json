@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateSolutionFixed2.lean",
+  "sha256": "07b710678d16698395f3a0a44541c53b1d3dfc2d5ceb3226a627411b52afa879",
+  "scope": "Root accepts: if actual span witness selector returns some free index, the same scanned free-kernel candidate restricted to original coordinates solves the target affine system. No unconditional witness, inverse, runtime or full constructor.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

@@ -1,0 +1,17 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_selectedCandidate_solves
+@CorruptedFieldRecovery.actualGreedyArraySpanWitness?_selectedCandidate_solves : ∀ {m : Nat}
+  (columns : Array.{0} ((a : Fin m) → ZMod 2)) (target : (a : Fin m) → ZMod 2)
+  {free : Fin (HAdd.hAdd.{0, 0, 0} (Array.size.{0} columns) 1)}
+  (hfound : Eq.{1} (CorruptedFieldRecovery.actualGreedyArraySpanWitness? columns target) (Option.some.{0} free)),
+  have run := CorruptedFieldRecovery.actualGreedyArrayAugmentedScan columns target;
+  have candidate :=
+    CorruptedFieldRecovery.balanceGaussianFreeKernelCandidate
+      (CorruptedFieldRecovery.actualBalanceGaussianArrayView run.1) run.2 free;
+  Eq.{1}
+    (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySpanMatrix columns) fun i =>
+      candidate (Fin.castSucc i))
+    target
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArraySpanWitness?_selectedCandidate_solves
+'CorruptedFieldRecovery.actualGreedyArraySpanWitness?_selectedCandidate_solves' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
