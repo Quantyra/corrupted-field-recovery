@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayDeterministicScan.lean",
+  "sha256": "0293406fe00c42ce1bfd139559491f94d6efcce955f24ee294506f5aecb10288",
+  "scope": "Root accepts nested-array deterministic scan selector, scan/pivot refinement, serialized scan and kernel equivalence to raw matrix. No machine cost or end-to-end recovery follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayFirstUnusedPivotRow": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayFirstUnusedPivotRow : {m n : Nat} \u2192\n  (cells : Array.{0} (Array.{0} (ZMod 2))) \u2192 (column : Fin n) \u2192 (used : Finset.{0} (Fin m)) \u2192 Option.{0} (Fin m)\n",
+    "sha256": "931cf9f13448a98ecf098bac09dc1330e3810ce8cc7ed11c0c9eaa1d05bf9e4d"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayFirstUnusedPivotRow_eq": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayFirstUnusedPivotRow_eq : \u2200 {m n : Nat}\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (column : Fin n) (used : Finset.{0} (Fin m)),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianArrayFirstUnusedPivotRow cells column used)\n    (CorruptedFieldRecovery.balanceFirstUnusedPivotRow (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells)\n      column used)\n",
+    "sha256": "0c97f3aac25be2e05737e6dc868e6523642e4612c9675ad1ba3aa58ec2fc5f39"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan : {m n : Nat} \u2192\n  (cells : Array.{0} (Array.{0} (ZMod 2))) \u2192\n    (a : Finset.{0} (Fin m)) \u2192\n      (a : List.{0} (Fin n)) \u2192 Prod.{0, 0} (Array.{0} (Array.{0} (ZMod 2))) (List.{0} (Prod.{0, 0} (Fin m) (Fin n)))\n",
+    "sha256": "9d3bc5d64731ba80eb488fe6ab85a12eef9d906b3e6a922593b7c385cded2752"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan_refines": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan_refines : \u2200 {m n : Nat}\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (used : Finset.{0} (Fin m)) (columns : List.{0} (Fin n)),\n  Eq.{1}\n    (Prod.mk.{0, 0}\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n        (CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan cells used columns).1)\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayColumnScan cells used columns).2)\n    (CorruptedFieldRecovery.balanceGaussianColumnScan (CorruptedFieldRecovery.actualBalanceGaussianArrayView cells) used\n      columns)\n",
+    "sha256": "efb45f79218959accb5f2e08de4bea76aeb6c6c1882c3d5d059a508d1033db5a"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan : {s : Nat} \u2192\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) \u2192\n    (tape : CorruptedFieldRecovery.FiveWordTape s) \u2192\n      Prod.{0, 0} (Array.{0} (Array.{0} (ZMod 2)))\n        (List.{0}\n          (Prod.{0, 0}\n            (Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))\n            (Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s)))))\n",
+    "sha256": "0afd435e246f04fdbe6e7ebdd0a79e6e76cdc79174d20af7a556c855b50be1e6"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan_refines": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan_refines : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  Eq.{1}\n    (Prod.mk.{0, 0}\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan raw tape).1)\n      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan raw tape).2)\n    (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape)\n",
+    "sha256": "64ad49fd41f0c100e0cc6c3cca265d2295209f30740195a9ab7899fdbbc41e64"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan_kernel_iff": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan_kernel_iff : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)\n  (x : (a : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))) \u2192 ZMod 2),\n  Iff\n    (Eq.{1}\n      (Matrix.mulVec.{0, 0, 0}\n        (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n          (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayDeterministicScan raw tape).1)\n        x)\n      0)\n    (Eq.{1} (Matrix.mulVec.{0, 0, 0} (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape) x) 0)\n",
+    "sha256": "859367e52cc96383f7f81e9eef4448bfec01ec67d70e550cdb48fd91f8180de4"
+  }
+}
