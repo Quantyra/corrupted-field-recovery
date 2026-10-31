@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-31T22:21:10.225873+00:00",
+  "run": "cfr-balance-gaussian-array-candidate-inverse-dev471-20261031T221416Z-857958",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,66 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordXorBit
+CorruptedFieldRecovery.rawBinaryWordXorBit : (a b : Bool) → Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordXorBit
+'CorruptedFieldRecovery.rawBinaryWordXorBit' does not depend on any axioms
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordXor
+CorruptedFieldRecovery.rawBinaryWordXor : (a a : List.{0} Bool) → List.{0} Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordXor
+'CorruptedFieldRecovery.rawBinaryWordXor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordXor_length
+CorruptedFieldRecovery.rawBinaryWordXor_length : ∀ (left right : List.{0} Bool),
+  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.rawBinaryWordXor left right))
+    (Max.max.{0} (List.length.{0} left) (List.length.{0} right))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordXor_length
+'CorruptedFieldRecovery.rawBinaryWordXor_length' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordXor_refines_natXor
+CorruptedFieldRecovery.rawBinaryWordXor_refines_natXor : ∀ (left right : List.{0} Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawBinaryWordXor left right))
+    (Nat.xor (CorruptedFieldRecovery.rawBitsToNat left) (CorruptedFieldRecovery.rawBitsToNat right))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordXor_refines_natXor
+'CorruptedFieldRecovery.rawBinaryWordXor_refines_natXor' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBitsToNat_natBits
+CorruptedFieldRecovery.rawBitsToNat_natBits : ∀ (value : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (Nat.bits value)) value
+CFR_TYPE_END:CorruptedFieldRecovery.rawBitsToNat_natBits
+'CorruptedFieldRecovery.rawBitsToNat_natBits' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawNatBitsXor_refines_natXor
+CorruptedFieldRecovery.rawNatBitsXor_refines_natXor : ∀ (left right : Nat),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawBinaryWordXor (Nat.bits left) (Nat.bits right)))
+    (Nat.xor left right)
+CFR_TYPE_END:CorruptedFieldRecovery.rawNatBitsXor_refines_natXor
+'CorruptedFieldRecovery.rawNatBitsXor_refines_natXor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStepWord
+CorruptedFieldRecovery.rawReduceStepWord : (modulus degree current : Nat) → List.{0} Bool
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStepWord
+'CorruptedFieldRecovery.rawReduceStepWord' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStepWord_refines
+CorruptedFieldRecovery.rawReduceStepWord_refines : ∀ (modulus degree current : Nat),
+  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawReduceStepWord modulus degree current))
+    (CorruptedFieldRecovery.rawReduceStep modulus degree current)
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStepWord_refines
+'CorruptedFieldRecovery.rawReduceStepWord_refines' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordXorGateCount
+CorruptedFieldRecovery.rawBinaryWordXorGateCount : (left right : List.{0} Bool) → Nat
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordXorGateCount
+'CorruptedFieldRecovery.rawBinaryWordXorGateCount' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawBinaryWordXorGateCount_eq_width
+CorruptedFieldRecovery.rawBinaryWordXorGateCount_eq_width : ∀ (left right : List.{0} Bool),
+  Eq.{1} (CorruptedFieldRecovery.rawBinaryWordXorGateCount left right)
+    (Max.max.{0} (List.length.{0} left) (List.length.{0} right))
+CFR_TYPE_END:CorruptedFieldRecovery.rawBinaryWordXorGateCount_eq_width
+'CorruptedFieldRecovery.rawBinaryWordXorGateCount_eq_width' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawReduceStepWord_gateCount
+CorruptedFieldRecovery.rawReduceStepWord_gateCount : ∀ (modulus degree current : Nat),
+  Eq.{1}
+    (CorruptedFieldRecovery.rawBinaryWordXorGateCount (Nat.bits current)
+      (CorruptedFieldRecovery.rawBinaryWordShiftLeft (HSub.hSub.{0, 0, 0} (Nat.log2 current) degree)
+        (Nat.bits modulus)))
+    (Max.max.{0} (List.length.{0} (Nat.bits current))
+      (HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Nat.log2 current) degree) (List.length.{0} (Nat.bits modulus))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawReduceStepWord_gateCount
+'CorruptedFieldRecovery.rawReduceStepWord_gateCount' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

@@ -1,0 +1,46 @@
+{
+  "CorruptedFieldRecovery.rawBinaryWordXorBit": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordXorBit : (a b : Bool) \u2192 Bool\n",
+    "sha256": "0f43a875de0921793189dca4818bd4160d8fe26651a9c497141ecb897d35c873"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordXor": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordXor : (a a : List.{0} Bool) \u2192 List.{0} Bool\n",
+    "sha256": "480f5677ed743ccbdb82bdcc792d887682beff46183df6e1e2e06ccb72a15fd7"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordXor_length": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordXor_length : \u2200 (left right : List.{0} Bool),\n  Eq.{1} (List.length.{0} (CorruptedFieldRecovery.rawBinaryWordXor left right))\n    (Max.max.{0} (List.length.{0} left) (List.length.{0} right))\n",
+    "sha256": "9afa9a2d7e61dcfe5fc6ccb61d1d6e515aa6a1880ded9bcc784e50c10a981866"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordXor_refines_natXor": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordXor_refines_natXor : \u2200 (left right : List.{0} Bool),\n  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawBinaryWordXor left right))\n    (Nat.xor (CorruptedFieldRecovery.rawBitsToNat left) (CorruptedFieldRecovery.rawBitsToNat right))\n",
+    "sha256": "5287cde860567645d92ea42dcaa89a78096093588f966466d8568f62deb0a2c2"
+  },
+  "CorruptedFieldRecovery.rawBitsToNat_natBits": {
+    "emitted_type": "CorruptedFieldRecovery.rawBitsToNat_natBits : \u2200 (value : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (Nat.bits value)) value\n",
+    "sha256": "08506b1f831e4473411c0e2445ccaa634572e624d954bde2cdd9207a44c0e54d"
+  },
+  "CorruptedFieldRecovery.rawNatBitsXor_refines_natXor": {
+    "emitted_type": "CorruptedFieldRecovery.rawNatBitsXor_refines_natXor : \u2200 (left right : Nat),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawBinaryWordXor (Nat.bits left) (Nat.bits right)))\n    (Nat.xor left right)\n",
+    "sha256": "6768dedbff3af86ae5a9fe7c43b7fc2162f3ca04adae047d40881de71ba845f1"
+  },
+  "CorruptedFieldRecovery.rawReduceStepWord": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStepWord : (modulus degree current : Nat) \u2192 List.{0} Bool\n",
+    "sha256": "b4d8b0ddf1f49737259ccd21796b9a62c1f424d8f5c4e7cbae63ac65432c083a"
+  },
+  "CorruptedFieldRecovery.rawReduceStepWord_refines": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStepWord_refines : \u2200 (modulus degree current : Nat),\n  Eq.{1} (CorruptedFieldRecovery.rawBitsToNat (CorruptedFieldRecovery.rawReduceStepWord modulus degree current))\n    (CorruptedFieldRecovery.rawReduceStep modulus degree current)\n",
+    "sha256": "456ab05c18c98c2ddfabcc8ccbff200e81fc6ac4b0cee3ccfa7fc795a29ada1e"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordXorGateCount": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordXorGateCount : (left right : List.{0} Bool) \u2192 Nat\n",
+    "sha256": "2bea5e5484a8a1a1130f8c992a28db6f4be0976fe38da4002afb2addca3a7d9d"
+  },
+  "CorruptedFieldRecovery.rawBinaryWordXorGateCount_eq_width": {
+    "emitted_type": "CorruptedFieldRecovery.rawBinaryWordXorGateCount_eq_width : \u2200 (left right : List.{0} Bool),\n  Eq.{1} (CorruptedFieldRecovery.rawBinaryWordXorGateCount left right)\n    (Max.max.{0} (List.length.{0} left) (List.length.{0} right))\n",
+    "sha256": "fd627c873d940e3f2cc278625352823a61c7d99f2de66c959b366f7f74ff743b"
+  },
+  "CorruptedFieldRecovery.rawReduceStepWord_gateCount": {
+    "emitted_type": "CorruptedFieldRecovery.rawReduceStepWord_gateCount : \u2200 (modulus degree current : Nat),\n  Eq.{1}\n    (CorruptedFieldRecovery.rawBinaryWordXorGateCount (Nat.bits current)\n      (CorruptedFieldRecovery.rawBinaryWordShiftLeft (HSub.hSub.{0, 0, 0} (Nat.log2 current) degree)\n        (Nat.bits modulus)))\n    (Max.max.{0} (List.length.{0} (Nat.bits current))\n      (HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} (Nat.log2 current) degree) (List.length.{0} (Nat.bits modulus))))\n",
+    "sha256": "b3527908325cccbf476a7ddbba2fec084f2eded4c9f05e29b10a2c785afa60de"
+  }
+}
