@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts ordered custom state-list stack projection equals the nested trace, existential phase call-tree membership per list element, and depth bound under modulus\u003e1. No matching phase, adjacent transition, actual implementation or runtime refinement.",
+    "source":  "CorruptedFieldRecovery/RawArithmeticFrobeniusCallRun.lean",
+    "accepted":  true,
+    "sha256":  "71520f207e3ca678f8e9dbdcbc2957a2c1ed3562c205ba9fefb604cbae4d1b40",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}

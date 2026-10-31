@@ -1,0 +1,28 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_map_stack_eq_nestedTrace
+CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_map_stack_eq_nestedTrace : ∀ (modulus d x : Nat),
+  Eq.{1}
+    (List.map.{0, 0} CorruptedFieldRecovery.RawArithmeticCallState.stack
+      (CorruptedFieldRecovery.rawCandidateFrobeniusCallRun modulus d x))
+    (CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace modulus d x)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_map_stack_eq_nestedTrace
+'CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_map_stack_eq_nestedTrace' depends on axioms: [propext,
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_mem_reachable
+CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_mem_reachable : ∀ (modulus d x : Nat)
+  {state : CorruptedFieldRecovery.RawArithmeticCallState}
+  (hstate : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusCallRun modulus d x) state),
+  ∃ phase,
+    CorruptedFieldRecovery.RawCandidateFrobeniusCallReachable modulus d x
+      { phase := phase, stack := CorruptedFieldRecovery.RawArithmeticCallState.stack state }
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_mem_reachable
+'CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_mem_reachable' depends on axioms: [propext, Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_depth_le_declared_cost
+@CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_depth_le_declared_cost : ∀ {modulus d x : Nat}
+  (hmod : LT.lt.{0} 1 modulus) {state : CorruptedFieldRecovery.RawArithmeticCallState}
+  (hstate : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusCallRun modulus d x) state),
+  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.RawArithmeticCallState.stack state))
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_depth_le_declared_cost
+'CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_depth_le_declared_cost' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

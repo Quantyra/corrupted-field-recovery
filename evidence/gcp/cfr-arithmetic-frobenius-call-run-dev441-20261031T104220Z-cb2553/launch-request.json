@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-31T10:55:12.159441+00:00",
+  "run": "cfr-arithmetic-frobenius-call-run-dev441-20261031T104220Z-cb2553",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

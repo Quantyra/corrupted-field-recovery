@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_map_stack_eq_nestedTrace": {
+    "emitted_type": "CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_map_stack_eq_nestedTrace : \u2200 (modulus d x : Nat),\n  Eq.{1}\n    (List.map.{0, 0} CorruptedFieldRecovery.RawArithmeticCallState.stack\n      (CorruptedFieldRecovery.rawCandidateFrobeniusCallRun modulus d x))\n    (CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace modulus d x)\n",
+    "sha256": "78a85a8f34c684c8f17be6baa0ae5e42f11784420cbadf43a446deb2a45e0da3"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_mem_reachable": {
+    "emitted_type": "CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_mem_reachable : \u2200 (modulus d x : Nat)\n  {state : CorruptedFieldRecovery.RawArithmeticCallState}\n  (hstate : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusCallRun modulus d x) state),\n  \u2203 phase,\n    CorruptedFieldRecovery.RawCandidateFrobeniusCallReachable modulus d x\n      { phase := phase, stack := CorruptedFieldRecovery.RawArithmeticCallState.stack state }\n",
+    "sha256": "cea890f18c8dfeea0d221e51b70a17d5ed692abe0e61e0fbb46d14610db0fbe0"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_depth_le_declared_cost": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobeniusCallRun_depth_le_declared_cost : \u2200 {modulus d x : Nat}\n  (hmod : LT.lt.{0} 1 modulus) {state : CorruptedFieldRecovery.RawArithmeticCallState}\n  (hstate : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusCallRun modulus d x) state),\n  LE.le.{0} (List.length.{0} (CorruptedFieldRecovery.RawArithmeticCallState.stack state))\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)\n",
+    "sha256": "0eca02b38b23d1d9812ba72044d4dcd1aad101c4183424f02a996196917b8cbe"
+  }
+}
