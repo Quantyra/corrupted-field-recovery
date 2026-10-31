@@ -1,0 +1,435 @@
+{
+  "utc": "2026-10-31T04:13:11.401187+00:00",
+  "preserved_without_staging_source_edits": true,
+  "rows": [
+    {
+      "status": " M",
+      "path": "evidence/drafts/S010ObservedHiddenBalance.balance-dimension-uncompiled.lean",
+      "sha256": "edb6633d1714569a3c76ca11269a454499eef405ac8accd994f2f07551f53bac",
+      "captured_in_never_submitted_416": false,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": ".tmp-accepted211/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean",
+      "sha256": "298b6565581015654afaf0cb4ebb9568e96d052644153911c9dcc0e8c6f539ea",
+      "captured_in_never_submitted_416": false,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": ".tmp-canonical-restore/CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean",
+      "sha256": "fbccf50873a97da09c5ad243b3274059a8e28cfe433fb5b75de548be4b83ab23",
+      "captured_in_never_submitted_416": false,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": ".tmp-dev192/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean",
+      "sha256": "9968eb690bf5180ed210bb4d2945893be718208823b3bd3326c74beaa93849a5",
+      "captured_in_never_submitted_416": false,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.lean",
+      "sha256": "fc6fbc724df4c218bba096dfc4b555e0d7f2c7620ad3a09fc60f3145eb6faf38",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitAffineExtraction.lean",
+      "sha256": "5b9cddde4551b3b72d8614f5af752d4e5507fd4e859e6abad50d1b3c3a6bf198",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitAugmentedSolverBridge.lean",
+      "sha256": "1468c4b70d4703ac0dc4096dc61835d84148f56552b8eed8b470bbd1bc051d61",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitCertificateConstruction.lean",
+      "sha256": "efdaa3fc2732610bb970b11046eb260386e56bc66c3e76865998df81e590bfa3",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitCleanSeparation.lean",
+      "sha256": "a2d7212f2c45e57a9cc3823b6f88f5dcd013934363a5bebed35b35a3a945e1e1",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitColumns.lean",
+      "sha256": "8c7d413248a3516e623463dc67396a339339539c20f5e36eefaac8fd4dd98b6f",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitCompactFinMatrix.lean",
+      "sha256": "e57f354a5197a04134601961b09a3bfdfd526a32402b83fa131d676e833f26af",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitCompactProjection.lean",
+      "sha256": "a0a3e8eca14eeb39fcf11dcb1139b85783a0afe86b0cae24f91b63d79dc89705",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitFlattening.lean",
+      "sha256": "05210015b661f8220fac14ac6659461ad621cad4da63df2a1490939f7abaebf0",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitModelConsistency.lean",
+      "sha256": "66b4bc6a5eea48589fe7c6771cac8879c1dc00449df4fdbd9a9be7b63d799a6d",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitOutputBridge.lean",
+      "sha256": "633abf1ddf58dd5d455970fc9eb02112fe64bc90e2405d5ef3491239a0606a58",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitPaddedProjectionProof.lean",
+      "sha256": "674987588459b9c144a805b7e8fed279892a3988fb149da55dea956a98249ce7",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitScalarResidue.lean",
+      "sha256": "d3e9439217be49a59cbb56178e5b18d40d64865316e648d15bbe6efad4e9b871",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitScalarTensorBridge.lean",
+      "sha256": "240feb72a5cbb1d774498cf40f2c0c956bec9991a59171d3870222b93046d2b1",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawCoefficientFitTraceExpansion.lean",
+      "sha256": "e577828540a17fdf1af71ce3865901647d43f201bdbcec2f89e0eac0e7d25cd4",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawGreedyModuleBasis.lean",
+      "sha256": "79fbf8833b9dc0c7b9263598b331426b2aacb7a29438f05987374aae91d33b71",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/RawReductionBoundsExpanded.lean",
+      "sha256": "3d2f880066e46cbc78fd70098420415b40d9ccf937a29c44c9c5d79ffe798b32",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceConstraintMatrix.lean",
+      "sha256": "f0f48b2751d39ecf8ef7afbbbb3bcaa0bf26e50290db3b747f10bf45c7c72340",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianAffineOutput.lean",
+      "sha256": "3161e0f5cb620e37de955ce54b061d48a88c32b31a0dc3ae49842b24e188ae03",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianAffinePowerSolve.lean",
+      "sha256": "6b02d8a0e212806898609fa8c9aabf8ef99e56f518a9500cd1938e5224536fdd",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean",
+      "sha256": "4ec1f14e3940323b57f27f47f24960b2b3c45f6fa5e213e9ca11225e088c7e4b",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean",
+      "sha256": "50b74c9b9a064979a3b2010a764e62381fafe5beb275f6bec3a8ec510d4e267a",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagKernelOutputBridge.lean",
+      "sha256": "2ae5bc6b91e81ad572f38ab40da4f132c54b52e91d3f550a358fde54689549d6",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagOwnershipTransitions.lean",
+      "sha256": "cffe1d6697473733a5c2fdde625018a0d40e03fbef976fa8c06607aa687abad1",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagPeakOwnership.lean",
+      "sha256": "995e5b7d286b95a5c5620fbe3701bdfa4dcdd08d1ca99d22dce2739c3f4292b8",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean",
+      "sha256": "db3f52259766552243d6ebe108575c983e34010362858dfa0451eb60784bd2ed",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean",
+      "sha256": "5a41faf707dcc7f4d49d027b694b91c20a5fe4609390a113cea167ff7220d9fe",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean",
+      "sha256": "8f96b9aa509cc31b98070f15ff92ed92d86e53ef94f6f900964e5f91453177f2",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayInstrumentedScan.lean",
+      "sha256": "b4ca6701115168b75ffa4a6568b9c2970c89447cc23900207f864eb1bafe469b",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayResources.lean",
+      "sha256": "d0ed7f0d66b2d6b89aec062c3163233405e99ad326b6e451280d7fd0c17176d8",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayScanRefinement.lean",
+      "sha256": "7b10fe6df000cda975ba56853b8324c6a773935375f6db73b90da053d4f47ead",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianArrayTraceBounds.lean",
+      "sha256": "3cc96d9036b9f36e0704545b168528ac5debbb5cd048f94a22d18c54bd99f22c",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianDynamicSpan.lean",
+      "sha256": "8b6298a0276a51fdb967c37f6ffbf5b985226ab0c3127a51f0c7cd7727599443",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianGeneratorFastCheck.lean",
+      "sha256": "9eb93173126551f8774ad6c7c658b9b74b269c397e5fe29f9358ef2e6a1906ee",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianGreedyCoordinateInverse.lean",
+      "sha256": "442a7829ee60590596d09f6d92c0abda57a995b0b96c2cd6c659ebd6dd2a7093",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianGreedyCoordinateSerialization.lean",
+      "sha256": "a7531f4e89519df47a39a6053a57605bc983d45abd036c8818e19fec0094479c",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianGreedyRun.lean",
+      "sha256": "d72092651aa7f427486a79e72ebb32038d86466dfbb85f3a019f18b218e35174",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianGreedySelection.lean",
+      "sha256": "38da7e24e183ac136f38dd27784259b51264c12ac0d69c9dd18c7ce874233711",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianOrbitGrowth.lean",
+      "sha256": "35a79fbddfaa56444e692b7e1b1aa93b607d4d282d7df32b1a16b47dc27f0dee",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianOrderedSeedIndex.lean",
+      "sha256": "2ce468d88ed557038067c8d3d152f53ed4c9e8062e3be931da4489b91eebb9d0",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianPhysicalSuffixSeedBridge.lean",
+      "sha256": "f7dcb362d56eee0ba70b0312ee06971785b65bde000bb9b7ee321456a2b8c510",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianPrimitivePowerIndependence.lean",
+      "sha256": "ec2e64501f96a8e4515194bec8883069bacb4f0b1b26a2df06f9531166c5c116",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedCounting.lean",
+      "sha256": "c0ece1a85e1c8821442bf631e6e90e59c0d9200894958f1dc7d9923c1ccd81c4",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedLowerBound.lean",
+      "sha256": "e6cd7cbe98f1a7dd6e7657a3fbf5e895f59339dcb331f01082075559bea01ccf",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedPositiveBound.lean",
+      "sha256": "24ec55f6d7d4dce1c466f0a6161b54b38e811825cf3c2b4489287adb16330bda",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitBezout.lean",
+      "sha256": "8e012514fceb0cd7e559eb33453c3ba779d58c9bb1d92c78342e0490aa6eb4a4",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitIndependence.lean",
+      "sha256": "5dfb993a21797f22c8aa409b97d0a9763def9c0e1ec26d2782684ec5d99737ba",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitProof.lean",
+      "sha256": "b645bfb323552d03f3d0ec83deb23198491541b63893e109f4589b8a65b2c2a1",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean",
+      "sha256": "c570e8331cac2c348f1cbfca136d03a3d4eeef34839863d79e84d84a26666a11",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianRecurrenceSerializer.lean",
+      "sha256": "94fdf3936707246f6f98081845abdfec1a1f6316a922f463a23a340a42944733",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean",
+      "sha256": "ff961784ad55adf7a5d77526676df9990a22fcd1dcbd29744f53721a081df169",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BalanceGaussianScalarRangeBridge.lean",
+      "sha256": "01af6bd687769953407e66ed8c2f0d23941ef4ac3a57ef79b1fb6eb9bc542235",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010BetaActual.lean",
+      "sha256": "cc1e057392b3b39f4ca6703133e2ab37bd81db5f078622d4c879904b78c81a7c",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010GoodPrefixReferenceTape.lean",
+      "sha256": "837c0cc01d2a52247f78d1888efa84c9dd7904cbbea58b5f82e88f60bf7c9b5d",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010GoodTapeComputedFilterAcceptance.lean",
+      "sha256": "cac5829fcab9469c749e52cd8bf165259f20bdcd6587636cc0e5b7a0bda36f24",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010NumericTapeBridge.lean",
+      "sha256": "df56e3a358570d3a6248f89913eb03c411b77b86385ede9be9b4fbddbd121078",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    },
+    {
+      "status": "??",
+      "path": "CorruptedFieldRecovery/S010PhysicalFiveCount.lean",
+      "sha256": "1b885ab23035a04919e7c1cf63b2dee0f0c22da5c78596935220bb710f4d3c01",
+      "captured_in_never_submitted_416": true,
+      "proof_status": "Uncompiled/unaudited unless separately covered by an explicit accepted receipt; working-tree presence alone proves nothing."
+    }
+  ],
+  "never_submitted_capture": "cfr-arithmetic-frobenius-nested-charge-space-dev416-20261031T040643Z-3eefae",
+  "raw_git_status": " M evidence/drafts/S010ObservedHiddenBalance.balance-dimension-uncompiled.lean\n?? .tmp-accepted211/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean\n?? .tmp-canonical-restore/CorruptedFieldRecovery/ProbabilityCanonicalFourTuples.lean\n?? .tmp-current-batch-path.txt\n?? .tmp-dev192/CorruptedFieldRecovery/S010ObservedHiddenBalance.lean\n?? .tmp-last-capture-output.txt\n?? CorruptedFieldRecovery/RawArithmeticFrobeniusNestedChargeSpace.lean\n?? CorruptedFieldRecovery/RawCoefficientFitAffineExtraction.lean\n?? CorruptedFieldRecovery/RawCoefficientFitAugmentedSolverBridge.lean\n?? CorruptedFieldRecovery/RawCoefficientFitCertificateConstruction.lean\n?? CorruptedFieldRecovery/RawCoefficientFitCleanSeparation.lean\n?? CorruptedFieldRecovery/RawCoefficientFitColumns.lean\n?? CorruptedFieldRecovery/RawCoefficientFitCompactFinMatrix.lean\n?? CorruptedFieldRecovery/RawCoefficientFitCompactProjection.lean\n?? CorruptedFieldRecovery/RawCoefficientFitFlattening.lean\n?? CorruptedFieldRecovery/RawCoefficientFitModelConsistency.lean\n?? CorruptedFieldRecovery/RawCoefficientFitOutputBridge.lean\n?? CorruptedFieldRecovery/RawCoefficientFitPaddedProjectionProof.lean\n?? CorruptedFieldRecovery/RawCoefficientFitScalarResidue.lean\n?? CorruptedFieldRecovery/RawCoefficientFitScalarTensorBridge.lean\n?? CorruptedFieldRecovery/RawCoefficientFitTraceExpansion.lean\n?? CorruptedFieldRecovery/RawGreedyModuleBasis.lean\n?? CorruptedFieldRecovery/RawReductionBoundsExpanded.lean\n?? CorruptedFieldRecovery/S010BalanceConstraintMatrix.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianAffineOutput.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianAffinePowerSolve.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayFlagKernelOutputBridge.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayFlagOwnershipTransitions.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayFlagPeakOwnership.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayGreedySpan.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayInstrumentedScan.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayResources.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayScanRefinement.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianArrayTraceBounds.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianDynamicSpan.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianGeneratorFastCheck.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianGreedyCoordinateInverse.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianGreedyCoordinateSerialization.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianGreedyRun.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianGreedySelection.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianOrbitGrowth.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianOrderedSeedIndex.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianPhysicalSuffixSeedBridge.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianPrimitivePowerIndependence.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedCounting.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedLowerBound.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianPrimitiveSeedPositiveBound.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitBezout.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitIndependence.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianQuotientOrbitProof.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianRecurrenceSerializer.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean\n?? CorruptedFieldRecovery/S010BalanceGaussianScalarRangeBridge.lean\n?? CorruptedFieldRecovery/S010BetaActual.lean\n?? CorruptedFieldRecovery/S010GoodPrefixReferenceTape.lean\n?? CorruptedFieldRecovery/S010GoodTapeComputedFilterAcceptance.lean\n?? CorruptedFieldRecovery/S010NumericTapeBridge.lean\n?? CorruptedFieldRecovery/S010PhysicalFiveCount.lean\n?? evidence/gcp/cfr-balance-gaussian-array-greedy-span-dev415-20261031T040300Z-da3228/cfr-never-started-recheck-20261031T041217Z-a9ef1a.exit.json\n?? evidence/gcp/cfr-balance-gaussian-array-greedy-span-dev415-20261031T040300Z-da3228/cfr-never-started-recheck-20261031T041217Z-a9ef1a.stderr.txt\n?? evidence/gcp/cfr-balance-gaussian-array-greedy-span-dev415-20261031T040300Z-da3228/cfr-never-started-recheck-20261031T041217Z-a9ef1a.stdout.txt\n?? evidence/gcp/cfr-batch-reacquire-20261031T025843Z-12b083/preserve_working_inventory.py\n"
+}
