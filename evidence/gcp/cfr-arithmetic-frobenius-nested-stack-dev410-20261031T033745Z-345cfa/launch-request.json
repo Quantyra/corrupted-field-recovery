@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-31T03:43:49.419445+00:00",
+  "run": "cfr-arithmetic-frobenius-nested-stack-dev410-20261031T033745Z-345cfa",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}

@@ -1,0 +1,37 @@
+✖ [2080/2080] Building CorruptedFieldRecovery.RawArithmeticFrobeniusNestedStackTrace (2.5s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:119:15: unsolved goals
+modulus W : ℕ
+hmod : 1 < modulus
+hmodWidth : modulus < 2 ^ W
+hW : 0 < W
+hW2 : 0 < 2 * W
+hmodNe : modulus ≠ 0
+hmodWidth2 : modulus < 2 ^ (2 * W)
+x : ℕ
+hx : x < 2 ^ W
+d : ℕ
+ih :
+  ∀ m < d + 1,
+    ∀ {x : ℕ},
+      m ≤ W →
+        x < 2 ^ W →
+          ∀ stack ∈ rawCandidateFrobeniusNestedStackTrace modulus m x,
+            ∀ frame ∈ stack, ∀ word ∈ frame.registers, word < 2 ^ rawArithmeticParameterWidth (2 * W)
+hd : d + 1 ≤ W
+hdChild : d ≤ W
+square : ℕ × ℕ := rawPolyMulBitCosted x x
+rem : ℕ × ℕ := rawPolynomialRemainderBitCosted square.1 modulus
+parent : RawArithmeticFrame := rawArithmeticFrobeniusFrame modulus (d + 1) x square.1 rem.1
+mulTrace : List RawArithmeticFrame := rawPolyMulActivationTrace x x
+reduceTrace : List RawArithmeticFrame := rawReduceFuelActivationTrace modulus modulus.log2 (square.1.log2 + 1) square.1
+hSquareWidth : square.1 < 2 ^ (2 * W)
+hrem : rem.1 < 2 ^ W
+⊢ True ∨
+    rawArithmeticFrobeniusFrame modulus (d + 1) x (rawPolyMulBitCosted x x).1
+        (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1 ∈
+      rawCandidateFrobeniusActivationTrace modulus d
+        (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticFrobeniusNestedStackTrace
