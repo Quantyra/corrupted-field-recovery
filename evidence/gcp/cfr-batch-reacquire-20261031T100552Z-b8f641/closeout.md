@@ -7,3 +7,9 @@ All 89 latest accepted sources match working bytes and HEAD. All 210 main proof 
 Task egress removal succeeded once. One stop command was issued; an independent read-only observation confirmed exact VM ID 3335066512373302615 STOPPING with egress absent. The stop command then failed while polling because the same-account token required reauthentication. A later independent describe also failed authentication. TERMINATED and retained-disk final state are not yet verified. Do not repeat the stop mutation; restore same-account authentication and inspect state read-only. Automatic STOP ceiling remains 14:07:52.082 UTC.
 
 Remaining to-do list: reauthenticate and independently verify final exact VM/disk state; repair the basis draft in a later freshly guarded batch; complete coordinate inversion, candidate premises, recovery/sampling/repetition, primitive execution and full time/space certification, then final theorem/manuscript assembly.
+
+## Final verification recovered after reauthentication
+
+Same-account read-only verification on2026-10-31T21:38 UTC confirmed exact VM3335066512373302615 TERMINATED, task egress absent, retained100GB disk READY. Recorded lastStopTimestamp is2026-10-31T05:51:49.937-07:00 (12:51:49.937 UTC), before the14:07:52.082 UTC ceiling. Thus the original single stop completed despite the client polling authentication failure. No second stop or egress mutation occurred. Raw failed authentication receipts remain historical; final-lifecycle-verification.json and exact VM/disk receipts close the verification obligation.
+
+Remaining to-do list: fresh lifecycle preflight for authorized continuation; repair/audit preserved drafts and complete remaining S006 certification.
