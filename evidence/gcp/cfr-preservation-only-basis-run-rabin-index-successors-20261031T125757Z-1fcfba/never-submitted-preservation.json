@@ -1,0 +1,30 @@
+{
+  "status": "never-submitted preservation-only",
+  "sources": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitBasisRun.lean": "b8be1e869131ae9133530544f9b741ae7b1bed9d3dd941eed8c0ec582c1a5b61",
+    "CorruptedFieldRecovery/RawRabinIndexOperationalMachine.lean": "d744c011658f859b81ced1f978222d2a6b6bf90d66c0819215f97a62233e9c2e"
+  },
+  "archive_sha256": "601d3b725605a8e406bbbe678f6df0cb8e62fd79a03c16ae7c2b4da023089167",
+  "utf8_no_bom_verified": true,
+  "no_lean_build_audit_or_cloud_operation": true,
+  "dependencies": {
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitBasis.lean": "ca0e8defab242d179d37ba6a6406062e0c4672899eeb963288d7a2b8fddc16d6",
+    "CorruptedFieldRecovery/S010BalanceGaussianArrayOrbitRun.lean": "e453084656f03f57924c35ee5a48add52f3de6f3d0fdd800905e6ab13b289f52",
+    "CorruptedFieldRecovery/RawFrobeniusOperationalMachine.lean": "28af58da625cbd9a4a6ae023f4f40bd437fbc669d491e25a23116ef39ddf976f",
+    "CorruptedFieldRecovery/RawGcdOperationalMachine.lean": "63eafb2536342bc298ddcb4e9d04b2ea2a00773f7cfd6480eef8795f3ffc3c53",
+    "CorruptedFieldRecovery/RawRabinScanBitCost.lean": "7d21e3da9236d32d77616b3fb16397ed40f411c6db388921d183c1c8c3b3d9db"
+  },
+  "dependency_status": {
+    "ArrayOrbitBasis": "Uncompiled preservation-only CA0E8D successor, not accepted464",
+    "ArrayOrbitRun": "accepted460",
+    "RawFrobeniusOperationalMachine": "accepted457",
+    "RawGcdOperationalMachine": "accepted461",
+    "RawRabinScanBitCost": "accepted264"
+  },
+  "scope": {
+    "basis_run": "Uncompiled composition attempt from actual three-pass result to existential proof-level Basis under s>=1, monic irreducible degree-s polynomial annihilating T. Depends on uncompiled basis draft; namespace/API elaboration remains unaudited. No serialized inverse, candidate-derived polynomial, full recovery or cost claim.",
+    "rabin_index": "Only BOM removed from earlier7455A9 draft; composition, existence and declared-charge proof attempts remain uncompiled/unaudited. Existence requires modulus>1; bound adds nonzero/width and2<=W. No surrounding scan, primitive multiplication, runtime or heap result."
+  },
+  "prior_archive": "cfr-preservation-only-orbit-basis-rabin-index-20261031T125524Z-a0d19e",
+  "prior_bytes_unchanged": true
+}
