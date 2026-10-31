@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-31T12:47:39.721101+00:00",
+  "raw_process_inventory": "cfr-final-full-process-guard-20261031T124700Z-07b6d4.stdout.txt",
+  "sha256": "2c65afdcf2e1cf650452e4a539135d83e613995d657fd62f42250db62fbb0dd6",
+  "reviewed_entire_raw_inventory": true,
+  "assessment": "Only system/kernel services and task-owned SSH/SFTP collection plus inventory sessions; no unrelated workload. No Lean/Lake process remains; campaign lock free.",
+  "safe_for_guarded_task_stop": true
+}

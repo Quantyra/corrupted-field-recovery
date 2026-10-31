@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-31T12:46:34.996707+00:00",
+  "run": "cfr-balance-gaussian-array-orbit-basis-dev464-20261031T124404Z-d52251",
+  "wrapper_sha256": "6ac5d701608bcad593cb4a004696b912a1b1c53e65f2ee55cb6c6ce9b9c22093",
+  "controller_sha256": "c0151fb3e8483a38f1e20c9d08fbe73eec391e7bc63808617792b54c6fd9cd72",
+  "scope": "Terminal packaging SSH completion marker and one-second grace only.",
+  "normal_collection_and_log_hash_checks_unchanged": true,
+  "no_launch_or_runner_change": true,
+  "no_timeout_or_deadline_change": true
+}
