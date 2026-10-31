@@ -1,0 +1,6 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-index-layout-dev384-20261031T014334Z-0b4f51/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
+STAGE=audit

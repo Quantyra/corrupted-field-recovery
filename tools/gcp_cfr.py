@@ -398,7 +398,7 @@ def capture(args):
     audit_path = 'checks/Audit.lean'
     if args.audit_export:
         for name in args.audit_export:
-            if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_.\']*', name):
+            if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_.\'?]*', name):
                 raise ValueError('Invalid audited declaration name')
         audit_path = 'checks/CaptureAudit.lean'
         files[audit_path] = audit_source(args.target or [], args.audit_export)

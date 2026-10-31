@@ -1,0 +1,41 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRowList_eq_ofFn_symm
+CorruptedFieldRecovery.actualBalanceGaussianRowList_eq_ofFn_symm : ∀ (s : Nat),
+  Eq.{1} (CorruptedFieldRecovery.actualBalanceRowList s)
+    (List.ofFn.{0} fun row => (Equiv.symm.{1, 1} (CorruptedFieldRecovery.actualBalanceGaussianRowEquiv s)) row)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRowList_eq_ofFn_symm
+'CorruptedFieldRecovery.actualBalanceGaussianRowList_eq_ofFn_symm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianColumnList_eq_ofFn_symm
+CorruptedFieldRecovery.actualBalanceGaussianColumnList_eq_ofFn_symm : ∀ (s : Nat),
+  Eq.{1} (CorruptedFieldRecovery.actualBalanceColumnList s)
+    (List.ofFn.{0} fun col => (Equiv.symm.{1, 1} (CorruptedFieldRecovery.actualBalanceGaussianColumnEquiv s)) col)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianColumnList_eq_ofFn_symm
+'CorruptedFieldRecovery.actualBalanceGaussianColumnList_eq_ofFn_symm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianRowList_getElem
+checks/CaptureAudit.lean:26:8: error(lean.unknownIdentifier): Unknown identifier `CorruptedFieldRecovery.actualBalanceGaussianRowList_getElem`
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianRowList_getElem
+checks/CaptureAudit.lean:28:14: error(lean.unknownIdentifier): Unknown constant `CorruptedFieldRecovery.actualBalanceGaussianRowList_getElem`
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianColumnList_getElem
+checks/CaptureAudit.lean:31:8: error(lean.unknownIdentifier): Unknown identifier `CorruptedFieldRecovery.actualBalanceGaussianColumnList_getElem`
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianColumnList_getElem
+checks/CaptureAudit.lean:33:14: error(lean.unknownIdentifier): Unknown constant `CorruptedFieldRecovery.actualBalanceGaussianColumnList_getElem`
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedCell_eq_rawMatrix
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedCell_eq_rawMatrix : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s)
+  (row : Fin (HMul.hMul.{0, 0, 0} 4 (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))))
+  (col : Fin (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) (HMul.hMul.{0, 0, 0} 3 s))),
+  Eq.{1}
+    (Option.bind.{0, 0}
+      (GetElem?.getElem?.{0, 0, 0}
+        (CorruptedFieldRecovery.actualBalanceSerializedCoefficientMatrix (CorruptedFieldRecovery.decodeRawArray raw)
+          tape)
+        ↑row)
+      fun rowArray => GetElem?.getElem?.{0, 0, 0} rowArray ↑col)
+    (Option.some.{0} (CorruptedFieldRecovery.actualBalanceGaussianRawMatrix raw tape row col))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedCell_eq_rawMatrix
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedCell_eq_rawMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
