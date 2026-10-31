@@ -1,0 +1,41 @@
+✖ [2076/2076] Building CorruptedFieldRecovery.RawArithmeticGcdTraceWidth (3.8s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:81:10: unsolved goals
+case h.zero.inl
+W : ℕ
+hW : 0 < W
+a : ℕ
+ha : a < 2 ^ W
+ih :
+  ∀ m < 0,
+    ∀ {a : ℕ},
+      a < 2 ^ W →
+        m < 2 ^ W →
+          ∀ frame ∈ rawPolynomialGcdActivationTrace a m,
+            ∀ word ∈ frame.registers, word < 2 ^ rawArithmeticParameterWidth W
+hb : 0 < 2 ^ W
+word : ℕ
+hword_zero : word = a
+⊢ a < 2 ^ rawArithmeticParameterWidth W
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:75:13: unsolved goals
+case h.zero.inr
+W : ℕ
+hW : 0 < W
+a : ℕ
+ha : a < 2 ^ W
+ih :
+  ∀ m < 0,
+    ∀ {a : ℕ},
+      a < 2 ^ W →
+        m < 2 ^ W →
+          ∀ frame ∈ rawPolynomialGcdActivationTrace a m,
+            ∀ word ∈ frame.registers, word < 2 ^ rawArithmeticParameterWidth W
+hb : 0 < 2 ^ W
+word : ℕ
+hword_a : word = 0 ∨ word = a
+⊢ word < 2 ^ rawArithmeticParameterWidth W
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:74:6: Alternative `succ` has not been provided
+error: CorruptedFieldRecovery/RawArithmeticGcdTraceWidth.lean:82:13: unexpected identifier; expected command
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticGcdTraceWidth
