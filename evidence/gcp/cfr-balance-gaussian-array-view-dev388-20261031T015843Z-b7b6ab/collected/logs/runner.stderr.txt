@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-array-view-dev388-20261031T015843Z-b7b6ab/gcp_cfr_runner.py", line 294, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-array-view-dev388-20261031T015843Z-b7b6ab/gcp_cfr_runner.py", line 233, in main
+    stage('build', ['lake', 'build', *manifest['targets']], source)
+  File "/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-balance-gaussian-array-view-dev388-20261031T015843Z-b7b6ab/gcp_cfr_runner.py", line 144, in stage
+    raise RuntimeError('Stage failed: '+name+' exit='+str(code))
+RuntimeError: Stage failed: build exit=1

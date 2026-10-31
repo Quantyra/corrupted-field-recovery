@@ -1,0 +1,149 @@
+✖ [3007/3007] Building CorruptedFieldRecovery.S010BalanceGaussianArrayExecution (2.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:37:2: don't know how to synthesize implicit argument `m`
+  @balanceGaussianColumnScan (?m.7 raw tape) (3 * s * (3 * s))
+    (actualBalanceGaussianArrayView (actualBalanceSerializedCoefficientMatrix (decodeRawArray raw) tape)) ∅
+    (List.ofFn fun col => col)
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:41:4: don't know how to synthesize implicit argument `α`
+  @EmptyCollection.emptyCollection (Finset (Fin (?m.7 raw tape))) Finset.instEmptyCollection
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:38:5: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianArrayView (?m.7 raw tape) (3 * s * (3 * s))
+    (actualBalanceSerializedCoefficientMatrix (decodeRawArray raw) tape)
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:35:4: Failed to infer type of definition `actualBalanceGaussianSerializedArrayScan`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:47:4: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:49:6: Invalid rewrite argument: Expected an equality or iff proof or definition name, but
+  actualBalanceGaussianSerializedArrayScan
+is a value of type
+  x✝
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:58:7: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:60:11: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:62:11: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:63:11: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:77:64: Application type mismatch: The argument
+  free
+has type
+  balanceGaussianFreeIndex ?m.4
+but is expected to have type
+  Fin (3 * s * (3 * s))
+in the application
+  balanceGaussianFreeKernelCandidate ?m.15 ?m.16 free
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:72:7: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:76:11: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:77:11: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:92:64: Application type mismatch: The argument
+  free
+has type
+  balanceGaussianFreeIndex ?m.32
+but is expected to have type
+  Fin (3 * s * (3 * s))
+in the application
+  balanceGaussianFreeKernelCandidate ?m.37 ?m.38 free
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:87:7: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:91:11: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayExecution.lean:92:11: Function expected at
+  actualBalanceGaussianSerializedArrayScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayExecution
