@@ -1,0 +1,9 @@
+{
+    "utc":  "2026-10-31T10:12:12.8475080Z",
+    "previous_capture":  "cfr-arithmetic-frobenius-call-run-dev434-20261031T093757Z-335d88",
+    "previous_status":  "Never submitted in prior closed batch, receipt retained unchanged",
+    "fresh_run":  "cfr-arithmetic-frobenius-call-run-dev437-20261031T101200Z-183978",
+    "source_sha256":  "C4A453CF3F29BE7C5B176285E2987699A35598375DADAE643D21D1982500EE94",
+    "same_target_bytes":  true,
+    "fresh_authorized_bounded_session":  "cfr-batch-reacquire-20261031T100552Z-b8f641"
+}
