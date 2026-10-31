@@ -1,0 +1,23 @@
+{
+  "run": "cfr-arithmetic-frobenius-nested-cost-bridge-dev420-20261031T072137Z-610c0c",
+  "utc": "2026-10-31T07:32:46.817210+00:00",
+  "archive_sha256": "80690d8acf3846fba661f82070b1dd16b70f76e75b532b723a4e45a4868ef651",
+  "retained_sha256": {
+    "exit-code": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished-utc": "f9fef1349fe70c768aa66d520c65bf108d25c19e3c58e9b7532d83c311138531",
+    "launch.log": "32c0633583ca94ee877cb13356d682ded82f9a578a7e2a53791f88f9403aca29",
+    "runner-pid": "e9b0cbd692a138af6688b5e4e1e396adb62fbd2c89aa34270f20750de4d5fe4e",
+    "started-utc": "27624a05166651ed906e63be4ee64ed97eaf8d2c7fc3fd7b2fdc46bdceeb29ef",
+    "terminal-receipt.json": "49bfd71e39a6eb3ef63913e1e792196341841cb34cb814c78d2bfe67abbb1716",
+    "logs/build.stderr.txt": "c4a27db198c4d8632369ee6102944ef46e83c20d685f7c17a6aaff9cfcfc710f",
+    "logs/build.stdout.txt": "3697aeab279fcf9fa465a2dd09bcd9b758b006ee77b6080a86393f0f79f7c2b3",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "7aa4fbbe373b71134eacf97c82e954e802e6b912d85604f7840fc7a3ea2e3336",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "eb4a9517826201ea523395776ba5660a203ae7be195064786354a367a0359f06",
+    "logs/runner.stdout.txt": "86ebe3b16a59f608f004ee776cbf0d9d54bc38d1c664ab5b3a9bc37b8b4e5e41"
+  }
+}

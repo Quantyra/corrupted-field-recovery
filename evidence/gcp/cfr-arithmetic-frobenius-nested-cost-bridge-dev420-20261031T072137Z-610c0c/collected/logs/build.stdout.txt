@@ -1,0 +1,94 @@
+✖ [2081/2081] Building CorruptedFieldRecovery.RawArithmeticFrobeniusNestedCostBridge (2.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.lean:74:69: unsolved goals
+modulus : ℕ
+hmod : 1 < modulus
+d : ℕ
+ih :
+  ∀ {x : ℕ},
+    ∀ stack ∈ rawCandidateFrobeniusNestedStackTrace modulus d x,
+      List.length stack ≤ (rawCandidateFrobeniusAuxBitCosted modulus d x).2 + 1
+x : ℕ
+square : ℕ × ℕ := rawPolyMulBitCosted x x
+rem : ℕ × ℕ := rawPolynomialRemainderBitCosted square.1 modulus
+mulTrace : List RawArithmeticFrame := rawPolyMulActivationTrace x x
+reduceTrace : List RawArithmeticFrame := rawReduceFuelActivationTrace modulus modulus.log2 (square.1.log2 + 1) square.1
+⊢ (rawPolyMulBitCosted x x).2 + (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).2 +
+          rawNatBitWidth modulus +
+        rawNatBitWidth x +
+      (rawCandidateFrobeniusAuxBitCosted modulus d
+          (rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).1).2 =
+    square.2 + rem.2 + rawNatBitWidth modulus + rawNatBitWidth x + (rawCandidateFrobeniusAuxBitCosted modulus d rem.1).2
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.lean:106:12: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  j - k ≤ 1
+  i ≥ 0
+  i - l ≥ 0
+  h ≥ 0
+  h - i ≥ 0
+  g ≥ 0
+  f ≥ 1
+  e ≥ 1
+  c ≥ 0
+  b ≥ 0
+  b + c + e + f + g ≥ 0
+  b + c + e + f + g - l ≤ -1
+  a ≥ 2
+where
+ a := ↑modulus
+ b := ↑square.2
+ c := ↑rem.2
+ e := ↑(rawNatBitWidth modulus)
+ f := ↑(rawNatBitWidth x)
+ g := ↑(rawCandidateFrobeniusAuxBitCosted modulus d rem.1).2
+ h := ↑(rawPolyMulBitCosted x x).2
+ i := ↑(rawPolyMulActivationTrace x x).length
+ j := ↑(rawReduceFuelActivationTrace modulus modulus.log2 ((rawPolyMulBitCosted x x).1.log2 + 1)
+      (rawPolyMulBitCosted x x).1).length
+ k := ↑(rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).2
+ l := ↑mstack.length
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.lean:114:10: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  j - k ≤ 1
+  j - l ≥ 0
+  i ≥ 0
+  h ≥ 0
+  h - i ≥ 0
+  g ≥ 0
+  f ≥ 1
+  e ≥ 1
+  c ≥ 0
+  b ≥ 0
+  b + c + e + f + g ≥ 0
+  b + c + e + f + g - l ≤ -1
+  a ≥ 2
+where
+ a := ↑modulus
+ b := ↑square.2
+ c := ↑rem.2
+ e := ↑(rawNatBitWidth modulus)
+ f := ↑(rawNatBitWidth x)
+ g := ↑(rawCandidateFrobeniusAuxBitCosted modulus d rem.1).2
+ h := ↑(rawPolyMulBitCosted x x).2
+ i := ↑(rawPolyMulActivationTrace x x).length
+ j := ↑(rawReduceFuelActivationTrace modulus modulus.log2 ((rawPolyMulBitCosted x x).1.log2 + 1)
+      (rawPolyMulBitCosted x x).1).length
+ k := ↑(rawPolynomialRemainderBitCosted (rawPolyMulBitCosted x x).1 modulus).2
+ l := ↑rstack.length
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.lean:117:26: Application type mismatch: The argument
+  rem.1
+has type
+  ℕ
+but is expected to have type
+  RawArithmeticStack
+in the application
+  ih rem.1
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticFrobeniusNestedCostBridge
