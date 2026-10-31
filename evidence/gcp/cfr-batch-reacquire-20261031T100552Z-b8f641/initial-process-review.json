@@ -1,0 +1,7 @@
+{
+    "utc":  "2026-10-31T10:10:08.5189655Z",
+    "entire_process_inventory_read":  true,
+    "raw_stdout_sha256":  "215e940a211360815b60615009c6fb692e8999082137d91e3ebc4162318cdd92",
+    "safe_to_submit":  true,
+    "findings":  "Only system/kernel services and inventory SSH session, no unrelated workload or Lean/Lake; campaign lock free."
+}

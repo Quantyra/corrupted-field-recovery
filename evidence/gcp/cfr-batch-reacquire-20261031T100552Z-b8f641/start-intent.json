@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-31T10:07:20.225399+00:00",
+  "project": "quantyra-lean-cert-20260915",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "zone": "us-central1-a",
+  "account": "dfredriksen@quantyra.org",
+  "instance_id": "3335066512373302615",
+  "initial_state": "TERMINATED",
+  "single_start": true,
+  "spend_scope": "Existing user-authorized bounded dedicated CFR continuation; no profile expansion."
+}
