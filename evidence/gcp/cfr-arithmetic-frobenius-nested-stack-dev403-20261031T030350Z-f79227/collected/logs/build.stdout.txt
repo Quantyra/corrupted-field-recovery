@@ -1,0 +1,66 @@
+✖ [2080/2080] Building CorruptedFieldRecovery.RawArithmeticFrobeniusNestedStackTrace (3.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.setup.json --json
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:59:40: unexpected token 'termination_by'; expected ')', ',' or ':'
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:92:12: Application type mismatch: The argument
+  hmod
+has type
+  1 < modulus
+but is expected to have type
+  ?m.229 ≠ 0
+in the application
+  rawCandidateFrobeniusActivationTrace_registers_lt hmod
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:116:14: Application type mismatch: The argument
+  hmod
+has type
+  1 < modulus
+but is expected to have type
+  ?m.393 ≠ 0
+in the application
+  rawCandidateFrobeniusActivationTrace_registers_lt hmod
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:116:38: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  e - f ≥ 1
+  e - h ≥ 1
+  c ≥ 1
+  c - g ≥ 1
+  2*c - j ≤ -1
+  b - f ≥ 1
+  b - i ≥ 1
+  a ≥ 2
+  a - b ≤ -1
+  a - e ≤ -1
+where
+ a := ↑modulus
+ b := ↑2 ^ W
+ c := ↑W
+ e := ↑2 ^ (2 * W)
+ f := ↑x
+ g := ↑d
+ h := ↑square.1
+ i := ↑rem.1
+ j := ↑?m.394
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:120:16: `simp` made no progress
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:130:53: Application type mismatch: The argument
+  hmulExp
+has type
+  2 * W + 1 ≤ rawArithmeticParameterWidth (2 * W)
+but is expected to have type
+  2 * W + 1 ≤ 2 * W
+in the application
+  rawFrobeniusNested_lt_parameter hm hmulExp
+error: CorruptedFieldRecovery/RawArithmeticFrobeniusNestedStackTrace.lean:145:30: Application type mismatch: The argument
+  hdChild
+has type
+  d ≤ W
+but is expected to have type
+  d < d + 1
+in the application
+  @ih d hdChild
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawArithmeticFrobeniusNestedStackTrace
