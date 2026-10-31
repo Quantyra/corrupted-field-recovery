@@ -1,0 +1,25 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_depth_le_declared_cost
+@CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_depth_le_declared_cost : ∀ {modulus d x : Nat}
+  (hmod : LT.lt.{0} 1 modulus) (stack : CorruptedFieldRecovery.RawArithmeticStack)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace modulus d x) stack),
+  LE.le.{0} (List.length.{0} stack)
+    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_depth_le_declared_cost
+'CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_depth_le_declared_cost' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_live_bits_le_declared_cost
+@CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_live_bits_le_declared_cost : ∀ {modulus d x W : Nat}
+  (hmod : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LT.lt.{0} 0 W)
+  (hd : LE.le.{0} d W) (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)) (stack : CorruptedFieldRecovery.RawArithmeticStack)
+  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace modulus d x) stack),
+  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticStackLiveBits stack)
+    (HMul.hMul.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)
+      (HAdd.hAdd.{0, 0, 0} 3
+        (HMul.hMul.{0, 0, 0} 6
+          (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawArithmeticParameterWidth (HMul.hMul.{0, 0, 0} 2 W)) 1))))
+CFR_TYPE_END:CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_live_bits_le_declared_cost
+'CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_live_bits_le_declared_cost' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

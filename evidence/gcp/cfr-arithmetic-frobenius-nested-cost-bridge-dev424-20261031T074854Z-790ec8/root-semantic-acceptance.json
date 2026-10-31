@@ -1,0 +1,12 @@
+{
+    "scope":  "Root accepts custom snapshot depth \u003c= declared auxiliary Frobenius bit cost+1 for modulus\u003e1, and abstract snapshot live-bit bound under supplied W/d/x hypotheses. No actual evaluator or complete cost claim.",
+    "source":  "CorruptedFieldRecovery/RawArithmeticFrobeniusNestedCostBridge.lean",
+    "accepted":  true,
+    "sha256":  "1ecb7b6eaa5947cb2ccbc93ff8c9855a271da7339c2d45ae6b41b8b17fd4572b",
+    "axioms":  [
+                   "propext",
+                   "Classical.choice",
+                   "Quot.sound"
+               ],
+    "terminal":  "PASS full hash verified zero warnings"
+}

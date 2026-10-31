@@ -1,0 +1,10 @@
+{
+  "CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_depth_le_declared_cost": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_depth_le_declared_cost : \u2200 {modulus d x : Nat}\n  (hmod : LT.lt.{0} 1 modulus) (stack : CorruptedFieldRecovery.RawArithmeticStack)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace modulus d x) stack),\n  LE.le.{0} (List.length.{0} stack)\n    (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)\n",
+    "sha256": "92114062e54fbbfb538d2f6d50e3993d338731ebadc7edffe1f5443f8182e1ee"
+  },
+  "CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_live_bits_le_declared_cost": {
+    "emitted_type": "@CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace_live_bits_le_declared_cost : \u2200 {modulus d x W : Nat}\n  (hmod : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W)) (hW : LT.lt.{0} 0 W)\n  (hd : LE.le.{0} d W) (hx : LT.lt.{0} x (HPow.hPow.{0, 0, 0} 2 W)) (stack : CorruptedFieldRecovery.RawArithmeticStack)\n  (a : Membership.mem.{0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusNestedStackTrace modulus d x) stack),\n  LE.le.{0} (CorruptedFieldRecovery.rawArithmeticStackLiveBits stack)\n    (HMul.hMul.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawCandidateFrobeniusAuxBitCosted modulus d x).2 1)\n      (HAdd.hAdd.{0, 0, 0} 3\n        (HMul.hMul.{0, 0, 0} 6\n          (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.rawArithmeticParameterWidth (HMul.hMul.{0, 0, 0} 2 W)) 1))))\n",
+    "sha256": "62c8c75c052882d9b59a159da3e12e5d9c65b36670a47bb29cc3fc1994911ed2"
+  }
+}
