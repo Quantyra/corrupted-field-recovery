@@ -221,13 +221,14 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
                   (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
                     cells flags columns).2.selectorPredicateTests := by
             omega
-          simp only [hsearch, hzero, htail, List.length_cons, Nat.zero_add, Nat.add_zero]
-          repeat' constructor
+          refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
+            ?_, ?_, ?_, ?_, ?_, ?_⟩
           all_goals
             first
-              | simpa using h_tests
-              | simpa using h_views
-              | ring
+              | simpa only [Nat.zero_add] using h_tests
+              | simpa only [Nat.zero_add] using h_views
+              | (simp only [hsearch, hzero, htail, List.length_cons,
+                  Nat.zero_add, Nat.add_zero]; ring)
               | omega
       | some row =>
           have htail := ih
@@ -262,13 +263,14 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
             selected, hpivot, actualBalanceGaussianFlagExecutionTrace.add,
             actualBalanceGaussianFlagPivotUpdateCharge,
             actualBalanceGaussianFlagExecutionTrace.zero]
-          simp only [hsearch, hzero, htail, List.length_cons, Nat.zero_add, Nat.add_zero]
-          repeat' constructor
+          refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_,
+            ?_, ?_, ?_, ?_, ?_, ?_⟩
           all_goals
             first
-              | simpa using h_tests
-              | simpa using h_views
-              | ring
+              | simpa only [Nat.zero_add] using h_tests
+              | simpa only [Nat.zero_add] using h_views
+              | (simp only [hsearch, hzero, htail, List.length_cons,
+                  Nat.zero_add, Nat.add_zero]; ring)
               | omega
 
 /-- The declared primitive charge of the generic instrumented scan is bounded
@@ -297,7 +299,9 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_sourceUpper
     hadd, hwrites, houter, hflagreads, hflagcomp, hflagwrites, hmatrixslots,
     hflagslots, hinit, hinitwrite, htranscript, hlist⟩ := hc
   dsimp only [actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper]
-  simp_all
+  rw [hcols, hrows, hreads, hpiv, hviewp, hcomp, hmul, hadd, hwrites,
+    houter, hflagreads, hflagcomp, hflagwrites, hinitwrite, htranscript, hlist]
+  omega
 
 /-- A scan has at most one successful pivot per listed column. This is the
 executable trace consequence needed to eliminate `p` from the polynomial. -/
