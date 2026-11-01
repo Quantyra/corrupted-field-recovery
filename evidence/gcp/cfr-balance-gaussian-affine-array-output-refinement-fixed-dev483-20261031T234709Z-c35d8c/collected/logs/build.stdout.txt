@@ -1,0 +1,318 @@
+✔ [3051/3060] Built CorruptedFieldRecovery.S010BalanceGaussianScalarRangeBridge (3.4s)
+✖ [3052/3060] Building CorruptedFieldRecovery.S010BalanceGaussianArrayFlagScan (7.3s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:108:8: don't know how to synthesize implicit argument `β`
+  @Prod.fst (Array (Array (ZMod 2)) × Array Bool) (List (Fin (?m.30 cells flags used columns hflags) × Fin n))
+    (actualBalanceGaussianFlagColumnScan cells flags columns)
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+used : Finset (Fin m)
+columns : List (Fin n)
+hflags : ∀ (row : Fin m), actualBalanceGaussianUsedFlagView flags row = decide (row ∈ used)
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:108:9: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagColumnScan (?m.30 cells flags used columns hflags) n cells flags columns
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+used : Finset (Fin m)
+columns : List (Fin n)
+hflags : ∀ (row : Fin m), actualBalanceGaussianUsedFlagView flags row = decide (row ∈ used)
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:123:10: Type mismatch: After simplification, term
+  ih cells flags used hflags
+ has type
+  (actualBalanceGaussianArrayView (actualBalanceGaussianFlagColumnScan cells flags columns).1.1,
+      (actualBalanceGaussianFlagColumnScan cells flags columns).2) =
+    balanceGaussianColumnScan (actualBalanceGaussianArrayView cells) used columns
+but is expected to have type
+  (actualBalanceGaussianArrayView
+        (match actualBalanceGaussianFlagFirstUnusedPivotRow cells flags column with
+            | none => actualBalanceGaussianFlagColumnScan cells flags columns
+            | some row =>
+              ((actualBalanceGaussianFlagColumnScan (actualBalanceGaussianArrayPivotRow cells row column)
+                    (actualBalanceGaussianSetUsedFlag flags row) columns).1,
+                (row, column) ::
+                  (actualBalanceGaussianFlagColumnScan (actualBalanceGaussianArrayPivotRow cells row column)
+                      (actualBalanceGaussianSetUsedFlag flags row) columns).2)).1.1,
+      (actualBalanceGaussianFlagColumnScan cells flags columns).2) =
+    balanceGaussianColumnScan (actualBalanceGaussianArrayView cells) used (column :: columns)
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:130:58: Application type mismatch: The argument
+  hpivot'
+has type
+  balanceFirstUnusedPivotRow (actualBalanceGaussianArrayView cells) column used = some row
+of sort `Prop` but is expected to have type
+  Finset (Fin ?m.123)
+of sort `Type` in the application
+  @balanceFirstUnusedPivotRow_sound ?m.123 n (actualBalanceGaussianArrayView cells) column hpivot'
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:143:2: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagColumnScan (?m.7 raw tape) (3 * s * (3 * s))
+    (actualBalanceSerializedCoefficientMatrix (decodeRawArray raw) tape)
+    (actualBalanceGaussianEmptyUsedFlags (4 * (3 * s * (3 * s)))) (List.ofFn fun column => column)
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:141:4: Failed to infer type of definition `actualBalanceGaussianSerializedArrayFlagScan`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:152:9: Function expected at
+  actualBalanceGaussianSerializedArrayFlagScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayFlagScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:153:7: Function expected at
+  actualBalanceGaussianSerializedArrayFlagScan
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayFlagScan` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:155:18: Unknown identifier `actualBalanceGaussianFlagColumnScan_refines`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:154:47: unsolved goals
+x✝ : Sort u_1
+actualBalanceGaussianSerializedArrayFlagScan : x✝
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+⊢ (actualBalanceGaussianArrayView sorry, sorry) = actualBalanceGaussianRawScan raw tape
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:237:53: Invalid field `sourceOperations`: The environment does not contain `CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.sourceOperations`, so it is not possible to project the field `sourceOperations` from an expression
+  actualBalanceGaussianFlagScanCostModel m n k p
+of type
+  ActualBalanceGaussianFlagScanCost
+info: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:241:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:238:64: unsolved goals
+m n k p : ℕ
+⊢ sorry () = k * 2 + k * m * 5 + m * p * 4 + m * p * n * 10 + p * 2
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:239:8: This simp argument is unused:
+  actualBalanceGaussianFlagScanCostModel
+
+Hint: Omit it from the simp argument list.
+  simp [actualBalanceGaussianFlagScanCostM̵o̵d̵e̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵a̵c̵t̵u̵a̵l̵B̵a̵l̵a̵n̵c̵e̵G̵a̵u̵s̵s̵i̵a̵n̵F̵l̵a̵g̵S̵c̵a̵n̵C̵o̵s̵t̵.sourceOperations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:240:4: This simp argument is unused:
+  actualBalanceGaussianFlagScanCost.sourceOperations
+
+Hint: Omit it from the simp argument list.
+  simp [actualBalanceGaussianFlagScanCostModel,̵
+  ̵ ̵ ̵ ̵ ̵a̵c̵t̵u̵a̵l̵B̵a̵l̵a̵n̵c̵e̵G̵a̵u̵s̵s̵i̵a̵n̵F̵l̵a̵g̵S̵c̵a̵n̵C̵o̵s̵t̵.̵s̵o̵u̵r̵c̵e̵O̵p̵e̵r̵a̵t̵i̵o̵n̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:245:53: Invalid field `sourceOperations`: The environment does not contain `CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.sourceOperations`, so it is not possible to project the field `sourceOperations` from an expression
+  actualBalanceGaussianFlagScanCostModel m n k p
+of type
+  ActualBalanceGaussianFlagScanCost
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:246:44: unsolved goals
+case h₁.h₁
+m n k p : ℕ
+hp : p ≤ k
+⊢ 5 * k * ?m + 10 * n * ?m * ?n + 4 * n * ?m ≤ 9 * k * m
+
+case h₁.h₂.bc
+m n k p : ℕ
+hp : p ≤ k
+⊢ 2 ≤ 10 * k * m
+
+case h₂.bc
+m n k p : ℕ
+hp : p ≤ k
+⊢ 2 ≤ 4
+
+case m
+m n k p : ℕ
+hp : p ≤ k
+⊢ ℕ
+
+case n
+m n k p : ℕ
+hp : p ≤ k
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:254:73: unexpected token '+'; expected ':=', 'where' or '|'
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:269:4: don't know how to synthesize implicit argument `α`
+  @List.length (Fin (?m.11 cells flags columns) × Fin n) (actualBalanceGaussianFlagColumnScan cells flags columns).2
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:269:4: don't know how to synthesize implicit argument `β`
+  @Prod.snd (Array (Array (ZMod 2)) × Array Bool) (List (Fin (?m.11 cells flags columns) × Fin n))
+    (actualBalanceGaussianFlagColumnScan cells flags columns)
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:269:5: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagColumnScan (?m.11 cells flags columns) n cells flags columns
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:277:10: Type mismatch: After simplification, term
+  Nat.le_trans (ih cells flags) (Nat.le_succ columns.length)
+ has type
+  (actualBalanceGaussianFlagColumnScan cells flags columns).2.length ≤ columns.length + 1
+but is expected to have type
+  (match actualBalanceGaussianFlagFirstUnusedPivotRow cells flags column with
+        | none => actualBalanceGaussianFlagColumnScan cells flags columns
+        | some row =>
+          ((actualBalanceGaussianFlagColumnScan (actualBalanceGaussianArrayPivotRow cells row column)
+                (actualBalanceGaussianSetUsedFlag flags row) columns).1,
+            (row, column) ::
+              (actualBalanceGaussianFlagColumnScan (actualBalanceGaussianArrayPivotRow cells row column)
+                  (actualBalanceGaussianSetUsedFlag flags row) columns).2)).2.length ≤
+    columns.length + 1
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:280:10: Type mismatch: After simplification, term
+  Nat.succ_le_succ
+    (ih (actualBalanceGaussianArrayPivotRow cells row column) (actualBalanceGaussianSetUsedFlag flags row))
+ has type
+  (actualBalanceGaussianFlagColumnScan (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).2.length ≤
+    columns.length
+but is expected to have type
+  (match actualBalanceGaussianFlagFirstUnusedPivotRow cells flags column with
+        | none => actualBalanceGaussianFlagColumnScan cells flags columns
+        | some row =>
+          ((actualBalanceGaussianFlagColumnScan (actualBalanceGaussianArrayPivotRow cells row column)
+                (actualBalanceGaussianSetUsedFlag flags row) columns).1,
+            (row, column) ::
+              (actualBalanceGaussianFlagColumnScan (actualBalanceGaussianArrayPivotRow cells row column)
+                  (actualBalanceGaussianSetUsedFlag flags row) columns).2)).2.length ≤
+    columns.length + 1
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:291:4: don't know how to synthesize implicit argument `α`
+  @List.length (Fin (?m.9 cells flags columns) × Fin n) (actualBalanceGaussianFlagColumnScan cells flags columns).2
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:291:4: don't know how to synthesize implicit argument `β`
+  @Prod.snd (Array (Array (ZMod 2)) × Array Bool) (List (Fin (?m.9 cells flags columns) × Fin n))
+    (actualBalanceGaussianFlagColumnScan cells flags columns)
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:291:5: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagColumnScan (?m.9 cells flags columns) n cells flags columns
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:296:66: Invalid field `sourceOperations`: The environment does not contain `CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.sourceOperations`, so it is not possible to project the field `sourceOperations` from an expression
+  actualBalanceGaussianFlagColumnScanCost cells flags columns
+of type
+  ActualBalanceGaussianFlagScanCost
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:300:8: Unknown identifier `actualBalanceGaussianFlagColumnScan_pivotCount_le`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:298:30: unsolved goals
+case p
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:307:14: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagColumnScanCost (?m.95 raw tape) (3 * s * (3 * s))
+    (actualBalanceSerializedCoefficientMatrix (decodeRawArray raw) tape)
+    (actualBalanceGaussianEmptyUsedFlags (4 * (3 * s * (3 * s)))) (List.ofFn fun column => column)
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:323:64: Invalid field `sourceOperations`: The environment does not contain `CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.sourceOperations`, so it is not possible to project the field `sourceOperations` from an expression
+  actualBalanceGaussianSerializedArrayFlagScanCost raw tape
+of type
+  ActualBalanceGaussianFlagScanCost
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:356:11: don't know how to synthesize implicit argument `α`
+  @List.length (Fin ?m.330 × Fin (3 * s * (3 * s))) (actualBalanceGaussianFlagColumnScan cells flags columns).2
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+k : ℕ := ⋯
+m : ℕ := ⋯
+n : ℕ := k
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:356:11: don't know how to synthesize implicit argument `β`
+  @Prod.snd (Array (Array (ZMod 2)) × Array Bool) (List (Fin ?m.330 × Fin (3 * s * (3 * s))))
+    (actualBalanceGaussianFlagColumnScan cells flags columns)
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+k : ℕ := ⋯
+m : ℕ := ⋯
+n : ℕ := k
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:356:12: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagColumnScan ?m.330 (3 * s * (3 * s)) cells flags columns
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+k : ℕ := ⋯
+m : ℕ := ⋯
+n : ℕ := k
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagScan.lean:347:65: unsolved goals
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+cells : Array (Array (ZMod 2)) := actualBalanceSerializedCoefficientMatrix (decodeRawArray raw) tape
+flags : Array Bool := actualBalanceGaussianEmptyUsedFlags (4 * (3 * s * (3 * s)))
+columns : List (Fin (3 * s * (3 * s))) := List.ofFn fun column => column
+k : ℕ := 3 * s * (3 * s)
+m : ℕ := 4 * k
+n : ℕ := k
+⊢ let cost := actualBalanceGaussianSerializedArrayFlagScanCost raw tape;
+  cost.newMatrixArraySlots + cost.newFlagArraySlots + cost.initialFlagArraySlots ≤
+      4 * (3 * s) ^ 6 + 8 * (3 * s) ^ 4 + 4 * (3 * s) ^ 2 ∧
+    cost.liveArrayAndListSlotsUpper ≤ 4 * (3 * s) ^ 6 + 16 * (3 * s) ^ 4 + 22 * (3 * s) ^ 2
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayFlagScan
