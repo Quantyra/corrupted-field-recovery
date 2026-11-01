@@ -194,7 +194,7 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
             selected, hpivot, actualBalanceGaussianFlagExecutionTrace.add,
             actualBalanceGaussianFlagExecutionTrace.zero]
           have htail := ih cells flags
-          simp only [hsearch, hzero, htail]
+          simp only [hsearch, hzero, htail, List.length_cons]
           repeat' constructor
           all_goals
             first
@@ -208,7 +208,7 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
             selected, hpivot, actualBalanceGaussianFlagExecutionTrace.add,
             actualBalanceGaussianFlagPivotUpdateCharge,
             actualBalanceGaussianFlagExecutionTrace.zero]
-          simp only [hsearch, hzero, htail]
+          simp only [hsearch, hzero, htail, List.length_cons]
           repeat' constructor
           all_goals
             first
@@ -221,8 +221,9 @@ list are not included here. -/
 theorem actualBalanceGaussianFlagColumnScanInstrumented_sourceUpper
     {m n : Nat} (cells : Array (Array (ZMod 2))) (flags : Array Bool)
     (columns : List (Fin n)) :
-    (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
-      cells flags columns).2.sourceOperationUpper ≤
+    actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper
+      (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
+        cells flags columns).2 ≤
       5 * columns.length * m +
         10 * (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
           cells flags columns).1.2.length * m * n +
@@ -253,7 +254,7 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_pivots_le_columns
     (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
       cells flags columns).1.2.length ≤ columns.length := by
   have href := actualBalanceGaussianFlagColumnScanInstrumented_refines
-    cells flags columns
+    (m := m) cells flags columns
   have htranscript := congrArg
     (fun out : ActualBalanceGaussianFlagScanOutput m n => out.2) href
   rw [htranscript]
@@ -268,7 +269,8 @@ implicit array bounds/default machinery beyond the explicitly charged views,
 Lean runtime allocation headers, GC, stack space, or bit complexity. -/
 theorem actualBalanceGaussianSerializedArrayFlagScanInstrumented_sourceUpper
     {s : Nat} (raw : RawCoefficientArray) (tape : FiveWordTape s) :
-    (actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).2.sourceOperationUpper ≤
+    actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper
+      (actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).2 ≤
       40 * (3 * s) ^ 6 + 36 * (3 * s) ^ 4 + 8 * (3 * s) ^ 2 := by
   let m := 4 * ((3 * s) * (3 * s))
   let k := (3 * s) * (3 * s)
@@ -286,8 +288,9 @@ theorem actualBalanceGaussianSerializedArrayFlagScanInstrumented_sourceUpper
   have hscan := actualBalanceGaussianFlagColumnScanInstrumented_sourceUpper
     (m := m) cells flags columns
   have hraw :
-      (actualBalanceGaussianSerializedArrayFlagScanInstrumented
-        raw tape).2.sourceOperationUpper ≤
+      actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper
+        (actualBalanceGaussianSerializedArrayFlagScanInstrumented
+          raw tape).2 ≤
         5 * k * m + 10 * p * m * k + 4 * p * m + 2 * p + 2 * k + m := by
     simpa [actualBalanceGaussianSerializedArrayFlagScanInstrumented,
       actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper,
