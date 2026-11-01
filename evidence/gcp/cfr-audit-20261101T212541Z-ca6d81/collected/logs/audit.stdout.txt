@@ -1,0 +1,27 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse_two_sided_of_candidate
+@CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse_two_sided_of_candidate : ∀ {s : Nat}
+  (hs : LE.le.{0} 1 s) (T : Module.End.{0, 0} (ZMod 2) (CorruptedFieldRecovery.BinaryVector (HMul.hMul.{0, 0, 0} 3 s)))
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true) (q : Polynomial.{0} (ZMod 2))
+  (hmod : Eq.{1} (CorruptedFieldRecovery.rawCandidateModulus candidate) q)
+  (hq : Eq.{1} ((Polynomial.aeval.{0, 0} T) q) 0),
+  ∃ outColumns outSelected,
+    And
+      (Eq.{1}
+        (CorruptedFieldRecovery.actualGreedyArrayOrbitRun T 3 (List.toArray.{0} List.nil.{0})
+          (List.toArray.{0} List.nil.{0}))
+        (Option.some.{0} (Prod.mk.{0, 0} outColumns outSelected)))
+      (And (Eq.{1} (Array.size.{0} outColumns) (HMul.hMul.{0, 0, 0} 3 s))
+        (And
+          (Eq.{1}
+            (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArraySpanMatrix outColumns)
+              (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix outColumns))
+            1)
+          (Eq.{1}
+            (HMul.hMul.{0, 0, 0} (CorruptedFieldRecovery.actualGreedyArrayCandidateInverseMatrix outColumns)
+              (CorruptedFieldRecovery.actualGreedyArraySpanMatrix outColumns))
+            1)))
+CFR_TYPE_END:CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse_two_sided_of_candidate
+'CorruptedFieldRecovery.actualGreedyArrayOrbitRun_threePass_candidateInverse_two_sided_of_candidate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

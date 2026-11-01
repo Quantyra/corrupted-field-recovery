@@ -1,0 +1,6 @@
+/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-audit-20261101T212541Z-ca6d81/gcp_cfr_runner.py: OK
+STAGE=lean-version
+STAGE=lake-version
+STAGE=dependency-cache-incremental
+STAGE=build
+STAGE=audit
