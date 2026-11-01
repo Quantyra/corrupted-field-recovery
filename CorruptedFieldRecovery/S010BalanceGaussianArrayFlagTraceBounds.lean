@@ -204,13 +204,30 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
           have htail := ih cells flags
           have ht_tests := htail.2.2.1
           have ht_views := htail.2.2.2.2.1
+          have h_tests :
+              (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+                (m := m) cells flags column).2.selectorPredicateTests +
+                  (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
+                    cells flags columns).2.selectorPredicateTests ≤
+                columns.length * m + m := by
+            omega
+          have h_views :
+              (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+                (m := m) cells flags column).2.selectorCoefficientViews +
+                  (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
+                    cells flags columns).2.selectorCoefficientViews ≤
+                (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+                  (m := m) cells flags column).2.selectorPredicateTests +
+                  (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
+                    cells flags columns).2.selectorPredicateTests := by
+            omega
           simp only [hsearch, hzero, htail, List.length_cons, Nat.zero_add, Nat.add_zero]
           repeat' constructor
           all_goals
             first
               | ring
-              | nlinarith [hs_tests, ht_tests]
-              | nlinarith [hs_views, ht_views]
+              | exact h_tests
+              | exact h_views
               | omega
       | some row =>
           have htail := ih
@@ -218,6 +235,29 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
             (actualBalanceGaussianSetUsedFlag flags row)
           have ht_tests := htail.2.2.1
           have ht_views := htail.2.2.2.2.1
+          have h_tests :
+              (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+                (m := m) cells flags column).2.selectorPredicateTests +
+                  (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
+                    (actualBalanceGaussianArrayPivotRow cells row column)
+                    (actualBalanceGaussianSetUsedFlag flags row)
+                    columns).2.selectorPredicateTests ≤
+                columns.length * m + m := by
+            omega
+          have h_views :
+              (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+                (m := m) cells flags column).2.selectorCoefficientViews +
+                  (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
+                    (actualBalanceGaussianArrayPivotRow cells row column)
+                    (actualBalanceGaussianSetUsedFlag flags row)
+                    columns).2.selectorCoefficientViews ≤
+                (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+                  (m := m) cells flags column).2.selectorPredicateTests +
+                  (actualBalanceGaussianFlagColumnScanInstrumented (m := m)
+                    (actualBalanceGaussianArrayPivotRow cells row column)
+                    (actualBalanceGaussianSetUsedFlag flags row)
+                    columns).2.selectorPredicateTests := by
+            omega
           simp only [actualBalanceGaussianFlagColumnScanInstrumented,
             selected, hpivot, actualBalanceGaussianFlagExecutionTrace.add,
             actualBalanceGaussianFlagPivotUpdateCharge,
@@ -227,8 +267,8 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
           all_goals
             first
               | ring
-              | nlinarith [hs_tests, ht_tests]
-              | nlinarith [hs_views, ht_views]
+              | exact h_tests
+              | exact h_views
               | omega
 
 /-- The declared primitive charge of the generic instrumented scan is bounded

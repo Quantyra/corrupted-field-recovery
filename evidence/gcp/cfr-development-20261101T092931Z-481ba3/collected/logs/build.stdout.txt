@@ -1,0 +1,496 @@
+✖ [3012/3012] Building CorruptedFieldRecovery.S010BalanceGaussianArrayFlagTraceBounds (55s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.setup.json --json
+info: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:228:16: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:228:16: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:200:13: unsolved goals
+case cons.none.right.right.left
+m n : ℕ
+column : Fin n
+columns : List (Fin n)
+ih :
+  ∀ (cells : Array (Array (ZMod 2))) (flags : Array Bool),
+    let run := actualBalanceGaussianFlagColumnScanInstrumented cells flags columns;
+    let t := run.2;
+    let p := run.1.2.length;
+    t.columnsProcessed = columns.length ∧
+      t.rowIndexListNodes = columns.length * m ∧
+        t.selectorPredicateTests ≤ columns.length * m ∧
+          t.booleanFlagReads = t.selectorPredicateTests ∧
+            t.selectorCoefficientViews ≤ t.selectorPredicateTests ∧
+              t.pivotUpdates = p ∧
+                t.pivotCoefficientViewsUpper = 3 * p * m * n ∧
+                  t.pivotRowComparisons = p * m * n ∧
+                    t.fieldMultiplicationsUpper = p * m * n ∧
+                      t.fieldAdditionsUpper = p * m * n ∧
+                        t.coefficientCellWrites = p * m * n ∧
+                          t.matrixRowArrayWrites = p * m ∧
+                            t.flagUpdateReadsUpper = p * m ∧
+                              t.flagCellComparisons = p * m ∧
+                                t.flagCellWrites = p * m ∧
+                                  t.newMatrixArraySlots = p * m * (n + 1) ∧
+                                    t.newFlagArraySlots = p * m ∧
+                                      t.initialFlagArraySlots = 0 ∧
+                                        t.initialFlagCellWrites = 0 ∧ t.transcriptCons = p ∧ t.columnListNodes = 0
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+selected : Option (Fin m) × ActualBalanceGaussianFlagExecutionTrace :=
+  actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column
+hselected :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).1 =
+    actualBalanceGaussianFlagFirstUnusedPivotRow m cells flags column
+hsearch :
+  have t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2;
+  t.rowIndexListNodes = m ∧
+    t.selectorPredicateTests ≤ m ∧
+      t.booleanFlagReads = t.selectorPredicateTests ∧ t.selectorCoefficientViews ≤ t.selectorPredicateTests
+hzero :
+  have t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2;
+  t.columnsProcessed = 0 ∧
+    t.pivotUpdates = 0 ∧
+      t.pivotCoefficientViewsUpper = 0 ∧
+        t.pivotRowComparisons = 0 ∧
+          t.fieldMultiplicationsUpper = 0 ∧
+            t.fieldAdditionsUpper = 0 ∧
+              t.coefficientCellWrites = 0 ∧
+                t.matrixRowArrayWrites = 0 ∧
+                  t.flagUpdateReadsUpper = 0 ∧
+                    t.flagCellComparisons = 0 ∧
+                      t.flagCellWrites = 0 ∧
+                        t.newMatrixArraySlots = 0 ∧
+                          t.newFlagArraySlots = 0 ∧
+                            t.initialFlagArraySlots = 0 ∧
+                              t.initialFlagCellWrites = 0 ∧ t.transcriptCons = 0 ∧ t.columnListNodes = 0
+hs_tests : (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests ≤ m
+hs_views :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests
+hpivot : selected.1 = none
+htail :
+  let run := actualBalanceGaussianFlagColumnScanInstrumented cells flags columns;
+  let t := run.2;
+  let p := run.1.2.length;
+  t.columnsProcessed = columns.length ∧
+    t.rowIndexListNodes = columns.length * m ∧
+      t.selectorPredicateTests ≤ columns.length * m ∧
+        t.booleanFlagReads = t.selectorPredicateTests ∧
+          t.selectorCoefficientViews ≤ t.selectorPredicateTests ∧
+            t.pivotUpdates = p ∧
+              t.pivotCoefficientViewsUpper = 3 * p * m * n ∧
+                t.pivotRowComparisons = p * m * n ∧
+                  t.fieldMultiplicationsUpper = p * m * n ∧
+                    t.fieldAdditionsUpper = p * m * n ∧
+                      t.coefficientCellWrites = p * m * n ∧
+                        t.matrixRowArrayWrites = p * m ∧
+                          t.flagUpdateReadsUpper = p * m ∧
+                            t.flagCellComparisons = p * m ∧
+                              t.flagCellWrites = p * m ∧
+                                t.newMatrixArraySlots = p * m * (n + 1) ∧
+                                  t.newFlagArraySlots = p * m ∧
+                                    t.initialFlagArraySlots = 0 ∧
+                                      t.initialFlagCellWrites = 0 ∧ t.transcriptCons = p ∧ t.columnListNodes = 0
+ht_tests :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests ≤ columns.length * m
+ht_views :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests
+h_tests :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests ≤
+    columns.length * m + m
+h_views :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests
+⊢ (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests ≤
+    columns.length * m + m
+
+case cons.none.right.right.right.right.left
+m n : ℕ
+column : Fin n
+columns : List (Fin n)
+ih :
+  ∀ (cells : Array (Array (ZMod 2))) (flags : Array Bool),
+    let run := actualBalanceGaussianFlagColumnScanInstrumented cells flags columns;
+    let t := run.2;
+    let p := run.1.2.length;
+    t.columnsProcessed = columns.length ∧
+      t.rowIndexListNodes = columns.length * m ∧
+        t.selectorPredicateTests ≤ columns.length * m ∧
+          t.booleanFlagReads = t.selectorPredicateTests ∧
+            t.selectorCoefficientViews ≤ t.selectorPredicateTests ∧
+              t.pivotUpdates = p ∧
+                t.pivotCoefficientViewsUpper = 3 * p * m * n ∧
+                  t.pivotRowComparisons = p * m * n ∧
+                    t.fieldMultiplicationsUpper = p * m * n ∧
+                      t.fieldAdditionsUpper = p * m * n ∧
+                        t.coefficientCellWrites = p * m * n ∧
+                          t.matrixRowArrayWrites = p * m ∧
+                            t.flagUpdateReadsUpper = p * m ∧
+                              t.flagCellComparisons = p * m ∧
+                                t.flagCellWrites = p * m ∧
+                                  t.newMatrixArraySlots = p * m * (n + 1) ∧
+                                    t.newFlagArraySlots = p * m ∧
+                                      t.initialFlagArraySlots = 0 ∧
+                                        t.initialFlagCellWrites = 0 ∧ t.transcriptCons = p ∧ t.columnListNodes = 0
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+selected : Option (Fin m) × ActualBalanceGaussianFlagExecutionTrace :=
+  actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column
+hselected :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).1 =
+    actualBalanceGaussianFlagFirstUnusedPivotRow m cells flags column
+hsearch :
+  have t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2;
+  t.rowIndexListNodes = m ∧
+    t.selectorPredicateTests ≤ m ∧
+      t.booleanFlagReads = t.selectorPredicateTests ∧ t.selectorCoefficientViews ≤ t.selectorPredicateTests
+hzero :
+  have t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2;
+  t.columnsProcessed = 0 ∧
+    t.pivotUpdates = 0 ∧
+      t.pivotCoefficientViewsUpper = 0 ∧
+        t.pivotRowComparisons = 0 ∧
+          t.fieldMultiplicationsUpper = 0 ∧
+            t.fieldAdditionsUpper = 0 ∧
+              t.coefficientCellWrites = 0 ∧
+                t.matrixRowArrayWrites = 0 ∧
+                  t.flagUpdateReadsUpper = 0 ∧
+                    t.flagCellComparisons = 0 ∧
+                      t.flagCellWrites = 0 ∧
+                        t.newMatrixArraySlots = 0 ∧
+                          t.newFlagArraySlots = 0 ∧
+                            t.initialFlagArraySlots = 0 ∧
+                              t.initialFlagCellWrites = 0 ∧ t.transcriptCons = 0 ∧ t.columnListNodes = 0
+hs_tests : (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests ≤ m
+hs_views :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests
+hpivot : selected.1 = none
+htail :
+  let run := actualBalanceGaussianFlagColumnScanInstrumented cells flags columns;
+  let t := run.2;
+  let p := run.1.2.length;
+  t.columnsProcessed = columns.length ∧
+    t.rowIndexListNodes = columns.length * m ∧
+      t.selectorPredicateTests ≤ columns.length * m ∧
+        t.booleanFlagReads = t.selectorPredicateTests ∧
+          t.selectorCoefficientViews ≤ t.selectorPredicateTests ∧
+            t.pivotUpdates = p ∧
+              t.pivotCoefficientViewsUpper = 3 * p * m * n ∧
+                t.pivotRowComparisons = p * m * n ∧
+                  t.fieldMultiplicationsUpper = p * m * n ∧
+                    t.fieldAdditionsUpper = p * m * n ∧
+                      t.coefficientCellWrites = p * m * n ∧
+                        t.matrixRowArrayWrites = p * m ∧
+                          t.flagUpdateReadsUpper = p * m ∧
+                            t.flagCellComparisons = p * m ∧
+                              t.flagCellWrites = p * m ∧
+                                t.newMatrixArraySlots = p * m * (n + 1) ∧
+                                  t.newFlagArraySlots = p * m ∧
+                                    t.initialFlagArraySlots = 0 ∧
+                                      t.initialFlagCellWrites = 0 ∧ t.transcriptCons = p ∧ t.columnListNodes = 0
+ht_tests :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests ≤ columns.length * m
+ht_views :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests
+h_tests :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests ≤
+    columns.length * m + m
+h_views :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests
+⊢ (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorPredicateTests
+info: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:269:16: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:269:16: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:232:17: unsolved goals
+case cons.some.right.right.left
+m n : ℕ
+column : Fin n
+columns : List (Fin n)
+ih :
+  ∀ (cells : Array (Array (ZMod 2))) (flags : Array Bool),
+    let run := actualBalanceGaussianFlagColumnScanInstrumented cells flags columns;
+    let t := run.2;
+    let p := run.1.2.length;
+    t.columnsProcessed = columns.length ∧
+      t.rowIndexListNodes = columns.length * m ∧
+        t.selectorPredicateTests ≤ columns.length * m ∧
+          t.booleanFlagReads = t.selectorPredicateTests ∧
+            t.selectorCoefficientViews ≤ t.selectorPredicateTests ∧
+              t.pivotUpdates = p ∧
+                t.pivotCoefficientViewsUpper = 3 * p * m * n ∧
+                  t.pivotRowComparisons = p * m * n ∧
+                    t.fieldMultiplicationsUpper = p * m * n ∧
+                      t.fieldAdditionsUpper = p * m * n ∧
+                        t.coefficientCellWrites = p * m * n ∧
+                          t.matrixRowArrayWrites = p * m ∧
+                            t.flagUpdateReadsUpper = p * m ∧
+                              t.flagCellComparisons = p * m ∧
+                                t.flagCellWrites = p * m ∧
+                                  t.newMatrixArraySlots = p * m * (n + 1) ∧
+                                    t.newFlagArraySlots = p * m ∧
+                                      t.initialFlagArraySlots = 0 ∧
+                                        t.initialFlagCellWrites = 0 ∧ t.transcriptCons = p ∧ t.columnListNodes = 0
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+selected : Option (Fin m) × ActualBalanceGaussianFlagExecutionTrace :=
+  actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column
+hselected :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).1 =
+    actualBalanceGaussianFlagFirstUnusedPivotRow m cells flags column
+hsearch :
+  have t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2;
+  t.rowIndexListNodes = m ∧
+    t.selectorPredicateTests ≤ m ∧
+      t.booleanFlagReads = t.selectorPredicateTests ∧ t.selectorCoefficientViews ≤ t.selectorPredicateTests
+hzero :
+  have t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2;
+  t.columnsProcessed = 0 ∧
+    t.pivotUpdates = 0 ∧
+      t.pivotCoefficientViewsUpper = 0 ∧
+        t.pivotRowComparisons = 0 ∧
+          t.fieldMultiplicationsUpper = 0 ∧
+            t.fieldAdditionsUpper = 0 ∧
+              t.coefficientCellWrites = 0 ∧
+                t.matrixRowArrayWrites = 0 ∧
+                  t.flagUpdateReadsUpper = 0 ∧
+                    t.flagCellComparisons = 0 ∧
+                      t.flagCellWrites = 0 ∧
+                        t.newMatrixArraySlots = 0 ∧
+                          t.newFlagArraySlots = 0 ∧
+                            t.initialFlagArraySlots = 0 ∧
+                              t.initialFlagCellWrites = 0 ∧ t.transcriptCons = 0 ∧ t.columnListNodes = 0
+hs_tests : (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests ≤ m
+hs_views :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests
+row : Fin m
+hpivot : selected.1 = some row
+htail :
+  let run :=
+    actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+      (actualBalanceGaussianSetUsedFlag flags row) columns;
+  let t := run.2;
+  let p := run.1.2.length;
+  t.columnsProcessed = columns.length ∧
+    t.rowIndexListNodes = columns.length * m ∧
+      t.selectorPredicateTests ≤ columns.length * m ∧
+        t.booleanFlagReads = t.selectorPredicateTests ∧
+          t.selectorCoefficientViews ≤ t.selectorPredicateTests ∧
+            t.pivotUpdates = p ∧
+              t.pivotCoefficientViewsUpper = 3 * p * m * n ∧
+                t.pivotRowComparisons = p * m * n ∧
+                  t.fieldMultiplicationsUpper = p * m * n ∧
+                    t.fieldAdditionsUpper = p * m * n ∧
+                      t.coefficientCellWrites = p * m * n ∧
+                        t.matrixRowArrayWrites = p * m ∧
+                          t.flagUpdateReadsUpper = p * m ∧
+                            t.flagCellComparisons = p * m ∧
+                              t.flagCellWrites = p * m ∧
+                                t.newMatrixArraySlots = p * m * (n + 1) ∧
+                                  t.newFlagArraySlots = p * m ∧
+                                    t.initialFlagArraySlots = 0 ∧
+                                      t.initialFlagCellWrites = 0 ∧ t.transcriptCons = p ∧ t.columnListNodes = 0
+ht_tests :
+  (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests ≤
+    columns.length * m
+ht_views :
+  (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests
+h_tests :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests ≤
+    columns.length * m + m
+h_views :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests
+⊢ (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests ≤
+    columns.length * m + m
+
+case cons.some.right.right.right.right.left
+m n : ℕ
+column : Fin n
+columns : List (Fin n)
+ih :
+  ∀ (cells : Array (Array (ZMod 2))) (flags : Array Bool),
+    let run := actualBalanceGaussianFlagColumnScanInstrumented cells flags columns;
+    let t := run.2;
+    let p := run.1.2.length;
+    t.columnsProcessed = columns.length ∧
+      t.rowIndexListNodes = columns.length * m ∧
+        t.selectorPredicateTests ≤ columns.length * m ∧
+          t.booleanFlagReads = t.selectorPredicateTests ∧
+            t.selectorCoefficientViews ≤ t.selectorPredicateTests ∧
+              t.pivotUpdates = p ∧
+                t.pivotCoefficientViewsUpper = 3 * p * m * n ∧
+                  t.pivotRowComparisons = p * m * n ∧
+                    t.fieldMultiplicationsUpper = p * m * n ∧
+                      t.fieldAdditionsUpper = p * m * n ∧
+                        t.coefficientCellWrites = p * m * n ∧
+                          t.matrixRowArrayWrites = p * m ∧
+                            t.flagUpdateReadsUpper = p * m ∧
+                              t.flagCellComparisons = p * m ∧
+                                t.flagCellWrites = p * m ∧
+                                  t.newMatrixArraySlots = p * m * (n + 1) ∧
+                                    t.newFlagArraySlots = p * m ∧
+                                      t.initialFlagArraySlots = 0 ∧
+                                        t.initialFlagCellWrites = 0 ∧ t.transcriptCons = p ∧ t.columnListNodes = 0
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+selected : Option (Fin m) × ActualBalanceGaussianFlagExecutionTrace :=
+  actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column
+hselected :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).1 =
+    actualBalanceGaussianFlagFirstUnusedPivotRow m cells flags column
+hsearch :
+  have t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2;
+  t.rowIndexListNodes = m ∧
+    t.selectorPredicateTests ≤ m ∧
+      t.booleanFlagReads = t.selectorPredicateTests ∧ t.selectorCoefficientViews ≤ t.selectorPredicateTests
+hzero :
+  have t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2;
+  t.columnsProcessed = 0 ∧
+    t.pivotUpdates = 0 ∧
+      t.pivotCoefficientViewsUpper = 0 ∧
+        t.pivotRowComparisons = 0 ∧
+          t.fieldMultiplicationsUpper = 0 ∧
+            t.fieldAdditionsUpper = 0 ∧
+              t.coefficientCellWrites = 0 ∧
+                t.matrixRowArrayWrites = 0 ∧
+                  t.flagUpdateReadsUpper = 0 ∧
+                    t.flagCellComparisons = 0 ∧
+                      t.flagCellWrites = 0 ∧
+                        t.newMatrixArraySlots = 0 ∧
+                          t.newFlagArraySlots = 0 ∧
+                            t.initialFlagArraySlots = 0 ∧
+                              t.initialFlagCellWrites = 0 ∧ t.transcriptCons = 0 ∧ t.columnListNodes = 0
+hs_tests : (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests ≤ m
+hs_views :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests
+row : Fin m
+hpivot : selected.1 = some row
+htail :
+  let run :=
+    actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+      (actualBalanceGaussianSetUsedFlag flags row) columns;
+  let t := run.2;
+  let p := run.1.2.length;
+  t.columnsProcessed = columns.length ∧
+    t.rowIndexListNodes = columns.length * m ∧
+      t.selectorPredicateTests ≤ columns.length * m ∧
+        t.booleanFlagReads = t.selectorPredicateTests ∧
+          t.selectorCoefficientViews ≤ t.selectorPredicateTests ∧
+            t.pivotUpdates = p ∧
+              t.pivotCoefficientViewsUpper = 3 * p * m * n ∧
+                t.pivotRowComparisons = p * m * n ∧
+                  t.fieldMultiplicationsUpper = p * m * n ∧
+                    t.fieldAdditionsUpper = p * m * n ∧
+                      t.coefficientCellWrites = p * m * n ∧
+                        t.matrixRowArrayWrites = p * m ∧
+                          t.flagUpdateReadsUpper = p * m ∧
+                            t.flagCellComparisons = p * m ∧
+                              t.flagCellWrites = p * m ∧
+                                t.newMatrixArraySlots = p * m * (n + 1) ∧
+                                  t.newFlagArraySlots = p * m ∧
+                                    t.initialFlagArraySlots = 0 ∧
+                                      t.initialFlagCellWrites = 0 ∧ t.transcriptCons = p ∧ t.columnListNodes = 0
+ht_tests :
+  (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests ≤
+    columns.length * m
+ht_views :
+  (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests
+h_tests :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests ≤
+    columns.length * m + m
+h_views :
+  (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests
+⊢ (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorCoefficientViews ≤
+    (actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorPredicateTests +
+      (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorPredicateTests
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:300:2: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  b - c ≥ 0
+  b + 2*c + 2*d + 2*e + 4*f + 4*h - j - k - l ≥ 1
+  a ≥ 0
+where
+ a := ↑columns.length
+ b := ↑columns.length * ↑m
+ c := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.booleanFlagReads
+ d := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorCoefficientViews
+ e := ↑(3 * (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length * m) * ↑n
+ f := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.coefficientCellWrites
+ g := ↑((actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length * m) * ↑(n + 1)
+ h := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.newFlagArraySlots
+ i := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.transcriptCons
+ j := ↑(5 * columns.length) * ↑m
+ k := ↑(10 * (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length * m) * ↑n
+ l := ↑(4 * (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length) * ↑m
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayFlagTraceBounds
