@@ -1,0 +1,63 @@
+✖ [3068/3072] Building CorruptedFieldRecovery.S010BalanceGaussianArrayFlagGoodEventNonempty (56s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean:70:23: unsolved goals
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+T : Module.End BinaryField (BinaryVector (3 * s)) := (qScalarConjugateLinearMap Q) 1
+hiff :
+  ∀ (T : Module.End BinaryField (BinaryVector (3 * s))),
+    actualFourBilinearBalanced (decodeRawArray raw) tape T ↔ T ∈ qScalarConjugateEndRange Q
+hTbalanced : actualFourBilinearBalanced (decodeRawArray raw) tape T
+hzero : T = 0
+hmap : (qScalarConjugateLinearMap Q) 1 = (qScalarConjugateLinearMap Q) 0
+⊢ False
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean:61:68: unsolved goals
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+T : Module.End BinaryField (BinaryVector (3 * s)) := (qScalarConjugateLinearMap Q) 1
+hiff :
+  ∀ (T : Module.End BinaryField (BinaryVector (3 * s))),
+    actualFourBilinearBalanced (decodeRawArray raw) tape T ↔ T ∈ qScalarConjugateEndRange Q
+hTbalanced : actualFourBilinearBalanced (decodeRawArray raw) tape T
+hTne : T ≠ 0
+⊢ actualBalanceGaussianArrayFlagCandidateEndList raw tape ≠ []
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean:74:25: unexpected token 'have'; expected command
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayFlagGoodEventNonempty
