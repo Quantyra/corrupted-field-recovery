@@ -188,32 +188,44 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
         (m := m) cells flags column
       have hzero := actualBalanceGaussianFlagCountedFirstUnusedPivotRow_trace_zero
         (m := m) cells flags column
+      have hs_tests :
+          (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+            (m := m) cells flags column).2.selectorPredicateTests ≤ m := hsearch.2.1
+      have hs_views :
+          (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+            (m := m) cells flags column).2.selectorCoefficientViews ≤
+          (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+            (m := m) cells flags column).2.selectorPredicateTests := hsearch.2.2.2
       cases hpivot : selected.1 with
       | none =>
           simp only [actualBalanceGaussianFlagColumnScanInstrumented,
             selected, hpivot, actualBalanceGaussianFlagExecutionTrace.add,
             actualBalanceGaussianFlagExecutionTrace.zero]
           have htail := ih cells flags
-          simp only [hsearch, hzero, htail, List.length_cons]
+          have ht_tests := htail.2.2.1
+          have ht_views := htail.2.2.2.2.1
+          simp only [hsearch, hzero, htail, List.length_cons, Nat.zero_add, Nat.add_zero]
           repeat' constructor
           all_goals
             first
               | ring
-              | (ring_nf; omega)
+              | omega
       | some row =>
           have htail := ih
             (actualBalanceGaussianArrayPivotRow cells row column)
             (actualBalanceGaussianSetUsedFlag flags row)
+          have ht_tests := htail.2.2.1
+          have ht_views := htail.2.2.2.2.1
           simp only [actualBalanceGaussianFlagColumnScanInstrumented,
             selected, hpivot, actualBalanceGaussianFlagExecutionTrace.add,
             actualBalanceGaussianFlagPivotUpdateCharge,
             actualBalanceGaussianFlagExecutionTrace.zero]
-          simp only [hsearch, hzero, htail, List.length_cons]
+          simp only [hsearch, hzero, htail, List.length_cons, Nat.zero_add, Nat.add_zero]
           repeat' constructor
           all_goals
             first
               | ring
-              | (ring_nf; omega)
+              | omega
 
 /-- The declared primitive charge of the generic instrumented scan is bounded
 using the actual pivot count `p`; list cells for the caller-supplied column
@@ -235,7 +247,7 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_sourceUpper
   let t := run.2
   let p := run.1.2.length
   have hc := actualBalanceGaussianFlagColumnScanInstrumented_trace_components
-    cells flags columns
+    (m := m) cells flags columns
   simp only [run, t, p] at hc ⊢
   rcases hc with ⟨hcols, hrows, htests, hreads, hviews, hpiv, hviewp,
     hcomp, hmul, hadd, hwrites, houter, hflagreads, hflagcomp, hflagwrites,
@@ -255,8 +267,11 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_pivots_le_columns
       cells flags columns).1.2.length ≤ columns.length := by
   have href := actualBalanceGaussianFlagColumnScanInstrumented_refines
     (m := m) cells flags columns
-  have htranscript := congrArg
-    (fun out : ActualBalanceGaussianFlagScanOutput m n => out.2) href
+  have htranscript :
+      (actualBalanceGaussianFlagColumnScanInstrumented (m := m) cells flags columns).1.2 =
+        (actualBalanceGaussianFlagColumnScan m cells flags columns).2 := by
+    simpa using congrArg
+      (fun out : ActualBalanceGaussianFlagScanOutput m n => out.2) href
   rw [htranscript]
   exact actualBalanceGaussianFlagColumnScan_pivotCount_le m cells flags columns
 
@@ -282,7 +297,7 @@ theorem actualBalanceGaussianSerializedArrayFlagScanInstrumented_sourceUpper
   let p := run.1.2.length
   have hp : p ≤ k := by
     dsimp [p, run, columns, k]
-    simpa [List.length_ofFn] using
+    simpa [List.length_ofFn, columns] using
       actualBalanceGaussianFlagColumnScanInstrumented_pivots_le_columns
         (m := m) cells flags columns
   have hscan := actualBalanceGaussianFlagColumnScanInstrumented_sourceUpper
@@ -294,7 +309,7 @@ theorem actualBalanceGaussianSerializedArrayFlagScanInstrumented_sourceUpper
         5 * k * m + 10 * p * m * k + 4 * p * m + 2 * p + 2 * k + m := by
     simpa [actualBalanceGaussianSerializedArrayFlagScanInstrumented,
       actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper,
-      m, k, cells, flags, columns, run, p] using hscan
+      m, k, cells, flags, columns, run, p, List.length_ofFn] using hscan
   calc
     _ ≤ 5 * k * m + 10 * p * m * k + 4 * p * m + 2 * p + 2 * k + m := hraw
     _ ≤ 5 * k * m + 10 * k * m * k + 4 * k * m + 4 * k + m := by

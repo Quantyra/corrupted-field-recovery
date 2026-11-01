@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-01T08:12:09.845103+00:00",
+  "instance_id": "3335066512373302615",
+  "status": "RUNNING",
+  "exact_profile_verified": true,
+  "single_start": true,
+  "task_egress_added_once": true,
+  "effective_ingress_unchanged": true,
+  "deadlines": {
+    "actual_start_utc": "2026-11-01T01:10:51.810000-07:00",
+    "submission_cutoff_utc": "2026-11-01T04:10:51.810000-07:00",
+    "full_stage_launch_cutoff_utc": "2026-11-01T04:15:51.810000-07:00",
+    "automatic_stop_ceiling_utc": "2026-11-01T05:10:51.810000-07:00",
+    "stage_timeout_seconds": 1800,
+    "minimum_closeout_margin_after_launch_seconds": 3300
+  },
+  "process_guard_pending": true
+}
