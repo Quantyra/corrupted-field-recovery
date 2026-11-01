@@ -1,0 +1,6 @@
+{
+  "CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator": {
+    "emitted_type": "@CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator : \u2200 {s : Nat}\n  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)\n  (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true),\n  And (Irreducible.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n    (And (Polynomial.Monic.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))\n      (Eq.{1} (Polynomial.natDegree.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)) s))\n",
+    "sha256": "7ffb1a4c46ba0c979dfbd602905564a081554efe0bb5b4d3f946842e337787d3"
+  }
+}

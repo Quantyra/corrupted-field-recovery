@@ -1,0 +1,11 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator
+@CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator : ∀ {s : Nat}
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true),
+  And (Irreducible.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+    (And (Polynomial.Monic.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      (Eq.{1} (Polynomial.natDegree.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)) s))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator
+'CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

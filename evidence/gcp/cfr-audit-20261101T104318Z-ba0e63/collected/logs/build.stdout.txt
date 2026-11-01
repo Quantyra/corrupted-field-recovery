@@ -1,0 +1,9 @@
+⚠ [2054/2054] Built CorruptedFieldRecovery.S010BalanceGaussianCandidateAnnihilator (37s)
+warning: CorruptedFieldRecovery/S010BalanceGaussianCandidateAnnihilator.lean:30:34: This simp argument is unused:
+  rawFieldCandidateValidDecidable
+
+Hint: Omit it from the simp argument list.
+  simp [rawFieldCandidateCheck, r̵a̵w̵F̵i̵e̵l̵d̵C̵a̵n̵d̵i̵d̵a̵t̵e̵V̵a̵l̵i̵d̵D̵e̵c̵i̵d̵a̵b̵l̵e̵,̵ ̵hvalid]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (2054 jobs).
