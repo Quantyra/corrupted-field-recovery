@@ -1,0 +1,11 @@
+{
+  "exit_code": 0,
+  "utc": "2026-11-01T23:44:20.859257+00:00",
+  "command": [
+    "gcloud",
+    "auth",
+    "list",
+    "--filter=account:dfredriksen@quantyra.org",
+    "--format=json"
+  ]
+}

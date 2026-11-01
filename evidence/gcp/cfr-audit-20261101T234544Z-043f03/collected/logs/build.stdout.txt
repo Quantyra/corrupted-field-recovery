@@ -1,0 +1,122 @@
+✖ [3069/3072] Building CorruptedFieldRecovery.S010BalanceGaussianRandomCoefficientSelection (52s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:74:4: Type mismatch
+  congrArg Subtype.val ?m.45
+has type
+  ↑?m.41 = ↑?m.42
+but is expected to have type
+  actualBalanceGaussianRawWeightedCombination raw tape x = actualBalanceGaussianRawWeightedCombination raw tape y
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:117:2: Tactic `apply` failed: could not unify the conclusion of `@Subtype.ext`
+  ?a1 = ?a2
+with the goal
+  (actualBalanceGaussianRawWeightedCombination raw tape fun free => actualBalanceGaussianInputCoordinates ↑T ↑free) = ↑T
+
+Note: The full type of `@Subtype.ext` is
+  ∀ {α : Sort ?u.10534.171} {p : α → Prop} {a1 a2 : { x // p x }}, ↑a1 = ↑a2 → a1 = a2
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+hsize : Array.size raw = 3 * s * (3 * s) * (3 * s)
+T : ↥(qScalarConjugateEndRange Q)
+hspan :
+  ↑T ∈ qScalarConjugateEndRange Q ↔
+    ↑T = ∑ free, actualBalanceGaussianInputCoordinates ↑T ↑free • actualBalanceGaussianRawCandidateFamily raw tape free
+⊢ (actualBalanceGaussianRawWeightedCombination raw tape fun free => actualBalanceGaussianInputCoordinates ↑T ↑free) = ↑T
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:153:6: Application type mismatch: The argument
+  actualBalanceGaussianRawWeightedCombination_surjective Q E U b raw tape htape c hc hmodel hsize
+has type
+  ∀ (T : ↥(qScalarConjugateEndRange Q)), ∃ weights, actualBalanceGaussianRawWeightedCombination raw tape weights = ↑T
+but is expected to have type
+  Function.Surjective fun weights => ⟨actualBalanceGaussianRawWeightedCombination raw tape weights, ⋯⟩
+in the application
+  ⟨?m.133, actualBalanceGaussianRawWeightedCombination_surjective Q E U b raw tape htape c hc hmodel hsize⟩
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:181:49: failed to synthesize instance of type class
+  Finite (Module.End BinaryField (BinaryVector (3 * s)))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:190:73: unsolved goals
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+hsize : Array.size raw = 3 * s * (3 * s) * (3 * s)
+hK : Module.finrank BinaryField K = s
+this✝² : Fintype (actualBalanceGaussianRawFreeIndex raw tape) :=
+  Fintype.ofFinite (actualBalanceGaussianRawFreeIndex raw tape)
+this✝¹ : Fintype (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) :=
+  Fintype.ofFinite (actualBalanceGaussianRawFreeIndex raw tape → BinaryField)
+this✝ : Finite ↥(qScalarConjugateEndRange Q)
+this : Fintype ↥(qScalarConjugateEndRange Q) := Fintype.ofFinite ↥(qScalarConjugateEndRange Q)
+e : (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) ≃ ↥(qScalarConjugateEndRange Q) :=
+  actualBalanceGaussianRawWeightsEquivQScalarRange Q E U b raw tape htape c hc hmodel hsize
+hcard :
+  Fintype.card (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) = Fintype.card ↥(qScalarConjugateEndRange Q)
+⊢ Fintype.card (actualBalanceGaussianRawFreeIndex raw tape → ZMod 2) =
+    2 ^ Fintype.card (actualBalanceGaussianRawFreeIndex raw tape)
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:199:52: Application type mismatch: The argument
+  hpow
+has type
+  2 ^ Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = 2 ^ s
+but is expected to have type
+  (fun x => 2 ^ x) (Fintype.card (actualBalanceGaussianRawFreeIndex raw tape)) = (fun x => 2 ^ x) s
+in the application
+  Nat.pow_right_injective ?m.258 hpow
+warning: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:191:10: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵f̵u̵n̵,̵ ̵BinaryField]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:263:15: Type mismatch
+  actualBalanceGaussianQScalarParameter Q
+has type
+  Module.End BinaryField (BinaryVector (3 * s)) → K
+but is expected to have type
+  ↥(qScalarConjugateEndRange Q) → K
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:273:11: Application type mismatch: The argument
+  (qScalarConjugateLinearMap Q) k
+has type
+  Module.End BinaryField (BinaryVector (3 * s))
+of sort `Type` but is expected to have type
+  K
+of sort `Type u_1` in the application
+  Exists.intro ((qScalarConjugateLinearMap Q) k)
+error: CorruptedFieldRecovery/S010BalanceGaussianRandomCoefficientSelection.lean:273:42: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Eq.refl` does not have explicit fields, but 2 were provided
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianRandomCoefficientSelection
