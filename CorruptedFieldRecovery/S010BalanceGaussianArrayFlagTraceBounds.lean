@@ -209,6 +209,8 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
           all_goals
             first
               | ring
+              | nlinarith [hs_tests, ht_tests]
+              | nlinarith [hs_views, ht_views]
               | omega
       | some row =>
           have htail := ih
@@ -225,6 +227,8 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
           all_goals
             first
               | ring
+              | nlinarith [hs_tests, ht_tests]
+              | nlinarith [hs_views, ht_views]
               | omega
 
 /-- The declared primitive charge of the generic instrumented scan is bounded
@@ -248,14 +252,11 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_sourceUpper
   let p := run.1.2.length
   have hc := actualBalanceGaussianFlagColumnScanInstrumented_trace_components
     (m := m) cells flags columns
-  simp only [run, t, p] at hc ⊢
-  rcases hc with ⟨hcols, hrows, htests, hreads, hviews, hpiv, hviewp,
-    hcomp, hmul, hadd, hwrites, houter, hflagreads, hflagcomp, hflagwrites,
-    hmatrixslots, hflagslots, hinit, hinitwrite, htranscript, hlist⟩
-  simp [actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper,
-    hcols, hrows, hreads, hviews, hpiv, hviewp, hcomp, hmul, hadd,
-    hwrites, houter, hflagreads, hflagcomp, hflagwrites, hinitwrite,
-    htranscript, hlist]
+  dsimp only [run, t, p] at hc ⊢
+  obtain ⟨hcols, hrows, htests, hreads, hviews, hpiv, hviewp, hcomp, hmul,
+    hadd, hwrites, houter, hflagreads, hflagcomp, hflagwrites, hmatrixslots,
+    hflagslots, hinit, hinitwrite, htranscript, hlist⟩ := hc
+  dsimp only [actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper]
   omega
 
 /-- A scan has at most one successful pivot per listed column. This is the
@@ -307,9 +308,12 @@ theorem actualBalanceGaussianSerializedArrayFlagScanInstrumented_sourceUpper
         (actualBalanceGaussianSerializedArrayFlagScanInstrumented
           raw tape).2 ≤
         5 * k * m + 10 * p * m * k + 4 * p * m + 2 * p + 2 * k + m := by
-    simpa [actualBalanceGaussianSerializedArrayFlagScanInstrumented,
+    have h := hscan
+    dsimp only [actualBalanceGaussianSerializedArrayFlagScanInstrumented,
       actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper,
-      m, k, cells, flags, columns, run, p, List.length_ofFn] using hscan
+      m, k, cells, flags, columns, run, p] at h ⊢
+    simp only [List.length_ofFn] at h ⊢
+    omega
   calc
     _ ≤ 5 * k * m + 10 * p * m * k + 4 * p * m + 2 * p + 2 * k + m := hraw
     _ ≤ 5 * k * m + 10 * k * m * k + 4 * k * m + 4 * k + m := by
