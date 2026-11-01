@@ -196,7 +196,10 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
           have htail := ih cells flags
           simp only [hsearch, hzero, htail]
           repeat' constructor
-          all_goals (try ring_nf; omega)
+          all_goals
+            first
+              | ring
+              | (ring_nf; omega)
       | some row =>
           have htail := ih
             (actualBalanceGaussianArrayPivotRow cells row column)
@@ -207,7 +210,10 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
             actualBalanceGaussianFlagExecutionTrace.zero]
           simp only [hsearch, hzero, htail]
           repeat' constructor
-          all_goals (try ring_nf; omega)
+          all_goals
+            first
+              | ring
+              | (ring_nf; omega)
 
 /-- The declared primitive charge of the generic instrumented scan is bounded
 using the actual pivot count `p`; list cells for the caller-supplied column
