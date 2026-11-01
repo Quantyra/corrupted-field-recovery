@@ -1,0 +1,69 @@
+✔ [3067/3072] Built CorruptedFieldRecovery.S010BalanceGaussianArrayFlagKernelOutputBridge (3.4s)
+✖ [3068/3072] Building CorruptedFieldRecovery.S010BalanceGaussianArrayFlagGoodEventNonempty (4.7s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean:25:73: unsolved goals
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+T : Module.End (ZMod 2) (BinaryVector (3 * s))
+hbalanced : actualFourBilinearBalanced (decodeRawArray raw) tape T
+hT : T ≠ 0
+hlist : actualBalanceGaussianRawCandidateEndList raw tape = []
+hcolumns : actualBalanceGaussianRawFreeColumns raw tape = []
+pivots : List (Fin (4 * (3 * s * (3 * s))) × Fin (3 * s * (3 * s))) := (actualBalanceGaussianRawScan raw tape).2
+freeIndex : Type := balanceGaussianFreeIndex pivots
+free : freeIndex
+⊢ ∀ (x : Fin (4 * (3 * s * (3 * s)))), (x, ↑free) ∉ (actualBalanceGaussianRawScan raw tape).2
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean:26:57: This simp argument is unused:
+  free.2
+
+Hint: Omit it from the simp argument list.
+  simp [actualBalanceGaussianRawFreeColumns, pivots,̵ ̵f̵r̵e̵e̵.̵2̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean:73:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean:80:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  actualBalanceGaussianRawCandidateEndList raw tape
+in the target expression
+  actualBalanceGaussianArrayFlagCandidateEndList raw tape ≠ []
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+T : Module.End BinaryField (BinaryVector (3 * s)) := (qScalarConjugateLinearMap Q) 1
+hiff :
+  ∀ (T : Module.End BinaryField (BinaryVector (3 * s))),
+    actualFourBilinearBalanced (decodeRawArray raw) tape T ↔ T ∈ qScalarConjugateEndRange Q
+hTbalanced : actualFourBilinearBalanced (decodeRawArray raw) tape T
+hTne : T ≠ 0
+hraw : actualBalanceGaussianRawCandidateEndList raw tape ≠ []
+⊢ actualBalanceGaussianArrayFlagCandidateEndList raw tape ≠ []
+warning: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagGoodEventNonempty.lean:113:17: This simp argument is unused:
+  actualBalanceGaussianArrayFlagSelectFirst
+
+Hint: Omit it from the simp argument list.
+  simp [a̵c̵t̵u̵a̵l̵B̵a̵l̵a̵n̵c̵e̵G̵a̵u̵s̵s̵i̵a̵n̵A̵r̵r̵a̵y̵F̵l̵a̵g̵S̵e̵l̵e̵c̵t̵F̵i̵r̵s̵t̵,̵ ̵hlist] at hne
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayFlagGoodEventNonempty

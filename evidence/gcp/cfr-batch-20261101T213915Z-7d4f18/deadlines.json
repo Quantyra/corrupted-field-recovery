@@ -1,0 +1,8 @@
+{
+  "actual_start_utc": "2026-11-01T13:40:07.465000-08:00",
+  "submission_cutoff_utc": "2026-11-01T16:40:07.465000-08:00",
+  "full_stage_launch_cutoff_utc": "2026-11-01T16:45:07.465000-08:00",
+  "automatic_stop_ceiling_utc": "2026-11-01T17:40:07.465000-08:00",
+  "stage_timeout_seconds": 1800,
+  "minimum_closeout_margin_after_launch_seconds": 3300
+}
