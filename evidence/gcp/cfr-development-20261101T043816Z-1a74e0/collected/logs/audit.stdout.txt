@@ -1,0 +1,89 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_refines
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_refines : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  Eq.{1}
+    (Prod.mk.{0, 0}
+      (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan raw tape).1.1)
+      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan raw tape).2)
+    (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_refines
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_refines' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_sourceOperations_le
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_sourceOperations_le : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  LE.le.{0}
+    (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.sourceOperations
+      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanCost raw tape))
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 40 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 6))
+        (HMul.hMul.{0, 0, 0} 36 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 4)))
+      (HMul.hMul.{0, 0, 0} 8 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 2)))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_sourceOperations_le
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_sourceOperations_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_space_le_polynomial
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_space_le_polynomial : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  have cost := CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanCost raw tape;
+  And
+    (LE.le.{0}
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.newMatrixArraySlots cost)
+          (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.newFlagArraySlots cost))
+        (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.initialFlagArraySlots cost))
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 6))
+          (HMul.hMul.{0, 0, 0} 8 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 4)))
+        (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 2))))
+    (LE.le.{0} (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.liveArrayAndListSlotsUpper cost)
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 6))
+          (HMul.hMul.{0, 0, 0} 16 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 4)))
+        (HMul.hMul.{0, 0, 0} 22 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 2))))
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_space_le_polynomial
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_space_le_polynomial' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinIndexMachineExec_sound
+@CorruptedFieldRecovery.rawRabinIndexMachineExec_sound : ∀ {modulus degree : Nat} {result : Bool} {charge : Nat}
+  (hexec : CorruptedFieldRecovery.RawRabinIndexMachineExec modulus degree result charge),
+  Eq.{1} (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus degree) (Prod.mk.{0, 0} result charge)
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinIndexMachineExec_sound
+'CorruptedFieldRecovery.rawRabinIndexMachineExec_sound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinIndexMachineExec_exists
+CorruptedFieldRecovery.rawRabinIndexMachineExec_exists : ∀ (modulus degree : Nat) (hmodOne : LT.lt.{0} 1 modulus),
+  CorruptedFieldRecovery.RawRabinIndexMachineExec modulus degree
+    (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus degree).1
+    (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus degree).2
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinIndexMachineExec_exists
+'CorruptedFieldRecovery.rawRabinIndexMachineExec_exists' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinIndexMachineExec_refines_predicate
+@CorruptedFieldRecovery.rawRabinIndexMachineExec_refines_predicate : ∀ {modulus degree : Nat} {result : Bool}
+  {charge : Nat} (hexec : CorruptedFieldRecovery.RawRabinIndexMachineExec modulus degree result charge),
+  Eq.{1} result
+    (Decidable.decide
+      (Eq.{1}
+        (CorruptedFieldRecovery.rawPolynomialGcd modulus
+          (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus degree 2) 2))
+        1))
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinIndexMachineExec_refines_predicate
+'CorruptedFieldRecovery.rawRabinIndexMachineExec_refines_predicate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.rawRabinIndexMachineExec_charge_le
+@CorruptedFieldRecovery.rawRabinIndexMachineExec_charge_le : ∀ {modulus degree W : Nat} {result : Bool} {charge : Nat}
+  (hmod : Ne.{1} modulus 0) (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W))
+  (hW : LE.le.{0} 2 W) (hexec : CorruptedFieldRecovery.RawRabinIndexMachineExec modulus degree result charge),
+  LE.le.{0} charge (CorruptedFieldRecovery.rawRabinCheckIndexCharge W degree)
+CFR_TYPE_END:CorruptedFieldRecovery.rawRabinIndexMachineExec_charge_le
+'CorruptedFieldRecovery.rawRabinIndexMachineExec_charge_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

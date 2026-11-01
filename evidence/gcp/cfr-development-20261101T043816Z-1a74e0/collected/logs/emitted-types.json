@@ -1,0 +1,30 @@
+{
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_refines": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_refines : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  Eq.{1}\n    (Prod.mk.{0, 0}\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan raw tape).1.1)\n      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan raw tape).2)\n    (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape)\n",
+    "sha256": "415f5d342c0f87414f2d1d4b8c935fe0645d30721c03ddf59a00de3f91de74c1"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_sourceOperations_le": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_sourceOperations_le : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  LE.le.{0}\n    (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.sourceOperations\n      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanCost raw tape))\n    (HAdd.hAdd.{0, 0, 0}\n      (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 40 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 6))\n        (HMul.hMul.{0, 0, 0} 36 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 4)))\n      (HMul.hMul.{0, 0, 0} 8 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 2)))\n",
+    "sha256": "8a08c73cdf9e8642eef0651cd86b95c33e0c41714de66f62b0b2e30e3725569c"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_space_le_polynomial": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScan_space_le_polynomial : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  have cost := CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanCost raw tape;\n  And\n    (LE.le.{0}\n      (HAdd.hAdd.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0} (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.newMatrixArraySlots cost)\n          (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.newFlagArraySlots cost))\n        (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.initialFlagArraySlots cost))\n      (HAdd.hAdd.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 6))\n          (HMul.hMul.{0, 0, 0} 8 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 4)))\n        (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 2))))\n    (LE.le.{0} (CorruptedFieldRecovery.ActualBalanceGaussianFlagScanCost.liveArrayAndListSlotsUpper cost)\n      (HAdd.hAdd.{0, 0, 0}\n        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 6))\n          (HMul.hMul.{0, 0, 0} 16 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 4)))\n        (HMul.hMul.{0, 0, 0} 22 (HPow.hPow.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 s) 2))))\n",
+    "sha256": "e881bea9c92dd6dc1b5b6f2cc6b7a0fd2d2c6daf96218b3631d9061e934b6d42"
+  },
+  "CorruptedFieldRecovery.rawRabinIndexMachineExec_sound": {
+    "emitted_type": "@CorruptedFieldRecovery.rawRabinIndexMachineExec_sound : \u2200 {modulus degree : Nat} {result : Bool} {charge : Nat}\n  (hexec : CorruptedFieldRecovery.RawRabinIndexMachineExec modulus degree result charge),\n  Eq.{1} (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus degree) (Prod.mk.{0, 0} result charge)\n",
+    "sha256": "a2f679196fe8a65ae9eb035ea3deec98d731ae6fbff9ce5eabbd7db441800b60"
+  },
+  "CorruptedFieldRecovery.rawRabinIndexMachineExec_exists": {
+    "emitted_type": "CorruptedFieldRecovery.rawRabinIndexMachineExec_exists : \u2200 (modulus degree : Nat) (hmodOne : LT.lt.{0} 1 modulus),\n  CorruptedFieldRecovery.RawRabinIndexMachineExec modulus degree\n    (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus degree).1\n    (CorruptedFieldRecovery.rawRabinCheckIndexBitCosted modulus degree).2\n",
+    "sha256": "621ebd738f0707aa64a7ed3ae77381d32f90e12d42052d1d98b947eead678235"
+  },
+  "CorruptedFieldRecovery.rawRabinIndexMachineExec_refines_predicate": {
+    "emitted_type": "@CorruptedFieldRecovery.rawRabinIndexMachineExec_refines_predicate : \u2200 {modulus degree : Nat} {result : Bool}\n  {charge : Nat} (hexec : CorruptedFieldRecovery.RawRabinIndexMachineExec modulus degree result charge),\n  Eq.{1} result\n    (Decidable.decide\n      (Eq.{1}\n        (CorruptedFieldRecovery.rawPolynomialGcd modulus\n          (Nat.xor (CorruptedFieldRecovery.rawCandidateFrobeniusAux modulus degree 2) 2))\n        1))\n",
+    "sha256": "9e530ea2a7620ca0a983fcb8ac1ff40f724668b5172626d14fd2b8965c750ac3"
+  },
+  "CorruptedFieldRecovery.rawRabinIndexMachineExec_charge_le": {
+    "emitted_type": "@CorruptedFieldRecovery.rawRabinIndexMachineExec_charge_le : \u2200 {modulus degree W : Nat} {result : Bool} {charge : Nat}\n  (hmod : Ne.{1} modulus 0) (hmodOne : LT.lt.{0} 1 modulus) (hmodWidth : LT.lt.{0} modulus (HPow.hPow.{0, 0, 0} 2 W))\n  (hW : LE.le.{0} 2 W) (hexec : CorruptedFieldRecovery.RawRabinIndexMachineExec modulus degree result charge),\n  LE.le.{0} charge (CorruptedFieldRecovery.rawRabinCheckIndexCharge W degree)\n",
+    "sha256": "1f555ad7aa148f3e159306610123964f5784af7a216993f61f92716b3e2284d6"
+  }
+}

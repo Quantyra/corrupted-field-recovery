@@ -1,0 +1,26 @@
+{
+  "run": "cfr-development-20261101T043816Z-1a74e0",
+  "utc": "2026-11-01T04:44:44.647151+00:00",
+  "archive_sha256": "2ae0a3c340e6406a22c42ac5f0b37bcc93711ca86125541ad4fddbeaacd152cd",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "9941fcbba8efa307bc1f0e86bda1322fcf79f62ac9e3914e5877b3c5a28c272a",
+    "launch.log": "621333bc438b1b688d9936919ab216ef66b812720ba30a2ae8ee2a4e1c98f965",
+    "runner-pid": "57a2352b09e7b8e94c57276f30775f143943e148781376367a01d4c7c8e29d8b",
+    "started-utc": "78945e2dd0f23c67697fc1dbcbfbe369e9ae2ed3f2fe61667f9f369cb993cdae",
+    "terminal-receipt.json": "ae75551701178b292d825240a0f4e8c72be80bcf9b3db5c750dde764963713ec",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "b0e1303256e75b23ffa85e9fed67b758563b4febd52333bb196b4b92edb0ab05",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "2395991af10894a83fd655277af7ee587ae674ab7eb6577832177548975b96d0",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "7aa4fbbe373b71134eacf97c82e954e802e6b912d85604f7840fc7a3ea2e3336",
+    "logs/emitted-types.json": "320031d693e6ee0fe8c7da8cd8702cc7621aafe9aab2fc997e885eab03616972",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "621333bc438b1b688d9936919ab216ef66b812720ba30a2ae8ee2a4e1c98f965"
+  }
+}

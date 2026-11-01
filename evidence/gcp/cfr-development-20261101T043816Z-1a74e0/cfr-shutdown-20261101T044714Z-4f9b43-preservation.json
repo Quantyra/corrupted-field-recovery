@@ -1,0 +1,9 @@
+{
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "utc": "2026-11-01T04:47:54.510123+00:00",
+  "output_sha256": "a0189d587d67711167378baf627b70995d7e52ee2ab2f8b3965d991856a3dfa0",
+  "all_task_outcomes_collected": true,
+  "no_active_lean_or_lake": true,
+  "task_lock_free": true,
+  "persistent_cache_retained": true
+}
