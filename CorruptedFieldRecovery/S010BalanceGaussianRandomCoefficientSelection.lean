@@ -175,6 +175,10 @@ theorem actualBalanceGaussianRawFreeIndex_card_eq
     (hsize : raw.size = (3 * s) * (3 * s) * (3 * s))
     (hK : Module.finrank BinaryField K = s) :
     Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = s := by
+  letI : Fintype (actualBalanceGaussianRawFreeIndex raw tape) := Fintype.ofFinite _
+  letI : Fintype (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) :=
+    Fintype.ofFinite _
+  letI : Fintype (qScalarConjugateEndRange Q) := Fintype.ofFinite _
   let e := actualBalanceGaussianRawWeightsEquivQScalarRange
     Q E U b raw tape htape c hc hmodel hsize
   have hcard : Fintype.card
