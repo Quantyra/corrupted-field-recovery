@@ -70,7 +70,8 @@ theorem actualBalanceGaussianFlagCountedFirstUnusedPivotRow_trace_bounds
         | false =>
             by_cases hv : actualBalanceGaussianArrayView cells r column = 1
             · simp [actualBalanceGaussianFlagCountedFindUnusedRow, hf, hv,
-                actualBalanceGaussianFlagFreshProbe]
+                actualBalanceGaussianFlagFreshProbe,
+                actualBalanceGaussianFlagExecutionTrace.zero]
             · simp [actualBalanceGaussianFlagCountedFindUnusedRow, hf, hv,
                 actualBalanceGaussianFlagExecutionTrace.add,
                 actualBalanceGaussianFlagFreshProbe,
@@ -83,6 +84,66 @@ theorem actualBalanceGaussianFlagCountedFirstUnusedPivotRow_trace_bounds
   refine ⟨?_, h.1, h.2.1, h.2.2⟩
   rw [hz]
   exact Nat.add_zero m
+
+/-- The recursive selector trace only ever accumulates selector events: every
+other declared component stays zero on any row list. -/
+theorem actualBalanceGaussianFlagCountedFindUnusedRow_trace_zero
+    {m n : Nat} (cells : Array (Array (ZMod 2))) (flags : Array Bool)
+    (column : Fin n) (rows : List (Fin m)) :
+    let t := (actualBalanceGaussianFlagCountedFindUnusedRow
+      cells flags column rows).2
+    t.columnsProcessed = 0 ∧ t.rowIndexListNodes = 0 ∧
+      t.pivotUpdates = 0 ∧ t.pivotCoefficientViewsUpper = 0 ∧
+      t.pivotRowComparisons = 0 ∧ t.fieldMultiplicationsUpper = 0 ∧
+      t.fieldAdditionsUpper = 0 ∧ t.coefficientCellWrites = 0 ∧
+      t.matrixRowArrayWrites = 0 ∧ t.flagUpdateReadsUpper = 0 ∧
+      t.flagCellComparisons = 0 ∧ t.flagCellWrites = 0 ∧
+      t.newMatrixArraySlots = 0 ∧ t.newFlagArraySlots = 0 ∧
+      t.initialFlagArraySlots = 0 ∧ t.initialFlagCellWrites = 0 ∧
+      t.transcriptCons = 0 ∧ t.columnListNodes = 0 := by
+  induction rows with
+  | nil =>
+      simp [actualBalanceGaussianFlagCountedFindUnusedRow,
+        actualBalanceGaussianFlagExecutionTrace.zero]
+  | cons row rows ih =>
+      cases hflag : actualBalanceGaussianUsedFlagView flags row with
+      | true =>
+          simp [actualBalanceGaussianFlagCountedFindUnusedRow, hflag,
+            actualBalanceGaussianFlagExecutionTrace.add,
+            actualBalanceGaussianFlagUsedProbe,
+            actualBalanceGaussianFlagExecutionTrace.zero, ih]
+      | false =>
+          by_cases hvalue : actualBalanceGaussianArrayView cells row column = 1
+          · simp [actualBalanceGaussianFlagCountedFindUnusedRow, hflag, hvalue,
+              actualBalanceGaussianFlagFreshProbe,
+              actualBalanceGaussianFlagExecutionTrace.zero]
+          · simp [actualBalanceGaussianFlagCountedFindUnusedRow, hflag, hvalue,
+              actualBalanceGaussianFlagExecutionTrace.add,
+              actualBalanceGaussianFlagFreshProbe,
+              actualBalanceGaussianFlagExecutionTrace.zero, ih]
+
+/-- The counted selector adds only the row-list charge; every other declared
+component besides the selector counters is zero. -/
+theorem actualBalanceGaussianFlagCountedFirstUnusedPivotRow_trace_zero
+    {m n : Nat} (cells : Array (Array (ZMod 2))) (flags : Array Bool)
+    (column : Fin n) :
+    let t := (actualBalanceGaussianFlagCountedFirstUnusedPivotRow
+      (m := m) cells flags column).2
+    t.columnsProcessed = 0 ∧ t.pivotUpdates = 0 ∧
+      t.pivotCoefficientViewsUpper = 0 ∧ t.pivotRowComparisons = 0 ∧
+      t.fieldMultiplicationsUpper = 0 ∧ t.fieldAdditionsUpper = 0 ∧
+      t.coefficientCellWrites = 0 ∧ t.matrixRowArrayWrites = 0 ∧
+      t.flagUpdateReadsUpper = 0 ∧ t.flagCellComparisons = 0 ∧
+      t.flagCellWrites = 0 ∧ t.newMatrixArraySlots = 0 ∧
+      t.newFlagArraySlots = 0 ∧ t.initialFlagArraySlots = 0 ∧
+      t.initialFlagCellWrites = 0 ∧ t.transcriptCons = 0 ∧
+      t.columnListNodes = 0 := by
+  have h := actualBalanceGaussianFlagCountedFindUnusedRow_trace_zero
+    (m := m) cells flags column (List.ofFn fun row : Fin m => row)
+  simp only [actualBalanceGaussianFlagCountedFirstUnusedPivotRow,
+    actualBalanceGaussianFlagExecutionTrace.add,
+    actualBalanceGaussianFlagExecutionTrace.zero]
+  simp [h]
 
 /-- Componentwise trace facts for the complete instrumented flag scan. The
 selector work is actual recursive execution; pivot work and allocations are
@@ -125,14 +186,17 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
         (m := m) cells flags column
       have hsearch := actualBalanceGaussianFlagCountedFirstUnusedPivotRow_trace_bounds
         (m := m) cells flags column
+      have hzero := actualBalanceGaussianFlagCountedFirstUnusedPivotRow_trace_zero
+        (m := m) cells flags column
       cases hpivot : selected.1 with
       | none =>
           simp only [actualBalanceGaussianFlagColumnScanInstrumented,
             selected, hpivot, actualBalanceGaussianFlagExecutionTrace.add,
             actualBalanceGaussianFlagExecutionTrace.zero]
           have htail := ih cells flags
-          simp only [hsearch, htail]
-          omega
+          simp only [hsearch, hzero, htail]
+          repeat' constructor
+          all_goals (try ring_nf; omega)
       | some row =>
           have htail := ih
             (actualBalanceGaussianArrayPivotRow cells row column)
@@ -141,8 +205,9 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
             selected, hpivot, actualBalanceGaussianFlagExecutionTrace.add,
             actualBalanceGaussianFlagPivotUpdateCharge,
             actualBalanceGaussianFlagExecutionTrace.zero]
-          simp only [hsearch, htail]
-          omega
+          simp only [hsearch, hzero, htail]
+          repeat' constructor
+          all_goals (try ring_nf; omega)
 
 /-- The declared primitive charge of the generic instrumented scan is bounded
 using the actual pivot count `p`; list cells for the caller-supplied column
