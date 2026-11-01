@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-01T01:00:00.922494+00:00",
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "instance_id": "3335066512373302615",
+  "status": "TERMINATED",
+  "lastStartTimestamp": "2026-10-31T14:42:24.938-07:00",
+  "lastStopTimestamp": "2026-10-31T17:59:28.059-07:00",
+  "external_access_configs_absent": true,
+  "retained_disk": "quantyra-cfr-lean-builder-20261028a",
+  "retained_disk_size_gb": 100,
+  "retained_disk_status": "READY",
+  "no_duplicate_start_or_stop": true,
+  "automatic_stop_ceiling": "2026-11-01T01:42:24.938Z"
+}

@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateInverseProofFixed.lean",
+  "sha256": "5303028d119a3497142210a757b4d51c17787d4bf296f8db01804f6f0762606f",
+  "scope": "Root accepts: for any column array over BinaryVector m with columns.size = m and full column span, the array span matrix and the selected-candidate inverse matrix satisfy both product identities in both orders; and the actual three-pass orbit run yields 3s columns satisfying both, under supplied 1 <= s and an assumed irreducible monic degree-s annihilator of T. This supersedes the dev473 no-default gap. The annihilator premise is supplied, not derived; no runtime, allocation or space result.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

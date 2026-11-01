@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayCandidateInverse.lean",
+  "sha256": "28fb8a79d702b48b82a48dda0b159e9114f0b2266549af59edebcde99c0bdf26",
+  "scope": "Root accepts: the candidate-inverse matrix definition, and that under full array-column span the actual span scan returns some free index for every physical unit right-hand side, including for the actual three-pass orbit run's 3s columns under supplied 1 <= s and an assumed irreducible monic degree-s annihilator of T. Root explicitly does NOT accept the no_default docstring claim: that theorem's emitted type is identical to the span-witness theorem and never mentions the matrix. No entrywise no-default result, candidate-derived annihilator, runtime or space result.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

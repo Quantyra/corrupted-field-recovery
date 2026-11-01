@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawBinaryWordReduction.lean",
+  "sha256": "b4a6a51af1d2b889efe8c7a6c48ff70ffce7a1a0aae3a4d943b49e48438f47b9",
+  "scope": "Root accepts: the Boolean threshold scan exactly decides rawBitsToNat word < 2 ^ degree; the leading-one scan returns none on zero-decoding words and otherwise exactly Nat.log2; the word-state cancellation refines the Nat-mask reducer step when reduction is active; and the fuel-bounded word reducer refines rawReduceFuel unconditionally for every word, modulus encoding and fuel. Functional bit-list model only: traversal, addressing, allocation, conversion, control storage and total live space are not charged.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

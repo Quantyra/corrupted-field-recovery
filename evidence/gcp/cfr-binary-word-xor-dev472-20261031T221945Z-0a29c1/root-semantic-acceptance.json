@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/RawBinaryWordXor.lean",
+  "sha256": "911356bd5fe9ce98e69dcd1f98bf641ea75d9bc19c93c9d6c36c7f5249aa883b",
+  "scope": "Root accepts: concrete little-endian bit-list XOR with max-width length, the unconditional bitsToNat/Nat.bits decoding identity, unconditional refinement of Nat.xor, refinement of the abstract reduce step by the word operation, and the declared XOR gate count with its closed form. Gate count is a declared XOR-gate measure only; traversal, addressing, allocation, conversion, shift and control costs are not charged and no runtime, heap or whole-verifier result follows.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

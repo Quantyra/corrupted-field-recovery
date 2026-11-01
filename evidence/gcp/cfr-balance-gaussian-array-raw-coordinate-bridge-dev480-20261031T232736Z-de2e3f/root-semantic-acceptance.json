@@ -1,0 +1,12 @@
+{
+  "accepted": true,
+  "source": "CorruptedFieldRecovery/S010BalanceGaussianArrayRawCoordinateBridge.lean",
+  "sha256": "d37ae9d4362d32c331f64e7f9a16ab4da9afa409f0091a880a05f67d3842e3d3",
+  "scope": "Root accepts: array/physical reindexing carries both rectangular identities to the square ones; the row-major serializer emits exactly n*n entries with value A i j at checker offset (i,j); the raw checker's map of a serialized matrix is that matrix's mulVec action; any two-sided inverse pair is accepted by the exact raw coordinate checker including both dense-size checks; and the actual three-pass run yields serialized forward/inverse arrays the checker accepts, under supplied annihilator premises. No runtime, traversal, allocation or space charge; not the full recovery theorem.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "terminal": "PASS full hash verified zero warnings"
+}

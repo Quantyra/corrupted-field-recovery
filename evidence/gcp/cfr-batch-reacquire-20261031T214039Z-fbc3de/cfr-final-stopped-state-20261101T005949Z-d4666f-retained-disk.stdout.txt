@@ -1,0 +1,60 @@
+{
+  "architecture": "X86_64",
+  "creationTimestamp": "2026-10-28T15:48:24.374-07:00",
+  "enableConfidentialCompute": false,
+  "guestOsFeatures": [
+    {
+      "type": "VIRTIO_SCSI_MULTIQUEUE"
+    },
+    {
+      "type": "SEV_CAPABLE"
+    },
+    {
+      "type": "SEV_SNP_CAPABLE"
+    },
+    {
+      "type": "SEV_LIVE_MIGRATABLE"
+    },
+    {
+      "type": "SEV_LIVE_MIGRATABLE_V2"
+    },
+    {
+      "type": "SNP_SVSM_CAPABLE"
+    },
+    {
+      "type": "IDPF"
+    },
+    {
+      "type": "TDX_CAPABLE"
+    },
+    {
+      "type": "UEFI_COMPATIBLE"
+    },
+    {
+      "type": "GVNIC"
+    }
+  ],
+  "id": "3153948647739082071",
+  "kind": "compute#disk",
+  "labelFingerprint": "42WmSpB8rSM=",
+  "lastAttachTimestamp": "2026-10-28T15:48:24.938-07:00",
+  "licenseCodes": [
+    "3242930272766215801"
+  ],
+  "licenses": [
+    "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/licenses/ubuntu-2404-lts"
+  ],
+  "name": "quantyra-cfr-lean-builder-20261028a",
+  "physicalBlockSizeBytes": "4096",
+  "satisfiesPzi": true,
+  "selfLink": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/disks/quantyra-cfr-lean-builder-20261028a",
+  "sizeGb": "100",
+  "sourceImage": "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-2404-noble-amd64-v20260906",
+  "sourceImageId": "6257327608773510097",
+  "status": "READY",
+  "type": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/diskTypes/pd-balanced",
+  "users": [
+    "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/instances/quantyra-cfr-lean-builder-20261028a"
+  ],
+  "zone": "https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a"
+}
