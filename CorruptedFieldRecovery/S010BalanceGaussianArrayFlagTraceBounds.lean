@@ -225,9 +225,9 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
           repeat' constructor
           all_goals
             first
+              | simpa using h_tests
+              | simpa using h_views
               | ring
-              | exact h_tests
-              | exact h_views
               | omega
       | some row =>
           have htail := ih
@@ -266,9 +266,9 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_trace_components
           repeat' constructor
           all_goals
             first
+              | simpa using h_tests
+              | simpa using h_views
               | ring
-              | exact h_tests
-              | exact h_views
               | omega
 
 /-- The declared primitive charge of the generic instrumented scan is bounded
@@ -297,7 +297,7 @@ theorem actualBalanceGaussianFlagColumnScanInstrumented_sourceUpper
     hadd, hwrites, houter, hflagreads, hflagcomp, hflagwrites, hmatrixslots,
     hflagslots, hinit, hinitwrite, htranscript, hlist⟩ := hc
   dsimp only [actualBalanceGaussianFlagExecutionTrace.sourceOperationUpper]
-  omega
+  simp_all
 
 /-- A scan has at most one successful pivot per listed column. This is the
 executable trace consequence needed to eliminate `p` from the polynomial. -/
