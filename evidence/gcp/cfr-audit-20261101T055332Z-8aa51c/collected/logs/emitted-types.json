@@ -1,0 +1,14 @@
+{
+  "CorruptedFieldRecovery.actualBalanceGaussianFlagCountedFirstUnusedPivotRow_eq": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianFlagCountedFirstUnusedPivotRow_eq : \u2200 {m n : Nat}\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (flags : Array.{0} Bool) (column : Fin n),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).1\n    (CorruptedFieldRecovery.actualBalanceGaussianFlagFirstUnusedPivotRow m cells flags column)\n",
+    "sha256": "9804bcb970dee5c9683dab884cfa7bd8162114e592c4fda2ddd59d4b7c2b6f3b"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScanInstrumented_refines": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScanInstrumented_refines : \u2200 {m n : Nat}\n  (cells : Array.{0} (Array.{0} (ZMod 2))) (flags : Array.{0} Bool) (columns : List.{0} (Fin n)),\n  Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1\n    (CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScan m cells flags columns)\n",
+    "sha256": "c5df04e896f4d705482cce91f868013f403762967ac2b68967c8ad85fc0de467"
+  },
+  "CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented_refines": {
+    "emitted_type": "@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented_refines : \u2200 {s : Nat}\n  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),\n  Eq.{1}\n    (Prod.mk.{0, 0}\n      (CorruptedFieldRecovery.actualBalanceGaussianArrayView\n        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).1.1.1)\n      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).1.2)\n    (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape)\n",
+    "sha256": "29db1ccb8991da84e406703daf723c1a8b04e0e4bde87a7a63ef87e22e2c0b80"
+  }
+}

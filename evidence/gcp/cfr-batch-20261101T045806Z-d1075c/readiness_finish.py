@@ -1,0 +1,29 @@
+"""Finish read-only readiness from the already-preserved receipts.
+
+The first attempt asserted a wrong record of `lastStopTimestamp` and exited
+before the ingress check; the same two read-only receipts are reused unchanged
+and only the remaining ingress observation is issued.
+"""
+from pathlib import Path
+import json
+import sys
+ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT / 'tools'))
+import gcp_cfr as c
+out = Path(__file__).resolve().parent
+previous = json.loads((ROOT / 'evidence/gcp/cfr-development-20261101T043816Z-1a74e0/cfr-shutdown-20261101T044714Z-4f9b43-result.json').read_text(encoding='utf-8'))
+assert previous['final_state'] == 'TERMINATED' and previous['stop_verified']
+account = json.loads((out / 'same-account.stdout.txt').read_text(encoding='utf-8'))
+assert len(account) == 1 and account[0]['account'] == c.ACCOUNT
+vm = json.loads((out / 'initial-instance-state.stdout.txt').read_text(encoding='utf-8'))
+assert vm['id'] == '3335066512373302615'
+assert vm['status'] == 'TERMINATED'
+assert vm['machineType'].endswith('/e2-highmem-8')
+assert int(vm['scheduling']['maxRunDuration']['seconds']) == 14400
+assert vm['scheduling']['instanceTerminationAction'] == 'STOP'
+assert not any(nic.get('accessConfigs') for nic in vm['networkInterfaces'])
+ingress = json.loads(c.cloud(['compute', 'instances', 'network-interfaces', 'get-effective-firewalls', c.VM, '--network-interface=nic0', '--format=json'], out, 'effective-ingress'))
+expected = json.loads((ROOT / 'evidence/gcp/cfr-batch-reacquire-20261031T214039Z-fbc3de/effective-ingress.stdout.txt').read_text(encoding='utf-8'))
+assert ingress == expected, 'Effective ingress changed; inspect before any lifecycle mutation'
+c.save(out / 'readiness.json', dict(utc=c.utc(), same_account=c.ACCOUNT, instance_id=vm['id'], status=vm['status'], lastStopTimestamp=vm['lastStopTimestamp'], machine_type='e2-highmem-8', max_run_duration_seconds=14400, stop_action='STOP', task_egress_absent=True, effective_ingress_unchanged=True, previous_stop_result='../cfr-development-20261101T043816Z-1a74e0/cfr-shutdown-20261101T044714Z-4f9b43-result.json', first_attempt_note='First readiness attempt exited on a wrong expected lastStopTimestamp before the ingress check; its two read-only receipts are reused unchanged.'))
+print('READINESS_PASS_NO_START_ISSUED')

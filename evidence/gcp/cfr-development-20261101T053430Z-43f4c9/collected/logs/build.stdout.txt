@@ -1,0 +1,21 @@
+✖ [3011/3012] Building CorruptedFieldRecovery.S010BalanceGaussianArrayFlagExecutionTrace (3.0s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:264:10: Type mismatch: After simplification, term
+  ih (actualBalanceGaussianArrayPivotRow cells row column) (actualBalanceGaussianSetUsedFlag flags row)
+ has type
+  (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+        (actualBalanceGaussianSetUsedFlag flags row) columns).1 =
+    actualBalanceGaussianFlagColumnScan m (actualBalanceGaussianArrayPivotRow cells row column)
+      (actualBalanceGaussianSetUsedFlag flags row) columns
+but is expected to have type
+  (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).1.1 =
+      (actualBalanceGaussianFlagColumnScan m (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).1 ∧
+    (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+            (actualBalanceGaussianSetUsedFlag flags row) columns).1.2 =
+      (actualBalanceGaussianFlagColumnScan m (actualBalanceGaussianArrayPivotRow cells row column)
+          (actualBalanceGaussianSetUsedFlag flags row) columns).2
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayFlagExecutionTrace

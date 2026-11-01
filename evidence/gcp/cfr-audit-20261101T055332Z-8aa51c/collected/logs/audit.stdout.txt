@@ -1,0 +1,31 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianFlagCountedFirstUnusedPivotRow_eq
+@CorruptedFieldRecovery.actualBalanceGaussianFlagCountedFirstUnusedPivotRow_eq : ∀ {m n : Nat}
+  (cells : Array.{0} (Array.{0} (ZMod 2))) (flags : Array.{0} Bool) (column : Fin n),
+  Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).1
+    (CorruptedFieldRecovery.actualBalanceGaussianFlagFirstUnusedPivotRow m cells flags column)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianFlagCountedFirstUnusedPivotRow_eq
+'CorruptedFieldRecovery.actualBalanceGaussianFlagCountedFirstUnusedPivotRow_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScanInstrumented_refines
+@CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScanInstrumented_refines : ∀ {m n : Nat}
+  (cells : Array.{0} (Array.{0} (ZMod 2))) (flags : Array.{0} Bool) (columns : List.{0} (Fin n)),
+  Eq.{1} (CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1
+    (CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScan m cells flags columns)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScanInstrumented_refines
+'CorruptedFieldRecovery.actualBalanceGaussianFlagColumnScanInstrumented_refines' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented_refines
+@CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented_refines : ∀ {s : Nat}
+  (raw : CorruptedFieldRecovery.RawCoefficientArray) (tape : CorruptedFieldRecovery.FiveWordTape s),
+  Eq.{1}
+    (Prod.mk.{0, 0}
+      (CorruptedFieldRecovery.actualBalanceGaussianArrayView
+        (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).1.1.1)
+      (CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).1.2)
+    (CorruptedFieldRecovery.actualBalanceGaussianRawScan raw tape)
+CFR_TYPE_END:CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented_refines
+'CorruptedFieldRecovery.actualBalanceGaussianSerializedArrayFlagScanInstrumented_refines' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -1,0 +1,206 @@
+✖ [3011/3012] Building CorruptedFieldRecovery.S010BalanceGaussianArrayFlagExecutionTrace (2.9s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:248:22: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagCountedFirstUnusedPivotRow ?m.28 n cells flags column
+context:
+m n : ℕ
+column : Fin n
+columns : List (Fin n)
+ih :
+  ∀ (cells : Array (Array (ZMod 2))) (flags : Array Bool),
+    (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+      actualBalanceGaussianFlagColumnScan m cells flags columns
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:248:10: failed to infer `let` declaration type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:310:4: don't know how to synthesize implicit argument `β`
+  @congrArg (ActualBalanceGaussianFlagScanOutput m (3 * s * (3 * s)))
+    (Matrix (Fin ?m.138) (Fin ?m.139) (ZMod 2) × List (Fin m × Fin (3 * s * (3 * s))))
+    (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1
+    (actualBalanceGaussianFlagColumnScan m cells flags columns)
+    (fun out => (actualBalanceGaussianArrayView out.1.1, out.2)) hscan
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:311:6: don't know how to synthesize implicit argument `α`
+  @Prod.mk (Matrix (Fin ?m.138) (Fin ?m.139) (ZMod 2)) (List (Fin m × Fin (3 * s * (3 * s))))
+    (actualBalanceGaussianArrayView out.1.1) out.2
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+out : ActualBalanceGaussianFlagScanOutput m (3 * s * (3 * s))
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:311:7: don't know how to synthesize implicit argument `n`
+  @actualBalanceGaussianArrayView ?m.138 ?m.139 out.1.1
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+out : ActualBalanceGaussianFlagScanOutput m (3 * s * (3 * s))
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:311:7: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianArrayView ?m.138 ?m.139 out.1.1
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+out : ActualBalanceGaussianFlagScanOutput m (3 * s * (3 * s))
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:302:6: don't know how to synthesize implicit argument `α`
+  @Eq (Matrix (Fin ?m.138) (Fin ?m.139) (ZMod 2) × List (Fin m × Fin (3 * s * (3 * s))))
+    (actualBalanceGaussianArrayView (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.1.1,
+      (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2)
+    (actualBalanceGaussianArrayView (actualBalanceGaussianFlagColumnScan m cells flags columns).1.1,
+      (actualBalanceGaussianFlagColumnScan m cells flags columns).2)
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:307:8: don't know how to synthesize implicit argument `α`
+  @Prod.mk (Matrix (Fin ?m.138) (Fin ?m.139) (ZMod 2)) (List (Fin m × Fin (3 * s * (3 * s))))
+    (actualBalanceGaussianArrayView (actualBalanceGaussianFlagColumnScan m cells flags columns).1.1)
+    (actualBalanceGaussianFlagColumnScan m cells flags columns).2
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:307:9: don't know how to synthesize implicit argument `n`
+  @actualBalanceGaussianArrayView ?m.138 ?m.139 (actualBalanceGaussianFlagColumnScan m cells flags columns).1.1
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:307:9: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianArrayView ?m.138 ?m.139 (actualBalanceGaussianFlagColumnScan m cells flags columns).1.1
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:302:6: don't know how to synthesize implicit argument `α`
+  @Prod.mk (Matrix (Fin ?m.138) (Fin ?m.139) (ZMod 2)) (List (Fin m × Fin (3 * s * (3 * s))))
+    (actualBalanceGaussianArrayView (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.1.1)
+    (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:302:7: don't know how to synthesize implicit argument `n`
+  @actualBalanceGaussianArrayView ?m.138 ?m.139
+    (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.1.1
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:302:7: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianArrayView ?m.138 ?m.139
+    (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.1.1
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin (3 * s * (3 * s))) := ⋯
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:293:47: unsolved goals
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := 4 * (3 * s * (3 * s))
+cells : Array (Array (ZMod 2)) := actualBalanceSerializedCoefficientMatrix (decodeRawArray raw) tape
+flags : Array Bool := actualBalanceGaussianEmptyUsedFlags m
+columns : List (Fin (3 * s * (3 * s))) := List.ofFn fun column => column
+hscan :
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1 =
+    actualBalanceGaussianFlagColumnScan m cells flags columns
+⊢ (actualBalanceGaussianArrayView (actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).1.1.1,
+      (actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).1.2) =
+    actualBalanceGaussianRawScan raw tape
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:325:48: unexpected token 'end'; expected 'lemma'
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayFlagExecutionTrace

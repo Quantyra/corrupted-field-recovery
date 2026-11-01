@@ -1,0 +1,26 @@
+{
+  "run": "cfr-audit-20261101T055332Z-8aa51c",
+  "utc": "2026-11-01T06:02:20.414360+00:00",
+  "archive_sha256": "188c5ccc3d584410febd814a098ce0ec1336e3d18bf60e38ebf642a371a26ede",
+  "retained_sha256": {
+    "exit-code": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished-utc": "0de3cd8f0b77436b9585c7a720ab4997a4f3273415785efa48cc3b9da9d2427b",
+    "launch.log": "4cfb0ac90b85e923f88aa439db9f2678bbc44b029512d1400bb1e578392ce3a6",
+    "runner-pid": "ac857a0ab0bfd4cc779ec024a120ea560633e20b2cf3f8c9e8a4c80964c624b1",
+    "started-utc": "22c4b2dd1f8ed7de18f311f96023c8da3110f26780d1b38db559731c08a00d3a",
+    "terminal-receipt.json": "6878d5752ab0d163a4b2d69c2cb6d23240f713b637b81bf6f44a441f8011c666",
+    "logs/audit.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/audit.stdout.txt": "1f26e73a920ba67d600ad00b8e6e2d9fd6e8016a7caa7baa9b978805c32a8c77",
+    "logs/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/build.stdout.txt": "57948282b16e9b1b859ba75a126b03673eeef0536057a2e7b37579a65de03390",
+    "logs/dependency-cache-incremental.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/dependency-cache-incremental.stdout.txt": "7aa4fbbe373b71134eacf97c82e954e802e6b912d85604f7840fc7a3ea2e3336",
+    "logs/emitted-types.json": "deaca91f55c8da2442096c2ee494bd3a5ec19833596173c333101cdd17008ec3",
+    "logs/lake-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lake-version.stdout.txt": "046ec11da7c5ec88078933908043ff6da9e0b014e190498732e76d7699c3ee22",
+    "logs/lean-version.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/lean-version.stdout.txt": "963ab67a3ef59d64c6bc2de05df3f9c3cc51880caae2f86e45233b6b6d01ee55",
+    "logs/runner.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/runner.stdout.txt": "4cfb0ac90b85e923f88aa439db9f2678bbc44b029512d1400bb1e578392ce3a6"
+  }
+}

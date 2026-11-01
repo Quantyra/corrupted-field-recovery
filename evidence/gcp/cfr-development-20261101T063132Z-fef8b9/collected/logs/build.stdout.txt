@@ -1,0 +1,155 @@
+✖ [3012/3012] Building CorruptedFieldRecovery.S010BalanceGaussianArrayFlagTraceBounds (3.6s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:72:12: unsolved goals
+case pos
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+column : Fin n
+h :
+  have t := (actualBalanceGaussianFlagCountedFindUnusedRow cells flags column (List.ofFn fun row => row)).2;
+  t.selectorPredicateTests ≤ (List.ofFn fun row => row).length ∧
+    t.booleanFlagReads = t.selectorPredicateTests ∧ t.selectorCoefficientViews ≤ t.selectorPredicateTests
+hlength : (List.ofFn fun row => row).length = m
+r : Fin m
+rs : List (Fin m)
+ih : (actualBalanceGaussianFlagCountedFindUnusedRow cells flags column rs).2.rowIndexListNodes = 0
+hf : actualBalanceGaussianUsedFlagView flags r = false
+hv : actualBalanceGaussianArrayView cells r column = 1
+⊢ actualBalanceGaussianFlagExecutionTrace.zero.rowIndexListNodes = 0
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:135:10: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  p ≥ 0
+  o ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f - g ≥ 0
+  e ≥ 0
+  e - f ≥ 0
+  d ≥ 0
+  d - o + p ≤ -2
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+where
+ a := ↑m
+ b := ↑(actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.booleanFlagReads
+ c := ↑(actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews
+ d := ↑columns.length
+ e := ↑columns.length * ↑m
+ f := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.booleanFlagReads
+ g := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.selectorCoefficientViews
+ h := ↑(3 * (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length * m) * ↑n
+ i := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.coefficientCellWrites
+ j := ↑((actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length * m) * ↑(n + 1)
+ k := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.newFlagArraySlots
+ l := ↑(actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2.transcriptCons
+ o := ↑(column :: columns).length
+ p := ↑(actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.columnsProcessed
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:145:10: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  p ≥ 0
+  o ≥ 0
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  i ≥ 0
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  f - g ≥ 0
+  e ≥ 0
+  e - f ≥ 0
+  d ≥ 0
+  d - o + p ≤ -2
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+where
+ a := ↑m
+ b := ↑(actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.booleanFlagReads
+ c := ↑(actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.selectorCoefficientViews
+ d := ↑columns.length
+ e := ↑columns.length * ↑m
+ f := ↑(actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+        (actualBalanceGaussianSetUsedFlag flags row) columns).2.booleanFlagReads
+ g := ↑(actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+        (actualBalanceGaussianSetUsedFlag flags row) columns).2.selectorCoefficientViews
+ h := ↑(3 *
+        (actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+                (actualBalanceGaussianSetUsedFlag flags row) columns).1.2.length *
+      m) *
+  ↑n
+ i := ↑(actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+        (actualBalanceGaussianSetUsedFlag flags row) columns).2.coefficientCellWrites
+ j := ↑((actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+              (actualBalanceGaussianSetUsedFlag flags row) columns).1.2.length *
+      m) *
+  ↑(n + 1)
+ k := ↑(actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+        (actualBalanceGaussianSetUsedFlag flags row) columns).2.newFlagArraySlots
+ l := ↑(actualBalanceGaussianFlagColumnScanInstrumented (actualBalanceGaussianArrayPivotRow cells row column)
+        (actualBalanceGaussianSetUsedFlag flags row) columns).2.transcriptCons
+ o := ↑(column :: columns).length
+ p := ↑(actualBalanceGaussianFlagCountedFirstUnusedPivotRow cells flags column).2.columnsProcessed
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:154:29: Invalid field `sourceOperationUpper`: The environment does not contain `CorruptedFieldRecovery.ActualBalanceGaussianFlagExecutionTrace.sourceOperationUpper`, so it is not possible to project the field `sourceOperationUpper` from an expression
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).2
+of type
+  ActualBalanceGaussianFlagExecutionTrace
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:161:62: unsolved goals
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+run : ActualBalanceGaussianFlagScanOutput m n × ActualBalanceGaussianFlagExecutionTrace :=
+  actualBalanceGaussianFlagColumnScanInstrumented cells flags columns
+t : ActualBalanceGaussianFlagExecutionTrace := run.2
+p : ℕ := run.1.2.length
+⊢ sorry ≤
+    5 * columns.length * m +
+            10 * (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length * m * n +
+          4 * (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length * m +
+        2 * (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length +
+      columns.length
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:184:15: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagColumnScanInstrumented_refines ?m.14 n cells flags columns
+context:
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:184:7: failed to infer `have` declaration type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:183:58: unsolved goals
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+columns : List (Fin n)
+⊢ (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length ≤ columns.length
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:200:74: Invalid field `sourceOperationUpper`: The environment does not contain `CorruptedFieldRecovery.ActualBalanceGaussianFlagExecutionTrace.sourceOperationUpper`, so it is not possible to project the field `sourceOperationUpper` from an expression
+  (actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).2
+of type
+  ActualBalanceGaussianFlagExecutionTrace
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:212:4: Type mismatch: After simplification, term
+  actualBalanceGaussianFlagColumnScanInstrumented_pivots_le_columns cells flags columns
+ has type
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags columns).1.2.length ≤ columns.length
+but is expected to have type
+  (actualBalanceGaussianFlagColumnScanInstrumented cells flags (List.ofFn fun column => column)).1.2.length ≤
+    3 * s * (3 * s)
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagTraceBounds.lean:219:20: Invalid field `sourceOperationUpper`: The environment does not contain `CorruptedFieldRecovery.ActualBalanceGaussianFlagExecutionTrace.sourceOperationUpper`, so it is not possible to project the field `sourceOperationUpper` from an expression
+  (actualBalanceGaussianSerializedArrayFlagScanInstrumented raw tape).2
+of type
+  ActualBalanceGaussianFlagExecutionTrace
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayFlagTraceBounds

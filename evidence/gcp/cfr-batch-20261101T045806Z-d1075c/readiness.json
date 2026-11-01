@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-01T05:00:45.117673+00:00",
+  "same_account": "dfredriksen@quantyra.org",
+  "instance_id": "3335066512373302615",
+  "status": "TERMINATED",
+  "lastStopTimestamp": "2026-10-31T21:51:12.537-07:00",
+  "machine_type": "e2-highmem-8",
+  "max_run_duration_seconds": 14400,
+  "stop_action": "STOP",
+  "task_egress_absent": true,
+  "effective_ingress_unchanged": true,
+  "previous_stop_result": "../cfr-development-20261101T043816Z-1a74e0/cfr-shutdown-20261101T044714Z-4f9b43-result.json",
+  "first_attempt_note": "First readiness attempt exited on a wrong expected lastStopTimestamp before the ingress check; its two read-only receipts are reused unchanged."
+}

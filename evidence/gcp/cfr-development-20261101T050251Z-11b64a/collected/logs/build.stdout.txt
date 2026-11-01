@@ -1,0 +1,127 @@
+✖ [3011/3013] Building CorruptedFieldRecovery.S010BalanceGaussianArrayFlagExecutionTrace (42s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:178:51: Application type mismatch: The argument
+  cells
+has type
+  Array (Array (ZMod 2))
+but is expected to have type
+  ℕ
+in the application
+  @actualBalanceGaussianFlagFirstUnusedPivotRow cells
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:179:6: Failed to rewrite using equation theorems for `actualBalanceGaussianFlagCountedFirstUnusedPivotRow`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:244:42: Application type mismatch: The argument
+  cells
+has type
+  Array (Array (ZMod 2))
+but is expected to have type
+  ℕ
+in the application
+  @actualBalanceGaussianFlagColumnScan cells
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:246:11: Tactic `rfl` failed: The left-hand side
+  true
+is not definitionally equal to the right-hand side
+  Function.const Lean.Name ()
+    `CorruptedFieldRecovery.S010BalanceGaussianArrayFlagExecutionTrace.243.4.244.61.4.61._sorry._@.CorruptedFieldRecovery.S010BalanceGaussianArrayFlagExecutionTrace.85839279._hygCtx._hyg.36
+
+case nil
+m n : ℕ
+cells : Array (Array (ZMod 2))
+flags : Array Bool
+⊢ sorry
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:281:2: don't know how to synthesize implicit argument `α`
+  @Prod.mk (ActualBalanceGaussianFlagScanOutput (?m.67 raw tape) (3 * s * (3 * s)))
+    ActualBalanceGaussianFlagExecutionTrace run.1
+    (let __src := run.2;
+    { columnsProcessed := __src.columnsProcessed, rowIndexListNodes := __src.rowIndexListNodes,
+      selectorPredicateTests := __src.selectorPredicateTests, booleanFlagReads := __src.booleanFlagReads,
+      selectorCoefficientViews := __src.selectorCoefficientViews, pivotUpdates := __src.pivotUpdates,
+      pivotCoefficientViewsUpper := __src.pivotCoefficientViewsUpper, pivotRowComparisons := __src.pivotRowComparisons,
+      fieldMultiplicationsUpper := __src.fieldMultiplicationsUpper, fieldAdditionsUpper := __src.fieldAdditionsUpper,
+      coefficientCellWrites := __src.coefficientCellWrites, matrixRowArrayWrites := __src.matrixRowArrayWrites,
+      flagUpdateReadsUpper := __src.flagUpdateReadsUpper, flagCellComparisons := __src.flagCellComparisons,
+      flagCellWrites := __src.flagCellWrites, newMatrixArraySlots := __src.newMatrixArraySlots,
+      newFlagArraySlots := __src.newFlagArraySlots, initialFlagArraySlots := m, initialFlagCellWrites := m,
+      transcriptCons := __src.transcriptCons, columnListNodes := k })
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+k : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin k) := ⋯
+run : ActualBalanceGaussianFlagScanOutput (?m.67 raw tape) k × ActualBalanceGaussianFlagExecutionTrace := ⋯
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:281:12: don't know how to synthesize implicit argument `α`
+  @Prod.snd (ActualBalanceGaussianFlagScanOutput (?m.67 raw tape) k) ActualBalanceGaussianFlagExecutionTrace run
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+k : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin k) := ⋯
+run : ActualBalanceGaussianFlagScanOutput (?m.67 raw tape) k × ActualBalanceGaussianFlagExecutionTrace := ⋯
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:281:3: don't know how to synthesize implicit argument `α`
+  @Prod.fst (ActualBalanceGaussianFlagScanOutput (?m.67 raw tape) k) ActualBalanceGaussianFlagExecutionTrace run
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+k : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin k) := ⋯
+run : ActualBalanceGaussianFlagScanOutput (?m.67 raw tape) k × ActualBalanceGaussianFlagExecutionTrace := ⋯
+⊢ Type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:280:13: don't know how to synthesize implicit argument `m`
+  @actualBalanceGaussianFlagColumnScanInstrumented (?m.67 raw tape) k cells flags columns
+context:
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+m : ℕ := ⋯
+k : ℕ := ⋯
+cells : Array (Array (ZMod 2)) := ⋯
+flags : Array Bool := ⋯
+columns : List (Fin k) := ⋯
+⊢ ℕ
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:280:6: failed to infer `let` declaration type
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:272:4: Failed to infer type of definition `actualBalanceGaussianSerializedArrayFlagScanInstrumented`
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:291:7: Function expected at
+  actualBalanceGaussianSerializedArrayFlagScanInstrumented
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayFlagScanInstrumented` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:292:7: Function expected at
+  actualBalanceGaussianSerializedArrayFlagScanInstrumented
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  raw
+
+Hint: The identifier `actualBalanceGaussianSerializedArrayFlagScanInstrumented` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:293:47: unsolved goals
+x✝ : Sort u_1
+actualBalanceGaussianSerializedArrayFlagScanInstrumented : x✝
+s : ℕ
+raw : RawCoefficientArray
+tape : FiveWordTape s
+cells : Array (Array (ZMod 2)) := actualBalanceSerializedCoefficientMatrix (decodeRawArray raw) tape
+flags : Array Bool := actualBalanceGaussianEmptyUsedFlags (4 * (3 * s * (3 * s)))
+columns : List (Fin (3 * s * (3 * s))) := List.ofFn fun column => column
+⊢ (actualBalanceGaussianArrayView sorry, sorry) = actualBalanceGaussianRawScan raw tape
+error: CorruptedFieldRecovery/S010BalanceGaussianArrayFlagExecutionTrace.lean:325:48: unexpected token 'end'; expected 'lemma'
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianArrayFlagExecutionTrace
