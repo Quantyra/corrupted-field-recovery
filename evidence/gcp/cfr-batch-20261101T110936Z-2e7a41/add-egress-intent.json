@@ -1,0 +1,7 @@
+{
+  "utc": "2026-11-01T11:11:03.602846+00:00",
+  "absent_before": true,
+  "effective_ingress_unchanged": true,
+  "name": "external-nat",
+  "task_only": true
+}

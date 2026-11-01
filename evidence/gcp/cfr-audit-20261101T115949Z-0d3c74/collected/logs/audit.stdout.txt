@@ -1,0 +1,27 @@
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator_aeval
+@CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator_aeval.{u_1} : ∀ {s : Nat} {M : Type u_1}
+  [inst : AddCommMonoid.{u_1} M] [inst_1 : Module.{0, u_1} (ZMod 2) M]
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s)
+  (hfast : Eq.{1} (CorruptedFieldRecovery.rawFieldCandidateFastCheck candidate) Bool.true)
+  (T : Module.End.{0, u_1} (ZMod 2) M) (q : Polynomial.{0} (ZMod 2))
+  (hmod : Eq.{1} (CorruptedFieldRecovery.rawCandidateModulus candidate) q)
+  (hq : Eq.{u_1 + 1} ((Polynomial.aeval.{0, u_1} T) q) 0),
+  And (Irreducible.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+    (And (Polynomial.Monic.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate))
+      (And (Eq.{1} (Polynomial.natDegree.{0} (CorruptedFieldRecovery.rawCandidateModulus candidate)) s)
+        (Eq.{u_1 + 1} ((Polynomial.aeval.{0, u_1} T) (CorruptedFieldRecovery.rawCandidateModulus candidate)) 0)))
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator_aeval
+'CorruptedFieldRecovery.accepted_rawCandidateModulus_annihilator_aeval' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+CFR_TYPE_BEGIN:CorruptedFieldRecovery.accepted_rawCandidateModulus_aeval_eq_zero
+@CorruptedFieldRecovery.accepted_rawCandidateModulus_aeval_eq_zero.{u_1} : ∀ {s : Nat} {M : Type u_1}
+  [inst : AddCommMonoid.{u_1} M] [inst_1 : Module.{0, u_1} (ZMod 2) M] (T : Module.End.{0, u_1} (ZMod 2) M)
+  (candidate : CorruptedFieldRecovery.RawFieldCandidate s) (q : Polynomial.{0} (ZMod 2))
+  (hmod : Eq.{1} (CorruptedFieldRecovery.rawCandidateModulus candidate) q)
+  (hq : Eq.{u_1 + 1} ((Polynomial.aeval.{0, u_1} T) q) 0),
+  Eq.{u_1 + 1} ((Polynomial.aeval.{0, u_1} T) (CorruptedFieldRecovery.rawCandidateModulus candidate)) 0
+CFR_TYPE_END:CorruptedFieldRecovery.accepted_rawCandidateModulus_aeval_eq_zero
+'CorruptedFieldRecovery.accepted_rawCandidateModulus_aeval_eq_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
