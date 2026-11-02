@@ -1,0 +1,6 @@
+{
+  "utc": "2026-11-02T03:05:25.935303+00:00",
+  "run": "cfr-audit-20261102T030423Z-3c1f74",
+  "campaign": "cfr-lean430-c5ea-isolated-20261028a",
+  "note": "An observation/transport timeout must not trigger another launch."
+}
