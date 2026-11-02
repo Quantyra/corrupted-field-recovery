@@ -26,15 +26,8 @@ noncomputable def qScalarConjugateAlgHom
     (Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K) :
     K →ₐ[BinaryField] Module.End BinaryField (BinaryVector n) where
   toFun := qScalarConjugateLinearMap Q
-  map_zero' := by
-    apply LinearMap.ext
-    intro x
-    simp [qScalarConjugateLinearMap]
-  map_add' := by
-    intro a b
-    apply LinearMap.ext
-    intro x
-    simp [qScalarConjugateLinearMap, smul_add]
+  map_zero' := map_zero (qScalarConjugateLinearMap Q)
+  map_add' := map_add (qScalarConjugateLinearMap Q)
   map_one' := by
     apply LinearMap.ext
     intro x
