@@ -65,6 +65,7 @@ def rawCoefficientFitFiniteEntry {s d : Nat}
     (inverse : RawCoordinateMatrix) (supportMatrix : RawBinaryArray)
     (row : Fin (((3 * s) * (3 * s)) * (3 * s)))
     (column : Fin (s + (d * d) * d)) : ZMod 2 := by
+  classical
   let triple := rawOrderedTripleAt row
   let columnTag := (rawFitColumnFinEquiv s d).symm column
   exact if hrow : rawOrderedTripleIncreasing triple then
@@ -84,6 +85,7 @@ def rawCoefficientFitFiniteEntry {s d : Nat}
 /-- The same zero-padded ordered-triple embedding for the serialized RHS. -/
 def rawCoefficientFitFiniteRhs {s : Nat} (raw : RawCoefficientArray)
     (row : Fin (((3 * s) * (3 * s)) * (3 * s))) : ZMod 2 := by
+  classical
   let triple := rawOrderedTripleAt row
   exact if hrow : rawOrderedTripleIncreasing triple then
       rawCoefficientFitRhs raw (rawOrderedTripleAsIncreasing triple hrow)
