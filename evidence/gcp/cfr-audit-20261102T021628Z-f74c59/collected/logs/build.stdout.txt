@@ -1,0 +1,245 @@
+✖ [3071/3072] Building CorruptedFieldRecovery.S010BalanceGaussianSampledGeneratorFilter (49s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:33:14: unsolved goals
+case h
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+a b : K
+x : BinaryVector n
+⊢ Q.symm ((a + b) • Q x) = Q.symm (a • Q x) + Q.symm (b • Q x)
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:47:15: unsolved goals
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+a : BinaryField
+⊢ {
+      toFun := fun x =>
+        Q.symm (((algebraMap BinaryField K) a, (algebraMap BinaryField K) a, (algebraMap BinaryField K) a) * Q x),
+      map_add' := ⋯, map_smul' := ⋯ } =
+    (algebraMap BinaryField (Module.End BinaryField (BinaryVector n))) a
+warning: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:37:37: This simp argument is unused:
+  smul_add
+
+Hint: Omit it from the simp argument list.
+  simp [qScalarConjugateLinearMap,̵ ̵s̵m̵u̵l̵_̵a̵d̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:49:28: This simp argument is unused:
+  map_smul
+
+Hint: Omit it from the simp argument list.
+  simp [Algebra.smul_def, m̵a̵p̵_̵s̵m̵u̵l̵,̵ ̵qScalarConjugateLinearMap]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:107:4: typeclass instance problem is stuck
+  Algebra BinaryField ?m.47
+
+Note: Lean will not try to resolve this typeclass instance problem because the second and fourth type arguments to `Algebra` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:121:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  aeval ((qScalarConjugateAlgHom Q) k)
+in the target expression
+  (aeval ((qScalarConjugateLinearMap Q) k)) p = (qScalarConjugateLinearMap Q) ((aeval k) p)
+
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+k : K
+p : BinaryField[X]
+⊢ (aeval ((qScalarConjugateLinearMap Q) k)) p = (qScalarConjugateLinearMap Q) ((aeval k) p)
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:127:27: Application type mismatch: The argument
+  Eq.symm h
+has type
+  0 = (aeval ((qScalarConjugateLinearMap Q) k)) p
+but is expected to have type
+  (aeval ((qScalarConjugateLinearMap Q) k)) p = 0
+in the application
+  Eq.trans (Eq.symm heval) (Eq.symm h)
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:144:13: typeclass instance problem is stuck
+  Algebra BinaryField ?m.43
+
+Note: Lean will not try to resolve this typeclass instance problem because the second and fourth type arguments to `Algebra` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:209:12: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = _a
+Error: Application type mismatch: The argument
+  tape
+has type
+  FiveWordTape s
+but is expected to have type
+  FiveWordTape _a
+in the application
+  actualBalanceGaussianRawFreeIndex raw tape
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+hsize : Array.size raw = 3 * s * (3 * s) * (3 * s)
+hK : Module.finrank BinaryField K = s
+seed : Fin s → BinaryField
+⊢ Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = s
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:248:14: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = _a
+Error: Application type mismatch: The argument
+  tape
+has type
+  FiveWordTape s
+but is expected to have type
+  FiveWordTape _a
+in the application
+  actualBalanceGaussianRawFreeIndex raw tape
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+hsize : Array.size raw = 3 * s * (3 * s) * (3 * s)
+hK : Module.finrank BinaryField K = s
+seed : Fin s → BinaryField
+candidate : RawFieldCandidate s
+coefficients : Fin s → BinaryField
+⊢ Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = s
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:254:14: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = _a
+Error: Application type mismatch: The argument
+  tape
+has type
+  FiveWordTape s
+but is expected to have type
+  FiveWordTape _a
+in the application
+  actualBalanceGaussianRawFreeIndex raw tape
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+hsize : Array.size raw = 3 * s * (3 * s) * (3 * s)
+hK : Module.finrank BinaryField K = s
+seed : Fin s → BinaryField
+candidate : RawFieldCandidate s
+coefficients : Fin s → BinaryField
+hpass :
+  ActualBalanceGaussianGeneratorFilterPass candidate coefficients
+    (actualBalanceGaussianArrayFlagSelectBySeed raw tape ⋯ seed)
+⊢ Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = s
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:262:16: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = _a
+Error: Application type mismatch: The argument
+  tape
+has type
+  FiveWordTape s
+but is expected to have type
+  FiveWordTape _a
+in the application
+  actualBalanceGaussianRawFreeIndex raw tape
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+K : Type u_1
+inst✝⁷ : Field K
+inst✝⁶ : Fintype K
+inst✝⁵ : DecidableEq K
+inst✝⁴ : Finite K
+inst✝³ : CharP K 2
+inst✝² : Algebra BinaryField K
+inst✝¹ : FiniteDimensional BinaryField K
+inst✝ : Algebra (ZMod (ringChar K)) K
+s : ℕ
+Q : BinaryVector (3 * s) ≃ₗ[BinaryField] FieldTriple K
+E : BinaryTensor (3 * s)
+U : Submodule BinaryField (KTriple K)
+b : (Fin 4 → FieldTriple K) → Module.Basis (Fin s) BinaryField K
+raw : RawCoefficientArray
+tape : FiveWordTape s
+htape : tape ∈ actualFiveGoodTapeSet K Q (modeImageSemanticCleanFieldSet Q E) U b
+c : K
+hc : c ≠ 0
+hmodel : HasObservedTraceDeterminantDecomposition (decodeRawArray raw) E LinearMap.id Q c
+hsize : Array.size raw = 3 * s * (3 * s) * (3 * s)
+hK : Module.finrank BinaryField K = s
+seed : Fin s → BinaryField
+candidate : RawFieldCandidate s
+coefficients : Fin s → BinaryField
+hpass :
+  ActualBalanceGaussianGeneratorFilterPass candidate coefficients
+    (actualBalanceGaussianArrayFlagSelectBySeed raw tape ⋯ seed)
+k : K := actualBalanceGaussianQScalarParameter Q (actualBalanceGaussianArrayFlagSelectBySeed raw tape ⋯ seed)
+i : Fin s
+⊢ Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = s
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:265:8: Unknown identifier `actualBalanceGaussianSampledScalar_primitive_of_filterPass`
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianSampledGeneratorFilter
