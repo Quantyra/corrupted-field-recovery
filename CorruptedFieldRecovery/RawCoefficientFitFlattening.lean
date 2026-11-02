@@ -175,7 +175,7 @@ theorem rawCoefficientFitAugmentedArrayRun_refines {s d : Nat}
       (rawCoefficientFitAugmentedArrayRun (d := d) candidate hcheck inverse supportMatrix raw).2) =
       balanceGaussianColumnScan
         (rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw)
-        (used := (∅ : Finset (Fin (((3 * s) * (3 * s)) * (3 * s)))))
+        (∅ : Finset (Fin (((3 * s) * (3 * s)) * (3 * s))))
       (List.ofFn fun column : Fin ((s + (d * d) * d) + 1) => column) := by
   classical
   unfold rawCoefficientFitAugmentedArrayRun
