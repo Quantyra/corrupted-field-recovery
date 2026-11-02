@@ -1,0 +1,1 @@
+Updated [https://www.googleapis.com/compute/v1/projects/quantyra-lean-cert-20260915/zones/us-central1-a/instances/quantyra-cfr-lean-builder-20261028a].
