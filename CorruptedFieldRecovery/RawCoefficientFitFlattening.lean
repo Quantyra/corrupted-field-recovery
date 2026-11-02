@@ -59,7 +59,7 @@ def rawOrderedTripleAsIncreasing {n : Nat}
 /-- The compact source-indexed entry, flattened into every ordered physical
 triple row and every ordered support-triple column. Invalid triples are
 zero-padded. The flattening has no arbitrary or noncomputable ordering. -/
-def rawCoefficientFitFiniteEntry {s d : Nat}
+noncomputable def rawCoefficientFitFiniteEntry {s d : Nat}
     (candidate : RawFieldCandidate s)
     (hcheck : rawFieldCandidateCheck candidate = true)
     (inverse : RawCoordinateMatrix) (supportMatrix : RawBinaryArray)
@@ -83,7 +83,7 @@ def rawCoefficientFitFiniteEntry {s d : Nat}
     else 0
 
 /-- The same zero-padded ordered-triple embedding for the serialized RHS. -/
-def rawCoefficientFitFiniteRhs {s : Nat} (raw : RawCoefficientArray)
+noncomputable def rawCoefficientFitFiniteRhs {s : Nat} (raw : RawCoefficientArray)
     (row : Fin (((3 * s) * (3 * s)) * (3 * s))) : ZMod 2 := by
   classical
   let triple := rawOrderedTripleAt row
@@ -95,7 +95,7 @@ def rawCoefficientFitFiniteRhs {s : Nat} (raw : RawCoefficientArray)
 existing deterministic Gaussian scanner. Rows enumerate all ordered physical
 triples; columns enumerate scalar positions followed by all ordered support
 triples. Invalid increasing-triple positions are zero columns/rows. -/
-def rawCoefficientFitFiniteMatrix {s d : Nat}
+noncomputable def rawCoefficientFitFiniteMatrix {s d : Nat}
     (candidate : RawFieldCandidate s)
     (hcheck : rawFieldCandidateCheck candidate = true)
     (inverse : RawCoordinateMatrix) (supportMatrix : RawBinaryArray) :
@@ -106,7 +106,7 @@ def rawCoefficientFitFiniteMatrix {s d : Nat}
 
 /-- Append the serialized data coefficient as the final column. A homogeneous
 kernel vector with last coordinate one is an affine-fit solution over `F₂`. -/
-def rawCoefficientFitAugmentedEntry {s d : Nat}
+noncomputable def rawCoefficientFitAugmentedEntry {s d : Nat}
     (candidate : RawFieldCandidate s)
     (hcheck : rawFieldCandidateCheck candidate = true)
     (inverse : RawCoordinateMatrix) (supportMatrix : RawBinaryArray)
@@ -120,7 +120,7 @@ def rawCoefficientFitAugmentedEntry {s d : Nat}
   | Sum.inr _ => rawCoefficientFitFiniteRhs raw row
 
 /-- The augmented coefficient-fit matrix. -/
-def rawCoefficientFitAugmentedMatrix {s d : Nat}
+noncomputable def rawCoefficientFitAugmentedMatrix {s d : Nat}
     (candidate : RawFieldCandidate s)
     (hcheck : rawFieldCandidateCheck candidate = true)
     (inverse : RawCoordinateMatrix) (supportMatrix : RawBinaryArray)
@@ -150,7 +150,7 @@ finite matrix. This is the concrete elimination endpoint of this draft; a
 subsequent bridge must select a free-kernel candidate with final coordinate
 one and prove its coefficient slots solve `RawCoefficientFitAffineSolution`.
 -/
-def rawCoefficientFitAugmentedArrayRun {s d : Nat}
+noncomputable def rawCoefficientFitAugmentedArrayRun {s d : Nat}
     (candidate : RawFieldCandidate s)
     (hcheck : rawFieldCandidateCheck candidate = true)
     (inverse : RawCoordinateMatrix) (supportMatrix : RawBinaryArray)
