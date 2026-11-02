@@ -1,0 +1,121 @@
+✖ [3041/3050] Building CorruptedFieldRecovery.RawCoefficientFitFlattening (67s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/RawCoefficientFitFlattening.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCoefficientFitFlattening.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/RawCoefficientFitFlattening.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCoefficientFitFlattening.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/RawCoefficientFitFlattening.setup.json --json
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:74:10: don't know how to synthesize implicit argument `d`
+  @rawCoefficientFitEntry s (?m.101 hrow j) candidate ⋯ inverse supportMatrix (rawOrderedTripleAsIncreasing triple hrow)
+    (Sum.inl j)
+context:
+s d : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+inverse : RawCoordinateMatrix
+supportMatrix : RawBinaryArray
+row : Fin (3 * s * (3 * s) * (3 * s))
+column : Fin (s + d * d * d)
+triple : (Fin (3 * s) × Fin (3 * s)) × Fin (3 * s) := ⋯
+columnTag : Fin s ⊕ Fin (d * d * d) := ⋯
+hrow : rawOrderedTripleIncreasing triple
+j : Fin s
+⊢ ℕ
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:75:56: don't know how to synthesize implicit argument `β`
+  @Sum.inl (Fin s) (IncreasingTriple (?m.101 hrow j)) j
+context:
+s d : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+inverse : RawCoordinateMatrix
+supportMatrix : RawBinaryArray
+row : Fin (3 * s * (3 * s) * (3 * s))
+column : Fin (s + d * d * d)
+triple : (Fin (3 * s) × Fin (3 * s)) × Fin (3 * s) := ⋯
+columnTag : Fin s ⊕ Fin (d * d * d) := ⋯
+hrow : rawOrderedTripleIncreasing triple
+j : Fin s
+⊢ Type
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:67:49: unsolved goals
+s d : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+inverse : RawCoordinateMatrix
+supportMatrix : RawBinaryArray
+row : Fin (3 * s * (3 * s) * (3 * s))
+column : Fin (s + d * d * d)
+triple : (Fin (3 * s) × Fin (3 * s)) × Fin (3 * s) := rawOrderedTripleAt row
+columnTag : Fin s ⊕ Fin (d * d * d) := (rawFitColumnFinEquiv s d).symm column
+⊢ ZMod 2
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:86:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Classical.propDecidable', which is 'noncomputable'
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:109:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'rawCoefficientFitFiniteRhs', which is 'noncomputable'
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:123:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'rawCoefficientFitAugmentedEntry', which is 'noncomputable'
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:153:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'rawCoefficientFitAugmentedMatrix', which is 'noncomputable'
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:174:8: don't know how to synthesize implicit argument `β`
+  @Prod.fst (Array (Array (ZMod 2)))
+    (List
+      (Fin (3 * s * (3 * s) * (3 * s)) ×
+        Fin
+          (s +
+              ?m.42 candidate hcheck inverse supportMatrix raw * ?m.42 candidate hcheck inverse supportMatrix raw *
+                ?m.42 candidate hcheck inverse supportMatrix raw +
+            1)))
+    (rawCoefficientFitAugmentedArrayRun candidate hcheck inverse supportMatrix raw)
+context:
+s d : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+inverse : RawCoordinateMatrix
+supportMatrix : RawBinaryArray
+raw : RawCoefficientArray
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:174:9: don't know how to synthesize implicit argument `d`
+  @rawCoefficientFitAugmentedArrayRun s (?m.42 candidate hcheck inverse supportMatrix raw) candidate ⋯ inverse
+    supportMatrix raw
+context:
+s d : ℕ
+candidate : RawFieldCandidate s
+hcheck : rawFieldCandidateCheck candidate = true
+inverse : RawCoordinateMatrix
+supportMatrix : RawBinaryArray
+raw : RawCoefficientArray
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: CorruptedFieldRecovery/RawCoefficientFitFlattening.lean:181:2: Type mismatch: After simplification, term
+  actualBalanceGaussianArrayColumnScan_refines
+    (Array.ofFn fun row =>
+      Array.ofFn fun column => rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw row column)
+    ∅ (List.ofFn fun column => column)
+ has type
+  (actualBalanceGaussianArrayView
+        (actualBalanceGaussianArrayColumnScan
+            (Array.ofFn fun row =>
+              Array.ofFn fun column =>
+                rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw row column)
+            ∅ (0 :: List.ofFn fun i => i.succ)).1,
+      (actualBalanceGaussianArrayColumnScan
+          (Array.ofFn fun row =>
+            Array.ofFn fun column =>
+              rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw row column)
+          ∅ (0 :: List.ofFn fun i => i.succ)).2) =
+    balanceGaussianColumnScan
+      (actualBalanceGaussianArrayView
+        (Array.ofFn fun row =>
+          Array.ofFn fun column =>
+            rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw row column))
+      ∅ (0 :: List.ofFn fun i => i.succ)
+but is expected to have type
+  (actualBalanceGaussianArrayView
+        (actualBalanceGaussianArrayColumnScan
+            (Array.ofFn fun row =>
+              Array.ofFn fun column =>
+                rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw row column)
+            ∅ (0 :: List.ofFn fun i => i.succ)).1,
+      (actualBalanceGaussianArrayColumnScan
+          (Array.ofFn fun row =>
+            Array.ofFn fun column =>
+              rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw row column)
+          ∅ (0 :: List.ofFn fun i => i.succ)).2) =
+    balanceGaussianColumnScan (rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw) ∅
+      (0 :: List.ofFn fun i => i.succ)
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.RawCoefficientFitFlattening
