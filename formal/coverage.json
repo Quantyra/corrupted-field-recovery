@@ -5,12 +5,18 @@
     {
       "id": "input_model",
       "status": "unformalized",
-      "description": "Concrete binary alternating tensor, unknown finite field and supported corruption promise"
+      "description": "Concrete binary alternating tensor, unknown finite field and supported corruption promise",
+      "m_tier": "O1/M1",
+      "depends_on": []
     },
     {
       "id": "four_contractions",
       "status": "unformalized",
-      "description": "Actual four-contraction balance space equals scalar field"
+      "description": "Actual four-contraction balance space equals scalar field",
+      "m_tier": "O1/M1",
+      "depends_on": [
+        "input_model"
+      ]
     },
     {
       "id": "two_translate_image",
@@ -20,43 +26,124 @@
       "exports": [
         "CorruptedFieldRecovery.joint_surjective_of_disjoint_duals",
         "CorruptedFieldRecovery.two_translate_of_disjoint"
-      ]
+      ],
+      "m_tier": "O2/M2",
+      "depends_on": [
+        "input_model"
+      ],
+      "floor": {
+        "note": "abstract kernel only; not the concrete bridge",
+        "audited_units": []
+      }
     },
     {
       "id": "two_translate_bridge",
       "status": "unformalized",
-      "description": "Specialize the abstract kernel to the manuscript binary tensor, support and mode image; derive the restricted-dual-injectivity version and exact coefficient-slice computation"
+      "description": "Specialize the abstract kernel to the manuscript binary tensor, support and mode image; derive the restricted-dual-injectivity version and exact coefficient-slice computation",
+      "m_tier": "O2/M2",
+      "depends_on": [
+        "two_translate_image",
+        "four_contractions"
+      ],
+      "floor": {
+        "note": "field identification is conditional on one executable acceptance plus two model facts",
+        "audited_units": [
+          "S010BalanceGaussianCandidateAnnihilator",
+          "S010BalanceGaussianAnnihilatorRoot",
+          "S010BalanceGaussianCandidateAnnihilatorWiring"
+        ],
+        "open_sub_items": [
+          "recurrence_instantiation: S010BalanceGaussianRecurrenceCandidateInverse never compiled",
+          "coefficient_encoding: candidate-to-model coefficient encoding underived"
+        ]
+      }
     },
     {
       "id": "sampling_bounds",
       "status": "unformalized",
-      "description": "Finite-field generation, clean conditional sampling, translate union bound and s>=2R+5 estimates"
+      "description": "Finite-field generation, clean conditional sampling, translate union bound and s>=2R+5 estimates",
+      "m_tier": "O3/M3",
+      "depends_on": [
+        "input_model",
+        "four_contractions"
+      ],
+      "floor": {
+        "note": "finite counting lemmas exist; no end-to-end probability statement",
+        "audited_units": []
+      }
     },
     {
       "id": "bounded_constructor",
       "status": "unformalized",
-      "description": "Concrete constructor correctness, termination, random-tape semantics and amplification"
+      "description": "Concrete constructor correctness, termination, random-tape semantics and amplification",
+      "m_tier": "O5/M5",
+      "depends_on": [
+        "sampling_bounds",
+        "certificate"
+      ]
     },
     {
       "id": "certificate",
       "status": "unformalized",
-      "description": "Complete finite coefficient checker implies all-vector representation identity"
+      "description": "Complete finite coefficient checker implies all-vector representation identity",
+      "m_tier": "O4/M4",
+      "depends_on": [
+        "input_model"
+      ],
+      "floor": {
+        "note": "scan and checker halves audited; composition not proved",
+        "audited_units": [
+          "S010BalanceGaussianArrayFlagScan",
+          "S010BalanceGaussianArrayFlagExecutionTrace",
+          "RawRabinIndexOperationalMachine"
+        ]
+      }
     },
     {
       "id": "implementation_refinement",
       "status": "not_claimed",
       "required": false,
-      "description": "The Python companion is tested, not formally verified. An additional source-refinement proof would be needed for that separate claim; it is not a prerequisite to certifying the manuscript theorem."
+      "description": "The Python companion is tested, not formally verified. An additional source-refinement proof would be needed for that separate claim; it is not a prerequisite to certifying the manuscript theorem.",
+      "m_tier": "outside O0-O7",
+      "depends_on": []
     },
     {
       "id": "costs",
       "status": "unformalized",
-      "description": "Bit arithmetic, trial/randomness caps and full time/space envelopes"
+      "description": "Bit arithmetic, trial/randomness caps and full time/space envelopes",
+      "m_tier": "O6/M6",
+      "depends_on": [
+        "certificate",
+        "bounded_constructor"
+      ],
+      "floor": {
+        "note": "declared unit-RAM source-charge model only; not compiler, runtime, heap or bit evidence",
+        "audited_units": [
+          "S010BalanceGaussianArrayFlagScan",
+          "RawRabinIndexOperationalMachine"
+        ],
+        "blocked_by": [
+          "S010BalanceGaussianArrayFlagTraceBounds (uncompiled; blocks the ownership chain)"
+        ]
+      }
     },
     {
       "id": "main_theorem",
       "status": "unformalized",
-      "description": "Assemble exact manuscript hypotheses and conclusions, with no assumed recovery lemmas"
+      "description": "Assemble exact manuscript hypotheses and conclusions, with no assumed recovery lemmas",
+      "m_tier": "O7/M7",
+      "depends_on": [
+        "two_translate_bridge",
+        "sampling_bounds",
+        "bounded_constructor",
+        "certificate",
+        "costs"
+      ]
     }
+  ],
+  "skeleton": "docs/end-to-end-obligations-2026-11-02.md in the planning repository fixes each obligation's exact Lean target, inputs, dependencies and acceptance evidence. This file remains the single completeness authority; the skeleton records shape only.",
+  "blockers": [
+    "S010BalanceGaussianSampledGeneratorFilter: six errors, zero warnings (last verified run cfr-audit-20261102T033432Z-21bcff); nine commutes' attempts reverted; root cause is scalar-field ambiguity on FieldTriple K.",
+    "S010BalanceGaussianArrayFlagTraceBounds: uncompiled after more than ten cycles; blocks the flag-ownership chain and therefore the costs obligation."
   ]
 }
