@@ -1,0 +1,66 @@
+✖ [3071/3072] Building CorruptedFieldRecovery.S010BalanceGaussianSampledGeneratorFilter (51s)
+trace: .> LEAN_PATH=/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Cli/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/batteries/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/Qq/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/aesop/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/proofwidgets/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/importGraph/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/LeanSearchClient/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/plausible/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/packages/mathlib/.lake/build/lib/lean:/home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean /opt/quantyra/lean-4.30.0-linux/bin/lean /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean -o /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.olean -i /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/lib/lean/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.ilean -c /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.c --setup /home/dfredriksen_quantyra_org/quantyra-cfr-runs/cfr-lean430-c5ea-isolated-20261028a/source/.lake/build/ir/CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.setup.json --json
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:45:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?f (?c • ?x)
+in the target expression
+  ({ toFun := fun k => { toFun := fun x => Q.symm (k • Q x), map_add' := ⋯, map_smul' := ⋯ }, map_add' := ⋯,
+          map_smul' := ⋯ }
+        ((algebraMap BinaryField K) a))
+      x =
+    ((algebraMap BinaryField (Module.End BinaryField (BinaryVector n))) a) x
+
+case h
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+a : BinaryField
+x : BinaryVector n
+⊢ ({ toFun := fun k => { toFun := fun x => Q.symm (k • Q x), map_add' := ⋯, map_smul' := ⋯ }, map_add' := ⋯,
+          map_smul' := ⋯ }
+        ((algebraMap BinaryField K) a))
+      x =
+    ((algebraMap BinaryField (Module.End BinaryField (BinaryVector n))) a) x
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:104:4: typeclass instance problem is stuck
+  Algebra BinaryField ?m.47
+
+Note: Lean will not try to resolve this typeclass instance problem because the second and fourth type arguments to `Algebra` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:118:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  aeval ((qScalarConjugateAlgHom Q) k)
+in the target expression
+  (aeval ((qScalarConjugateLinearMap Q) k)) p = (qScalarConjugateLinearMap Q) ((aeval k) p)
+
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : Algebra BinaryField K
+n : ℕ
+Q : BinaryVector n ≃ₗ[BinaryField] FieldTriple K
+k : K
+p : BinaryField[X]
+⊢ (aeval ((qScalarConjugateLinearMap Q) k)) p = (qScalarConjugateLinearMap Q) ((aeval k) p)
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:124:27: Application type mismatch: The argument
+  Eq.symm h
+has type
+  0 = (aeval ((qScalarConjugateLinearMap Q) k)) p
+but is expected to have type
+  (aeval ((qScalarConjugateLinearMap Q) k)) p = 0
+in the application
+  Eq.trans (Eq.symm heval) (Eq.symm h)
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:141:13: typeclass instance problem is stuck
+  Algebra BinaryField ?m.43
+
+Note: Lean will not try to resolve this typeclass instance problem because the second and fourth type arguments to `Algebra` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: CorruptedFieldRecovery/S010BalanceGaussianSampledGeneratorFilter.lean:240:13: typeclass instance problem is stuck
+  Algebra BinaryField ?m.114
+
+Note: Lean will not try to resolve this typeclass instance problem because the second and fourth type arguments to `Algebra` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: Lean exited with code 1
+Some required targets logged failures:
+- CorruptedFieldRecovery.S010BalanceGaussianSampledGeneratorFilter
