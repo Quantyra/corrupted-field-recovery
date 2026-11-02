@@ -41,7 +41,8 @@ noncomputable def qScalarConjugateAlgHom
     intro a
     apply LinearMap.ext
     intro x
-    simp [Algebra.smul_def, qScalarConjugateLinearMap]
+    simp [qScalarConjugateLinearMap, Algebra.smul_def, map_smul,
+      LinearEquiv.symm_apply_apply]
 
 /-- The polynomial made from the recurrence coefficients computed by the
 manuscript's power-relation solve.  The minus sign is the conventional
