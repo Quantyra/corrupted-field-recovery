@@ -24,8 +24,8 @@ def actualBalanceGaussianRawFreeColumnMembershipEquiv {s : Nat}
     ⟨column.1, of_decide_eq_true (List.mem_filter.mp column.2).2⟩
   invFun free :=
     ⟨free.1, List.mem_filter.mpr ⟨by
-      simp [actualBalanceGaussianRawFreeColumns], by
-      simp [actualBalanceGaussianRawFreeColumns, free.2]⟩⟩
+      simp, by
+      simp [free.2]⟩⟩
   left_inv column := by
     apply Subtype.ext
     rfl
