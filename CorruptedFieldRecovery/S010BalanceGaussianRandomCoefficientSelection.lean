@@ -77,7 +77,12 @@ theorem actualBalanceGaussianRawWeightedCombination_injective
       (∑ free : Free, (x free - y free) • family free) =
           (∑ free : Free, x free • family free) -
             (∑ free : Free, y free • family free) := by
-              simp [sub_smul, Finset.sum_sub_distrib]
+              have hsplit :
+                  (∑ free : Free, (x free - y free) • family free) =
+                    ∑ free : Free, (x free • family free - y free • family free) :=
+                Finset.sum_congr rfl
+                  (fun free _ => sub_smul (x free) (y free) (family free))
+              rw [hsplit, Finset.sum_sub_distrib]
       _ = 0 := by
         simpa [actualBalanceGaussianRawWeightedCombination, Free, family] using
           sub_eq_zero.mpr hval
