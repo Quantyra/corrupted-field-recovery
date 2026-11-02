@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-02T01:20:30.285293+00:00",
+  "same_account": "dfredriksen@quantyra.org",
+  "instance_id": "3335066512373302615",
+  "status": "TERMINATED",
+  "lastStopTimestamp": "2026-11-01T17:18:20.061-08:00",
+  "machine_type": "e2-highmem-8",
+  "max_run_duration_seconds": 14400,
+  "stop_action": "STOP",
+  "task_egress_absent": true,
+  "effective_ingress_unchanged": true,
+  "previous_stop_result": "../cfr-audit-20261102T010911Z-e12228/cfr-shutdown-20261102T011529Z-0de9cc-result.json"
+}

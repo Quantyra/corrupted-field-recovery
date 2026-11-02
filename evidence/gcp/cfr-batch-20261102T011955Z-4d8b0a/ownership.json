@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-02T01:21:20.395561+00:00",
+  "initial_state": "TERMINATED",
+  "started_for_task": true,
+  "instance": "quantyra-cfr-lean-builder-20261028a",
+  "project": "quantyra-lean-cert-20260915",
+  "zone": "us-central1-a",
+  "instance_id": "3335066512373302615",
+  "lastStartTimestamp": "2026-11-01T17:21:12.061-08:00",
+  "scheduling": {
+    "automaticRestart": false,
+    "instanceTerminationAction": "STOP",
+    "maxRunDuration": {
+      "nanos": 0,
+      "seconds": "14400"
+    },
+    "onHostMaintenance": "MIGRATE",
+    "preemptible": false,
+    "provisioningModel": "STANDARD"
+  }
+}
