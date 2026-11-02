@@ -171,11 +171,11 @@ theorem rawCoefficientFitAugmentedArrayRun_refines {s d : Nat}
     (inverse : RawCoordinateMatrix) (supportMatrix : RawBinaryArray)
     (raw : RawCoefficientArray) :
     (actualBalanceGaussianArrayView
-        (rawCoefficientFitAugmentedArrayRun candidate hcheck inverse supportMatrix raw).1,
-      (rawCoefficientFitAugmentedArrayRun candidate hcheck inverse supportMatrix raw).2) =
+        (rawCoefficientFitAugmentedArrayRun (d := d) candidate hcheck inverse supportMatrix raw).1,
+      (rawCoefficientFitAugmentedArrayRun (d := d) candidate hcheck inverse supportMatrix raw).2) =
       balanceGaussianColumnScan
         (rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw)
-        ∅ (List.ofFn fun column : Fin ((s + (d * d) * d) + 1) => column) := by
+        (∅ : Finset (Fin (((3 * s) * (3 * s)) * (3 * s)))) (List.ofFn fun column : Fin ((s + (d * d) * d) + 1) => column) := by
   classical
   unfold rawCoefficientFitAugmentedArrayRun
   simpa [actualBalanceGaussianArrayView] using
@@ -184,6 +184,6 @@ theorem rawCoefficientFitAugmentedArrayRun_refines {s d : Nat}
         Array.ofFn fun column : Fin ((s + (d * d) * d) + 1) =>
           rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw
             row column)
-      ∅ (List.ofFn fun column : Fin ((s + (d * d) * d) + 1) => column)
+      (∅ : Finset (Fin (((3 * s) * (3 * s)) * (3 * s)))) (List.ofFn fun column : Fin ((s + (d * d) * d) + 1) => column)
 
 end CorruptedFieldRecovery
