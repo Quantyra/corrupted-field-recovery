@@ -198,10 +198,8 @@ theorem actualBalanceGaussianArrayFlagSelectBySeed_mem_qScalarRange
     (hK : Module.finrank BinaryField K = s)
     (seed : Fin s → BinaryField) :
     actualBalanceGaussianArrayFlagSelectBySeed raw tape
-      (by
-        rw [← actualBalanceGaussianRawFreeIndex_card_eq
-          Q E U b raw tape htape c hc hmodel hsize hK]
-        rfl) seed ∈ qScalarConjugateEndRange Q := by
+      (actualBalanceGaussianRawFreeIndex_card_eq
+          Q E U b raw tape htape c hc hmodel hsize hK) seed ∈ qScalarConjugateEndRange Q := by
   let hcard : Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = s :=
     actualBalanceGaussianRawFreeIndex_card_eq
       Q E U b raw tape htape c hc hmodel hsize hK
@@ -237,24 +235,18 @@ theorem actualBalanceGaussianArrayFlagSampledGenerator_of_filterPass
     (coefficients : Fin s → BinaryField)
     (hpass : ActualBalanceGaussianGeneratorFilterPass candidate coefficients
       (actualBalanceGaussianArrayFlagSelectBySeed raw tape
-        (by
-          rw [← actualBalanceGaussianRawFreeIndex_card_eq
-            Q E U b raw tape htape c hc hmodel hsize hK]
-          rfl) seed)) :
+        (actualBalanceGaussianRawFreeIndex_card_eq
+            Q E U b raw tape htape c hc hmodel hsize hK) seed)) :
     let k := actualBalanceGaussianQScalarParameter Q
       (actualBalanceGaussianArrayFlagSelectBySeed raw tape
-        (by
-          rw [← actualBalanceGaussianRawFreeIndex_card_eq
-            Q E U b raw tape htape c hc hmodel hsize hK]
-          rfl) seed)
+        (actualBalanceGaussianRawFreeIndex_card_eq
+            Q E U b raw tape htape c hc hmodel hsize hK) seed)
     actualBalanceGaussianRecurrencePolynomial coefficients = minpoly BinaryField k ∧
       Algebra.adjoin BinaryField ({k} : Set K) = ⊤ ∧
       LinearIndependent BinaryField (fun i : Fin s =>
         (actualBalanceGaussianArrayFlagSelectBySeed raw tape
-          (by
-            rw [← actualBalanceGaussianRawFreeIndex_card_eq
-              Q E U b raw tape htape c hc hmodel hsize hK]
-            rfl) seed) ^ i.val) := by
+          (actualBalanceGaussianRawFreeIndex_card_eq
+              Q E U b raw tape htape c hc hmodel hsize hK) seed) ^ i.val) := by
   apply actualBalanceGaussianSampledScalar_primitive_of_filterPass Q
     candidate coefficients _
     (actualBalanceGaussianArrayFlagSelectBySeed_mem_qScalarRange
