@@ -157,7 +157,7 @@ theorem actualBalanceGaussianArrayFlagSeedScalar_bijective
             Q E U b raw tape htape c hc hmodel hsize hK) seed)) := by
   let hindex := actualBalanceGaussianRawGoodEventFreeIndexFinEquiv
     Q E U b raw tape htape c hc hmodel hsize hK
-  have hequiv := actualBalanceGaussianRawSeedEquivField
+  let hequiv := actualBalanceGaussianRawSeedEquivField
     Q E U b raw tape htape c hc hmodel hsize hindex
   constructor
   · intro x y hxy
