@@ -71,19 +71,18 @@ theorem actualBalanceGaussianRawWeightedCombination_injective
   intro x y hxy
   have hval : actualBalanceGaussianRawWeightedCombination raw tape x =
       actualBalanceGaussianRawWeightedCombination raw tape y :=
-    congrArg Subtype.val hxy
+    hxy
   have hrel : (∑ free : Free, (x free - y free) • family free) = 0 := by
     calc
       (∑ free : Free, (x free - y free) • family free) =
           (∑ free : Free, x free • family free) -
             (∑ free : Free, y free • family free) := by
-              rw [Finset.sum_sub_distrib]
-              simp [sub_smul]
+              simp [sub_smul, Finset.sum_sub_distrib]
       _ = 0 := by
         simpa [actualBalanceGaussianRawWeightedCombination, Free, family] using
           sub_eq_zero.mpr hval
   have hzero : (fun free : Free => x free - y free) = 0 :=
-    hLI (fun free => x free - y free) hrel
+    funext (fun free => hLI (fun free => x free - y free) hrel free)
   funext free
   have hcoord := congrFun hzero free
   exact sub_eq_zero.mp hcoord
@@ -114,7 +113,6 @@ theorem actualBalanceGaussianRawWeightedCombination_surjective
   have hspan := actualBalanceGaussianRawBasis_spans_QScalarRange
     Q E U b raw tape htape c hc hmodel hsize T.1
   refine ⟨fun free => actualBalanceGaussianInputCoordinates T.1 free.1, ?_⟩
-  apply Subtype.ext
   change (∑ free : actualBalanceGaussianRawFreeIndex raw tape,
       actualBalanceGaussianInputCoordinates T.1 free.1 •
         actualBalanceGaussianRawCandidateFamily raw tape free) = T.1
