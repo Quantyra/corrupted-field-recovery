@@ -71,12 +71,12 @@ noncomputable def rawCoefficientFitFiniteEntry {s d : Nat}
   exact if hrow : rawOrderedTripleIncreasing triple then
       match columnTag with
       | Sum.inl j =>
-          rawCoefficientFitEntry candidate hcheck inverse supportMatrix
+          rawCoefficientFitEntry (d := d) candidate hcheck inverse supportMatrix
             (rawOrderedTripleAsIncreasing triple hrow) (Sum.inl j)
       | Sum.inr e =>
           let supportTriple := rawOrderedTripleAt e
           if hsupport : rawOrderedTripleIncreasing supportTriple then
-            rawCoefficientFitEntry candidate hcheck inverse supportMatrix
+            rawCoefficientFitEntry (d := d) candidate hcheck inverse supportMatrix
               (rawOrderedTripleAsIncreasing triple hrow)
               (Sum.inr (rawOrderedTripleAsIncreasing supportTriple hsupport))
           else 0
@@ -142,7 +142,7 @@ def RawCoefficientFitAffineSolution {s d : Nat}
   ∃ coefficients : RawCoefficientFitColumnIndex s d → ZMod 2,
     ∀ row : IncreasingTriple (3 * s),
       (∑ column : RawCoefficientFitColumnIndex s d,
-        rawCoefficientFitEntry candidate hcheck inverse supportMatrix row column *
+        rawCoefficientFitEntry (d := d) candidate hcheck inverse supportMatrix row column *
           coefficients column) = rawCoefficientFitRhs raw row
 
 /-- Run the established deterministic nested-array scan on the augmented
