@@ -121,7 +121,7 @@ theorem actualBalanceGaussianRawWeightedCombination_surjective
   change (∑ free : actualBalanceGaussianRawFreeIndex raw tape,
       actualBalanceGaussianInputCoordinates T.1 free.1 •
         actualBalanceGaussianRawCandidateFamily raw tape free) = T.1
-  exact hspan.mpr T.2 |>.symm
+  exact (hspan.mp T.2).symm
 
 /-- A bijection from all coefficient functions on the free-column family to
 the Q-scalar balance space. Thus, once the family is known to have size s,
@@ -153,8 +153,10 @@ noncomputable def actualBalanceGaussianRawWeightsEquivQScalarRange
         intro x y hxy
         apply actualBalanceGaussianRawWeightedCombination_injective raw tape
         exact congrArg Subtype.val hxy,
-      actualBalanceGaussianRawWeightedCombination_surjective
-        Q E U b raw tape htape c hc hmodel hsize⟩
+      fun T =>
+        let h := actualBalanceGaussianRawWeightedCombination_surjective
+          Q E U b raw tape htape c hc hmodel hsize T
+        ⟨Classical.choose h, Subtype.ext (Classical.choose_spec h)⟩⟩
 
 /-- The scan's free-coordinate type has cardinality s whenever the coefficient
 field has binary dimension s. The proof compares cardinalities through the
@@ -260,7 +262,7 @@ noncomputable def actualBalanceGaussianRawSeedEquivField
   let eRange := actualBalanceGaussianRawSeedEquivQScalarRange
     Q E U b raw tape htape c hc hmodel hsize hindex
   let eScalar : qScalarConjugateEndRange Q ≃ K :=
-    { toFun := actualBalanceGaussianQScalarParameter Q
+    { toFun := fun T => actualBalanceGaussianQScalarParameter Q T.1
       invFun := fun k => ⟨qScalarConjugateLinearMap Q k, ⟨k, rfl⟩⟩
       left_inv := by
         intro T
@@ -269,8 +271,7 @@ noncomputable def actualBalanceGaussianRawSeedEquivField
       right_inv := by
         intro k
         apply qScalarConjugateLinearMap_injective Q
-        exact actualBalanceGaussianQScalarParameter_spec Q
-          ⟨qScalarConjugateLinearMap Q k, ⟨k, rfl⟩⟩ }
+        exact actualBalanceGaussianQScalarParameter_spec Q ⟨k, rfl⟩ }
   exact eRange.trans eScalar
 
 /-- The coefficient-combination sampler covers every scalar action exactly
