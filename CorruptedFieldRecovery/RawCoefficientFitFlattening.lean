@@ -180,6 +180,8 @@ theorem rawCoefficientFitAugmentedArrayRun_refines {s d : Nat}
   unfold rawCoefficientFitAugmentedArrayRun
   simpa [actualBalanceGaussianArrayView] using
     actualBalanceGaussianArrayColumnScan_refines
+      (m := ((3 * s) * (3 * s)) * (3 * s))
+      (n := (s + (d * d) * d) + 1)
       (Array.ofFn fun row : Fin (((3 * s) * (3 * s)) * (3 * s)) =>
         Array.ofFn fun column : Fin ((s + (d * d) * d) + 1) =>
           rawCoefficientFitAugmentedMatrix candidate hcheck inverse supportMatrix raw
