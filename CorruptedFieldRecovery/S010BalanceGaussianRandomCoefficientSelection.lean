@@ -175,28 +175,25 @@ theorem actualBalanceGaussianRawFreeIndex_card_eq
     (hsize : raw.size = (3 * s) * (3 * s) * (3 * s))
     (hK : Module.finrank BinaryField K = s) :
     Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) = s := by
-  letI : Fintype (actualBalanceGaussianRawFreeIndex raw tape) := Fintype.ofFinite _
-  letI : Fintype (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) :=
-    Fintype.ofFinite _
-  letI : Fintype (qScalarConjugateEndRange Q) := Fintype.ofFinite _
   let e := actualBalanceGaussianRawWeightsEquivQScalarRange
     Q E U b raw tape htape c hc hmodel hsize
-  have hcard : Fintype.card
-      (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) =
-        Fintype.card (qScalarConjugateEndRange Q) := Fintype.card_congr e
-  have hfun : Fintype.card
-      (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) =
-        2 ^ Fintype.card (actualBalanceGaussianRawFreeIndex raw tape) := by
-    rw [Fintype.card_fun]
+  have hcard : Nat.card (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) =
+      Nat.card (qScalarConjugateEndRange Q) := Nat.card_congr e
+  have hfun : Nat.card (actualBalanceGaussianRawFreeIndex raw tape → BinaryField) =
+      2 ^ Nat.card (actualBalanceGaussianRawFreeIndex raw tape) := by
+    rw [Nat.card_fun]
     simp [BinaryField]
-  have hrange : Fintype.card (qScalarConjugateEndRange Q) = 2 ^ s := by
+  have hrange : Nat.card (qScalarConjugateEndRange Q) = 2 ^ s := by
     rw [Module.card_eq_pow_finrank (K := BinaryField)
       (V := qScalarConjugateEndRange Q), qScalarConjugateEndRange_finrank Q, hK]
     simp [BinaryField]
-  have hpow : 2 ^ Fintype.card
+  have hpow : 2 ^ Nat.card
       (actualBalanceGaussianRawFreeIndex raw tape) = 2 ^ s :=
     hfun.symm.trans (hcard.trans hrange)
-  exact Nat.pow_right_injective (by decide : 2 ≤ 2) hpow
+  have hfinal : Nat.card (actualBalanceGaussianRawFreeIndex raw tape) = s :=
+    Nat.pow_right_injective (by decide : 2 ≤ 2) hpow
+  rw [← Nat.card_eq_fintype_card]
+  exact hfinal
 
 /-- Given an explicit enumeration equivalence from s bit positions to the
 computed free columns, uniform s-bit coefficient seeds biject onto the entire
