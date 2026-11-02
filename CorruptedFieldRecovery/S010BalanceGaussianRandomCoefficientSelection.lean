@@ -184,7 +184,7 @@ theorem actualBalanceGaussianRawFreeIndex_card_eq
     rw [Nat.card_fun]
     simp [BinaryField]
   have hrange : Nat.card (qScalarConjugateEndRange Q) = 2 ^ s := by
-    rw [Module.card_eq_pow_finrank (K := BinaryField)
+    rw [Module.natCard_eq_pow_finrank (K := BinaryField)
       (V := qScalarConjugateEndRange Q), qScalarConjugateEndRange_finrank Q, hK]
     simp [BinaryField]
   have hpow : 2 ^ Nat.card
