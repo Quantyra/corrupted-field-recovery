@@ -2,7 +2,7 @@
 
 Use the repository's Python interpreter to run this controller. It invokes only
 the established gcloud route and never reads the historical Space state file.
-CPU-aware capture is local preparation only; no CPU submit/runner is provided.
+CPU-aware capture is local preparation only; CPU dispatch is not provided here.
 """
 import argparse
 import base64
@@ -441,16 +441,22 @@ def capture(args):
         # Capture is local only. Never impersonate the cloud builder or turn
         # this offered source packet into a compiler-admission/acceptance receipt.
         (out/'capture-controller.py').write_bytes(CONTROLLER_BYTES)
+        execution_controls = {}
+        for name in ['cpu_cfr_runner.py', 'gcp_cfr_runner.py']:
+            content = (ROOT/'tools'/name).read_bytes()
+            (out/name).write_bytes(content)
+            execution_controls[name] = hashlib.sha256(content).hexdigest()
         manifest.update(project=None, instance=compile_host, zone=None,
                         compile_host='CPU', builder_profile=None,
                         capture_controller_sha256=CONTROLLER_SHA256,
+                        execution_control_sha256=execution_controls,
                         prospective_compiler=dict(host=compile_host, admission='NOT_ESTABLISHED',
-                            runtime_adapter='NOT_IMPLEMENTED', execution='NOT_SUBMITTED'))
+                            runtime_adapter='IMPLEMENTED_NOT_QUALIFIED', execution='NOT_SUBMITTED'))
     save(out/'capture-manifest.json', manifest)
     summary_keys = ['run', 'source_kind', 'targets', 'audit', 'audit_path',
                     'archive_sha256', 'source_sha256', 'utf8_no_bom_verified', 'encoding_errors']
     if cpu_capture:
-        summary_keys += ['compile_host', 'instance', 'prospective_compiler']
+        summary_keys += ['compile_host', 'instance', 'prospective_compiler', 'execution_control_sha256']
     print(json.dumps({k:manifest[k] for k in summary_keys}, indent=2))
     if errors:
         raise RuntimeError('Captured offered bytes, but encoding preflight failed')

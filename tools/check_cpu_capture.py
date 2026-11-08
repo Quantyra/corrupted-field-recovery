@@ -22,6 +22,8 @@ def main():
             'lakefile.toml': b'name = "fixture"\n',
             'lake-manifest.json': b'{"packages": []}\n',
             'lean-toolchain': b'leanprover/lean4:v4.30.0\n',
+            'tools/cpu_cfr_runner.py': b'# Non-executable CPU control fixture\n',
+            'tools/gcp_cfr_runner.py': b'# Non-executable shared control fixture\n',
         }
         for name, data in originals.items():
             path = root / name
@@ -45,11 +47,14 @@ def main():
             manifest = json.loads((out/'capture-manifest.json').read_text())
             assert manifest['compile_host'] == 'CPU'
             assert hashlib.sha256((out/'capture-controller.py').read_bytes()).hexdigest() == manifest['capture_controller_sha256']
+            for name, expected in manifest['execution_control_sha256'].items():
+                assert hashlib.sha256((out/name).read_bytes()).hexdigest() == expected
+                assert (out/name).read_bytes() == originals['tools/'+name]
             assert manifest['instance'] == 'cpu-02'
             assert manifest['project'] is manifest['zone'] is manifest['builder_profile'] is None
             assert manifest['prospective_compiler'] == {
                 'host': 'cpu-02', 'admission': 'NOT_ESTABLISHED',
-                'runtime_adapter': 'NOT_IMPLEMENTED', 'execution': 'NOT_SUBMITTED'}
+                'runtime_adapter': 'IMPLEMENTED_NOT_QUALIFIED', 'execution': 'NOT_SUBMITTED'}
             assert hashlib.sha256((out/'inputs.tar.gz').read_bytes()).hexdigest() == manifest['archive_sha256']
             with tarfile.open(out/'inputs.tar.gz') as archive:
                 assert set(archive.getnames()) == set(manifest['source_sha256'])

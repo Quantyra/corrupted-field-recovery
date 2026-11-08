@@ -97,6 +97,22 @@ def extract(archive, destination):
         source.extractall(destination, filter='data')
 
 
+def terminate_process_group(process):
+    """Stop only this stage's process group, including an already-exited leader."""
+    try:
+        os.killpg(process.pid, signal.SIGTERM)
+    except ProcessLookupError:
+        pass
+    try:
+        process.wait(timeout=15)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        process.wait()
+
+
 def main():
     if sys.platform != 'linux' or not os.environ.get('CFR_GCP_RUN'):
         raise RuntimeError('Remote-only runner: Linux and explicit cloud run identity required')
@@ -105,43 +121,60 @@ def main():
     manifest = json.loads((run/'capture-manifest.json').read_text())
     assert manifest['run'] == run.name == os.environ['CFR_GCP_RUN']
     assert manifest['compile_host'] == 'GCP'
+    return execute_captured(run, campaign, manifest, dict(compile_host='GCP',
+        project=manifest['project'], instance=manifest['instance'], zone=manifest['zone']))
+
+
+def execute_captured(run, campaign, manifest, identity, *, toolchain_bin=None,
+                     resource_guard=None, wait_process=None, stage_timeout=1800):
+    """Shared stages; callers must enforce their own host admission and lease."""
+    if sys.platform != 'linux':
+        raise RuntimeError('Shared compilation stages are Linux-only')
     assert manifest['utf8_no_bom_verified']
     assert manifest['lean_toolchain'] == 'leanprover/lean4:v4.30.0'
     assert digest(run/'inputs.tar.gz') == manifest['archive_sha256']
     logs = run/'logs'
     logs.mkdir(exist_ok=True)
     stages = []
-    receipt = dict(run=manifest['run'], compile_host='GCP', project=manifest['project'],
-                   instance=manifest['instance'], zone=manifest['zone'], started_utc=now(),
+    receipt = dict(run=manifest['run'], **identity, started_utc=now(),
                    status='running', stage_outcomes=stages,
                    source_sha256=manifest['source_sha256'], dependencies=manifest['dependencies'],
                    authoritative_scope='Exact captured sources and requested targets only; not full manuscript certification')
     write(run/'terminal-receipt.json', receipt)
 
     def stage(name, command, cwd, timeout=1800):
+        if resource_guard:
+            resource_guard()
+        timeout = min(timeout, stage_timeout)
         print('STAGE='+name, flush=True)
         (run/'current-stage').write_text(name+'\n')
         start = time.monotonic()
         with (logs/(name+'.stdout.txt')).open('wb') as stdout, (logs/(name+'.stderr.txt')).open('wb') as stderr:
             process = subprocess.Popen(command, cwd=cwd, stdout=stdout, stderr=stderr, start_new_session=True)
             timed_out = False
+            wait_failure = None
             try:
-                code = process.wait(timeout=timeout)
+                code = wait_process(process, timeout) if wait_process else process.wait(timeout=timeout)
             except subprocess.TimeoutExpired:
                 timed_out = True
-                os.killpg(process.pid, signal.SIGTERM)
-                try:
-                    process.wait(timeout=15)
-                except subprocess.TimeoutExpired:
-                    os.killpg(process.pid, signal.SIGKILL)
-                    process.wait()
+                terminate_process_group(process)
                 code = 124
+            except Exception as exc:
+                wait_failure = exc
+                terminate_process_group(process)
+                code = 125
         entry = dict(stage=name, command=command, exit_code=code, timed_out=timed_out,
                      elapsed_seconds=round(time.monotonic()-start, 3))
         stages.append(entry)
+        if wait_failure:
+            entry['wait_failure'] = repr(wait_failure)
         write(run/'terminal-receipt.json', receipt)
+        if wait_failure:
+            raise wait_failure
         if code:
             raise RuntimeError('Stage failed: '+name+' exit='+str(code))
+        if resource_guard:
+            resource_guard()
 
     def identities(source, packages):
         expected_owned = {name for name in manifest['source_sha256']
@@ -158,6 +191,8 @@ def main():
             subprocess.run(['git', '-C', str(path), 'diff', '--exit-code', 'HEAD', '--'], check=True)
 
     try:
+        if resource_guard:
+            resource_guard()
         campaign.mkdir(exist_ok=True)
         source = campaign/'source'
         packages = campaign/'packages'
@@ -195,7 +230,9 @@ def main():
         if not link.exists():
             link.symlink_to(packages, target_is_directory=True)
         assert link.resolve() == packages.resolve()
-        tool = Path(manifest['builder_profile']['toolchain_bin']) if manifest.get('builder_profile') else Path.home()/'quantyra-space-tools/lean-4.30.0-linux/bin'
+        tool = (Path(toolchain_bin) if toolchain_bin else
+                Path(manifest['builder_profile']['toolchain_bin']) if manifest.get('builder_profile')
+                else Path.home()/'quantyra-space-tools/lean-4.30.0-linux/bin')
         assert (tool/'lean').is_file() and (tool/'lake').is_file()
         os.environ['PATH'] = str(tool)+os.pathsep+os.environ['PATH']
         os.environ['MATHLIB_NO_CACHE_ON_UPDATE'] = '1'
@@ -235,6 +272,7 @@ def main():
             stage('audit', ['lake', 'env', 'lean', manifest.get('audit_path', 'checks/Audit.lean')], source)
         identities(source, packages)
         receipt['source_and_dependencies_verified_after'] = True
+        assert {name:digest(tool/name) for name in ['lean', 'lake']} == receipt['toolchain_binary_sha256'], 'Toolchain changed during run'
         texts = {p.name:p.read_text(encoding='utf-8', errors='replace') for p in logs.glob('*.txt')}
         combined = '\n'.join(texts.values())
         assert not re.search(r'error:|unsolved goals|sorryAx', combined)
@@ -252,6 +290,7 @@ def main():
             empty = re.findall(r"'([^']+)' does not depend on any axioms", text)
             audit_file = source/manifest.get('audit_path', 'checks/Audit.lean')
             expected = re.findall(r'^#print axioms\s+(\S+)\s*$', audit_file.read_text(), re.M)
+            assert set(manifest.get('audited_exports', [])) <= set(expected), 'Requested export missing from axiom audit'
             names = [name for name,_ in reports]+empty
             assert len(names) == len(set(names)) and set(names) == set(expected)
             profiles = {name:approved_axiom_profile(values) for name,values in reports}
@@ -273,6 +312,8 @@ def main():
                 write(logs/'emitted-types.json', blocks)
                 receipt['type_axiom_audit']['emitted_types_sha256'] = digest(logs/'emitted-types.json')
                 receipt['type_axiom_audit']['type_block_sha256'] = {n:b['sha256'] for n,b in blocks.items()}
+        if resource_guard:
+            resource_guard()
         receipt['status'] = 'passed'
         write(previous, dict(run=manifest['run'], source_sha256=manifest['source_sha256'],
                              dependencies=manifest['dependencies'], targets=manifest['targets'], utc=now()))
