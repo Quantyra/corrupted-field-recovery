@@ -2,6 +2,7 @@
 
 Use the repository's Python interpreter to run this controller. It invokes only
 the established gcloud route and never reads the historical Space state file.
+CPU-aware capture is local preparation only; no CPU submit/runner is provided.
 """
 import argparse
 import base64
@@ -382,8 +383,14 @@ def expected_type_tokens(exports):
 
 
 def capture(args):
+    compile_host = getattr(args, 'compile_host', 'GCP')
+    if compile_host not in {'GCP', 'cpu-01', 'cpu-02'}:
+        raise ValueError('Unsupported compiler capture host')
+    cpu_capture = compile_host != 'GCP'
+    if cpu_capture and (args.no_audit or not args.audit_export or not args.target):
+        raise ValueError('CPU capture requires explicit targets and audited exports')
     run = unique(args.label)
-    out = EVIDENCE/run
+    out = (ROOT/'evidence/cpu' if cpu_capture else EVIDENCE)/run
     out.mkdir(parents=True)
     commit = subprocess.check_output(['git', 'rev-parse', args.commit or 'HEAD'], cwd=ROOT, text=True).strip()
     if args.commit:
@@ -430,9 +437,21 @@ def capture(args):
                     lean_toolchain=files['lean-toolchain'].decode('utf-8').strip(),
                     archive_sha256=hashlib.sha256((out/'inputs.tar.gz').read_bytes()).hexdigest(),
                     utf8_no_bom_verified=not errors, encoding_errors=errors)
+    if cpu_capture:
+        # Capture is local only. Never impersonate the cloud builder or turn
+        # this offered source packet into a compiler-admission/acceptance receipt.
+        (out/'capture-controller.py').write_bytes(CONTROLLER_BYTES)
+        manifest.update(project=None, instance=compile_host, zone=None,
+                        compile_host='CPU', builder_profile=None,
+                        capture_controller_sha256=CONTROLLER_SHA256,
+                        prospective_compiler=dict(host=compile_host, admission='NOT_ESTABLISHED',
+                            runtime_adapter='NOT_IMPLEMENTED', execution='NOT_SUBMITTED'))
     save(out/'capture-manifest.json', manifest)
-    print(json.dumps({k:manifest[k] for k in ['run', 'source_kind', 'targets', 'audit',
-                     'audit_path', 'archive_sha256', 'source_sha256', 'utf8_no_bom_verified', 'encoding_errors']}, indent=2))
+    summary_keys = ['run', 'source_kind', 'targets', 'audit', 'audit_path',
+                    'archive_sha256', 'source_sha256', 'utf8_no_bom_verified', 'encoding_errors']
+    if cpu_capture:
+        summary_keys += ['compile_host', 'instance', 'prospective_compiler']
+    print(json.dumps({k:manifest[k] for k in summary_keys}, indent=2))
     if errors:
         raise RuntimeError('Captured offered bytes, but encoding preflight failed')
 
@@ -444,6 +463,8 @@ def main():
     cap = sub.add_parser('capture')
     cap.add_argument('--label', default='baseline')
     cap.add_argument('--commit')
+    cap.add_argument('--compile-host', choices=['GCP', 'cpu-01', 'cpu-02'], default='GCP',
+                     help='Capture destination only; CPU capture does not submit or admit a compiler')
     cap.add_argument('--target', action='append')
     cap.add_argument('--no-audit', action='store_true')
     cap.add_argument('--audit-export', action='append')
