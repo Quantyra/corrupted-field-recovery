@@ -87,12 +87,16 @@ def main():
         (run/'capture-manifest.json').write_text(json.dumps(manifest))
         manifest['execution_control_sha256'] = {
             'cpu_cfr_runner.py':engine.digest(Path(cpu.__file__)),
-            'gcp_cfr_runner.py':engine.digest(Path(engine.__file__))}
+            'gcp_cfr_runner.py':engine.digest(Path(engine.__file__)),
+            'cpu_cfr.py':hashlib.sha256(b'fixture transport').hexdigest()}
+        (run/'cpu_cfr.py').write_bytes(b'fixture transport')
         (run/'capture-manifest.json').write_text(json.dumps(manifest))
-        admission = dict(paper='P002', status='ADMITTED', host='cpu-02', run='run', campaign=str(campaign),
+        admission = dict(paper='P002', status='ADMITTED', host='cpu-02', run='run', campaign=str(campaign), run_directory=str(run),
+            admission_path=str(root/'owner-admission.json'),
             capture_manifest_sha256=engine.digest(run/'capture-manifest.json'), archive_sha256=manifest['archive_sha256'],
             compiler_custody_reference='fixture only', runner_sha256=engine.digest(Path(cpu.__file__)),
             engine_sha256=engine.digest(Path(engine.__file__)), toolchain_bin=str(tool),
+            transport_sha256=manifest['execution_control_sha256']['cpu_cfr.py'],
             toolchain_sha256={name:engine.digest(tool/name) for name in ['lean', 'lake']},
             dependency_provenance_path=str(provenance), dependency_provenance_sha256=engine.digest(provenance),
             lease_file=str(root/'compiler.lock'))

@@ -442,7 +442,7 @@ def capture(args):
         # this offered source packet into a compiler-admission/acceptance receipt.
         (out/'capture-controller.py').write_bytes(CONTROLLER_BYTES)
         execution_controls = {}
-        for name in ['cpu_cfr_runner.py', 'gcp_cfr_runner.py']:
+        for name in ['cpu_cfr_runner.py', 'gcp_cfr_runner.py', 'cpu_cfr.py']:
             content = (ROOT/'tools'/name).read_bytes()
             (out/name).write_bytes(content)
             execution_controls[name] = hashlib.sha256(content).hexdigest()

@@ -96,13 +96,18 @@ def validate_packet(run, campaign, admission, manifest):
     require(all(re.fullmatch(r'CorruptedFieldRecovery(?:\.[A-Za-z_][A-Za-z0-9_\']*)*', name)
                 for name in manifest['targets'] + manifest['audited_exports']), 'Invalid owned target/export')
     require(owned_path(admission['campaign']) == campaign, 'Campaign binding changed')
+    require(owned_path(admission['run_directory']) == run, 'Run-directory binding changed')
+    record = owned_path(admission['admission_path'])
+    require(not record.is_relative_to(run) and not record.is_relative_to(campaign), 'Owner admission must be outside execution trees')
     require(run != campaign and not run.is_relative_to(campaign) and not campaign.is_relative_to(run), 'Run/campaign overlap')
     require(admission.get('compiler_custody_reference'), 'Compiler custody reference required')
     require(admission['runner_sha256'] == engine.digest(Path(__file__)), 'CPU runner changed')
     require(admission['engine_sha256'] == engine.digest(Path(engine.__file__)), 'Shared stage engine changed')
     require(manifest['execution_control_sha256'] == {
-        'cpu_cfr_runner.py':admission['runner_sha256'], 'gcp_cfr_runner.py':admission['engine_sha256']},
+        'cpu_cfr_runner.py':admission['runner_sha256'], 'gcp_cfr_runner.py':admission['engine_sha256'],
+        'cpu_cfr.py':admission['transport_sha256']},
         'Execution controls differ from captured offer')
+    require(engine.digest(run/'cpu_cfr.py') == admission['transport_sha256'], 'Captured transport controller changed')
     tool = owned_path(admission['toolchain_bin'])
     require(set(admission['toolchain_sha256']) == {'lean', 'lake'}, 'Both executable pins required')
     for name, expected in admission['toolchain_sha256'].items():
@@ -177,6 +182,7 @@ def main():
     admission_path, expected = owned_path(sys.argv[3]), sys.argv[4]
     require(engine.digest(admission_path) == expected, 'Owner admission digest mismatch')
     admission = json.loads(admission_path.read_text())
+    require(owned_path(admission['admission_path']) == admission_path, 'Owner admission path mismatch')
     manifest = json.loads((run/'capture-manifest.json').read_text())
     guard = ResourceGuard(admission['host'])
     tool, lease = validate_packet(run, campaign, admission, manifest)
@@ -200,7 +206,8 @@ def main():
                 dict(compile_host='CPU', instance=admission['host'], worker_uid=986,
                      compiler_custody_reference=admission['compiler_custody_reference'],
                      admission_sha256=expected, runner_sha256=admission['runner_sha256'],
-                     engine_sha256=admission['engine_sha256'], resource_observation=guard.summary),
+                     engine_sha256=admission['engine_sha256'], transport_sha256=admission['transport_sha256'],
+                     resource_observation=guard.summary),
                 toolchain_bin=tool, resource_guard=guard.check, wait_process=guard.wait)
         finally:
             signal.alarm(0)

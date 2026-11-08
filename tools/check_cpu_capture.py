@@ -24,6 +24,7 @@ def main():
             'lean-toolchain': b'leanprover/lean4:v4.30.0\n',
             'tools/cpu_cfr_runner.py': b'# Non-executable CPU control fixture\n',
             'tools/gcp_cfr_runner.py': b'# Non-executable shared control fixture\n',
+            'tools/cpu_cfr.py': b'# Non-executable transport fixture\n',
         }
         for name, data in originals.items():
             path = root / name

@@ -113,6 +113,13 @@ def terminate_process_group(process):
         process.wait()
 
 
+def process_start_ticks(pid):
+    try:
+        return Path('/proc', str(pid), 'stat').read_text().rsplit(')', 1)[1].split()[19]
+    except (FileNotFoundError, ProcessLookupError):
+        return None
+
+
 def main():
     if sys.platform != 'linux' or not os.environ.get('CFR_GCP_RUN'):
         raise RuntimeError('Remote-only runner: Linux and explicit cloud run identity required')
@@ -151,6 +158,7 @@ def execute_captured(run, campaign, manifest, identity, *, toolchain_bin=None,
         start = time.monotonic()
         with (logs/(name+'.stdout.txt')).open('wb') as stdout, (logs/(name+'.stderr.txt')).open('wb') as stderr:
             process = subprocess.Popen(command, cwd=cwd, stdout=stdout, stderr=stderr, start_new_session=True)
+            start_ticks = process_start_ticks(process.pid)
             timed_out = False
             wait_failure = None
             try:
@@ -163,7 +171,8 @@ def execute_captured(run, campaign, manifest, identity, *, toolchain_bin=None,
                 wait_failure = exc
                 terminate_process_group(process)
                 code = 125
-        entry = dict(stage=name, command=command, exit_code=code, timed_out=timed_out,
+        entry = dict(stage=name, command=command, pid=process.pid, process_start_ticks=start_ticks,
+                     exit_code=code, timed_out=timed_out,
                      elapsed_seconds=round(time.monotonic()-start, 3))
         stages.append(entry)
         if wait_failure:
